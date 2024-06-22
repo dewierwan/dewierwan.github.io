@@ -1,7 +1,134 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pathogen Transmission and Fatality Visualization</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .input-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .input-group {
+            display: flex;
+            flex-direction: column;
+        }
+        input {
+            margin-top: 5px;
+            padding: 5px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #chartContainer {
+            margin-top: 20px;
+        }
+    </style>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+    <h1>Pathogen Transmission and Fatality Visualization</h1>
+    <div class="input-container">
+        <div class="input-group">
+            <label for="r0">R0 (Basic Reproduction Number):</label>
+            <input type="number" id="r0" min="0" step="0.1" value="2.5">
+        </div>
+        <div class="input-group">
+            <label for="ifr">Infection Fatality Rate (%):</label>
+            <input type="number" id="ifr" min="0" max="100" step="0.1" value="1">
+        </div>
+        <div class="input-group">
+            <label for="days">Number of Days:</label>
+            <input type="number" id="days" min="1" max="100" value="30">
+        </div>
+        <div class="input-group">
+            <label for="initialInfected">Initial Infected:</label>
+            <input type="number" id="initialInfected" min="1" value="100">
+        </div>
+    </div>
+    <button onclick="updateChart()">Update Chart</button>
+    <div id="chartContainer">
+        <canvas id="myChart"></canvas>
+    </div>
+
+    <script>
+        let myChart;
+
+        function updateChart() {
+            const r0 = parseFloat(document.getElementById('r0').value);
+            const ifr = parseFloat(document.getElementById('ifr').value) / 100;
+            const days = parseInt(document.getElementById('days').value);
+            const initialInfected = parseInt(document.getElementById('initialInfected').value);
+
+            const data = simulateSpread(r0, ifr, days, initialInfected);
+
+            if (myChart) {
+                myChart.destroy();
+            }
+
+            const ctx = document.getElementById('myChart').getContext('2d');
+            myChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: data.map((_, index) => `Day ${index + 1}`),
+                    datasets: [
+                        {
+                            label: 'Infected',
+                            data: data.map(d => d.infected),
+                            borderColor: 'rgb(255, 99, 132)',
+                            tension: 0.1
+                        },
+                        {
+                            label: 'Fatalities',
+                            data: data.map(d => d.fatalities),
+                            borderColor: 'rgb(54, 162, 235)',
+                            tension: 0.1
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        }
+
+        function simulateSpread(r0, ifr, days, initialInfected) {
+            let data = [{infected: initialInfected, fatalities: 0}];
+            
+            for (let i = 1; i < days; i++) {
+                const newInfected = Math.round(data[i-1].infected * r0);
+                const newFatalities = Math.round(newInfected * ifr);
+                data.push({
+                    infected: newInfected,
+                    fatalities: data[i-1].fatalities + newFatalities
+                });
+            }
+
+            return data;
+        }
+
+        // Initial chart render
+        updateChart();
+    </script>
 </body>
 </html>
