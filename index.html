@@ -1,54 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My GitHub Page</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'San Francisco', 'Helvetica Neue', sans-serif;
-            background-color: #FFFDD0;
-            color: #333;
-            line-height: 1.6;
-            padding: 20px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        img {
-            width: 200px;
-            height: auto;
-            border-radius: 10px;
-            margin: 20px 0;
-            display: block; /* This centers the image if it's smaller than the text width */
-            margin-left: auto;
-            margin-right: auto;
-        }
-        a {
-            color: #4CAF50;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dewi Erwan</title>
+<meta name="description" content="Co-founder and CEO of BlueDot Impact. AI safety and biosecurity talent. From north Wales, living in San Francisco.">
+<meta property="og:title" content="Dewi Erwan">
+<meta property="og:description" content="Co-founder and CEO of BlueDot Impact. From north Wales, living in San Francisco.">
+<meta property="og:image" content="https://dewierwan.github.io/dewi.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏴󠁧󠁢󠁷󠁬󠁳󠁿</text></svg>">
+<link rel="preload" href="fonts/newsreader-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+  @font-face {
+    font-family: 'Newsreader';
+    font-style: normal;
+    font-weight: 400 600;
+    font-display: swap;
+    src: url('fonts/newsreader-latin.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Newsreader';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url('fonts/newsreader-italic-latin.woff2') format('woff2');
+  }
+
+  :root {
+    --bg: #fdfaf4;
+    --text: #26201a;
+    --muted: #7d7264;
+    --accent: #b4552d;
+    --rule: #e9e1d3;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #1d1a16;
+      --text: #ece5da;
+      --muted: #9c9184;
+      --accent: #e08d5f;
+      --rule: #37312a;
+    }
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Newsreader', Georgia, serif;
+    font-size: 1.1875rem;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  main {
+    max-width: 39rem;
+    margin: 0 auto;
+    padding: 4.5rem 1.375rem 3rem;
+  }
+
+  a {
+    color: var(--accent);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    text-decoration-color: color-mix(in srgb, var(--accent) 40%, transparent);
+    transition: text-decoration-color 0.15s ease;
+  }
+  a:hover { text-decoration-color: var(--accent); }
+  a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    gap: 1.375rem;
+    margin-bottom: 2.25rem;
+  }
+  header img {
+    width: 5.5rem;
+    height: 5.5rem;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center 20%;
+    flex-shrink: 0;
+  }
+  h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.15;
+    margin: 0;
+    letter-spacing: -0.01em;
+  }
+  .tagline {
+    font-style: italic;
+    color: var(--muted);
+    margin: 0.375rem 0 0;
+    font-size: 1.0625rem;
+  }
+
+  p { margin: 0 0 1.125rem; }
+
+  h2 {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 3rem 0 1rem;
+    padding-top: 1.75rem;
+    border-top: 1px solid var(--rule);
+  }
+  h2 .h2-date {
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    text-transform: none;
+    float: right;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  li { margin: 0 0 0.625rem; }
+
+  .writing li {
+    display: flex;
+    gap: 1rem;
+    align-items: baseline;
+  }
+  .year {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 0.8125rem;
+    color: var(--muted);
+    flex-shrink: 0;
+    width: 2.75rem;
+    font-variant-numeric: tabular-nums;
+  }
+  .more {
+    margin-top: 1.125rem;
+    font-style: italic;
+  }
+
+  .note {
+    color: var(--muted);
+  }
+
+  footer {
+    margin-top: 3.5rem;
+    padding-top: 1.75rem;
+    border-top: 1px solid var(--rule);
+    color: var(--muted);
+    font-style: italic;
+    font-size: 1rem;
+  }
+
+  @media (max-width: 520px) {
+    main { padding-top: 3rem; }
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.125rem;
+    }
+    h1 { font-size: 1.75rem; }
+    body { font-size: 1.125rem; }
+  }
+</style>
 </head>
 <body>
-    <h1>Welcome to My GitHub Page</h1>
-    
-    <p>This is my github page. I'm playing around with this to learn how to build web apps. Welcome!</p>
-    
-    <img src="dewi.jpg" alt="A picture of me" />
+<main>
+  <header>
+    <img src="dewi.jpg" alt="Dewi Erwan smiling, with long curly hair and glasses">
+    <div>
+      <h1>Dewi Erwan</h1>
+      <p class="tagline">Trying to build a radically better world</p>
+    </div>
+  </header>
 
-    <h2>Done</h2>
+  <p>Hello! I'm the co-founder and CEO of <a href="https://bluedot.org">BlueDot Impact</a>. We build the bridge between talented, motivated people and careers that help solve the world's most pressing problems. We focus on AI safety and biosecurity, and we've trained over 6,000 professionals so far.</p>
+
+  <p>I grew up in north Wales and now live in San Francisco. Before BlueDot I studied Engineering, then International Relations &amp; Risk, at Durham University.</p>
+
+  <p>In previous lives I acted on a soap opera, sang baritone in an a cappella group, played guitar in a rock band, flew a plane solo, and built a wildlife pond. These days I mostly climb and run.</p>
+
+  <section aria-labelledby="now">
+    <h2 id="now">Now <span class="h2-date">9 Aug 2026</span></h2>
     <ul>
-        <li><a href="https://dewierwan.github.io/airtable-to-markdown/" target="_blank" rel="noopener noreferrer">Airtable to Markdown</a></li>
-        <li><a href="https://dewierwan.github.io/ai-concern-quotes/" target="_blank" rel="noopener noreferrer">Quotes about AI risks</a></li>
+      <li>Running BlueDot from our San Francisco office.</li>
+      <li>Mentoring the <a href="https://www.matsprogram.org/mentor/erwan">Founding and Field-Building stream</a> at MATS this autumn.</li>
+      <li>Chasing a sub-1:20 half marathon.</li>
     </ul>
+  </section>
 
-    <h2>Work in Progress</h2>
+  <section aria-labelledby="writing">
+    <h2 id="writing">Writing</h2>
+    <ul class="writing">
+      <li><span class="year">2026</span><a href="https://blog.dewierwan.com/p/on-feeling-behind">On feeling behind</a></li>
+      <li><span class="year">2025</span><a href="https://blog.bluedot.org/p/field-strategy-playbook">A playbook for field strategy</a></li>
+      <li><span class="year">2025</span><a href="https://blog.dewierwan.com/p/sleep">Dewi's sleep system</a></li>
+      <li><span class="year">2024</span><a href="https://blog.dewierwan.com/p/flying-car">How long would it take to fly from London to north Wales in a flying car?</a></li>
+      <li><span class="year">2023</span><a href="https://blog.dewierwan.com/p/chip-manufacturing">How did the chip in my laptop get made?</a></li>
+      <li><span class="year">2020</span><a href="https://blog.dewierwan.com/p/ideological-journey">My "ideological" journey: from nationalism to altruism</a></li>
+    </ul>
+    <p class="more"><a href="https://blog.dewierwan.com">More on my blog</a></p>
+  </section>
+
+  <section aria-labelledby="elsewhere">
+    <h2 id="elsewhere">Elsewhere</h2>
     <ul>
-        <li><a href="https://dewierwan.github.io/pandemic-simulation/" target="_blank" rel="noopener noreferrer">Pandemic Simulation</a></li>
+      <li><a href="https://earlywarnings.ai">Early Warnings</a> <span class="note">· a collection I built of quotes from influential figures warning about AI risk</span></li>
+      <li><a href="https://hearthisidea.com/episodes/erwan/">Hear This Idea</a> <span class="note">· a podcast conversation about BlueDot and AI safety careers</span></li>
+      <li><a href="https://github.com/dewierwan">GitHub</a> <span class="note">· side projects and experiments</span></li>
+      <li><a href="https://www.goodreads.com/user/show/62790508-dewi">Goodreads</a> <span class="note">· what I'm reading</span></li>
     </ul>
+  </section>
 
+  <section aria-labelledby="contact">
+    <h2 id="contact">Say hi</h2>
+    <p>The best way to reach me is email: <a href="mailto:dewi@bluedot.org">dewi@bluedot.org</a>. I'm also on <a href="https://www.linkedin.com/in/dewierwan/">LinkedIn</a> and <a href="https://x.com/dewierwan_">X</a>.</p>
+  </section>
+
+  <footer>
+    <p>Diolch am alw heibio · thanks for stopping by</p>
+  </footer>
+</main>
 </body>
 </html>
