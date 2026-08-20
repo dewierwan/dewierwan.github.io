@@ -45,6 +45,7 @@ List three to five assumptions that must hold for the claim to work. Rank them b
 
 | Assumption | Type: fact, estimate, or belief | Current support | Damage if wrong | How to test or disprove it |
 |---|---|---|---|---|
+| [State the assumption] | [Choose one] | [Summarize the evidence] | [Low, medium, or high] | [Name the smallest useful test] |
 
 Make assumptions observable where possible. Replace “customers will value this” with a defined behavior, segment, threshold, or willingness-to-pay condition.
 
@@ -71,6 +72,7 @@ Assume the initiative failed after a realistic period, often 6 to 12 months. Ide
 
 | Failure mode | Why it could happen | Earliest warning sign | Monitoring action or owner |
 |---|---|---|---|
+| [Describe the failure] | [Name the mechanism] | [Name an observable signal] | [Name the check or accountable role] |
 
 The warning sign must be observable early enough to change course.
 
