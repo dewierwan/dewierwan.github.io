@@ -1,22 +1,65 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="robots" content="noindex,follow"><title>Brainstorm options · AI skills</title><meta name="description" content="Generate genuinely different options, compare them honestly, and choose the strongest ones.">
-<link rel="alternate" type="text/markdown" href="/skills/raw/brainstorm.md"><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%23b4552d%22/><text x=%2250%22 y=%2253%22 dominant-baseline=%22central%22 text-anchor=%22middle%22 font-family=%22Georgia, 'Times New Roman', serif%22 font-size=%2246%22 letter-spacing=%221%22 fill=%22%23fdfaf4%22>DE</text></svg>"><link rel="stylesheet" href="/skills/styles.css"></head><body><main><a class="back" href="/skills/">← Skills</a><header class="skill-header"><h1>Brainstorm options</h1><p class="description">Generate genuinely different options, compare them honestly, and choose the strongest ones.</p><div class="skill-actions"><a href="/skills/raw/brainstorm.md">Raw Markdown</a><button class="copy" type="button" data-copy="/skills/raw/brainstorm.md">Copy Markdown</button></div></header><article class="skill-body"><p>Use this skill when the user wants possible approaches, directions, names, or solutions and does not yet know which one to choose.</p>
-<h3>1. Frame the problem</h3>
-<p>State the decision in one sentence. Clarify the desired result, the people affected, the main limits, and what has already been tried. Ask only for facts that would change the options.</p>
-<h3>2. Generate distinct options</h3>
-<p>Create options from different underlying approaches. Do not produce small variations of the same idea. Include:</p>
+<meta name="robots" content="noindex,follow"><title>Brainstorm options · AI skills</title><meta name="description" content="Generate genuinely distinct options for a decision or problem, assess their tradeoffs honestly, and recommend a short ranked set without forcing a final choice. Use it when someone asks for ways to proceed, alternatives, or ideas they need,">
+<link rel="alternate" type="text/markdown" href="/skills/raw/brainstorm.md"><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%23b4552d%22/><text x=%2250%22 y=%2253%22 dominant-baseline=%22central%22 text-anchor=%22middle%22 font-family=%22Georgia, 'Times New Roman', serif%22 font-size=%2246%22 letter-spacing=%221%22 fill=%22%23fdfaf4%22>DE</text></svg>"><link rel="stylesheet" href="/skills/styles.css"></head><body><main><a class="back" href="/skills/">← Skills</a><header class="skill-header"><h1>Brainstorm options</h1><p class="description">Generate genuinely distinct options for a decision or problem, assess their tradeoffs honestly, and recommend a short ranked set without forcing a final choice. Use it when someone asks for ways to proceed, alternatives, or ideas they need,</p><div class="skill-actions"><a href="/skills/raw/brainstorm.md">Raw Markdown</a><button class="copy" type="button" data-copy="/skills/raw/brainstorm.md">Copy Markdown</button></div></header><article class="skill-body"><p>Use this workflow when a user needs possible approaches to a decision, problem, or opportunity but is not ready to commit. The goal is not to produce a long idea list. It is to surface genuinely different paths, make their tradeoffs clear, and leave the user with a small number of credible choices.</p>
+<h3>1. Gather relevant context</h3>
+<p>Start with the information the user supplied. If they reference documents, discussion threads, prior decisions, research, or other sources that the current environment can access, review them first.</p>
+<p>If the question is not self-contained, look for a small number of high-value sources of context, such as:</p>
 <ul>
-<li>A simple or low-effort approach.</li>
-<li>A bold approach.</li>
-<li>An approach that changes the process rather than adding more work.</li>
-<li>A combination only when its parts genuinely fit together.</li>
-<li>Doing nothing when it is a serious option.</li>
+<li>Earlier decisions and their rationale</li>
+<li>Existing constraints, commitments, or deadlines</li>
+<li>Stakeholder concerns and ownership boundaries</li>
+<li>Evidence about what has already been tried</li>
 </ul>
-<p>For a complex problem, generate widely before narrowing. Remove duplicates and weak filler before showing the user.</p>
-<h3>3. Evaluate them</h3>
-<p>Choose a small set of criteria that match the real decision. Compare each option on likely impact, effort, risk, reversibility, and speed. Add any domain-specific criterion that matters more.</p>
-<p>Name the strongest advantage and weakness of every serious option. Do not make the preferred option look good by describing the alternatives badly.</p>
-<h3>4. Recommend</h3>
-<p>Recommend one option or a short ranked list. Explain which tradeoff drives the recommendation. State the assumption most likely to change the ranking.</p>
-<p>End by asking whether the user wants to choose, combine, or develop any option.</p></article><footer><a href="/skills/LICENSE.txt">CC0</a></footer></main><script>document.querySelector('[data-copy]').addEventListener('click',async function(){try{const text=await fetch(this.dataset.copy).then(r=>{if(!r.ok)throw new Error();return r.text()});await navigator.clipboard.writeText(text);this.textContent='Copied'}catch{this.textContent='Open raw Markdown'}})</script></body></html>
+<p>Do not search broadly by default. Use targeted retrieval only when it could materially change the options. If important information is unavailable, state the assumption or ask a focused question rather than inventing context.</p>
+<h3>2. Frame the decision before ideating</h3>
+<p>Write a short framing, usually two to four sentences, that states:</p>
+<ul>
+<li>What decision the user is actually making</li>
+<li>The important constraints and non-negotiables</li>
+<li>What a good outcome looks like and how options should be judged</li>
+</ul>
+<p>The user’s wording may describe a symptom or requested solution rather than the real decision. For example, “Should we add a feature?” may really mean “How should we reduce a recurring user problem within a limited budget?”</p>
+<p>Ask the user to confirm or correct the framing before generating a substantial option set. Skip the pause only when the framing is obvious, low-stakes, or the user explicitly asks for an immediate first pass. Incorrect framing produces polished but irrelevant options.</p>
+<h3>3. Generate a distinct set of options</h3>
+<p>Generate five to seven options unless the decision naturally has fewer meaningful paths. Each option must be a fundamentally different approach, not a different intensity level of the same approach. Merge near-duplicates.</p>
+<p>Include, where relevant:</p>
+<ul>
+<li>The obvious or conventional option</li>
+<li>A lower-effort or incremental option</li>
+<li>A more ambitious option</li>
+<li>An option that changes the process, incentives, scope, or problem framing</li>
+<li>At least one surprising option, such as delaying, partnering, removing scope, or doing nothing</li>
+</ul>
+<p>Do not be contrarian merely to appear creative. “Do nothing” is useful only when it is a real strategic choice, such as when observation, timing, or avoided distraction has value.</p>
+<p>Give every option a short, memorable label that communicates its core approach. For each, provide:</p>
+<ul>
+<li><strong>What:</strong> One or two sentences explaining the approach</li>
+<li><strong>Strengths:</strong> One or two concrete advantages</li>
+<li><strong>Weaknesses:</strong> One or two concrete disadvantages or failure risks</li>
+<li><strong>Effort:</strong> Low, Medium, or High</li>
+</ul>
+<p>Use specific tradeoffs. Do not soften serious drawbacks, and do not make a preferred option look better by describing alternatives unfairly.</p>
+<h3>4. Evaluate and recommend</h3>
+<p>Choose evaluation criteria that fit the decision. Common criteria include likely impact, effort, cost, risk, speed, reversibility, strategic fit, and stakeholder burden. Add domain-specific criteria when they matter more than the defaults.</p>
+<p>Then:</p>
+<ol>
+<li>Identify options with dealbreaker weaknesses under the stated constraints. Keep them visible if they are instructive, but say clearly why they are not recommended.</li>
+<li>Rank the strongest two or three options.</li>
+<li>For each recommendation, explain in one sentence why it fits this user’s situation, constraints, and goals—not why it is generally attractive.</li>
+<li>Name the key assumption most likely to change the ranking, if one exists.</li>
+</ol>
+<p>Do not force a single winner unless the user explicitly requests one. The output should preserve meaningful choice.</p>
+<h3>5. Stop for a decision</h3>
+<p>After presenting recommendations, wait for the user. They may choose an option, request detail, reject the framing, ask for new options, or combine approaches. If they propose a hybrid, test whether the components are compatible and whether combining them solves a real tradeoff rather than adding complexity.</p>
+<p>Do not begin implementation merely because an option appears promising.</p>
+<h3>6. Hand off with the right level of rigor</h3>
+<p>Once the user selects a path, choose the next activity based on consequence and reversibility:</p>
+<ul>
+<li><strong>High-consequence or difficult-to-reverse choices:</strong> Run a structured challenge or pre-mortem before commitment. Use this for major strategic bets, public commitments, long-term contracts, major staffing choices, or decisions with broad organizational effects.</li>
+<li><strong>Reversible choices:</strong> Move to a right-sized decision record: define the choice, owner, rationale, assumptions, and review point.</li>
+<li><strong>Build-oriented choices:</strong> After the decision is recorded, move into planning and execution: requirements, milestones, implementation tasks, and validation.</li>
+</ul>
+<p>A useful sequence is: brainstorm options, pressure-test consequential choices, make the decision, then plan or build. Avoid skipping the pressure test when the cost of being wrong is high.</p>
+<h3>Quality checks</h3>
+<p>Before sending the response, verify that the options are truly distinct, the framing reflects the actual decision, weaknesses are candid, effort labels are plausible, and recommendations follow the user’s criteria rather than the assistant’s default preferences.</p></article><footer><a href="/skills/LICENSE.txt">CC0</a></footer></main><script>document.querySelector('[data-copy]').addEventListener('click',async function(){try{const text=await fetch(this.dataset.copy).then(r=>{if(!r.ok)throw new Error();return r.text()});await navigator.clipboard.writeText(text);this.textContent='Copied'}catch{this.textContent='Open raw Markdown'}})</script></body></html>

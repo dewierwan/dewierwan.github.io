@@ -1,27 +1,158 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="robots" content="noindex,follow"><title>Make a decision · AI skills</title><meta name="description" content="Match the amount of analysis to the stakes, compare the real options, and record what would change the decision.">
-<link rel="alternate" type="text/markdown" href="/skills/raw/make-a-decision.md"><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%23b4552d%22/><text x=%2250%22 y=%2253%22 dominant-baseline=%22central%22 text-anchor=%22middle%22 font-family=%22Georgia, 'Times New Roman', serif%22 font-size=%2246%22 letter-spacing=%221%22 fill=%22%23fdfaf4%22>DE</text></svg>"><link rel="stylesheet" href="/skills/styles.css"></head><body><main><a class="back" href="/skills/">← Skills</a><header class="skill-header"><h1>Make a decision</h1><p class="description">Match the amount of analysis to the stakes, compare the real options, and record what would change the decision.</p><div class="skill-actions"><a href="/skills/raw/make-a-decision.md">Raw Markdown</a><button class="copy" type="button" data-copy="/skills/raw/make-a-decision.md">Copy Markdown</button></div></header><article class="skill-body"><p>Help the user decide without turning every choice into a research project.</p>
-<h3>1. Define the decision</h3>
-<p>Write the decision as a choice between concrete options. Clarify who decides, the deadline, the desired result, and what happens if nobody acts.</p>
-<h3>2. Match effort to reversibility</h3>
+<meta name="robots" content="noindex,follow"><title>Make a decision · AI skills</title><meta name="description" content="Match decision-making rigor to stakes and reversibility, then make, record, and review meaningful decisions without inventing the user’s views. Supports quick calls, multi-session deliberation, commitments, and evidence-based retrospectives">
+<link rel="alternate" type="text/markdown" href="/skills/raw/make-a-decision.md"><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%23b4552d%22/><text x=%2250%22 y=%2253%22 dominant-baseline=%22central%22 text-anchor=%22middle%22 font-family=%22Georgia, 'Times New Roman', serif%22 font-size=%2246%22 letter-spacing=%221%22 fill=%22%23fdfaf4%22>DE</text></svg>"><link rel="stylesheet" href="/skills/styles.css"></head><body><main><a class="back" href="/skills/">← Skills</a><header class="skill-header"><h1>Make a decision</h1><p class="description">Match decision-making rigor to stakes and reversibility, then make, record, and review meaningful decisions without inventing the user’s views. Supports quick calls, multi-session deliberation, commitments, and evidence-based retrospectives</p><div class="skill-actions"><a href="/skills/raw/make-a-decision.md">Raw Markdown</a><button class="copy" type="button" data-copy="/skills/raw/make-a-decision.md">Copy Markdown</button></div></header><article class="skill-body"><p>Use this workflow to make decisions with the right amount of rigor. The purpose is not to maximize analysis. It is to make a clear call when ready, preserve the reasoning for meaningful choices, and learn from outcomes.</p>
+<h3>Core rules</h3>
+<ol>
+<li><strong>Match rigor to stakes and reversibility.</strong> Most choices should take minutes, not days.</li>
+<li><strong>The user owns their position.</strong> Never state, record, or imply that the user believes, prefers, or decided something they did not actually say.</li>
+<li><strong>Separate advice from attribution.</strong> The assistant may make a recommendation in conversation. Label it as assistant analysis. Add it to a decision record only if the user asks for it.</li>
+<li><strong>Do not confuse a task with a decision.</strong> If there is no real alternative, this is execution. Start or plan the task instead of opening a decision process.</li>
+<li><strong>Use shared records with consent.</strong> Do not create a decision record simply because the user requested analysis. Create or update one only when the user asks to log, track, open, or commit it, or when they have already agreed to track that class of decisions.</li>
+</ol>
+<p>For organizations that maintain a decision register, use it for non-trivial decisions once the user has consented to that practice. Before using a shared register, confirm that its audience is appropriate. Offer a private document for sensitive subjects such as health, relationships, compensation, or confidential personnel matters.</p>
+<h3>1. Choose the mode</h3>
+<p>Determine whether the user is dealing with a new or existing decision.</p>
 <ul>
-<li>For a cheap, reversible choice, set a short deadline and choose quickly.</li>
-<li>For a costly but reversible choice, compare the main evidence and run a test.</li>
-<li>For a hard-to-reverse choice, examine assumptions, dissent, and failure modes.</li>
+<li><strong>New:</strong> No matching record exists, or the user wants a fresh decision.</li>
+<li><strong>Resume:</strong> An open decision exists and the user wants to continue thinking.</li>
+<li><strong>Commit:</strong> An open decision exists and the user is ready to make the call.</li>
+<li><strong>Review:</strong> A resolved decision has reached its review date and its outcome has not been assessed.</li>
 </ul>
-<p>Do not use more analysis than the decision deserves.</p>
-<h3>3. Compare the options</h3>
-<p>Choose criteria before scoring options. Separate requirements from preferences. Use numbers only when they clarify rather than hide judgment.</p>
-<p>For each serious option, record:</p>
+<p>If the user explicitly names the mode, follow that instruction. Otherwise, search the available decision register for overlapping open or resolved decisions before creating a duplicate.</p>
+<p>A request such as “Should we do X?” is normally a request for analysis, not permission to create a record. A request such as “Open a decision record for X” or “Log this decision” is permission to record it.</p>
+<h3>2. Frame the decision</h3>
+<p>Write the question in a decidable form. Establish:</p>
 <ul>
-<li>What becomes possible.</li>
-<li>What it costs or prevents.</li>
-<li>The strongest evidence for it.</li>
-<li>The strongest objection.</li>
-<li>How easy it is to reverse.</li>
+<li>What choice is being made?</li>
+<li>Who has final decision authority?</li>
+<li>What are the realistic options, including doing nothing?</li>
+<li>What is the deadline or trigger for deciding?</li>
+<li>What result is desired?</li>
+<li>What happens if no action is taken?</li>
 </ul>
-<h3>4. Make the call</h3>
-<p>Recommend one option and explain the decisive reason. State any remaining uncertainty plainly. If evidence is missing, propose the cheapest test that can change the decision rather than gathering information without a stopping rule.</p>
-<h3>5. Record and review</h3>
-<p>For a meaningful decision, record the choice, alternatives, rationale, prediction, worries, and what would change the user&#39;s mind. Set a review point only when later evidence could lead to a useful correction.</p></article><footer><a href="/skills/LICENSE.txt">CC0</a></footer></main><script>document.querySelector('[data-copy]').addEventListener('click',async function(){try{const text=await fetch(this.dataset.copy).then(r=>{if(!r.ok)throw new Error();return r.text()});await navigator.clipboard.writeText(text);this.textContent='Copied'}catch{this.textContent='Open raw Markdown'}})</script></body></html>
+<p>If the question is open-ended and there are no credible options yet, generate options before evaluating them. Do not pressure-test a vague problem statement.</p>
+<h3>3. Classify scope</h3>
+<p>Ask one clarifying question at a time when necessary. Place the choice in one bucket.</p>
+<p>| Bucket | Meaning | Treatment | |---|---|---| | Trivial | Low stakes and reversible within hours | Decide now; do not log by default | | Reversible | Moderate stakes; can be changed within days or weeks | Compare a few options; use a light record if useful | | Hard to reverse | Meaningful cost, disruption, or loss if undone | Full analysis, challenge the leading option, consult relevant stakeholders | | Direction-setting | Shapes strategy, culture, finances, or operating model for an extended period | Full analysis, explicit dissent, and named prerequisite conversations |</p>
+<p>Use this test when classification is unclear: <strong>What would it cost to unwind this?</strong> If the answer is not obvious or cannot be stated quickly, the decision is likely larger than it first appears.</p>
+<p>Broad defaults:</p>
+<p>| Bucket | Stakes | Reversibility | |---|---|---| | Trivial | Low | Easy | | Reversible | Low or medium | Reversible | | Hard to reverse | High | Hard | | Direction-setting | Very high | Difficult or effectively one-way |</p>
+<h3>4. Apply the right rigor</h3>
+<h4>Trivial</h4>
+<p>Pick a reasonable default, give a one-sentence rationale, and move on. If the user is stalling, name it directly: continued attention may cost more than an imperfect choice.</p>
+<h4>Reversible</h4>
+<p>In a short working session:</p>
+<ol>
+<li>List two or three realistic options.</li>
+<li>For each, give one major strength, one major weakness, and a rough effort or cost estimate.</li>
+<li>Recommend an option and name the decisive reason.</li>
+<li>If uncertainty is material, choose the smallest reversible test that could change the call.</li>
+</ol>
+<h4>Hard to reverse: mandatory challenge gate</h4>
+<p>A hard-to-reverse decision must be pressure-tested before commitment.</p>
+<p>First inspect whether a structured challenge of this exact topic has already happened in the current work context. A valid pressure test examines the leading option’s assumptions, disconfirming evidence, likely failure modes, strongest alternative, and major stakeholder objections.</p>
+<ul>
+<li><strong>If it has not happened, stop the commitment flow.</strong> State: “This is hard to reverse. Run a pressure test of the leading option before committing. To proceed without one, explicitly state why the gate is being skipped.”</li>
+<li><strong>Do not continue to a commitment merely because the user is in a hurry.</strong> Proceed only after the pressure test is complete or the user explicitly overrides the gate with a stated reason.</li>
+<li><strong>If the pressure test finds a serious unresolved failure, do not force a decision.</strong> Return to option generation, redesign the option, gather a decision-changing fact, or run a bounded test.</li>
+</ul>
+<p>After the gate is satisfied:</p>
+<ol>
+<li>Define options and decision criteria.</li>
+<li>Run a short pre-mortem: “It is later and this failed. What most likely caused it?”</li>
+<li>Check stakeholders: who has relevant expertise, bears the consequences, or may reveal a constraint?</li>
+<li>Give a recommendation, clearly labeled as assistant analysis unless the user adopts it in their own words.</li>
+</ol>
+<h4>Direction-setting</h4>
+<p>Use the hard-to-reverse process plus two readiness gates:</p>
+<ol>
+<li>Name the specific accountable decision-maker, partner, advisor, or stakeholder conversation required before commitment.</li>
+<li>Ask who disagrees and capture their strongest case.</li>
+</ol>
+<p>The decision is <strong>not ready</strong> until the required conversation has happened, unless the user explicitly accepts and records a reason for proceeding without it. If a direction-setting decision is being rushed, say what analysis, dissent, or consultation is being skipped and why it matters.</p>
+<h3>5. Analyze without manufacturing certainty</h3>
+<p>For each serious option, capture:</p>
+<ul>
+<li>What it enables.</li>
+<li>What it costs, delays, or prevents.</li>
+<li>Strongest evidence in its favor.</li>
+<li>Strongest objection.</li>
+<li>Key assumptions.</li>
+<li>Ease and cost of reversal.</li>
+</ul>
+<p>Choose criteria before comparing options. Separate non-negotiable requirements from preferences. Use scoring only when it clarifies tradeoffs rather than disguising judgment.</p>
+<p>Keep three categories distinct:</p>
+<ul>
+<li><strong>User’s stated view:</strong> only positions the user actually expressed.</li>
+<li><strong>Assistant analysis:</strong> recommendation and reasoning supplied by the assistant.</li>
+<li><strong>Open question:</strong> uncertainty not yet resolved.</li>
+</ul>
+<p>If the user has not expressed a position, write “No position stated yet” or leave the user-position field blank. Never invent a lean, confidence level, rationale, response to dissent, or final choice for them.</p>
+<h3>6. Commit and record</h3>
+<p>Before finalizing, confirm:</p>
+<ul>
+<li>What is the decision?</li>
+<li>Which option was chosen?</li>
+<li>Why is it preferred now?</li>
+<li>What would change the decision?</li>
+<li>Who owns the next action, and by when?</li>
+<li>What observable result is predicted?</li>
+<li>What is the user’s confidence in that prediction?</li>
+</ul>
+<p>For meaningful decisions, make the prediction testable:</p>
+<blockquote>By [date or trigger], [observable outcome] will happen or not happen.  </blockquote>
+<blockquote>Confidence: [percentage].</blockquote>
+<p>Use the user’s selected decision register, document system, or private file. A useful record includes status, domain, stakes, reversibility, decision date, review date, confidence, and outcome.</p>
+<pre><code>## Context
+Why this decision exists and why it matters now.
+
+## Options considered
+- **Option A:** What it is and its central tradeoff.
+- **Option B:** What it is and its central tradeoff.
+- **Option C:** What it is and its central tradeoff.
+
+## Thinking log
+### [Date]
+- New inputs, conversations, data, or events
+- How the thinking changed
+- User’s stated position today: open / leaning / decided
+
+## Dissent
+Who pushed back, their strongest argument, and how it was handled.
+
+## My choice and why
+The user’s own reasoning, only when stated by the user.
+
+## What would change my mind
+Assumptions or evidence that would justify reversing the choice.
+
+## Prediction
+By [date], [observable outcome] will happen or not happen.
+Confidence: [X%]
+
+## Worries
+The most credible downside or failure mode.
+
+## Retrospective
+To be completed at review.</code></pre>
+<p>For a new open decision, record context, current options, and new inputs. Leave commitment sections blank until the user commits. When resuming, append a new dated thinking-log entry rather than rewriting history.</p>
+<p>Suggested review defaults: about one month for reversible decisions, three months for hard-to-reverse decisions, and six months for direction-setting decisions. Use a calendar or task reminder for high-stakes reviews.</p>
+<h3>7. Review the outcome</h3>
+<p>At the review point, assess:</p>
+<ol>
+<li><strong>What happened?</strong> Use concrete actuals, not impressions.</li>
+<li><strong>Was the prediction accurate?</strong> Compare events with the recorded prediction and confidence.</li>
+<li><strong>Was the process sound?</strong> Judge the information, assumptions, alternatives, and reasoning available at the time.</li>
+<li><strong>What is the reusable lesson?</strong> State a principle for future decisions.</li>
+</ol>
+<p>Mark the outcome as correct, incorrect, mixed, too early, or not applicable. Do not collapse a bad outcome into a bad decision process, or a good outcome into a sound process.</p>
+<h3>Completion message</h3>
+<p>When a decision is made, summarize it clearly:</p>
+<pre><code>Decision: [one-line call]
+Scope: [bucket]
+Rationale: [two or three honest sentences]
+Next action: [owner] will [action] by [date]
+Review: [date or trigger]
+Record: [location, if one exists]</code></pre>
+<p>Use direct language. Challenge weak reasoning with evidence, but do not turn rigor into endless deliberation. Once the appropriate readiness gates have been met, name the decision and move forward.</p></article><footer><a href="/skills/LICENSE.txt">CC0</a></footer></main><script>document.querySelector('[data-copy]').addEventListener('click',async function(){try{const text=await fetch(this.dataset.copy).then(r=>{if(!r.ok)throw new Error();return r.text()});await navigator.clipboard.writeText(text);this.textContent='Copied'}catch{this.textContent='Open raw Markdown'}})</script></body></html>

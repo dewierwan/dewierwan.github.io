@@ -1,16 +1,124 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="robots" content="noindex,follow"><title>Use a browser safely · AI skills</title><meta name="description" content="Control websites carefully, inspect before acting, verify every change, and separate preparation from final submission.">
-<link rel="alternate" type="text/markdown" href="/skills/raw/use-a-browser-safely.md"><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%23b4552d%22/><text x=%2250%22 y=%2253%22 dominant-baseline=%22central%22 text-anchor=%22middle%22 font-family=%22Georgia, 'Times New Roman', serif%22 font-size=%2246%22 letter-spacing=%221%22 fill=%22%23fdfaf4%22>DE</text></svg>"><link rel="stylesheet" href="/skills/styles.css"></head><body><main><a class="back" href="/skills/">← Skills</a><header class="skill-header"><h1>Use a browser safely</h1><p class="description">Control websites carefully, inspect before acting, verify every change, and separate preparation from final submission.</p><div class="skill-actions"><a href="/skills/raw/use-a-browser-safely.md">Raw Markdown</a><button class="copy" type="button" data-copy="/skills/raw/use-a-browser-safely.md">Copy Markdown</button></div></header><article class="skill-body"><p>Use this for forms, account settings, rendered pages, or other work that needs stateful interaction with a website.</p>
-<h3>1. Use a direct interface first</h3>
-<p>Prefer a documented application interface or purpose-built connector when it can complete the task safely. Use browser control when the task genuinely depends on the rendered page, an authenticated session, or visual state.</p>
-<h3>2. Protect the user&#39;s session</h3>
-<p>Use the correct account and browser profile. Open a new tab rather than taking over unrelated work. Never expose stored credentials, copy private session data, or weaken security settings to make automation easier.</p>
-<h3>3. Inspect before editing</h3>
-<p>Read the page structure, labels, current values, validation rules, and button states. Confirm that the target account, record, and environment are correct.</p>
-<h3>4. Fill and verify incrementally</h3>
-<p>Use the input method suited to each control. After every meaningful change, read the value back from the page. Watch for rich-text editors, character limits, auto-formatting, hidden required fields, and controls that reset after navigation.</p>
-<h3>5. Separate preparation from commitment</h3>
-<p>Filling a form is usually reversible. Sending, purchasing, publishing, deleting, or changing access may not be. Stop before the final action unless the user has clearly authorized it. Show a concise summary of what will happen.</p>
-<h3>6. Verify the result</h3>
-<p>After submission, confirm the success state, resulting record, or changed setting. A click without evidence is not completion. Close temporary tabs and report anything that could not be verified.</p></article><footer><a href="/skills/LICENSE.txt">CC0</a></footer></main><script>document.querySelector('[data-copy]').addEventListener('click',async function(){try{const text=await fetch(this.dataset.copy).then(r=>{if(!r.ok)throw new Error();return r.text()});await navigator.clipboard.writeText(text);this.textContent='Copied'}catch{this.textContent='Open raw Markdown'}})</script></body></html>
+<meta name="robots" content="noindex,follow"><title>Use a browser safely · AI skills</title><meta name="description" content="A careful, tool-independent workflow for interacting with websites, including rendered forms and authenticated dashboards. It selects the least invasive method, protects account context, verifies page state after every change, and separates">
+<link rel="alternate" type="text/markdown" href="/skills/raw/use-a-browser-safely.md"><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%23b4552d%22/><text x=%2250%22 y=%2253%22 dominant-baseline=%22central%22 text-anchor=%22middle%22 font-family=%22Georgia, 'Times New Roman', serif%22 font-size=%2246%22 letter-spacing=%221%22 fill=%22%23fdfaf4%22>DE</text></svg>"><link rel="stylesheet" href="/skills/styles.css"></head><body><main><a class="back" href="/skills/">← Skills</a><header class="skill-header"><h1>Use a browser safely</h1><p class="description">A careful, tool-independent workflow for interacting with websites, including rendered forms and authenticated dashboards. It selects the least invasive method, protects account context, verifies page state after every change, and separates</p><div class="skill-actions"><a href="/skills/raw/use-a-browser-safely.md">Raw Markdown</a><button class="copy" type="button" data-copy="/skills/raw/use-a-browser-safely.md">Copy Markdown</button></div></header><article class="skill-body"><p>Use this workflow for tasks that require real interaction with a website: completing forms, changing settings, collecting data from rendered pages, testing a user flow, or working in an authenticated dashboard. Use it when a simple page retrieval or direct data request cannot reliably complete the task.</p>
+<p>The central rule is:</p>
+<blockquote>Inspect the page before editing, verify every change by reading it back, and do not perform a consequential final action until the page state and authorization are clear.</blockquote>
+<p>A browser automation command succeeding does <strong>not</strong> prove that a website accepted the change. Modern applications may maintain internal state separate from the displayed DOM, commit data only after focus leaves a field, or replace controls during a re-render.</p>
+<h3>1. Choose the least invasive route</h3>
+<p>Use the first route that safely fits the task:</p>
+<ol>
+<li><strong>Documented direct interface or API.</strong> Prefer a supported programmatic interface when it can perform the requested task with appropriate authorization. It is usually more reliable than reproducing browser behavior.</li>
+<li><strong>Headless browser automation.</strong> Use this for public pages, test environments, routine rendered-page extraction, screenshots, and forms that do not require the user&#39;s existing signed-in identity.</li>
+<li><strong>User-visible authenticated browser session.</strong> Use this only when the task truly requires the user&#39;s established session, single sign-on state, or account-specific dashboard.</li>
+</ol>
+<p>Before choosing browser control, look for a direct route. Check official documentation, the page source, ordinary form actions, and network requests initiated by the page for a supported endpoint. A browser form may submit structured data to a service that can be called more safely and reliably through an authorized interface. Do not reverse-engineer or use undocumented endpoints when doing so would bypass access controls, violate stated restrictions, or create uncertainty about authorization.</p>
+<p>Do not use an authenticated visible session merely because it is convenient. It can interrupt the user&#39;s work and has greater privacy and account-risk consequences.</p>
+<p>If a site blocks automated browsing, do not attempt to evade protections for casual research or collection. Use a user-visible session only when the user explicitly asked to complete a legitimate task on that site and the session is necessary to do so. Never weaken browser security, access controls, or anti-abuse protections to make automation work.</p>
+<h3>2. Protect account identity and browser context</h3>
+<p>Before acting in an authenticated context, identify the correct account, organization, environment, and browser profile. Never infer identity from a generic browser-window name, an old tab title, or an assumed default profile.</p>
+<p>Use these rules:</p>
+<ul>
+<li>Announce when you are taking control of a visible browser and state the purpose.</li>
+<li>Work in a fresh tab or isolated tab group unless the user explicitly directs you to an existing tab.</li>
+<li>Confirm the signed-in account using a reliable account indicator before performing the real task.</li>
+<li>Distinguish work, personal, test, and production contexts explicitly.</li>
+<li>If the required account or environment is unclear, stop and ask before changing anything.</li>
+<li>Do not reveal credentials, session tokens, private account data, or security settings in logs or reports.</li>
+<li>Do not disable security controls, browser warnings, multi-factor authentication, or access restrictions to make automation easier.</li>
+</ul>
+<p>Use an account preflight gate before any action that changes data: confirm the account identity, the environment, and the target object. If the browser-control system supports an explicit verification state, mark the context verified only after this check has actually passed. Never mark it verified in advance merely to enable actions.</p>
+<p>A useful pre-action question is: <strong>Which account is this? Which environment is this? What exact item will change?</strong> If any answer is uncertain, stop and resolve it.</p>
+<h3>3. Establish the task boundary</h3>
+<p>Determine the intended outcome before navigating deeply. Identify:</p>
+<ul>
+<li>The target page, record, form, or setting.</li>
+<li>The information that will be entered or changed.</li>
+<li>Whether the final action is reversible.</li>
+<li>Whether the task includes sending, publishing, paying, deleting, granting access, changing a plan, or another external commitment.</li>
+<li>Any missing information, ambiguous choices, or fields that require user judgment.</li>
+</ul>
+<p>Separate <strong>preparation</strong> from <strong>commitment</strong>. Filling fields, drafting text, and selecting options may be reversible. Submitting, sending, publishing, purchasing, deleting, or applying an irreversible account change may not be.</p>
+<p>For a form submission or other consequential action, use a two-phase process:</p>
+<ol>
+<li><strong>Preparation pass:</strong> fill the page, verify all values, capture a pre-action screenshot or structured state record, and do not activate the final control.</li>
+<li><strong>Commitment pass:</strong> after explicit confirmation of the prepared state, re-check the target and readiness gate, then perform the final action once.</li>
+</ol>
+<p>This remains useful even if a page reloads between passes: re-fill or restore the intended state, then verify it again before committing. Do not assume a prior successful fill remains valid after navigation, re-rendering, or session changes.</p>
+<h3>4. Inspect the rendered page before editing</h3>
+<p>Do not begin by guessing selectors, filling fields by numeric position, or trusting a visual approximation. First inspect the rendered page and collect enough structure to identify controls safely.</p>
+<p>For each relevant field, determine:</p>
+<ul>
+<li>Element type: text input, multiline text area, rich-text editor, dropdown, checkbox, radio group, date picker, upload control, or custom widget.</li>
+<li>Accessible name, visible label, placeholder, or associated label element.</li>
+<li>Current value and whether the field is required.</li>
+<li>Validation rules, character limits, formatting behavior, and disabled state.</li>
+<li>Whether an apparently visible field is actually an editable control, a wrapper, or a hidden synchronization element.</li>
+<li>Whether changing a dropdown, checkbox, date, or tab causes the form to re-render.</li>
+</ul>
+<p>Address controls by stable semantic identity, such as visible label text or an accessible label relationship. Do not use DOM indexes when labels are available: dynamic pages can change element order between loads or after re-rendering.</p>
+<p>Before changing a record or setting, inspect its current state. This avoids modifying the wrong item or accidentally overwriting existing values.</p>
+<h3>5. Use the correct input method for each control</h3>
+<p>Different controls need different interaction methods. A generic “set value” operation is not reliable for all of them.</p>
+<p>| Control type | Preferred interaction | Verification concern | |---|---|---| | Single-line input | Use the normal text-input mechanism | Line breaks may be removed silently. | | Multiline text area | Fill text, then move focus away | Some applications commit only on blur. | | Rich-text or content-editable editor | Focus it, select existing content, enter text through normal keyboard-style events, then blur | Direct DOM mutation may not update the application&#39;s internal model. | | Dropdown or combobox | Open it, select by visible option text, and wait for state to settle | Selection can trigger a full re-render. | | Checkbox or radio control | Read current state first; change only if needed | A click may toggle an already-correct value. | | Date/time picker | Choose date and time, then verify the rendered summary | Popovers may reinterpret typing or clear related fields. | | File upload | Confirm the file, destination, and privacy implications first | Uploads may begin immediately and can be hard to undo. |</p>
+<p>For framework-driven editors, simulate normal user interaction rather than writing directly to low-level page properties. Many such editors ignore direct changes or overwrite them during the next render.</p>
+<p>If a dropdown, checkbox, tab, or date selection can refresh the form, make and verify those choices <strong>before</strong> filling lengthy or complex text. Then re-inspect the form and confirm that earlier entries remain present.</p>
+<h3>6. Verify after every meaningful edit</h3>
+<p>After each field is filled or setting is changed, read its value back from the page. Compare the actual visible or accessible value with the intended value.</p>
+<p>Check for these common mismatches:</p>
+<ul>
+<li>The automation layer reports success but the field is empty in page state.</li>
+<li>Newlines, repeated spaces, punctuation, or special characters were removed.</li>
+<li>Text was truncated because the control is single-line or has a length limit.</li>
+<li>A custom editor displayed text but did not retain it internally.</li>
+<li>An action on a later field erased an earlier field after re-rendering.</li>
+<li>A hidden synchronization field was changed instead of the visible editor.</li>
+<li>A selection changed a dependent field, date, or validation requirement.</li>
+</ul>
+<p>If verification fails, do not continue toward submission. Diagnose the control type, retry once using a more appropriate interaction method, and verify again. If the page continues to reject or alter the value, report the limitation and ask the user how to proceed rather than silently submitting an incorrect form.</p>
+<h3>7. Run a pre-submit readiness gate</h3>
+<p>Before any final submission or high-impact change, inspect the full relevant page state again. Confirm all of the following:</p>
+<ul>
+<li>The correct account, organization, and environment are active.</li>
+<li>The target item is the intended one.</li>
+<li>Every required field is present and non-empty.</li>
+<li>Each entered value matches the intended content closely enough for the task.</li>
+<li>Dropdowns, checkboxes, dates, recipients, attachments, and dependent fields are correct.</li>
+<li>No validation errors, warnings, or unsaved-change indicators remain.</li>
+<li>The final button has the intended effect and is not a similarly named destructive alternative.</li>
+</ul>
+<p>If a required field is blank, a value cannot be verified, or the target is uncertain, <strong>refuse to submit</strong>. A partially filled form is recoverable; an incorrect external action may not be.</p>
+<p>Capture a pre-action record when useful: a screenshot, a concise state summary, or a structured field dump. Avoid exposing sensitive values unnecessarily. The record should permit review of the pending action without relying on memory.</p>
+<h3>8. Treat one-way actions as a distinct phase</h3>
+<p>The following generally need explicit confirmation immediately before the final control is activated:</p>
+<ul>
+<li>Sending messages or invitations.</li>
+<li>Publishing content.</li>
+<li>Submitting an application or official form.</li>
+<li>Making a payment or purchase.</li>
+<li>Deleting records or files.</li>
+<li>Changing subscription, billing, access, ownership, or security settings.</li>
+<li>Actions labeled permanent, final, irreversible, or impossible to edit later.</li>
+</ul>
+<p>Present a concise summary: target, important values, recipients or audience, cost if any, and irreversible effects. State open questions or unverifiable details plainly. Then wait for confirmation before activating the final control.</p>
+<p>For low-risk reversible changes that the user explicitly requested, such as adjusting a preference or updating a draft, proceed after normal verification unless the site presents an unexpected warning or broader impact.</p>
+<h3>9. Confirm completion after acting</h3>
+<p>A button click is not proof of success. After the final action, look for reliable evidence such as a success message, confirmation reference, newly created record, persisted saved setting, sent or published item, or changed status that remains after a safe reload.</p>
+<p>If the site reports an error, preserve the relevant error text and inspect the resulting state before retrying. A visible error can sometimes be cosmetic, while blind retries can create duplicate requests, payments, or messages.</p>
+<p>If completion cannot be verified, report what was attempted, what evidence exists, and what remains uncertain.</p>
+<h3>10. General failure patterns and recovery rules</h3>
+<p>| Symptom | Likely explanation | Safe response | |---|---|---| | Automation reports success but the field is blank | The application ignored a direct value change | Use normal focus-and-keyboard interaction, blur, then read back. | | Earlier fields disappear after editing a later one | A component re-render reset uncommitted state | Commit and verify each field; perform re-rendering controls first. | | Text loses line breaks or characters | The wrong control type or formatting rule was used | Find a multiline/editor control or use an acceptable simplified format. | | A locator finds an empty wrapper | The accessible element is not the editable node | Inspect the underlying labeled control and target the true editor. | | A field looks correct but validation says it is empty | A hidden synchronization field was edited | Use the visible interactive control that the application actually reads. | | Browser automation becomes unstable on a complex page | The chosen automation layer is unsuitable | Switch to a more robust browser method or a direct interface; do not try to salvage a broken session blindly. | | A popup changes dates or other fields unexpectedly | The widget has stateful close, clear, or parsing behavior | Close it through a neutral page action and re-verify affected fields. | | A visible error may be cosmetic | The task may already have completed | Check the resulting page state before retrying. |</p>
+<h3>Final audit checklist</h3>
+<p>Before reporting completion, verify:</p>
+<ul>
+<li>[ ] The least invasive suitable route was used.</li>
+<li>[ ] The correct account, environment, and target were confirmed.</li>
+<li>[ ] Relevant controls were inspected before editing.</li>
+<li>[ ] Every meaningful change was read back and verified.</li>
+<li>[ ] Required fields and validation state passed the readiness gate.</li>
+<li>[ ] A pre-action record was captured when the action was consequential.</li>
+<li>[ ] Explicit confirmation was obtained immediately before consequential final actions.</li>
+<li>[ ] Success was verified after the action.</li>
+<li>[ ] The report distinguishes confirmed results from uncertainty.</li>
+<li>[ ] No credentials, session data, or unnecessary private content was exposed.</li>
+</ul></article><footer><a href="/skills/LICENSE.txt">CC0</a></footer></main><script>document.querySelector('[data-copy]').addEventListener('click',async function(){try{const text=await fetch(this.dataset.copy).then(r=>{if(!r.ok)throw new Error();return r.text()});await navigator.clipboard.writeText(text);this.textContent='Copied'}catch{this.textContent='Open raw Markdown'}})</script></body></html>
