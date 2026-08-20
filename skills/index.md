@@ -21,7 +21,7 @@ Complete bundle: https://dewierwan.com/skills/all.md
 - [Pressure-test an idea](https://dewierwan.com/skills/raw/pressure-test.md): Find the weak points in an idea before committing to it. Test assumptions, objections, and likely failure modes.
 - [Make a decision](https://dewierwan.com/skills/raw/make-a-decision.md): Match the amount of analysis to the stakes, compare the real options, and record what would change the decision.
 - [Solve a problem](https://dewierwan.com/skills/raw/solve-a-problem.md): Take a messy problem from diagnosis through research, options, recommendation, and implementation.
-- [Shape and draft a document](https://dewierwan.com/skills/raw/shape-and-draft.md): Work out what an important document needs to achieve before drafting it. Use research and several rounds of focused questions.
+- [Shape and draft a document](https://dewierwan.com/skills/raw/shape-and-draft.md): Develop consequential documents by shaping the underlying decisions before drafting. This workflow uses evidence, successive answer-dependent interview rounds, an alignment ledger, a readiness gate, and a final audit.
 - [Gather context](https://dewierwan.com/skills/raw/gather-context.md): Search the sources that are likely to matter and turn the findings into one concise, well-sourced brief.
 - [Learn with a tutor](https://dewierwan.com/skills/raw/learning-tutor.md): Learn a topic through short explanations, active recall, and questions that adjust to your understanding.
 - [Write in my voice](https://dewierwan.com/skills/raw/write-in-my-voice.md): Use a personal style guide to draft messages that sound like the user instead of generic AI writing.
@@ -38,11 +38,7 @@ Complete bundle: https://dewierwan.com/skills/all.md
 - [Turn a message into a task](https://dewierwan.com/skills/raw/turn-a-message-into-a-task.md): Read the full conversation, work out the real action, do useful preparation, and create a clear task only when needed.
 - [Design a work sample](https://dewierwan.com/skills/raw/design-a-work-sample.md): Create a short paid exercise that tests the real work of a role and distinguishes strong from weak performance.
 - [Run a reference call](https://dewierwan.com/skills/raw/run-a-reference-call.md): Prepare and run a concise reference conversation that gathers specific evidence instead of vague praise.
-- [Process hiring referrals](https://dewierwan.com/skills/raw/process-hiring-referrals.md): Turn referral messages into structured candidate leads, preserve context, and close the loop with the hiring owner.
-- [Turn email into recruiting leads](https://dewierwan.com/skills/raw/turn-email-into-recruiting-leads.md): Extract possible candidates from email, check for duplicates, and add useful records to a recruiting system.
-- [Write a participant reference](https://dewierwan.com/skills/raw/write-a-participant-reference.md): Build a careful reference from application evidence, participation, feedback, and the person's own work.
 - [Use a browser safely](https://dewierwan.com/skills/raw/use-a-browser-safely.md): Control websites carefully, inspect before acting, verify every change, and separate preparation from final submission.
 - [Create an AI skill](https://dewierwan.com/skills/raw/create-an-ai-skill.md): Turn a repeated workflow into a focused skill, test when it triggers, and improve it using real examples.
 - [Test every screen size](https://dewierwan.com/skills/raw/test-every-screen-size.md): Check a user interface across narrow, wide, short, and tall screens using screenshots and numerical checks.
-- [Review business expenses](https://dewierwan.com/skills/raw/review-business-expenses.md): Find missing receipts, unclear notes, ageing transactions, and policy risks, then prepare fixes for approval.
 - [Run a recurring community event](https://dewierwan.com/skills/raw/run-a-recurring-community-event.md): Create a repeatable weekly event, prepare its materials, invite the right people, and verify every public detail.

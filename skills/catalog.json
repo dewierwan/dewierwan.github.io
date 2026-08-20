@@ -31,7 +31,7 @@
     },
     {
       "title": "Shape and draft a document",
-      "description": "Work out what an important document needs to achieve before drafting it. Use research and several rounds of focused questions.",
+      "description": "Develop consequential documents by shaping the underlying decisions before drafting. This workflow uses evidence, successive answer-dependent interview rounds, an alignment ledger, a readiness gate, and a final audit.",
       "category": "Research and write",
       "page": "https://dewierwan.com/skills/shape-and-draft/",
       "markdown": "https://dewierwan.com/skills/raw/shape-and-draft.md"
@@ -149,27 +149,6 @@
       "markdown": "https://dewierwan.com/skills/raw/run-a-reference-call.md"
     },
     {
-      "title": "Process hiring referrals",
-      "description": "Turn referral messages into structured candidate leads, preserve context, and close the loop with the hiring owner.",
-      "category": "Hiring and people",
-      "page": "https://dewierwan.com/skills/process-hiring-referrals/",
-      "markdown": "https://dewierwan.com/skills/raw/process-hiring-referrals.md"
-    },
-    {
-      "title": "Turn email into recruiting leads",
-      "description": "Extract possible candidates from email, check for duplicates, and add useful records to a recruiting system.",
-      "category": "Hiring and people",
-      "page": "https://dewierwan.com/skills/turn-email-into-recruiting-leads/",
-      "markdown": "https://dewierwan.com/skills/raw/turn-email-into-recruiting-leads.md"
-    },
-    {
-      "title": "Write a participant reference",
-      "description": "Build a careful reference from application evidence, participation, feedback, and the person's own work.",
-      "category": "Hiring and people",
-      "page": "https://dewierwan.com/skills/write-a-participant-reference/",
-      "markdown": "https://dewierwan.com/skills/raw/write-a-participant-reference.md"
-    },
-    {
       "title": "Use a browser safely",
       "description": "Control websites carefully, inspect before acting, verify every change, and separate preparation from final submission.",
       "category": "Build and automate",
@@ -189,13 +168,6 @@
       "category": "Build and automate",
       "page": "https://dewierwan.com/skills/test-every-screen-size/",
       "markdown": "https://dewierwan.com/skills/raw/test-every-screen-size.md"
-    },
-    {
-      "title": "Review business expenses",
-      "description": "Find missing receipts, unclear notes, ageing transactions, and policy risks, then prepare fixes for approval.",
-      "category": "Build and automate",
-      "page": "https://dewierwan.com/skills/review-business-expenses/",
-      "markdown": "https://dewierwan.com/skills/raw/review-business-expenses.md"
     },
     {
       "title": "Run a recurring community event",
