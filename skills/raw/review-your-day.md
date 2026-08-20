@@ -41,4 +41,3 @@ rating, ask the user rather than inferring it.
 
 End with the one fact tomorrow's plan should account for. Do not turn the review
 into a full planning session unless the user asks to continue.
-

@@ -42,4 +42,3 @@ clearly authorized it. Show a concise summary of what will happen.
 After submission, confirm the success state, resulting record, or changed
 setting. A click without evidence is not completion. Close temporary tabs and
 report anything that could not be verified.
-

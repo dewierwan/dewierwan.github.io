@@ -45,4 +45,3 @@ the subject, not around the tools searched. A useful structure is:
 - Direct source links.
 
 Every sourced claim should let the user reach its supporting evidence.
-

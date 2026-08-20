@@ -49,4 +49,3 @@ tasks whose shape depends on an unresolved decision.
 
 Write the outcomes, rollover decisions, protected blocks, risks, and cuts into
 the user's planning system. Keep the final plan short enough to guide the week.
-

@@ -48,4 +48,3 @@ Give a clear result:
 - **Stop or redesign:** a core weakness makes the current version unsound.
 
 End with the smallest action that would reduce the most uncertainty.
-

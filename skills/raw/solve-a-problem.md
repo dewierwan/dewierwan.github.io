@@ -53,4 +53,3 @@ required condition is missing. Do not silently return a weaker result.
 
 Report the outcome, tests run, remaining risks, and any action the user must
 take. Keep temporary implementation detail out of the handoff.
-

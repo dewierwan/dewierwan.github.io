@@ -45,4 +45,3 @@ Include:
 
 Keep the agenda realistic for the available time. Put the most important topic
 before status updates and background.
-

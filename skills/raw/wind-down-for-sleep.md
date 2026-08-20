@@ -42,4 +42,3 @@ If the user remains awake and frustrated, suggest leaving the bed for a calm,
 dim activity until sleepiness returns. Keep clocks and stimulating content out
 of view. For persistent sleep problems, recommend appropriate professional
 support rather than expanding the routine indefinitely.
-

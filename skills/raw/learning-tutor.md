@@ -41,4 +41,3 @@ easily, increase difficulty or ask them to transfer the idea to a new case.
 At useful intervals, ask the learner to explain the idea in their own words.
 End with a short recap, one retrieval question for later, and the next concept
 that follows naturally.
-

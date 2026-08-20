@@ -45,4 +45,3 @@ details.
 
 Verify names, facts, permissions, quotations, and the distinction between direct
 evidence and inference before sharing.
-

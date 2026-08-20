@@ -50,4 +50,3 @@ starting before a meeting-heavy period.
 Write the outcome, focused block, secondary tasks, and main risk into the user's
 chosen planning system. Confirm that the plan fits the calendar before creating
 or moving events.
-

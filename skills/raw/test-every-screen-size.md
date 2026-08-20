@@ -52,4 +52,3 @@ not describe. Use both.
 
 If one size fails, correct the underlying layout and rerun the complete sweep.
 A patch that fixes one viewport while breaking another is not complete.
-

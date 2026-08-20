@@ -51,4 +51,3 @@ familiarity, or presentation more than the actual role.
 
 Ensure the work fits the stated time, respects accessibility needs, avoids
 sensitive data, and can be scored consistently by different reviewers.
-

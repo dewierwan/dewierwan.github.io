@@ -44,4 +44,3 @@ change the decision rather than gathering information without a stopping rule.
 For a meaningful decision, record the choice, alternatives, rationale,
 prediction, worries, and what would change the user's mind. Set a review point
 only when later evidence could lead to a useful correction.
-

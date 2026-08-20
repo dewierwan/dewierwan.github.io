@@ -45,4 +45,3 @@ Check the draft line by line against the style guide. Ask:
 - Can anything be cut without losing the action or meaning?
 
 Put copy-ready text last with no commentary after it.
-

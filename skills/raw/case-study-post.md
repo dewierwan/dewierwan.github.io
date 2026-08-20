@@ -41,4 +41,3 @@ result. End with the wider lesson or a relevant action.
 
 Before publication, flag sensitive facts, money, health, employment changes,
 direct quotations, and any claim about causation for the subject to approve.
-

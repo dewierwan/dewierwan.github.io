@@ -41,4 +41,3 @@ invitee count where possible.
 
 After the event, capture changes that should affect the next occurrence. Keep
 the reusable workflow separate from one week's temporary details.
-

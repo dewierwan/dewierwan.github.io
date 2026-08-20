@@ -43,4 +43,3 @@ only when the user wants them in scope.
 Identify the main reason the plan could fail and one countermeasure. Write the
 review and new plan into the user's chosen system. Carry forward only work the
 user explicitly recommits to.
-

@@ -42,4 +42,3 @@ naturally. Do not add a forced invitation to comment.
 Cut inflated adjectives, repetitive sentence openings, unnecessary contrasts,
 abstract slogans, long setup, and claims that could apply to any organization.
 Read the post aloud and shorten lines that sound performed rather than spoken.
-

@@ -43,4 +43,3 @@ Recommend one option or a short ranked list. Explain which tradeoff drives the
 recommendation. State the assumption most likely to change the ranking.
 
 End by asking whether the user wants to choose, combine, or develop any option.
-

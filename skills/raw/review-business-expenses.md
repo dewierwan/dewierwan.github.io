@@ -42,4 +42,3 @@ hide a personal or questionable expense with polished wording.
 After approval, update only the authorized fields and attach verified documents.
 Read the records back and report completed, unresolved, and policy-flagged items
 separately.
-

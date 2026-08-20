@@ -46,4 +46,3 @@ seek concrete evidence.
 Separate observations, the referee's interpretation, and your inference. Record
 confidence and any important limits on what the referee could know. Do not turn
 one reference into a final verdict on its own.
-

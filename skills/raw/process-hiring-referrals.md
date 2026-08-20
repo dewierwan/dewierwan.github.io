@@ -41,4 +41,3 @@ after verifying the record and handoff.
 
 List duplicates, missing profiles, ambiguous people, unavailable systems, and
 anything requiring user judgment. Never silently skip a referral.
-

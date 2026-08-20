@@ -43,4 +43,3 @@ or better owned elsewhere.
 Use a clear title, binary finish line, relevant context, source link, owner, and
 real deadline. Avoid copying a whole conversation into the notes. Verify the
 record after writing it.
-

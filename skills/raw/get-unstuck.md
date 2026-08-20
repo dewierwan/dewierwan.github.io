@@ -43,4 +43,3 @@ means.
 After the attempt, ask what helped. Record patterns only with the user's
 permission. Adapt future interventions to observed results rather than assuming
 one motivational style always works.
-

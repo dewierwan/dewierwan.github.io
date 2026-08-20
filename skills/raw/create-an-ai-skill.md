@@ -48,4 +48,3 @@ failure cases. Check:
 Revise the smallest instruction responsible for each failure. Re-run the full
 evaluation set to catch regressions. Add real lessons after use, then consolidate
 old rules so the skill remains readable.
-

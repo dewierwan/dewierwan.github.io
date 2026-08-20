@@ -63,4 +63,3 @@ Write the smallest document that can achieve the agreed result. Use plain
 claims, concrete decisions, explicit ownership, and clear boundaries. Compare
 the draft with the alignment ledger and remove anything presented as settled
 that was only inferred.
-
