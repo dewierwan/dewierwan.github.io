@@ -1,0 +1,5 @@
+# AI skills
+
+Index: https://dewierwan.com/skills/index.md
+Complete bundle: https://dewierwan.com/skills/all.md
+Catalogue: https://dewierwan.com/skills/catalog.json

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="robots" content="noindex,follow"><title>Brainstorm options · AI skills</title><meta name="description" content="Generate genuinely different options, compare them honestly, and choose the strongest ones.">
+<link rel="alternate" type="text/markdown" href="/skills/raw/brainstorm.md"><link rel="stylesheet" href="/skills/styles.css"></head><body><main><a class="back" href="/skills/">← Skills</a><header class="skill-header"><h1>Brainstorm options</h1><p class="description">Generate genuinely different options, compare them honestly, and choose the strongest ones.</p><div class="skill-actions"><a href="/skills/raw/brainstorm.md">Raw Markdown</a><button class="copy" type="button" data-copy="/skills/raw/brainstorm.md">Copy Markdown</button></div></header><article class="skill-body"><p>Use this skill when the user wants possible approaches, directions, names, or solutions and does not yet know which one to choose.</p>
+<h3>1. Frame the problem</h3>
+<p>State the decision in one sentence. Clarify the desired result, the people affected, the main limits, and what has already been tried. Ask only for facts that would change the options.</p>
+<h3>2. Generate distinct options</h3>
+<p>Create options from different underlying approaches. Do not produce small variations of the same idea. Include:</p>
+<ul>
+<li>A simple or low-effort approach.</li>
+<li>A bold approach.</li>
+<li>An approach that changes the process rather than adding more work.</li>
+<li>A combination only when its parts genuinely fit together.</li>
+<li>Doing nothing when it is a serious option.</li>
+</ul>
+<p>For a complex problem, generate widely before narrowing. Remove duplicates and weak filler before showing the user.</p>
+<h3>3. Evaluate them</h3>
+<p>Choose a small set of criteria that match the real decision. Compare each option on likely impact, effort, risk, reversibility, and speed. Add any domain-specific criterion that matters more.</p>
+<p>Name the strongest advantage and weakness of every serious option. Do not make the preferred option look good by describing the alternatives badly.</p>
+<h3>4. Recommend</h3>
+<p>Recommend one option or a short ranked list. Explain which tradeoff drives the recommendation. State the assumption most likely to change the ranking.</p>
+<p>End by asking whether the user wants to choose, combine, or develop any option.</p></article><footer><a href="/skills/LICENSE.txt">CC0</a></footer></main><script>document.querySelector('[data-copy]').addEventListener('click',async function(){try{const text=await fetch(this.dataset.copy).then(r=>{if(!r.ok)throw new Error();return r.text()});await navigator.clipboard.writeText(text);this.textContent='Copied'}catch{this.textContent='Open raw Markdown'}})</script></body></html>

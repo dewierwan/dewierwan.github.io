@@ -1,0 +1,208 @@
+{
+  "version": 1,
+  "skills": [
+    {
+      "title": "Brainstorm options",
+      "description": "Generate genuinely different options, compare them honestly, and choose the strongest ones.",
+      "category": "Think and decide",
+      "page": "https://dewierwan.com/skills/brainstorm/",
+      "markdown": "https://dewierwan.com/skills/raw/brainstorm.md"
+    },
+    {
+      "title": "Pressure-test an idea",
+      "description": "Find the weak points in an idea before committing to it. Test assumptions, objections, and likely failure modes.",
+      "category": "Think and decide",
+      "page": "https://dewierwan.com/skills/pressure-test/",
+      "markdown": "https://dewierwan.com/skills/raw/pressure-test.md"
+    },
+    {
+      "title": "Make a decision",
+      "description": "Match the amount of analysis to the stakes, compare the real options, and record what would change the decision.",
+      "category": "Think and decide",
+      "page": "https://dewierwan.com/skills/make-a-decision/",
+      "markdown": "https://dewierwan.com/skills/raw/make-a-decision.md"
+    },
+    {
+      "title": "Solve a problem",
+      "description": "Take a messy problem from diagnosis through research, options, recommendation, and implementation.",
+      "category": "Think and decide",
+      "page": "https://dewierwan.com/skills/solve-a-problem/",
+      "markdown": "https://dewierwan.com/skills/raw/solve-a-problem.md"
+    },
+    {
+      "title": "Shape and draft a document",
+      "description": "Work out what an important document needs to achieve before drafting it. Use research and several rounds of focused questions.",
+      "category": "Research and write",
+      "page": "https://dewierwan.com/skills/shape-and-draft/",
+      "markdown": "https://dewierwan.com/skills/raw/shape-and-draft.md"
+    },
+    {
+      "title": "Gather context",
+      "description": "Search the sources that are likely to matter and turn the findings into one concise, well-sourced brief.",
+      "category": "Research and write",
+      "page": "https://dewierwan.com/skills/gather-context/",
+      "markdown": "https://dewierwan.com/skills/raw/gather-context.md"
+    },
+    {
+      "title": "Learn with a tutor",
+      "description": "Learn a topic through short explanations, active recall, and questions that adjust to your understanding.",
+      "category": "Research and write",
+      "page": "https://dewierwan.com/skills/learning-tutor/",
+      "markdown": "https://dewierwan.com/skills/raw/learning-tutor.md"
+    },
+    {
+      "title": "Write in my voice",
+      "description": "Use a personal style guide to draft messages that sound like the user instead of generic AI writing.",
+      "category": "Research and write",
+      "page": "https://dewierwan.com/skills/write-in-my-voice/",
+      "markdown": "https://dewierwan.com/skills/raw/write-in-my-voice.md"
+    },
+    {
+      "title": "Write a professional social post",
+      "description": "Turn notes or source material into a clear social post with a strong opening and a specific point.",
+      "category": "Research and write",
+      "page": "https://dewierwan.com/skills/professional-social-post/",
+      "markdown": "https://dewierwan.com/skills/raw/professional-social-post.md"
+    },
+    {
+      "title": "Write a case study post",
+      "description": "Turn a person's real change into a short, evidence-based case study without exaggerating their story.",
+      "category": "Research and write",
+      "page": "https://dewierwan.com/skills/case-study-post/",
+      "markdown": "https://dewierwan.com/skills/raw/case-study-post.md"
+    },
+    {
+      "title": "Plan your day",
+      "description": "Choose one most important outcome, protect time for it, and make a realistic plan around existing commitments.",
+      "category": "Plan and reflect",
+      "page": "https://dewierwan.com/skills/plan-your-day/",
+      "markdown": "https://dewierwan.com/skills/raw/plan-your-day.md"
+    },
+    {
+      "title": "Review your day",
+      "description": "Run a short end-of-day reflection on what happened, what mattered, and what should change tomorrow.",
+      "category": "Plan and reflect",
+      "page": "https://dewierwan.com/skills/review-your-day/",
+      "markdown": "https://dewierwan.com/skills/raw/review-your-day.md"
+    },
+    {
+      "title": "Plan your week",
+      "description": "Review the previous week, choose a few outcomes, cut lower-value work, and protect time for what matters.",
+      "category": "Plan and reflect",
+      "page": "https://dewierwan.com/skills/plan-your-week/",
+      "markdown": "https://dewierwan.com/skills/raw/plan-your-week.md"
+    },
+    {
+      "title": "Review and plan a month",
+      "description": "Close one month honestly, choose a theme for the next, and turn it into a small set of concrete commitments.",
+      "category": "Plan and reflect",
+      "page": "https://dewierwan.com/skills/review-and-plan-a-month/",
+      "markdown": "https://dewierwan.com/skills/raw/review-and-plan-a-month.md"
+    },
+    {
+      "title": "Get unstuck",
+      "description": "Work out why you are stuck, then use a short intervention suited to tiredness, dread, confusion, or distraction.",
+      "category": "Plan and reflect",
+      "page": "https://dewierwan.com/skills/get-unstuck/",
+      "markdown": "https://dewierwan.com/skills/raw/get-unstuck.md"
+    },
+    {
+      "title": "Wind down for sleep",
+      "description": "Guide a short evening routine that closes open loops, prepares the environment, and makes sleep easier.",
+      "category": "Plan and reflect",
+      "page": "https://dewierwan.com/skills/wind-down-for-sleep/",
+      "markdown": "https://dewierwan.com/skills/raw/wind-down-for-sleep.md"
+    },
+    {
+      "title": "Prepare for a meeting",
+      "description": "Gather the relevant history, clarify the desired outcome, and produce a focused agenda and preparation brief.",
+      "category": "Meetings and tasks",
+      "page": "https://dewierwan.com/skills/prepare-for-a-meeting/",
+      "markdown": "https://dewierwan.com/skills/raw/prepare-for-a-meeting.md"
+    },
+    {
+      "title": "Capture meeting actions",
+      "description": "Review meeting notes, identify genuine commitments, create clear tasks, and ask about uncertain cases.",
+      "category": "Meetings and tasks",
+      "page": "https://dewierwan.com/skills/capture-meeting-actions/",
+      "markdown": "https://dewierwan.com/skills/raw/capture-meeting-actions.md"
+    },
+    {
+      "title": "Turn a message into a task",
+      "description": "Read the full conversation, work out the real action, do useful preparation, and create a clear task only when needed.",
+      "category": "Meetings and tasks",
+      "page": "https://dewierwan.com/skills/turn-a-message-into-a-task/",
+      "markdown": "https://dewierwan.com/skills/raw/turn-a-message-into-a-task.md"
+    },
+    {
+      "title": "Design a work sample",
+      "description": "Create a short paid exercise that tests the real work of a role and distinguishes strong from weak performance.",
+      "category": "Hiring and people",
+      "page": "https://dewierwan.com/skills/design-a-work-sample/",
+      "markdown": "https://dewierwan.com/skills/raw/design-a-work-sample.md"
+    },
+    {
+      "title": "Run a reference call",
+      "description": "Prepare and run a concise reference conversation that gathers specific evidence instead of vague praise.",
+      "category": "Hiring and people",
+      "page": "https://dewierwan.com/skills/run-a-reference-call/",
+      "markdown": "https://dewierwan.com/skills/raw/run-a-reference-call.md"
+    },
+    {
+      "title": "Process hiring referrals",
+      "description": "Turn referral messages into structured candidate leads, preserve context, and close the loop with the hiring owner.",
+      "category": "Hiring and people",
+      "page": "https://dewierwan.com/skills/process-hiring-referrals/",
+      "markdown": "https://dewierwan.com/skills/raw/process-hiring-referrals.md"
+    },
+    {
+      "title": "Turn email into recruiting leads",
+      "description": "Extract possible candidates from email, check for duplicates, and add useful records to a recruiting system.",
+      "category": "Hiring and people",
+      "page": "https://dewierwan.com/skills/turn-email-into-recruiting-leads/",
+      "markdown": "https://dewierwan.com/skills/raw/turn-email-into-recruiting-leads.md"
+    },
+    {
+      "title": "Write a participant reference",
+      "description": "Build a careful reference from application evidence, participation, feedback, and the person's own work.",
+      "category": "Hiring and people",
+      "page": "https://dewierwan.com/skills/write-a-participant-reference/",
+      "markdown": "https://dewierwan.com/skills/raw/write-a-participant-reference.md"
+    },
+    {
+      "title": "Use a browser safely",
+      "description": "Control websites carefully, inspect before acting, verify every change, and separate preparation from final submission.",
+      "category": "Build and automate",
+      "page": "https://dewierwan.com/skills/use-a-browser-safely/",
+      "markdown": "https://dewierwan.com/skills/raw/use-a-browser-safely.md"
+    },
+    {
+      "title": "Create an AI skill",
+      "description": "Turn a repeated workflow into a focused skill, test when it triggers, and improve it using real examples.",
+      "category": "Build and automate",
+      "page": "https://dewierwan.com/skills/create-an-ai-skill/",
+      "markdown": "https://dewierwan.com/skills/raw/create-an-ai-skill.md"
+    },
+    {
+      "title": "Test every screen size",
+      "description": "Check a user interface across narrow, wide, short, and tall screens using screenshots and numerical checks.",
+      "category": "Build and automate",
+      "page": "https://dewierwan.com/skills/test-every-screen-size/",
+      "markdown": "https://dewierwan.com/skills/raw/test-every-screen-size.md"
+    },
+    {
+      "title": "Review business expenses",
+      "description": "Find missing receipts, unclear notes, ageing transactions, and policy risks, then prepare fixes for approval.",
+      "category": "Build and automate",
+      "page": "https://dewierwan.com/skills/review-business-expenses/",
+      "markdown": "https://dewierwan.com/skills/raw/review-business-expenses.md"
+    },
+    {
+      "title": "Run a recurring community event",
+      "description": "Create a repeatable weekly event, prepare its materials, invite the right people, and verify every public detail.",
+      "category": "Build and automate",
+      "page": "https://dewierwan.com/skills/run-a-recurring-community-event/",
+      "markdown": "https://dewierwan.com/skills/raw/run-a-recurring-community-event.md"
+    }
+  ]
+}
