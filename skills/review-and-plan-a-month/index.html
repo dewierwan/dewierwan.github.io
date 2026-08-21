@@ -1,22 +1,231 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="robots" content="noindex,follow"><title>Review and plan a month · AI skills</title><meta name="description" content="Close one month honestly, choose a theme for the next, and turn it into a small set of concrete commitments.">
-<link rel="alternate" type="text/markdown" href="/skills/raw/review-and-plan-a-month.md"><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%23b4552d%22/><text x=%2250%22 y=%2253%22 dominant-baseline=%22central%22 text-anchor=%22middle%22 font-family=%22Georgia, 'Times New Roman', serif%22 font-size=%2246%22 letter-spacing=%221%22 fill=%22%23fdfaf4%22>DE</text></svg>"><link rel="stylesheet" href="/skills/styles.css"></head><body><main><a class="back" href="/skills/">← Skills</a><header class="skill-header"><h1>Review and plan a month</h1><p class="description">Close one month honestly, choose a theme for the next, and turn it into a small set of concrete commitments.</p><div class="skill-actions"><a href="/skills/raw/review-and-plan-a-month.md">Raw Markdown</a><button class="copy" type="button" data-copy="/skills/raw/review-and-plan-a-month.md">Copy Markdown</button></div></header><article class="skill-body"><p>Use this at the boundary between months.</p>
-<h3>1. Gather evidence</h3>
-<p>Read the previous monthly plan, weekly plans, calendar, completed projects, important metrics, and personal notes the user chooses to include. Separate what happened from what was intended.</p>
-<h3>2. Review the month ending</h3>
-<p>Ask:</p>
+<meta name="robots" content="noindex,follow"><title>Review and plan a month · AI skills</title><meta name="description" content="Close one month honestly, then create a small, capacity-checked and explicitly approved plan for the next month using evidence, trade-offs, and concrete commitments.">
+<link rel="alternate" type="text/markdown" href="/skills/raw/review-and-plan-a-month.md"><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%23b4552d%22/><text x=%2250%22 y=%2253%22 dominant-baseline=%22central%22 text-anchor=%22middle%22 font-family=%22Georgia, 'Times New Roman', serif%22 font-size=%2246%22 letter-spacing=%221%22 fill=%22%23fdfaf4%22>DE</text></svg>"><link rel="stylesheet" href="/skills/styles.css"></head><body><main><a class="back" href="/skills/">← Skills</a><header class="skill-header"><h1>Review and plan a month</h1><p class="description">Close one month honestly, then create a small, capacity-checked and explicitly approved plan for the next month using evidence, trade-offs, and concrete commitments.</p><div class="skill-actions"><a href="/skills/raw/review-and-plan-a-month.md">Raw Markdown</a><button class="copy" type="button" data-copy="/skills/raw/review-and-plan-a-month.md">Copy Markdown</button></div></header><article class="skill-body"><p>Use this workflow at a month boundary to review the month ending and build an executable plan for the month ahead. A complete session usually takes 45–75 minutes: roughly half for evidence and review, and roughly half for planning.</p>
+<p>Review and planning belong in the same session. The structural cause of a missed commitment, energy drain, or delivery problem should directly shape the structure of the next plan.</p>
+<h3>Purpose</h3>
+<p>This workflow produces:</p>
 <ul>
-<li>What changed because of this month&#39;s work?</li>
-<li>Which commitment mattered most?</li>
-<li>What repeatedly slipped?</li>
-<li>What used time without producing enough value?</li>
-<li>What should continue, stop, or be redesigned?</li>
+<li>An evidence-based account of what happened during the review month.</li>
+<li>A concise verdict on progress toward active long-range goals.</li>
+<li>A month-level picture of selected work and life signals, such as focus, sleep, energy, training, or completed work.</li>
+<li>A written <strong>Review</strong> for the month ending.</li>
+<li>A written <strong>Plan</strong> for the month beginning, with a named theme, no more than three major outcomes, explicit trade-offs, and a pre-mortem.</li>
 </ul>
-<p>Use evidence where possible and preserve the user&#39;s interpretation where the evidence cannot answer.</p>
-<h3>3. Choose a theme</h3>
-<p>Name one useful theme for the next month. It should guide tradeoffs, not act as a slogan. Explain what the theme makes more important and what it makes less important.</p>
-<h3>4. Set commitments</h3>
-<p>Choose a small set of outcomes that fit known capacity and fixed commitments. Define a finish line and evidence for each. Include personal or health goals only when the user wants them in scope.</p>
-<h3>5. Pre-mortem and record</h3>
-<p>Identify the main reason the plan could fail and one countermeasure. Write the review and new plan into the user&#39;s chosen system. Carry forward only work the user explicitly recommits to.</p></article><footer><a href="/skills/LICENSE.txt">CC0</a></footer></main><script>document.querySelector('[data-copy]').addEventListener('click',async function(){try{const text=await fetch(this.dataset.copy).then(r=>{if(!r.ok)throw new Error();return r.text()});await navigator.clipboard.writeText(text);this.textContent='Copied'}catch{this.textContent='Open raw Markdown'}})</script></body></html>
+<p>Only gather, discuss, or save information that supports one of these outputs.</p>
+<h3>When to run it</h3>
+<p>Run this workflow when the user asks for a monthly review, asks to plan a named month, or asks to close one month and start another.</p>
+<p>Default timing:</p>
+<ul>
+<li>On the first three days of a month, review the prior month and plan the current month.</li>
+<li>Otherwise, review the current month to date and plan the next month. Clearly label a partial-month review and state the days remaining.</li>
+<li>If the user asks only for forward planning, review first because the evidence should shape the plan. The user may explicitly choose to skip the review.</li>
+</ul>
+<p>State the ranges plainly before proceeding:</p>
+<blockquote>Reviewing <strong>March 2026</strong> (01 Mar–31 Mar). Planning <strong>April 2026</strong>.</blockquote>
+<p>Ask whether the user means calendar months or a practical range that includes an overlapping partial week. Record the actual planning range in the finished plan.</p>
+<h3>Operating rules</h3>
+<ol>
+<li><strong>Read first; discuss second.</strong> Show the evidence picture before asking reflective questions.</li>
+<li><strong>Batch independent reads.</strong> If connected sources exist, gather independent evidence in one initial pass. Do not interrupt the conversation with repeated small lookups.</li>
+<li><strong>Use current commitments.</strong> Assess against the user’s live target, not an old schedule, obsolete project scope, or stale goal record.</li>
+<li><strong>Check data quality before a harsh verdict.</strong> Missing syncs, incomplete logs, delayed updates, and inconsistent sources may distort results. Ask the user to confirm surprising findings.</li>
+<li><strong>The user chooses.</strong> The assistant calculates, summarizes, identifies gaps, and holds constraints. The user chooses priorities, cuts, and commitments.</li>
+<li><strong>One decision at a time.</strong> Do not move to the next planning decision until the current question has a real answer.</li>
+<li><strong>Stay at month altitude.</strong> Define outcomes, milestones, capacity, structure, and commitments. Leave detailed weekly task blocks to a weekly planning workflow.</li>
+<li><strong>No saved plan without explicit approval.</strong> A plan assembled from notes is a draft, not a decision. The user must restate or materially confirm the theme and commitments, then explicitly approve it.</li>
+<li><strong>Use explicit dates.</strong> Use <strong>DD MMM</strong> format unless the user prefers another unambiguous convention.</li>
+<li><strong>Keep records useful, not exhaustive.</strong> Save decisions, evidence, and constraints rather than a meeting transcript.</li>
+<li><strong>Do not lecture.</strong> Where personal practice, training, health, or recovery is in scope, provide the numbers, the direct conclusion, and the agreed commitment. Give specialist advice only when asked and when appropriate.</li>
+</ol>
+<h3>Step 1: Determine the range and gather evidence</h3>
+<p>Determine the review month, prior comparison month, and planning month. Then make one initial batch of reads where possible.</p>
+<p>Choose sources that match the user’s chosen system: a task manager, project tracker, calendar, spreadsheet, notes application, health tracker, training log, or user-supplied facts. If no source is connected, ask for a short factual inventory. Never imply that unavailable data was checked.</p>
+<div class="table-wrap" tabindex="0" aria-label="Scrollable table"><table><thead><tr><th>Evidence area</th><th>Gather in the initial pass</th></tr></thead><tbody><tr><td>Previous monthly record</td><td>Theme, promised outcomes, commitments, and prior review findings</td></tr><tr><td>Weekly records</td><td>Plans and reviews in the review range; repeated blockers, milestones, and carried work</td></tr><tr><td>Goals</td><td>Active weekly, monthly, quarterly, and annual goals; status, deadlines, and notes</td></tr><tr><td>Work delivered</td><td>Completed tasks, decisions, projects, or deliverables; grouped into useful domains</td></tr><tr><td>Calendar</td><td>Next-month travel, leave, events, fixed deadlines, recurring commitments, and heavy meeting weeks</td></tr><tr><td>Daily signals</td><td>User-selected ratings, focus time, journals, habits, or mood notes</td></tr><tr><td>Sleep and recovery</td><td>Optional sleep duration, sleep quality, and same-source recovery trends</td></tr><tr><td>Training or practice</td><td>Optional sessions from the review and prior months, plus the live commitment or schedule</td></tr></tbody></table></div>
+<p>For large sources, return computed statistics and a few representative themes rather than raw entries. Long journals and month-long event lists can crowd out the actual review. Use filtered queries, aggregation, summaries, or a delegated helper when available.</p>
+<p>If a helper is used for a large calendar or journal source, give it a narrow brief: use only authorized read access, analyze only the requested date range, and return a concise planning summary rather than raw data. The summary should include:</p>
+<ul>
+<li>Fixed multi-day blocks, such as travel, leave, or conferences.</li>
+<li>Approximate meeting load by week.</li>
+<li>Important recurring series.</li>
+<li>Protected personal or social commitments.</li>
+<li>Planning anomalies, such as meetings inside unavailable periods or likely time-zone mistakes.</li>
+</ul>
+<p>Before detailed monthly planning, re-read any weekly plans that overlap the beginning of the planning range. A weekly plan may already define that period in more detail. Reference and reconcile it with monthly outcomes; never duplicate or overwrite it.</p>
+<h3>Step 2: Show the evidence picture</h3>
+<p>Present a compact factual picture before asking the user to explain it. Be direct, numeric where useful, and concise.</p>
+<h4>Training, health, or personal-practice verdict</h4>
+<p>If the user has a current commitment in this area, include this section unless they explicitly put it out of scope. Compare actual activity with the live target. Depending on the domain, calculate:</p>
+<ul>
+<li>Total volume, sessions, repetitions, or practice instances.</li>
+<li>Average weekly volume.</li>
+<li>Number of active days.</li>
+<li>Completion of key sessions or milestones.</li>
+<li>Longest gap between sessions.</li>
+<li>Relevant balance measures, such as easy versus demanding work, when records support them.</li>
+<li>Relevant performance or recovery measures.</li>
+<li>Month-over-month changes.</li>
+</ul>
+<p>Use this verdict taxonomy when it fits:</p>
+<ul>
+<li><strong>ON TRACK</strong>: key measures meet at least 90% of target and consistency is intact.</li>
+<li><strong>BEHIND</strong>: a key measure is about 60–90% of target, or there was a meaningful consistency break.</li>
+<li><strong>OFF TRACK</strong>: a key measure is below 60% of target or there was a prolonged gap.</li>
+<li><strong>AT RISK</strong>: injury, safety, burnout, or sustained decline makes the plan unsafe or unlikely.</li>
+</ul>
+<p>Adjust thresholds only when the user’s domain needs different ones, and state the adjustment. If tracking may be incomplete, ask: “The record shows this. Does that match reality?” before making a strong judgment.</p>
+<p>State one biggest corrective action for the next month. This is a concrete commitment, not a full program.</p>
+<h4>Goals and delivery</h4>
+<p>Summarize weekly commitments as completed, missed, deferred, or rolled forward. For every active long-range goal, state whether it <strong>advanced</strong>, <strong>stalled</strong>, or <strong>regressed</strong>, with one short reason. Explicitly name goals that received no meaningful attention; these are often most at risk.</p>
+<p>Also summarize completed work in a few useful domains. Avoid a wall of bullets. The question is whether effort created intended progress.</p>
+<h4>Life signals</h4>
+<p>Include only measures the user chooses to track. Useful measures include rating distribution and average, focus hours, low-focus days, sleep duration, sleep quality, recovery trends from a consistent source, and repeated themes in written notes.</p>
+<p>Flag meaningful patterns, such as low average sleep, repeated short nights, several consecutive low-rating days, an extended low-focus streak, or an apparent mismatch between positive ratings and written notes describing exhaustion or stress. Numerical averages are not complete truth. Raise the mismatch directly and briefly.</p>
+<h3>Step 3: Reflect on the month</h3>
+<p>Start with one specific observation from the evidence. Ask one question at a time and pursue no more than two or three threads unless the user wants depth.</p>
+<p>Cover these questions before closing the review:</p>
+<ol>
+<li>What genuinely shipped and feels like a win?</li>
+<li>What cost more time or energy than it returned?</li>
+<li>Was the main miss structural, circumstantial, or a genuine priority change?</li>
+<li>What one behavior, boundary, or pattern must change next month?</li>
+<li>If training or a personal practice is in scope, what is the concrete next-month commitment?</li>
+</ol>
+<p>Useful prompts include:</p>
+<ul>
+<li>“This outcome slipped in several weeks. What made it structurally hard to complete?”</li>
+<li>“Your ratings were stable, but your notes repeatedly mention strain. What was happening?”</li>
+<li>“This goal moved while the others did not. What conditions made that possible?”</li>
+</ul>
+<p>For a time-constrained user, the minimum viable review is the in-scope personal-practice verdict, any material wellbeing flags, one structural fix, and one concrete next-month commitment.</p>
+<h3>Step 4: Plan the new month</h3>
+<p>A plan is not a description of events plus optimistic targets. A real plan has a defined outcome, an honest baseline, a path, proof of capacity, trade-offs, forcing functions, a pre-mortem, and explicit approval.</p>
+<h4>Move 1: Define outcomes</h4>
+<p>For each candidate priority, ask:</p>
+<blockquote>What specifically is true by the final day of this planning range?</blockquote>
+<p>Make the answer measurable or plainly verifiable. Limit the plan to three outcomes; one or two is usually better. Each outcome should connect to a long-range goal or an explicitly chosen responsibility.</p>
+<h4>Move 2: Establish current state</h4>
+<p>Size the gap with evidence, not mood. Inspect the relevant draft, pipeline, milestone, backlog, baseline metric, or other domain-specific reality. If the gap cannot be described, gather the missing evidence before designing the path.</p>
+<h4>Move 3: Work backward to build a path</h4>
+<p>For each outcome, identify three to six moves by reasoning backward from the due date. Every move needs a date or window, an owner, and evidence of completion.</p>
+<p>Ask:</p>
+<blockquote>For this to be true by the end date, what must be true halfway through? What must happen before that?</blockquote>
+<h4>Move 4: Do capacity math</h4>
+<p>Estimate usable focused capacity honestly:</p>
+<blockquote>available working days × recently observed focused hours per day</blockquote>
+<p>Account for travel, leave, meeting-heavy weeks, and fixed commitments. Compare available capacity with the effort implied by the paths. If demand exceeds supply, cut, defer, reduce scope, or add real help now.</p>
+<h4>Move 5: Make the NOT-doing list</h4>
+<p>Ask:</p>
+<blockquote>What will explicitly not happen this month so these outcomes can?</blockquote>
+<p>The user names the cuts. A plan without a real not-doing list is a wish.</p>
+<h4>Move 6: Add forcing functions and protective structure</h4>
+<p>Fragile outcomes need external pressure: a stakeholder expecting a deliverable on a date, a booked review, a public commitment, or a downstream owner waiting on the work.</p>
+<p>Also protect work that is vulnerable to interruption. If one outcome requires long uninterrupted work while another can tolerate fragmentation, batch the flexible work around meetings and reserve the best available blocks for the fragile work. If calendar conflicts undermine protected time, add their removal to the plan as an immediate action.</p>
+<h4>Move 7: Run a pre-mortem</h4>
+<p>Ask:</p>
+<blockquote>It is the final day of the month and this plan failed. What happened?</blockquote>
+<p>The user answers first. Record the top two or three failure modes and a specific counter for each.</p>
+<h4>Move 8: Get sign-off</h4>
+<p>Read the full plan back in ten lines or fewer. The user must be able to state the theme and main outcomes from memory, then explicitly approve it.</p>
+<p>Ask:</p>
+<blockquote>Is this the plan?</blockquote>
+<p>If approval is vague, revise. Do not save yet.</p>
+<h3>Required plan structure</h3>
+<pre><code>## THEME: [MEMORABLE, ACTION-ORIENTED LINE]
+
+**Planning range:** [DD MMM–DD MMM].
+
+## Shape of the month
+[Travel, leave, fixed events, heavy weeks, effective working weeks, and immediate post-month constraints.]
+
+## Outcomes
+1. **[Outcome]** — Done by [DD MMM] when [binary test of done].
+   - Current state: [honest gap].
+   - Path: [dated milestones, owners, and completion evidence].
+   - Forcing function: [external commitment].
+
+## Capacity check
+[Available capacity] versus [committed demand]; [scope decision].
+
+## NOT doing
+- [Explicit cut or deferral.]
+
+## Structure
+[The behavior, boundary, or environment change that counters last month’s drain; include delegated-but-tracked work and owners.]
+
+## Personal or training commitment
+[Specific measurable commitment, if in scope.]
+
+## Pre-mortem
+- Failure mode: [likely cause]. Counter: [specific response.]</code></pre>
+<h3>Step 5: Save the review and plan</h3>
+<p>After explicit sign-off, write two records in the user’s chosen system:</p>
+<ol>
+<li>A <strong>Review</strong> attached to the ending month.</li>
+<li>A <strong>Plan</strong> attached to the new month.</li>
+</ol>
+<p>Create a missing monthly record if the system supports it. Use one final write operation when possible. Before overwriting an existing plan, show it to the user and resolve the conflict.</p>
+<p>Use this review template:</p>
+<pre><code>## Training, health, or personal-practice verdict
+**[ON TRACK / BEHIND / OFF TRACK / AT RISK / NOT IN SCOPE]**
+
+- Actual: [key measures].
+- Target: [current agreed target].
+- Consistency: [relevant pattern or gap].
+- Change from prior month: [key delta].
+- Verdict: [one direct sentence].
+- **Next-month commitment:** [specific commitment].
+
+## Goals and delivery
+- Weekly commitments: [completed]/[total] ([percent]%).
+- Long-range goal movement: [goal and status].
+- Work delivered: [concise grouped summary].
+
+## Life signals
+- Ratings: [chosen measures].
+- Focus: [chosen measures].
+- Sleep/recovery: [chosen measures].
+- Flags: [none or named patterns].
+
+## Win
+[One meaningful result.]
+
+## Drain
+[One thing that cost more than it returned.]
+
+## Structural fix for next month
+[One named behavior, boundary, or system change.]</code></pre>
+<p>Confirm the save in one line and stop.</p>
+<h3>Step 6: Improve the workflow</h3>
+<p>At the end of every run, make one precise improvement to the reusable workflow, its templates, or its data mapping. Store it in the user’s chosen workflow document or improvement log. If no suitable location exists, present the proposed edit as a short durable rule the user can save where they prefer.</p>
+<p>Look for a read that was noisy, a wrong data assumption, a misleading metric, a question the user corrected, or a repeatable pattern future sessions should know. Prefer one specific edit over a vague reminder.</p>
+<h3>Audit checks</h3>
+<p>Before finishing, verify:</p>
+<ul>
+<li>Review and planning ranges are explicit.</li>
+<li>Evidence was shown before reflective prompts.</li>
+<li>Strong verdicts account for known data-quality limits.</li>
+<li>The plan has a named theme and no more than three outcomes.</li>
+<li>Each outcome has a test of done, date, path, owner, and forcing function.</li>
+<li>Capacity demand fits supply, or an explicit scope decision was made.</li>
+<li>The NOT-doing list contains genuine cuts.</li>
+<li>The structural fix responds to a reviewed drain.</li>
+<li>Overlapping weekly plans were checked and reconciled.</li>
+<li>Personal or training commitments are specific when in scope.</li>
+<li>The pre-mortem contains counters.</li>
+<li>The user explicitly approved the plan before it was saved.</li>
+</ul>
+<h3>Common failure modes</h3>
+<ul>
+<li>Starting with prompts instead of evidence.</li>
+<li>Judging against stale targets.</li>
+<li>Confusing a list of events with a plan.</li>
+<li>Overloading capacity and refusing to cut scope.</li>
+<li>Letting the assistant choose priorities.</li>
+<li>Saving an unapproved draft.</li>
+<li>Duplicating or conflicting with weekly plans.</li>
+<li>Treating wellbeing averages as more truthful than repeated written evidence.</li>
+<li>Applying generic productivity rituals instead of fixing the actual drain.</li>
+<li>Overwriting an existing record without resolving the difference.</li>
+<li>Treating a voice note, brainstorm, or imported task list as a confirmed commitment.</li>
+</ul></article><footer><a href="/skills/LICENSE.txt">CC0</a></footer></main><script>document.querySelector('[data-copy]').addEventListener('click',async function(){try{const text=await fetch(this.dataset.copy).then(r=>{if(!r.ok)throw new Error();return r.text()});await navigator.clipboard.writeText(text);this.textContent='Copied'}catch{this.textContent='Open raw Markdown'}})</script></body></html>

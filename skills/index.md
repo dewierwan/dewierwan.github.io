@@ -30,7 +30,7 @@ Complete bundle: https://dewierwan.com/skills/all.md
 - [Plan your day](https://dewierwan.com/skills/raw/plan-your-day.md): Choose one most important outcome, protect time for it, and make a realistic plan around existing commitments.
 - [Review your day](https://dewierwan.com/skills/raw/review-your-day.md): Run a short end-of-day reflection on what happened, what mattered, and what should change tomorrow.
 - [Plan your week](https://dewierwan.com/skills/raw/plan-your-week.md): Review the previous week, choose a few outcomes, cut lower-value work, and protect time for what matters.
-- [Review and plan a month](https://dewierwan.com/skills/raw/review-and-plan-a-month.md): Close one month honestly, choose a theme for the next, and turn it into a small set of concrete commitments.
+- [Review and plan a month](https://dewierwan.com/skills/raw/review-and-plan-a-month.md): Close one month honestly, then create a small, capacity-checked and explicitly approved plan for the next month using evidence, trade-offs, and concrete commitments.
 - [Get unstuck](https://dewierwan.com/skills/raw/get-unstuck.md): Work out why you are stuck, then use a short intervention suited to tiredness, dread, confusion, or distraction.
 - [Wind down for sleep](https://dewierwan.com/skills/raw/wind-down-for-sleep.md): Guide a short evening routine that closes open loops, prepares the environment, and makes sleep easier.
 - [Prepare for a meeting](https://dewierwan.com/skills/raw/prepare-for-a-meeting.md): Gather the relevant history, clarify the desired outcome, and produce a focused agenda and preparation brief.
