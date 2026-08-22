@@ -31,7 +31,7 @@
     },
     {
       "title": "Shape and draft a document",
-      "description": "A standalone workflow for shaping consequential documents before drafting them. It combines evidence review, answer-dependent decision rounds, an alignment ledger, readiness checks, and a final audit so the document reflects settled choices",
+      "description": "A standalone workflow for shaping consequential documents before drafting them. It combines evidence review, answer-dependent decision rounds, an alignment ledger, readiness checks, clear drafting rules, and a final audit so the document is",
       "category": "Research and write",
       "page": "https://dewierwan.com/skills/shape-and-draft/",
       "markdown": "https://dewierwan.com/skills/raw/shape-and-draft.md"
@@ -108,7 +108,7 @@
     },
     {
       "title": "Wind down for sleep",
-      "description": "Guide a short evening routine that closes open loops, prepares the environment, and makes sleep easier.",
+      "description": "A quiet, interactive evening workflow that reduces stimulation, secures distractions, prepares essential morning needs offline, and provides a brief stimulus-control response when sleep does not come.",
       "category": "Plan and reflect",
       "page": "https://dewierwan.com/skills/wind-down-for-sleep/",
       "markdown": "https://dewierwan.com/skills/raw/wind-down-for-sleep.md"

@@ -546,14 +546,14 @@ Keep the handoff focused on outcomes and operationally useful detail. Avoid bury
 
 ---
 name: shape-and-draft
-description: A standalone workflow for shaping consequential documents before drafting them. It combines evidence review, answer-dependent decision rounds, an alignment ledger, readiness checks, and a final audit so the document reflects settled choices
+description: A standalone workflow for shaping consequential documents before drafting them. It combines evidence review, answer-dependent decision rounds, an alignment ledger, readiness checks, clear drafting rules, and a final audit so the document is
 ---
 
 # Shape and draft a document
 
 Develop a consequential document by shaping the underlying thinking before writing it. Determine what the document must achieve, gather relevant evidence, resolve material choices with the appropriate decision-maker, and then draft the smallest document that can do the job.
 
-Use this workflow for strategies, narratives, operating agreements, briefs, proposals, scorecards, and decision memos when the artifact, argument, boundaries, commitments, or operating model are not yet settled. Do not use it for a quick edit, formatting request, or a document whose content and decisions are already specified.
+Use this workflow for strategies, narratives, operating agreements, briefs, proposals, scorecards, and decision memos when the artifact, argument, boundaries, commitments, or operating model are not yet settled. Do not use it for a quick edit, a formatting request, or a document whose content and decisions are already specified.
 
 ## Classify the request
 
@@ -585,7 +585,7 @@ Recommend the document form that best serves that job:
 - **Scorecard:** Defines a role or team mission, outcomes, and required capabilities.
 - **Hybrid:** Combines forms when readers need both shared understanding and execution clarity.
 
-Explain the relevant tradeoff and recommend an artifact. If the form would materially affect the argument, structure, or decisions required, ask the designated decision-maker to confirm it before proceeding.
+Explain the relevant tradeoff and recommend an artifact. If the form would materially affect the argument, structure, or decisions required, ask the authorized decision-maker to confirm it before proceeding.
 
 ## 3. Gather and classify evidence
 
@@ -599,7 +599,7 @@ Apply these evidence rules:
 - Prefer current, authoritative decision records over discussion notes, recollections, generated summaries, or repeated claims.
 - Resolve contradictions where evidence permits; surface material contradictions that remain.
 - Do not ask participants for factual information that available sources can answer.
-- Do not edit or overwrite source material unless explicitly instructed.
+- Do not edit, overwrite, or otherwise change source material unless explicitly instructed.
 
 Keep evidence separate from alignment:
 
@@ -625,7 +625,7 @@ Do not draft immediately after the first round merely because one apparent centr
 
 Ask four to eight focused questions per round. If fewer than four material questions remain, ask only those questions and state that it is a narrow final check. Do not add ceremonial questions simply to reach a number.
 
-Each numbered question should normally seek one decision. Do not combine separate decisions—such as ownership, coordination, handoffs, and success measures—into one broad yes-or-no question. Bundled questions produce false alignment.
+Each numbered question should normally seek one decision. Do not combine separate decisions, such as ownership, coordination, handoffs, and success measures, into one broad yes-or-no question. Bundled questions create false alignment.
 
 Use a compact question format that supports quick answers:
 
@@ -664,7 +664,7 @@ After every answer round:
 3. Update the alignment ledger and show a concise synthesis.
 4. Generate the next round from the remaining material uncertainties and their consequences.
 
-Continue while an unresolved issue could materially change the document. If the requester explicitly asks to draft before the process is complete, name the most important consequence of the remaining uncertainty, then follow the instruction.
+Continue while an unresolved issue could materially change the document. If the requester explicitly asks to draft before the process is complete, name the one or two most important consequences of the remaining uncertainty, then follow the instruction.
 
 ## 5. Maintain an alignment ledger
 
@@ -716,6 +716,16 @@ Follow the stated voice, style preferences, format, accessibility needs, and del
 
 Write the smallest document that accomplishes the agreed purpose. Prefer clear claims, concrete decisions, named ownership, and explicit boundaries over polished but vague abstractions. Distinguish current decisions from proposals, assumptions, and future review points.
 
+Make the draft as simple as the substance allows:
+
+- Prefer short, common words over formal or inflated language.
+- Write complete, natural sentences. Keep one clear line of thought in each sentence, but do not split connected ideas into choppy fragments.
+- State the point first. Remove warm-up text, repeated context, process narration, and unnecessary qualifications.
+- Turn abstractions into concrete claims, actions, examples, owners, dates, or tests where useful.
+- Use focused paragraphs. Use bullets only for real lists; write bullet items as full sentences unless they are compact labels.
+- Prefer the more concise version when it preserves meaning. Concision removes unnecessary ideas and words; it does not require every sentence to be short.
+- Preserve hard ideas when they matter, but explain them in plain language rather than jargon.
+
 Honor the requested destination using the chosen system. If text is requested in the conversation, provide text without changing source material. If a document must be created or updated elsewhere, do so only as instructed and verify that the intended content is present.
 
 ## 8. Audit before delivery
@@ -730,6 +740,8 @@ Compare the draft against the alignment ledger and source hierarchy:
 - Are factual claims and citations supported by appropriate sources?
 - Is any inference presented as a settled fact or decision?
 - Does the document match the requested voice and audience?
+- Can each sentence be understood on the first read?
+- Can any abstract phrase, inflated word, or repeated point be made simpler or removed without losing meaning?
 
 Fix mismatches before delivering. Put the deliverable last, without trailing commentary that would interfere with copying or using it.
 
@@ -748,6 +760,7 @@ Fix mismatches before delivering. Put the deliverable last, without trailing com
 - Concealing contradictions through vague language.
 - Continuing interviews after only low-impact uncertainty remains.
 - Writing an inspiring document that leaves decisions, ownership, or execution unclear.
+- Mistaking concise writing for choppy writing by using fragments, noun-only bullets, or artificially short sentences.
 
 
 ---
@@ -2071,48 +2084,182 @@ one motivational style always works.
 
 ---
 name: wind-down-for-sleep
-description: Guide a short evening routine that closes open loops, prepares the environment, and makes sleep easier.
+description: A quiet, interactive evening workflow that reduces stimulation, secures distractions, prepares essential morning needs offline, and provides a brief stimulus-control response when sleep does not come.
 ---
 
 # Wind down for sleep
 
-Use this when the user wants help ending the day or cannot settle for sleep.
+Use this workflow as the final part of an evening routine. Its purpose is not to review the day, solve problems, or build tomorrow’s plan. Its purpose is to make the transition from awake-day to sleep predictable: reduce stimulation, remove common distractions, complete a few practical tasks, and go to bed.
 
-## 1. Check the situation
+Use the full ritual when the user says they are winding down, ready for bed, or wants help settling for sleep. If the user says they cannot sleep, are still awake, or are frustrated in bed after trying to sleep, use only the **Can’t-sleep fallback**. Do not restart the full ritual.
 
-Ask whether the day has been reviewed and tomorrow has been planned. Check the
-next morning's first fixed commitment if the user has calendar access. Keep the
-routine shorter when it is already late.
+A separate daily-review practice and next-day planning practice should happen earlier in the evening. This workflow assumes those practices exist but does not require a particular app, database, calendar, or device.
 
-## 2. Close the environment
+## Purpose and design rules
 
-Guide a brief checklist chosen by the user, such as:
+Every step should serve at least one of these functions:
 
-- Put work materials away.
-- Set the phone or distracting devices outside reach.
-- Prepare clothes, water, medication, or morning essentials.
-- Adjust light, temperature, and noise.
+1. **Reduce stimulation.** Lower bright light, screen use, active conversation, and problem-solving.
+2. **Increase reliability.** Make it harder to drift into scrolling, work, or new decisions.
+3. **Prepare the body and morning.** Complete small practical actions that reduce avoidable friction after waking.
 
-Ask for confirmation after each small group rather than delivering a long list.
+Consistency matters more than complexity. Use a similar sequence on most nights. Keep the active ritual short enough that it does not become another task to avoid.
 
-## 3. Offload tomorrow
+## Interaction rules
 
-Capture any remaining thought that is keeping the mind active. Write a short
-morning note with the first action and anything that must not be forgotten. Do
-not reopen planning unless a genuine conflict appears.
+- Be quiet, direct, and low-stimulation. Use short prompts with no coaching language, jokes, emojis, or sleep-science lecture.
+- Give one small group of actions at a time. Do not turn the ritual into a long conversation.
+- For checklists, use plain bullet lists rather than interactive checkboxes. End each list with: **Reply “done” when all set.**
+- Do not ask the user about tomorrow after the wind-down has started. Do not ask for priorities, intentions, goals, wins, or backup to-do lists.
+- Do not reopen journaling, reflection, planning, messages, task systems, or calendars during the ritual.
+- If the user raises a work problem, worry, or task, do not solve it. Say: **“Put a brief note somewhere safe for tomorrow. Do not work on it tonight.”**
+- If the user is clearly exhausted, let them skip optional preparation steps. Do not skip the environment and distraction-control gate unless a safety, health, accessibility, or caregiving need makes it unsuitable.
+- After the final close message, stop. Do not summarize what was completed, offer more help, create a follow-up prompt, or simulate another turn.
 
-## 4. Settle
+## Readiness check
 
-Offer one short, low-stimulation practice the user already accepts, such as slow
-breathing, body awareness, or quiet reading outside bed. Avoid turning sleep
-into a performance test.
+Before beginning, establish only what is needed. Do not inspect messages, news, social feeds, task lists, or other attention-grabbing sources.
 
-## 5. If sleep does not come
+1. Check whether the user already completed their normal day review, if that information is available from the current session or a user-approved system.
+2. If the review was missed, decide whether there is still enough room in the evening for the user’s normal brief review without delaying sleep.
+3. Optionally check the next morning’s first fixed commitment, but only if the user has authorized calendar access and it is needed to choose practical access to a locked device.
+4. Treat next-day planning status as silent information. If planning was missed, do not mention it, offer planning, or ask a substitute planning question.
 
-If the user remains awake and frustrated, suggest leaving the bed for a calm,
-dim activity until sleepiness returns. Keep clocks and stimulating content out
-of view. For persistent sleep problems, recommend appropriate professional
-support rather than expanding the routine indefinitely.
+If the day review was completed, say:
+
+> Day closed. Starting wind-down.
+
+If the review was missed but there is still enough room for it, offer it once:
+
+> The day review was missed. Do you want to do the short review first?
+
+If the user declines, or it is too late for a useful review, say:
+
+> Leave the review for tomorrow. Start winding down now.
+
+Then continue. If a review was skipped, any later bedtime note should go into a designated next-day capture location rather than creating a partial or empty journal record.
+
+## Step 1: Environment and distraction gate
+
+This is the load-bearing step. Do not continue until the user confirms it is complete.
+
+Choose a simple set of cues that the user can repeat. A broadly useful default is:
+
+> Before we start:
+>
+> - Change out of day clothes into sleep clothes.
+> - Put on preferred low-light glasses, if used, or otherwise reduce bright light.
+> - Turn off overhead lights; use dim, warm light only if needed.
+> - Start quiet, familiar audio if it helps without demanding attention.
+> - Put the phone in a charger outside reach or in a physical barrier that prevents casual checking.
+> - Set the phone’s return or unlock point for the morning.
+> - Keep any remaining device use limited to one necessary, low-stimulation device.
+>
+> Reply “done” when all set.
+
+### Set device return access
+
+Let the user choose a normal morning access point. If an early fixed commitment requires it, make access available earlier only when necessary for preparation, travel, communication, or safety. State the choice and reason briefly.
+
+Example:
+
+> Phone access returns before the first morning commitment so you can prepare and travel.
+
+A physical barrier is often more reliable than a software restriction alone. The aim is not punishment. It is to prevent automatic late-night or early-morning scrolling.
+
+If the user says they will change the lights or secure the phone later, respond once:
+
+> Do it now. This is the highest-leverage step. I’ll wait.
+
+Do not negotiate the rest of the routine while this gate remains incomplete.
+
+## Step 2: Offline morning card
+
+Offer a small physical morning card. Its role is to make the first part of the day independent from a phone, notifications, and memory.
+
+Prompt:
+
+> Write a small morning card. Keep it short enough to read at a glance. A useful template is:
+>
+> 1. Hygiene
+> 2. Medication or supplements, if applicable
+> 3. Water and breakfast
+> 4. Movement, rehabilitation, or another health practice
+> 5. Shower and get dressed
+> 6. Leave for the day or begin the first planned block
+>
+> Add only a practical exception that matters tomorrow. Is anything different?
+
+If the user names a change, tell them to write it in the appropriate place on the card. Do not make a digital card for them and do not turn this into planning.
+
+Then ask:
+
+> Card done?
+
+This step is optional if the user is too tired or already has a dependable offline morning cue.
+
+## Step 3: Physical preparation
+
+Give a compact list tailored to the user’s normal needs. Group tasks by location to minimize movement and decisions. A default list is:
+
+> - Fill water for the morning.
+> - Brush teeth and complete essential nighttime hygiene.
+> - Prepare a simple breakfast or place needed items together.
+> - Put out required clothing, keys, mobility aids, or medication.
+>
+> Reply “done” when all set.
+
+If a small missing item creates a worry, capture it in one designated location without solving it. For example: “Buy breakfast item.” Do not search for alternatives, open shopping tools, message someone, or start a planning conversation. Say only:
+
+> Noted. Captured for later.
+
+## Step 4: Brief settling practice
+
+Offer one familiar, low-stimulation practice. Do not teach a new or complex exercise at bedtime.
+
+Default prompt:
+
+> Brief quiet meditation.
+
+If meditation is not suitable, use an already accepted alternative such as gentle breathing, a short body scan, quiet stretching, or a few pages of a paper book outside bed. Avoid screen-based guided content and anything emotionally engaging or performance-focused.
+
+Wait for a simple completion response.
+
+## Step 5: Close
+
+After the settling practice, send only:
+
+> Close the device. Go straight to bed—no detour.
+>
+> See you tomorrow.
+
+This is the final user-facing message. If the user says good night, remain silent or reply only: **Good night.**
+
+## Can’t-sleep fallback
+
+Use this only when the user reports being awake after attempting sleep.
+
+Do not rerun the ritual. Do not reopen reflection, journaling, planning, device settings, or problem-solving. Respond briefly:
+
+> Get out of bed. Keep the room dim and do a boring, screen-free activity until sleepy. Return to bed when sleepy. Do not check the time.
+
+Suitable activities include reading on paper, folding laundry slowly, or another neutral task. Avoid work, emotionally engaging reading, exercise, food preparation, screens, and clock-checking. The goal is to keep the bed associated with sleep rather than wakeful frustration.
+
+For recurring, severe, or safety-relevant sleep difficulty, encourage appropriate medical or sleep-care support.
+
+## Routine audit and adaptation
+
+Review the workflow after a run only if doing so will not re-engage the user at bedtime. Make changes based on observable friction, not novelty. Do not invent improvements after a clean run.
+
+| Signal | Adaptation |
+|---|---|
+| The user repeatedly misunderstands a prompt | Rewrite it in plainer language or remove ambiguity. |
+| A distraction barrier is routinely bypassed | Choose a stronger physical, account-level, or environmental barrier with the user. |
+| A checklist item is consistently skipped and adds no value | Remove it or make it optional. |
+| A practical issue repeatedly appears at bedtime | Move its prevention into an earlier review or planning practice. |
+| A step makes the user more alert | Shorten it, simplify it, or move it earlier in the evening. |
+
+Preserve what reliably works. The best wind-down is usually quiet, repeatable, and boring enough to become an automatic signal that the day is over.
 
 
 ---
