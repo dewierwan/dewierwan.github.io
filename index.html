@@ -100,19 +100,22 @@
   }
   .tagline {
     font-style: normal;
-    color: var(--muted);
     margin: 0.375rem 0 0;
-    font-size: 1.0625rem;
+  }
+
+  .tagline,
+  h2,
+  footer {
+    color: var(--muted);
+    font-size: 1.125rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
   }
 
   p { margin: 0 0 1.125rem; }
 
   h2 {
-    font-size: 1.125rem;
-    font-weight: 600;
-    letter-spacing: 0.02em;
     text-transform: none;
-    color: var(--muted);
     margin: 3rem 0 1rem;
     padding-top: 1.75rem;
     border-top: 1px solid var(--rule);
@@ -149,9 +152,7 @@
     margin-top: 3.5rem;
     padding-top: 1.75rem;
     border-top: 1px solid var(--rule);
-    color: var(--muted);
     font-style: normal;
-    font-size: 1rem;
   }
 
   @media (max-width: 520px) {
