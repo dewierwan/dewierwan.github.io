@@ -1,0 +1,4 @@
+# BEGIN managed public-skills policy
+User-agent: *
+Disallow: /skills/
+# END managed public-skills policy

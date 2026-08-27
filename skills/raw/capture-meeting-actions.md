@@ -1,6 +1,6 @@
 ---
 name: capture-meeting-actions
-description: Review a day or selected range of meeting records, identify genuine unfinished commitments, create clear deduplicated tasks for confident follow-ups, and batch only questions that require judgment. The workflow is designed for a daily sweep
+description: Review meeting records, identify genuine unfinished commitments, create clear deduplicated tasks for confident follow-ups, and batch only questions that require judgment.
 ---
 
 # Capture meeting actions

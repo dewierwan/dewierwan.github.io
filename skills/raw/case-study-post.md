@@ -1,6 +1,6 @@
 ---
 name: case-study-post
-description: Create a short, evidence-based case study post about a real person’s career, learning, or professional change. The workflow produces a ready-to-review draft, alternate hooks, graphic quote options, and a clear approval and fact-checking log
+description: Create an evidence-based case study post about a person’s career, learning, or professional change. The workflow produces a review-ready draft, alternate hooks, quote-card options, and an approval log.
 ---
 
 # Write a case study post

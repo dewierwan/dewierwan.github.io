@@ -1,6 +1,6 @@
 ---
 name: run-a-recurring-community-event
-description: Create and publish the next occurrence of a recurring community event, prepare fresh materials, invite the approved audience, and verify the live result. This workflow works with any chosen event platform, image tool, calendar, and contact/
+description: Create and publish the next occurrence of a recurring community event, prepare fresh materials, invite the approved audience, and verify the live result across the chosen tools.
 ---
 
 # Run a recurring community event

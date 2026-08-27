@@ -1,6 +1,6 @@
 ---
 name: test-every-screen-size
-description: Verify every UI or CSS change across representative narrow, wide, short, and tall viewports before it is considered complete. Combine realistic screenshots with programmatic layout checks, then fix and retest any failure across the full set
+description: Verify UI and CSS changes across representative narrow, wide, short, and tall viewports. Combine screenshots with programmatic layout checks, then fix and retest every failure.
 ---
 
 # Test every screen size

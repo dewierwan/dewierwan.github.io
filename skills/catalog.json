@@ -3,7 +3,7 @@
   "skills": [
     {
       "title": "Brainstorm options",
-      "description": "Generate genuinely distinct options for a decision or problem, assess their tradeoffs honestly, and recommend a short ranked set without forcing a final choice. Use it when someone asks for ways to proceed, alternatives, or ideas they need,",
+      "description": "Generate distinct options for a decision or problem, assess their tradeoffs honestly, and recommend a short ranked set without forcing a final choice.",
       "category": "Think and decide",
       "page": "https://dewierwan.com/skills/brainstorm/",
       "markdown": "https://dewierwan.com/skills/raw/brainstorm.md"
@@ -17,21 +17,21 @@
     },
     {
       "title": "Make a decision",
-      "description": "Match decision-making rigor to stakes and reversibility, then make, record, and review meaningful decisions without inventing the user’s views. Supports quick calls, multi-session deliberation, commitments, and evidence-based retrospectives",
+      "description": "Match decision-making rigor to stakes and reversibility, then make, record, and review meaningful choices without inventing the user’s views or exposing sensitive information.",
       "category": "Think and decide",
       "page": "https://dewierwan.com/skills/make-a-decision/",
       "markdown": "https://dewierwan.com/skills/raw/make-a-decision.md"
     },
     {
       "title": "Solve a problem",
-      "description": "A complete workflow for taking a non-trivial product, technical, process, or automation problem from diagnosis through options, recommendation, implementation, verification, and handoff. It supports an analysis-only mode when the user wants",
+      "description": "Take a non-trivial product, technical, process, or automation problem from diagnosis through options, implementation, verification, and handoff. The workflow supports analysis-only work when requested.",
       "category": "Think and decide",
       "page": "https://dewierwan.com/skills/solve-a-problem/",
       "markdown": "https://dewierwan.com/skills/raw/solve-a-problem.md"
     },
     {
       "title": "Shape and draft a document",
-      "description": "A standalone workflow for shaping consequential documents before drafting them. It combines evidence review, answer-dependent decision rounds, an alignment ledger, readiness checks, clear drafting rules, and a final audit so the document is",
+      "description": "Shape consequential documents by reviewing evidence, resolving material choices, and checking readiness. Then draft and audit the smallest document that can achieve the goal.",
       "category": "Research and write",
       "page": "https://dewierwan.com/skills/shape-and-draft/",
       "markdown": "https://dewierwan.com/skills/raw/shape-and-draft.md"
@@ -52,21 +52,21 @@
     },
     {
       "title": "Write in my voice",
-      "description": "Draft email that preserves the user's real writing voice while keeping facts, commitments, and tone appropriate to the situation. Use a style guide or recent writing samples as evidence, then run a concise voice and accuracy audit before it",
+      "description": "Draft email in the user's real voice while keeping facts, commitments, and tone appropriate. Use a style guide or recent sent messages as evidence, then audit voice and accuracy.",
       "category": "Research and write",
       "page": "https://dewierwan.com/skills/write-in-my-voice/",
       "markdown": "https://dewierwan.com/skills/raw/write-in-my-voice.md"
     },
     {
       "title": "Write a professional social post",
-      "description": "A tool-independent workflow for drafting, revising, and auditing professional social posts from notes, drafts, articles, transcripts, or a topic. It emphasizes concrete claims, strong hooks, useful substance, targeted revision, and platform",
+      "description": "Draft, revise, and audit professional social posts from notes, drafts, articles, transcripts, or a topic. The workflow emphasizes concrete claims, strong hooks, useful substance, and targeted revision.",
       "category": "Research and write",
       "page": "https://dewierwan.com/skills/professional-social-post/",
       "markdown": "https://dewierwan.com/skills/raw/professional-social-post.md"
     },
     {
       "title": "Write a case study post",
-      "description": "Create a short, evidence-based case study post about a real person’s career, learning, or professional change. The workflow produces a ready-to-review draft, alternate hooks, graphic quote options, and a clear approval and fact-checking log",
+      "description": "Create an evidence-based case study post about a person’s career, learning, or professional change. The workflow produces a review-ready draft, alternate hooks, quote-card options, and an approval log.",
       "category": "Research and write",
       "page": "https://dewierwan.com/skills/case-study-post/",
       "markdown": "https://dewierwan.com/skills/raw/case-study-post.md"
@@ -122,7 +122,7 @@
     },
     {
       "title": "Capture meeting actions",
-      "description": "Review a day or selected range of meeting records, identify genuine unfinished commitments, create clear deduplicated tasks for confident follow-ups, and batch only questions that require judgment. The workflow is designed for a daily sweep",
+      "description": "Review meeting records, identify genuine unfinished commitments, create clear deduplicated tasks for confident follow-ups, and batch only questions that require judgment.",
       "category": "Meetings and tasks",
       "page": "https://dewierwan.com/skills/capture-meeting-actions/",
       "markdown": "https://dewierwan.com/skills/raw/capture-meeting-actions.md"
@@ -136,7 +136,7 @@
     },
     {
       "title": "Design a work sample",
-      "description": "Create or improve a short, paid, asynchronous work sample that produces job-relevant evidence and can be evaluated consistently. The workflow starts with role alignment, explores assessment shapes, validates discrimination through candidate",
+      "description": "Create or improve a short, paid, asynchronous work sample that produces job-relevant evidence and can be scored consistently. Validate that it distinguishes role-relevant performance through simulated submissions.",
       "category": "Hiring and people",
       "page": "https://dewierwan.com/skills/design-a-work-sample/",
       "markdown": "https://dewierwan.com/skills/raw/design-a-work-sample.md"
@@ -150,7 +150,7 @@
     },
     {
       "title": "Use a browser safely",
-      "description": "A careful, tool-independent workflow for interacting with websites, including rendered forms and authenticated dashboards. It selects the least invasive method, protects account context, verifies page state after every change, and separates",
+      "description": "Complete browser-based tasks safely, including rendered forms and authenticated dashboards, by choosing the least invasive method, protecting account context, verifying page state, and separating preparation from commitment.",
       "category": "Build and automate",
       "page": "https://dewierwan.com/skills/use-a-browser-safely/",
       "markdown": "https://dewierwan.com/skills/raw/use-a-browser-safely.md"
@@ -164,14 +164,14 @@
     },
     {
       "title": "Test every screen size",
-      "description": "Verify every UI or CSS change across representative narrow, wide, short, and tall viewports before it is considered complete. Combine realistic screenshots with programmatic layout checks, then fix and retest any failure across the full set",
+      "description": "Verify UI and CSS changes across representative narrow, wide, short, and tall viewports. Combine screenshots with programmatic layout checks, then fix and retest every failure.",
       "category": "Build and automate",
       "page": "https://dewierwan.com/skills/test-every-screen-size/",
       "markdown": "https://dewierwan.com/skills/raw/test-every-screen-size.md"
     },
     {
       "title": "Run a recurring community event",
-      "description": "Create and publish the next occurrence of a recurring community event, prepare fresh materials, invite the approved audience, and verify the live result. This workflow works with any chosen event platform, image tool, calendar, and contact/",
+      "description": "Create and publish the next occurrence of a recurring community event, prepare fresh materials, invite the approved audience, and verify the live result across the chosen tools.",
       "category": "Build and automate",
       "page": "https://dewierwan.com/skills/run-a-recurring-community-event/",
       "markdown": "https://dewierwan.com/skills/raw/run-a-recurring-community-event.md"

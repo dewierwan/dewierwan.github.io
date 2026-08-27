@@ -1,6 +1,6 @@
 ---
 name: shape-and-draft
-description: A standalone workflow for shaping consequential documents before drafting them. It combines evidence review, answer-dependent decision rounds, an alignment ledger, readiness checks, clear drafting rules, and a final audit so the document is
+description: Shape consequential documents by reviewing evidence, resolving material choices, and checking readiness. Then draft and audit the smallest document that can achieve the goal.
 ---
 
 # Shape and draft a document

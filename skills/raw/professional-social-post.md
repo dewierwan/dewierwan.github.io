@@ -1,6 +1,6 @@
 ---
 name: professional-social-post
-description: A tool-independent workflow for drafting, revising, and auditing professional social posts from notes, drafts, articles, transcripts, or a topic. It emphasizes concrete claims, strong hooks, useful substance, targeted revision, and platform
+description: Draft, revise, and audit professional social posts from notes, drafts, articles, transcripts, or a topic. The workflow emphasizes concrete claims, strong hooks, useful substance, and targeted revision.
 ---
 
 # Write a professional social post

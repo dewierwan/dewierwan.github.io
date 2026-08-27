@@ -1,6 +1,6 @@
 ---
 name: solve-a-problem
-description: A complete workflow for taking a non-trivial product, technical, process, or automation problem from diagnosis through options, recommendation, implementation, verification, and handoff. It supports an analysis-only mode when the user wants
+description: Take a non-trivial product, technical, process, or automation problem from diagnosis through options, implementation, verification, and handoff. The workflow supports analysis-only work when requested.
 ---
 
 # Solve a problem

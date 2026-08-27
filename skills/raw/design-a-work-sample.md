@@ -1,6 +1,6 @@
 ---
 name: design-a-work-sample
-description: Create or improve a short, paid, asynchronous work sample that produces job-relevant evidence and can be evaluated consistently. The workflow starts with role alignment, explores assessment shapes, validates discrimination through candidate
+description: Create or improve a short, paid, asynchronous work sample that produces job-relevant evidence and can be scored consistently. Validate that it distinguishes role-relevant performance through simulated submissions.
 ---
 
 # Design a work sample
@@ -31,21 +31,25 @@ Default design constraints:
 - Keep grading time to roughly 20 to 25 minutes per submission.
 - Make the exercise self-contained. Candidates should not need access to internal tools, private data, or unavailable stakeholders.
 - State the permitted use of AI and evaluate judgment rather than trying to detect AI use through writing style.
+- Test only capabilities that are materially related to the role. Exclude protected characteristics and unrelated proxy criteria.
+- Offer a clear route for reasonable accommodations or an equivalent accessible format without lowering the role-relevant standard.
 
 ## Step 1: Pre-flight
 
 Before designing the work sample, confirm that the hiring team has both of the following:
 
 1. A current job description or role brief that explains responsibilities, level, expected outcomes, and reporting context.
-2. An ideal-candidate profile, hiring plan, or equivalent document that identifies the traits, prior experiences, and working style most likely to succeed.
+2. A role-success profile, hiring plan, or equivalent document that identifies the capabilities and experience most likely to produce the role's required outcomes.
 
 If either is missing, stop and ask for it. Do not attempt to discover the ideal candidate while designing the test. That creates a moving target and usually produces an exercise that feels plausible but measures the wrong things.
 
 Use this request format:
 
-> Before we design the work sample, I need the role description and an ideal-candidate profile or hiring plan. I can help create either one first. Which is missing, and who should confirm it?
+> Before we design the work sample, I need the role description and a role-success profile or hiring plan. I can help create either one first. Which is missing, and who should confirm it?
 
 If the materials exist, read the full role context. This may include linked project notes, current team constraints, examples of strong work, prior hiring feedback, and any existing exercises for comparable roles. Read one or two reference exercises only to calibrate tone, length, and operational format. Do not copy their task shape automatically. Different roles need different evidence.
+
+Use only hiring materials the team is authorized to use for this role. Minimize private information: read the minimum relevant evidence, omit unrelated or sensitive candidate details, and do not infer protected traits. Keep alignment notes, simulations, and reviewer guidance inside the approved hiring access boundary.
 
 After reviewing, give a brief status update stating what sources were read and move to the alignment memo.
 
@@ -81,7 +85,7 @@ State whether the role is entry-level, mid-level, senior, or leadership level. E
 
 ### Failure modes to catch
 
-Identify two or three specific wrong shapes that could otherwise look good in a conventional hiring process. Examples:
+Identify two or three plausible role-misaligned patterns that could otherwise look strong in a conventional hiring process. Describe observable work patterns rather than labeling people. Examples:
 
 - A polished planner who does not ship usable work.
 - A fast executor who misses the central problem or creates avoidable risk.
@@ -210,19 +214,19 @@ Common revision directions include tightening vague instructions, loosening over
 
 Before declaring version 1 complete, simulate two full submissions in parallel using the exact candidate-facing instructions.
 
-### Target candidate simulation
+### Role-aligned simulation
 
-Use a persona that matches the confirmed ideal-candidate profile. Have them complete the actual deliverables under the stated time limit. Ask for a short reflection on their choices, uncertainty, and time allocation.
+Use a persona that matches the confirmed role-success profile. Have them complete the actual deliverables under the stated time limit. Ask for a short reflection on their choices, uncertainty, and time allocation.
 
-### Wrong-shaped candidate simulation
+### Plausible role-misaligned simulation
 
-Use an earnest, capable candidate who could pass ordinary screening but lacks a load-bearing trait. Choose a relevant wrong shape, such as a planner where the role needs a builder, a cautious hedger where it needs decisive judgment, or an executor who cannot see systemic patterns.
+Use an earnest, capable candidate who could pass ordinary screening but whose demonstrated work lacks one role-critical capability. Choose a relevant mismatch, such as a planner where the role needs a builder, a cautious hedger where it needs decisive judgment, or an executor who cannot see systemic patterns. Keep the difference tied to job evidence, never identity or background.
 
 Have this persona produce the same complete submission.
 
 Then synthesize the results:
 
-1. Where the exercise separated the candidates sharply.
+1. Where the exercise distinguished role-relevant performance sharply.
 2. Where both candidates performed similarly.
 3. What the exercise is likely to predict and what it cannot predict.
 4. Specific improvements, ranked by likely impact.
@@ -231,7 +235,7 @@ Floor checks that both candidates pass are not automatically bad. The concern is
 
 ## Step 7: Apply validation improvements
 
-Revise the full exercise based on the simulation. Target the weakest discrimination points first. Examples of useful revisions:
+Revise the full exercise based on the simulation. Target the weakest diagnostic points first. Examples of useful revisions:
 
 - Make connected scenario items more interdependent.
 - Remove obvious noise that takes seconds to dismiss.
@@ -250,7 +254,7 @@ If other reviewers provide feedback, assess each suggestion against the alignmen
 
 Do not mark the work sample complete until all of the following are true:
 
-- The role description and ideal-candidate profile are confirmed.
+- The role description and role-success profile are confirmed.
 - The alignment memo is approved.
 - The chosen task shape maps directly to the load-bearing traits.
 - The task fits the stated time for a qualified candidate.
@@ -258,9 +262,10 @@ Do not mark the work sample complete until all of the following are true:
 - Payment and submission instructions are clear.
 - Candidate-facing text is formatted for the destination system.
 - A reviewer can score a submission in about 20 to 25 minutes.
-- A target-candidate and wrong-shaped-candidate simulation has been completed.
+- A role-aligned and plausible role-misaligned simulation has been completed.
 - The simulation led to any necessary revisions.
 - The final version has no sensitive data and does not create unpaid production work.
+- Role-relevant criteria, accommodation routes, and potential proxy bias have been checked.
 
 ## Common failure modes
 
@@ -275,6 +280,6 @@ Avoid these patterns:
 - Setting a word-count target that encourages padding.
 - Creating a test that takes longer to grade than the signal justifies.
 - Treating polished writing or presentation as the main signal when the role requires something else.
-- Declaring success without testing whether the exercise actually separates strong and wrong-shaped candidates.
+- Declaring success without testing whether the exercise distinguishes the role-relevant evidence it was designed to measure.
 
 A finished work sample should feel like a small, fair version of the job: bounded, realistic, useful for assessment, and clear about what good performance looks like.

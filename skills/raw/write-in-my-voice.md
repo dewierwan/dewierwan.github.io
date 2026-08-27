@@ -1,6 +1,6 @@
 ---
 name: write-in-my-voice
-description: Draft email that preserves the user's real writing voice while keeping facts, commitments, and tone appropriate to the situation. Use a style guide or recent writing samples as evidence, then run a concise voice and accuracy audit before it
+description: Draft email in the user's real voice while keeping facts, commitments, and tone appropriate. Use a style guide or recent sent messages as evidence, then audit voice and accuracy.
 ---
 
 # Write in my voice
