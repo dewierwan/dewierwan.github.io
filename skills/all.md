@@ -768,211 +768,72 @@ Fix mismatches before delivering. Put the deliverable last, without trailing com
 
 ---
 name: gather-context
-description: Search the sources most likely to matter, then turn the findings into a concise, evidence-linked context brief proportionate to the user’s purpose, authorization, and stakes.
+description: Search the sources that are likely to matter and turn the findings into one concise, well-sourced brief.
 ---
 
 # Gather context
 
-Use this workflow when a user needs reliable context on a person, organization, project, topic, decision, or upcoming interaction before they write, decide, meet, negotiate, hire, plan, or act.
+Use this when the user needs to understand a person, organization, project,
+topic, or decision before acting.
 
-The goal is not to collect everything that exists. The goal is to assemble the minimum complete picture needed for the stated purpose, with direct evidence links where appropriate and clear gaps.
+## 1. Set the purpose and authority boundary
 
-## 1. Establish purpose, authority, and output boundary
+State the decision, task, or question the research must support. Use private
+sources only when the user is authorized to access them and the source is
+relevant to that legitimate purpose. Access is not, by itself, a reason to
+search a source.
 
-First identify:
+When the subject is a person, apply a stricter boundary:
 
-- **The action:** What will the user do with this context? For example: make a decision, prepare for a conversation, draft a proposal, assess a project, or check status.
-- **The subject:** A person, organization, project, topic, decision, or meeting.
-- **The needed time window:** Recent status may need only recent records; relationship history or strategic decisions may require older material.
-- **The audience and destination:** A private working note, a team brief, or a document shared more widely have different access boundaries.
+- Use the minimum relevant sources and information needed for the stated task.
+- Do not search private communications merely because they are available.
+- Omit unrelated or sensitive personal details and do not infer protected or
+  private traits that are not necessary to the decision.
+- Respect consent, confidentiality, need-to-know limits, and the subject's
+  reasonable privacy expectations.
+- Put the brief only in a destination appropriate for the source material and
+  intended audience.
 
-Use private communications, records, or systems only for a legitimate purpose and when the user has clear authorization to access and use them. Access to a source alone is not a reason to search it.
+If the purpose, authorization, or destination is unclear, resolve it before
+searching private sources.
 
-When the subject is a person, apply a stricter standard:
+## 2. Choose the effort level
 
-- Search only sources necessary and proportionate to the task.
-- Use the minimum relevant information.
-- Do not collect unrelated personal details, sensitive information, or private history that does not affect the stated purpose.
-- Do not infer sensitive traits or present speculation as fact.
-- Respect confidentiality, consent, need-to-know limits, and reasonable privacy expectations.
-- Keep the resulting brief within the access boundary appropriate to the source material and intended audience.
+- **Quick:** Check a few obvious sources and answer briefly.
+- **Standard:** Search several relevant sources and produce a compact brief.
+- **Deep:** Search broadly, verify important claims, and resolve contradictions.
 
-If the purpose, authorization, relevant subject, or intended destination is unclear, ask one focused question before searching private sources. Do not ask a long intake questionnaire when a reasonable interpretation is clear.
+Match the effort to the stakes. Do not search every available system by habit.
 
-## 2. Select an effort level before searching
+## 3. Choose relevant sources
 
-Right-size the work. This is the primary control against both shallow research and unnecessary over-collection.
+Select sources based on the subject. Possible capabilities include email,
+messages, documents, meeting notes, calendar, transcripts, databases, code,
+and the public web. Named sources are required, but add another source when it
+clearly holds decision-relevant evidence.
 
-- **Quick:** A status check, reminder, or narrow factual question. Search one to three obvious sources, use one or two strong queries per source, and return a short answer.
-- **Standard:** The common case. Search several relevant sources, use targeted follow-up queries, read the strongest records, and produce a compact brief.
-- **Deep:** High-stakes preparation, such as a major decision, important negotiation, strategic pitch, significant project review, or role-related assessment. Search broadly across relevant source categories, use multiple query angles, verify important claims, and reconcile contradictions.
+Search with more than one useful query for a deep review. If a recent meeting
+appears in the results, read its notes or transcript.
 
-State the chosen level in one short sentence when useful, especially if the user may want to redirect scope. For example: “I’ll do a standard review across messages, documents, meeting records, and public sources.”
+## 4. Judge evidence
 
-When uncertain, start lighter and offer escalation. It is usually cheaper to deepen a focused review than to undo an unnecessarily broad one.
+Prefer primary and current sources. Treat summaries and discussion as weaker
+than canonical decisions. Resolve conflicts when possible and state what remains
+uncertain. Never invent a link or imply that an unavailable source was checked.
 
-### Common failure modes
+## 5. Synthesize by theme
 
-- **Over-gathering:** Searching every connected system, creating excessive parallel work, or producing an essay for a simple status question.
-- **Under-gathering:** Checking a single convenient source and missing the decision-relevant meeting, document, discussion, or record elsewhere.
-- **Wrong-target research:** Starting a broad search when a name, organization, or project label is ambiguous.
-- **Privacy overreach:** Searching private records that are not needed for the legitimate task.
+Lead with what matters for the user's intended action. Organize the brief around
+the subject, not around the tools searched. A useful structure is:
 
-For each source, use this gate: **Would a sensible researcher consider this source worth checking for this specific question, at this effort level?** If not, skip it deliberately.
+- Short summary.
+- What is known.
+- Relevant history or relationship.
+- Current decisions and ownership.
+- Open questions and missing evidence.
+- Direct source links.
 
-## 3. Classify the subject and choose relevant source categories
-
-Classify the request before selecting sources. Named sources are mandatory, but they are a floor rather than a ceiling: add another source only when it is likely to contain decision-relevant evidence.
-
-- **Person:** Relevant correspondence, internal discussions, relationship notes, calendar history, authorized meeting notes or transcripts, approved relationship-management records, and current public professional information. Use hiring systems only for an authorized hiring purpose.
-- **Organization:** Public website and current public reporting first, then internal correspondence, planning records, partner records, meeting notes, and relationship history where relevant.
-- **Project or initiative:** Planning documents, internal messages, shared files, task or work-tracking records, meeting notes, operational data, code repositories, and product metrics where applicable.
-- **Topic or strategic question:** Public research plus internal prior thinking, strategy documents, relevant discussions, and technical or operational records.
-- **Decision:** Search evidence about the options, assumptions, risks, owners, prior decisions, constraints, and measurable outcomes.
-- **Meeting preparation:** If a separate meeting-preparation workflow exists, use it when the requested deliverable is a meeting agenda or meeting page. Use this workflow for raw context assembly.
-
-If a bare name or short phrase could refer to multiple subjects, ask one tight clarifying question. Otherwise, proceed.
-
-Set a default time window appropriate to the request. A useful starting point is recent months for active work, with expansion into older records when the relationship, project, or decision history makes that necessary.
-
-## 4. Search proportionately and systematically
-
-For quick and standard reviews, search directly and inspect results as they arrive. For deep reviews across many independent sources, use parallel read-only research tasks if that meaningfully reduces delay. Assign each task a source or source cluster and ask for a concise digest with evidence links, not raw result dumps.
-
-For a deep review, vary queries within each relevant source:
-
-- Subject name or title.
-- Organization or project name.
-- Related people, teams, or decision terms.
-- Alternate names, historical names, or likely keywords.
-- Date-bounded searches when recency matters.
-
-Do not conclude that a relevant source contains nothing after one weak query when the request warrants a deeper check.
-
-### Source-specific research rules
-
-**Email and direct correspondence**
-
-Search direct exchanges as well as relevant mentions in threads involving others. Read enough of the top threads to understand context, not only subject lines. Link to the thread or canonical record, not an opaque identifier.
-
-**Team messages and discussion channels**
-
-Search by person, organization, project, and decision keywords. Read surrounding messages and the full thread for any result that supports an important claim. Preserve a direct message reference or platform permalink for load-bearing evidence.
-
-**Knowledge bases and internal pages**
-
-Use a true workspace-content search mode when available, rather than a broad assistant-generated search that may surface irrelevant calendar or system artifacts. Fetch the full content of the strongest pages. Check meeting-note collections when relevant.
-
-**Shared documents and file storage**
-
-Search for documents, slides, spreadsheets, and other files tied to the subject. If a document platform supports multiple tabs, sections, sheets, or embedded views, inspect all relevant parts before treating the document as read. Attribute a finding to the relevant section when that distinction matters.
-
-**Calendar, meeting notes, and transcripts**
-
-Use calendar records to establish past interaction, upcoming events, and why an issue is active now. If results reveal a recent meeting with the subject, retrieve the authorized notes or transcript whenever available; it may contain the clearest account of what was actually agreed or disputed. Be careful with speaker labels in shared-room or group recordings: a label such as “me” may not identify one individual reliably.
-
-**Operational databases and tracking systems**
-
-Consult the relevant authorized tables or records for applications, customer relationships, project tasks, program operations, payments, content, or other domain data. Prefer documented schemas, field definitions, and canonical tables over exploratory crawling. Treat low-quality or stale relationship records as leads to verify, not final truth.
-
-**Hiring and assessment systems**
-
-Use only for authorized role-related work. Focus on role-relevant capabilities, application materials, interview or work-sample evidence, role alignment, and whether an assessment distinguishes relevant performance. Avoid unrelated personal information and unsupported character judgments.
-
-**Code repositories and product analytics**
-
-For engineering or product questions, inspect the relevant repository, recent changes, issue history, deployment or operational records, and usage metrics where they answer the question. Separate what the code currently does from what a planning document says it should do.
-
-**Public web research**
-
-For people and organizations, prioritize official sites, current professional profiles, filings or primary statements where relevant, and reputable current reporting. For topics, search several angles rather than relying on one framing. Cross-check titles, affiliations, dates, and claims that may be stale. Never include an unverified destination link; verify it or omit it and say that the source could not be confirmed.
-
-**Stored memory or prior research notes**
-
-Treat retained notes as background leads. Verify important facts against current primary records before relying on them, especially if they reference files, systems, or roles that may have changed.
-
-## 5. Handle unavailable sources honestly
-
-Do not silently substitute an adjacent source when a relevant source is unavailable, empty, or inaccessible. In the brief, distinguish among:
-
-- A source intentionally skipped because it was not relevant.
-- A relevant source searched with no useful results.
-- A relevant source that was unavailable or inaccessible.
-
-Attempt safe, authorized diagnostics first: confirm the connection, permissions, search mode, and service status; retry with an appropriate query; and use documented repair steps available to the researcher. If user action is still required, state the exact failure, what was attempted, and the one remaining action needed, such as authentication or reconnecting the source.
-
-Do not claim that a source was searched if it was not.
-
-## 6. Evaluate evidence and resolve conflicts
-
-Prefer current, primary, and canonical evidence. For example, a signed decision record, a direct message from an accountable owner, a current official profile, or a meeting transcript is generally stronger than a summary or an old news item.
-
-When sources conflict:
-
-1. Check dates, authorship, and whether each source is primary or derivative.
-2. Determine whether the conflict reflects a real change over time rather than an error.
-3. State which account is better supported and why.
-4. Preserve material uncertainty instead of forcing a false conclusion.
-
-Every factual claim drawn from a source should have a clickable path to supporting evidence where the platform and access boundary allow it. Do not use bare quotes without a source reference. Do not expose a link in a broader audience if access to that link would itself violate confidentiality.
-
-## 7. Write a scan-and-act context brief
-
-Organize findings by theme and decision relevance, not by the tools used. Lead with what the user needs to know for the intended action.
-
-Use this adaptable structure:
-
-```markdown
-## [Subject] — context brief
-*Scope: [quick, standard, or deep]. Sources reviewed: [source categories]. Window: [dates].*
-
-## TL;DR
-- [Most important decision-relevant finding with evidence reference]
-- [Current state, risk, opportunity, or constraint with evidence reference]
-- [Key action implication or unresolved issue]
-
-## What we know
-### [Theme]
-[Synthesized finding with direct evidence references.]
-
-### [Theme]
-[Synthesized finding with direct evidence references.]
-
-## Relationship or timeline
-[Relevant chronology of interactions, decisions, changes, and commitments.]
-
-## Open questions and gaps
-- [Question or uncertainty; expected source if known.]
-- [Unavailable or empty relevant source, if applicable.]
-
-## Key sources
-- [Source title — direct authorized reference]
-```
-
-For a quick request, compress this to a few bullets and only include headings that help. For a deep review, use the full structure, but keep prose blocks short enough to scan.
-
-A brief should clearly separate:
-
-- Verified facts.
-- Reasonable interpretations.
-- Recommendations or implications.
-- Unknowns and evidence gaps.
-
-## 8. Deliver in an appropriate location
-
-Return a short brief inline when it fits comfortably on screen and is suitable for the conversation’s access boundary. For a long-lived, detailed, or reference-oriented brief, create it in the user’s chosen authorized document system and folder, using a clear date-prefixed, human-readable title such as `YYYY-MM-DD: Decision context for [subject]`.
-
-Do not save private research to an unapproved local path, broadly shared location, or unrelated workspace. Do not append a trailing meta-summary after the brief if the brief itself is the intended deliverable.
-
-When editing an existing formatted document:
-
-- Insert only into a known body-text location or replace a complete, inspected section.
-- Do not insert markdown or placeholders at the beginning of an existing styled heading, list item, table cell, or other formatted paragraph.
-- Re-read the edited range in a format-aware representation after insertion.
-- Confirm that body paragraphs and bullets have normal body styles, and that only intended headings have heading styles.
-- If layout matters beyond paragraph styles, render or preview the document before reporting completion.
-
-The final deliverable should let the user answer: What matters now? What evidence supports it? What remains uncertain? What should I do next?
+Every sourced claim should let the user reach its supporting evidence.
 
 
 ---
@@ -2681,240 +2542,49 @@ Report the essential outcome only: meetings reviewed, tasks created or updated w
 
 ---
 name: turn-a-message-into-a-task
-description: Read a message or conversation, identify the real outcome, prepare as much work as safely possible, and create a task only when durable tracking will help. Keep research, drafts, records, and follow-up within legitimate access boundaries.
+description: Read the full conversation, work out the real action, do useful preparation, and create a clear task only when needed.
 ---
 
 # Turn a message into a task
 
-Use this workflow when a message, thread, or conversation contains a request, decision, promise, or follow-up that may require action. The aim is not to turn every message into a vague to-do. The aim is to understand the real request, complete the useful preparation, and leave the user with a small, clear final action.
-
-Work only for a legitimate purpose and with clear authorization to access the conversation and any supporting information. Use the minimum relevant sources and facts. Do not copy unrelated personal, employment, health, financial, or otherwise sensitive details into a task, draft, or report. Keep outputs within the audience and access boundary appropriate to the original material.
-
-## Core rules
-
-- Read the complete relevant conversation before deciding what the task is.
-- Check newer replies before researching or filing anything. Do not create a task for work that is completed, superseded, withdrawn, reassigned, or duplicated.
-- Prepare external communications as drafts. Do not send messages, email, invitations, approvals, or other consequential actions without explicit user approval.
-- Do not invent facts, dates, links, commitments, or views. Verify them, omit them, or mark a visible gap.
-- Keep closely connected parts of one request in one task. Split only when they have different owners, deadlines, or independent outcomes.
-- Research selectively. Stop once you can responsibly prepare the deliverable or precisely name the blocker.
-- Prefer a chat deliverable over a task record when the remaining action is a short, immediate review-and-send step.
+Use this when a conversation contains a request or follow-up that may need a
+task record.
 
 ## 1. Read the whole conversation
 
-Start from the supplied message or conversation reference. Open the original message, its parent conversation where applicable, and every reply. When a reference points to a reply, treat that reply as the initial anchor for the request, but use the entire conversation as context. When a top-level message has replies, read them immediately because they may alter, resolve, or reassign the work.
+Open the parent message and all replies. Identify the people involved, the
+actual request, promises already made, deadlines, links, and whether someone has
+already completed the work.
 
-Capture the following in working notes only:
+## 2. Work out the real action
 
-- The people involved and their roles in the request.
-- The explicit request, implied request, and promises already made.
-- Dates, deadlines, dependencies, and people who are waiting.
-- Linked files, documents, or other material that may contain the real work.
-- Later messages that answer the question, change the plan, or give ownership to someone else.
+Rewrite the request as an outcome. Separate the user's action from work owned by
+other people. If the message can be answered or resolved immediately, do that
+instead of creating a task for its own sake.
 
-If names are missing from the conversation display, recover them only from authorized profile information or clear self-identification. Do not guess identities. If identity cannot be confirmed, use a neutral role description that is sufficient for the task, such as “project collaborator” or “event organizer.”
+## 3. Gather enough context
 
-### Recency gate
+Check relevant documents, prior conversations, meeting notes, records, or public
+sources when they can answer factual questions. Match research effort to the
+stakes. Do not delay a simple task with an exhaustive search.
 
-Before creating a record, answer these questions:
+## 4. Do useful preparation
 
-1. Has the requested action already been completed?
-2. Has the requester withdrawn, changed, or clarified the ask?
-3. Has another person accepted ownership?
-4. Would a new record create duplicate, stale, or dead work?
+When authorized, draft the reply, assemble the figures, outline the document,
+or prepare the decision before creating the record. Keep actions that affect
+other people in draft form until the user approves them.
 
-If the answer is yes or uncertain, report the evidence and ask whether tracking is still wanted. Do not file a task just because an older message contains a request.
+## 5. Decide whether a record helps
 
-## 2. Identify the real task shape
+Create a task when work remains, it may be forgotten, or another commitment
+depends on it. Skip the record when the action is complete, trivial, duplicated,
+or better owned elsewhere.
 
-State the task shape in working notes. The shape determines what “pre-complete the work” means.
+## 6. Create a useful task
 
-| Task shape | What is owed | Useful preparation |
-|---|---|---|
-| Reply owed | An answer, update, feedback, decision, or acknowledgement | Draft the reply and gather the facts it needs. |
-| Artefact owed | A document, introduction, data pull, summary, recommendation, or reference | Draft or assemble the artefact itself. |
-| Decision needed | A choice that only the user can make | Prepare options, evidence, a recommendation, and usually a draft response. |
-| Delegation or follow-up | A chase, handoff, scheduling step, or process action | Draft the follow-up or prepare the action for approval. |
-| [Other] | [Describe the outcome.] | [Describe preparation that reduces the remaining work.] |
-
-Rewrite the request as an outcome, not as a message title. For example, use “Provide written feedback on the proposal” rather than “Message about proposal.”
-
-Keep multi-part asks together if one response or one review session can complete them. Split them if they require distinct owners, materially different timescales, or separate completion criteria.
-
-## 3. Gather only the context that matters
-
-Choose sources based on the task. Do not search every available system by default. Access only sources the user is authorized to use, and only the portions necessary to answer the request.
-
-Useful source patterns include:
-
-- **People or relationship context:** relevant prior correspondence, meeting notes, role records, and concrete examples of work. For feedback, references, transitions, negotiations, or sensitive collaboration matters, first look for the user’s previously documented position or agreed guidance.
-- **Project or event context:** recent related conversations, project plans, shared documents, retrospective notes, schedules, and decision records.
-- **Data questions:** start with the authoritative record. Use planning notes or communications only to explain definitions, timing, exceptions, and caveats.
-- **Parallel requests:** search the topic broadly enough to find duplicate asks. If appropriate, prepare one accurate response and direct related requesters to it rather than creating inconsistent duplicate answers.
-- **Linked material:** read every relevant linked file and attachment. For a document with multiple sections, pages, worksheets, or tabs, inspect all of them. A message may mention one question while the linked material contains the full action list.
-- **Policy or process questions:** find the applicable approved policy, precedent, or procedure. A comparable existing policy can be a useful starting point, but flag meaningful differences in jurisdiction, role, timing, or scope.
-
-For public facts, use reliable research methods that do not reveal confidential search terms or private material. Verify direct links before including them. If a link cannot be verified, omit it or use a clear placeholder such as `[SEARCH: current reimbursement policy]`.
-
-### Research stopping rule
-
-Stop gathering context when one of these is true:
-
-- You have enough evidence to draft the deliverable responsibly.
-- You have found a specific missing fact or decision that only the user can provide.
-- Further research would add background but would not change the draft, recommendation, or next action.
-
-Two or three well-chosen sources are generally better than a broad, shallow collection.
-
-## 4. Pre-complete the work
-
-Do as much as is reasonable without taking unapproved external action. A task with no useful notes, draft, brief, or prepared next step is usually not sufficiently prepared.
-
-### Drafting in the user’s voice
-
-Before drafting user-authored writing, consult any authorized writing guidance, prior examples, or tone instructions. If none exists, write in plain, direct language. Do not claim to reproduce a personal voice you do not know.
-
-Keep external drafts shorter than internal briefings. Remove unnecessary praise, elaborate framing, repeated explanation, and complicated question lists when one simple question would do. Include coaching or detailed rationale only when it is itself the purpose of the message.
-
-If an approval, payment, exception, or sensitive action has an established process, direct the recipient through that process rather than making an informal commitment. Clearly qualify uncertain future commitments.
-
-### Drafting rules
-
-- Draft; do not send.
-- If the selected communication system supports drafts, stage the reply in the correct conversation for easy review. If a task record is created, include the draft text in its notes as well.
-- Use clear paragraph spacing and list formatting that will remain readable in the chosen communication system.
-- If a fact cannot be verified, use a visible placeholder: `[VERIFY: confirm attendance total from source record]`.
-- If only the user’s firsthand memory or judgment can complete a section, retain the structure and add: `[FILL IN: your firsthand view of the event]`.
-- Warn clearly if a draft contains gaps and cannot be sent as-is.
-
-### Decision briefs
-
-For a decision-shaped task, prepare:
-
-1. Two or three realistic options.
-2. The strongest evidence, trade-offs, and dependencies for each option.
-3. A recommendation and a short explanation of why it fits the evidence.
-4. A draft reply for the recommended or likely decision when useful.
-
-The purpose is to reduce decision effort, not to present an unranked survey.
-
-## 5. Ask questions only when genuinely blocked
-
-Before asking, check whether the user already answered the question in earlier messages, planning materials, correspondence, or an approved policy. A documented stance should normally guide the draft.
-
-Ask only when a wrong assumption would cost more time or create more risk than a short clarification. Examples include willingness to make a commitment, a choice between materially different options, a sensitive relationship judgment, or missing firsthand experience.
-
-When clarification is necessary:
-
-1. Begin with one or two short paragraphs restoring context: who is involved, what happened, what is being asked now, and the real tension.
-2. Ask two to four focused questions, rather than a long questionnaire.
-3. Permit combined choices and free-text input where the interface allows it.
-4. Incorporate the answers into the deliverable before creating a task record.
-
-If no material fork exists, make reasonable assumptions, disclose them in the report, and let the user correct them later.
-
-## 6. Decide whether a task record is useful
-
-Do not create a record by default. A record is helpful when it lets work survive time, dependencies, or multiple steps.
-
-Create one when at least one condition applies:
-
-- Work is deferred and could be forgotten.
-- There is a meaningful deadline, wait, dependency, or follow-up date.
-- Multiple remaining steps are needed, especially over several days.
-- The user explicitly requested tracking.
-- A decision or artefact needs durable context for later completion.
-
-Use chat-only delivery when the remaining action is one short sitting, such as reviewing a prepared reply and sending it immediately. Do not create administration that will outlive the work.
-
-## 7. Create a task record when needed
-
-Use the user’s chosen task system and approved fields. Confirm the record was created successfully and open it for review if the selected system supports that capability.
-
-| Field | Guidance |
-|---|---|
-| Title | Imperative, specific, and short. Describe the outcome, not the source message. |
-| Status | Use the active not-started state unless work has already begun. |
-| Due date | Add only when the conversation or dependency supports a real date. |
-| Importance | Estimate from impact and consequences, not message volume. |
-| Urgency | Raise urgency when someone is actively waiting or a deadline is near. |
-| Time estimate | Estimate remaining human work after preparation, not original total effort. |
-| Owner, domain, or project | Link the best verified category; leave it unclassified if uncertain. |
-
-Use notes that make the record self-contained without reproducing unnecessary private conversation:
-
-```markdown
-**What:** [One-line outcome and who is waiting.]
-**Source:** [Conversation reference or approved source.]
-**Context:**
-- [Relevant history or role context.]
-- [Verified fact, deadline, or dependency.]
-- [Minimum necessary supporting reference.]
-
-**Pre-completed:**
-[Draft reply, artefact, decision brief, or prepared next action. State where a draft is staged, if applicable.]
-
-**Remaining for the user:**
-- [Specific judgment, review, or approval.]
-- [Specific follow-up step, if any.]
-```
-
-## 8. Report back clearly
-
-If a record was created, report in this order:
-
-1. What the task is.
-2. What was pre-completed and where any draft is staged.
-3. Metadata assumptions: importance, urgency, due date if any, and remaining-time estimate.
-4. Any `[VERIFY]` or `[FILL IN]` items that prevent immediate sending or completion.
-
-If no record was created, separate the briefing from the deliverable. Make the draft the final block so it can be copied cleanly.
-
-```markdown
-## Context for the user (not part of the reply)
-- [What is being asked and who is waiting.]
-- [Relevant facts and judgment calls.]
-- [Where the draft is staged, if applicable.]
-- [Any verification gaps.]
-
-## The reply
-[Draft verbatim]
-```
-
-Do not add commentary after the reply block.
-
-## 9. Run a draft-learning loop only when authorized
-
-When a draft is staged, a later review may be useful if the user has authorized comparison with their eventual sent communication. After a reasonable delay, re-read the relevant conversation and compare the staged draft with the final message.
-
-Retain only general, reusable lessons: preferred brevity, formatting, process routing, stance, or when explanation is useful. Do not retain private content, personal judgments, or sensitive relationship details merely to improve future drafts. If no final message appears, check only a limited number of times with longer intervals, then stop; the user may have deliberately chosen not to send it.
-
-## 10. Improve the workflow carefully
-
-After each run, conduct a brief quality review. If maintaining a shared playbook is authorized, add only small, general improvements:
-
-- A source type that reliably resolves a class of task.
-- A capability limitation and a safe workaround.
-- A recurring task shape missing from the taxonomy.
-- A wording rule or process fact confirmed through authorized use.
-- An instruction that consistently causes wasted effort.
-
-Do not alter shared procedures without authorization. Do not encode identifiable incidents, private correspondence, or confidential facts as general rules. A no-change review is valid when nothing reusable was learned.
-
-## Final audit checklist
-
-Before finishing, confirm:
-
-- [ ] I read the full conversation and checked newer replies.
-- [ ] I identified the actual outcome and task shape.
-- [ ] I used only necessary, authorized sources and information.
-- [ ] I did not fabricate facts, links, commitments, or personal views.
-- [ ] I prepared useful work before deciding whether to track it.
-- [ ] I did not send or execute an unapproved external action.
-- [ ] I asked questions only for a material unresolved fork.
-- [ ] I skipped a record when remaining work was immediate and trivial.
-- [ ] If I created a record, its notes contain context, completed preparation, and precise remaining steps.
-- [ ] I disclosed every verification or memory-dependent gap.
+Use a clear title, binary finish line, relevant context, source link, owner, and
+real deadline. Avoid copying a whole conversation into the notes. Verify the
+record after writing it.
 
 
 ---
@@ -3206,144 +2876,278 @@ A finished work sample should feel like a small, fair version of the job: bounde
 
 ---
 name: run-a-reference-call
-description: Prepare and run a concise reference conversation that gathers specific evidence instead of vague praise.
+description: Prepare, conduct, and document a structured hiring reference call that gathers role-relevant, example-based evidence while protecting privacy and supporting a fair hiring decision.
 ---
 
 # Run a reference call
 
-Use this when checking a candidate's past work for a hiring decision.
+Use this workflow when an authorized hiring team needs a reference conversation for a candidate. Its purpose is to reduce specific hiring uncertainty with direct, role-relevant evidence—not to collect vague praise or personal gossip.
 
-## 1. Prepare from the decision
+Only access candidate, referee, and hiring records when there is a legitimate hiring purpose and you are authorized to use those sources. Use the minimum information needed, keep notes within the hiring team's approved access boundary, and exclude unrelated personal or sensitive details.
 
-Read the role outcomes, interview evidence, remaining concerns, and the
-candidate's relationship with the referee. Decide which uncertainty the call
-must reduce. Do not ask a generic list when the hiring team already knows what
-it needs to test.
+## Inputs
 
-## 2. Establish context
+Collect or confirm:
 
-Confirm how the referee worked with the candidate, for how long, and how closely
-they observed the relevant work. Weight evidence by direct observation rather
-than title or confidence.
+- Candidate name and the role under consideration.
+- Referee name, contact details, and stated relationship to the candidate.
+- Call date, time, format, and organizer.
+- The hiring stage and the decision the call is meant to inform.
+- Role outcomes, required capabilities, interview evidence, work-sample evidence, and unresolved questions.
+- Candidate-provided reference list, including other referees where available.
 
-## 3. Ask for examples
+If key information is unavailable, do not invent it. Mark the gap in the brief and ask the hiring owner for clarification.
 
-Useful questions include:
+## 1. Confirm scope and authorization
 
-- What result did the candidate personally own?
-- What did strong performance look like in practice?
-- Where did they need the most support?
-- How did they respond to difficult feedback?
-- Which environment helped or hurt their performance?
-- What kind of role would you hesitate to place them in?
-- Would you choose to work with them again, and in what capacity?
+First, distinguish a hiring reference from other requests, such as giving a reference about a former participant, contractor, or employee. Use the workflow appropriate to the direction of the request.
 
-Follow vague praise with “What did that look like?” or “Can you give a specific
-example?”
+Confirm that the candidate has supplied or authorized contact with the referee according to the organization's hiring process. Do not contact a current employer or an unlisted referee without clear candidate permission and any required internal approval.
 
-## 4. Test concerns fairly
+Set a narrow evidence goal. For example: “Determine whether the candidate can independently build reliable operating systems in an ambiguous environment,” rather than “find out whether they are good.”
 
-Ask neutral questions about the hiring team's uncertainties without revealing
-private interview judgments or inviting confirmation. Note contradictions and
-seek concrete evidence.
+## 2. Find the call and establish logistics
 
-## 5. Record signal
+Check the team's approved calendar or scheduling record for the referee's name or contact details. Record the meeting title, time, invitees, joining details, and any scheduling context that affects the conversation.
 
-Separate observations, the referee's interpretation, and your inference. Record
-confidence and any important limits on what the referee could know. Do not turn
-one reference into a final verdict on its own.
+If no event exists, proceed with the available information and identify the missing logistical item. Do not place private meeting links or unnecessary contact information in documents that have wider access than the hiring team.
+
+## 3. Gather only relevant context
+
+Use approved hiring records, prior correspondence, internal meeting notes, and public professional sources as needed. Prefer primary sources: the candidate's application, reference-list introduction, role scorecard, interview notes, and work-sample results.
+
+Establish:
+
+- The role, hiring stage, next decision, and timeline.
+- How the referee knows the candidate: reporting relationship, collaboration type, duration, and degree of direct observation.
+- The candidate's role-relevant professional profile links, where permitted by policy.
+- Other listed references, for coordination and coverage—not for speculation.
+- Completed reference-call records for the same candidate, if access is authorized.
+
+When reading prior references, extract only claims relevant to the role. Separate a referee's direct observations from their interpretation. Identify patterns worth checking across independent sources, but do not turn a prior comment into a leading premise.
+
+## 4. Build an evidence plan
+
+Create a short briefing that converts research into neutral, answerable questions. Focus on what this referee is uniquely positioned to observe.
+
+Use these decision rules:
+
+- Weight first-hand examples more heavily than reputation, title, or enthusiasm.
+- Give greater weight to evidence from similar work, constraints, and level of responsibility.
+- Treat a referee's limited exposure as a limitation, not a negative signal.
+- Ask about both strengths and development areas in the same factual manner.
+- Test a concern without disclosing confidential interview notes or asking the referee to validate a label.
+- Seek examples, context, the candidate's individual contribution, results, and how performance compared with expectations.
+
+### Readiness gate
+
+Do not start the call brief until you can answer the following, or explicitly mark each item as unknown:
+
+| Check | Ready standard |
+|---|---|
+| Hiring decision | The brief names the role, stage, and uncertainty the call should reduce. |
+| Referee relationship | The brief states how, when, and how closely the referee observed the candidate. |
+| Evidence priorities | The brief contains role-relevant probes and at least one question tied to each major open concern. |
+| Privacy boundary | The brief contains no unnecessary sensitive, personal, or unrelated information. |
+
+## 5. Create the reference-call record
+
+Create one page or record in the organization's chosen hiring-notes system before the call. Use the approved template and make it accessible only to authorized participants. If the system supports recording or transcription, obtain any required notice or consent before enabling it.
+
+Use this template.
+
+```markdown
+# [Referee name] — reference for [Candidate name]
+
+**Call date:** [date]
+**Role:** [role]
+**Hiring stage:** [stage]
+**Referee relationship:** [manager/client/colleague/etc.; period; closeness of work]
+**Call logistics:** [time, format, owner]
+
+## Context
+- Candidate profile: [approved hiring-profile link or identifier]
+- Referee: [professional role and organization, if relevant and verified]
+- How they worked together: [concise factual description]
+- Decision this call informs: [decision and timeline]
+- Other references: [names/relationships if authorized and useful]
+
+## Briefing notes
+- **What this referee can best assess:** [capabilities and work period].
+- **Evidence to validate:** [specific, neutral themes from interviews, work samples, or prior references].
+- **Open questions:** [what remains unknown].
+- **Cross-reference plan:** [which claims should be checked with later independent sources].
+- **Constraints:** [limited exposure, possible conflicts, or missing information].
+
+## Opening
+> Thank you for making time. I am speaking with references as part of an authorized hiring process for [Candidate] and the [Role] role. I would like to understand your direct experience working with them: what they owned, how they performed, where they were strongest, and what support helped them succeed. Please share only professional information relevant to this role. Your comments will be handled within the hiring process according to our confidentiality practices.
+
+## Questions
+- How did you work together? What were each of your roles, and how closely did you work day to day?
+- What work or outcomes did the candidate personally own?
+- Please describe one strong example of their work: the situation, their actions, and the result.
+- How did their performance compare with the expectations for their role and level?
+- What is their most distinctive role-relevant strength? What did it look like in practice?
+- Where did they need the most support or development? Please share a concrete example.
+- How did they respond to difficult feedback, setbacks, or changing priorities?
+- What environment, management approach, or team conditions helped them do their best work?
+- If performance in a new role were to fall short after several months, what would be the most likely work-related reason?
+- What role-relevant development area should a manager prioritize early?
+- Would you work with them again? In what type of role or scope?
+- What have I not asked that would materially help us assess fit for this role?
+
+### Role-specific probes
+- [Probe linked to a required capability or outcome]
+- [Probe linked to a second required capability or outcome]
+- [Probe testing a known uncertainty fairly]
+
+## Notes and evidence
+- **Direct observations:** [facts, examples, and quotations where appropriate]
+- **Referee interpretation:** [their conclusions or rankings]
+- **Assessment limits:** [what they could not directly observe]
+- **Follow-ups needed:** [specific records, questions, or corroboration]
+
+## Post-call assessment
+- **Evidence relevant to role outcomes:** [concise synthesis]
+- **Consistent with other evidence:** [yes/no/mixed; explain]
+- **New concern or contradiction:** [if any]
+- **Confidence:** [high/medium/low, based on directness and relevance of evidence]
+- **Recommended next step:** [proceed, gather another source, clarify with candidate, or escalate to hiring owner]
+```
+
+## 6. Conduct the call
+
+Open with the purpose, confidentiality boundary, and scope. Confirm the referee's relationship before relying on it. Use the prepared questions flexibly; do not rush through a script when an example deserves follow-up.
+
+For each important claim, ask: “What did that look like?”, “What was the candidate personally responsible for?”, “What happened next?”, or “Can you give a specific example?” Ask clarifying questions rather than framing a desired answer.
+
+Do not ask for protected, medical, family, financial, political, or otherwise irrelevant personal information. Avoid questions that invite speculation about traits unrelated to job performance.
+
+## 7. Close, assess, and audit
+
+Immediately after the call, complete the record while distinctions are clear. Keep three layers separate: observed facts, the referee's interpretation, and the hiring team's inference. A single reference should not be a final verdict.
+
+Before sharing the assessment, audit the record:
+
+| Audit check | Pass condition |
+|---|---|
+| Evidence quality | Important conclusions cite concrete examples or clearly state that evidence was limited. |
+| Role alignment | Notes connect evidence to actual role outcomes and capabilities. |
+| Fairness | Concerns are documented as job-relevant evidence, not personality labels or unsupported assumptions. |
+| Corroboration | Contradictions and important claims have a plan for independent checking where appropriate. |
+| Privacy | Notes omit unrelated sensitive details and remain in the approved hiring-access area. |
+| Actionability | The record states a clear next step and any remaining uncertainty. |
+
+## Common failure modes
+
+- **Generic praise treated as evidence:** ask for a specific situation, action, and result.
+- **Leading questions based on prior feedback:** restate the underlying capability neutrally and ask for the referee's own example.
+- **Overweighting seniority or confidence:** prioritize direct, relevant observation.
+- **Using a reference to revisit every interview topic:** focus on the few uncertainties that matter to the decision.
+- **Recording confidential details without need:** retain only professional, role-relevant information.
+- **Stopping after research:** the completed call record, including briefing notes and post-call assessment, is the operational deliverable.
+- **Treating disagreement as proof of a problem:** investigate differences in context, scope, timing, and observation before drawing conclusions.
 
 
 ---
 name: use-a-browser-safely
-description: Complete browser-based tasks safely by choosing the least invasive authorized method, protecting account context, verifying rendered page state, and separating preparation from consequential commitment.
+description: Complete browser-based tasks safely by choosing the least invasive authorized method, protecting account context and private data, verifying rendered state after each change, and separating preparation from consequential commitment.
 ---
 
 # Use a browser safely
 
-Use this workflow for tasks that need real interaction with a website: completing a rendered form, changing a setting, collecting data from a dynamic page, testing a user flow, uploading material, or working in an authenticated dashboard. Use it when a simple retrieval request or supported direct interface cannot reliably complete the task.
+Use this workflow for tasks that require interaction with a website: completing rendered forms, changing settings, collecting data from dynamic pages, testing a flow, or working in an authenticated dashboard. Use it when a static page request, a supported direct interface, or a simple retrieval method cannot safely and reliably complete the task.
 
 The central rule is:
 
-> Inspect the rendered page before editing, read back every meaningful change, and do not perform a consequential final action until the account, target, authorization, and page state are clear.
+> Inspect the rendered page before editing, read every meaningful change back from the page, and never perform a consequential final action until the target, account, authorization, and readiness checks are clear.
 
-An automation command succeeding does **not** prove that the website accepted the change. Modern applications can store state separately from the visible DOM, commit a field only after focus leaves it, replace controls during a re-render, or show an error after an action actually completed.
+A successful browser-automation command does **not** prove that a website accepted a change. Modern applications can maintain state separately from the visible DOM, commit values only when focus leaves a control, re-render and replace controls, or display an error even after an operation succeeded.
 
-## 1. Choose the least invasive authorized route
+## 1. Choose the least invasive route
 
-Use the first suitable route below. Do not choose a more invasive route merely because it is convenient.
+Use the first suitable route in this order:
 
-1. **Supported direct interface or API.** Prefer a documented, authorized programmatic interface when it can complete the request. It is usually more reliable than reproducing browser behavior.
+1. **Supported direct interface or API.** Prefer a documented and authorized programmatic interface when it can perform the requested task. It is commonly more reliable than reproducing browser behavior.
 2. **Headless browser automation.** Use this for public pages, test environments, routine rendered-page extraction, screenshots, and forms that do not require the user's established signed-in identity.
-3. **User-visible authenticated browser session.** Use this only when the task genuinely needs an existing session, single sign-on state, account-specific dashboard, or a user-directed browser context.
+3. **User-visible authenticated browser session.** Use this only when the task genuinely requires an existing session, single sign-on state, account-specific dashboard, or user-directed browser context.
 
-Before driving a browser, check for a legitimate direct route: official documentation, ordinary form actions, page source, and visible network activity may identify a supported endpoint. Do not use undocumented interfaces to bypass access controls, consent boundaries, service restrictions, or security protections.
+Before driving a browser, check for a direct route. Review official documentation, ordinary form actions, page source, and visible network activity for supported endpoints. A form may send structured data to an authorized service that is safer to use directly.
 
-If a website blocks automated browsing, do not try to evade its protections for casual research or collection. A verified visible session can be appropriate only when the user explicitly asked to complete a legitimate task on that site, has authorized access, and the established session is necessary. Do not weaken browser security, warnings, access controls, or anti-abuse protections.
+Do not use an undocumented route to bypass access controls, consent boundaries, contractual restrictions, or site protections. Do not use an authenticated visible session merely because it is convenient: it can interrupt the user's work and creates additional privacy and account risk.
+
+If a site blocks automated browsing, do not try to evade the block for casual research or collection. A verified visible session may be appropriate only when the user explicitly asked to complete a legitimate task on that specific site, the user has authorized access, and the established session is necessary. Do not weaken browser security, warnings, anti-abuse protections, or access controls.
 
 ## 2. Protect account identity, privacy, and browser context
 
-When a task accesses private communications, records, dashboards, or information about people, confirm there is a legitimate purpose and clear authorization. Use only the minimum relevant sources and information. Omit unrelated or sensitive personal details from notes, screenshots, logs, and reports. Keep results within the requester's appropriate access boundary and respect consent and privacy expectations.
+When a task accesses private communications, records, dashboards, or information about people, establish a legitimate purpose and clear authorization. Use only the minimum relevant sources and information. Do not copy unrelated personal details into notes, screenshots, logs, or reports. Keep outputs within the requester's appropriate access boundary and respect consent and privacy expectations.
 
-Before acting in an authenticated context, identify the correct account, organization, environment, and browser profile. Never infer identity from a generic window name, old tab title, remembered default, or arbitrary connection label.
+Before acting in an authenticated context, identify the correct account, organization, environment, and browser profile. Never infer identity from a generic browser-window name, remembered default, tab title, or arbitrary connection label.
 
-Apply these rules:
+Use these rules:
 
-- Announce when taking control of a visible browser and state the purpose.
-- Use a fresh tab, window, or isolated tab group unless the user explicitly identifies an existing tab to use.
-- Classify the intended context explicitly, such as personal, work, test, staging, or production.
-- Select the browser profile or connection associated with that context; do not rely on a generic browser selector that may choose a recently used profile.
-- Verify the signed-in account with a reliable account indicator before opening or changing the target page.
-- Confirm the active environment and exact target object before changing data.
-- If account, environment, target, or authority is uncertain, stop and ask before making changes.
-- Never reveal credentials, session tokens, recovery information, or unnecessary private account data in output or logs.
-- Do not disable multi-factor authentication, security controls, browser warnings, or access restrictions to make automation easier.
+- Announce when taking control of a visible browser and state the purpose, for example: “I am opening a separate browser workspace to update the requested account setting.”
+- Work in a fresh tab, window, or isolated tab group unless the user explicitly identifies an existing tab to use.
+- Classify the intended context explicitly: personal, work, test, staging, production, or another user-defined context.
+- Select the profile or connection that matches that context rather than relying on a generic browser selector that may choose a recently used profile.
+- Verify the signed-in account through a reliable account indicator before opening or changing the real target.
+- If the required account, environment, target, or authority is unclear, stop and ask before changing data.
+- Do not reveal credentials, session tokens, recovery information, private account data, or security settings in output or logs.
+- Do not disable security controls, multi-factor authentication, browser warnings, or access restrictions to make automation easier.
 
-Use an account preflight gate before actions that change data. A useful question is: **Which account is this? Which environment is this? What exact item will change?** Mark a browser context as verified only after the identity check has actually passed. Never create a verification marker in advance merely to unlock an action tool.
+Use an account preflight gate before actions that change data. Confirm the account identity, environment, and target object. If the automation environment has a verification marker or permission gate, mark the context verified **only after** the account check passes. Never create or enable such a marker merely to unlock action tools.
+
+Ask these questions when needed:
+
+- Which account and environment should be used?
+- What exact record, setting, form, or item is the target?
+- What information may be entered, collected, or uploaded?
+- Is the intended final action reversible?
+- Does the user authorize sending, publishing, paying, deleting, granting access, or another external commitment?
 
 ## 3. Establish the task boundary
 
 Determine the intended outcome before navigating deeply. Identify:
 
-- The target page, record, setting, form, or workflow.
+- The target page, record, form, setting, or workflow.
 - The information that will be entered, collected, changed, or uploaded.
-- The minimum information needed to complete the request.
-- Missing information and choices that require the user's judgment.
+- The minimum information required to complete the request.
 - Whether the final action is reversible.
-- Whether the task sends, publishes, pays, deletes, grants access, changes a plan, changes ownership, or otherwise creates an external commitment.
+- Any recipients, audience, cost, schedule, attachment, access change, or external effect.
+- Missing information, ambiguous choices, and fields that require user judgment.
 
-Separate **preparation** from **commitment**. Filling fields, drafting text, selecting options, and collecting a preview are often reversible. Submitting, sending, publishing, purchasing, deleting, or applying an irreversible account change may not be.
+Separate **preparation** from **commitment**. Filling fields, drafting text, selecting options, and creating a preview are often reversible. Submitting, sending, publishing, purchasing, deleting, or applying an irreversible account change may not be.
 
 For consequential tasks, use two phases:
 
 1. **Preparation pass:** Fill or configure the page, verify values, and capture a pre-action screenshot or structured state record. Do not activate the final control.
-2. **Commitment pass:** After explicit confirmation of the prepared state, re-check the account, target, and readiness gate. Perform the final action once.
+2. **Commitment pass:** Obtain explicit confirmation of the prepared state. Re-check account, target, and readiness conditions, then perform the final action once.
 
-If the page reloads, re-renders, or the session changes between phases, do not assume the prior state remains valid. Restore and verify the intended state before committing.
+If the page reloads, re-renders, or the session changes between phases, do not assume the earlier state remains valid. Restore values if necessary and verify them again.
 
 ## 4. Inspect the rendered page before editing
 
-Do not begin by guessing selectors, filling controls by numeric position, or trusting a visual approximation. First inspect the rendered page and collect enough structure to identify controls safely.
+Do not begin by guessing selectors, filling fields by numeric position, or trusting a visual approximation. First inspect the rendered page and collect enough structure to identify controls safely.
 
 For each relevant control, determine:
 
-- Element type: single-line input, multiline text area, rich-text editor, dropdown, checkbox, radio group, date picker, upload control, or custom widget.
+- Element type: single-line input, multiline area, rich-text editor, dropdown, checkbox, radio group, date picker, upload control, or custom widget.
 - Accessible name, visible label, placeholder, or explicit label relationship.
 - Current value and whether the field is required.
 - Validation rules, character limits, formatting behavior, and disabled state.
 - Whether an apparent field is the editable control, a wrapper, or a hidden synchronization element.
-- Whether changing a selection, tab, date, or checkbox causes a re-render.
+- Whether changing a dropdown, checkbox, date, or tab causes the page to re-render.
 
-Address controls by stable semantic identity, such as visible label text, an accessible name, or an explicit label relationship. Do not use DOM indexes where labels are available; dynamic applications can change control order after loading or re-rendering.
+Address controls by stable semantic identity, such as visible label text, accessible name, or an explicit label relationship. Do not use DOM indexes where labels are available; dynamic applications can change element order between loads or after re-rendering.
 
-Before changing a record or setting, inspect its current state. This avoids modifying the wrong item or overwriting existing content unintentionally.
+Before changing a record or setting, inspect its current state. This prevents modifying the wrong item or unintentionally overwriting existing data.
 
 ### Generic inspection pattern
 
-Use the chosen browser automation capability to list relevant controls before writing fill logic. Record at least tag, input type, role, label, required state, and current value or text length.
+Use the selected browser automation library to list relevant controls before writing fill logic. Record at least tag, input type, role, label, required state, and current value or text length.
 
 ```js
-// Pseudocode: adapt to the chosen automation library.
+// Pseudocode: adapt to the selected browser automation library.
 const controls = inspectAll('input, textarea, [contenteditable="true"], [role="textbox"]')
   .map((element) => ({
     tag: element.tagName,
@@ -3357,61 +3161,68 @@ const controls = inspectAll('input, textarea, [contenteditable="true"], [role="t
 saveJson('form-before.json', controls);
 ```
 
-## 5. Use the right interaction for the control
+## 5. Use the correct input method for each control
 
-A generic “set value” operation is not reliable for every kind of control.
+A generic “set value” operation is not reliable for every control. Use interaction that resembles what the application expects, then verify the result.
 
 | Control type | Preferred interaction | Verification concern |
 |---|---|---|
-| Single-line input | Use normal text-entry behavior | Line breaks may be silently removed. |
-| Multiline text area | Enter text, then move focus away | Some applications commit only on blur. |
-| Rich-text or content-editable editor | Focus the true editable element, select existing text, use keyboard-style entry, then blur | Direct DOM mutation may not update the application's internal model. |
-| Dropdown or combobox | Open and choose by visible option text, then wait for state to settle | A selection may trigger a full re-render. |
-| Checkbox or radio control | Read the current state first; change only if needed | Clicking an already-correct control can undo it. |
-| Date/time picker | Set date and time, then verify the rendered summary | Popovers can reinterpret typing or clear related fields. |
-| File upload | Confirm file, destination, recipient, and privacy implications first | Uploading may begin immediately and may be difficult to undo. |
+| Single-line input | Use normal text input or fill behavior | Line breaks may be removed silently. |
+| Multiline text area | Fill text, then move focus away | Some applications commit only on blur. |
+| Rich-text or content-editable editor | Focus the actual editable element, replace text through keyboard-style events, then blur | Direct DOM mutation may not update the application's internal model. |
+| Dropdown or combobox | Open it, select by visible option text, then wait for state to settle | Selection can trigger a full re-render. |
+| Checkbox or radio control | Read current state first; change only if needed | Clicking an already-correct control can create an error. |
+| Date/time picker | Choose date and time, then verify the rendered summary | Popovers can reinterpret typing or clear related fields. |
+| File upload | Confirm file, destination, and privacy implications first | Uploading may begin immediately and can be difficult to undo. |
 
-For framework-driven editors, simulate ordinary user interaction rather than assigning low-level page properties. A robust sequence is: focus the actual editor, select existing content, delete it, enter the replacement through keyboard-style events, move focus to a neutral page element, wait briefly, and read the result back.
+For framework-driven editors, simulate normal user interaction rather than writing directly to low-level page properties. A robust sequence is:
 
-Some forms pair a visible editor with a hidden input. Editing the hidden input can appear successful in a DOM dump while server-side validation considers the actual field empty. Target the visible interactive control that the application reads. If an accessibility locator finds an empty wrapper, inspect the underlying labeled editable element.
+1. Focus the true editable element.
+2. Select existing content.
+3. Delete it.
+4. Enter the intended text through keyboard-style events.
+5. Move focus to a neutral page element.
+6. Wait briefly for state to commit.
+7. Read the result back.
 
-If dropdowns, checkboxes, tabs, or dates can refresh the form, set and verify those controls **before** entering long or complex text. Re-inspect afterward to ensure prior entries were not erased.
+Some forms pair a visible editor with a hidden input. Editing the hidden input may appear successful in a DOM dump while server-side validation treats the visible editor as empty. Target the visible interactive control that the application reads. If a generic accessibility locator identifies an empty wrapper, inspect the labeled underlying editor and target that instead.
+
+If a dropdown, checkbox, tab, date control, or other selection can refresh the form, perform and verify that action **before** filling long or complex text. Re-inspect afterwards and verify that earlier entries remain present.
 
 ## 6. Verify after every meaningful edit
 
-After each field is filled or setting is changed, read its value back from the page. Compare the visible or accessible value with the intended value. For sensitive content, compare lengths, required state, or a minimal redacted summary instead of exposing full values.
+After each field is filled or setting is changed, read it back from the page. Compare the actual visible or accessible value with the intended value. For sensitive content, compare lengths, required state, or a minimal redacted summary rather than exposing the full content unnecessarily.
 
-Check for these mismatches:
+Check for these common mismatches:
 
-- The automation layer reports success but the field is empty in page state.
+- Automation reports success but the field is empty in page state.
 - Newlines, repeated spaces, punctuation, or special characters were removed.
 - Text was truncated because the control is single-line or has a length limit.
 - A custom editor displayed text but did not retain it internally.
-- A later interaction erased an earlier field during a re-render.
+- An action on a later field erased an earlier value after a re-render.
 - A hidden synchronization field was changed instead of the visible editor.
-- A selection changed a dependent date, recipient, validation rule, or other field.
+- A selection changed a dependent field, date, recipient, or validation requirement.
 
-If verification fails, do not continue toward submission. Diagnose the control type, retry once using a more appropriate interaction method, and verify again. If the page still rejects or alters the value, report the limitation and ask how to proceed rather than silently submitting incorrect content.
+If verification fails, do not continue toward submission. Diagnose the control type, retry once with a more suitable interaction, and verify again. If the page continues to reject or alter the value, report the limitation and ask how to proceed rather than silently submitting incorrect content.
 
 ## 7. Run a pre-submit readiness gate
 
 Before any final submission or high-impact change, inspect the full relevant page state again. Confirm all of the following:
 
-- The correct account, organization, and environment are active.
-- The target item is the intended one.
+- The correct account, organization, environment, and target are active.
 - Every required field is present and non-empty.
 - Each entered value matches the intended content closely enough for the task.
-- Recipients, options, dates, attachments, and dependent fields are correct.
-- No validation errors, unexpected warnings, or unsaved-change indicators remain.
+- Dropdowns, checkboxes, dates, recipients, attachments, and dependent fields are correct.
+- No validation errors, warnings, or unsaved-change indicators remain.
 - The final button has the intended effect and is not a similarly named destructive alternative.
 
 If a required field is blank, a value cannot be verified, or the target is uncertain, **refuse to submit**. A partially filled form is recoverable; an incorrect external action may not be.
 
-Capture a pre-action record when useful: a screenshot, concise state summary, or structured field dump. Store and share it only within the appropriate access boundary. Avoid pasting sensitive values into a large inline report when a short summary and protected record are sufficient.
+Capture a pre-action record when useful: a screenshot, concise state summary, or structured field dump. Store and share it only through an appropriate access boundary. Avoid exposing sensitive values in a large inline table when a short summary and securely available record are sufficient.
 
 ### Readiness checklist
 
-- [ ] Account, environment, and target were verified.
+- [ ] The account, environment, and target were verified.
 - [ ] Relevant controls were inspected before editing.
 - [ ] Every meaningful change was read back.
 - [ ] Required fields are non-empty and validation is clear.
@@ -3421,44 +3232,42 @@ Capture a pre-action record when useful: a screenshot, concise state summary, or
 
 ## 8. Treat one-way actions as a distinct phase
 
-Obtain explicit confirmation immediately before activating a final control for actions such as:
+The following generally require explicit confirmation immediately before the final control is activated:
 
 - Sending messages, invitations, or notifications.
 - Publishing content.
 - Submitting an official or externally reviewed form.
 - Making a payment or purchase.
 - Deleting records or files.
-- Changing subscription, billing, access, ownership, or security settings.
+- Changing subscriptions, billing, access, ownership, or security settings.
 - Actions labeled permanent, final, irreversible, or impossible to edit later.
 
-The confirmation request should concisely state the target, important values, recipients or audience, cost if any, irreversible effects, and unresolved questions. Then wait for confirmation before acting.
+Present a concise confirmation request containing the target, important values, recipients or audience, cost if any, irreversible effects, and open questions. Then wait for confirmation before activating the final control.
 
 For low-risk reversible changes explicitly requested by the user, such as adjusting a preference or updating a draft, proceed after normal verification unless the page presents an unexpected warning or broader impact.
 
-## 9. Confirm completion and handle failures safely
+## 9. Confirm completion after acting
 
-A button click is not proof of completion. Look for durable evidence: a success message, confirmation reference, newly created record, persisted saved setting, sent or published item, or changed status that remains after a safe reload.
+A button click is not proof of success. After the final action, look for reliable evidence such as a success message, confirmation reference, newly created record, persisted setting, sent or published item, or changed status that remains after a safe reload.
 
-If the site reports an error, preserve the relevant error text and inspect the resulting state before retrying. A visible error can be cosmetic, while blind retries can create duplicate requests, payments, messages, or publications.
+If the site reports an error, preserve the relevant error text and inspect the resulting state before retrying. A visible error can be cosmetic, while blind retries can create duplicate requests, payments, messages, or records.
+
+If completion cannot be verified, report what was attempted, the evidence available, and what remains uncertain. Do not represent an attempted action as completed.
+
+## 10. General failure patterns and recovery rules
 
 | Symptom | Likely explanation | Safe response |
 |---|---|---|
-| Automation reports success but a field is blank | The application ignored a direct value change | Use focus-and-keyboard interaction, blur, then read back. |
-| Earlier entries disappear after a later edit | A re-render reset uncommitted state | Commit and verify each field; perform re-rendering controls first. |
-| Text loses line breaks or characters | Wrong control type or formatting rule | Find a multiline/editor control or use an explicitly acceptable simplified format. |
-| A locator finds an empty wrapper | The accessible node is not the editable control | Inspect the labeled underlying editor and target it directly. |
-| A field looks filled but validation says empty | A hidden synchronization element was edited | Use the visible interactive control the application reads. |
-| Automation is unstable on a complex page | The automation layer is unsuitable | Switch to a more robust authorized method; do not blindly rescue a broken session. |
-| Headless and visible browsers behave differently | The site varies by browser context | Prefer an authorized direct interface; use a verified visible session only for an explicit legitimate task. |
-| A popup changes dates or fields unexpectedly | The widget has stateful close, clear, or parsing behavior | Close through a neutral page action and re-verify affected fields. |
-| An error may be cosmetic | The action may already have completed | Inspect resulting state before retrying. |
-| Account context is uncertain | Wrong profile or environment may be active | Stop, verify a reliable account indicator, and ask if uncertainty remains. |
-
-If completion cannot be verified, report what was attempted, what evidence exists, and what remains uncertain. Do not represent an attempted action as completed.
-
-## 10. Improve the workflow without retaining sensitive material
-
-After a genuine failure or useful discovery, record a concise, general lesson in the relevant operating documentation: symptom, likely cause, and safe fix. Do not retain private page content, credentials, personal data, organization-specific identifiers, or unnecessary screenshots as part of that lesson. Consolidate repeated lessons into general principles instead of building an unstructured incident list.
+| Automation reports success but the field is blank | The application ignored a direct value change | Use focus-and-keyboard interaction, blur, then read back. |
+| Earlier fields disappear after editing a later one | A component re-render reset uncommitted state | Commit and verify each field; perform re-rendering controls first. |
+| Text loses line breaks or characters | The wrong control type or formatting rule was used | Find a multiline or editor control, or use an explicitly acceptable simplified format. |
+| A locator finds an empty wrapper | The accessible element is not the editable node | Inspect the underlying labeled control and target the true editor. |
+| A field looks correct but validation says it is empty | A hidden synchronization field was edited | Use the visible interactive control that the application actually reads. |
+| Automation becomes unstable on a complex page | The selected automation layer is unsuitable | Switch to a more robust browser method or supported direct interface; do not blindly rescue a broken session. |
+| Headless and visible browsers differ | The site varies behavior by browser context | Prefer an authorized direct interface; if needed for an explicit task, use a verified visible session without evading protections. |
+| A popup changes dates or fields unexpectedly | The widget has stateful close, clear, or parsing behavior | Close it through a neutral page action and re-verify affected fields. |
+| A visible error may be cosmetic | The task may already have completed | Inspect resulting state before retrying. |
+| Account context is uncertain | The wrong profile or environment may be active | Stop, verify a reliable account indicator, and ask if uncertainty remains. |
 
 ## Final audit checklist
 
