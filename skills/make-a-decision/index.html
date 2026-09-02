@@ -8,10 +8,11 @@
 <li><strong>The user owns their position.</strong> Never state, record, or imply that the user believes, prefers, or decided something they did not actually say.</li>
 <li><strong>Separate advice from attribution.</strong> The assistant may recommend an option in conversation, clearly labeled as assistant analysis. Put that analysis in a decision record only if the user asks for it.</li>
 <li><strong>Do not confuse a task with a decision.</strong> If there is no meaningful alternative, this is execution. Start or plan the task instead of opening a decision process.</li>
-<li><strong>Record only with permission.</strong> A request such as “Should we do X?” requests analysis, not creation of a record. Create or update a decision record only when the user asks to log, track, open, or commit it, or has explicitly agreed to that practice.</li>
+<li><strong>Record only with permission.</strong> “Should we do X?” requests analysis, not creation of a record. Create or update a decision record only when the user asks to log, track, open, or commit it, or has explicitly agreed to that practice.</li>
 <li><strong>Protect privacy and access boundaries.</strong> Before accessing shared communications, personnel records, customer data, or a shared decision register, ensure there is a legitimate purpose and clear authorization. Use only the minimum relevant information. Omit unrelated sensitive details.</li>
+<li><strong>Do not deliberate indefinitely.</strong> Once the decision has received the rigor appropriate to its scope, state the call and move forward.</li>
 </ol>
-<p>If an organization uses a shared decision register, confirm that its audience is appropriate before writing to it. For sensitive topics such as health, relationships, compensation, or confidential personnel matters, offer a private record or keep the discussion in chat.</p>
+<p>If a shared register has an audience beyond the user, confirm that the audience is appropriate before writing. For sensitive topics such as health, relationships, compensation, or confidential personnel matters, offer a private record in the user’s chosen private workspace, or keep the discussion in chat.</p>
 <h3>1. Choose the mode</h3>
 <p>Determine whether this is a new or existing decision.</p>
 <ul>
@@ -20,8 +21,8 @@
 <li><strong>Commit:</strong> An open decision exists and the user is ready to make the call.</li>
 <li><strong>Review:</strong> A resolved decision has reached its review date and has not yet received an outcome assessment.</li>
 </ul>
-<p>If the user explicitly names the mode, follow that instruction. Otherwise, if authorized, search the available decision register for overlapping decisions before creating a duplicate.</p>
-<p>For a resume, fetch the existing record and append new information rather than overwriting history. For a review, use the original prediction and reasoning as the baseline rather than reconstructing them from memory.</p>
+<p>If the user explicitly names the mode, follow that instruction. Otherwise, if authorized, search the available decision register for overlapping decisions before creating a duplicate. Search titles and the minimum relevant context, not unrelated private material.</p>
+<p>For a resume, retrieve the existing record and append new information rather than overwriting history. For a review, use the original prediction and reasoning as the baseline rather than reconstructing them from memory.</p>
 <h3>2. Frame the decision</h3>
 <p>Write the question in a decidable form. Establish:</p>
 <ul>
@@ -33,15 +34,15 @@
 <li>What happens if no action is taken?</li>
 </ul>
 <p>If the question is broad and no credible options exist yet, generate options before evaluating them. Do not pressure-test a vague problem statement.</p>
-<p>If the request has only one viable path, say so directly: “This appears to be a task rather than a decision. The next step is to plan or execute it.”</p>
+<p>If there is only one viable path, say so directly: “This appears to be a task rather than a decision. The next step is to plan or execute it.”</p>
 <h3>3. Classify scope</h3>
 <p>Ask one clarifying question at a time when needed. Put the choice in one bucket.</p>
 <div class="table-wrap" tabindex="0" aria-label="Scrollable table"><table><thead><tr><th>Bucket</th><th>Meaning</th><th>Treatment</th></tr></thead><tbody><tr><td>Trivial</td><td>Low stakes and reversible within hours</td><td>Decide now; do not log by default</td></tr><tr><td>Reversible</td><td>Moderate stakes; can be changed within days or weeks</td><td>Compare a few options; use a light record if useful</td></tr><tr><td>Hard to reverse</td><td>Meaningful cost, disruption, or loss if undone</td><td>Full analysis, challenge the leading option, consult relevant stakeholders</td></tr><tr><td>Direction-setting</td><td>Shapes strategy, culture, finances, or operating model for an extended period</td><td>Full analysis, explicit dissent, and named prerequisite conversations</td></tr></tbody></table></div>
-<p>Use this test if classification is unclear: <strong>What would it cost to unwind this?</strong> Consider money, time, trust, operational disruption, opportunity cost, and reputational effects. If the cost cannot be stated quickly or is uncertain, the decision is probably larger than it first appears.</p>
+<p>Use this test if classification is unclear: <strong>What would it cost to unwind this?</strong> Consider money, time, trust, operational disruption, opportunity cost, legal exposure, and reputational effects. If the cost cannot be stated quickly or is uncertain, the decision is probably larger than it first appears.</p>
 <div class="table-wrap" tabindex="0" aria-label="Scrollable table"><table><thead><tr><th>Bucket</th><th>Typical stakes</th><th>Typical reversibility</th></tr></thead><tbody><tr><td>Trivial</td><td>Low</td><td>Easy</td></tr><tr><td>Reversible</td><td>Low or medium</td><td>Reversible</td></tr><tr><td>Hard to reverse</td><td>High</td><td>Hard</td></tr><tr><td>Direction-setting</td><td>Very high</td><td>Difficult or effectively one-way</td></tr></tbody></table></div>
 <h3>4. Apply the right rigor</h3>
 <h4>Trivial</h4>
-<p>Pick a reasonable default, give a one-sentence rationale, and move on. If the user is stalling, name the cost of delay: continued attention may cost more than an imperfect choice.</p>
+<p>Pick a reasonable default, give a one-sentence rationale, and move on. Do not create a record by default. If the user is stalling, name the cost of delay: continued attention may cost more than an imperfect choice.</p>
 <h4>Reversible</h4>
 <p>In a short working session:</p>
 <ol>
@@ -50,6 +51,8 @@
 <li>Recommend an option and name the decisive reason.</li>
 <li>If uncertainty is material, choose the smallest reversible test that could change the call.</li>
 </ol>
+<p>A useful compact comparison is:</p>
+<div class="table-wrap" tabindex="0" aria-label="Scrollable table"><table><thead><tr><th>Option</th><th>Main benefit</th><th>Main drawback</th><th>Effort or cost</th></tr></thead><tbody><tr><td>[Option A]</td><td>[Benefit]</td><td>[Drawback]</td><td>[Estimate]</td></tr></tbody></table></div>
 <h4>Hard to reverse: challenge gate</h4>
 <p>A hard-to-reverse decision should be pressure-tested before commitment. A valid pressure test examines the leading option’s assumptions, disconfirming evidence, likely failure modes, strongest alternative, and major stakeholder objections.</p>
 <p>If no relevant pressure test has occurred in the current work context, stop the commitment flow and say:</p>
@@ -102,8 +105,9 @@
 <p>For meaningful decisions, make the prediction testable:</p>
 <blockquote>By [date or trigger], [observable outcome] will happen or not happen.  </blockquote>
 <blockquote>Confidence: [percentage].</blockquote>
-<p>Use the user’s chosen decision register, document system, or private file. A useful record contains status, domain, stakes, reversibility, decision date, review date, confidence, and outcome.</p>
-<p>Suggested review defaults are one month for reversible decisions, three months for hard-to-reverse decisions, and six months for direction-setting decisions. Use a calendar, task system, or other reminder mechanism for high-stakes reviews.</p>
+<p>Use the user’s chosen decision register, document system, or private file. A useful record contains status, domain, stakes, reversibility, decision date, review date, confidence, and outcome. For non-binary questions, mark a decision as resolved when a chosen approach has been adopted, even if the answer is not yes or no.</p>
+<p>Suggested review defaults are one month for reversible decisions, three months for hard-to-reverse decisions, and six months for direction-setting decisions. Adjust when the user identifies a more meaningful trigger. Use a calendar, task system, or other reminder mechanism for high-stakes reviews when the user authorizes it.</p>
+<h4>Decision record template</h4>
 <pre><code>## Context
 Why this decision exists and why it matters now.
 
@@ -134,9 +138,12 @@ Confidence: [X%]
 ## Worries
 The most credible downside or failure mode.
 
+---
+
 ## Retrospective
 To be completed at review.</code></pre>
 <p>For a new open decision, record context, current options, and new inputs. Leave commitment sections blank until the user commits. When resuming, append a new dated thinking-log entry rather than rewriting history.</p>
+<p>Only record the user’s view in first-person sections when they supplied that view. If the user wants assistant reasoning stored, place it in a separately labeled section such as <strong>Assistant analysis (not the user’s position)</strong>.</p>
 <h3>7. Review the outcome</h3>
 <p>At the review point, assess:</p>
 <ol>
@@ -145,7 +152,7 @@ To be completed at review.</code></pre>
 <li><strong>Was the process sound?</strong> Judge the information, assumptions, alternatives, and reasoning available at the time.</li>
 <li><strong>What is the reusable lesson?</strong> State a principle for future decisions.</li>
 </ol>
-<p>Mark the outcome as correct, incorrect, mixed, too early, or not applicable. Do not collapse a bad outcome into a bad decision process, or a good outcome into a sound process.</p>
+<p>Mark the outcome as correct, incorrect, mixed, too early, or not applicable. Do not collapse a bad outcome into a bad decision process, or a good outcome into a sound process. A well-reasoned choice can have an unfavorable result, and a poorly reasoned choice can get lucky.</p>
 <h3>Completion message</h3>
 <p>When a decision is made, summarize it clearly:</p>
 <pre><code>Decision: [one-line call]

@@ -3,14 +3,14 @@
   "skills": [
     {
       "title": "Brainstorm options",
-      "description": "Generate distinct options for a decision or problem, assess their tradeoffs honestly, and recommend a short ranked set without forcing a final choice.",
+      "description": "Generate genuinely distinct options for a decision or problem, assess their tradeoffs candidly, and recommend a short ranked set without forcing a final choice.",
       "category": "Think and decide",
       "page": "https://dewierwan.com/skills/brainstorm/",
       "markdown": "https://dewierwan.com/skills/raw/brainstorm.md"
     },
     {
       "title": "Pressure-test an idea",
-      "description": "Find the weak points in a leading strategic idea before committing to it. Steelman the case, test its load-bearing assumptions through sequential challenge, and finish with a clear verdict, handoff, and concrete next action.",
+      "description": "Find weak points in a leading strategic idea before commitment. Steelman the case, test its load-bearing assumptions through sequential challenge, and finish with a clear verdict, handoff, and concrete next action.",
       "category": "Think and decide",
       "page": "https://dewierwan.com/skills/pressure-test/",
       "markdown": "https://dewierwan.com/skills/raw/pressure-test.md"
@@ -24,14 +24,14 @@
     },
     {
       "title": "Solve a problem",
-      "description": "Take a non-trivial product, technical, process, or automation problem from diagnosis through options, implementation, verification, and handoff. The workflow supports analysis-only work when requested.",
+      "description": "Take a non-trivial product, technical, process, or automation problem from diagnosis through options, recommendation, implementation, verification, and handoff. The workflow supports analysis-only work when requested.",
       "category": "Think and decide",
       "page": "https://dewierwan.com/skills/solve-a-problem/",
       "markdown": "https://dewierwan.com/skills/raw/solve-a-problem.md"
     },
     {
       "title": "Shape and draft a document",
-      "description": "Shape consequential documents by reviewing evidence, resolving material choices, and checking readiness. Then draft and audit the smallest document that can achieve the goal.",
+      "description": "Shape consequential documents by reviewing evidence, resolving material choices with authorized decision-makers, and checking readiness before drafting. Then write and audit the smallest clear document that can achieve the intended outcome.",
       "category": "Research and write",
       "page": "https://dewierwan.com/skills/shape-and-draft/",
       "markdown": "https://dewierwan.com/skills/raw/shape-and-draft.md"
@@ -45,7 +45,7 @@
     },
     {
       "title": "Learn with a tutor",
-      "description": "Learn a paper, article, or topic through a short Socratic dialogue that uses retrieval, explanation, and application instead of passive summary.",
+      "description": "Learn a paper, article, post, or topic through a short Socratic dialogue that uses retrieval, explanation, and application instead of passive summary. The tutor diagnoses understanding from the learner’s reasoning and adjusts challenge, H.",
       "category": "Research and write",
       "page": "https://dewierwan.com/skills/learning-tutor/",
       "markdown": "https://dewierwan.com/skills/raw/learning-tutor.md"
@@ -66,7 +66,7 @@
     },
     {
       "title": "Write a case study post",
-      "description": "Create an evidence-based case study post about a person’s career, learning, or professional change. The workflow produces a review-ready draft, alternate hooks, quote-card options, and an approval log.",
+      "description": "Create an evidence-based professional case study post that turns verified source material into a concise, review-ready story with alternate hooks, quote-card options, approval flags, and a clear call to action.",
       "category": "Research and write",
       "page": "https://dewierwan.com/skills/case-study-post/",
       "markdown": "https://dewierwan.com/skills/raw/case-study-post.md"
@@ -129,7 +129,7 @@
     },
     {
       "title": "Turn a message into a task",
-      "description": "Read the full conversation, work out the real action, do useful preparation, and create a clear task only when needed.",
+      "description": "Read a message or conversation, identify the real commitment, gather only the context needed, pre-complete the work where authorized, and create a trackable task only when it adds value.",
       "category": "Meetings and tasks",
       "page": "https://dewierwan.com/skills/turn-a-message-into-a-task/",
       "markdown": "https://dewierwan.com/skills/raw/turn-a-message-into-a-task.md"
@@ -143,28 +143,28 @@
     },
     {
       "title": "Run a reference call",
-      "description": "Prepare, conduct, and document a structured hiring reference call that gathers role-relevant, example-based evidence while protecting privacy and supporting a fair hiring decision.",
+      "description": "Prepare and run a concise reference conversation that gathers specific evidence instead of vague praise.",
       "category": "Hiring and people",
       "page": "https://dewierwan.com/skills/run-a-reference-call/",
       "markdown": "https://dewierwan.com/skills/raw/run-a-reference-call.md"
     },
     {
       "title": "Use a browser safely",
-      "description": "Complete browser-based tasks safely by choosing the least invasive authorized method, protecting account context and private data, verifying rendered state after each change, and separating preparation from consequential commitment.",
+      "description": "Complete browser-based tasks safely by choosing the least invasive authorized method, protecting account context and privacy, verifying rendered page state, and separating preparation from consequential commitment.",
       "category": "Build and automate",
       "page": "https://dewierwan.com/skills/use-a-browser-safely/",
       "markdown": "https://dewierwan.com/skills/raw/use-a-browser-safely.md"
     },
     {
       "title": "Create an AI skill",
-      "description": "A complete workflow for designing, testing, improving, and packaging a reusable AI skill from a new idea, an existing draft, or a repeated workflow captured from a conversation.",
+      "description": "A complete workflow for designing, testing, improving, evaluating, and packaging a reusable AI skill from a new idea, an existing draft, or a workflow demonstrated in conversation.",
       "category": "Build and automate",
       "page": "https://dewierwan.com/skills/create-an-ai-skill/",
       "markdown": "https://dewierwan.com/skills/raw/create-an-ai-skill.md"
     },
     {
       "title": "Test every screen size",
-      "description": "Verify UI and CSS changes across representative narrow, wide, short, and tall viewports. Combine screenshots with programmatic layout checks, then fix and retest every failure.",
+      "description": "Verify every UI and CSS change across representative narrow, wide, short, and tall viewports using real screenshots and programmatic layout checks. Fix every failure and rerun the relevant sweep before reporting the work as complete.",
       "category": "Build and automate",
       "page": "https://dewierwan.com/skills/test-every-screen-size/",
       "markdown": "https://dewierwan.com/skills/raw/test-every-screen-size.md"
