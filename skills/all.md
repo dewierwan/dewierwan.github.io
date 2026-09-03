@@ -5,25 +5,23 @@ Public, reusable workflows. Review and adapt them to the user rather than instal
 
 ---
 name: brainstorm
-description: Generate genuinely distinct options for a decision or problem, assess their tradeoffs candidly, and recommend a short ranked set without forcing a final choice.
+description: Generate distinct options for a decision or problem, assess their tradeoffs honestly, and recommend a short ranked set without forcing a final choice.
 ---
 
 # Brainstorm options
 
-Use this workflow when a user needs possible approaches to a decision, problem, or opportunity but is not ready to commit. The goal is not a long list of ideas: it is to identify genuinely different paths, make their tradeoffs clear, and leave the user with a small number of credible choices.
+Use this workflow when a user needs possible approaches to a decision, problem, or opportunity but is not ready to commit. The goal is not to produce a long idea list. It is to surface genuinely different paths, make their tradeoffs clear, and leave the user with a small number of credible choices.
 
 ## 1. Gather relevant context
 
-Start with the information the user provided. If they reference documents, discussion threads, research, prior decisions, or other sources that are available in the current environment, review the relevant material first.
+Start with the information the user supplied. If they reference documents, discussion threads, prior decisions, research, or other sources that the current environment can access, review them first.
 
-Only access private communications, records, or personal information when there is a legitimate purpose and clear authorization. Use the minimum relevant sources and details, omit unrelated or sensitive personal information, and keep findings within the appropriate access boundary.
-
-If the question is not self-contained, retrieve a small number of high-value sources, such as:
+If the question is not self-contained, look for a small number of high-value sources of context, such as:
 
 - Earlier decisions and their rationale
-- Existing constraints, commitments, budget limits, or deadlines
-- Stakeholder concerns, decision owners, and approval boundaries
-- Evidence about attempts already made and their results
+- Existing constraints, commitments, or deadlines
+- Stakeholder concerns and ownership boundaries
+- Evidence about what has already been tried
 
 Do not search broadly by default. Use targeted retrieval only when it could materially change the options. If important information is unavailable, state the assumption or ask a focused question rather than inventing context.
 
@@ -32,35 +30,35 @@ Do not search broadly by default. Use targeted retrieval only when it could mate
 Write a short framing, usually two to four sentences, that states:
 
 - What decision the user is actually making
-- Important constraints and non-negotiables
+- The important constraints and non-negotiables
 - What a good outcome looks like and how options should be judged
 
-The user’s wording may describe a symptom or requested solution rather than the real decision. For example, “Should we add a feature?” may really mean, “How can we reduce a recurring user problem within a limited budget?”
+The user’s wording may describe a symptom or requested solution rather than the real decision. For example, “Should we add a feature?” may really mean “How should we reduce a recurring user problem within a limited budget?”
 
-Ask the user to confirm or correct the framing before generating a substantial option set. Skip this pause only when the framing is obvious, the decision is low-stakes, or the user explicitly asks for an immediate first pass. Incorrect framing produces polished but irrelevant options.
+Ask the user to confirm or correct the framing before generating a substantial option set. Skip the pause only when the framing is obvious, low-stakes, or the user explicitly asks for an immediate first pass. Incorrect framing produces polished but irrelevant options.
 
 ## 3. Generate a distinct set of options
 
 Generate five to seven options unless the decision naturally has fewer meaningful paths. Each option must be a fundamentally different approach, not a different intensity level of the same approach. Merge near-duplicates.
 
-Include, when relevant:
+Include, where relevant:
 
 - The obvious or conventional option
 - A lower-effort or incremental option
 - A more ambitious option
-- An option that changes process, incentives, scope, timing, or the problem framing
-- At least one surprising option, such as delaying, partnering, reducing scope, or doing nothing
+- An option that changes the process, incentives, scope, or problem framing
+- At least one surprising option, such as delaying, partnering, removing scope, or doing nothing
 
-Do not be contrarian merely to appear creative. “Do nothing” is useful only when observation, timing, or avoided distraction has real value.
+Do not be contrarian merely to appear creative. “Do nothing” is useful only when it is a real strategic choice, such as when observation, timing, or avoided distraction has value.
 
-Give every option a short, memorable label that communicates its core approach. For each option, provide:
+Give every option a short, memorable label that communicates its core approach. For each, provide:
 
-- **What:** One or two sentences explaining the approach.
-- **Strengths:** One or two concrete advantages.
-- **Weaknesses:** One or two concrete disadvantages or failure risks.
-- **Effort:** Low, Medium, or High.
+- **What:** One or two sentences explaining the approach
+- **Strengths:** One or two concrete advantages
+- **Weaknesses:** One or two concrete disadvantages or failure risks
+- **Effort:** Low, Medium, or High
 
-Use specific tradeoffs. Do not soften serious drawbacks, and do not make a preferred option appear stronger by describing alternatives unfairly.
+Use specific tradeoffs. Do not soften serious drawbacks, and do not make a preferred option look better by describing alternatives unfairly.
 
 ## 4. Evaluate and recommend
 
@@ -70,22 +68,14 @@ Then:
 
 1. Identify options with dealbreaker weaknesses under the stated constraints. Keep them visible if they are instructive, but say clearly why they are not recommended.
 2. Rank the strongest two or three options.
-3. For each recommendation, explain in one sentence why it fits this situation, its constraints, and its goals—not why it is generally attractive.
+3. For each recommendation, explain in one sentence why it fits this user’s situation, constraints, and goals—not why it is generally attractive.
 4. Name the key assumption most likely to change the ranking, if one exists.
 
-Do not force a single winner unless the user explicitly requests one. Preserve meaningful choice.
+Do not force a single winner unless the user explicitly requests one. The output should preserve meaningful choice.
 
 ## 5. Stop for a decision
 
-After presenting the recommendations, wait for the user. They may:
-
-- Pick an option
-- Request more detail on a specific option
-- Correct the framing or constraints
-- Ask for additional options
-- Combine options into a hybrid
-
-If the user proposes a hybrid, test whether its components are compatible and whether combining them resolves a real tradeoff rather than simply adding complexity.
+After presenting recommendations, wait for the user. They may choose an option, request detail, reject the framing, ask for new options, or combine approaches. If they propose a hybrid, test whether the components are compatible and whether combining them solves a real tradeoff rather than adding complexity.
 
 Do not begin implementation merely because an option appears promising.
 
@@ -93,56 +83,61 @@ Do not begin implementation merely because an option appears promising.
 
 Once the user selects a path, choose the next activity based on consequence and reversibility:
 
-- **High-consequence or difficult-to-reverse choices:** Run a structured challenge, pre-mortem, or adversarial review before commitment. Use this for major strategic bets, public commitments, long-term contracts, major staffing choices, or decisions with broad organizational effects.
-- **Reversible choices:** Create a right-sized decision record that defines the choice, owner, rationale, assumptions, and review point.
-- **Build-oriented choices:** After recording the decision, move into planning and execution: requirements, milestones, implementation tasks, and validation.
+- **High-consequence or difficult-to-reverse choices:** Run a structured challenge or pre-mortem before commitment. Use this for major strategic bets, public commitments, long-term contracts, major staffing choices, or decisions with broad organizational effects.
+- **Reversible choices:** Move to a right-sized decision record: define the choice, owner, rationale, assumptions, and review point.
+- **Build-oriented choices:** After the decision is recorded, move into planning and execution: requirements, milestones, implementation tasks, and validation.
 
-A useful sequence is: brainstorm options, pressure-test consequential choices, make the decision, then plan or build. Do not skip the pressure test when the cost of being wrong is high.
+A useful sequence is: brainstorm options, pressure-test consequential choices, make the decision, then plan or build. Avoid skipping the pressure test when the cost of being wrong is high.
 
 ## Quality checks
 
-Before sending the response, verify that:
-
-- The options are truly distinct rather than variations of one idea.
-- The framing reflects the actual decision.
-- Constraints, assumptions, and missing information are explicit.
-- Weaknesses are candid and comparable across options.
-- Effort labels are plausible.
-- Recommendations follow the user’s stated criteria rather than default assistant preferences.
-- No implementation work has been started before the user chooses a direction.
+Before sending the response, verify that the options are truly distinct, the framing reflects the actual decision, weaknesses are candid, effort labels are plausible, and recommendations follow the user’s criteria rather than the assistant’s default preferences.
 
 
 ---
 name: pressure-test
-description: Find weak points in a leading strategic idea before commitment. Steelman the case, test its load-bearing assumptions through sequential challenge, and finish with a clear verdict, handoff, and concrete next action.
+description: Find the weak points in a leading strategic idea before committing to it. Steelman the case, test its load-bearing assumptions through sequential challenge, and finish with a clear verdict, handoff, and concrete next action.
 ---
 
 # Pressure-test an idea
 
-Use this workflow when a decision-maker is leaning toward a strategic direction and needs an honest challenge before committing. It tests a leading option; it does not generate a broad option set or create an implementation plan.
+Use this workflow when a decision-maker is leaning toward a strategic direction and needs an honest challenge before committing. It tests a leading option; it does not generate a broad option set or design implementation.
 
-## Where this fits
+## Position in the decision process
 
 Use this sequence:
 
 1. Generate or identify meaningful alternatives.
 2. Pressure-test the leading option.
-3. Make and document the decision with rigor proportional to its consequences.
+3. Make and document the decision at a level of rigor that matches its consequences.
 4. Plan or build the chosen approach, if applicable.
 
-**Readiness gate:** If meaningful alternatives have not been considered, pause and generate them first. Testing one option too early can become an exercise in defending it.
+**Readiness gate:** If meaningful alternatives have not been considered, pause and generate them first. Testing a single idea too early can become an exercise in defending it.
 
-If the same idea was pressure-tested recently and no material evidence, assumptions, or conditions have changed, do not rerun the exercise. Use the existing findings to make the decision.
+If the same idea was pressure-tested recently and no material evidence, assumptions, or conditions have changed, do not repeat the exercise. Use the existing findings to make the decision instead.
 
 ## Rules of engagement
 
 - Be direct. Do not treat confidence as evidence.
 - Attack the strongest reasonable version of the idea, not a caricature.
-- Ask one forcing question at a time. Wait for the answer, assess it, and challenge vague, unsupported, or evasive responses before moving on.
-- Use available authorized evidence, such as research, metrics, prior experiments, customer feedback, documented decisions, or stakeholder input. Distinguish facts from inferences and forecasts.
-- If reviewing private communications or records, have a legitimate purpose and clear authorization. Use only the minimum relevant information, omit unrelated or sensitive personal details, and keep findings within the proper access boundary.
-- Refer to relevant dissenters by role, such as a finance owner, delivery lead, customer representative, domain expert, or skeptical peer. Do not invent their views.
-- Skip a section only when it is genuinely irrelevant, and say why.
+- Ask one forcing question at a time. Wait for an answer, assess it, and challenge vague, unsupported, or evasive answers before moving on.
+- Distinguish facts, inferences, forecasts, and unknowns.
+- Refer to dissenters by relevant role, such as a finance owner, delivery lead, customer representative, domain expert, or skeptical peer. Do not invent their views.
+- Skip a section only when it is genuinely irrelevant, and state why.
+
+### Evidence, privacy, and access boundaries
+
+Use research, metrics, prior experiments, customer feedback, documented decisions, and stakeholder input only when they are relevant to the decision.
+
+When the work involves private communications, personnel records, customer records, or other information about identifiable people:
+
+- Confirm a legitimate decision-related purpose and clear authorization to access and use the material.
+- Review only the minimum sources, date range, and details needed to test the claim.
+- Respect consent, confidentiality commitments, and reasonable privacy expectations. Do not repurpose information beyond the authorized purpose.
+- Omit unrelated personal details and sensitive information, including health, family, financial, identity, legal, or similarly sensitive matters, unless it is necessary, authorized, and appropriate to the decision.
+- Summarize evidence where possible rather than reproducing private messages or records.
+- Keep findings within the access boundary of people authorized to receive them. Do not include identifiable details in a broader decision record unless necessary and permitted.
+- If authorization, purpose, consent expectations, or the proper audience is unclear, stop using the source and request clarification or use non-personal evidence instead.
 
 ## 1. Steelman the claim
 
@@ -150,19 +145,21 @@ Restate the idea in its strongest form. Remove unnecessary hedging while preserv
 
 > We should [take action] because [mechanism] will produce [outcome] for [group] within [timeframe], provided that [key condition] holds.
 
-If the original framing is already the strongest version, say so and continue. If the stronger restatement changes the intended claim, get confirmation before testing it.
+If the original framing is already the strongest version, say so and continue. If the stronger restatement changes the intended claim, obtain confirmation before testing it.
 
 ## 2. Identify load-bearing assumptions
 
-List three to five assumptions that must hold for the claim to work. Rank them by damage if wrong, with the most damaging first. Make assumptions observable where possible. Replace “customers will value this” with a defined behavior, segment, threshold, or willingness-to-pay condition.
+List three to five assumptions that must hold for the claim to work. Rank them by damage if wrong, beginning with the assumption most likely to undermine the decision.
 
-| Rank | Assumption | Type: fact, estimate, or belief | Current support | Damage if wrong | Smallest useful test |
-|---|---|---|---|---|---|
-| 1 | [State the assumption] | [Choose one] | [Summarize evidence] | [Low, medium, or high] | [How to test or disprove it] |
+| Assumption | Type: fact, estimate, or belief | Current support | Damage if wrong | How to test or disprove it |
+|---|---|---|---|---|
+| [State the assumption] | [Choose one] | [Summarize evidence] | [Low, medium, or high] | [Name the smallest useful test] |
+
+Make assumptions observable where possible. Replace “customers will value this” with a defined behavior, segment, threshold, or willingness-to-pay condition.
 
 ## 3. Run forcing questions sequentially
 
-Ask five to eight questions total, one at a time. Select questions based on the highest-risk assumptions and adapt later questions to the answers received. Do not present the full list as a questionnaire, because that permits selective answering.
+Ask five to eight questions total, one at a time. Select questions based on the highest-risk assumptions and adapt later questions to the answers received. Do not show the full list as a questionnaire, because that permits selective answering.
 
 Choose from these categories:
 
@@ -175,7 +172,7 @@ Choose from these categories:
 - **Reversibility:** If this is wrong, what does unwinding require in time, money, commitments, trust, or organizational disruption?
 - **Null option:** What happens if no action is taken for the next three months?
 
-Push for specificity. “I think it will work” is not evidence. Ask what observed behavior, data, comparison, or commitment supports the belief. If an answer is thin, remain on that question until it is clarified or explicitly recorded as unsupported.
+Push for specificity. “I think it will work” is not evidence. Ask what observed behavior, data, comparison, or commitment supports the belief.
 
 ## 4. Run a pre-mortem
 
@@ -183,19 +180,15 @@ Assume the initiative failed after a realistic period, often 6 to 12 months. Ide
 
 | Failure mode | Why it could happen | Earliest warning sign | Monitoring action or owner |
 |---|---|---|---|
-| [Describe the failure] | [Name the mechanism] | [Name an observable early signal] | [Name the check or accountable role] |
+| [Describe the failure] | [Name the mechanism] | [Name an observable signal] | [Name the check or accountable role] |
 
-Warning signs must be observable early enough to change course.
+The warning sign must be observable early enough to change course.
 
 ## 5. Surface credible dissent
 
 Identify two or three relevant roles that could reasonably disagree. State each role's strongest likely objection. If the decision-maker has not sought that perspective, mark it as an evidence gap; do not assume silence means agreement.
 
 Dissent is not an automatic veto. Its purpose is to expose constraints, incentives, dependencies, and risks that supporters may miss.
-
-| Relevant role | Strongest likely objection | Heard directly? | Gap-closing action |
-|---|---|---|---|
-| [Role] | [Objection] | [Yes, no, or unknown] | [Action] |
 
 ## 6. Define what would change the decision
 
@@ -207,11 +200,11 @@ If this cannot be stated, the position is not falsifiable. Mark the pressure-tes
 
 ## 7. Give a verdict and handoff
 
-Choose one verdict and explicitly state the next step:
+Choose one verdict and explicitly state the next workflow step:
 
-- **GREEN: Proceed to decision.** Core assumptions have credible support, relevant dissent has been addressed, reversal costs are understood, and warning signs have an owner or review mechanism. Next: create a decision record and commit. For hard-to-reverse or organization-defining decisions, schedule a review point.
-- **AMBER: Test first.** The idea may be sound, but one or two high-impact assumptions or objections remain under-investigated. Name the gap and the cheapest credible way to close it, such as a small interview set, expert review, prototype, or short data collection period. Next: run that test, then decide with its result recorded. Do not commit while the gap remains open.
-- **RED: Stop, redesign, or reopen options.** A core assumption is weak, downside is unacceptable, or no meaningful falsification criterion can be named. Next: generate alternatives, redesign the idea, or explicitly defer it until a defined trigger occurs. Do not treat RED as approval with caveats.
+- **GREEN: Proceed to decision.** Core assumptions have credible support, relevant dissent has been addressed, reversal costs are understood, and warning signs have an owner or review mechanism. Next: create a decision record and commit. For hard-to-reverse or organization-defining decisions, include a scheduled review point.
+- **AMBER: Test first.** The idea may be sound, but one or two high-impact assumptions or objections remain under-investigated. Name the gap and the cheapest credible way to close it, such as a small interview set, expert review, prototype, or short data-collection period. Next: run that test, then make the decision with its result recorded.
+- **RED: Stop, redesign, or reopen options.** A core assumption is weak, the downside is unacceptable, or no meaningful falsification criterion can be named. Next: generate alternatives, redesign the idea, or explicitly defer it until a defined trigger occurs. Do not treat RED as approval with caveats.
 
 End with exactly one concrete next action: a verb, an owner, and a deadline when useful.
 
@@ -227,8 +220,10 @@ Before closing, verify that the output contains:
 - a pre-mortem with early warning signs;
 - credible dissenting roles and objections;
 - a clear mind-change criterion;
-- a GREEN, AMBER, or RED verdict with a next step; and
+- a GREEN, AMBER, or RED verdict with a next workflow step; and
 - one concrete next action.
+
+If people-related information was used, also verify that the purpose and authorization were clear, the evidence was minimized, sensitive and unrelated details were omitted, consent and privacy expectations were respected, and the output is shared only with the appropriate authorized audience.
 
 Common failures include skipping alternatives, asking every question at once, confusing confidence with evidence, treating unconsulted stakeholders as aligned, repeating a recent test without new facts, and giving a positive verdict without falsifiable criteria or monitoring.
 
@@ -240,60 +235,68 @@ description: Match decision-making rigor to stakes and reversibility, then make,
 
 # Make a decision
 
-Use this workflow to make decisions with the right amount of rigor. The goal is not maximum analysis. It is to make a clear call when ready, preserve the reasoning for meaningful choices, and learn from outcomes.
+Use this workflow to make a clear choice with the amount of rigor it deserves. The aim is not to analyze everything deeply. It is to decide quickly when a choice is small, slow down when reversal is costly, preserve the reasoning for important decisions, and learn from the result.
 
 ## Core rules
 
-1. **Match rigor to stakes and reversibility.** Most choices should take minutes, not days.
+1. **Match rigor to stakes and reversibility.** Most decisions should take minutes, not days.
 2. **The user owns their position.** Never state, record, or imply that the user believes, prefers, or decided something they did not actually say.
-3. **Separate advice from attribution.** The assistant may recommend an option in conversation, clearly labeled as assistant analysis. Put that analysis in a decision record only if the user asks for it.
-4. **Do not confuse a task with a decision.** If there is no meaningful alternative, this is execution. Start or plan the task instead of opening a decision process.
-5. **Record only with permission.** “Should we do X?” requests analysis, not creation of a record. Create or update a decision record only when the user asks to log, track, open, or commit it, or has explicitly agreed to that practice.
-6. **Protect privacy and access boundaries.** Before accessing shared communications, personnel records, customer data, or a shared decision register, ensure there is a legitimate purpose and clear authorization. Use only the minimum relevant information. Omit unrelated sensitive details.
-7. **Do not deliberate indefinitely.** Once the decision has received the rigor appropriate to its scope, state the call and move forward.
+3. **Separate advice from attribution.** Assistant recommendations belong in conversation and must be labeled as assistant analysis. Include them in a record only if the user specifically asks.
+4. **Do not confuse a task with a decision.** If there is no meaningful alternative, this is execution work. Plan or do the task instead of opening a decision process.
+5. **Record only with permission.** “Should we do X?” asks for analysis, not for a record to be created. Create or update a decision record only when the user asks to log, track, open, resume, or commit it, or explicitly agrees to doing so.
+6. **Protect privacy and access boundaries.** Before accessing shared communications, personnel information, customer records, or a shared decision register, confirm a legitimate purpose and clear authorization. Use only the minimum relevant sources and facts.
+7. **Do not deliberate indefinitely.** Once the appropriate readiness checks are met, name the decision, assign the next action, and move forward.
 
-If a shared register has an audience beyond the user, confirm that the audience is appropriate before writing. For sensitive topics such as health, relationships, compensation, or confidential personnel matters, offer a private record in the user’s chosen private workspace, or keep the discussion in chat.
+If a shared decision register has an audience beyond the decision-maker, confirm that the audience is appropriate before writing. For sensitive topics, including health, relationships, compensation, legal matters, or confidential people issues, offer a private record or keep the discussion in chat. Omit unrelated sensitive personal information even when access is authorized.
 
 ## 1. Choose the mode
 
-Determine whether this is a new or existing decision.
+Determine whether this is a new decision or work on an existing decision.
 
 - **New:** No matching record exists, or the user wants a fresh decision.
 - **Resume:** An open decision exists and the user wants to continue thinking.
 - **Commit:** An open decision exists and the user is ready to make the call.
-- **Review:** A resolved decision has reached its review date and has not yet received an outcome assessment.
+- **Review:** A resolved decision has reached its review date and has not yet received a meaningful outcome assessment.
 
-If the user explicitly names the mode, follow that instruction. Otherwise, if authorized, search the available decision register for overlapping decisions before creating a duplicate. Search titles and the minimum relevant context, not unrelated private material.
+When the user explicitly names a mode, follow it. Otherwise, if authorized to access the selected decision register, search for a substantially overlapping decision before creating a duplicate.
 
-For a resume, retrieve the existing record and append new information rather than overwriting history. For a review, use the original prediction and reasoning as the baseline rather than reconstructing them from memory.
+For a resumed decision, retrieve the existing record and append new information instead of overwriting history. For a review, use the original prediction and reasoning as the baseline. Do not recreate them from memory or rewrite them to fit the outcome.
 
 ## 2. Frame the decision
 
-Write the question in a decidable form. Establish:
+Write the decision as a question that can actually be answered. Establish the following before detailed analysis:
 
 - What choice is being made?
 - Who has final decision authority?
-- What are the realistic options, including doing nothing?
-- What is the deadline or decision trigger?
-- What result is desired?
+- What are the realistic options, including doing nothing where relevant?
+- What deadline, event, or trigger requires a decision?
+- What outcome is sought?
 - What happens if no action is taken?
 
-If the question is broad and no credible options exist yet, generate options before evaluating them. Do not pressure-test a vague problem statement.
+If the question is broad and credible options do not yet exist, generate options before evaluating them. Do not pressure-test a vague problem statement.
 
-If there is only one viable path, say so directly: “This appears to be a task rather than a decision. The next step is to plan or execute it.”
+If only one viable path exists, say so directly:
+
+> This appears to be a task rather than a decision. The next step is to plan or execute it.
+
+Ask one clarifying question at a time when the missing information materially changes the classification or choice.
 
 ## 3. Classify scope
 
-Ask one clarifying question at a time when needed. Put the choice in one bucket.
+Classify the decision by stakes and the practical cost of reversing it.
 
 | Bucket | Meaning | Treatment |
 |---|---|---|
-| Trivial | Low stakes and reversible within hours | Decide now; do not log by default |
-| Reversible | Moderate stakes; can be changed within days or weeks | Compare a few options; use a light record if useful |
-| Hard to reverse | Meaningful cost, disruption, or loss if undone | Full analysis, challenge the leading option, consult relevant stakeholders |
-| Direction-setting | Shapes strategy, culture, finances, or operating model for an extended period | Full analysis, explicit dissent, and named prerequisite conversations |
+| Trivial | Low stakes and reversible within hours | Decide now; do not log by default. |
+| Reversible | Moderate stakes; can be changed within days or weeks | Compare a few options; use a light record if useful. |
+| Hard to reverse | Meaningful cost, disruption, trust loss, or opportunity cost if undone | Full analysis, challenge the leading option, and consult relevant stakeholders. |
+| Direction-setting | Shapes strategy, culture, finances, product direction, or operating model for an extended period | Full analysis, explicit dissent, and named prerequisite conversations. |
 
-Use this test if classification is unclear: **What would it cost to unwind this?** Consider money, time, trust, operational disruption, opportunity cost, legal exposure, and reputational effects. If the cost cannot be stated quickly or is uncertain, the decision is probably larger than it first appears.
+Use this test if classification is unclear:
+
+> What would it cost to unwind this decision?
+
+Include money, time, operational disruption, trust, legal or contractual exposure, opportunity cost, and reputational effects. If the unwind cost cannot be named quickly, or the uncertainty itself is material, the choice is probably larger than it first appears.
 
 | Bucket | Typical stakes | Typical reversibility |
 |---|---|---|
@@ -306,50 +309,54 @@ Use this test if classification is unclear: **What would it cost to unwind this?
 
 ### Trivial
 
-Pick a reasonable default, give a one-sentence rationale, and move on. Do not create a record by default. If the user is stalling, name the cost of delay: continued attention may cost more than an imperfect choice.
+Pick a reasonable default, give a one-sentence rationale, and move on. Do not create a formal record unless the user requests one.
+
+If the user is stalling, name the cost of delay plainly: continued attention may be more expensive than an imperfect choice.
 
 ### Reversible
 
-In a short working session:
+Use a short working session:
 
 1. List two or three realistic options.
-2. For each, state one major strength, one major weakness, and a rough effort or cost estimate.
-3. Recommend an option and name the decisive reason.
-4. If uncertainty is material, choose the smallest reversible test that could change the call.
-
-A useful compact comparison is:
-
-| Option | Main benefit | Main drawback | Effort or cost |
-|---|---|---|---|
-| [Option A] | [Benefit] | [Drawback] | [Estimate] |
+2. For each, state one major strength, one major weakness, and a rough effort, time, or cost estimate.
+3. Name the decisive tradeoff.
+4. Give a recommendation, clearly labeled as assistant analysis unless the user adopts it.
+5. If uncertainty is material, choose the smallest reversible test that could change the call.
 
 ### Hard to reverse: challenge gate
 
-A hard-to-reverse decision should be pressure-tested before commitment. A valid pressure test examines the leading option’s assumptions, disconfirming evidence, likely failure modes, strongest alternative, and major stakeholder objections.
+A hard-to-reverse decision should be pressure-tested before commitment. A valid pressure test examines:
 
-If no relevant pressure test has occurred in the current work context, stop the commitment flow and say:
+- The leading option’s key assumptions.
+- Disconfirming evidence or missing evidence.
+- Likely failure modes.
+- The strongest alternative.
+- Important stakeholder objections or constraints.
+- Whether a smaller experiment can reduce uncertainty.
+
+If no relevant pressure test has occurred in the current working context, pause the commitment flow and say:
 
 > This is hard to reverse. Pressure-test the leading option before committing. To proceed without that step, explicitly state why the gate is being skipped.
 
-Do not continue merely because the user is in a hurry. Proceed only after the pressure test is complete or the user explicitly overrides it with a reason.
+Do not continue merely because someone is in a hurry. Proceed only after the pressure test is complete or the accountable decision-maker explicitly overrides it with a reason.
 
-If the pressure test identifies a serious unresolved failure, do not force a decision. Return to option generation, redesign the option, gather a decision-changing fact, or run a bounded test.
+If the pressure test identifies a serious unresolved failure, do not force a decision. Return to option generation, redesign the option, gather a decision-changing fact, consult a relevant role, or run a bounded test.
 
 After the gate is satisfied:
 
 1. Define options and decision criteria.
 2. Run a pre-mortem: “It is later and this failed. What most likely caused it?”
-3. Check stakeholders: who has relevant expertise, bears consequences, or may reveal a constraint?
-4. Give a recommendation, labeled as assistant analysis unless the user adopts it in their own words.
+3. Check stakeholders: who has relevant expertise, bears consequences, controls implementation, or may reveal a constraint?
+4. Give a recommendation, labeled as assistant analysis unless the user states the same position in their own words.
 
 ### Direction-setting
 
-Use the hard-to-reverse process plus two readiness gates:
+Use the hard-to-reverse process plus two readiness checks:
 
 1. Name the specific accountable leader, partner, advisor, or stakeholder conversation required before commitment.
-2. Ask who disagrees and capture their strongest case fairly.
+2. Ask who disagrees and capture the strongest opposing case fairly.
 
-The decision is not ready until the required conversation has happened, unless the user explicitly accepts and records a reason for proceeding without it. If it is being rushed, state which consultation, evidence, or dissent is being skipped and why it matters.
+The decision is not ready until the required conversation has happened, unless the accountable decision-maker explicitly accepts and records a reason for proceeding without it. If the decision is being rushed, state what consultation, evidence, or dissent is being skipped and why that matters.
 
 ## 5. Analyze without manufacturing certainty
 
@@ -361,20 +368,23 @@ For each serious option, capture:
 - Strongest objection.
 - Key assumptions.
 - Ease and cost of reversal.
+- Who is affected and what they need to know.
 
-Choose criteria before comparing options. Separate non-negotiable requirements from preferences. Use scoring only when it clarifies tradeoffs rather than disguising judgment.
+Choose decision criteria before comparing options. Separate non-negotiable requirements from preferences. Use scoring only when it clarifies tradeoffs; do not use a score to disguise judgment or false precision.
 
-Keep these categories distinct:
+Keep these categories distinct in conversation and records:
 
-- **User’s stated view:** Only positions the user actually expressed.
-- **Assistant analysis:** Recommendation and reasoning supplied by the assistant.
-- **Open question:** Uncertainty not yet resolved.
+| Category | What belongs there | Rule |
+|---|---|---|
+| User’s stated view | Positions, preferences, confidence, and reasoning directly expressed by the user | Quote or accurately paraphrase only what was stated. |
+| Assistant analysis | Recommendation, critique, synthesis, and reasoning supplied by the assistant | Label it clearly and do not present it as the user’s view. |
+| Open question | Missing evidence, unresolved assumptions, or pending conversations | Keep it visibly unresolved. |
 
 If the user has not expressed a position, write “No position stated yet” or leave the user-position field blank. Never invent a lean, confidence level, rationale, response to dissent, or final choice for them.
 
 ## 6. Commit and record
 
-Before finalizing, confirm:
+Before finalizing a meaningful decision, confirm:
 
 - What is the decision?
 - Which option was chosen?
@@ -382,18 +392,16 @@ Before finalizing, confirm:
 - What would change the decision?
 - Who owns the next action, and by when?
 - What observable result is predicted?
-- What is the user’s confidence in that prediction?
+- What is the decision-maker’s confidence in that prediction?
 
-For meaningful decisions, make the prediction testable:
+Make the prediction testable:
 
 > By [date or trigger], [observable outcome] will happen or not happen.  
 > Confidence: [percentage].
 
-Use the user’s chosen decision register, document system, or private file. A useful record contains status, domain, stakes, reversibility, decision date, review date, confidence, and outcome. For non-binary questions, mark a decision as resolved when a chosen approach has been adopted, even if the answer is not yes or no.
+Use the user’s chosen decision register, document system, or private file. A useful record includes status, domain, stakes, reversibility, decision date, review date, confidence, and outcome. Suitable review defaults are one month for reversible decisions, three months for hard-to-reverse decisions, and six months for direction-setting decisions. Use a calendar, task system, or equivalent reminder for high-stakes reviews.
 
-Suggested review defaults are one month for reversible decisions, three months for hard-to-reverse decisions, and six months for direction-setting decisions. Adjust when the user identifies a more meaningful trigger. Use a calendar, task system, or other reminder mechanism for high-stakes reviews when the user authorizes it.
-
-### Decision record template
+For a new open decision, record context, current options, and new inputs. Leave commitment sections blank until the decision-maker commits. For a resumed decision, append a new dated thinking-log entry rather than rewriting prior entries.
 
 ```markdown
 ## Context
@@ -402,19 +410,19 @@ Why this decision exists and why it matters now.
 ## Options considered
 - **Option A:** What it is and its central tradeoff.
 - **Option B:** What it is and its central tradeoff.
-- **Option C:** What it is and its central tradeoff.
+- **Option C:** [Optional additional option.]
 
 ## Thinking log
 ### [Date]
-- New inputs, conversations, data, or events
-- How the thinking changed
-- User’s stated position today: open / leaning / decided
+- New inputs, conversations, data, or events.
+- How the thinking changed.
+- Decision-maker’s stated position today: open / leaning / decided.
 
 ## Dissent
 Who pushed back, their strongest argument, and how it was handled.
 
 ## My choice and why
-The user’s own reasoning, only when stated by the user.
+The decision-maker’s own reasoning, only when they have stated it.
 
 ## What would change my mind
 Assumptions or evidence that would justify reversing the choice.
@@ -426,26 +434,35 @@ Confidence: [X%]
 ## Worries
 The most credible downside or failure mode.
 
----
-
 ## Retrospective
 To be completed at review.
 ```
 
-For a new open decision, record context, current options, and new inputs. Leave commitment sections blank until the user commits. When resuming, append a new dated thinking-log entry rather than rewriting history.
-
-Only record the user’s view in first-person sections when they supplied that view. If the user wants assistant reasoning stored, place it in a separately labeled section such as **Assistant analysis (not the user’s position)**.
-
 ## 7. Review the outcome
 
-At the review point, assess:
+At the review point, assess the decision in four parts:
 
 1. **What happened?** Use concrete actuals, not impressions.
 2. **Was the prediction accurate?** Compare events with the recorded prediction and confidence.
 3. **Was the process sound?** Judge the information, assumptions, alternatives, and reasoning available at the time.
 4. **What is the reusable lesson?** State a principle for future decisions.
 
-Mark the outcome as correct, incorrect, mixed, too early, or not applicable. Do not collapse a bad outcome into a bad decision process, or a good outcome into a sound process. A well-reasoned choice can have an unfavorable result, and a poorly reasoned choice can get lucky.
+Mark the outcome as correct, incorrect, mixed, too early, or not applicable. Keep decision quality separate from outcome quality: a sound decision can have a bad result because of uncertainty, and a weak process can occasionally produce a good result.
+
+## 8. Final audit checks
+
+Before sending a recommendation, commitment summary, or record update, check:
+
+- Is this genuinely a decision rather than a task?
+- Is the scope classification justified by reversal cost and stakes?
+- Has the required pressure test occurred, or was its omission explicitly accepted with a reason?
+- For a direction-setting decision, have the required conversations and dissent pass occurred?
+- Are facts, the user’s stated view, assistant analysis, and open questions clearly separated?
+- Was a record created or updated only with permission?
+- Is the record visible only to an appropriate audience?
+- Does the record omit irrelevant sensitive information?
+- Is the prediction observable and the review date appropriate?
+- Is there a concrete next action with an owner and date?
 
 ## Completion message
 
@@ -460,179 +477,178 @@ Review: [date or trigger]
 Record: [location, if one exists]
 ```
 
-Use direct language. Challenge weak reasoning with evidence, but do not turn rigor into endless deliberation. Once the appropriate readiness gates have been met, name the decision and move forward.
+Use direct language. Challenge weak reasoning with evidence, but do not turn rigor into endless deliberation. Once the right readiness gates are met, make the call and proceed.
 
 
 ---
 name: solve-a-problem
-description: Take a non-trivial product, technical, process, or automation problem from diagnosis through options, recommendation, implementation, verification, and handoff. The workflow supports analysis-only work when requested.
+description: Take a non-trivial product, technical, process, or automation problem from diagnosis through options, implementation, verification, and handoff. The workflow supports analysis-only work when requested.
 ---
 
 # Solve a problem
 
 Use this workflow for a non-trivial build, integration, automation, process, or operational problem whose solution is not already obvious. Do not use it for a small fix or a routine task with a known implementation.
 
-By default, work from understanding through implementation. If the user requests analysis only, stop after the recommendation and wait for a decision.
+By default, work from understanding through implementation. If the user asks for analysis only, stop after the recommendation and wait for a decision.
 
 ## 1. Understand the problem
 
-Start with the underlying problem, not the user's first proposed solution. If they ask to build a particular thing, work backward:
+Start with the underlying problem, not the user's first proposed solution. If they ask to "build X," work backward:
 
-- Who experiences the problem and what are they trying to accomplish?
-- What happens today, and what workarounds exist?
-- How frequent, costly, urgent, or blocking is the problem?
-- What outcome would make the situation meaningfully better?
-- What constraints, dependencies, or boundaries matter?
+- Who experiences the problem?
+- What are they trying to accomplish?
+- What happens today?
+- What workarounds exist?
+- How frequent, costly, urgent, or blocking is it?
+- What outcome would make the problem meaningfully better?
 
-Write a concise problem statement and descriptive requirements. Describe outcomes and constraints, not an assumed implementation. If the proposed solution does not fit the problem, say so directly.
+Write a concise problem statement and descriptive requirements. Describe the desired outcome and constraints, not an assumed implementation. If the proposed solution appears mismatched to the problem, say so directly.
 
-Ask only for information that cannot be found in available project context, documentation, or authorized records. When accessing communications or records about people, confirm a legitimate purpose and clear authorization, use only the minimum relevant information, and omit unrelated or sensitive details from outputs.
+Ask only for information that cannot be found in the available context, documentation, code, or records.
 
 ## 2. Assess whether to solve it now
 
-Assess severity, frequency, affected users, opportunity cost, maintenance cost, and available alternatives. Treat “do nothing,” “deprioritize,” or improving a workaround as real options when the problem is low-impact or adequately handled.
+Assess severity, frequency, affected users, opportunity cost, and available alternatives. Include “do nothing” or “deprioritize” as a real option when the issue is rare, low-cost, or adequately handled by a workaround.
 
-Distinguish between:
+Distinguish reversible decisions from expensive commitments:
 
-- **Reversible decisions:** Small, easy-to-change choices. Use reasonable judgment, choose, and move forward.
-- **Hard-to-reverse decisions:** Persistent data changes, public interfaces, long-lived configuration, migrations, security boundaries, external contracts, or vendor commitments. Pause for an explicit decision before implementation and record the rationale when appropriate.
+- **Reversible decisions:** small, easy-to-change choices. Use reasonable judgment, choose, and move forward.
+- **Hard-to-reverse decisions:** public interfaces, persistent data changes, long-lived configuration, migrations, external contracts, security boundaries, or vendor commitments. Pause and obtain an explicit decision before implementing. Record the decision and its rationale when appropriate.
 
-If priority or direction is unclear, present the tradeoff and ask the responsible decision-maker to choose before investing in detailed design or implementation.
+If priority or direction is unclear, present the tradeoff and ask the responsible decision-maker to choose before doing substantial design or implementation work.
 
 ## 3. Research the current context
 
-Read relevant project instructions, architecture notes, repository guidance, service documentation, existing code, tests, operational procedures, and prior attempts. Find established patterns and reusable components before inventing new ones.
+Read the relevant project instructions, architecture notes, repository guidance, service documentation, existing code, tests, operational procedures, and prior attempts. Look for established patterns and reusable components before inventing new ones.
 
-Understand compatibility requirements, deployment practices, access controls, supported environments, ownership boundaries, monitoring, and rollback expectations. Follow existing conventions unless there is a strong, documented reason to change them.
+Understand constraints such as compatibility requirements, deployment practices, security expectations, supported environments, ownership boundaries, and monitoring. Use the system's existing conventions unless there is a strong reason to change them.
 
 ## 4. Define evaluation criteria
 
-Define explicit, lightweight criteria before generating solutions. For example:
+Define lightweight, explicit criteria before generating solutions. For example:
 
-- Must preserve existing authentication, privacy, and data behavior.
-- Must fit available time, budget, and maintenance capacity.
-- Should avoid new dependencies, persistent settings, or public surface area.
+- Must preserve existing authentication and data behavior.
+- Must be feasible within the available time and maintenance capacity.
+- Should avoid new dependencies or persistent configuration.
 - Must have a clear verification method.
-- Should be removable or reversible if it fails.
+- Must be removable or reversible if it fails.
 
-Criteria guide both option generation and selection. Without them, the first plausible idea can win by accident.
+These criteria guide both option generation and selection. Without them, the first plausible idea can win by accident.
 
 ## 5. Generate varied approaches
 
 Generate genuinely different approaches, not minor variations of the same design. Consider:
 
 1. Do nothing, defer, or improve the current workaround.
-2. A non-code change, such as clearer instructions, a process adjustment, a template, or an existing platform capability.
+2. A non-code change, such as clearer instructions, a process adjustment, a template, or a capability already available in an existing platform.
 3. A small targeted technical change.
 4. A larger integrated solution.
 5. Build, buy, or integrate with an existing service.
 
-For highly ambiguous problems, produce a wider candidate set before narrowing. Keep each option concise: what it is, what it solves, major costs, and key risks.
+For especially ambiguous problems, generate a wider set of candidates before narrowing. Keep each option short: what it is, what it solves, major costs, and key risks.
 
 ### Design principles for technical options
 
-- Prefer one understandable code path over runtime-dependent special cases.
-- Validate strictly and fail clearly for invalid states. Do not hide programmer errors by returning plausible but incorrect results.
+- Prefer one understandable code path over special cases that behave differently depending on runtime conditions.
+- Use strict validation and fail fast for invalid states. Do not silently convert programmer errors into plausible but incorrect results.
 - Prefer established conventions over new abstractions, and new abstractions over long-lived configuration.
 - Treat new fields, settings, and public interfaces as maintenance commitments.
 - Prefer well-bounded changes that can be removed cleanly.
 - Use familiar, proven technology and existing infrastructure where possible.
 - Design for deterministic, isolated testing.
 - Prioritize correctness over performance unless performance is a stated requirement.
-- Place changes in the appropriate design boundary rather than adding a quick fix in a convenient location.
+- Do the work cleanly; avoid quick fixes placed outside the appropriate design boundary.
 
 ## 6. Evaluate and recommend
 
-Compare viable options against the criteria. Present a concise proposal containing:
+Compare each viable option against the criteria from Step 4. Present a concise proposal containing:
 
-- Problem statement and current impact.
+- The problem statement.
 - Evaluation criteria.
-- Viable options and tradeoffs.
+- The viable options and tradeoffs.
 - One clear recommendation and why it is preferred.
-- Important risks, irreversible consequences, assumptions, and open decisions.
+- Important risks, irreversible consequences, and open decisions.
 
-Keep proposals direct and short. Store them in the user's chosen shared documentation system when durable review or collaboration is needed; otherwise provide them in the current workspace. Use a clear date-prefixed title, such as `02 Sep 2026: Solve — topic`.
+Keep proposals direct and short. Store the proposal in the user's chosen shared documentation system when durable review or collaboration is needed; otherwise provide it in the current workspace. Use a clear, date-prefixed title such as `DD MMM YYYY: Solve — topic`.
 
 If this is analysis-only work, stop here.
 
 ## 7. Plan, implement, and verify
 
-For larger work, create an implementation plan before changing the system. Include scope, ordered steps, affected components, migration or rollback strategy, test strategy, deployment steps, and follow-up ownership. Keep the plan where appropriate reviewers can edit and approve it.
+For larger work, create an implementation plan before changing the system. Include scope, ordered steps, affected components, migration or rollback strategy, test strategy, deployment steps, and ownership of follow-up actions. Keep the plan where reviewers can edit and approve it.
 
-Implement the approved solution using project conventions. Run relevant automated tests, static checks, and focused manual verification. Confirm the result against the evaluation criteria, including compatibility, privacy, access boundaries, and expected failure behavior.
+Implement the approved solution using project conventions. Run relevant automated tests, static checks, and focused manual verification. Confirm the result against the evaluation criteria, including compatibility and failure behavior.
 
-Do not claim success based only on implementation. State what was tested, what passed, and what remains unverified. Commit, publish, or deploy only according to the user's repository and release practices.
+Do not claim success based only on implementation. Identify what was actually tested and what remains unverified. Commit, publish, or deploy changes only according to the user's repository and release practices.
 
 ## 8. Hand off
 
 Report:
 
 - What changed and the user outcome it enables.
-- Verification performed and its results.
+- The verification performed and its results.
 - Known limitations, risks, and deferred work.
-- Required user action, rollout steps, or monitoring.
-- References to the proposal, plan, and change set when applicable.
+- Any required user action, rollout step, or monitoring.
+- Links or references to the proposal, plan, and change set when applicable.
 
 Keep the handoff focused on outcomes and operationally useful detail. Avoid burying the reader in temporary implementation notes.
 
 
 ---
 name: shape-and-draft
-description: Shape consequential documents by reviewing evidence, resolving material choices with authorized decision-makers, and checking readiness before drafting. Then write and audit the smallest clear document that can achieve the intended outcome.
+description: Shape consequential documents by reviewing evidence, resolving material choices, and checking readiness. Then draft and audit the smallest document that can achieve the goal.
 ---
 
 # Shape and draft a document
 
 Develop a consequential document by shaping the underlying thinking before writing it. Determine what the document must achieve, gather relevant evidence, resolve material choices with the appropriate decision-maker, and then draft the smallest document that can do the job.
 
-Use this workflow for strategies, narratives, operating agreements, proposals, briefs, scorecards, and decision memos when the artifact, argument, boundaries, commitments, or operating model are not yet settled. Do not use the full process for a quick edit, formatting request, or document whose substance and decisions are already specified.
+Use this workflow for strategies, narratives, operating agreements, briefs, proposals, scorecards, and decision memos when the artifact, argument, boundaries, commitments, or operating model are not yet settled. Do not use it for a quick edit, a formatting request, or a document whose content and decisions are already specified.
 
 ## Classify the request
 
-A request may name a document type, desired outcome, audience, source material, or some combination. Treat a proposed document type as a starting hypothesis, not a fixed instruction, until its purpose is clear.
+The request may name a document type, outcome, audience, source material, or some combination. Treat a proposed document type as a starting hypothesis, not a fixed instruction, until its purpose is clear.
 
-Use a **full shaping process** when the document is strategically consequential and material choices remain unsettled, or when the requester asks for deep thinking, several rounds of questions, or close alignment before drafting.
+Use a **full shaping process** when the document is consequential and material choices remain unsettled, or when the requester asks for deep thinking, several rounds of questions, or close alignment before drafting.
 
-A substantive interview round resolves a distinct layer of choices and uses its answers to determine the next questions. Restating prior discussion or asking for general approval is not a substantive round.
+A substantive interview round resolves a distinct layer of choices and uses the answers to determine the next questions. Restating prior discussion or asking for broad approval is not a substantive round.
 
 ## 1. Work backwards from the desired outcome
 
 Start with the change the document must produce. Establish:
 
 - Who will read it.
-- What those readers should understand, decide, approve, or do afterward.
+- What those readers should understand, decide, approve, or do.
 - What is unclear, contested, blocked, or going wrong now.
-- Whether the document mainly needs to explain, persuade, decide, coordinate, or govern.
+- Whether the document primarily needs to explain, persuade, decide, coordinate, or govern.
 
-Do not accept “write a strategy” or “make a narrative” as a sufficient goal. Identify the actual job the document must perform.
+Do not treat “write a strategy” or “make a narrative” as a sufficient goal. Identify the actual job the document must perform.
 
 ## 2. Select the right artifact
 
-Recommend the form that best serves the document’s job:
+Recommend the document form that best serves that job:
 
 - **Narrative:** Creates shared understanding of why something matters and what bet is being made.
 - **Strategy:** Connects a diagnosis to choices, priorities, intended outcomes, and exclusions.
 - **Operating agreement:** Defines ownership, decision rights, interfaces, handoffs, and working cadence.
 - **Decision memo:** Records a choice, alternatives, rationale, risks, and a review point.
-- **Scorecard:** Defines a role or team mission, outcomes, and role-relevant capabilities.
+- **Scorecard:** Defines a role or team mission, outcomes, and required capabilities.
 - **Hybrid:** Combines forms when readers need both shared understanding and execution clarity.
 
-Explain the meaningful tradeoff and recommend an artifact. If the form would materially affect the argument, required decisions, or structure, ask the authorized decision-maker to confirm it before going deeper.
+Explain the relevant tradeoff and recommend an artifact. If the form would materially affect the argument, structure, or decisions required, ask the authorized decision-maker to confirm it before proceeding.
 
 ## 3. Gather and classify evidence
 
-Read supplied material first. Follow any stated rules for source selection, authority, citations, and linking. Scale research to the stakes and use only systems and sources that the requester is authorized to access.
+Read supplied material first. Follow any stated rules for source selection, authority, citations, and linking. Scale the research effort to the stakes and use the sources and systems available for the work.
 
-When reviewing private communications, internal records, or information about people, confirm there is a legitimate work purpose and clear authorization. Use the minimum relevant sources and details. Do not include unrelated personal information, sensitive details, or information outside the intended audience’s access boundary.
-
-For a consequential internal document, seek material likely to contain prior decisions, current definitions, supporting evidence, dissent, constraints, ownership context, and relevant performance information.
+For a consequential internal document, look for material likely to contain prior decisions, current definitions, supporting evidence, dissent, constraints, ownership context, and relevant performance information.
 
 Apply these evidence rules:
 
 - Respect a stated hierarchy of sources.
 - Prefer current, authoritative decision records over discussion notes, recollections, generated summaries, or repeated claims.
 - Resolve contradictions where evidence permits; surface material contradictions that remain.
-- Do not ask participants for factual information that available, authorized sources can answer.
+- Do not ask participants for factual information that available sources can answer.
 - Do not edit, overwrite, or otherwise change source material unless explicitly instructed.
 
 Keep evidence separate from alignment:
@@ -642,30 +658,30 @@ Keep evidence separate from alignment:
 - A plausible synthesis, repeated pattern, or implication is an **inference**, not a settled decision.
 - Ask for confirmation of any inference that would become a central claim, commitment, boundary, recommendation, or operating rule.
 
-Before the first interview round, provide a short situation brief that covers:
+Before the first interview round, provide a short situation brief containing:
 
 - What the sources establish.
 - What has already been explicitly confirmed.
 - What is inferred but unconfirmed.
 - The main tension, gap, or missing logic.
 - The recommended artifact.
-- The important questions that only an authorized decision-maker can resolve.
+- The important questions that only a decision-maker can resolve.
 
 ## 4. Interview in answer-dependent rounds
 
 For a full shaping process, complete at least two substantive, answer-dependent rounds before drafting. Count relevant rounds already completed in the current conversation, and do not repeat answered questions.
 
-Do not draft immediately after the first round merely because one apparent central issue is resolved. Use a later round to test the consequences: boundaries, tradeoffs, counterarguments, ownership, definitions, or execution implications.
+Do not draft immediately after the first round merely because one apparent central issue has been resolved. Use a later round to test consequences: boundaries, tradeoffs, counterarguments, ownership, definitions, or execution implications.
 
-Ask four to eight focused questions per round. If fewer than four material questions remain, ask only those questions and state that this is a narrow final check. Do not add ceremonial questions merely to reach a number.
+Ask four to eight focused questions per round. If fewer than four material questions remain, ask only those questions and state that it is a narrow final check. Do not add ceremonial questions simply to reach a number.
 
-Each numbered question should normally seek one decision. Do not combine separate choices, such as ownership, coordination, handoffs, and success measures, into one broad yes-or-no question. Bundled questions create false alignment.
+Each numbered question should normally seek one decision. Do not combine separate decisions, such as ownership, coordination, handoffs, and success measures, into one broad yes-or-no question. Bundled questions create false alignment.
 
-Use a compact format that supports quick, unambiguous answers:
+Use a compact question format that supports quick answers:
 
 1. Number each question: `1.`, `2.`, `3.`.
 2. For bounded choices, label options with lowercase letters: `a.`, `b.`, `c.`.
-3. Put the recommended option first unless prior context makes another ordering clearer.
+3. Put the recommended option first unless prior context clearly makes another ordering more useful.
 4. Put questions and options on consecutive lines, with no blank lines within the question block.
 5. Allow the respondent to reject the framing or provide an alternative answer.
 
@@ -685,7 +701,7 @@ Each round should:
 2. Focus on one layer of uncertainty rather than mixing every issue at once.
 3. Offer two or three concrete options when the decision can be bounded.
 4. Explain the tradeoff behind the recommended option.
-5. Separate source-supported observations from choices that participants must make.
+5. Separate source-supported observations from choices participants must make.
 6. Surface contradictions and ask the smallest question needed to resolve them.
 7. Include a pressure test when the document is persuasive or strategically consequential.
 
@@ -742,11 +758,11 @@ For persuasive documents, complete a skeptical-reader pass:
 - Which premise, commitment, evidence claim, or safeguard would they dispute?
 - Has the response to that objection been confirmed?
 
-Close alignment does not require artificial certainty. It means that remaining uncertainty is low impact or clearly represented as unresolved.
+Close alignment means remaining uncertainty is low impact or clearly represented as unresolved. It does not require artificial certainty.
 
 ## 7. Draft and deliver
 
-Follow stated voice, style preferences, format, accessibility needs, privacy constraints, and delivery requirements. Where no style is specified, use clear, direct language appropriate to the audience.
+Follow the stated voice, style preferences, format, accessibility needs, and delivery requirements. Where no style is specified, use clear, direct language appropriate to the audience.
 
 Write the smallest document that accomplishes the agreed purpose. Prefer clear claims, concrete decisions, named ownership, and explicit boundaries over polished but vague abstractions. Distinguish current decisions from proposals, assumptions, and future review points.
 
@@ -758,9 +774,9 @@ Make the draft as simple as the substance allows:
 - Turn abstractions into concrete claims, actions, examples, owners, dates, or tests where useful.
 - Use focused paragraphs. Use bullets only for real lists; write bullet items as full sentences unless they are compact labels.
 - Prefer the more concise version when it preserves meaning. Concision removes unnecessary ideas and words; it does not require every sentence to be short.
-- Preserve difficult ideas when they matter, but explain them in plain language rather than jargon.
+- Preserve hard ideas when they matter, but explain them in plain language rather than jargon.
 
-Honor the requested destination using the requester’s chosen system. If text is requested in the conversation, provide text without changing source material. If a document must be created or updated elsewhere, do so only as instructed and verify that the intended content is present.
+Honor the requested destination using the chosen system. If text is requested in the conversation, provide text without changing source material. If a document must be created or updated elsewhere, do so only as instructed and verify that the intended content is present.
 
 ## 8. Audit before delivery
 
@@ -773,7 +789,7 @@ Compare the draft against the alignment ledger and source hierarchy:
 - Are uncertain claims labeled appropriately?
 - Are factual claims and citations supported by appropriate sources?
 - Is any inference presented as a settled fact or decision?
-- Does the document match the requested voice, audience, and access boundary?
+- Does the document match the requested voice and audience?
 - Can each sentence be understood on the first read?
 - Can any abstract phrase, inflated word, or repeated point be made simpler or removed without losing meaning?
 
@@ -795,7 +811,6 @@ Fix mismatches before delivering. Put the deliverable last, without trailing com
 - Continuing interviews after only low-impact uncertainty remains.
 - Writing an inspiring document that leaves decisions, ownership, or execution unclear.
 - Mistaking concise writing for choppy writing by using fragments, noun-only bullets, or artificially short sentences.
-- Including private, sensitive, or irrelevant personal information when it is not needed for the document’s legitimate purpose.
 
 
 ---
@@ -870,239 +885,222 @@ Every sourced claim should let the user reach its supporting evidence.
 
 ---
 name: learning-tutor
-description: Learn a paper, article, post, or topic through a short Socratic dialogue that uses retrieval, explanation, and application instead of passive summary. The tutor diagnoses understanding from the learner’s reasoning and adjusts challenge, H.
+description: Learn a paper, article, post, or topic through a short Socratic dialogue that uses retrieval, explanation, and application instead of passive summary. The tutor adapts challenge and pacing to expose gaps and build durable understanding.
 ---
 
 # Learn with a tutor
 
-Help a learner understand, retain, evaluate, and use a provided paper, article, post, lesson, or topic through a rigorous dialogue. Prioritize active recall, explanation, and application over passive review. The learner should do most of the intellectual work; the tutor should guide, diagnose, and raise the level of challenge.
+Help a learner understand, retain, and use a paper, article, post, or topic through a rigorous dialogue. Prioritize active recall, explanation, and application over passive review. The learner should perform most of the intellectual work; the tutor guides, diagnoses, and raises the level of challenge.
+
+Use only material the learner has provided or is authorized to discuss. If examples involve personal, confidential, or sensitive information, ask for a generalized example and avoid requesting unnecessary details.
 
 ## Learning principles
 
-- **Retrieve before reviewing.** Do not provide an unsolicited summary. Ask the learner to recall and reconstruct ideas in their own words.
-- **Ask for mechanisms.** Move beyond stated conclusions: ask why, how, under what conditions, and based on what evidence an idea works.
-- **Have the learner generate connections.** Ask for their own examples, analogies, predictions, objections, and uses before supplying any.
-- **Use productive difficulty.** Make the task demanding enough to require thought, but not so difficult that the learner cannot make a meaningful attempt.
-- **Practice transfer.** Move from the original material to unfamiliar cases, related concepts, and practical decisions.
-- **Surface gaps through questions.** When an answer is incomplete, inconsistent, or mistaken, use focused questions to help the learner identify the gap. Explain directly only after they have had a fair chance to reason through it.
+- **Retrieve before reviewing.** Do not give an unsolicited summary. Ask the learner to recall and reconstruct ideas in their own words.
+- **Ask for mechanisms.** Move beyond conclusions: ask why, how, under what conditions, and with what evidence an idea works.
+- **Make the learner generate connections.** Ask for their own examples, analogies, predictions, and uses before offering any.
+- **Use productive difficulty.** Challenge the learner enough to require effort, but not so much that they cannot make a meaningful attempt.
+- **Practice transfer.** Move from the original material to unfamiliar cases, related ideas, and real decisions.
+- **Surface gaps through questions.** When an answer is incomplete or inconsistent, ask questions that help the learner notice the problem. Explain directly only after they have had a fair chance to reason it through.
 
-## Operating mode
+## Conversation workflow
 
-Be warm, direct, and rigorous. Keep turns short and usually ask one or two questions at a time. Aim for a conversation in which questions and learner-generated reasoning make up most of the exchange.
+### 1. Establish prior knowledge and a learning target
 
-Do not turn the interaction into a fixed quiz. Each next question should respond to what the learner actually said. Avoid generic praise. If an answer is strong, identify the specific strength—for example, a clear causal mechanism, a relevant boundary condition, or a useful counterexample—then extend the challenge.
+Start by asking what the learner already knows, believes, or has experienced about the topic. Identify their purpose as well: understanding an argument, preparing for discussion, applying a method, or evaluating a claim.
 
-Use plain language. If the source uses technical terms, first ask the learner to define them. Clarify only when needed.
-
-## Workflow
-
-### 1. Establish prior knowledge and a learning goal
-
-Start before explaining the source. Ask what the learner already knows, believes, expects, or has experienced about the topic. Also ask what they want to be able to explain, evaluate, or do.
-
-Use one or two prompts such as:
+Ask one or two open questions, such as:
 
 - “What do you already think is true about this topic, and why?”
-- “What experience or prior knowledge do you have that might connect to it?”
-- “What are you hoping to be able to explain, decide, or apply by the end?”
-- “Before looking closely at the material, what would you predict its main point will be?”
+- “What are you hoping to be able to explain or do by the end?”
+- “Before looking closely at the material, what would you predict its main conclusion will be?”
 
-Use the response to set an appropriate level of difficulty and identify possible misconceptions or useful background knowledge.
+Use the response to identify relevant background knowledge, likely misconceptions, and an appropriate level of challenge.
 
-If the learner has not read the material, do not pretend they can retrieve it. Ask for a prediction or working model, direct them to inspect a manageable section, and then resume with recall questions.
+### 2. Elicit the central claim from memory
 
-### 2. Elicit the central idea from memory
+Ask the learner to explain the main argument, finding, or idea without quoting the source.
 
-Ask the learner to state the main argument, finding, method, or idea without quoting the source.
-
-Useful prompts include:
+Useful prompts:
 
 - “In your own words, what is the main claim?”
+- “Why should someone believe that claim?”
 - “What problem is this idea trying to solve?”
-- “Why should someone believe this conclusion?”
-- “If you had 30 seconds to explain this to a thoughtful friend, what would you say?”
+- “If you had 30 seconds to explain it to a thoughtful friend, what would you say?”
 
-Do not immediately replace a rough answer with a polished explanation. First find out which parts of the learner’s model are sound, vague, unsupported, or confused.
+If the learner has not yet read or engaged with the material, ask for their initial prediction or working model. Invite them to inspect the relevant section, then return to retrieval rather than immediately explaining it for them.
 
-### 3. Choose a small set of high-value ideas
+### 3. Select a few important ideas
 
-Do not cover every part of the source. Select two or three ideas that are central, difficult, consequential, disputed, or likely to be misunderstood. Prefer depth over broad but shallow coverage.
+Do not attempt to cover every detail. Choose two or three ideas that are central, difficult, consequential, or likely to be misunderstood. Go deep on each one.
 
 For each idea, use this cycle:
 
 1. Ask the learner to state or reconstruct the idea.
-2. Probe the reasoning, evidence, assumptions, and causal story.
-3. Ask for a concrete example, analogy, prediction, or application.
+2. Probe their reasoning, evidence, assumptions, and causal story.
+3. Ask them to generate an example, comparison, or application.
 4. Test the idea with an objection, boundary case, or alternative explanation.
-5. Adapt the next question to the learner’s response.
+5. Choose the next question based on their actual answer.
 
-### 4. Test explanation, not recognition
+Keep turns brief. Usually ask only one or two questions at a time.
 
-Use open questions that require the learner to reason. Adapt them to the source and the learner’s level.
+## Question toolkit
+
+Choose prompts that require explanation rather than recognition. Adapt their wording to the material and the learner’s level.
 
 - “What has to be true for this conclusion to follow?”
 - “What would have to be true for this conclusion to be wrong?”
+- “What evidence would distinguish this explanation from another one?”
 - “What is the mechanism here, step by step?”
-- “What evidence would distinguish this explanation from another explanation?”
 - “Can you construct a concrete example from a familiar setting?”
 - “Where might this fail, or where would it not apply?”
 - “What is the strongest objection to this argument?”
 - “How does this connect to another idea you know?”
 - “What surprised you, and what did you expect instead?”
-- “How would the conclusion change if one important assumption changed?”
-- “What prediction does this idea make in a new situation?”
+- “How would the conclusion change if one key assumption changed?”
 
-Avoid questions that can be answered with only “yes” or “no.” If a binary choice is useful, require the learner to defend the choice and explain what evidence would change their mind.
+Avoid yes-or-no questions unless they are immediately followed by a request for reasoning.
 
-### 5. Respond to errors and uncertainty
+## Responding to answers
 
-When the learner’s answer is incomplete or incorrect:
+Be warm, direct, and specific. Do not use generic praise. When an answer is strong, name the useful feature—for example, that it identified an assumption, distinguished correlation from causation, or supplied a relevant counterexample—then extend the challenge.
 
-1. Do not immediately give the correction.
-2. Identify the tension with a narrow follow-up question.
-3. Give the learner one or two genuine attempts to revise their reasoning.
-4. If they remain stuck, provide a concise explanation of the missing distinction, fact, or reasoning step.
-5. Ask them to restate the corrected idea in their own words or apply it to a fresh case.
+When an answer is wrong or incomplete:
 
-If the learner says, “I don’t know,” do not rescue them immediately. Invite a low-stakes attempt:
+1. Do not immediately provide the correction.
+2. Point to the tension with a focused follow-up question.
+3. Allow one or two genuine attempts.
+4. If the learner remains stuck, give a concise explanation of the missing distinction or reasoning step.
+5. Ask the learner to restate the corrected idea in their own words or apply it to a fresh case.
 
-> “Take a guess based on what you do know. What seems most plausible, and why?”
+If the learner says, “I don’t know,” invite a low-stakes attempt: “Take a guess based on what you do know. What seems most plausible, and why?” Offer a hint only after an attempt, or sooner when the task requires knowledge they have not yet been given.
 
-Offer a hint after an attempt, or sooner when the learner lacks a necessary foundation. A useful hint narrows the task without supplying the complete answer.
+## Calibration and pacing
 
-### 6. Calibrate difficulty and pace
+Increase difficulty when the learner answers easily: ask for a counterexample, comparison, prediction, objection, or application in a new domain. Reduce difficulty when they are lost: narrow the question, isolate one assumption, use a simpler case, or ask them to choose between competing explanations and defend their choice.
 
-Increase difficulty when the learner answers easily or repeats the source without showing understanding. Ask for a counterexample, competing explanation, causal mechanism, prediction, or application in a new domain.
+Match the learner’s energy. If they are engaged, pursue the reasoning in more depth. If they are tired or overloaded, consolidate the strongest ideas instead of introducing more material.
 
-Reduce difficulty when the learner is lost or overloaded. Narrow the question, isolate one assumption, use a simpler example, revisit a prerequisite, or present two plausible explanations and ask the learner to compare them.
-
-Match the learner’s energy and available time. When they are engaged, follow the reasoning in depth. When they are tired or constrained, consolidate what has been learned rather than introducing new material.
+Maintain a dialogue rather than a quiz. Questions should build on the learner’s actual responses, not appear as a fixed test sequence.
 
 ## Progress checks
 
-Periodically give a brief, evidence-based check-in. State:
+Periodically give a short, evidence-based assessment:
 
-- what the learner has demonstrated they understand;
-- what remains uncertain, incomplete, or confused; and
-- the most useful next point to investigate.
+- What the learner has demonstrated they understand.
+- What remains uncertain, incomplete, or confused.
+- The most useful next focus.
 
-Do not claim mastery because the learner recognized a term or repeated a conclusion. Look for accurate explanation, defensible reasoning, awareness of limits, and successful transfer to a new case.
-
-Example format:
-
-> “You have clearly distinguished the claim from the evidence supporting it, and you identified one important assumption. The remaining gap is whether the evidence supports causation or only association. Let’s test that distinction with a new example.”
+Do not claim mastery merely because the learner recognized a term or repeated a conclusion. Look for accurate explanation, reasoning, and transfer to a new case.
 
 ## Closing gate
 
-Before ending, ask the learner to convert the learning into an implication for action, judgment, or belief:
+Before ending, ask the learner to convert learning into action:
 
 > “Given what you have learned, what would you actually do differently? What decision, prediction, or belief should this change?”
 
-Then ask for one final concise explanation, application, or future retrieval prompt. End by naming the next concept or question worth revisiting.
+Then ask for either a final concise explanation in the learner’s own words or a future retrieval prompt they can answer later. End by naming the next concept or question worth revisiting.
 
-## Guardrails and failure modes
+## Guardrails
 
-- Do not summarize the material unless the learner explicitly asks. Even then, invite their own summary first.
-- Do not lecture when a well-chosen question could prompt retrieval or inference.
-- Do not define jargon automatically; first ask what the learner thinks it means.
-- Do not make the interaction easy merely to sound encouraging.
-- Do not cover an entire source superficially when a few central ideas can be understood deeply.
-- Do not repeatedly challenge a learner who lacks a prerequisite. Diagnose the missing foundation, teach or review it briefly if needed, then return to retrieval.
-- Do not use trick questions or withhold essential information merely to create difficulty. The goal is learning, not performance theater.
-- Do not confuse confidence, fluency, or agreement with understanding. Require explanation and application.
-- Do not force personal examples. Offer familiar hypothetical settings when the learner prefers not to share personal information.
+- Do not summarize the material unless the learner explicitly requests it; even then, invite their own summary first.
+- Do not lecture when a well-chosen question can make the learner retrieve or infer the point.
+- Do not define jargon automatically; ask the learner to define it first, then clarify if needed.
+- Do not make the interaction easy merely to be encouraging.
+- Do not cover the entire source superficially when a few core ideas can be understood deeply.
+- Do not turn uncertainty into failure. Use it to choose the next useful question.
 
 
 ---
 name: write-in-my-voice
-description: Draft email in the user's real voice while keeping facts, commitments, and tone appropriate. Use a style guide or recent sent messages as evidence, then audit voice and accuracy.
+description: Draft or revise email in the user’s recognizable voice using an approved style profile or authorized writing examples, while keeping facts, commitments, privacy, and recipient context accurate.
 ---
 
 # Write in my voice
 
-Use this workflow when drafting or replying to an email on the user's behalf.
+Use this workflow when the user asks to draft, reply to, revise, or polish an email on their behalf.
 
 ## Goal
 
-Write a copy-ready email that sounds like the user, not like a generic assistant. Preserve the user's usual level of warmth, directness, structure, and punctuation while adapting to the recipient, relationship, and stakes.
+Write a send-ready email that sounds like the user rather than a generic assistant. Match the user’s established tone, structure, greeting, sign-off, and writing habits while adapting appropriately to the recipient and situation.
 
-## 1. Gather voice evidence
+## 1. Load voice evidence before drafting
 
-Before drafting, read the user's current style guide in full, if one exists. Also use recent examples of emails the user actually sent, especially examples that are similar in audience or purpose.
+First, read the user’s current writing profile in full, if one is available. A profile may include:
 
-Extract a practical voice profile:
+- Preferred greetings and sign-offs.
+- Formality, warmth, directness, and relationship cues.
+- Typical sentence and paragraph length.
+- Preferred vocabulary, contractions, punctuation, and formatting.
+- Phrases, tones, or punctuation to avoid.
+- How the user makes requests, declines, follows up, gives feedback, or handles uncertainty.
+- Approved factual references, reusable language, scheduling methods, links, and standard responses.
 
-- Typical greeting and sign-off.
-- Formality level and relationship cues.
-- Usual sentence and paragraph length.
-- Preferred vocabulary, contractions, and degree of directness.
-- Punctuation habits and formatting preferences.
-- Words, phrases, punctuation, or tones to avoid.
-- How the user makes requests, declines, follows up, apologizes, gives feedback, or expresses uncertainty.
-- Approved reusable facts, links, boilerplate, and standard responses.
+If no profile exists, use recent emails the user actually sent as evidence. Access private communications only for a legitimate drafting purpose with clear authorization. Review only the minimum relevant examples, avoid unrelated personal information, and keep any output within the user’s appropriate access boundary.
 
-Recent edits and sent messages are stronger evidence than old examples or general writing advice. If the evidence conflicts, ask the user which preference is current, or use the most recent consistent pattern.
+Give stronger weight to recent, relevant sent messages than to old examples or abstract preferences. If the evidence conflicts, ask which preference is current. Do not treat a single unusual email as a permanent style rule.
 
-## 2. Confirm the email brief
+## 2. Establish the email brief
 
-Identify or ask for the minimum information needed to send a safe email:
+Identify the minimum details needed to write a safe, useful draft:
 
-1. Who is the recipient, and what is their relationship to the user?
-2. What outcome should the email produce?
-3. What facts, dates, links, attachments, names, or commitments must be included?
-4. What level of warmth or firmness is appropriate?
-5. Is there a deadline, sensitivity, or approval requirement?
+1. Who is the recipient, and what is their relationship to the sender?
+2. What result should the email achieve?
+3. What facts, dates, names, links, attachments, decisions, or requests must appear?
+4. What tone is needed: routine, warm, firm, formal, sensitive, or urgent?
+5. Are there deadlines, approvals, confidentiality concerns, or commitments that require care?
 
-Do not invent facts, availability, decisions, promises, prices, opinions, or emotional reactions. If a missing detail materially changes the meaning, ask a focused question rather than guessing.
+Ask focused questions only when a missing detail could change the meaning or create a false commitment. Do not invent availability, decisions, prices, policies, deadlines, opinions, emotional reactions, or promises.
 
-## 3. Choose the right level of adaptation
+## 3. Adapt the voice to the situation
 
-Voice is not a fixed template. Adjust formality to the recipient and stakes without losing the user's recognizable style.
+Voice is a pattern, not a fixed script. Preserve recognizable habits while adjusting for recipient and stakes.
 
-- For close working relationships, use the user's normal concise, familiar pattern.
-- For new, senior, external, or sensitive recipients, retain the user's voice but use clearer context and more careful wording.
-- For conflict, rejection, or correction, be direct and factual. Do not add defensive explanations, exaggerated praise, or unnecessary apologies.
-- For requests, state the requested action, owner, and timing plainly.
+- For familiar colleagues or ongoing contacts, use the user’s usual concise and familiar approach.
+- For new, external, senior, or formal recipients, retain the user’s voice but add enough context and precision to make the email self-contained.
+- For corrections, conflict, rejection, or sensitive topics, be direct, respectful, and factual. Avoid defensive explanations, exaggerated praise, or unnecessary apologies.
+- For requests, clearly state the action needed, the responsible person where relevant, and the timing.
 
-Use approved standard wording or factual material when it fits. Do not reuse it when the context makes it misleading.
+Use approved standard wording, facts, or links when they fit the actual situation. Never reuse boilerplate if it would be inaccurate, misleading, or inappropriate for the recipient.
 
-## 4. Draft the smallest complete email
+## 4. Draft the smallest complete message
 
-Write only what helps the recipient understand and act. A useful default structure is:
+Use this default structure unless the user’s voice evidence supports another pattern:
 
-1. Greeting, if the user's examples normally include one.
-2. Purpose or response in the first sentence.
+1. Greeting, when normally used.
+2. Main point or response in the first sentence.
 3. Essential context, decision, request, or next step.
-4. Clear close and sign-off, if appropriate.
+4. Closing and sign-off, when appropriate.
 
-Prefer concrete nouns, active verbs, short sentences, and short paragraphs. Put requests and decisions where they are easy to find. Use bullets only when they make actions, options, or logistics clearer.
+Write only what helps the recipient understand and act. Prefer concrete nouns, active verbs, short sentences, and short paragraphs. Use bullets only when they make actions, options, or logistics easier to scan.
 
 Remove:
 
-- Throat-clearing and process narration.
-- Generic compliments or repeated thanks.
-- Filler such as "just wanted to," "I hope you're well," or similar language unless it is genuinely part of the user's normal voice and useful here.
-- Unnecessary hedging that weakens a clear message.
-- Explanations of how the draft was produced.
+- Throat-clearing and explanations of the drafting process.
+- Generic compliments and repeated thanks.
+- Filler such as “just wanted to,” “hope you are well,” or similar phrases unless they are both normal for the user and useful here.
+- Hedging that weakens a clear message.
+- Details that are unnecessary for the recipient or exceed the intended privacy boundary.
 
-## 5. Run a voice and safety audit
+## 5. Audit before presenting
 
-Review line by line before presenting the email. Ask:
+Review the draft line by line:
 
-- Would the user plausibly write these exact words?
-- Does the greeting, closing, punctuation, and rhythm match the evidence?
-- Is the tone right for this recipient and situation?
-- Did the draft add a commitment, claim, opinion, or emotion the user did not provide?
-- Are all names, dates, links, attachments, and references accurate?
-- Is the requested action unmistakable?
+- Would the user plausibly write these words?
+- Do the greeting, closing, punctuation, rhythm, and formality match the evidence?
+- Is the tone suitable for this recipient and situation?
+- Are names, dates, links, attachments, and references correct?
+- Did the draft add an unsupported claim, commitment, opinion, or emotion?
+- Is the requested action or decision easy to find?
+- Does the email reveal only information the recipient should receive?
 - Can any sentence be removed without losing meaning or usefulness?
-- Does the email avoid language the user has identified as undesirable?
+- Does it avoid the user’s identified style anti-patterns?
 
-If no style evidence exists, state the assumption briefly and use a broadly useful default: clear, warm-professional, concise, and direct. Invite the user to provide a few real examples or preferences for future drafts.
+If there is no voice evidence, state the assumption briefly and use a broadly useful default: concise, clear, warm-professional, and direct. Invite the user to provide a style guide or a few authorized sent examples for better future matching.
 
 ## Output format
 
-Provide the final email as copy-ready text. If clarification is necessary, ask only the specific question needed to draft safely. Do not add commentary after the final copy unless the user asks for alternatives, rationale, or a revision.
+Provide the final email as copy-ready text. If clarification is required, ask only the specific question needed to draft safely. Do not add rationale, drafting notes, or alternatives after the email unless the user asks for them.
 
 
 ---
@@ -1384,117 +1382,107 @@ The final standard is simple: the post should sound like someone with evidence, 
 
 ---
 name: case-study-post
-description: Create an evidence-based professional case study post that turns verified source material into a concise, review-ready story with alternate hooks, quote-card options, approval flags, and a clear call to action.
+description: Create an evidence-based case study post about a person’s career, learning, or professional change. The workflow produces a review-ready draft, alternate hooks, quote-card options, and an approval log.
 ---
 
 # Write a case study post
 
-Use this workflow to turn source material about a person’s career, learning, or professional change into a concise public case study. It works well for professional social posts, community updates, alumni stories, newsletters, recruitment pages, and program impact stories.
+Use this workflow to turn raw material about a person into a concise public case study. It is designed for professional social posts, but it can be adapted for newsletters, community updates, recruitment pages, or program alumni stories.
 
-The goal is not to make someone sound impressive through vague praise. The goal is to show a credible, specific change: where they started, why they acted, what concretely helped, what they do now, and what the reader can do next.
+The goal is not to make the person sound impressive through vague praise. The goal is to show a credible, specific change: where they started, what they did, what helped, what they do now, and what a reader can do next.
 
-A strong post helps the intended reader recognize their own situation in the subject’s before-state. It explains the mechanism of change without claiming more causation than the evidence supports.
-
-## Purpose, authorization, and access boundary
-
-Before using interviews, applications, direct messages, internal records, or other material that is not fully public, confirm that there is a legitimate purpose and clear authorization to use it for this case study.
-
-Use only the minimum relevant sources and information. Do not include unrelated personal details, sensitive circumstances, internal discussions, or information the subject would not reasonably expect to see in a public post. Keep drafts, source notes, and outputs inside the appropriate access boundary chosen by the user or organization.
-
-If authorization, public-use consent, or a material fact is unclear, pause and ask before drafting.
+A strong case study lets the reader recognize their own situation in the subject’s before-state. It explains the mechanism of change without overstating causation.
 
 ## Inputs
 
-Ask for all available relevant source material. It may include:
+Ask for all available source material. This can include:
 
 - An interview transcript and meeting notes
-- An application, intake form, or written statement
-- A current professional profile or biography
-- Public work samples, papers, projects, products, or announcements
-- An internal message reporting a result, if authorized for this purpose
+- An application or intake form
+- A professional profile or biography
+- Public work samples, papers, projects, or announcements
+- A message celebrating a result
 - A prior draft, outline, or notes from the subject
 - The target audience, publishing platform, and desired call to action
-- A voice, editorial, or brand style guide
-- The subject’s preferred public name and pronouns
-- Confirmation of which facts and quotes are approved for public use
+- Any established editorial or brand voice guide
 
-Before drafting, identify whether there is enough verified information for the following fields.
+Before drafting, identify whether you have enough verified information for these fields:
 
 | Field | What to capture |
 |---|---|
-| Subject | Full name for verification, preferred public name, pronouns, and permission status |
-| Before-state | Previous role, field, goal, uncertainty, or constraint relevant to the reader |
-| Trigger | Why they joined, applied, changed direction, or took action at that time |
-| Intervention | Program, community, event, resource, mentor, or service involved |
-| Mechanism | Concrete help, such as a realization, introduction, job post, feedback session, or practical resource |
-| Now-state | Current role, organization or team if approved, project, output, or result |
-| Timeline | Dates or time spans from start to outcome |
-| Evidence | Verified roles, figures, dates, artifacts, and direct quotes |
-| Cost or risk | Career change, move, pay change, uncertainty, or other tradeoff, if relevant and approved |
-| CTA | What the intended reader should do next |
+| Subject | Full name for verification, preferred public name, pronouns |
+| Before-state | Previous role, field, goal, uncertainty, or constraint |
+| Trigger | Why they joined, applied, changed direction, or took action |
+| Intervention | Program, community, product, mentor, event, or resource involved |
+| Mechanism | The concrete things that helped, such as a realization, introduction, job post, feedback session, or practical resource |
+| Now-state | Current role, organization, team, project, output, or result |
+| Timeline | Dates or time spans from starting point to outcome |
+| Evidence | Verified roles, figures, dates, named work, and direct quotes |
+| Cost or risk | Pay change, move, uncertainty, career change, or other tradeoff |
+| CTA | What the reader should do next |
 
-If critical facts are missing, ask focused questions before drafting. Never guess at organization names, job titles, paper titles, dates, figures, timelines, outcomes, or whether an item may be published.
+If critical facts are missing, ask focused questions before drafting. Do not guess at organization names, job titles, paper titles, dates, figures, timelines, or outcomes.
 
 Useful questions include:
 
 1. What was the person doing before this experience?
 2. What were they considering instead?
-3. Why did they take part or make a change at that point?
+3. Why did they decide to take part or make a change at that point?
 4. What are the one or two concrete things that helped them move forward?
 5. What happened next, and when?
 6. What do they do now in practical terms?
-7. Is there a specific public output, project, placement, publication, product, or result that can be named?
-8. Did they take on a meaningful cost or risk that they are comfortable sharing publicly?
-9. Which claims, figures, quotes, names, and timeline details have been approved for publication?
-10. Who should this post persuade, help, or invite to act?
+7. Is there a specific output, project, placement, publication, or result that can be named publicly?
+8. Did they take on a meaningful cost or risk that they are comfortable sharing?
+9. Which claims, figures, quotes, and names have been approved for public use?
+10. Who should this post persuade or help?
 
 ## Evidence and verification rules
 
-Never invent facts or strengthen a claim for dramatic effect. If the source says a person contributed to a project, do not call them the lead. If it says they explored an opportunity, do not say they received it. If a paper or project is unpublished, do not present it as released.
+Never invent facts or strengthen a claim for dramatic effect. If the source says someone contributed to a project, do not call them the lead. If a source says they explored an opportunity, do not say they received it.
 
-Treat automated transcripts and summaries as useful but fallible. They can mishear names, organizations, technical terms, numbers, titles, and dates. Cross-check important details against a primary or more reliable source, such as direct confirmation from the subject, an official announcement, a published work, an approved professional profile, or an original written statement.
+Treat transcripts as useful but fallible. Automated transcription can mishear names, organizations, technical terms, numbers, and titles. Cross-check important details against a primary or more reliable source, such as the subject’s approved profile, application, official announcement, published work, or direct confirmation.
 
-When sources disagree, use this reliability order unless there is a clear reason to do otherwise:
+When sources disagree, use this reliability order unless there is a reason not to:
 
 1. The subject’s direct, recent confirmation
-2. Official public records, published work, or an organization’s announcement
+2. Official public records or published work
 3. A current professional profile
 4. An original application or written statement from the subject
 5. Interview transcript notes or automated summaries
 6. Informal third-party messages
 
-Separate working notes into three categories:
+Separate three kinds of statements in your working notes:
 
 - **Verified fact:** A role, date, artifact, figure, or quote supported by a reliable source.
 - **Subject interpretation:** What the person says helped them or changed their mind.
-- **Editorial inference:** A conclusion drawn from the story. Use it only when evidence supports it, and phrase it modestly.
+- **Editorial inference:** A conclusion you might draw from the story. Use only when the evidence supports it, and phrase it modestly.
 
-Do not claim that a program, community, mentor, tool, or event caused the entire outcome unless the evidence clearly supports that conclusion. Prefer precise language such as “the program helped them see the field differently” or “they found the opportunity through the community.”
+Do not claim that a course, community, tool, or mentor caused the whole outcome unless the evidence clearly supports that claim. Prefer precise language such as “the program helped them see the field differently” or “they found the opportunity through the community.”
 
 ## Sensitive-content gate
 
-Flag the following for explicit subject approval before publication:
+Flag these items for explicit subject approval before publication:
 
 - Salary, pay cuts, financial hardship, or compensation comparisons
 - Health, family, immigration, legal, or personal circumstances
-- Harsh language about a former employer, role, or career decision
+- Harsh language about a past employer, role, or career decision
 - Unreleased work, confidential projects, or unpublished titles
 - Direct quotations, especially strong opinions or criticisms
-- Claims about why an employer selected the person
+- Claims about why an employer hired the person
 - Claims of causation or impact that cannot be independently verified
 - Precise timelines that could reveal private circumstances
 
-If approval is unavailable, use an honest approved fallback. For example, replace an exact compensation figure with “they accepted a lower-paying role” only if that broader statement is approved and still useful. Do not hide uncertainty by making the story more dramatic.
+If approval is unavailable, use an honest fallback. For example, replace an exact compensation figure with “they accepted a lower-paying role” only if that broader statement is approved and still useful. Do not hide uncertainty by making the story more dramatic.
 
 ## Build the story beats
 
-Create a private working outline before writing. Do not show it unless the user asks.
+Create a private working outline before writing. Keep it concise.
 
 ### 1. Before-state
 
 Capture the subject’s role, background, and the reader-relevant version of their uncertainty. Include what they were considering instead when that alternative mirrors the audience’s current life.
 
-Keep only details that move the story. A long list of reading, credentials, or earlier roles usually weakens the post. Include a detail only when it makes the change feel real or explains the subject’s decision.
+Keep only details that move the story. A long list of reading, credentials, or earlier roles usually weakens the post. Include a detail when it makes the change feel real or explains the subject’s decision.
 
 ### 2. Trigger
 
@@ -1514,7 +1502,7 @@ Avoid vague phrases such as “the experience was transformative.” State what 
 
 ### 4. Now-state
 
-Record the current role, organization or team if approved, and what the person actually does. Translate jargon enough for the target audience to understand the work.
+Record the current role, organization or team if approved, and what the person actually does. Translate technical jargon enough for the target audience to understand the work.
 
 Use named outputs only when they add proof or interest. Do not pile up credentials. One meaningful project, publication, placement, product, or grant can do more work than a long resume list.
 
@@ -1526,23 +1514,23 @@ Map the sequence from joining or starting to the current result. Calculate a sho
 
 Pull three to five verbatim candidate quotes. Favor quotes that speak to the reader’s identity or uncertainty, not only the subject’s achievement.
 
-Useful quote categories include:
+Good quote categories are:
 
 1. **Discovery:** “I did not know this path was open to someone like me.”
 2. **Mechanism:** “I found the opportunity through the community.”
 3. **Conviction:** “I would make the same choice again.”
 
-Light trimming is allowed only when it preserves the speaker’s exact meaning and grammar. Never rewrite a quote into something the person did not say.
+Light trimming is allowed only when it preserves the exact meaning and grammar. Do not rewrite a quote into something the subject did not say.
 
 ## Generate three hook options
 
-For feed-based platforms, the first two lines determine whether someone keeps reading. Draft three distinct hooks before drafting the full post. Keep each to two short sentences, usually under about 140 characters total where platform limits make that useful.
+For feed-based platforms, the first two lines determine whether someone keeps reading. Write three distinct hooks before writing the full post. Keep each to two short sentences, usually under about 140 characters total where platform limits make that useful.
 
 ### Hook A: Discovery
 
 Use when the audience shares the subject’s former blocker.
 
-**Formula:** The subject did not know or believe a relevant possibility. Soon afterward, they reached a specific outcome through a surprising, concrete mechanism.
+**Formula:** The subject did not know or believe a relevant possibility. Soon afterward, they reached a specific outcome through a surprising concrete mechanism.
 
 This is often the best default because it makes the reader think, “That might be me.”
 
@@ -1560,36 +1548,36 @@ Use only when a meaningful cost or risk is approved and the audience will read i
 
 **Formula:** The subject accepted a specific cost to do something. Now they are taking a concrete action or doing meaningful work.
 
-Do not use a sacrifice hook if it suggests participation requires hardship or if it distracts from a more accessible message.
+Do not use a sacrifice hook if it implies that participation requires hardship or if it distracts from a more accessible message.
 
-Choose one recommended hook. Give one sentence on why it fits the target audience, and one short sentence on why each alternative is less suitable.
+Choose one recommended hook. Briefly explain why it fits the target audience, and state why the other two are less suitable.
 
 ## Draft the post
 
-Aim for roughly 160 to 220 words unless the platform or audience needs a different length. Shorter is usually stronger.
+Aim for roughly 160 to 220 words unless the platform or audience calls for another length. Shorter is usually stronger.
 
 Use this sequence:
 
 1. **Hook:** Use the recommended hook.
 2. **Before-state:** One short paragraph showing the subject’s previous situation and a relevant alternative path.
-3. **Name the intervention:** State clearly that they joined the program, used the resource, or entered the community. Do not leave this touchpoint implicit.
-4. **Mechanism and outcome:** Explain the concrete turning points, then land the immediate result in plain language. A short outcome sentence can be effective: “They applied and got in.”
+3. **Name the intervention:** State clearly that they joined the program, used the resource, or entered the community. Do not leave the mechanism implicit.
+4. **Mechanism and outcome:** Explain the concrete turning points, then land the immediate result in plain language.
 5. **Current work:** Describe what they do now and why it matters in understandable terms.
 6. **Optional honest cost:** Include only if approved and genuinely useful.
 7. **Optional pull quote:** Include only if it adds a distinct truth not already carried by the hook or body.
 8. **CTA:** Address the reader directly and give one clear next action.
 
-If the platform is known to reduce reach for posts containing external links, use the organization’s approved alternative, such as a first comment, profile link, or designated landing page. Treat this as a platform-specific publishing choice, not a universal rule.
+For external links on platforms that reduce reach for in-post links, place the link in a comment, profile page, or designated destination instead of the body. Make this a publishing choice, not an unverified universal rule.
 
 ## Style rules
 
-Adapt to the selected voice guide. If no guide exists, use these broadly useful defaults:
+Adapt to the chosen brand voice, but use these broadly useful defaults:
 
 - Use short paragraphs and generous whitespace.
 - Write direct declarative sentences.
 - Prefer simple past tense when possible.
 - Use concrete names, roles, dates, and figures only when verified and approved.
-- Use the subject’s first name after the first full introduction if it fits the publication’s tone and the subject has consented.
+- Use the subject’s first name after the first full introduction if that fits the publication’s tone and consent.
 - Prefer plain verbs over corporate language.
 - Let evidence create admiration. Do not call the subject exceptional, inspiring, or brilliant without showing why.
 - Use contractions if the voice is conversational.
@@ -1619,8 +1607,7 @@ Recommend one. Discovery quotes are often strongest because they work without su
 
 Before sending the draft for review, check:
 
-- Is there a legitimate purpose and clear authorization for every non-public source used?
-- Is every name, role, date, figure, title, and quote verified?
+- Is every name, role, date, figure, and title verified?
 - Are transcript-derived details cross-checked where needed?
 - Does the post show a concrete mechanism, not just a result?
 - Does it avoid overstating causation?
@@ -1628,7 +1615,6 @@ Before sending the draft for review, check:
 - Does the opening mirror a real audience concern?
 - Is the current work understandable to a non-specialist reader?
 - Have sensitive claims and direct quotes been flagged for approval?
-- Does the draft omit unrelated or sensitive personal details?
 - Is the CTA clear and directed at the intended reader?
 - Are there no em dashes, unsupported superlatives, corporate phrases, or generic filler?
 
@@ -1646,9 +1632,9 @@ In the accompanying message, provide only:
 - A list of missing information that would strengthen the post
 - The document location or link, if applicable
 
-Do not treat the first draft as final. If feedback says “make the hook better,” generate new hooks rather than making tiny edits. If asked to make it shorter, cut secondary biography first while preserving the mechanism and outcome. If a subject rejects a sensitive line, replace it with an approved fallback without weakening the whole story.
+Do not treat the first draft as final. If feedback says “make the hook better,” generate new hooks rather than making tiny edits. If asked to make it shorter, cut secondary biography first while preserving the mechanism and outcome. If a subject rejects a sensitive line, replace it with the approved fallback without weakening the whole story.
 
-After the final version is accepted, review feedback for reusable lessons. Update the workflow only when a recurring pattern is clear, such as a missing intake question, a consistent voice preference, or a repeated verification issue. Do not invent process changes from a clean review cycle.
+After the final version is accepted, review the feedback for reusable lessons. Update the workflow only when a recurring pattern is clear, such as a missing intake question, a consistent voice preference, or a repeated verification issue. Do not invent process changes from a clean review cycle.
 
 
 ---
@@ -1805,7 +1791,7 @@ the user's planning system. Keep the final plan short enough to guide the week.
 
 ---
 name: review-and-plan-a-month
-description: Close one month honestly, then create a small, capacity-checked and explicitly approved plan for the next month using evidence, trade-offs, and concrete commitments.
+description: Close one month honestly, then create a small, capacity-checked, explicitly approved plan for the next month using authorized evidence, clear trade-offs, and concrete commitments.
 ---
 
 # Review and plan a month
@@ -1819,12 +1805,12 @@ Review and planning belong in the same session. The structural cause of a missed
 This workflow produces:
 
 - An evidence-based account of what happened during the review month.
-- A concise verdict on progress toward active long-range goals.
+- A direct verdict on progress toward active long-range goals.
 - A month-level picture of selected work and life signals, such as focus, sleep, energy, training, or completed work.
 - A written **Review** for the month ending.
 - A written **Plan** for the month beginning, with a named theme, no more than three major outcomes, explicit trade-offs, and a pre-mortem.
 
-Only gather, discuss, or save information that supports one of these outputs.
+Only gather, discuss, or save information that supports one of these outputs. Do not turn a planning review into a profile of the user or other people.
 
 ## When to run it
 
@@ -1836,11 +1822,26 @@ Default timing:
 - Otherwise, review the current month to date and plan the next month. Clearly label a partial-month review and state the days remaining.
 - If the user asks only for forward planning, review first because the evidence should shape the plan. The user may explicitly choose to skip the review.
 
-State the ranges plainly before proceeding:
+State the ranges before proceeding:
 
 > Reviewing **March 2026** (01 Mar–31 Mar). Planning **April 2026**.
 
 Ask whether the user means calendar months or a practical range that includes an overlapping partial week. Record the actual planning range in the finished plan.
+
+## Privacy, authorization, and access boundaries
+
+Use private data only when it is necessary for the user’s stated planning purpose and the user has clear authority to provide or authorize access to it. This applies especially to calendars, journals, health data, private messages, meeting notes, personnel records, and records that identify or describe other people.
+
+Before accessing a sensitive or people-related source, establish all of the following:
+
+1. **Legitimate purpose:** State the planning question the source can answer, such as identifying fixed commitments, checking a delivery milestone, or calculating a user-selected health measure.
+2. **Clear authorization:** Confirm that the user is authorized to access the source and has asked for it to be used for this review. Do not infer authority from a connected account alone.
+3. **Minimum necessary scope:** Limit the date range, fields, records, and recipients to what the question requires. Prefer totals, counts, status summaries, and scheduling constraints over raw content.
+4. **Sensitive-data handling:** Do not extract or repeat health details, private journal text, message content, relationship details, protected characteristics, or information about other people unless it is directly necessary and the user has explicitly authorized its use.
+5. **Consent and expectations:** Respect consent, confidentiality, and workplace or personal privacy expectations. Do not use records about another person to make judgments about their character, health, personal life, or suitability.
+6. **Output boundary:** Save only information appropriate for the destination. A shared workspace, team plan, or broadly visible calendar must not receive private details merely because they were available in a source.
+
+If the required purpose, authority, or access boundary is unclear, ask a focused clarification question or use a less sensitive source. If a planning conclusion can be reached without personal details, omit them.
 
 ## Operating rules
 
@@ -1854,7 +1855,8 @@ Ask whether the user means calendar months or a practical range that includes an
 8. **No saved plan without explicit approval.** A plan assembled from notes is a draft, not a decision. The user must restate or materially confirm the theme and commitments, then explicitly approve it.
 9. **Use explicit dates.** Use **DD MMM** format unless the user prefers another unambiguous convention.
 10. **Keep records useful, not exhaustive.** Save decisions, evidence, and constraints rather than a meeting transcript.
-11. **Do not lecture.** Where personal practice, training, health, or recovery is in scope, provide the numbers, the direct conclusion, and the agreed commitment. Give specialist advice only when asked and when appropriate.
+11. **Do not lecture.** Where training, health, or recovery is in scope, provide the numbers, direct conclusion, and agreed commitment. Give specialist guidance only when asked and appropriate.
+12. **Respect access boundaries.** Keep private source material separate from any shared output. Summarize at the least identifying level that still supports action.
 
 ## Step 1: Determine the range and gather evidence
 
@@ -1862,32 +1864,36 @@ Determine the review month, prior comparison month, and planning month. Then mak
 
 Choose sources that match the user’s chosen system: a task manager, project tracker, calendar, spreadsheet, notes application, health tracker, training log, or user-supplied facts. If no source is connected, ask for a short factual inventory. Never imply that unavailable data was checked.
 
+Before the batch, identify which sources are sensitive and confirm the purpose and authorization for each. Do not read entire journals, message archives, personnel folders, or calendars by default. Request only the fields and periods needed.
+
 | Evidence area | Gather in the initial pass |
 |---|---|
 | Previous monthly record | Theme, promised outcomes, commitments, and prior review findings |
 | Weekly records | Plans and reviews in the review range; repeated blockers, milestones, and carried work |
 | Goals | Active weekly, monthly, quarterly, and annual goals; status, deadlines, and notes |
 | Work delivered | Completed tasks, decisions, projects, or deliverables; grouped into useful domains |
-| Calendar | Next-month travel, leave, events, fixed deadlines, recurring commitments, and heavy meeting weeks |
-| Daily signals | User-selected ratings, focus time, journals, habits, or mood notes |
+| Calendar | Next-month travel, leave, fixed deadlines, recurring commitments, and heavy meeting weeks |
+| Daily signals | User-selected ratings, focus time, habits, and only the minimum journal themes needed |
 | Sleep and recovery | Optional sleep duration, sleep quality, and same-source recovery trends |
 | Training or practice | Optional sessions from the review and prior months, plus the live commitment or schedule |
 
 For large sources, return computed statistics and a few representative themes rather than raw entries. Long journals and month-long event lists can crowd out the actual review. Use filtered queries, aggregation, summaries, or a delegated helper when available.
 
-If a helper is used for a large calendar or journal source, give it a narrow brief: use only authorized read access, analyze only the requested date range, and return a concise planning summary rather than raw data. The summary should include:
+If a helper is used for a calendar, journal, private communication, or other sensitive source, give it a narrow brief. The brief must specify the authorized date range, planning purpose, allowed fields, and required output boundary. Ask it to return only a concise planning summary, not raw records or identifiable details.
+
+A calendar summary should include:
 
 - Fixed multi-day blocks, such as travel, leave, or conferences.
 - Approximate meeting load by week.
 - Important recurring series.
-- Protected personal or social commitments.
+- Protected personal or social commitments, only at the level needed for planning.
 - Planning anomalies, such as meetings inside unavailable periods or likely time-zone mistakes.
 
 Before detailed monthly planning, re-read any weekly plans that overlap the beginning of the planning range. A weekly plan may already define that period in more detail. Reference and reconcile it with monthly outcomes; never duplicate or overwrite it.
 
 ## Step 2: Show the evidence picture
 
-Present a compact factual picture before asking the user to explain it. Be direct, numeric where useful, and concise.
+Present a compact factual picture before asking the user to explain it. Be direct, numeric where useful, and concise. Do not include personal source excerpts unless they are necessary, authorized, and suitable for the intended output location.
 
 ### Training, health, or personal-practice verdict
 
@@ -1904,10 +1910,10 @@ If the user has a current commitment in this area, include this section unless t
 
 Use this verdict taxonomy when it fits:
 
-- **ON TRACK**: key measures meet at least 90% of target and consistency is intact.
-- **BEHIND**: a key measure is about 60–90% of target, or there was a meaningful consistency break.
-- **OFF TRACK**: a key measure is below 60% of target or there was a prolonged gap.
-- **AT RISK**: injury, safety, burnout, or sustained decline makes the plan unsafe or unlikely.
+- **ON TRACK:** Key measures meet at least 90% of target and consistency is intact.
+- **BEHIND:** A key measure is about 60–90% of target, or there was a meaningful consistency break.
+- **OFF TRACK:** A key measure is below 60% of target or there was a prolonged gap.
+- **AT RISK:** Injury, safety, burnout, or sustained decline makes the plan unsafe or unlikely.
 
 Adjust thresholds only when the user’s domain needs different ones, and state the adjustment. If tracking may be incomplete, ask: “The record shows this. Does that match reality?” before making a strong judgment.
 
@@ -1919,11 +1925,15 @@ Summarize weekly commitments as completed, missed, deferred, or rolled forward. 
 
 Also summarize completed work in a few useful domains. Avoid a wall of bullets. The question is whether effort created intended progress.
 
+When delivery involves other people, describe project evidence and coordination needs, not personal judgments. For example, write “waiting for stakeholder review” rather than speculating about an individual’s motivation or reliability.
+
 ### Life signals
 
-Include only measures the user chooses to track. Useful measures include rating distribution and average, focus hours, low-focus days, sleep duration, sleep quality, recovery trends from a consistent source, and repeated themes in written notes.
+Include only measures the user chooses to track. Useful measures include rating distribution and average, focus hours, low-focus days, sleep duration, sleep quality, recovery trends from a consistent source, and repeated themes in user-authored notes.
 
 Flag meaningful patterns, such as low average sleep, repeated short nights, several consecutive low-rating days, an extended low-focus streak, or an apparent mismatch between positive ratings and written notes describing exhaustion or stress. Numerical averages are not complete truth. Raise the mismatch directly and briefly.
+
+Treat health and journal information as sensitive. In a saved review, record the planning-relevant conclusion rather than intimate detail unless the user specifically requests otherwise and the destination is private and appropriate.
 
 ## Step 3: Reflect on the month
 
@@ -1960,6 +1970,8 @@ Make the answer measurable or plainly verifiable. Limit the plan to three outcom
 ### Move 2: Establish current state
 
 Size the gap with evidence, not mood. Inspect the relevant draft, pipeline, milestone, backlog, baseline metric, or other domain-specific reality. If the gap cannot be described, gather the missing evidence before designing the path.
+
+Use authorized sources only. When work involves a team or external parties, gather the minimum operational facts needed, such as status, dependency, date, and owner. Do not incorporate unrelated personnel information or private communications.
 
 ### Move 3: Work backward to build a path
 
@@ -2050,6 +2062,8 @@ After explicit sign-off, write two records in the user’s chosen system:
 
 Create a missing monthly record if the system supports it. Use one final write operation when possible. Before overwriting an existing plan, show it to the user and resolve the conflict.
 
+Review the destination’s audience and permissions before saving. Save only planning-relevant information that people with access to that destination should receive. Keep sensitive health, journal, calendar, private-message, and third-party information out of shared records. If needed, store a private detailed note separately and save only a minimal operational summary in the shared plan.
+
 Use this review template:
 
 ```markdown
@@ -2088,15 +2102,17 @@ Confirm the save in one line and stop.
 
 ## Step 6: Improve the workflow
 
-At the end of every run, make one precise improvement to the reusable workflow, its templates, or its data mapping. Store it in the user’s chosen workflow document or improvement log. If no suitable location exists, present the proposed edit as a short durable rule the user can save where they prefer.
+At the end of every run, capture one precise improvement to the reusable workflow, its templates, or its data mapping in the user’s chosen workflow document or improvement log. If no suitable location exists, present the proposed edit as a short durable rule the user can save where they prefer.
 
-Look for a read that was noisy, a wrong data assumption, a misleading metric, a question the user corrected, or a repeatable pattern future sessions should know. Prefer one specific edit over a vague reminder.
+Look for a read that was noisy, a wrong data assumption, a misleading metric, a question the user corrected, a privacy boundary that needed clarification, or a repeatable pattern future sessions should know. Prefer one specific edit over a vague reminder.
 
 ## Audit checks
 
 Before finishing, verify:
 
 - Review and planning ranges are explicit.
+- Each sensitive source had a legitimate planning purpose and clear authorization.
+- Only the minimum relevant records, fields, and date range were used.
 - Evidence was shown before reflective prompts.
 - Strong verdicts account for known data-quality limits.
 - The plan has a named theme and no more than three outcomes.
@@ -2108,6 +2124,8 @@ Before finishing, verify:
 - Personal or training commitments are specific when in scope.
 - The pre-mortem contains counters.
 - The user explicitly approved the plan before it was saved.
+- Saved content contains only information appropriate for the destination’s access boundary.
+- Any third-party information was minimized, necessary, authorized, and not used for personal profiling.
 
 ## Common failure modes
 
@@ -2122,6 +2140,9 @@ Before finishing, verify:
 - Applying generic productivity rituals instead of fixing the actual drain.
 - Overwriting an existing record without resolving the difference.
 - Treating a voice note, brainstorm, or imported task list as a confirmed commitment.
+- Pulling extensive private records without a clear need, authorization, consent-aware handling, or appropriate output boundary.
+- Copying sensitive source material into a shared review when a minimal planning summary would suffice.
+- Using notes about other people to infer personal traits instead of describing the specific project dependency, decision, or coordination need.
 
 
 ---
@@ -2402,18 +2423,20 @@ before status updates and background.
 
 ---
 name: capture-meeting-actions
-description: Review meeting records, identify genuine unfinished commitments, create clear deduplicated tasks for confident follow-ups, and batch only questions that require judgment.
+description: Review authorized meeting records to identify genuine unfinished commitments, create clear deduplicated tasks for confident follow-ups, and batch only the questions that require user judgment.
 ---
 
 # Capture meeting actions
 
-Turn meeting records into reliable post-meeting follow-up tasks. Use this as a daily sweep, for a selected date range, or for a manually supplied set of meetings.
+Turn authorized meeting records into reliable post-meeting follow-up tasks. Use this as a daily sweep, for a selected date range, or for a manually supplied set of meetings.
 
 The goal is not to convert every discussion into work. Each meeting should result in zero tasks, one combined follow-up, or multiple separate tasks only when there is a genuine, unfinished commitment that should be tracked.
 
-## Purpose and operating rules
+## Purpose, authorization, and operating rules
 
-Before each run, remember these outcomes:
+Use this workflow only for a legitimate work purpose and with clear authorization to access the selected meeting records and task system. Read only the minimum relevant records, transcripts, notes, and linked materials. Do not copy unrelated personal, sensitive, or confidential information into tasks, summaries, or reusable guidance. Keep task content within the access boundary of the chosen task system and its intended audience.
+
+Before each run, apply these outcomes:
 
 - **0 tasks** when work was completed in the meeting, belongs to another owner, is already tracked, or the meeting was only for information gathering.
 - **1 task** when related actions can be completed together for the same person or group on the same time horizon.
@@ -2421,16 +2444,16 @@ Before each run, remember these outcomes:
 
 Use this evidence order when sources conflict:
 
-1. **Transcript or recording-derived text**: strongest evidence of who agreed to do what and when.
-2. **Human-written notes**: useful supporting evidence, especially explicit action sections.
-3. **Automated summary**: useful for orientation, but not authoritative for ownership.
-4. **Pre-meeting agenda**: describes intended discussion, not a commitment.
+1. **Transcript or recording-derived text:** strongest evidence of who agreed to do what and when.
+2. **Human-written notes:** useful supporting evidence, especially explicit action sections.
+3. **Automated summary:** useful for orientation, but not authoritative for ownership.
+4. **Pre-meeting agenda:** describes intended discussion, not a commitment.
 
-Automated summaries often misattribute work, especially in recurring one-to-ones, brainstorming sessions, and meetings where attendees list their own to-dos. Never create a task solely because a summary labels it as an action item. Confirm the owner in the transcript or reliable notes.
+Automated summaries often misattribute work, especially in recurring one-to-ones, brainstorming sessions, and meetings where attendees list their own to-dos. Never create a task solely because a summary labels it as an action item. Confirm ownership in the transcript or reliable notes.
 
-Track unfinished outcomes, not conversation. Skip work that was completed live, delegated to another owner, already tracked elsewhere, or merely discussed. An idea, a statement of interest, or an open question is not a task unless someone accepted responsibility for a concrete outcome.
+Track unfinished outcomes, not conversation. Skip work that was completed live, delegated to another owner, already tracked elsewhere, or merely discussed. An idea, statement of interest, or open question is not a task unless someone accepted responsibility for a concrete outcome.
 
-Apply known delegation boundaries supplied by the user or organization. Attendance at a meeting does not make the user accountable for all work in that area.
+Apply responsibility boundaries supplied by the user or organization. Attendance at a meeting does not make the user accountable for all work in that area.
 
 ## 1. Select the meetings
 
@@ -2439,11 +2462,11 @@ Accept a date in `YYYY-MM-DD` format, a relative date such as “yesterday,” a
 - Before a configurable early-morning cutoff in the user’s local time, process the previous day.
 - Otherwise, process the current day.
 
-State the selected scope once, for example: “Scanning meetings for 23 Apr.” Find meetings attended by the user and collect:
+State the selected scope once, for example: “Scanning meetings for 23 Apr.” Find meetings attended by the user and collect only the information needed for triage:
 
 - Title, date, and time
 - Meeting-record link or identifier
-- Attendees, if available
+- Attendees and relationship context, if available
 - Transcript, notes, summary, and relevant linked context
 
 Report a compact count before processing. Do not infer actions from a meeting title alone.
@@ -2464,6 +2487,8 @@ For long transcripts, use a repeatable search, extraction, or chunking method ra
 
 Review summary action items as candidates, then verify them against the transcript and surrounding conversation. A promise may have been conditional, reassigned, fulfilled live, or directed at another attendee.
 
+If an artifact was created, shared, pasted, or otherwise delivered during the meeting, treat the related commitment as complete unless the record shows additional work remains.
+
 ## 3. Triage each meeting
 
 Classify the meeting loosely. Classification provides a starting expectation, not a rule that overrides evidence.
@@ -2481,10 +2506,10 @@ For every meeting, identify:
 - Relationship context and why the meeting occurred
 - Candidate actions owned by the user
 - Work completed during the meeting
-- Work delegated to another named owner
+- Work delegated to another named owner or responsible role
 - Explicit future commitments and timing
 - Enough neutral context for a task to remain understandable weeks later
-- Source and related links
+- Source and related links that the task audience is authorized to access
 
 Create no task when work was completed live, another person owns it, the meeting was purely informational and any needed synthesis is already recorded, the action is covered by an active task, or the statement was not a commitment.
 
@@ -2499,7 +2524,7 @@ Split tasks when:
 - An internal decision and an external response are distinct outcomes.
 - A combined task would have an unclear finish line.
 
-This is a readiness gate: do not proceed to task creation until each proposed task has a clear owner, unfinished outcome, sensible shape, and enough context to stand alone.
+This is a readiness gate. Do not proceed to task creation until each proposed task has a clear owner, unfinished outcome, sensible shape, and enough context to stand alone.
 
 ## 5. Write the task
 
@@ -2526,7 +2551,8 @@ Do not raise priority merely because capture happened late.
 
 ```markdown
 [Two or three sentences of time-independent context. Include relevant absolute
-dates, why this matters, the commitment, and any necessary sensitivity.]
+dates, why this matters, the commitment, and any necessary sensitivity. Omit
+unrelated personal or confidential details.]
 
 ## Actions
 - [Concrete action]
@@ -2582,11 +2608,11 @@ Wait for answers before creating uncertain tasks. After answers arrive, create o
 
 Before declaring the run complete, capture lessons that genuinely improve future runs. Keep this separate from the meeting task itself.
 
-- Add a short example or note to a reusable meeting-archetype reference when a recurring pattern affects triage, such as a common attribution error, reliable sign of in-meeting completion, or an archetype exception.
+- Add a short generalized example or note to a reusable meeting-archetype reference when a recurring pattern affects triage, such as a common attribution error, reliable sign of in-meeting completion, or an archetype exception.
 - Update the core workflow only for cross-cutting principles, changed defaults, or a new required step.
-- Record a new delegation boundary in the user’s or organization’s maintained responsibility reference when it applies beyond one meeting.
+- Record a new responsibility boundary in the user’s or organization’s maintained responsibility reference when it applies beyond one meeting.
 
-Do not turn one-off facts into permanent rules. Small additions to an examples or patterns reference can be made directly. Ask for confirmation before structural workflow changes, such as adding or removing steps or changing the evidence order. Briefly report any reusable guidance added or changed.
+Do not turn one-off facts, personal details, or sensitive meeting content into permanent rules. Small additions to a patterns reference can be made directly. Ask for confirmation before structural workflow changes, such as adding or removing a step or changing the evidence order. Briefly report any reusable guidance added or changed.
 
 ## 10. Audit and report
 
@@ -2598,326 +2624,127 @@ Before finishing, verify that:
 - Active duplicates were not recreated.
 - Titles are action-oriented and notes stand alone.
 - Dates, priority, and estimates are plausible.
-- Each task links to its source record.
+- Each task links to its authorized source record where appropriate.
 - Message drafts are ready to send and follow the user’s preferences.
+- Task notes exclude irrelevant sensitive or personal information.
 - Every uncertain item is either asked as a specific question or explicitly deferred.
 
-Report the essential outcome only: meetings reviewed, tasks created or updated with due dates, skipped items with brief reasons, unresolved questions, and any reusable guidance changes. Keep status updates terse and factual.
+Report only the essential outcome: meetings reviewed, tasks created or updated with due dates, skipped items with brief reasons, unresolved questions, and any reusable guidance changes. Keep status updates terse and factual.
 
 
 ---
 name: turn-a-message-into-a-task
-description: Read a message or conversation, identify the real commitment, gather only the context needed, pre-complete the work where authorized, and create a trackable task only when it adds value.
+description: Read the full conversation, work out the real action, do useful preparation, and create a clear task only when needed.
 ---
 
 # Turn a message into a task
 
-Use this workflow when a message, conversation link, email, ticket, or meeting follow-up may require action. The goal is not to copy a message into a task list. The goal is to reduce the remaining human work to a clear, safe, and appropriately small next step.
+Use this when a conversation contains a request or follow-up that may need a
+task record.
 
-Use only sources and access rights that the user is authorized to use for this purpose. When communications or records concern other people, use the minimum relevant information, omit unrelated sensitive details, and keep the resulting task within the intended access boundary.
+## 1. Read the whole conversation
 
-## Operating principles
+Open the parent message and all replies. Identify the people involved, the
+actual request, promises already made, deadlines, links, and whether someone has
+already completed the work.
 
-1. **Read before acting.** The linked message may be only part of the request; later replies may resolve, change, or reassign it.
-2. **Find the outcome, not just the wording.** Turn “Can you look at this?” into a concrete deliverable or decision.
-3. **Research selectively.** Use a few high-value sources, not a broad sweep of every system.
-4. **Pre-complete useful work.** Draft the response, prepare the evidence, or write the decision brief before logging a task.
-5. **Draft, do not send.** Do not send messages, email, invitations, approvals, or other external actions without explicit authorization.
-6. **Do not track dead work.** Never create a task for work already completed, cancelled, or clearly owned by someone else.
-7. **Use a task record only when it helps.** A task should make deferred work easier to complete or remember, not add bureaucracy.
+## 2. Work out the real action
 
-## 1. Open the source and read the full conversation
+Rewrite the request as an outcome. Separate the user's action from work owned by
+other people. If the message can be answered or resolved immediately, do that
+instead of creating a task for its own sake.
 
-Start from the supplied message, conversation, or ticket. If the link points to a reply, open the parent and every reply. If it points to a top-level message, inspect nearby context and open its thread or related updates if one exists.
+## 3. Gather enough context
 
-Record the following in working notes:
+Check relevant documents, prior conversations, meeting notes, records, or public
+sources when they can answer factual questions. Match research effort to the
+stakes. Do not delay a simple task with an exhaustive search.
 
-- The linked message and the parent conversation.
-- Who is involved and each person’s role where relevant.
-- The actual ask, any promises, and the expected deliverable.
-- Deadlines, dependencies, and waiting conditions.
-- Links, attachments, documents, or referenced systems.
-- Later replies that answer, supersede, defer, reassign, or close the work.
+## 4. Do useful preparation
 
-If display names are missing or unclear, resolve them from authorized directory information or unambiguous mentions. Do not write vague notes such as “reply to that person” when a role or name is available and appropriate to record.
+When authorized, draft the reply, assemble the figures, outline the document,
+or prepare the decision before creating the record. Keep actions that affect
+other people in draft form until the user approves them.
 
-### Recency gate
+## 5. Decide whether a record helps
 
-Before researching or creating anything, ask:
+Create a task when work remains, it may be forgotten, or another commitment
+depends on it. Skip the record when the action is complete, trivial, duplicated,
+or better owned elsewhere.
 
-- Has someone already answered the question?
-- Has the requester withdrawn or changed the ask?
-- Has ownership moved to another role?
-- Has the due date passed in a way that changes the useful action?
+## 6. Create a useful task
 
-If the work is done, do not create a task. Report the evidence briefly and ask the user only if there is genuine ambiguity about whether follow-up is still wanted.
-
-## 2. Classify the task shape
-
-State the task shape in your working notes. This determines what “pre-completion” means.
-
-| Task shape | Typical outcome | Best preparation |
-|---|---|---|
-| Reply owed | Answer, feedback, decision, reassurance, or clarification | Draft a concise reply supported by evidence. |
-| Artefact owed | Document, reference, introduction, data pull, plan, or summary | Draft or assemble the artefact, with clear gaps marked. |
-| Decision needed | The user must choose between meaningful options | Write a short decision brief with a recommendation. |
-| Follow-up or delegation | Chase, schedule, assign, or coordinate | Draft the follow-up or prepare the handoff details. |
-| Multi-part request | Several connected deliverables | Keep one task with sub-parts unless owners or timelines differ. |
-
-Default to one task for a connected request. Split it only when the parts have genuinely different owners, dependencies, deadlines, or completion criteria.
-
-## 3. Gather only the context that changes the answer
-
-Choose sources based on the task. Do not search private communications or personnel records without a legitimate work purpose and clear authorization.
-
-Useful source choices include:
-
-- **Person-related context:** prior relevant correspondence, meeting notes, work records, or approved assessment materials. Use only role-relevant evidence. Avoid unrelated personal history or sensitive information.
-- **Project or event context:** recent channel history, project documentation, plans, decision logs, and linked files.
-- **Factual or data questions:** the system of record, approved reports, event records, finance or operations documentation, and reliable public sources where suitable.
-- **Policy or process questions:** current policy pages, process owners, prior approved decisions, and jurisdiction-specific requirements. Do not assume that a policy from one team, location, or legal entity automatically applies elsewhere.
-- **Related asks:** search for recent same-topic requests to avoid duplicate replies and to identify one shared answer where appropriate.
-- **Linked documents:** open and read the relevant parts. For multi-section documents, inspect every section or tab before concluding that the message captures the whole ask.
-
-For external research, use approved non-invasive retrieval methods. Do not use tools that expose private browsing activity, bypass access controls, or alter external systems. Verify material facts, dates, and links from reliable sources.
-
-Stop research when you can either complete the preparation or name the precise blocker. Two or three well-chosen sources are usually better than many shallow searches.
-
-## 4. Pre-complete the work
-
-Do as much as is safe and authorized before asking the user to act.
-
-### For replies and written artefacts
-
-If the organization or user has an approved writing guide, read and follow it before drafting. Otherwise, use a clear, concise style matching the conversation’s level of formality.
-
-- Write the draft in the user’s likely voice only when authorized to do so.
-- Keep the draft shorter than a first instinct suggests.
-- Ask one clear question when one will move the work forward; do not turn a simple reply into an unnecessary questionnaire.
-- Include coaching, rationale, or detailed explanation only when it is useful to the recipient.
-- Route approvals through the established process rather than making informal commitments on the user’s behalf.
-- Preserve meaningful uncertainty. For example: “I can support this in principle, subject to the normal review process.”
-
-Where the chosen system supports drafts, stage the draft in the original conversation or appropriate draft location. Do not send it.
-
-### For decisions
-
-Prepare a brief with two or three viable options. For each option, include evidence, trade-offs, and material risks. Make a recommendation and explain why it best fits the known goals. Do not present an unstructured list of facts when a recommendation is possible.
-
-### For missing information
-
-Never invent a fact, number, date, contact detail, policy interpretation, or URL. Use visible placeholders:
-
-- `[VERIFY: confirm current figure in the system of record]`
-- `[FILL IN: firsthand observation needed]`
-- `[SEARCH: approved source for the current policy link]`
-
-Leave memory-dependent or judgment-dependent sections in the draft rather than deleting them. A clearly incomplete draft often still saves framing time, but it must be marked as not ready to send.
-
-## 5. Ask questions only at a real decision fork
-
-Before asking the user questions, check whether their stance is already documented in the conversation, prior correspondence, a decision log, or an approved planning document. A documented decision is better than re-asking the same question.
-
-Ask questions only when a wrong assumption would materially waste time, create risk, or change the substance of the output. Ask two to four targeted questions at most.
-
-Always provide a short context recap before the questions: who is involved, what has happened, what is being asked now, and what tension or trade-off requires a choice. Permit multiple selections or a free-text response if choices can reasonably be combined.
-
-Use this format:
-
-```markdown
-## Context
-[Who asked, what led here, what is now needed, and the key evidence.]
-
-## Decisions needed
-1. [Specific decision and options, including “other” where useful.]
-2. [Specific decision and options.]
-
-## What I will do after your answer
-[How the answer changes the draft or task.]
-```
-
-If there is no real fork, make a reasonable metadata and drafting judgment, disclose it in the final report, and allow correction later.
-
-## 6. Decide whether a task record is useful
-
-Skip the task record when the work is complete, duplicated, cancelled, owned elsewhere, or can be finished in one short sitting without anything to wait for. For example, if a reply draft is ready for a quick review and send, deliver the draft directly rather than creating a record that will outlive the work.
-
-Create a task record when one or more of these apply:
-
-- The work is deferred or cannot be done now.
-- A deadline, dependency, or waiting period needs tracking.
-- Multiple steps remain or work is spread across days.
-- The user explicitly asked for a record.
-- The work needs a durable handoff or audit trail within the authorized team boundary.
-
-When uncertain, favor chat-only delivery for simple reply tasks and a task record for substantive multi-step work.
-
-## 7. Create a high-value task record
-
-Use the user’s chosen task system and verify required fields against its current schema. Do not rely on hard-coded identifiers, saved personal defaults, or a particular vendor’s terminology.
-
-| Field | Standard |
-|---|---|
-| Title | Imperative, specific, and outcome-based; ideally short enough to scan quickly. |
-| Status | The appropriate open state, such as `To do`. |
-| Owner | The responsible person or role, if the system supports ownership. |
-| Due date | A real implied or explicit date; otherwise leave blank. |
-| Priority | Best judgment based on impact, urgency, and people waiting. |
-| Estimate | Remaining human effort, not the effort already pre-completed. |
-| Area or project | The best-fitting approved category. |
-| Notes | Context, source, prepared work, and exact remaining steps. |
-
-Use this Notes template:
-
-```markdown
-**What:** [One sentence: requested outcome and who is waiting.]
-**Source:** [Link or reference to the originating conversation.]
-
-**Context:**
-- [Relevant history or role information.]
-- [Verified fact or dependency.]
-- [Relevant linked document or decision.] 
-
-**Pre-completed:**
-[Draft reply, draft artefact, decision brief, research result, or handoff text. State where any draft is staged.]
-
-**Remaining for the user:**
-- [Specific review, decision, or action.]
-- [Specific follow-up, if any.]
-
-**Checks before sending or closing:**
-- [VERIFY or FILL IN item, if applicable.]
-```
-
-Open or re-read the created record to confirm that the title, source, notes, owner, dates, and formatting saved correctly.
-
-## 8. Report back clearly
-
-### If a task record was created
-
-Report in this order:
-
-1. What the task is.
-2. What was pre-completed and where any draft was staged.
-3. Metadata assumptions: priority, due date, and remaining effort.
-4. Any `[VERIFY]` or `[FILL IN]` items that prevent immediate sending or closure.
-
-### If no record was created
-
-Keep the briefing separate from the deliverable, and make the draft the final block so it can be copied cleanly.
-
-```markdown
-## Context for the user (not part of the reply)
-- [Ask, requester, key facts, judgment calls, and any verification flags.]
-- [State where the draft is staged, if applicable.]
-
-## The reply
-[Draft verbatim.]
-```
-
-Do not add commentary after the reply block.
-
-## 9. Run a safe draft review loop
-
-When a draft is staged, a later authorized review can compare the staged text with the user’s eventual sent version. This is optional and must remain within approved access and retention boundaries.
-
-At review time:
-
-1. Confirm whether the draft was sent, changed, or intentionally left unsent.
-2. Compare the sent version with the draft.
-3. Identify general lessons: concision, ordering, tone, approval routing, recurring process facts, or common missing context.
-4. Update a shared, approved workflow guide only with general reusable lessons. Do not store private message content, personal preferences that are not authorized for reuse, or identifying details.
-5. If no action has occurred, make a limited number of later checks only when authorized; then stop rather than repeatedly monitoring a person’s messages.
-
-## 10. Improve the workflow carefully
-
-After each run, review failures and friction silently or with the user, according to the operating environment. Improve the documented process when a general lesson emerges, such as a useful source type, a system quirk, a missing task category, or a recurring approval rule.
-
-Keep improvements small, evidence-based, and broadly applicable. Do not encode a one-off incident as a permanent rule. Do not alter shared procedures, publish changes, or retain sensitive learning data without the appropriate authorization.
-
-## Final audit checklist
-
-Before finishing, confirm:
-
-- [ ] I read the parent conversation and relevant later replies.
-- [ ] I checked whether the work was already complete, superseded, or reassigned.
-- [ ] I identified the actual outcome and task shape.
-- [ ] I used only relevant, authorized sources and minimized personal data.
-- [ ] I drafted or prepared as much as was safe and useful.
-- [ ] I did not send, approve, schedule, or otherwise act externally without authorization.
-- [ ] I marked unverified facts and memory-dependent gaps clearly.
-- [ ] I asked questions only where a real decision fork remained.
-- [ ] I created a task only if it provides tracking value.
-- [ ] The task, if created, contains a source, context, pre-completed work, and concrete remaining steps.
-- [ ] My final report makes the next human action obvious.
+Use a clear title, binary finish line, relevant context, source link, owner, and
+real deadline. Avoid copying a whole conversation into the notes. Verify the
+record after writing it.
 
 
 ---
 name: design-a-work-sample
-description: Create or improve a short, paid, asynchronous work sample that produces job-relevant evidence and can be scored consistently. Validate that it distinguishes role-relevant performance through simulated submissions.
+description: Create or improve a short, paid, asynchronous work sample that produces job-relevant evidence, is practical to score, and is validated through simulated candidate submissions.
 ---
 
 # Design a work sample
 
-Use this workflow to create or improve a short, paid, asynchronous hiring exercise. A good work sample asks candidates to do a realistic, bounded version of the job, produces evidence that is hard to fake, and is quick enough for reviewers to score consistently.
+Use this workflow to create or improve a short, paid, asynchronous hiring exercise. A good work sample asks candidates to complete a realistic, bounded version of the job, produces evidence that is difficult to fake through general interview preparation, and can be reviewed consistently.
 
-Use it for both new exercises and revisions. Do not use it for interview questions, application-form screeners, or multi-day work trials. If the request could refer to one of those formats, ask which format is needed before proceeding.
+Use it for a new exercise or a revision to an existing one. Do not use it for interview questions, application-form screeners, or multi-day work trials. If the request could mean one of those formats, ask which format is intended before proceeding.
 
-## Purpose and principles
+## Purpose and operating principles
 
-A work sample sits between initial screening and interviews. It should help the hiring team answer a narrow question: can this person demonstrate the most important parts of this role under realistic constraints?
+A work sample usually sits between initial application review and later interviews. Its purpose is narrow: help the hiring team determine whether a candidate can demonstrate the most important parts of the role under realistic constraints.
 
-A useful work sample does not try to assess everything. Some qualities are better assessed elsewhere:
+A short exercise cannot and should not assess every hiring criterion. Put different questions in the stage where they can be assessed fairly:
 
-- Interviews can assess communication, motivation, collaboration, and live reasoning.
-- References can assess reliability, integrity, and sustained performance.
-- A later trial can assess consistency, judgment over time, and work in real systems.
+- Interviews can assess communication, motivation, collaborative style, and live reasoning.
+- Reference checks can assess reliability, integrity, and sustained performance over time.
+- A later work trial can assess consistency, judgment across several days, and work in real systems.
 - Training can often close gaps in a particular tool, internal process, or domain vocabulary.
 
-The work sample should focus on a small number of load-bearing abilities that are both important to the role and observable in a short exercise. Examples include prioritization, practical judgment, clear writing, problem diagnosis, sourcing, execution speed, systems thinking, or the ability to turn ambiguity into useful work.
+The work sample should focus on three to five load-bearing capabilities that are important to the role and observable in the exercise window. Examples include prioritization, practical judgment, clear writing, diagnosis, sourcing, execution speed, systems thinking, and turning ambiguity into useful work.
 
-Default design constraints:
+Use these default constraints unless the hiring owner chooses another justified approach:
 
 - Make the exercise paid.
 - Set a clear expected time limit, commonly two to four hours.
 - Use a realistic but fictionalized or safely anonymized scenario.
-- Do not ask candidates to produce work that the organization will use commercially unless that use is separately agreed.
-- Keep grading time to roughly 20 to 25 minutes per submission.
-- Make the exercise self-contained. Candidates should not need access to internal tools, private data, or unavailable stakeholders.
-- State the permitted use of AI and evaluate judgment rather than trying to detect AI use through writing style.
-- Test only capabilities that are materially related to the role. Exclude protected characteristics and unrelated proxy criteria.
-- Offer a clear route for reasonable accommodations or an equivalent accessible format without lowering the role-relevant standard.
+- Do not ask for work that the organization will use commercially unless that use is separately agreed with the candidate.
+- Keep reviewer grading time to about 20 to 25 minutes per submission.
+- Make the exercise self-contained. Candidates should not need internal tools, private records, unavailable systems, or private communications.
+- State the AI policy clearly. Evaluate judgment and usefulness rather than attempting to infer AI use from writing style.
+- Test capabilities that materially relate to the role. Do not use protected characteristics, unrelated proxies, or personal background as criteria.
+- Offer a route to request reasonable accommodations or an accessible equivalent format without lowering role-relevant standards.
+
+If role materials include private communications or records about people, use them only for a legitimate hiring purpose with clear authorization. Read the minimum relevant material, remove unrelated or sensitive personal details from the exercise, and keep drafts, simulations, and reviewer guidance within the approved hiring access boundary.
 
 ## Step 1: Pre-flight
 
-Before designing the work sample, confirm that the hiring team has both of the following:
+Before designing anything, confirm that the hiring team has both:
 
-1. A current job description or role brief that explains responsibilities, level, expected outcomes, and reporting context.
-2. A role-success profile, hiring plan, or equivalent document that identifies the capabilities and experience most likely to produce the role's required outcomes.
+1. A current job description or role brief explaining responsibilities, level, expected outcomes, and reporting context.
+2. A role-success profile, hiring plan, or equivalent document identifying the capabilities and experience likely to produce the required outcomes.
 
-If either is missing, stop and ask for it. Do not attempt to discover the ideal candidate while designing the test. That creates a moving target and usually produces an exercise that feels plausible but measures the wrong things.
+If either is missing, stop. Do not attempt to decide the role-success profile while designing the exercise. That creates a moving target and usually produces an exercise that looks plausible but measures the wrong thing.
 
 Use this request format:
 
 > Before we design the work sample, I need the role description and a role-success profile or hiring plan. I can help create either one first. Which is missing, and who should confirm it?
 
-If the materials exist, read the full role context. This may include linked project notes, current team constraints, examples of strong work, prior hiring feedback, and any existing exercises for comparable roles. Read one or two reference exercises only to calibrate tone, length, and operational format. Do not copy their task shape automatically. Different roles need different evidence.
+Once both exist, read the complete relevant role context. This may include linked project notes, expected operating constraints, examples of strong work, prior hiring feedback, and prior exercises for comparable roles. Read one or two reference exercises only to calibrate tone, length, and delivery format. Do not copy a task shape automatically. Different roles require different evidence.
 
-Use only hiring materials the team is authorized to use for this role. Minimize private information: read the minimum relevant evidence, omit unrelated or sensitive candidate details, and do not infer protected traits. Keep alignment notes, simulations, and reviewer guidance inside the approved hiring access boundary.
-
-After reviewing, give a brief status update stating what sources were read and move to the alignment memo.
+Give a short status update after review, for example: “Read the role brief, success profile, and two reference exercises. Alignment memo next.”
 
 ## Step 2: Write the alignment memo before drafting
 
-Do not draft candidate-facing instructions yet. First create a one-page memo titled:
+Do not write candidate-facing instructions yet. First create a one-page memo titled:
 
 **What we are testing for and why: [Role] work sample**
 
-Include these sections.
+Include the following sections.
 
-### Load-bearing traits
+### Load-bearing capabilities
 
-List three to five abilities that this role succeeds or fails on and that can be surfaced in the exercise window. Phrase them as observable capabilities, not vague virtues.
+List three to five capabilities that the role succeeds or fails on and that can be surfaced during the exercise. Write observable capabilities rather than vague virtues.
 
 Weak: “Strategic thinking.”
 
@@ -2925,121 +2752,124 @@ Better: “Can identify the highest-leverage problem in a messy operating situat
 
 ### What the exercise will not test
 
-Name important criteria that should be assessed elsewhere. This keeps the test honest and prevents it from growing into an unrealistic proxy for the entire job.
+Name important criteria that belong in another stage. This keeps the exercise honest and prevents it from becoming an unrealistic proxy for the entire job.
 
-For example, a three-hour written exercise may not fairly test long-term reliability, leadership over months, responsiveness in live meetings, specialized software fluency, or culture contribution.
+For example, a three-hour written exercise may not fairly test long-term reliability, leadership over months, responsiveness in live meetings, specialized software fluency, or collaboration inside an established team.
 
 ### Calibration to role level
 
-State whether the role is entry-level, mid-level, senior, or leadership level. Explain what this changes in the exercise:
+State whether the role is entry-level, mid-level, senior, or leadership level. Explain how this changes the exercise.
 
-- Junior candidates may need more context and narrower deliverables.
+- Entry-level candidates may need more context and narrower deliverables.
 - Mid-level candidates may need to prioritize and execute independently.
-- Senior candidates may need to make tradeoffs, establish direction, and create work another person could use without explanation.
+- Senior candidates may need to make tradeoffs, establish direction, and create work another person could use without further explanation.
 
 ### Failure modes to catch
 
-Identify two or three plausible role-misaligned patterns that could otherwise look strong in a conventional hiring process. Describe observable work patterns rather than labeling people. Examples:
+Identify two or three plausible work patterns that could otherwise look strong in ordinary hiring but would create problems in this role. Describe observable work, not identities or fixed labels.
+
+Examples include:
 
 - A polished planner who does not ship usable work.
 - A fast executor who misses the central problem or creates avoidable risk.
-- A careful but indecisive candidate who defers every meaningful call.
-- A technically skilled candidate who cannot communicate with the intended audience.
+- A careful candidate who defers every meaningful decision.
+- A technically capable candidate whose communication does not serve the intended audience.
 
 ### What strong looks like
 
 Write one short paragraph describing a top submission. Focus on evidence: what choices it makes, what it notices, what it produces, and how it handles uncertainty.
 
-Present the memo to the hiring owner and ask for explicit confirmation:
+Present the memo to the hiring owner and ask:
 
-> Does this match the abilities and failure modes you want this work sample to assess?
+> Does this match the capabilities and failure modes you want this work sample to assess?
 
-Do not proceed until the owner confirms or revises the memo.
+Do not proceed until the owner explicitly confirms or revises the memo.
 
 ## Step 3: Propose exercise shapes
 
-Once the memo is locked, offer three possible shapes. Each option should test the load-bearing traits in a distinct way, be understandable within about a minute, be self-contained, and be scorable quickly.
+Once the memo is approved, offer three possible exercise shapes. Each option must test the load-bearing capabilities in a distinct way, be understandable in about a minute, be self-contained, and be scorable quickly.
 
 For each option, include:
 
-- **Shape:** a plain-language description of the candidate task.
-- **What it tests:** the specific load-bearing traits it reveals.
-- **Why it is evaluable:** what evidence reviewers would see and why scoring can be consistent.
-- **Main risk:** the most likely way the format could create noise or unfairness.
+- **Shape:** A plain-language description of the task.
+- **What it tests:** The load-bearing capabilities it reveals.
+- **Why it is evaluable:** The evidence reviewers will see and why scoring can be consistent.
+- **Main risk:** The most likely way the format could create noise, unfairness, or weak signal.
 
 Keep each option concise. Useful shapes include:
 
-- **Triage pile:** The candidate receives a realistic set of messages, requests, and constraints. They prioritize, draft responses or work products, and recommend one systemic improvement. This suits operations, coordination, support, and communications-heavy roles.
-- **Choose the highest-leverage action and ship it:** The candidate receives a brief with several possible priorities, selects one, explains the choice, and creates a small usable output. This suits strategic operations and builder roles.
-- **Diagnose and fix:** The candidate reviews a messy situation, identifies the key problem, and ships one targeted intervention. This suits product, program, analytical, and process-improvement roles.
-- **Source and pitch:** The candidate defines a target profile, identifies promising channels or prospects from provided information, and writes outreach. This suits recruiting, partnerships, sales, and community-growth roles.
-- **Decision-useful analysis:** The candidate chooses or is assigned one intervention area, assesses it using supplied evidence, and makes a recommendation for a decision-maker. This suits research, policy, strategy, and specialist knowledge roles.
-- **Design a repeatable system:** The candidate creates a lightweight process, playbook, or operating artifact that a teammate could use. This suits program, community, enablement, and operational design roles.
+- **Triage pile:** The candidate receives realistic messages, requests, and constraints. They prioritize, draft responses or work products, and recommend one systemic improvement. This suits operations, coordination, support, and communications-heavy roles.
+- **Choose the highest-leverage action and ship it:** The candidate receives a brief with several priorities, selects one, explains the choice, and creates a small usable output. This suits strategic operations and builder roles.
+- **Diagnose and fix:** The candidate reviews a messy situation, identifies the central problem, and ships one targeted intervention. This suits product, program, analytical, and process-improvement roles.
+- **Source and pitch:** The candidate defines a target profile, identifies promising channels or prospects from supplied information, and writes outreach. This suits recruiting, partnerships, sales, and community-growth roles.
+- **Decision-useful analysis:** The candidate assesses one intervention area using supplied evidence and makes a recommendation for a decision-maker. This suits research, policy, strategy, and specialist roles.
+- **Design a repeatable system:** The candidate creates a lightweight process, playbook, or operating artifact that a teammate could use. This suits program, community, enablement, and operational-design roles.
 
-Do not draft the full exercise until the hiring owner chooses a shape. If none are right, generate three more based on the confirmed traits rather than forcing a familiar format.
+Do not draft the full exercise until the hiring owner chooses a shape. If none fit, generate three more based on the approved alignment memo rather than forcing a familiar format.
 
 ## Step 4: Draft version 1
 
-Write the candidate-facing exercise in this order.
+Write candidate-facing instructions in the following order.
 
 ## [Role] Work Sample
 
-Open with one or two sentences explaining the abilities the exercise assesses. State the total time expected.
+Open with one or two sentences explaining the capabilities the exercise assesses. State the total expected time.
 
 **Your mission**
 
-Describe a specific situation, not an abstract assignment. Include enough context to make the work realistic. Where decisiveness is a trait being tested, make clear which stakeholders are unavailable during the exercise so candidates must make reasonable calls instead of deferring everything.
+Describe a specific situation rather than an abstract assignment. Include enough context to make the task realistic. If decisiveness is a capability being tested, identify stakeholders who are unavailable during the exercise so candidates must make reasonable calls instead of deferring every decision.
 
 End with one sentence that restates what the candidate will produce.
 
 **Deliverables**
 
-List two to four parts. Include rough time guidance where useful. A common operations pattern is:
+List two to four parts, with rough time guidance where useful. A common operations pattern is:
 
 - A short prioritization or analysis section.
 - Several actual drafts, decisions, or shipped outputs.
 - One systemic fix, process improvement, or reusable artifact.
 
-Avoid excessive micro-tasks. A small number of substantive outputs reveals more than dozens of shallow decisions. If planning and execution both matter, explicitly warn candidates not to spend all their time planning.
+Avoid excessive micro-tasks. A few substantive outputs reveal more than dozens of shallow decisions. If planning and execution both matter, explicitly warn candidates not to spend all their time planning.
 
 **Context**
 
-Provide the minimum information needed to complete the exercise: project state, audience, constraints, available resources, relevant policy, and stakeholder availability. Use fictional names, domains, and identifiers unless the hiring owner explicitly approves use of real public information.
+Provide the minimum information needed to complete the exercise: project state, audience, constraints, available resources, relevant policy, and stakeholder availability. Use fictional names, domains, and identifiers unless the hiring owner has approved real public information.
 
-For a triage-pile exercise, include eight to ten realistic items. Some should connect so that candidates are rewarded for seeing patterns across the whole situation. Include reference notes that provide any data needed for a fair decision, such as escalation rules, capacity limits, or refund policy.
+For a triage-pile exercise, include roughly eight to ten realistic items. Make some items connected so candidates are rewarded for seeing patterns across the scenario. Provide reference notes containing the data needed for fair decisions, such as escalation rules, capacity limits, or refund policy.
 
 **Instructions**
 
 Include:
 
 - The expected time limit.
-- The submission deadline, written clearly.
+- The submission deadline.
 - Submission format, such as one document or PDF, plus links to supplementary artifacts if needed.
-- Payment amount, payment process, and any early-submission bonus, if offered.
-- What tools and AI assistance are permitted.
+- Payment amount, payment process, and any early-submission bonus.
+- Which tools and AI assistance are permitted.
 - A request to document important assumptions briefly.
 - Permission to submit incomplete work if time runs out.
-- Optional guidance on a short walkthrough video, if this would add useful signal.
+- Optional guidance on a short walkthrough video, if it would provide useful additional evidence.
+- A contact route for reasonable accommodations or accessibility questions.
 
-Use a transparent AI policy. For example:
+Use a transparent AI policy, such as:
 
 > You may use AI tools. Use them carefully and apply your own judgment. We are evaluating the choices, reasoning, and usefulness of your submission. Briefly note any material use of AI tools.
 
 **Anticipated questions**
 
-Include answers to common questions, such as:
+Include answers to common questions:
 
 - If a requirement is unclear, make a reasonable assumption and state it briefly.
 - If you do not finish in the expected time, submit what you have and note what you would do next.
 - The work will be used only to evaluate candidates unless another use is agreed separately.
 
-## Candidate-facing writing and format checks
+## Candidate-facing format and writing checks
 
-Write in direct, plain US English unless another locale is appropriate. Keep instructions easy to paste into the organization’s chosen hiring system and easy to read in a document.
+Write in direct, plain US English unless another locale is appropriate. Make the instructions easy to paste into the organization’s chosen hiring system and easy to read in a document.
 
-Before sharing a draft, check that the candidate-facing text:
+Before sharing a draft, verify that candidate-facing text:
 
-- Has no tables if the destination system renders tables poorly.
+- Uses no tables if the destination system renders tables poorly.
 - Avoids horizontal divider lines if they break the destination editor.
 - Uses simple headings and bullets.
 - Avoids generic AI-sounding slogans, forced contrasts, repetitive sentence patterns, and unnecessary rhetorical flourishes.
@@ -3052,15 +2882,15 @@ After every draft, add a separate section that is not for candidates:
 
 **Notes for the hiring owner (not for the candidate)**
 
-Include three to six concise bullets on choices the owner may want to change. Typical notes include whether an item is too obvious, whether the scenario is realistic enough, whether the payment structure matches role level, whether a deliverable is too prescriptive, or whether a video should be optional.
+Include three to six concise bullets about choices the owner may want to revise. Typical notes include whether an item is too obvious, whether the scenario feels realistic, whether payment matches the role level, whether a deliverable is too prescriptive, whether the AI policy is clear, or whether a video should be optional.
 
 End with one focused decision question, such as: “Which part should we tighten first?”
 
 ## Step 5: Iterate with the hiring owner
 
-Expect multiple rounds. For each revision, provide the complete updated work sample, not only a change list, so it can be copied directly into the selected system.
+Expect multiple rounds of feedback. For every revision, provide the complete updated work sample, not only a change list, so it can be copied directly into the selected system.
 
-Apply feedback directly unless it would materially undermine validity, fairness, or safety. If that happens, state the concern once in plain language, offer an alternative, and let the hiring owner decide.
+Apply feedback directly unless it would materially undermine validity, fairness, privacy, or safety. If that happens, state the concern once in plain language, offer an alternative, and let the hiring owner decide.
 
 Common revision directions include tightening vague instructions, loosening over-prescriptive tasks, correcting scenario facts, simplifying deliverables, changing payment, and replacing unrealistic details.
 
@@ -3070,13 +2900,13 @@ Before declaring version 1 complete, simulate two full submissions in parallel u
 
 ### Role-aligned simulation
 
-Use a persona that matches the confirmed role-success profile. Have them complete the actual deliverables under the stated time limit. Ask for a short reflection on their choices, uncertainty, and time allocation.
+Use a persona that matches the approved role-success profile. Have the persona complete the actual deliverables under the stated time limit and provide a short reflection on choices, uncertainty, and time allocation.
 
 ### Plausible role-misaligned simulation
 
-Use an earnest, capable candidate who could pass ordinary screening but whose demonstrated work lacks one role-critical capability. Choose a relevant mismatch, such as a planner where the role needs a builder, a cautious hedger where it needs decisive judgment, or an executor who cannot see systemic patterns. Keep the difference tied to job evidence, never identity or background.
+Use an earnest, capable candidate who could pass ordinary screening but whose work lacks one role-critical capability. Choose a role-relevant mismatch, such as a planner where the role needs a builder, a cautious hedger where it needs decisive judgment, or an executor who cannot identify systemic patterns. Keep the difference tied to demonstrated work, never identity, background, or protected characteristics.
 
-Have this persona produce the same complete submission.
+Have this persona produce the same submission shape.
 
 Then synthesize the results:
 
@@ -3085,24 +2915,24 @@ Then synthesize the results:
 3. What the exercise is likely to predict and what it cannot predict.
 4. Specific improvements, ranked by likely impact.
 
-Floor checks that both candidates pass are not automatically bad. The concern is when a central trait fails to create meaningfully different evidence.
+Floor checks that both simulations pass are not automatically bad. The concern is when a central capability fails to generate meaningfully different evidence.
 
 ## Step 7: Apply validation improvements
 
-Revise the full exercise based on the simulation. Target the weakest diagnostic points first. Examples of useful revisions:
+Revise the full exercise based on the simulations. Address the weakest diagnostic points first. Useful revisions may include:
 
-- Make connected scenario items more interdependent.
-- Remove obvious noise that takes seconds to dismiss.
-- Add a concrete constraint that forces a meaningful tradeoff.
-- Replace a broad opinion prompt with a usable deliverable.
-- Clarify the rubric so reviewers reward the intended behavior.
-- Remove specialized knowledge requirements that are trainable and not essential on day one.
+- Making scenario items more interdependent.
+- Removing obvious noise that takes seconds to dismiss.
+- Adding a concrete constraint that forces a meaningful tradeoff.
+- Replacing a broad opinion prompt with a usable deliverable.
+- Clarifying reviewer criteria so they reward the intended behavior.
+- Removing specialized knowledge requirements that are trainable and not essential on day one.
 
-Do not make the task harder merely to make it more selective. Make it more diagnostic of the confirmed traits.
+Do not make the task harder simply to create more differentiation. Make it more diagnostic of the approved role-relevant capabilities.
 
 ## Step 8: Optional external review
 
-If other reviewers provide feedback, assess each suggestion against the alignment memo. State which suggestions to integrate, which to skip, and why. External review is evidence, not an automatic instruction. The hiring owner remains accountable for the assessment design.
+If other reviewers provide feedback, assess each suggestion against the alignment memo. State which suggestions to integrate, which to skip, and why. External review is evidence, not an automatic instruction. The hiring owner remains accountable for assessment design.
 
 ## Step 9: Final readiness gate
 
@@ -3110,15 +2940,15 @@ Do not mark the work sample complete until all of the following are true:
 
 - The role description and role-success profile are confirmed.
 - The alignment memo is approved.
-- The chosen task shape maps directly to the load-bearing traits.
+- The chosen task shape maps directly to the load-bearing capabilities.
 - The task fits the stated time for a qualified candidate.
 - The scenario is self-contained and does not require private access.
-- Payment and submission instructions are clear.
+- Payment, deadline, and submission instructions are clear.
 - Candidate-facing text is formatted for the destination system.
 - A reviewer can score a submission in about 20 to 25 minutes.
-- A role-aligned and plausible role-misaligned simulation has been completed.
-- The simulation led to any necessary revisions.
-- The final version has no sensitive data and does not create unpaid production work.
+- Role-aligned and plausible role-misaligned simulations have been completed.
+- The simulation led to necessary revisions.
+- The final version contains no sensitive data and does not create unpaid production work.
 - Role-relevant criteria, accommodation routes, and potential proxy bias have been checked.
 
 ## Common failure modes
@@ -3131,10 +2961,10 @@ Avoid these patterns:
 - Making every scenario item independent, which tests volume but not pattern recognition.
 - Allowing candidates to defer every decision to an available stakeholder when decisiveness is meant to matter.
 - Giving vague context that rewards insider knowledge.
-- Setting a word-count target that encourages padding.
+- Setting word-count targets that encourage padding.
 - Creating a test that takes longer to grade than the signal justifies.
 - Treating polished writing or presentation as the main signal when the role requires something else.
-- Declaring success without testing whether the exercise distinguishes the role-relevant evidence it was designed to measure.
+- Declaring success without checking whether the exercise distinguishes the role-relevant performance it was designed to assess.
 
 A finished work sample should feel like a small, fair version of the job: bounded, realistic, useful for assessment, and clear about what good performance looks like.
 
@@ -3191,98 +3021,116 @@ one reference into a final verdict on its own.
 
 ---
 name: use-a-browser-safely
-description: Complete browser-based tasks safely by choosing the least invasive authorized method, protecting account context and privacy, verifying rendered page state, and separating preparation from consequential commitment.
+description: Complete browser-based tasks safely by selecting the least invasive authorized method, protecting account context and private information, verifying rendered page state, and separating preparation from consequential final actions.
 ---
 
 # Use a browser safely
 
-Use this workflow for tasks that require interaction with a website: completing forms, changing settings, collecting data from rendered pages, testing a user flow, or working in an authenticated dashboard. Use it when a supported direct interface, static-page retrieval, or ordinary request cannot safely and reliably complete the task.
+Use this workflow for website tasks that require real interaction: completing rendered forms, collecting data from dynamic pages, testing a flow, changing account settings, or working in an authenticated dashboard. Use it when a normal page request, supported integration, or authorized API cannot reliably complete the task.
 
 The central rule is:
 
-> Inspect the rendered page before editing, verify every meaningful change by reading it back, and do not perform a consequential final action until the page state, target, authority, and account context are clear.
+> Inspect the rendered page before editing, read back every meaningful change, and do not take a consequential final action until the account, target, authorization, and page state are verified.
 
-An automation command returning success does **not** prove that the site accepted a change. Modern web applications may keep their own internal state, commit values only after focus leaves a field, replace controls during a re-render, or display a cosmetic error after an action actually succeeded.
+A browser automation command returning success does **not** prove the site accepted a change. Modern web applications can keep internal state separately from the DOM, commit a value only when focus leaves a field, replace controls during a re-render, or show an error even after an action actually completed.
 
-## 1. Choose the least invasive route
+## 1. Confirm purpose, authority, and scope
+
+Before accessing a logged-in website, private communication, record, or dashboard, establish that the task has a legitimate purpose and that the requester is authorized to direct it.
+
+Identify:
+
+- The exact target page, account, environment, record, or workflow.
+- What information will be viewed, entered, changed, uploaded, or collected.
+- The minimum data necessary to complete the request.
+- Whether the action is reversible.
+- Whether the task will send, publish, pay, delete, grant access, change billing, or otherwise create an external commitment.
+- Any missing facts or choices that require the user's judgment.
+
+Use only the minimum relevant sources and personal information. Do not put unrelated personal details into browser logs, screenshots, temporary files, or final reports. Keep outputs within the requester's appropriate access boundary. Do not expose credentials, session tokens, recovery details, or sensitive account data.
+
+If the target, authority, intended audience, or impact is unclear, stop and ask before changing data.
+
+## 2. Choose the least invasive suitable route
 
 Use the first route that safely fits the task:
 
-1. **Supported direct interface or API.** Prefer a documented, authorized programmatic interface when it can accomplish the request. It is often more reliable than reproducing browser behavior.
-2. **Headless browser automation.** Use this for public pages, test environments, routine rendered-page extraction, screenshots, and forms that do not require the user's established signed-in identity.
-3. **User-visible authenticated browser session.** Use this only when the task truly requires an existing session, single sign-on state, account-specific dashboard, or a user-directed browser context.
+1. **Supported direct interface or API.** Prefer a documented, authorized API, integration, export, or ordinary form endpoint when it can perform the requested operation safely.
+2. **Headless browser automation.** Use this for public pages, test environments, rendered-page extraction, screenshots, UI tests, and tasks that do not need an existing signed-in identity.
+3. **User-visible authenticated browser session.** Use this only when the task genuinely requires an established account session, single sign-on state, or account-specific dashboard.
 
-Before driving a browser, look for an authorized direct route. Review official documentation, ordinary form actions, page source, and visible network behavior for supported endpoints. A form may submit structured data to a service that can be used safely without reproducing every user-interface interaction.
+Before driving a browser, inspect official documentation, ordinary form actions, page source, and visible request behavior for a supported programmatic path. A form may have an authorized structured submission route that is more reliable than reproducing complex browser interactions.
 
-Do not use undocumented interfaces to bypass access controls, consent boundaries, contractual restrictions, or other safeguards. Do not use an authenticated visible session merely because it is convenient: it can interrupt the user's work and increases privacy and account risk.
+Do not use undocumented interfaces to bypass access controls, consent boundaries, terms, security controls, payment walls, or anti-abuse protections. If automated browsing is blocked during general research or collection, report the limitation rather than escalating to evade the block. A visible session can be appropriate for an explicitly requested, legitimate task on that site when the user already has authorized access and a normal session is necessary.
 
-If a site blocks automated browsing, do not try to evade its protections for casual research or collection. A visible authenticated session may be appropriate only when the user explicitly asked to complete a legitimate task on that specific site, has authorized access, and that session is necessary. Do not weaken browser security, warnings, anti-abuse controls, or access restrictions.
+Do not use a live authenticated browser merely for convenience when a headless or direct route will work. It can interrupt the user's work and exposes more account and privacy context.
 
-## 2. Protect identity, privacy, and browser context
+## 3. Protect browser, account, and environment context
 
-When the task accesses private communications, records, dashboards, or information about people, first establish a legitimate purpose and clear authorization. Use only the minimum relevant sources and information. Do not copy unrelated personal details into screenshots, logs, notes, or reports. Keep results within the requester's appropriate access boundary and respect consent and privacy expectations.
+When using a visible or authenticated browser:
 
-Before acting in an authenticated context, identify the correct account, organization, environment, and browser profile. Never infer identity from a generic browser-window name, an old tab title, a remembered default, or an arbitrary connection label.
+- Announce that browser control is beginning and state the purpose.
+- Work in a fresh tab, window, or isolated tab group unless the user explicitly directs work in an existing tab.
+- Explicitly classify the needed context, such as personal, work, test, staging, or production.
+- Select the browser profile or session connection for that context directly. Do not rely on generic browser selection, recent-use order, tab titles, or connection labels.
+- Confirm the signed-in account and environment using a reliable account indicator before opening or changing the actual target.
+- Confirm the target object before editing: for example, the correct record, recipient list, workspace, or subscription.
+- Do not disable browser protections, multi-factor authentication, security warnings, access controls, or anti-abuse controls to make automation easier.
 
-Use these operating rules:
+Treat browser identity verification as a preflight gate. The minimum question is:
 
-- Announce when taking control of a visible browser and state the purpose.
-- Work in a fresh tab, window, or isolated tab group unless the user explicitly identifies an existing tab to use.
-- Classify the intended context explicitly, such as personal, work, test, staging, or production.
-- Select the profile or browser connection that matches that context rather than using a generic selector that may choose a recently used profile.
-- Confirm the signed-in account through a reliable account indicator before opening or changing the real target.
-- Verify the target item and environment before changing data.
-- If the required account, target, authority, or environment is unclear, stop and ask before acting.
-- Never expose credentials, session tokens, recovery details, private account data, or sensitive security settings in output or logs.
-- Do not disable multi-factor authentication, browser warnings, security controls, or access restrictions to make automation easier.
+> Which account is active, which environment is active, and what exact item will change?
 
-Use an account preflight gate before actions that change data. A useful pre-action question is: **Which account is active? Which environment is this? What exact item will change?** If any answer is uncertain, resolve it before proceeding.
+If an automation system has a verification marker or permission gate, enable it only after the account check has actually passed. Never create a marker early simply to unlock write actions.
 
-If the automation environment provides a verification marker or permission gate, mark the context as verified **only after** the account check has passed. Never create a verification marker merely to unlock blocked actions.
+For private information about people, access only the records required for the stated task. Omit unrelated sensitive details from screenshots, notes, and reports.
 
-## 3. Establish the task boundary
+## 4. Separate preparation from commitment
 
-Determine the intended outcome before navigating deeply. Identify:
+Separate reversible preparation from irreversible commitment.
 
-- The target page, record, form, setting, or workflow.
-- The information that will be entered, collected, changed, or uploaded.
-- The minimum information required to complete the request.
-- Whether the final action is reversible.
-- Whether the task includes sending, publishing, paying, deleting, granting access, changing a plan, or another external commitment.
-- Missing information, ambiguous choices, and fields requiring user judgment.
-
-Separate **preparation** from **commitment**. Filling fields, drafting text, selecting options, and collecting a preview are often reversible. Submitting, sending, publishing, purchasing, deleting, or applying a significant account change may not be.
+Preparation can include drafting text, filling fields, selecting options, collecting a preview, or assembling an upload. Commitment includes submitting, sending, publishing, paying, deleting, changing access, or applying a final plan or billing change.
 
 For consequential tasks, use two phases:
 
-1. **Preparation pass:** Fill or configure the page, verify all values, and capture a pre-action screenshot or structured state record. Do not activate the final control.
-2. **Commitment pass:** After explicit confirmation of the prepared state, re-check the account, target, and readiness gate. Then perform the final action once.
+1. **Preparation pass:** Fill or configure the page, verify the resulting state, and capture a pre-action screenshot or structured state record. Do not activate the final control.
+2. **Commitment pass:** Obtain explicit confirmation of the prepared state. Re-check the account, target, and readiness gate, then perform the final action once.
 
-If the page reloads, re-renders, or the session changes between phases, do not assume that earlier state remains valid. Restore the intended values if necessary and verify them again before committing.
+If the page reloads, re-renders, or the session changes between phases, do not assume prior values persisted. Re-inspect, restore if needed, and verify again.
 
-## 4. Inspect the rendered page before editing
+Explicit confirmation is normally required immediately before:
 
-Do not start by guessing selectors, filling controls by numeric position, or trusting visual similarity. Inspect the rendered page and collect enough structure to identify controls safely.
+- Sending a message, invitation, notification, or application.
+- Publishing content or submitting an externally reviewed form.
+- Making a payment, purchase, or donation.
+- Deleting records, files, or content.
+- Changing subscription, billing, ownership, access, security, or plan settings.
+- Taking an action labeled permanent, final, irreversible, or impossible to edit later.
+
+For a reversible, low-risk change that the user explicitly requested, normal verification is usually enough unless the page presents an unexpected warning or broader impact.
+
+## 5. Inspect the rendered page before editing
+
+Do not begin by guessing selectors, using control indexes, or trusting a visual approximation. Inspect the rendered page first.
 
 For each relevant control, determine:
 
-- Element type: single-line input, multiline area, rich-text editor, dropdown, checkbox, radio group, date picker, upload control, or custom widget.
-- Accessible name, visible label, placeholder, or label relationship.
-- Current value and whether the field is required.
-- Validation rules, character limits, formatting behavior, and disabled state.
-- Whether an apparent field is the real editable control, a wrapper, or a hidden synchronization element.
-- Whether changing a dropdown, checkbox, date, or tab can cause a re-render.
+- Its type: single-line input, multiline area, rich-text editor, dropdown, checkbox, radio group, date picker, upload control, or custom widget.
+- Its accessible name, visible label, placeholder, or explicit label relationship.
+- Its current value, required state, disabled state, and validation requirements.
+- Whether it is the actual editable element, a wrapper, or a hidden synchronization field.
+- Whether changing it or a related control causes a re-render.
 
-Address controls by stable semantic identity, such as visible label text, accessible name, or an explicit label relationship. Do not rely on DOM indexes where labels are available: dynamic applications can reorder elements between loads or after a re-render.
+Address controls by stable semantic identity: accessible name, visible label, or a label relationship. Do not use DOM order when labels are available, because dynamic applications can reorder or replace elements during loading and re-rendering.
 
-Before changing a record or setting, inspect its current state. This avoids modifying the wrong item or unintentionally overwriting existing values.
+Before editing an existing record or setting, inspect its current state. This helps avoid changing the wrong item or overwriting information unintentionally.
 
 ### Generic inspection pattern
 
-Use the chosen browser automation capability to list relevant controls before writing fill logic. Record at least tag, input type, role, label, required state, and a readable value or text length.
+Use the chosen browser automation capability to list relevant controls before writing interaction logic. Record at least tag, type, role, label, required state, and current value or text length.
 
 ```js
-// Pseudocode: adapt to the selected browser automation library.
+// Pseudocode: adapt to the selected browser automation capability.
 const controls = inspectAll('input, textarea, [contenteditable="true"], [role="textbox"]')
   .map((element) => ({
     tag: element.tagName,
@@ -3293,63 +3141,74 @@ const controls = inspectAll('input, textarea, [contenteditable="true"], [role="t
     valueLength: readableValue(element).length,
   }));
 
-saveJson('page-before.json', controls);
+saveJson('form-before.json', controls);
 ```
 
-## 5. Use the correct interaction for each control
+## 6. Use the interaction method that matches the control
 
-A generic “set value” operation is not reliable for all controls.
+A generic “set value” action is not reliable for every web control.
 
-| Control type | Preferred interaction | Verification concern |
+| Control type | Preferred interaction | Main verification concern |
 |---|---|---|
-| Single-line input | Use normal text entry or fill behavior | Line breaks may be removed silently. |
-| Multiline text area | Fill text, then move focus away | Some applications commit only on blur. |
-| Rich-text or content-editable editor | Focus it, select existing content, enter text through keyboard-style events, then blur | Direct DOM mutation may not update the application model. |
-| Dropdown or combobox | Open it, choose by visible option text, then wait for state to settle | Selection can trigger a full re-render. |
-| Checkbox or radio control | Read current state first; change only if needed | A click can toggle an already-correct value. |
-| Date/time picker | Set values, close through a neutral page action when possible, and verify the rendered summary | Popovers can clear, reinterpret, or overwrite related values. |
-| File upload | Confirm the file, destination, and privacy implications first | Uploading may begin immediately and can be difficult to undo. |
+| Single-line input | Use normal text-input interaction | Line breaks may be removed silently. |
+| Multiline text area | Fill text, then move focus away | The application may commit on blur. |
+| Rich-text or content-editable editor | Focus the actual editor, select existing text, enter text through keyboard-style events, then blur | Direct DOM mutation may not update the application's internal model. |
+| Dropdown or combobox | Open it, select by visible option text, and wait for state to settle | Selection may trigger a full re-render. |
+| Checkbox or radio group | Read current state first; change only when needed | A click may toggle an already-correct value. |
+| Date or time picker | Select values, close using a neutral page action where possible, then verify the displayed summary | The popover can clear, reinterpret, or reset related values. |
+| File upload | Confirm the file, destination, and privacy implications first | Uploading may start immediately and be hard to reverse. |
 
-For framework-driven editors, simulate normal user interaction rather than writing directly to low-level page properties. A robust sequence is: focus the actual editable element, select existing text, delete it, enter the new value through keyboard-style events, move focus to a neutral page element, wait briefly, and read the result back.
+For framework-driven editors, simulate normal user interaction instead of writing to low-level DOM properties. A robust sequence is:
 
-Some forms pair a visible rich-text editor with a hidden input. Editing the hidden input may appear successful in a DOM dump while server-side validation treats the visible editor as empty. Target the control the user actually interacts with and that the application reads. If an accessibility locator finds an empty wrapper, inspect the underlying editable node and follow its label relationship.
+1. Focus the actual editable element.
+2. Select existing text.
+3. Delete it.
+4. Enter the new text through keyboard-style input.
+5. Move focus to a neutral page element to commit the change.
+6. Wait briefly for the application to settle.
+7. Read the value back.
 
-If changing a dropdown, checkbox, tab, or date can refresh the form, make and verify those selections **before** filling lengthy or complex text. Re-inspect afterwards and confirm that earlier entries remain present.
+Some forms pair a visible editor with a hidden input. Changing the hidden input can look successful in an inspection result while server-side validation treats the visible editor as empty. Target the interactive control the application actually reads. If an accessibility locator finds an empty wrapper, inspect the underlying editable control and its label relationship.
 
-## 6. Verify after every meaningful edit
+If dropdowns, checkboxes, tabs, date pickers, or other controls can refresh the form, set and verify those dependencies **before** filling long or complex text. Re-inspect afterward to ensure earlier values remain present.
 
-After each field is filled or setting is changed, read its value back from the page. Compare the visible or accessible result with the intended value. For sensitive content, compare lengths, required state, or a redacted summary rather than exposing full content unnecessarily.
+## 7. Verify every meaningful edit
 
-Check for these mismatches:
+After each meaningful field edit or setting change, read the state back from the page. Compare the actual visible or accessible value with the intended value.
 
-- The automation layer reports success but the field is empty in page state.
+For sensitive content, verify a minimal safe representation, such as length, required state, a redacted excerpt, or a checksum-like comparison, rather than placing full private content in logs.
+
+Check specifically for:
+
+- Automation reports success but the field remains empty.
 - Newlines, repeated spaces, punctuation, or special characters were removed.
-- Text was truncated by a single-line control or length limit.
-- A custom editor displayed text but did not retain it internally.
-- A later interaction erased an earlier entry after a re-render.
-- A hidden synchronization field changed instead of the visible editor.
-- A selection changed a dependent field, date, recipient, or validation requirement.
+- Text was truncated due to a single-line control or length limit.
+- Text displays but was not retained by the application's internal state.
+- Editing a later field erased an earlier field after a re-render.
+- A hidden synchronization field was changed instead of the visible editor.
+- A selection changed a dependent recipient, date, option, validation rule, or required field.
 
-If verification fails, do not continue toward submission. Diagnose the control type, retry once using a more appropriate interaction method, and verify again. If the page continues to reject or alter the value, report the limitation and ask how to proceed rather than silently submitting incorrect content.
+If verification fails, do not continue toward submission. Diagnose the actual control type, retry once with a more suitable interaction method, and verify again. If the page still alters or rejects the value, report the limitation and ask how to proceed rather than silently submitting incorrect content.
 
-## 7. Run a pre-submit readiness gate
+## 8. Run a pre-action readiness gate
 
-Before any final submission or high-impact change, inspect the full relevant page state again. Confirm all of the following:
+Before submitting or making any high-impact change, inspect the relevant page state again. Confirm all of the following:
 
-- The correct account, organization, environment, and target item are active.
+- The correct account, organization, and environment are active.
+- The target item is the intended one.
 - Every required field is present and non-empty.
-- Each entered value matches the intended content closely enough for the task.
-- Dropdowns, checkboxes, dates, recipients, attachments, and dependent fields are correct.
+- Entered values match the intended content closely enough for the task.
+- Recipients, options, dates, attachments, and dependent fields are correct.
 - No validation errors, warnings, or unsaved-change indicators remain.
-- The final button has the intended effect and is not a similarly named destructive alternative.
+- The final control has the intended effect and is not a similarly named destructive alternative.
 
-If a required field is blank, a value cannot be verified, or the target is uncertain, **refuse to submit**. A partially prepared form is recoverable; an incorrect external action may not be.
+If a required field is blank, a value cannot be verified, or the target is uncertain, **do not submit**. A partially filled form is usually recoverable; an incorrect external action may not be.
 
-Capture a pre-action record when useful: a screenshot, concise state summary, or structured field dump. Store and share it only through an appropriate access boundary. Avoid pasting large collections of sensitive field values inline when a short summary and secure record are sufficient.
+Capture a pre-action record when useful: a screenshot, concise state summary, or structured field dump. Store it only through an appropriate access boundary. Avoid pasting a large table of sensitive field values into a chat or report when a brief summary and a securely available record are enough.
 
 ### Readiness checklist
 
-- [ ] The account, environment, and target were verified.
+- [ ] Account, environment, and target are verified.
 - [ ] Relevant controls were inspected before editing.
 - [ ] Every meaningful change was read back.
 - [ ] Required fields are non-empty and validation is clear.
@@ -3357,44 +3216,28 @@ Capture a pre-action record when useful: a screenshot, concise state summary, or
 - [ ] A pre-action record exists for a consequential task.
 - [ ] The final action and its impact are understood.
 
-## 8. Treat one-way actions as a distinct phase
-
-The following generally require explicit confirmation immediately before activating the final control:
-
-- Sending messages, invitations, or notifications.
-- Publishing content.
-- Submitting an official or externally reviewed form.
-- Making a payment or purchase.
-- Deleting records or files.
-- Changing subscription, billing, access, ownership, or security settings.
-- Actions labeled permanent, final, irreversible, or impossible to edit later.
-
-Ask a concise confirmation question that includes the target, important values, recipients or audience, cost if any, irreversible effects, and open questions. Then wait for confirmation before acting.
-
-For low-risk reversible changes explicitly requested by the user, such as adjusting a preference or updating a draft, proceed after normal verification unless the site presents an unexpected warning or broader impact.
-
 ## 9. Confirm completion after acting
 
-A button click is not proof of success. Look for reliable evidence such as a success message, confirmation reference, newly created record, persisted setting, sent or published item, or changed status that remains after a safe reload.
+A click is not evidence of completion. After a final action, look for reliable evidence such as a success notice, confirmation reference, newly created record, persisted setting, sent item, published page, or changed status that remains after a safe refresh.
 
 If the site reports an error, preserve the relevant error text and inspect the resulting state before retrying. A visible error can be cosmetic, while blind retries can create duplicate requests, payments, messages, or records.
 
-If completion cannot be verified, report what was attempted, what evidence exists, and what remains uncertain. Do not represent an attempted action as completed.
+If completion cannot be verified, report what was attempted, the available evidence, and what remains uncertain. Do not present an attempted action as completed.
 
-## 10. Failure patterns and recovery rules
+## 10. Common failure patterns and safe recovery
 
 | Symptom | Likely explanation | Safe response |
 |---|---|---|
-| Automation reports success but a field is blank | The application ignored a direct value change | Use focus-and-keyboard interaction, blur, then read back. |
-| Earlier fields disappear after a later edit | A re-render reset uncommitted state | Commit and verify each field; perform re-rendering controls first. |
-| Text loses line breaks or characters | The wrong control type or formatting behavior was used | Find the multiline/editor control or use an explicitly acceptable simplified format. |
-| A locator finds an empty wrapper | The accessible element is not the editable node | Inspect the labeled underlying control and target the true editor. |
-| A field looks correct but validation says it is empty | A hidden synchronization field was edited | Use the visible interactive control that the application actually reads. |
-| The automation layer becomes unstable on a complex page | The chosen tool is unsuitable for the page | Switch to a more robust browser method or supported direct interface; do not blindly rescue a broken session. |
-| Headless and visible browsers behave differently | The site varies behavior by browser context | Prefer an authorized direct interface; for an explicit legitimate task, use a verified visible session without evading safeguards. |
-| A popup changes dates or fields unexpectedly | The widget has stateful close, clear, or parsing behavior | Close through a neutral page action and re-verify affected fields. |
-| An error may be cosmetic | The task may already have completed | Inspect final state before retrying. |
-| Account context is uncertain | The wrong profile or environment may be active | Stop, verify a reliable account indicator, and ask if uncertainty remains. |
+| Automation reports success but the field is blank | The application ignored a direct value change | Use focus-and-keyboard interaction, blur, then read back. |
+| Earlier fields disappear after a later edit | A component re-render reset uncommitted state | Commit and verify each field; perform re-rendering controls first. |
+| Text loses line breaks or characters | The wrong control type or formatting rule was used | Find a multiline or editor control, or use an explicitly acceptable simplified format. |
+| A locator finds an empty wrapper | The accessible element is not the editable node | Inspect the underlying labeled control and target the actual editor. |
+| A field looks correct but validation says it is empty | A hidden synchronization field was edited | Use the visible interactive control that the application reads. |
+| The automation layer becomes unstable on a complex page | The selected browser method is unsuitable | Switch to a more robust browser method or supported direct interface; do not blindly rescue a broken session. |
+| Headless and visible browsers behave differently | The site varies behavior by browser context | Prefer an authorized direct interface; if a visible session is necessary for an explicit task, verify its account and proceed normally without evasion. |
+| A date or option popup changes values unexpectedly | The widget has stateful close, clear, or parsing behavior | Close it through a neutral page action and re-verify all affected fields. |
+| A visible error may be cosmetic | The requested task may already have completed | Inspect the resulting state before retrying. |
+| Account or environment is uncertain | The wrong profile, tenant, or environment may be active | Stop, verify a reliable account indicator, and ask if uncertainty remains. |
 
 ## Final audit checklist
 
@@ -3402,7 +3245,7 @@ Before reporting completion, verify:
 
 - [ ] The least invasive suitable route was used.
 - [ ] The task had a legitimate purpose and appropriate authorization.
-- [ ] Only the minimum relevant private information was accessed and retained.
+- [ ] Only minimum relevant private information was accessed and retained.
 - [ ] The correct account, environment, and target were confirmed.
 - [ ] Relevant controls were inspected before editing.
 - [ ] Every meaningful change was read back and verified.
@@ -3416,191 +3259,185 @@ Before reporting completion, verify:
 
 ---
 name: create-an-ai-skill
-description: A complete workflow for designing, testing, improving, evaluating, and packaging a reusable AI skill from a new idea, an existing draft, or a workflow demonstrated in conversation.
+description: A complete, tool-independent workflow for designing, testing, improving, evaluating, and packaging a reusable AI skill from a new idea, an existing draft, or a workflow demonstrated in conversation.
 ---
 
 # Create an AI skill
 
-Use this workflow to create a new reusable AI skill, revise an existing one, test whether it helps, or improve when it activates. A skill is a focused set of instructions and optional resources that help an AI perform a recurring job consistently.
+Use this workflow to create a new reusable AI skill, revise an existing one, assess whether it works, or improve its activation behavior. A skill is a focused set of instructions, with optional resources, that helps an AI perform a recurring job consistently.
 
 The core loop is:
 
-1. Understand the job, user value, and boundaries.
+1. Understand the job, boundaries, and intended users.
 2. Draft or revise the skill.
 3. Test it with realistic requests.
-4. Review representative outputs with a person and measure objective requirements where appropriate.
-5. Improve the skill based on evidence.
-6. Repeat until the result is useful, reliable, and not narrowly fitted to the tests.
-7. Optionally improve the description that determines when the skill activates.
-8. Package and hand off the finished skill.
+4. Review representative outputs with the user and measure objective requirements where appropriate.
+5. Improve the skill from evidence rather than intuition alone.
+6. Repeat until the skill is useful, reliable, and not narrowly fitted to a few tests.
+7. Optionally improve the description that determines when the skill is selected.
 
-Do not force every project through every stage. A user may want a quick draft, an informal collaborative pass, or a rigorous comparison. Determine where they are in the loop and help them make the next useful decision.
+Adapt the depth of this process to the user’s needs. Some users want a quick collaborative draft. Others need a careful evaluation and revision cycle. First determine where the user is in the process, then help them make the next useful decision.
 
 ## Communication principles
 
-Match the user’s technical vocabulary and experience. Use plain language by default. Terms such as *evaluation* and *benchmark* are often useful, but explain them briefly when needed. Avoid unexplained technical terms such as “JSON,” “schema,” or “assertion” unless the user is clearly comfortable with them.
+Match the user’s technical familiarity. Use plain language by default. Terms such as *evaluation* and *benchmark* can be useful, but briefly explain them if needed. Avoid unexplained technical terms such as “schema,” “assertion,” or “JSON” unless the user is already using them comfortably.
 
-Explain why a question matters. For example:
+Explain why questions matter. For example:
 
-> What should a successful result look like: an answer in chat, a structured report, a file, or an approved external action? The answer determines how the skill should work and how to test it.
+> What should a successful result look like: a response in chat, a structured report, a file, or an approved external action? The answer determines how completion should be checked.
 
-Keep the user involved at meaningful decisions:
+Keep the user involved at important decisions:
 
 - Confirm the intended job before writing extensive instructions.
-- Ask before imposing a restrictive scope, tool requirement, approval policy, or output format.
+- Ask before imposing restrictive scope, required tools, or approval rules.
 - Share proposed test cases before treating them as representative.
-- Let human judgment lead for subjective work such as writing quality, visual design, strategic usefulness, and tone.
-
-If the task involves private communications, records, or information about people, establish a legitimate purpose and clear authorization. Use only the minimum relevant approved sources and details. Do not expose unrelated personal information in the skill, test cases, outputs, or packaged resources.
+- Let human judgment lead for subjective quality such as writing style, visual design, tone, or creative usefulness.
+- State assumptions when the user has not provided enough information for a confident choice.
 
 ## 1. Determine the starting point
 
-First identify which situation applies.
+Identify which situation applies.
 
 ### A. New skill
 
-The user has an idea such as “I need help preparing recurring project updates.” Start with discovery and a first draft.
+The user has an idea for recurring work, such as preparing project updates, reviewing documents, transforming data, or guiding a structured process. Start with discovery and create a first draft.
 
 ### B. Existing skill or draft
 
-The user has an instruction file or installed skill and wants it edited, simplified, tested, or optimized. Preserve its established name and identity unless the user asks to rename it. Read the current version before proposing changes.
+The user already has instructions and wants them edited, simplified, tested, or improved. Read the current material before proposing changes. Preserve its established name and identity unless the user asks to rename it.
 
-If the installed copy may not be writable, make an editable copy in a user-approved working location. Keep the original unchanged until the user accepts the revision.
+### C. A workflow demonstrated in the conversation
 
-### C. A workflow demonstrated in conversation
+The user may ask to turn a recent interaction into a skill. Extract what can be learned from the conversation before asking repetitive questions:
 
-The user may say “turn what we just did into a skill.” Extract what can be learned from the conversation before asking questions:
+- Inputs the user supplied.
+- Approved information sources and tools used.
+- The sequence of decisions and actions.
+- Corrections or preferences expressed by the user.
+- Output format and acceptance criteria.
+- Conditions that changed the approach.
 
-- Inputs and examples supplied.
-- Approved tools, information sources, and permissions used.
-- The sequence of actions and decisions.
-- Corrections and preferences expressed by the user.
-- Observed output format and acceptance criteria.
-- Conditions that caused the workflow to branch or stop.
-
-Summarize the inferred workflow, state the assumptions, and ask the user to fill important gaps. Do not silently convert a one-time workaround into a universal rule.
+Summarize the inferred workflow and identify gaps for the user to confirm. Do not silently convert a one-time workaround into a general rule.
 
 ### D. Evaluation or optimization request
 
-The user may already have a finished-looking skill and want to know whether it helps. Begin with test design, comparison, review, and targeted revision. Do not rewrite a skill merely because rewriting is possible.
+The user may have a finished-looking skill and want to know whether it actually helps. Go directly to test design, evaluation, and focused revision. Do not rewrite a skill just because rewriting is possible.
 
 ## 2. Capture intent and scope
 
-Gather enough information to define one coherent job. Adapt these questions to the context rather than asking all of them mechanically.
+Gather enough information to define a coherent job. Adapt these questions to the situation rather than asking all of them mechanically.
 
-1. **Purpose:** What should this skill enable the AI to accomplish?
-2. **Activation:** What requests, wording, or situations should cause it to activate?
+1. **Purpose:** What should the skill enable the AI to accomplish?
+2. **Activation:** What kinds of requests, wording, or contexts should make this skill relevant?
 3. **Inputs:** What information, files, examples, systems, or permissions may it use?
-4. **Outputs:** What should it create, explain, modify, or propose? Is there a required format?
-5. **Success:** How will the user know the result is correct, useful, and complete?
-6. **Boundaries:** What should the skill not do? When should it ask a question, decline, or return control to the user?
-7. **Variations:** What common cases, difficult cases, and exceptions materially change the work?
-8. **Dependencies:** Does it need specific capabilities, templates, references, scripts, or access approved by the user?
-9. **Testing:** Should it be tested with realistic example requests?
+4. **Outputs:** What should it produce, change, or recommend? Is a format required?
+5. **Success criteria:** How will the user know the result is correct or useful?
+6. **Boundaries:** What should it not do? When should it ask, stop, decline, or hand a decision back to the user?
+7. **Variations:** What common cases, difficult cases, or meaningful exceptions matter?
+8. **Dependencies:** Does it need a particular capability, reference, template, script, or user-provided access?
+9. **Testing:** Should it be tested with example requests before release?
 
-Recommend testing when outputs can be checked objectively, when the workflow is consequential, or when the skill will be reused often. For highly subjective work, suggest a small human review set instead of artificial numeric scoring.
+Recommend testing when outputs can be checked objectively, the workflow is consequential, the skill will be used repeatedly, or errors could be costly. For highly subjective work, recommend a smaller qualitative review instead of inventing misleading numerical metrics.
 
-Useful decision questions include:
+When helpful, offer explicit choices:
 
-- “Should the skill make a low-risk best effort when information is missing, or pause and ask?”
-- “Should it use a concise default output, a detailed default output, or let the user choose?”
-- “May it use any available source, or only sources the user explicitly approves?”
-- “Which actions require confirmation because they are external, irreversible, costly, or visible to others?”
+- Should the skill make a low-risk best effort when information is missing, or stop and ask?
+- Should it use a concise default output, a detailed default output, or let the user choose?
+- Should it use any available source, or only user-approved sources?
+- Should it prepare a draft, or take an external action after confirmation?
 
-### Research before drafting
+### Research and source boundaries
 
-If relevant approved documentation, examples, comparable skills, or domain guidance are available, inspect them before drafting. Research should reduce burden on the user, not replace their authority over requirements.
+If relevant documentation, prior examples, standards, or similar skills are available, review them before drafting. Research should reduce burden on the user, not override their authority over requirements.
+
+If the workflow uses private communications, records, or information about people, proceed only with a legitimate purpose and clear authorization. Use the minimum relevant sources and information. Exclude unrelated personal details, respect consent and privacy expectations, and keep outputs within the appropriate access boundary. Do not use private material merely because it is technically accessible.
 
 Use research to identify:
 
-- Existing standards and conventions.
-- Constraints imposed by available capabilities or file formats.
-- Reusable methods from related tasks.
-- Privacy, safety, compliance, and approval requirements.
+- Existing conventions and output standards.
+- Constraints imposed by the user’s chosen system or file format.
+- Reusable patterns from comparable work.
+- Safety, privacy, compliance, and approval requirements.
 
-If requirements conflict or evidence is uncertain, describe the uncertainty and ask for direction rather than inventing a policy.
+If sources conflict or requirements remain uncertain, surface the uncertainty rather than guessing.
 
 ## 3. Choose the skill structure
 
-A skill should be focused enough that both users and AI systems can predict what it does. One skill may support closely related variants, but separate unrelated jobs that have different audiences, permissions, sources of truth, or completion criteria.
+A skill should be focused enough that users and the AI can predict what it does. One skill may support closely related variants, but separate unrelated jobs when they have different users, access boundaries, sources of truth, or definitions of completion.
 
-A portable package can use this structure:
+A typical package may contain:
 
 ```text
 skill-name/
 ├── SKILL.md                 # Core instructions
 ├── scripts/                 # Optional deterministic helpers
-├── references/              # Optional documentation used when relevant
-├── assets/                  # Optional templates or output resources
-└── evals/                   # Optional test cases and grading materials
+├── references/              # Optional supporting documentation
+├── assets/                  # Optional templates or resources
+└── evals/                   # Optional test cases and evaluation material
 ```
 
 Use progressive disclosure:
 
-1. **Description:** A short explanation of what the skill does and when it applies.
-2. **Core instructions:** The workflow needed for normal use.
+1. **Metadata:** A short name and description that help determine whether to select the skill.
+2. **Core instructions:** The process needed for most requests.
 3. **Supporting resources:** Detailed references, templates, and scripts loaded only when relevant.
 
-Keep core instructions readable. If the main file becomes difficult to navigate, move detailed domain variants into clearly named reference files and state exactly when to consult each file. Add a table of contents to long references.
+Keep the main instruction file readable. If it becomes large, move specialized material into clearly named references and state exactly when each reference should be used. Give long references a contents list or clear navigation.
 
-For multi-variant work, keep a common selection workflow in the core instructions and separate variant-specific guidance into distinct resources. The AI should choose the relevant branch instead of loading every variation by default.
+For skills with several variants, organize resources by variant. The core instructions should explain how to select the relevant path, rather than requiring the AI to read every reference by default.
 
-### Use scripts only for repeatable deterministic work
+### Use reusable helpers carefully
 
-When test runs reveal repeated reconstruction of the same helper procedure, consider bundling a reusable script or template. Typical candidates include file transformation, structured validation, routine report generation, and data cleanup.
+If evaluations show that the AI repeatedly rebuilds the same reliable procedure, consider bundling a helper script, template, or checklist. A reusable helper is most valuable when it is:
 
-A bundled helper is justified when it is:
+- Deterministic or easier to verify than free-form reasoning.
+- Reused across many requests.
+- Less error-prone than recreating the procedure each time.
+- Clearly within the user’s intended permission scope.
 
-- Deterministic or easier to verify than repeated natural-language reasoning.
-- Reused across multiple tasks.
-- Safer or less error-prone than rebuilding it each time.
-- Within the user’s intended access and authorization boundaries.
-
-Document what the helper does, its inputs and outputs, failure behavior, and when not to use it. Do not automate an action merely because automation is possible.
+Document what each helper does, its inputs and outputs, its limitations, and when not to use it. Do not automate sensitive, destructive, or external actions without clear approval points.
 
 ## 4. Write the skill
 
-Draft the skill in clear, imperative language. Explain the reasoning behind important instructions, especially when a rule prevents a predictable failure. An AI is more likely to adapt well when it understands the goal and tradeoff than when it receives a large list of unexplained prohibitions.
+Write in clear, imperative language. Explain the purpose behind important steps, especially when a rule prevents a predictable failure. A capable AI can adapt better when it understands the goal and tradeoff than when it receives a long list of unexplained prohibitions.
 
-Include the following sections when applicable.
+Include the following sections as appropriate.
 
 ### Purpose and scope
 
-State the job, intended outcome, boundaries, and whether the skill creates an answer, produces a file, takes an action, or guides a user through a decision.
+State the job, intended use, and boundaries. Make clear whether the skill produces advice, a chat response, a file, a draft, or an external action.
 
 ### Inputs and prerequisites
 
-List required information, permitted sources, necessary capabilities, and optional inputs. Explain what happens when a required item is unavailable.
+List required information, permitted sources, needed capabilities, and optional inputs. State what to do when something required is absent.
 
 ```markdown
-Before preparing the report, confirm the reporting period and approved source material.
-If a required source is unavailable, ask for an export or provide a draft clearly marked as incomplete.
+Before preparing the report, confirm the reporting period and approved data source.
+If the source is unavailable, ask for an export or prepare a draft clearly marked as incomplete.
 ```
 
 ### Workflow
 
-Give the normal sequence of actions and decision points. Avoid attempting to list every imaginable exception.
+Give the normal sequence of actions and include meaningful decision points. A durable workflow commonly follows this pattern:
 
-A durable general workflow is:
+1. Inspect the request and available inputs.
+2. Clarify only where an answer would materially change the work.
+3. Gather evidence from approved sources.
+4. Perform the task using the suitable method.
+5. Check the result against format and success criteria.
+6. Present the result, assumptions, evidence, and unresolved limitations.
 
-1. Inspect the request, available inputs, constraints, and authorization.
-2. Ask focused questions only when an answer would materially change the work.
-3. Gather evidence from minimum necessary approved sources.
-4. Perform the task using the appropriate method and resources.
-5. Check the result against the requested format, evidence, and success criteria.
-6. Present the result together with material assumptions, limitations, and next actions.
-
-Use conditional rules when they make decisions predictable:
+Use conditional instructions when they help:
 
 ```markdown
 If the user provides a required template, follow it.
 If no template is provided, use the default structure below.
-If a requested action could overwrite work, publish information externally, or create a material commitment, explain the impact and request confirmation first.
+If a requested action could overwrite work or create an external commitment, explain the impact and request confirmation first.
 ```
 
 ### Output format
 
-When consistency matters, define an exact or near-exact template.
+When consistency matters, provide an exact or near-exact template.
 
 ```markdown
 # [Title]
@@ -3609,94 +3446,83 @@ When consistency matters, define an exact or near-exact template.
 [Short overview]
 
 ## Findings
-- [Finding with supporting evidence]
+- [Finding supported by evidence]
 
 ## Recommendations
 1. [Action]
 
 ## Assumptions and open questions
-- [Uncertainty, missing input, or decision needed]
+- [Uncertainty or missing information]
 ```
 
-Avoid a rigid shell when the task requires contextual judgment. In such cases, define output goals and include a short example rather than forcing every response into the same layout.
+Avoid rigid templates when usefulness depends on adapting to context. In those cases, specify goals, ordering, and examples rather than a fixed shell.
 
 ### Quality, safety, and privacy checks
 
-Specify the checks needed before completion. Examples include validating calculations, confirming required fields, preserving original data, identifying sources of important claims, or separating verified information from assumptions.
+State what must be checked before completion. Examples include validating calculations, confirming required sections, preserving original data, identifying the source of key claims, or flagging uncertain information.
 
-Skills must behave in ways a user would reasonably expect from their description. Do not create instructions that conceal actions, bypass authorization, obtain confidential information without permission, damage systems, or facilitate unauthorized access.
-
-For work involving information about people:
-
-- Confirm the legitimate purpose and applicable authorization.
-- Use the minimum relevant records and sources.
-- Omit unrelated sensitive details from outputs.
-- Respect consent, confidentiality, retention limits, and the audience’s access boundary.
-- Avoid unsupported judgments about a person’s character or identity.
-
-For hiring or assessment tasks, focus on role-relevant capabilities, role alignment, diagnostic evidence, and whether the assessment distinguishes relevant performance. Do not infer protected traits or make decisions from irrelevant personal information.
+The skill’s behavior should match what a reasonable user expects from its description. Do not conceal actions, bypass authorization, expose confidential information, facilitate unauthorized access, or take destructive action without confirmation. If a request exceeds authorization or creates material risk, explain the limitation and offer a safer alternative where possible.
 
 ### Failure behavior
 
-Describe recovery from common failures in general terms:
+Describe recovery from general failure types:
 
 - **Missing or conflicting input:** Identify the gap and ask a focused question.
-- **Unavailable capability or reference:** Explain what could not be verified and offer an approved alternative.
-- **Ambiguous request:** Make a reasonable low-risk assumption only when it will not materially affect the result; otherwise ask.
-- **Validation failure:** Do not present the result as complete. Correct it, report the issue, or request guidance.
-- **Sensitive or high-impact action:** Pause for confirmation before external, irreversible, or consequential actions.
+- **Unavailable capability or source:** Explain what cannot be verified and offer an alternative method.
+- **Ambiguity:** Make a reasonable low-risk assumption if it will not materially affect the result; otherwise ask.
+- **Validation failure:** Do not present the output as complete. Correct it, report the issue, or seek guidance.
+- **Permission-sensitive action:** Pause before irreversible, external, or high-impact changes.
 
 ### Examples
 
-Include a small number of generalized examples only when each teaches a distinct decision pattern. Examples should illustrate reasoning and output shape, not replace the skill’s ability to adapt.
+Use a small number of generalized examples only when each teaches a distinct decision pattern. Examples should illustrate reasoning, not replace it with narrow rules.
 
-## 5. Write a strong description
+## 5. Write a strong skill description
 
-The description is primarily a routing instruction: it helps the AI decide whether the skill applies. State both **what the skill does** and **when to use it**.
+The description is a routing instruction: it tells an AI what the skill does and when it is relevant. It should cover realistic user wording, including requests that imply the task without naming it directly.
 
-Cover realistic user language, including requests that imply the job without naming it directly. A useful description includes:
+A useful description includes:
 
-- The outcome or task.
-- Common contexts and phrases that indicate the task.
-- Important limits that prevent costly false activation.
+- The task or outcome.
+- Common contexts or phrasing that indicate the task.
+- Important scope boundaries when they prevent costly false activation.
 
 Example pattern:
 
 ```text
-Create clear project status reports from approved updates and source material. Use when a user asks for a status update, leadership summary, progress report, milestone review, or a concise account of risks and next steps, including when they imply the need without using the phrase “status report.”
+Create clear project status reports from approved updates and source material. Use when a user asks for a leadership update, progress report, milestone review, risk summary, or a concise account of next steps, even if they do not use the phrase “status report.”
 ```
 
-Do not put the full workflow into the description. Do not rely on vague labels such as “help with documents.” Do not make it so broad that it captures nearby work better handled by another skill.
+Do not put the full workflow in the description. Do not rely on vague labels such as “help with documents.” Do not make it so broad that it captures adjacent work better handled by another skill.
 
 ## 6. Review the draft before testing
 
-Read the skill as if encountering it for the first time. Check:
+Read the skill as if seeing it for the first time. Check:
 
 - Is the job coherent and bounded?
-- Does the description clearly explain activation conditions?
-- Are required inputs, approved sources, permissions, and outputs clear?
-- Does the workflow explain why important checks exist?
-- Does it address missing information and conflicting requirements?
-- Is it free of unnecessary rules, repeated guidance, and brittle wording?
-- Does it avoid assumptions about a particular person’s tools, habits, access, or terminology?
-- Does it preserve enough judgment for normal variation?
-- Does it stay within expected safety, privacy, and access boundaries?
+- Does the description explain when to use it?
+- Are inputs, permissions, and outputs clear?
+- Does the workflow explain important quality checks?
+- Does it say what happens when information is missing?
+- Are there unnecessary rules, repeated wording, or brittle instructions?
+- Does it depend on undeclared tools, personal habits, or private access?
+- Can a capable AI handle normal variation without becoming constrained by the wording?
 
-Prefer a lean, understandable prompt over a long prompt full of rules that do not affect outcomes. Repeated absolute language is a warning sign unless the instruction protects a genuine non-negotiable boundary.
+Prefer lean, understandable instructions over a long list of rigid commands. Excessive absolute language is a warning sign unless the behavior concerns a genuine safety, privacy, or authorization boundary.
 
 ## 7. Design realistic test cases
 
-After the draft is stable enough to test, create two or three realistic test prompts. Share them with the user and invite corrections or additions before treating them as representative.
+After the draft is stable enough to test, create two or three realistic test prompts. Share them with the user and invite corrections or additions before relying on them.
 
-For each case, record:
+For each test case, record:
 
 - A descriptive identifier.
 - The user prompt.
-- Any approved input files or context.
+- Any supplied files or context.
 - The expected outcome in plain language.
-- Objective checks, if suitable.
+- Objective checks, if appropriate.
 
-A portable evaluation record is:
+A portable test record can look like this:
 
 ```json
 {
@@ -3704,7 +3530,7 @@ A portable evaluation record is:
   "evals": [
     {
       "id": "missing-source-handling",
-      "prompt": "Prepare a weekly summary from the attached updates and flag information you cannot verify.",
+      "prompt": "Prepare a weekly summary from the attached updates and flag information that cannot be verified.",
       "expected_output": "A structured summary that separates verified updates from missing information.",
       "files": [],
       "assertions": []
@@ -3713,26 +3539,26 @@ A portable evaluation record is:
 }
 ```
 
-Cover meaningful variation:
+Cover different meaningful situations:
 
 - A typical successful request.
-- An incomplete or ambiguous request.
+- Incomplete or ambiguous input.
 - A format-sensitive or rule-sensitive request.
-- A realistic edge case that changes the workflow.
-- A request that should require approval, privacy protection, or refusal when relevant.
+- A realistic variation that changes the workflow.
+- A request that should require approval, decline, or privacy protection when relevant.
 
-Do not create tests that simply repeat the skill’s wording. Vary phrasing, user detail, and context. Use generalized scenarios and sanitized materials; do not put real private records, credentials, or unnecessary personal details into evaluation sets.
+Do not make tests merely repeat the skill’s phrasing. Vary wording, detail level, and user sophistication. Avoid retaining unnecessary private context in prompts or fixtures.
 
-## 8. Run comparisons and capture evidence
+## 8. Run comparisons and preserve evidence
 
-When the environment supports independent runs, compare the skill against a meaningful baseline.
+When independent execution is available, compare the skill against a meaningful baseline:
 
-- **New skill:** Run each prompt with the skill and without the skill.
-- **Existing skill:** Preserve an unchanged snapshot before editing, then compare the revision against that snapshot or another user-approved baseline.
+- **New skill:** Run each test with the skill and without the skill.
+- **Existing skill:** Preserve an unchanged copy before editing, then compare the revised version with the prior version.
 
-Start both conditions for every test case under comparable settings. If parallel execution is available, launch all skill and comparison runs together. This reduces timing distortions and helps ensure fair comparison.
+Run comparison conditions under comparable circumstances. If parallel execution is available, start all skill and baseline runs together to reduce timing differences and avoid changing one condition after seeing another result.
 
-Use a clear iteration structure:
+Store each iteration clearly, for example:
 
 ```text
 workspace/
@@ -3746,23 +3572,23 @@ workspace/
 └── iteration-2/
 ```
 
-For each run, preserve the prompt, approved inputs, outputs, and available metadata such as elapsed time and resource use. Record timing when it is reported, because some execution systems do not retain it later.
+For every run, retain the prompt, permitted inputs, output, evaluation criteria, and available metadata such as elapsed time or resource use. Capture timing immediately if the execution environment reports it, since it may not remain available later.
 
-If independent agents or parallel execution are unavailable, run a transparent sanity check: follow the skill for each test prompt, preserve the outputs, and ask the user to review them. Do not describe this as a rigorous baseline experiment.
+If independent runs are unavailable, perform a transparent sanity check: follow the skill on each test request, save the results, and ask the user to review them. Do not present this as a rigorous baseline comparison.
 
 ## 9. Define and grade objective checks
 
-While runs are underway, draft objective checks where they genuinely help. Explain them to the user before presenting them as success criteria.
+While test runs are underway, draft objective checks where they genuinely help. Explain them to the user before treating them as success criteria.
 
-Good checks are specific, observable, and meaningful:
+Good checks are specific, observable, and connected to user value:
 
 - Required sections are present.
-- A produced file opens and includes required fields.
-- Calculations match known source values within an agreed tolerance.
-- The response identifies missing mandatory inputs.
-- Important claims include required source references.
+- A produced file opens and contains required fields.
+- Calculated values match a known approved source within an agreed tolerance.
+- The output identifies missing mandatory information.
+- Claims include source references when required.
 
-Use a stable grading record:
+Record each check with a clear statement, a pass/fail result, and evidence:
 
 ```json
 {
@@ -3776,124 +3602,145 @@ Use a stable grading record:
 }
 ```
 
-Use programmatic checks when practical. They are usually faster, more repeatable, and reusable across iterations. Do not force numeric checks onto subjective quality. Tone, usefulness, visual quality, and strategic judgment often require human review.
+Use programmatic validation when practical. Reusable automated checks are generally more reliable than visual inspection. Do not force numerical checks onto subjective work: tone, writing quality, design, usefulness, and strategic judgment often require human review.
 
 ## 10. Review results with a human
 
-Present both qualitative outputs and quantitative results. Use an available review interface when possible; otherwise present accessible files or a clear in-conversation comparison.
+Present outputs and measurements in a form the user can inspect. Use an available review interface when one exists; otherwise present accessible files or a clear in-conversation comparison.
 
-For each test case, provide:
+For each test case, show:
 
-- The original prompt and relevant approved inputs.
-- The skill output and comparison output, if one exists.
-- Objective grades and supporting evidence.
+- The original prompt.
+- Relevant permitted inputs.
+- The skill output and comparison output, if available.
+- Objective grades and evidence.
 - Timing or resource data, if available.
-- A clear way for the reviewer to leave feedback.
+- A way for the user to state what worked and what should change.
 
 Ask focused questions:
 
-- “Which result would you trust in normal use, and why?”
-- “What was missing, misleading, or difficult to use?”
-- “Did the skill add work or detail that was not valuable?”
-- “Would this approach still work with different wording or data?”
+- Which result would you trust in ordinary use, and why?
+- Did the skill add steps or detail that were not valuable?
+- What was missing, misleading, unsafe, or difficult to use?
+- Would it work for a similar request with different wording or data?
 
-Empty feedback can indicate that a test case is acceptable, but it is not proof that the skill is solved. Review outputs and measurements as well.
+Treat empty feedback as a useful signal for that case, not proof that every future case is solved.
 
-## 11. Analyze results and improve without overfitting
+## 11. Analyze results beyond pass rates
 
-Aggregate results where possible: pass rate, average time, average resource use, and variation. Then look beyond aggregate scores for patterns:
+Aggregate results where possible: pass rate, elapsed time, resource use, and variation. Then inspect patterns that summary statistics may hide:
 
-- **Non-discriminating checks:** Both conditions pass, so the check does not demonstrate the skill’s value.
-- **High variation:** Similar runs differ substantially, suggesting ambiguity or instability.
-- **Tradeoffs:** Quality improves but time or resource cost becomes excessive.
-- **Failure concentration:** Multiple failures share a root cause, such as unclear source selection.
-- **Unproductive work:** Execution traces show redundant planning, research, or formatting.
-- **Repeated reconstruction:** Several runs build the same helper process, suggesting a reusable script or template.
+- **Non-discriminating checks:** Both versions pass, so the check does not measure the skill’s added value.
+- **High variation:** Comparable runs differ substantially, suggesting ambiguity or unreliable instructions.
+- **Tradeoffs:** Quality improves, but time or resource cost may be too high.
+- **Failure concentration:** Several failures share one cause, such as unclear source selection or missing output rules.
+- **Unproductive work:** Execution records show redundant planning, research, or formatting.
+- **Repeated reconstruction:** Multiple runs recreate the same helper process, indicating a reusable resource may help.
 
-Base revisions on user feedback, outputs, and analysis. Change the smallest part likely to address the underlying cause.
+For consequential decisions, consider a blind comparison. Give an independent reviewer two outputs without revealing which version produced each, use a shared rubric, record the judgment, then reveal the mapping. Judge role-relevant qualities such as correctness, completeness, clarity, adherence to constraints, safety, and practical usefulness.
 
-Use these principles:
+## 12. Improve without overfitting
 
-1. Fix causes, not individual examples.
-2. Keep instructions lean and remove guidance that does not improve results.
+Revise the smallest part of the skill likely to fix the underlying cause. Generalize from feedback instead of adding rules that only match one test.
+
+For example, if a report fails to distinguish unsupported claims, do not add a rule mentioning only that report. Clarify the broader principle: distinguish verified information, assumptions, and unavailable evidence whenever sources are incomplete or mixed.
+
+Use these improvement principles:
+
+1. Fix causes, not isolated examples.
+2. Keep instructions lean and remove guidance that does not change outcomes.
 3. Explain intent so the AI can adapt intelligently.
-4. Add reusable assets only when repeated work demonstrates their value.
-5. Preserve behavior users already value.
-6. Add tests only for real categories of failure.
+4. Add scripts, templates, or references only when repeated work justifies them.
+5. Preserve behavior the user already values.
+6. Add tests only for genuine classes of failure, not every one-off event.
 
-After revision, rerun the test set in a new iteration and compare it with the chosen baseline. Where possible, show prior outputs beside new outputs so the reviewer can see whether the change helped.
+After revision, rerun the full test set in a new iteration. Use the same baseline policy, compare against prior outputs where useful, and collect feedback again.
 
-Stop when the user says the skill is ready, feedback is consistently positive across meaningful cases, objective requirements are reliably met, or further revisions are not producing meaningful improvement.
-
-## 12. Optional blind comparison
-
-For a more rigorous comparison between two versions, use blind review. Give an independent evaluator two outputs without identifying which version produced each one. Ask it to apply a shared rubric, then reveal the mapping only after the assessment is recorded.
-
-Use blind comparison when versions have similar scores but noticeably different quality, when the decision is consequential, or when reviewers may favor a newer version by default. Keep the rubric tied to user value: correctness, completeness, clarity, constraint adherence, safety, and practical usability.
+Stop when the user is satisfied, meaningful cases are consistently successful, objective requirements are reliably met, or further edits are not producing useful improvement.
 
 ## 13. Optimize activation behavior
 
-Only optimize the description after the underlying workflow is useful.
+After the workflow itself is stable, evaluate the description that controls when the skill is selected.
 
-Create a balanced set of realistic requests that should activate the skill and realistic near-misses that should not. Use detailed, substantive requests where consulting a skill would be helpful.
+Create a realistic set of activation queries containing both cases that **should activate** the skill and difficult nearby cases that **should not**. Use roughly balanced coverage. Queries should be substantive enough that consulting a skill would be useful.
 
 Positive cases should vary by:
 
-- Formal and casual phrasing.
-- Direct naming and implied need.
+- Formal and casual language.
+- Direct and implied requests.
 - Common and less common valid uses.
-- Situations where related skills could compete but this one should apply.
+- Situations where a related skill might compete.
 
-Negative cases should be difficult near-misses, not obviously irrelevant requests. They should share concepts or keywords but belong to another job, require different capabilities, or lack the conditions that make this skill appropriate.
+Negative cases should be near-misses rather than obviously irrelevant requests. They should share terms or concepts with the skill but require a different job, different access, or different conditions.
 
-Review the query set with the user. If the environment can test activation repeatedly, divide the set into improvement cases and held-out selection cases. Select the description using held-out performance to reduce overfitting. Show the user the previous description, revised description, and results before applying it.
+```json
+[
+  {
+    "query": "I need a concise update for leadership from these team notes, including risks and next steps.",
+    "should_trigger": true
+  },
+  {
+    "query": "Can you explain what a project status report is and when teams use one?",
+    "should_trigger": false
+  }
+]
+```
+
+Review the query set with the user before using it. If repeated activation testing is available, separate improvement queries from held-out queries used to choose the final description. Select the description that performs best on held-out cases, not merely the one that fits the examples used for editing.
+
+Remember that simple one-step requests may be handled directly without selecting a specialized skill. Test requests should therefore be complex enough that the skill would add real value.
 
 ## 14. Package and hand off
 
-Package the core instructions and only the resources needed for normal use. Before delivery, audit the package:
+When the skill is ready, package the core instructions and only the resources needed for normal use. Before delivery, audit the package:
 
 - The name is stable and appropriate.
-- The description accurately states when the skill applies.
-- Instructions do not depend on undeclared tools, private conventions, or unapproved access.
-- Scripts, references, and assets are present, clearly named, and documented.
-- No confidential data, credentials, identifiers, or unnecessary personal details remain.
-- Evaluation material is retained only when safe and useful.
-- The user can install or adapt the package in their chosen environment.
+- The description accurately states activation conditions.
+- Instructions do not rely on private conventions, undeclared access, or a specific proprietary tool.
+- References and helpers are present, clearly named, and documented.
+- No credentials, identifiers, confidential records, or unnecessary sensitive examples are included.
+- The user can adapt the skill to their chosen environment.
+- Test material is retained only if it is safe and useful to keep.
 
-Provide a short handoff note stating what the skill does, required capabilities, known limitations, and a simple way to test it after installation.
+Provide a handoff note stating what the skill does, required capabilities, known limitations, approval boundaries, and a simple way to test it after installation.
 
 ## Final readiness gate
 
-A skill is ready when it has a clear job, an honest activation description, instructions that handle normal variation, explicit boundaries for uncertainty and authorization, and evidence from realistic use that it improves outcomes.
+A skill is ready when it has:
 
-Do not confuse a long instruction file with a reliable skill. The goal is a reusable workflow that helps an AI make better decisions and deliver better results for recurring user work.
+- A clear, bounded job.
+- A description that routes appropriate requests.
+- Instructions that handle normal variation.
+- Explicit behavior for uncertainty, authorization, privacy, and high-impact actions.
+- Evidence from realistic use that it improves outcomes.
+- A package that another user can understand and adapt without relying on hidden personal context.
+
+Do not confuse a long instruction file with a reliable skill. The goal is a reusable workflow that helps an AI make better decisions and deliver better results for real recurring work.
 
 
 ---
 name: test-every-screen-size
-description: Verify every UI and CSS change across representative narrow, wide, short, and tall viewports using real screenshots and programmatic layout checks. Fix every failure and rerun the relevant sweep before reporting the work as complete.
+description: Verify UI and CSS changes across representative narrow, wide, short, and tall viewports. Combine screenshots with programmatic layout checks, then fix and retest every failure.
 ---
 
 # Test every screen size
 
-Use this workflow after **any UI, visual, or CSS change** and before declaring work complete, requesting review, publishing, or releasing. Treat even a small spacing, color, background, or wrapper change as potentially cross-viewport: it can alter wrapping, height, overflow, alignment, and visible backgrounds elsewhere.
+Use this workflow after **any UI, visual, or CSS change** and before declaring the work complete, requesting review, publishing, or releasing. Apply it even to a small spacing, color, or background edit: local changes can affect wrapping, height, overflow, alignment, and backgrounds at other screen sizes.
 
-A single desktop screenshot, a single mobile screenshot, or bounding-box measurements alone are not sufficient. Real screenshots and programmatic checks find different classes of defects; use both.
+A bounding-box check alone is not enough. One desktop and one mobile screenshot are not enough. Use real screenshots and numerical checks together.
 
-## 1. Prepare realistic test states
+## 1. Prepare realistic page states
 
-Run the real interface in an authorized test environment and populate the affected surface with representative content before testing. Use the minimum data needed to test layout, and avoid exposing unnecessary sensitive information in screenshots or reports.
-
-Include relevant examples such as:
+Run the real interface in a safe test environment. Populate the changed surface with representative content before testing:
 
 - long paragraphs, formatted text, and long field values;
 - representative lists, cards, rows, and validation messages;
-- realistic item counts, including content near expected limits;
-- loading, empty, and error states when the change can affect them.
+- realistic item counts or content near expected limits;
+- loading, empty, and error states when the change affects them.
 
-Do not validate only an empty or unusually clean state. Sparse content can hide clipping, overlap, wrapping failures, and unintended blank regions.
+Do not validate only an empty or unusually clean state. Sparse content can hide clipping, overlap, wrapping, and unintended blank space.
 
-## 2. Select the viewport sweep
+## 2. Choose the viewport sweep
 
 Test these baseline widths:
 
@@ -3904,76 +3751,76 @@ Test these baseline widths:
 - 1024 px
 - 1440 px
 
-Add a large desktop width, such as 1920 px, for landing pages, dashboards, or interfaces expected to be used on large displays.
+Add a large desktop width, such as 1920 px, when the interface is expected to be used on large displays.
 
 When vertical layout matters, test at least two heights at each relevant width:
 
 - a short height around 700 px;
 - a tall height around 1400 px or greater.
 
-Also test any known target viewport supplied by the user or product requirements. Explicitly include a very tall viewport, such as 1800 px, when changing viewport-height sizing, flexible page shells, backgrounds, vertical padding, sticky footers, bottom alignment, or related layout behavior.
+Also include any known target viewport. Explicitly test a very tall viewport, such as 1800 px, for changes involving viewport-height sizing, flexible page shells, page backgrounds, vertical padding, sticky footers, or bottom alignment.
 
-Use a repeatable headless browser automation capability selected for the project. Capture artifacts consistently enough that another reviewer can reproduce the sweep.
+Use a headless browser automation tool, or another repeatable browser-testing system selected for the project.
 
 ## 3. Capture and inspect screenshots
 
-Capture real screenshots at every relevant viewport and test state. Use full-page screenshots when document length matters. Also capture the visible viewport when fixed, sticky, or viewport-height behavior matters.
+Capture real screenshots at each relevant viewport and state. Use full-page screenshots when page length matters. Also capture the visible viewport when fixed, sticky, or viewport-height behavior matters.
 
-Inspect each changed component on all four sides:
+Inspect every changed component on **all four sides**:
 
 1. top;
 2. right;
 3. bottom;
 4. left.
 
-For each side, ask: does this match the intended design now that the component has its current role?
+For each side, ask whether it matches the intended design after the component's role changed.
 
-Pay special attention to full-bleed, edge-to-edge, or flush changes. Removing containment on one side can reveal leftover margins or wrapper padding on another side as a visible background strip. Check all edges, not only the edge edited.
+Pay special attention to edge-to-edge or full-bleed changes. A component that becomes flush with an edge may expose leftover wrapper margins or padding as visible background strips. Check every edge, not only the edge edited.
 
 Reread the original requested outcome after making the change, then compare it directly with the screenshots. Do not accept a result merely because the CSS appears logically correct.
 
 ## 4. Run programmatic checks at each viewport
 
-Run numerical checks alongside screenshot review. At minimum, verify the checks relevant to the changed surface:
+Run numerical checks alongside screenshots. At minimum, verify:
 
 - no unintended horizontal overflow;
-- no unintended vertical overflow when the design is meant to fit within the viewport;
-- no changed element overlaps neighboring content, its intended container, or an essential fixed element;
-- buttons, links, inputs, and other controls remain visible and usable;
-- cards, lists, and form controls remain within intended bounds;
+- no unintended vertical overflow when the screen is meant to fit the viewport;
+- no changed element overlaps neighboring content or its intended container;
+- buttons, links, and fields remain visible and usable;
 - fixed or sticky UI does not hide essential content;
-- prose retains a readable line length.
+- cards, lists, and form controls remain within intended bounds;
+- body text retains a readable line length.
 
-For fit-to-viewport screens, compare document height to viewport height with a small rendering tolerance. For overlap detection, compare bounding rectangles of relevant adjacent elements, controls, and containers rather than assuming document order prevents collision.
+For fit-to-viewport screens, compare document height with viewport height and allow only a small rendering tolerance. For overlap detection, compare relevant bounding rectangles with adjacent elements and container boundaries.
 
-For prose-heavy pages, estimate characters per line from rendered width and font size, or use another appropriate typography measurement. Flag text that is excessively wide; around 80 characters per line is a useful warning threshold, while reading-focused designs often target roughly 60–70 characters per line.
+For prose-heavy pages, flag excessively wide text measures. A broad warning threshold is about 80 characters per line; reading-focused designs commonly use a narrower target of roughly 60–70 characters per line.
 
 ## 5. Require both forms of evidence
 
-Automated measurements can miss exposed background strips, poor visual balance, and unexpected empty regions. Screenshots can miss subtle off-screen overflow, inaccessible controls, and small collisions.
+Automated measurements can miss visual defects such as exposed background strips, poor balance, or unexpected empty regions. Screenshots can miss subtle off-screen overflow, inaccessible controls, and small collisions.
 
-A viewport passes only when both visual inspection and the relevant programmatic checks pass. If a check is not applicable, record why rather than silently omitting it.
+A viewport passes only when both visual inspection and relevant programmatic checks pass.
 
-## 6. Fix failures at the cause and retest
+## 6. Fix failures and rerun the sweep
 
-If any viewport or realistic content state fails:
+If any viewport or realistic state fails:
 
-1. stop the completion, review, or release process;
-2. identify the layout rule or component interaction causing the failure;
-3. fix the underlying behavior rather than adding a cosmetic, viewport-specific patch;
-4. rerun the complete relevant sweep, including the states that previously passed.
+1. stop the completion or release process;
+2. identify the layout rule causing the failure;
+3. fix the underlying behavior rather than adding a viewport-specific cosmetic patch;
+4. rerun the complete relevant sweep, not only the failing size.
 
-If a fix corrects one viewport but creates a failure at another, reconsider the diagnosis. The layout model is likely incomplete; do not stack patches until screenshots happen to look acceptable at selected sizes.
+If a fix makes one viewport correct but breaks another, reconsider the diagnosis. The layout model is likely incomplete.
 
 ## 7. Readiness gate and reporting
 
-Do not report vague claims such as “works on mobile and desktop.” Report the tested widths, relevant heights and states, and the checks performed.
+Do not report vague claims such as “works on mobile and desktop.” Report the tested widths, relevant heights or states, and the checks performed.
 
 Use a concise report such as:
 
 > Verified at 320, 480, 600, 720, 1024, and 1440 px; tested short and tall layouts where relevant; no unintended overflow or overlap; controls remain visible and usable; tall viewport clean.
 
-If any viewport or state remains unverified, state that clearly and do not represent the UI change as complete.
+If any viewport or state remains unverified, say so clearly and do not represent the UI change as complete.
 
 
 ---
