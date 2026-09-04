@@ -1,115 +1,104 @@
 ---
 name: use-a-browser-safely
-description: Complete browser-based tasks safely by selecting the least invasive authorized method, protecting account context and private information, verifying rendered page state, and separating preparation from consequential final actions.
+description: Complete browser-based tasks safely by choosing the least invasive authorized method, protecting account context and privacy, verifying rendered state, and separating preparation from consequential commitment.
 ---
 
 # Use a browser safely
 
-Use this workflow for website tasks that require real interaction: completing rendered forms, collecting data from dynamic pages, testing a flow, changing account settings, or working in an authenticated dashboard. Use it when a normal page request, supported integration, or authorized API cannot reliably complete the task.
+Use this workflow for tasks that require interaction with a website: completing rendered forms, changing settings, collecting information from dynamic pages, testing a user flow, or working in an authenticated dashboard. Use it when a supported direct interface, static retrieval method, or ordinary page request cannot reliably complete the task.
 
 The central rule is:
 
-> Inspect the rendered page before editing, read back every meaningful change, and do not take a consequential final action until the account, target, authorization, and page state are verified.
+> Inspect the rendered page before editing, read back every meaningful value after changing it, and do not take a consequential final action until the account, target, authorization, and page state are verified.
 
-A browser automation command returning success does **not** prove the site accepted a change. Modern web applications can keep internal state separately from the DOM, commit a value only when focus leaves a field, replace controls during a re-render, or show an error even after an action actually completed.
+An automation command returning success does **not** prove that the website accepted the change. Modern web applications may keep state outside the visible document, commit values only after focus changes, replace controls during a re-render, or display an error even though an action completed.
 
-## 1. Confirm purpose, authority, and scope
-
-Before accessing a logged-in website, private communication, record, or dashboard, establish that the task has a legitimate purpose and that the requester is authorized to direct it.
-
-Identify:
-
-- The exact target page, account, environment, record, or workflow.
-- What information will be viewed, entered, changed, uploaded, or collected.
-- The minimum data necessary to complete the request.
-- Whether the action is reversible.
-- Whether the task will send, publish, pay, delete, grant access, change billing, or otherwise create an external commitment.
-- Any missing facts or choices that require the user's judgment.
-
-Use only the minimum relevant sources and personal information. Do not put unrelated personal details into browser logs, screenshots, temporary files, or final reports. Keep outputs within the requester's appropriate access boundary. Do not expose credentials, session tokens, recovery details, or sensitive account data.
-
-If the target, authority, intended audience, or impact is unclear, stop and ask before changing data.
-
-## 2. Choose the least invasive suitable route
+## 1. Choose the least invasive route
 
 Use the first route that safely fits the task:
 
-1. **Supported direct interface or API.** Prefer a documented, authorized API, integration, export, or ordinary form endpoint when it can perform the requested operation safely.
-2. **Headless browser automation.** Use this for public pages, test environments, rendered-page extraction, screenshots, UI tests, and tasks that do not need an existing signed-in identity.
-3. **User-visible authenticated browser session.** Use this only when the task genuinely requires an established account session, single sign-on state, or account-specific dashboard.
+1. **Supported direct interface or API.** Prefer an authorized, documented programmatic interface when it can perform the requested task. It is usually more reliable than recreating browser interactions.
+2. **Headless browser automation.** Use this for public pages, test environments, routine dynamic-page extraction, screenshots, UI tests, and forms that do not require the user's established signed-in identity.
+3. **User-visible authenticated browser session.** Use this only when the task genuinely requires an existing session, single sign-on state, account-specific dashboard, or user-directed browser context.
 
-Before driving a browser, inspect official documentation, ordinary form actions, page source, and visible request behavior for a supported programmatic path. A form may have an authorized structured submission route that is more reliable than reproducing complex browser interactions.
+Before driving a browser, check whether a direct route exists. Review official documentation, ordinary form actions, page source, and authorized visible network activity for supported endpoints. A browser form may submit structured data to a service that can be used safely through an approved interface.
 
-Do not use undocumented interfaces to bypass access controls, consent boundaries, terms, security controls, payment walls, or anti-abuse protections. If automated browsing is blocked during general research or collection, report the limitation rather than escalating to evade the block. A visible session can be appropriate for an explicitly requested, legitimate task on that site when the user already has authorized access and a normal session is necessary.
+Do not use undocumented interfaces to bypass access controls, consent boundaries, terms, rate limits, paywalls, or other restrictions. Do not use an authenticated visible session merely because it is convenient: it can interrupt the user's work and increases privacy and account risk.
 
-Do not use a live authenticated browser merely for convenience when a headless or direct route will work. It can interrupt the user's work and exposes more account and privacy context.
+If a site blocks automated browsing, do not try to defeat its protections for research or collection. A visible browser may be appropriate only when the user explicitly asked to complete a legitimate task on that specific site, has authorized access, and an established session is needed. Do not weaken browser security, warnings, access restrictions, or anti-abuse protections.
 
-## 3. Protect browser, account, and environment context
+## 2. Protect account identity, privacy, and browser context
 
-When using a visible or authenticated browser:
+When a task accesses private communications, records, dashboards, or information about people, confirm there is a legitimate purpose and clear authorization. Use only the minimum relevant sources and information. Do not copy unrelated personal details into screenshots, logs, notes, or reports. Keep outputs within the requester's appropriate access boundary and respect consent and privacy expectations.
 
-- Announce that browser control is beginning and state the purpose.
-- Work in a fresh tab, window, or isolated tab group unless the user explicitly directs work in an existing tab.
-- Explicitly classify the needed context, such as personal, work, test, staging, or production.
-- Select the browser profile or session connection for that context directly. Do not rely on generic browser selection, recent-use order, tab titles, or connection labels.
-- Confirm the signed-in account and environment using a reliable account indicator before opening or changing the actual target.
-- Confirm the target object before editing: for example, the correct record, recipient list, workspace, or subscription.
-- Do not disable browser protections, multi-factor authentication, security warnings, access controls, or anti-abuse controls to make automation easier.
+Before acting in an authenticated context, identify the correct account, workspace, environment, and browser profile. Never infer identity from a generic browser-window name, tab title, remembered default, or connection label.
 
-Treat browser identity verification as a preflight gate. The minimum question is:
+Use these rules:
 
-> Which account is active, which environment is active, and what exact item will change?
+- Announce when taking control of a visible browser and state the purpose.
+- Work in a fresh tab, window, or isolated tab group unless the user explicitly points to an existing tab.
+- Classify the intended context explicitly: for example, personal, work, testing, staging, or production.
+- Select the browser profile or connection that corresponds to that context rather than relying on a generic browser selector.
+- Confirm the signed-in account through a reliable account indicator before opening or changing the real target.
+- If the required account, environment, target, or authority is unclear, stop and ask before changing data.
+- Do not reveal credentials, session tokens, recovery information, private account data, or security settings in output or logs.
+- Do not disable security controls, multi-factor authentication, browser warnings, or access restrictions to make automation easier.
 
-If an automation system has a verification marker or permission gate, enable it only after the account check has actually passed. Never create a marker early simply to unlock write actions.
+Use an account preflight gate before actions that change data. Confirm the account identity, environment, and target object. If the automation system has a verification marker or permission gate, mark the context verified **only after** the account check actually passes. Never create or enable such a marker in advance merely to unlock actions.
 
-For private information about people, access only the records required for the stated task. Omit unrelated sensitive details from screenshots, notes, and reports.
+A useful pre-action question is: **Which account is this? Which environment is this? What exact item will change?** If any answer is uncertain, resolve it before proceeding.
 
-## 4. Separate preparation from commitment
+### Visible-browser protocol
 
-Separate reversible preparation from irreversible commitment.
+When a visible session is necessary, announce the action before connecting, then proceed with the authorized task without silently taking over an existing browser. Use a newly created workspace unless the user has identified a specific existing tab to use.
 
-Preparation can include drafting text, filling fields, selecting options, collecting a preview, or assembling an upload. Commitment includes submitting, sending, publishing, paying, deleting, changing access, or applying a final plan or billing change.
+If more than one browser profile or connected session exists, select the one whose configured context matches the task. Then verify the account through a reliable account page, profile menu, tenant indicator, or equivalent first-party identity display. Do not rely on a display name alone when a more reliable identifier is available.
+
+If the needed profile is not available, ask the user to connect or open the appropriate profile. Do not guess based on which profile was most recently active. If restarting a browser would close the user's tabs or interrupt work, obtain explicit approval before doing so.
+
+## 3. Establish the task boundary
+
+Determine the intended outcome before navigating deeply. Identify:
+
+- The target page, record, form, setting, or workflow.
+- The information that will be entered, collected, changed, or uploaded.
+- The minimum information needed to complete the request.
+- Whether the final action is reversible.
+- Whether the task includes sending, publishing, paying, deleting, granting access, changing a plan, or another external commitment.
+- Missing information, ambiguous choices, and fields that require the user's judgment.
+
+Separate **preparation** from **commitment**. Filling fields, drafting text, selecting options, and collecting a preview are often reversible. Submitting, sending, publishing, purchasing, deleting, or applying an irreversible account change may not be.
 
 For consequential tasks, use two phases:
 
-1. **Preparation pass:** Fill or configure the page, verify the resulting state, and capture a pre-action screenshot or structured state record. Do not activate the final control.
-2. **Commitment pass:** Obtain explicit confirmation of the prepared state. Re-check the account, target, and readiness gate, then perform the final action once.
+1. **Preparation pass:** Fill or configure the page, verify all values, and capture a pre-action screenshot or structured state record. Do not activate the final control.
+2. **Commitment pass:** After explicit confirmation of the prepared state, re-check the account, target, and readiness gate. Then perform the final action once.
 
-If the page reloads, re-renders, or the session changes between phases, do not assume prior values persisted. Re-inspect, restore if needed, and verify again.
+If a page reloads, re-renders, or the session changes between passes, do not assume the earlier state remains valid. Restore the intended values if necessary and verify them again before committing.
 
-Explicit confirmation is normally required immediately before:
+## 4. Inspect the rendered page before editing
 
-- Sending a message, invitation, notification, or application.
-- Publishing content or submitting an externally reviewed form.
-- Making a payment, purchase, or donation.
-- Deleting records, files, or content.
-- Changing subscription, billing, ownership, access, security, or plan settings.
-- Taking an action labeled permanent, final, irreversible, or impossible to edit later.
-
-For a reversible, low-risk change that the user explicitly requested, normal verification is usually enough unless the page presents an unexpected warning or broader impact.
-
-## 5. Inspect the rendered page before editing
-
-Do not begin by guessing selectors, using control indexes, or trusting a visual approximation. Inspect the rendered page first.
+Do not begin by guessing selectors, filling fields by numeric position, or trusting a visual approximation. First inspect the rendered page and collect enough structure to identify controls safely.
 
 For each relevant control, determine:
 
-- Its type: single-line input, multiline area, rich-text editor, dropdown, checkbox, radio group, date picker, upload control, or custom widget.
-- Its accessible name, visible label, placeholder, or explicit label relationship.
-- Its current value, required state, disabled state, and validation requirements.
-- Whether it is the actual editable element, a wrapper, or a hidden synchronization field.
-- Whether changing it or a related control causes a re-render.
+- Element type: single-line input, multiline text area, rich-text editor, dropdown, checkbox, radio group, date picker, upload control, or custom widget.
+- Accessible name, visible label, placeholder, or label relationship.
+- Current value and whether the field is required.
+- Validation rules, character limits, formatting behavior, and disabled state.
+- Whether an apparent field is the actual editable control, a wrapper, or a hidden synchronization element.
+- Whether changing a dropdown, checkbox, date, or tab causes the page to re-render.
 
-Address controls by stable semantic identity: accessible name, visible label, or a label relationship. Do not use DOM order when labels are available, because dynamic applications can reorder or replace elements during loading and re-rendering.
+Address controls by stable semantic identity, such as visible label text, accessible name, or explicit label relationship. Do not use document indexes where labels are available: dynamic applications can change element order between loads or after re-rendering.
 
-Before editing an existing record or setting, inspect its current state. This helps avoid changing the wrong item or overwriting information unintentionally.
+Before changing a record or setting, inspect its current state. This prevents modifying the wrong item or overwriting existing values unintentionally.
 
-### Generic inspection pattern
+### Generic form inspection pattern
 
-Use the chosen browser automation capability to list relevant controls before writing interaction logic. Record at least tag, type, role, label, required state, and current value or text length.
+Use the selected browser automation capability to list relevant controls before writing fill logic. The inspection should record at least tag, input type, role, label, required state, and current value or text length.
 
 ```js
-// Pseudocode: adapt to the selected browser automation capability.
+// Pseudocode: adapt to the selected browser automation library.
 const controls = inspectAll('input, textarea, [contenteditable="true"], [role="textbox"]')
   .map((element) => ({
     tag: element.tagName,
@@ -123,71 +112,80 @@ const controls = inspectAll('input, textarea, [contenteditable="true"], [role="t
 saveJson('form-before.json', controls);
 ```
 
-## 6. Use the interaction method that matches the control
+## 5. Use the correct input method for each control
 
-A generic “set value” action is not reliable for every web control.
+Different controls need different interactions. A generic “set value” operation is not reliable for all of them.
 
-| Control type | Preferred interaction | Main verification concern |
+| Control type | Preferred interaction | Verification concern |
 |---|---|---|
-| Single-line input | Use normal text-input interaction | Line breaks may be removed silently. |
-| Multiline text area | Fill text, then move focus away | The application may commit on blur. |
-| Rich-text or content-editable editor | Focus the actual editor, select existing text, enter text through keyboard-style events, then blur | Direct DOM mutation may not update the application's internal model. |
-| Dropdown or combobox | Open it, select by visible option text, and wait for state to settle | Selection may trigger a full re-render. |
-| Checkbox or radio group | Read current state first; change only when needed | A click may toggle an already-correct value. |
-| Date or time picker | Select values, close using a neutral page action where possible, then verify the displayed summary | The popover can clear, reinterpret, or reset related values. |
-| File upload | Confirm the file, destination, and privacy implications first | Uploading may start immediately and be hard to reverse. |
+| Single-line input | Use the normal text-input mechanism. | Line breaks may be removed silently. |
+| Multiline text area | Fill text, then move focus away. | Some applications commit only on blur. |
+| Rich-text or content-editable editor | Focus it, select existing content, enter text through keyboard-style events, then blur. | Direct document mutation may not update the application's internal model. |
+| Dropdown or combobox | Open it, select by visible option text, then wait for state to settle. | Selection can trigger a full re-render. |
+| Checkbox or radio control | Read current state first; change only if needed. | A click can toggle an already-correct value. |
+| Date/time picker | Choose date and time, then verify the rendered summary. | Popovers can reinterpret typing or clear related fields. |
+| File upload | Confirm the file, destination, and privacy implications first. | Uploading may begin immediately and can be difficult to undo. |
 
-For framework-driven editors, simulate normal user interaction instead of writing to low-level DOM properties. A robust sequence is:
+For framework-driven editors, simulate normal user interaction rather than writing directly to low-level page properties. A robust general sequence is: focus the actual editable element, select existing text, delete it, enter new text through keyboard-style events, move focus to a neutral page element, wait briefly, and read the result back.
 
-1. Focus the actual editable element.
-2. Select existing text.
-3. Delete it.
-4. Enter the new text through keyboard-style input.
-5. Move focus to a neutral page element to commit the change.
-6. Wait briefly for the application to settle.
-7. Read the value back.
+Some forms pair a visible rich-text editor with a hidden input. Editing the hidden input may appear successful in an inspection result while server-side validation treats the visible editor as empty. Target the control that the user interacts with and that the application actually reads. If an accessibility locator points to an empty wrapper, inspect the underlying editable element and follow its label relationship.
 
-Some forms pair a visible editor with a hidden input. Changing the hidden input can look successful in an inspection result while server-side validation treats the visible editor as empty. Target the interactive control the application actually reads. If an accessibility locator finds an empty wrapper, inspect the underlying editable control and its label relationship.
+If changing a dropdown, checkbox, tab, or date can refresh the form, make and verify those selections **before** filling lengthy or complex text. Re-inspect afterwards and confirm that earlier entries remain present.
 
-If dropdowns, checkboxes, tabs, date pickers, or other controls can refresh the form, set and verify those dependencies **before** filling long or complex text. Re-inspect afterward to ensure earlier values remain present.
+### Rich-text fill sequence
 
-## 7. Verify every meaningful edit
+Use this sequence when a normal fill operation does not update a content-editable control:
 
-After each meaningful field edit or setting change, read the state back from the page. Compare the actual visible or accessible value with the intended value.
+```text
+1. Locate the actual editable element using its label relationship.
+2. Focus the element.
+3. Select existing content.
+4. Delete the selected content.
+5. Insert the intended text through keyboard-style input events.
+6. Move focus to a neutral page element to commit the edit.
+7. Wait briefly for rendering to settle.
+8. Read the editor's visible or accessible content back.
+```
 
-For sensitive content, verify a minimal safe representation, such as length, required state, a redacted excerpt, or a checksum-like comparison, rather than placing full private content in logs.
+Do this one field at a time. On pages that re-render after each change, moving focus away and verifying each editor before touching the next can prevent earlier edits from being replaced.
 
-Check specifically for:
+## 6. Verify after every meaningful edit
 
-- Automation reports success but the field remains empty.
+After each field is filled or setting is changed, read its value back from the page. Compare the actual visible or accessible value with the intended value. For sensitive content, compare lengths, required state, or a minimal redacted summary rather than exposing the full value unnecessarily.
+
+Check for these common mismatches:
+
+- The automation layer reports success but the field is empty in page state.
 - Newlines, repeated spaces, punctuation, or special characters were removed.
-- Text was truncated due to a single-line control or length limit.
-- Text displays but was not retained by the application's internal state.
-- Editing a later field erased an earlier field after a re-render.
+- Text was truncated because the control is single-line or has a length limit.
+- A custom editor displayed text but did not retain it internally.
+- An action on a later field erased an earlier field after a re-render.
 - A hidden synchronization field was changed instead of the visible editor.
-- A selection changed a dependent recipient, date, option, validation rule, or required field.
+- A selection changed a dependent field, date, recipient, or validation requirement.
 
-If verification fails, do not continue toward submission. Diagnose the actual control type, retry once with a more suitable interaction method, and verify again. If the page still alters or rejects the value, report the limitation and ask how to proceed rather than silently submitting incorrect content.
+If verification fails, do not continue toward submission. Diagnose the control type, retry once using a more appropriate interaction method, then verify again. If the page continues to reject or alter the value, report the limitation and ask how to proceed rather than silently submitting incorrect content.
 
-## 8. Run a pre-action readiness gate
+Do not use clipboard access as a required dependency for headless automation. Browser contexts may deny clipboard permissions. Pass approved values through the automation system's secure input mechanism instead, and do not hardcode secrets in scripts or logs.
 
-Before submitting or making any high-impact change, inspect the relevant page state again. Confirm all of the following:
+## 7. Run a pre-submit readiness gate
 
-- The correct account, organization, and environment are active.
+Before any final submission or high-impact change, inspect the full relevant page state again. Confirm all of the following:
+
+- The correct account, workspace, and environment are active.
 - The target item is the intended one.
 - Every required field is present and non-empty.
-- Entered values match the intended content closely enough for the task.
-- Recipients, options, dates, attachments, and dependent fields are correct.
+- Each entered value matches the intended content closely enough for the task.
+- Dropdowns, checkboxes, dates, recipients, attachments, and dependent fields are correct.
 - No validation errors, warnings, or unsaved-change indicators remain.
-- The final control has the intended effect and is not a similarly named destructive alternative.
+- The final button has the intended effect and is not a similarly named destructive alternative.
 
-If a required field is blank, a value cannot be verified, or the target is uncertain, **do not submit**. A partially filled form is usually recoverable; an incorrect external action may not be.
+If a required field is blank, a value cannot be verified, or the target is uncertain, **refuse to submit**. A partially filled form is recoverable; an incorrect external action may not be.
 
-Capture a pre-action record when useful: a screenshot, concise state summary, or structured field dump. Store it only through an appropriate access boundary. Avoid pasting a large table of sensitive field values into a chat or report when a brief summary and a securely available record are enough.
+Capture a pre-action record when useful: a screenshot, concise state summary, or structured field dump. Store and share it only through an appropriate access boundary. Avoid exposing sensitive form values in a large inline table when a short summary and securely available record are sufficient.
 
 ### Readiness checklist
 
-- [ ] Account, environment, and target are verified.
+- [ ] The account, environment, and target were verified.
 - [ ] Relevant controls were inspected before editing.
 - [ ] Every meaningful change was read back.
 - [ ] Required fields are non-empty and validation is clear.
@@ -195,28 +193,55 @@ Capture a pre-action record when useful: a screenshot, concise state summary, or
 - [ ] A pre-action record exists for a consequential task.
 - [ ] The final action and its impact are understood.
 
+## 8. Treat one-way actions as a distinct phase
+
+The following generally need explicit confirmation immediately before the final control is activated:
+
+- Sending messages, invitations, or notifications.
+- Publishing content.
+- Submitting an official or externally reviewed form.
+- Making a payment or purchase.
+- Deleting records or files.
+- Changing subscription, billing, access, ownership, or security settings.
+- Actions labeled permanent, final, irreversible, or impossible to edit later.
+
+Present a concise confirmation request containing the target, important values, recipients or audience, cost if any, irreversible effects, and any open questions. Then wait for confirmation before activating the final control.
+
+A suitable confirmation format is:
+
+> Ready to [final action] for [target]. The key details are [brief summary]. This will [cost, audience, or irreversible effect]. [Open question, if any.] Shall I proceed?
+
+For low-risk reversible changes explicitly requested by the user, such as adjusting a preference or updating a draft, proceed after normal verification unless the page presents an unexpected warning or broader impact.
+
 ## 9. Confirm completion after acting
 
-A click is not evidence of completion. After a final action, look for reliable evidence such as a success notice, confirmation reference, newly created record, persisted setting, sent item, published page, or changed status that remains after a safe refresh.
+A button click is not proof of success. After the final action, look for reliable evidence such as a success message, confirmation reference, newly created record, persisted saved setting, sent or published item, or changed status that remains after a safe reload.
 
 If the site reports an error, preserve the relevant error text and inspect the resulting state before retrying. A visible error can be cosmetic, while blind retries can create duplicate requests, payments, messages, or records.
 
-If completion cannot be verified, report what was attempted, the available evidence, and what remains uncertain. Do not present an attempted action as completed.
+If completion cannot be verified, report what was attempted, what evidence exists, and what remains uncertain. Do not represent an attempted action as completed.
 
-## 10. Common failure patterns and safe recovery
+## 10. General failure patterns and recovery rules
 
 | Symptom | Likely explanation | Safe response |
 |---|---|---|
-| Automation reports success but the field is blank | The application ignored a direct value change | Use focus-and-keyboard interaction, blur, then read back. |
-| Earlier fields disappear after a later edit | A component re-render reset uncommitted state | Commit and verify each field; perform re-rendering controls first. |
-| Text loses line breaks or characters | The wrong control type or formatting rule was used | Find a multiline or editor control, or use an explicitly acceptable simplified format. |
-| A locator finds an empty wrapper | The accessible element is not the editable node | Inspect the underlying labeled control and target the actual editor. |
-| A field looks correct but validation says it is empty | A hidden synchronization field was edited | Use the visible interactive control that the application reads. |
-| The automation layer becomes unstable on a complex page | The selected browser method is unsuitable | Switch to a more robust browser method or supported direct interface; do not blindly rescue a broken session. |
-| Headless and visible browsers behave differently | The site varies behavior by browser context | Prefer an authorized direct interface; if a visible session is necessary for an explicit task, verify its account and proceed normally without evasion. |
-| A date or option popup changes values unexpectedly | The widget has stateful close, clear, or parsing behavior | Close it through a neutral page action and re-verify all affected fields. |
-| A visible error may be cosmetic | The requested task may already have completed | Inspect the resulting state before retrying. |
-| Account or environment is uncertain | The wrong profile, tenant, or environment may be active | Stop, verify a reliable account indicator, and ask if uncertainty remains. |
+| Automation reports success but the field is blank | The application ignored a direct value change. | Use focus-and-keyboard interaction, blur, then read back. |
+| Earlier fields disappear after editing a later one | A component re-render reset uncommitted state. | Commit and verify each field; perform re-rendering controls first. |
+| Text loses line breaks or characters | The wrong control type or formatting rule was used. | Find a multiline or editor control, or use an explicitly acceptable simplified format. |
+| A locator finds an empty wrapper | The accessible element is not the editable node. | Inspect the underlying labeled control and target the true editor. |
+| A field looks correct but validation says it is empty | A hidden synchronization field was edited. | Use the visible interactive control that the application actually reads. |
+| Automation becomes unstable on a complex page | The chosen automation layer is unsuitable. | Switch to a more robust browser method or supported direct interface; do not blindly rescue a broken session. |
+| Headless and visible browsers show different behavior | The site varies behavior by browser context. | Prefer an authorized direct interface; for an explicit legitimate task, use a verified visible session without evading protections. |
+| A popup changes dates or fields unexpectedly | The widget has stateful close, clear, or parsing behavior. | Close it through a neutral page action and re-verify affected fields. |
+| A visible error may be cosmetic | The task may already have completed. | Inspect resulting state before retrying. |
+| The account context is uncertain | The wrong profile or environment may be active. | Stop, verify a reliable account indicator, and ask if uncertainty remains. |
+| A browser restart is proposed to recover a session | Restarting could close unrelated tabs or interrupt the user. | Request explicit approval before restarting; use a fresh session or another route when possible. |
+
+## 11. Maintain the workflow carefully
+
+When a task reveals a repeatable failure or a reliably successful pattern, record the lesson in the applicable shared procedure, subject to its change-control rules. State both the symptom and the safe fix. Consolidate similar lessons into general principles rather than accumulating incident-specific notes.
+
+Keep environment-specific details separate from this workflow. The user or responsible administrator should configure approved browser tools, profiles, script locations, supported interfaces, retention rules, and account-verification methods. Revalidate those operational details when tools, websites, or browser behavior change.
 
 ## Final audit checklist
 
@@ -224,7 +249,7 @@ Before reporting completion, verify:
 
 - [ ] The least invasive suitable route was used.
 - [ ] The task had a legitimate purpose and appropriate authorization.
-- [ ] Only minimum relevant private information was accessed and retained.
+- [ ] Only the minimum relevant private information was accessed and retained.
 - [ ] The correct account, environment, and target were confirmed.
 - [ ] Relevant controls were inspected before editing.
 - [ ] Every meaningful change was read back and verified.

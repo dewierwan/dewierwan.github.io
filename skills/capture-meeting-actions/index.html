@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
 <meta name="robots" content="noindex,nofollow,noarchive"><title>Capture meeting actions · AI skills</title><meta name="description" content="Review authorized meeting records to identify genuine unfinished commitments, create clear deduplicated tasks for confident follow-ups, and batch only the questions that require user judgment.">
-<link rel="alternate" type="text/markdown" href="/skills/raw/capture-meeting-actions.md"><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%23b4552d%22/><text x=%2250%22 y=%2253%22 dominant-baseline=%22central%22 text-anchor=%22middle%22 font-family=%22Georgia, 'Times New Roman', serif%22 font-size=%2246%22 letter-spacing=%221%22 fill=%22%23fdfaf4%22>DE</text></svg>"><link rel="stylesheet" href="/skills/styles.css"></head><body><main><a class="back" href="/skills/">← Skills</a><header class="skill-header"><h1>Capture meeting actions</h1><p class="description">Review authorized meeting records to identify genuine unfinished commitments, create clear deduplicated tasks for confident follow-ups, and batch only the questions that require user judgment.</p><div class="skill-actions"><a href="/skills/raw/capture-meeting-actions.md">Raw Markdown</a><button class="copy" type="button" data-copy="/skills/raw/capture-meeting-actions.md">Copy Markdown</button></div></header><article class="skill-body"><p>Turn authorized meeting records into reliable post-meeting follow-up tasks. Use this as a daily sweep, for a selected date range, or for a manually supplied set of meetings.</p>
-<p>The goal is not to convert every discussion into work. Each meeting should result in zero tasks, one combined follow-up, or multiple separate tasks only when there is a genuine, unfinished commitment that should be tracked.</p>
-<h3>Purpose, authorization, and operating rules</h3>
-<p>Use this workflow only for a legitimate work purpose and with clear authorization to access the selected meeting records and task system. Read only the minimum relevant records, transcripts, notes, and linked materials. Do not copy unrelated personal, sensitive, or confidential information into tasks, summaries, or reusable guidance. Keep task content within the access boundary of the chosen task system and its intended audience.</p>
-<p>Before each run, apply these outcomes:</p>
+<link rel="alternate" type="text/markdown" href="/skills/raw/capture-meeting-actions.md"><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%23b4552d%22/><text x=%2250%22 y=%2253%22 dominant-baseline=%22central%22 text-anchor=%22middle%22 font-family=%22Georgia, 'Times New Roman', serif%22 font-size=%2246%22 letter-spacing=%221%22 fill=%22%23fdfaf4%22>DE</text></svg>"><link rel="stylesheet" href="/skills/styles.css"></head><body><main><a class="back" href="/skills/">← Skills</a><header class="skill-header"><h1>Capture meeting actions</h1><p class="description">Review authorized meeting records to identify genuine unfinished commitments, create clear deduplicated tasks for confident follow-ups, and batch only the questions that require user judgment.</p><div class="skill-actions"><a href="/skills/raw/capture-meeting-actions.md">Raw Markdown</a><button class="copy" type="button" data-copy="/skills/raw/capture-meeting-actions.md">Copy Markdown</button></div></header><article class="skill-body"><p>Turn authorized meeting records into reliable post-meeting follow-up tasks. Use this workflow as a daily sweep, for a selected date or date range, or for a manually supplied set of meetings.</p>
+<p>The goal is not to convert every discussion into work. Each meeting should result in zero tasks, one combined follow-up, or multiple separate tasks only when there is a genuine unfinished commitment that should be tracked.</p>
+<h3>Purpose and operating rules</h3>
+<p>Use meeting records only for a legitimate work purpose and with clear authorization to access them. Use the minimum relevant sources and details needed to identify commitments. Do not copy unrelated sensitive personal information, private discussion, health information, or confidential details into tasks or status reports. Keep outputs within the access boundary of the selected task system and its intended audience.</p>
+<p>Before each run, apply these outcome rules:</p>
 <ul>
 <li><strong>0 tasks</strong> when work was completed in the meeting, belongs to another owner, is already tracked, or the meeting was only for information gathering.</li>
 <li><strong>1 task</strong> when related actions can be completed together for the same person or group on the same time horizon.</li>
@@ -19,19 +19,19 @@
 <li><strong>Pre-meeting agenda:</strong> describes intended discussion, not a commitment.</li>
 </ol>
 <p>Automated summaries often misattribute work, especially in recurring one-to-ones, brainstorming sessions, and meetings where attendees list their own to-dos. Never create a task solely because a summary labels it as an action item. Confirm ownership in the transcript or reliable notes.</p>
-<p>Track unfinished outcomes, not conversation. Skip work that was completed live, delegated to another owner, already tracked elsewhere, or merely discussed. An idea, statement of interest, or open question is not a task unless someone accepted responsibility for a concrete outcome.</p>
-<p>Apply responsibility boundaries supplied by the user or organization. Attendance at a meeting does not make the user accountable for all work in that area.</p>
+<p>Track unfinished outcomes, not conversation. Skip work completed live, delegated to another owner, already tracked elsewhere, or merely discussed. An idea, expression of interest, or open question is not a task unless someone accepted responsibility for a concrete outcome.</p>
+<p>Apply known delegation boundaries supplied by the user or organization. Meeting attendance does not make the user accountable for every action in that area.</p>
 <h3>1. Select the meetings</h3>
-<p>Accept a date in <code>YYYY-MM-DD</code> format, a relative date such as “yesterday,” a date range, or a supplied meeting list. If no input is given, use this broadly useful default:</p>
+<p>Accept a date in <code>YYYY-MM-DD</code> format, a relative date such as “yesterday,” a date range, or a supplied meeting list. If no input is given, use this default:</p>
 <ul>
 <li>Before a configurable early-morning cutoff in the user’s local time, process the previous day.</li>
 <li>Otherwise, process the current day.</li>
 </ul>
-<p>State the selected scope once, for example: “Scanning meetings for 23 Apr.” Find meetings attended by the user and collect only the information needed for triage:</p>
+<p>State the selected scope once, for example: “Scanning meetings for 23 Apr.” Find meetings attended by the user and collect:</p>
 <ul>
 <li>Title, date, and time</li>
 <li>Meeting-record link or identifier</li>
-<li>Attendees and relationship context, if available</li>
+<li>Attendees, if available and relevant</li>
 <li>Transcript, notes, summary, and relevant linked context</li>
 </ul>
 <p>Report a compact count before processing. Do not infer actions from a meeting title alone.</p>
@@ -48,7 +48,6 @@
 <li>A request followed by explicit acceptance</li>
 </ul>
 <p>Review summary action items as candidates, then verify them against the transcript and surrounding conversation. A promise may have been conditional, reassigned, fulfilled live, or directed at another attendee.</p>
-<p>If an artifact was created, shared, pasted, or otherwise delivered during the meeting, treat the related commitment as complete unless the record shows additional work remains.</p>
 <h3>3. Triage each meeting</h3>
 <p>Classify the meeting loosely. Classification provides a starting expectation, not a rule that overrides evidence.</p>
 <div class="table-wrap" tabindex="0" aria-label="Scrollable table"><table><thead><tr><th>Meeting type</th><th>Usual outcome</th><th>Guidance</th></tr></thead><tbody><tr><td>External relationship meeting</td><td>1 task, sometimes a later reconnect</td><td>Capture promised material, outreach, introductions, or explicitly timed follow-up.</td></tr><tr><td>Information-gathering, interview, or reference call</td><td>0 tasks</td><td>Create work only for an explicit out-of-meeting commitment.</td></tr><tr><td>Internal planning or team meeting</td><td>0–1 user-owned task</td><td>Capture the user’s deliverable, not the full team action list.</td></tr><tr><td>Coaching or recurring one-to-one</td><td>0–1 task</td><td>Usually create a task only for explicit work outside the session.</td></tr><tr><td>Partnership, commercial, or decision meeting</td><td>1–2 tasks</td><td>Often separate an internal decision from an external response.</td></tr></tbody></table></div>
@@ -57,10 +56,10 @@
 <li>Relationship context and why the meeting occurred</li>
 <li>Candidate actions owned by the user</li>
 <li>Work completed during the meeting</li>
-<li>Work delegated to another named owner or responsible role</li>
+<li>Work delegated to another named owner</li>
 <li>Explicit future commitments and timing</li>
 <li>Enough neutral context for a task to remain understandable weeks later</li>
-<li>Source and related links that the task audience is authorized to access</li>
+<li>Source and related links that are appropriate to include in the task system</li>
 </ul>
 <p>Create no task when work was completed live, another person owns it, the meeting was purely informational and any needed synthesis is already recorded, the action is covered by an active task, or the statement was not a commitment.</p>
 <h3>4. Decide the task shape</h3>
@@ -72,7 +71,7 @@
 <li>An internal decision and an external response are distinct outcomes.</li>
 <li>A combined task would have an unclear finish line.</li>
 </ul>
-<p>This is a readiness gate. Do not proceed to task creation until each proposed task has a clear owner, unfinished outcome, sensible shape, and enough context to stand alone.</p>
+<p>Use this readiness gate before task creation: every proposed task must have a clear owner, an unfinished outcome, a sensible scope, a plausible date, and enough context to stand alone.</p>
 <h3>5. Write the task</h3>
 <p>Use the user’s chosen task system and field names. At minimum, capture:</p>
 <ul>
@@ -115,7 +114,8 @@ Best,
 ## Links
 - Meeting record: &lt;link&gt;
 - Related document: &lt;link&gt;</code></pre>
-<p>Avoid unnecessary private discussion in a task system that may be broadly visible. Follow the user’s known writing preferences. Otherwise, draft concise, warm, professional messages with a clear request or promised deliverable. If the task is to send a message, write a ready-to-send draft rather than merely saying “email them.” For introductions, use double opt-in: seek permission from each relevant party before connecting them.</p>
+<p>Write context so it remains clear later. Prefer absolute dates over terms such as “yesterday” or “next week.” Avoid unnecessary private discussion in a task system that may be broadly visible.</p>
+<p>If the task is to send a message, include a ready-to-send draft rather than merely saying “email them.” Follow the user’s known writing preferences. Otherwise, draft concise, warm, professional messages with a clear request or promised deliverable. For introductions, use double opt-in: seek permission from each relevant party before connecting them.</p>
 <h3>6. Deduplicate before creation</h3>
 <p>Run one batched search of active tasks before creating new ones. Search by meeting link or identifier, counterparty, distinctive topic terms, and proposed title.</p>
 <p>Treat an active task as a duplicate when it covers the same outcome, not merely when its wording matches. Skip the new task, or update the existing task if the meeting adds a meaningful action, deadline, or context. Record the duplicate decision so it can be reported clearly.</p>
@@ -134,11 +134,11 @@ Option B: [Skip or alternate task shape]</code></pre>
 <h3>9. Maintain reusable guidance</h3>
 <p>Before declaring the run complete, capture lessons that genuinely improve future runs. Keep this separate from the meeting task itself.</p>
 <ul>
-<li>Add a short generalized example or note to a reusable meeting-archetype reference when a recurring pattern affects triage, such as a common attribution error, reliable sign of in-meeting completion, or an archetype exception.</li>
+<li>Add a short example or note to a reusable meeting-archetype reference when a recurring pattern affects triage, such as a common attribution error, reliable sign of in-meeting completion, or an archetype exception.</li>
 <li>Update the core workflow only for cross-cutting principles, changed defaults, or a new required step.</li>
-<li>Record a new responsibility boundary in the user’s or organization’s maintained responsibility reference when it applies beyond one meeting.</li>
+<li>Record a new delegation boundary in the user’s or organization’s maintained responsibility reference when it applies beyond one meeting.</li>
 </ul>
-<p>Do not turn one-off facts, personal details, or sensitive meeting content into permanent rules. Small additions to a patterns reference can be made directly. Ask for confirmation before structural workflow changes, such as adding or removing a step or changing the evidence order. Briefly report any reusable guidance added or changed.</p>
+<p>Do not turn one-off facts into permanent rules. Small additions to an examples or patterns reference can be made directly. Ask for confirmation before structural workflow changes, such as adding or removing steps or changing the evidence order. Briefly report any reusable guidance added or changed.</p>
 <h3>10. Audit and report</h3>
 <p>Before finishing, verify that:</p>
 <ul>
@@ -148,9 +148,9 @@ Option B: [Skip or alternate task shape]</code></pre>
 <li>Active duplicates were not recreated.</li>
 <li>Titles are action-oriented and notes stand alone.</li>
 <li>Dates, priority, and estimates are plausible.</li>
-<li>Each task links to its authorized source record where appropriate.</li>
+<li>Each task links to its source record where appropriate.</li>
 <li>Message drafts are ready to send and follow the user’s preferences.</li>
-<li>Task notes exclude irrelevant sensitive or personal information.</li>
+<li>Outputs include only information appropriate for the task system’s access boundary.</li>
 <li>Every uncertain item is either asked as a specific question or explicitly deferred.</li>
 </ul>
-<p>Report only the essential outcome: meetings reviewed, tasks created or updated with due dates, skipped items with brief reasons, unresolved questions, and any reusable guidance changes. Keep status updates terse and factual.</p></article><footer><a href="/skills/LICENSE.txt">CC0</a></footer></main><script>document.querySelector('[data-copy]').addEventListener('click',async function(){try{const text=await fetch(this.dataset.copy).then(r=>{if(!r.ok)throw new Error();return r.text()});await navigator.clipboard.writeText(text);this.textContent='Copied'}catch{this.textContent='Open raw Markdown'}})</script></body></html>
+<p>Report the essential outcome only: meetings reviewed, tasks created or updated with due dates, skipped items with brief reasons, unresolved questions, and any reusable guidance changes. Keep status updates terse and factual.</p></article><footer><a href="/skills/LICENSE.txt">CC0</a></footer></main><script>document.querySelector('[data-copy]').addEventListener('click',async function(){try{const text=await fetch(this.dataset.copy).then(r=>{if(!r.ok)throw new Error();return r.text()});await navigator.clipboard.writeText(text);this.textContent='Copied'}catch{this.textContent='Open raw Markdown'}})</script></body></html>
