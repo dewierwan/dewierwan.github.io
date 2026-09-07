@@ -1,29 +1,237 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="robots" content="noindex,nofollow,noarchive"><title>Prepare for a meeting · AI skills</title><meta name="description" content="Gather the relevant history, clarify the desired outcome, and produce a focused agenda and preparation brief.">
-<link rel="alternate" type="text/markdown" href="/skills/raw/prepare-for-a-meeting.md"><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%23b4552d%22/><text x=%2250%22 y=%2253%22 dominant-baseline=%22central%22 text-anchor=%22middle%22 font-family=%22Georgia, 'Times New Roman', serif%22 font-size=%2246%22 letter-spacing=%221%22 fill=%22%23fdfaf4%22>DE</text></svg>"><link rel="stylesheet" href="/skills/styles.css"></head><body><main><a class="back" href="/skills/">← Skills</a><header class="skill-header"><h1>Prepare for a meeting</h1><p class="description">Gather the relevant history, clarify the desired outcome, and produce a focused agenda and preparation brief.</p><div class="skill-actions"><a href="/skills/raw/prepare-for-a-meeting.md">Raw Markdown</a><button class="copy" type="button" data-copy="/skills/raw/prepare-for-a-meeting.md">Copy Markdown</button></div></header><article class="skill-body"><p>Use this before a consequential meeting or when the user asks for an agenda.</p>
-<h3>1. Read the meeting</h3>
-<p>Check the invitation, attendees, timing, stated purpose, and linked materials. Read any supplied proposal, document, or deck in full before drafting an agenda.</p>
-<h3>2. Gather context</h3>
-<p>Search the sources most likely to contain the relationship history, prior decisions, promises, open questions, and recent changes. A recent transcript or meeting note often matters more than older summaries.</p>
-<p>Distinguish facts, other people&#39;s views, and the user&#39;s current position. Do not infer what the user wants to promise.</p>
-<h3>3. Ask focused questions</h3>
-<p>Before drafting, summarize what the evidence establishes and ask a small number of questions about:</p>
+<meta name="robots" content="noindex,nofollow,noarchive"><title>Prepare for a meeting · AI skills</title><meta name="description" content="Gather authorized, decision-relevant context; clarify the meeting’s intended outcome; and create a private, actionable preparation page with a timed agenda, critical questions, and appropriate follow-up.">
+<link rel="alternate" type="text/markdown" href="/skills/raw/prepare-for-a-meeting.md"><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%23b4552d%22/><text x=%2250%22 y=%2253%22 dominant-baseline=%22central%22 text-anchor=%22middle%22 font-family=%22Georgia, 'Times New Roman', serif%22 font-size=%2246%22 letter-spacing=%221%22 fill=%22%23fdfaf4%22>DE</text></svg>"><link rel="stylesheet" href="/skills/styles.css"></head><body><main><a class="back" href="/skills/">← Skills</a><header class="skill-header"><h1>Prepare for a meeting</h1><p class="description">Gather authorized, decision-relevant context; clarify the meeting’s intended outcome; and create a private, actionable preparation page with a timed agenda, critical questions, and appropriate follow-up.</p><div class="skill-actions"><a href="/skills/raw/prepare-for-a-meeting.md">Raw Markdown</a><button class="copy" type="button" data-copy="/skills/raw/prepare-for-a-meeting.md">Copy Markdown</button></div></header><article class="skill-body"><p>Use this workflow before a consequential meeting, or when the user asks to prepare a calendar, create a meeting brief, or draft a meeting agenda. The deliverable is a saved meeting-preparation record in the user’s chosen workspace, not merely a chat summary, unless the user explicitly asks for a chat-only brief.</p>
+<p>This is a research, judgment, and alignment workflow. Its purpose is to help the meeting owner enter the conversation knowing who is involved, why it is happening, what evidence matters, what outcome to pursue, and what to do next.</p>
+<h3>Operating principles</h3>
+<ol>
+<li><strong>Use a legitimate purpose and authorized access.</strong> Access calendar data, communications, documents, internal notes, and other records only when the user is authorized to use them for this meeting. Use the minimum sources and information necessary. Do not expose unrelated personal, confidential, or sensitive information in the final page.</li>
+<li><strong>Read the thing the meeting is about.</strong> If a proposal, deck, memo, draft, case study, or other artifact prompted the meeting, read it before designing the agenda. Person research without the central artifact produces generic preparation.</li>
+<li><strong>Ask before assuming.</strong> Research establishes context; it does not establish the user’s current goal, negotiating room, desired tone, or boundaries. Show a situation brief and ask targeted questions before drafting the final agenda.</li>
+<li><strong>Make the page safe for its audience.</strong> Store the preparation page only in an access-controlled location appropriate for its content. Exclude compensation figures, personal health information, private family matters, protected characteristics, credentials, and unrelated sensitive details. Use a separate restricted record if sensitive context is truly necessary.</li>
+<li><strong>Optimize for use during the meeting.</strong> The detailed agenda is for preparation. A short ranked list of essential questions is for quick reference during the call.</li>
+<li><strong>Do not confuse preparation with commitment.</strong> Clearly separate verified facts, reported views, assumptions, and proposed talking points. Never imply that the user has agreed to an offer, decision, or position unless they have said so.</li>
+</ol>
+<h3>Inputs and defaults</h3>
+<p>Ask for or infer the following:</p>
 <ul>
-<li>The desired result.</li>
-<li>The user&#39;s current stance.</li>
-<li>Sensitive topics or boundaries.</li>
-<li>Decisions that can and cannot be made in the meeting.</li>
+<li>Target date or date range. Default: the user’s local current date.</li>
+<li>Meetings to prepare. Default: external one-to-one meetings and small group meetings with a clear purpose.</li>
+<li>Whether internal meetings should be included. Exclude routine blocks, focus time, meals, travel holds, out-of-office blocks, and routine status meetings unless the user asks to include them.</li>
+<li>The user’s preferred workspace and calendar system.</li>
+<li>Any access boundaries, such as “do not search private messages,” “use only shared records,” or “do not save notes about this discussion.”</li>
 </ul>
-<h3>4. Prepare the brief</h3>
-<p>Include:</p>
+<p>If calendar access is unavailable, ask the user to provide the invite, attendee list, timing, description, and relevant links. Continue with the available evidence rather than inventing missing details.</p>
+<h3>Workflow overview</h3>
+<ol>
+<li>Identify the meeting and extract the invitation context.</li>
+<li>Research the participants and relationship history using authorized sources.</li>
+<li>Read linked or implied meeting artifacts in full.</li>
+<li>Detect whether a specialized workflow is required.</li>
+<li>Post a situation brief and ask targeted questions.</li>
+<li>Build and save the meeting-preparation page.</li>
+<li>Schedule an appropriate post-meeting review when persuasion or a decision is central.</li>
+<li>Verify the page and make it easy for the user to open before the meeting.</li>
+</ol>
+<h3>1. Identify and qualify meetings</h3>
+<p>Retrieve detailed calendar events for the selected date or range. For each event that qualifies as a meeting, capture:</p>
 <ul>
-<li>The meeting&#39;s job.</li>
-<li>Essential context.</li>
-<li>The user&#39;s desired outcome.</li>
-<li>A short agenda ordered by importance.</li>
-<li>Questions to ask.</li>
-<li>Likely objections or difficult moments.</li>
-<li>Decisions, owners, and follow-up to capture.</li>
+<li>Title and scheduled duration.</li>
+<li>Date and time in the user’s timezone.</li>
+<li>Attendee names, organizations where available, and contact details only when needed for research.</li>
+<li>Location, conferencing link, and organizer.</li>
+<li>Invitation description and linked resources.</li>
+<li>Scheduling context, such as an introduction, reschedule note, requested topic, or stated decision.</li>
 </ul>
-<p>Keep the agenda realistic for the available time. Put the most important topic before status updates and background.</p></article><footer><a href="/skills/LICENSE.txt">CC0</a></footer></main><script>document.querySelector('[data-copy]').addEventListener('click',async function(){try{const text=await fetch(this.dataset.copy).then(r=>{if(!r.ok)throw new Error();return r.text()});await navigator.clipboard.writeText(text);this.textContent='Copied'}catch{this.textContent='Open raw Markdown'}})</script></body></html>
+<p>Filter out events that are not real preparation targets. When uncertain, include the event in a short list and ask the user whether to prepare it.</p>
+<p>For group meetings, identify the decision makers, subject-matter contributors, and any key external participants. Do not assume every invitee needs equal research.</p>
+<h3>2. Research context using the minimum relevant sources</h3>
+<p>Research each external attendee and the meeting history in parallel where possible. Prioritize recency, directness, and relevance over volume. A recent decision note or prior meeting transcript often matters more than many old messages.</p>
+<p>Use sources that the user is authorized to access, such as:</p>
+<ul>
+<li>Direct correspondence with the attendee.</li>
+<li>Messages that mention the attendee or their organization, including introductions and threads where they are not a sender.</li>
+<li>Internal collaboration records and prior meeting notes.</li>
+<li>Past calendar events involving the attendee.</li>
+<li>Public professional information, organization websites, recent publications, and relevant news.</li>
+<li>Shared files or knowledge-base records related to the meeting.</li>
+</ul>
+<p>For correspondence, use two complementary searches where the system permits:</p>
+<ol>
+<li><strong>Direct relationship search:</strong> messages sent to or received from the person.</li>
+<li><strong>Context search:</strong> messages and records that mention the person’s name, organization, project, or meeting topic.</li>
+</ol>
+<p>The second search is important because scheduling context may live in an introduction, evaluation thread, project discussion, or third-party message rather than direct correspondence.</p>
+<p>Read enough of the most relevant recent items to understand the thread. Do not copy whole emails or private conversations into the meeting page. Extract only the context that affects the meeting.</p>
+<h4>Research synthesis</h4>
+<p>For each key participant, synthesize:</p>
+<ul>
+<li><strong>Who they are:</strong> current role, relevant background, and decision-making relevance.</li>
+<li><strong>Organization context:</strong> what their organization does and how it relates to the user’s organization or meeting topic.</li>
+<li><strong>Relationship history:</strong> prior calls, messages, commitments, introductions, and unresolved questions.</li>
+<li><strong>Why this meeting is happening:</strong> the triggering event or current need.</li>
+<li><strong>Timely context:</strong> a relevant announcement, publication, deadline, launch, or change.</li>
+<li><strong>Useful links:</strong> public profile, organization site, artifact link, or prior meeting note, subject to access controls.</li>
+</ul>
+<p>Distinguish among facts, someone else’s claims, and open uncertainty. For example: “They indicated they may evaluate options this quarter” is different from “They have decided to proceed.”</p>
+<h3>3. Read the central artifact</h3>
+<p>When the invitation, messages, or notes indicate that the meeting concerns a written artifact, locate and read it before drafting the agenda. Relevant signals include:</p>
+<ul>
+<li>Requests for feedback on a proposal, draft, plan, deck, memo, or strategy.</li>
+<li>A linked file in the invitation or recent correspondence.</li>
+<li>References to comments, edits, or a previously shared document.</li>
+<li>A consultation request about a topic likely documented elsewhere.</li>
+</ul>
+<p>Read the full artifact, including appendices, tabs, linked sections, and comments that materially affect the discussion. Do not rely on a title, excerpt, or notification summary.</p>
+<p>Extract:</p>
+<ul>
+<li>The artifact’s purpose and proposed decision.</li>
+<li>Its central assumptions and dependencies.</li>
+<li>Decisions requested from the meeting participants.</li>
+<li>Risks, gaps, tensions, and questions worth pressure-testing.</li>
+<li>Sections where the participant’s expertise, authority, or incentives are especially relevant.</li>
+</ul>
+<p>If the context strongly implies an artifact exists but it cannot be found, ask the user for the link during the clarification stage. Do not write a vague agenda as a substitute for reading the material.</p>
+<h3>4. Route specialized meetings to the right workflow</h3>
+<p>Before creating a general meeting-preparation page, determine whether the meeting has a specialized purpose that requires a different structure.</p>
+<p>Examples include:</p>
+<ul>
+<li>A professional reference conversation related to an active hiring process.</li>
+<li>A formal performance, legal, compliance, safeguarding, or grievance discussion.</li>
+<li>A compensation or offer discussion requiring restricted handling.</li>
+<li>A formal interview or work-sample assessment.</li>
+</ul>
+<p>For a reference conversation, use a dedicated reference-call workflow with role-relevant questions, evidence probes, consent-aware handling, and a restricted storage location. Research already completed can be carried forward. Do not create a generic agenda that misses the distinct purpose and privacy requirements of the call.</p>
+<p>For hiring and assessment meetings, focus on role-relevant capabilities, role alignment, diagnostic evidence, and whether the assessment distinguishes relevant performance. Avoid irrelevant personal details and do not make unsupported judgments about a person.</p>
+<p>If no specialized workflow applies, continue.</p>
+<h3>5. Share a situation brief, then ask targeted questions</h3>
+<p>Do not draft the final goal or agenda immediately after research. First, give the user a compact, evidence-based situation brief. Then ask questions that let the user set direction.</p>
+<h4>5.1 Choose a useful brief format</h4>
+<p>Choose the format that best fits the meeting. Do not burden the user with format choices unless the stakes are high and two structures would materially change the preparation.</p>
+<p><strong>Narrative brief</strong> is the default for most meetings. Use short sections covering who the participant is, where the relationship stands, why the meeting is happening, and the live tensions.</p>
+<p><strong>Decision-shaped brief</strong> is better for negotiations, closing conversations, recruitment, fundraising, sales, or other meetings with active alternatives and deadlines. Cover the ask, their likely alternatives or constraints, the user’s position, risks, leverage, and critical unknowns.</p>
+<p>Use both when the user needs relationship context as well as a clear decision frame.</p>
+<p>A good brief should take about a minute to read and should end with the most important uncertainty, not a premature proposed agenda.</p>
+<h4>5.2 Ask targeted questions</h4>
+<p>Ask questions about targets, constraints, and failure modes, not “What agenda should I write?” The preparation system should turn the answers into an agenda.</p>
+<p>Always cover:</p>
+<ul>
+<li>The primary outcome.</li>
+<li>At least one of: desired tone, concrete ask, sensitive substance, decision authority, or failure mode to avoid.</li>
+<li>A final catch-all question inviting additional context, constraints, or things to land or avoid.</li>
+</ul>
+<p>Ask as many questions as genuinely change the plan, usually two to six. If the question interface limits the number of questions per round, use multiple rounds. Put questions whose answers affect later options first.</p>
+<p>Use compact, sequential labels so the user can answer quickly and the mapping remains auditable. Make the recommended option first, but offer credible alternatives. Do not force a false choice when the user could reasonably combine two approaches.</p>
+<p>Example question set:</p>
+<pre><code>1. What is the primary outcome?
+   - **1a (recommended):** Diagnose their position and agree a concrete next step
+   - **1b:** Build the relationship and learn their priorities
+   - **1c:** Seek a decision during this meeting
+
+2. How direct should the close be?
+   - **2a (recommended):** Propose a date-bound follow-up with a named deliverable
+   - **2b:** Make a lighter offer of help and let them choose timing
+   - **2c:** Avoid a direct ask in this conversation
+
+3. Is there anything else to land or avoid?
+   - **3a:** Nothing to add
+   - **3b:** I will add notes or constraints
+   - **3c:** There is sensitive context; ask before including it</code></pre>
+<p>Before sending, verify that every question is numbered, every option has one unique label, labels are sequential, and the catch-all is included.</p>
+<p>A truly routine recurring meeting with a documented purpose may need no questions. This should be a narrow exception. When in doubt, ask: a short clarification round is usually cheaper than preparing for the wrong meeting.</p>
+<h3>6. Create the meeting-preparation page</h3>
+<p>After the user answers, create the preparation page in the selected workspace in one complete operation where possible. Set the date as a date-only value in the user’s timezone unless the workspace explicitly needs a timed event field. Use a clear title such as the meeting date plus participant or topic.</p>
+<p>Set access permissions appropriate to the content. Include only attendees or collaborators who should legitimately view the page. If the workspace is broadly visible, remove sensitive context or store it separately in a restricted location.</p>
+<p>Use this structure:</p>
+<pre><code># [Meeting title]
+
+## Context
+Who the participants are, relevant relationship history, why the meeting is happening, and links to essential materials.
+
+## Goal
+The outcome selected or confirmed by the user.
+
+## Agenda
+### [0–5 min] Open and frame
+**Say**
+
+[A concise opening that establishes purpose and desired shape of the conversation.]
+
+**Facilitator note**
+
+[What to avoid or listen for.]
+
+### [5–20 min] Diagnose the key issue
+**Questions**
+
+1. [Decision-relevant question]
+2. [Question that tests assumptions or constraints]
+
+**Facilitator note**
+
+[Signals to seek, tensions to explore, and details not to let remain vague.]
+
+### [20–35 min] Discuss, pressure-test, or propose
+**Say**
+
+[A transition, hypothesis, or concise proposal.]
+
+**Facilitator note**
+
+[Specific trade-offs, objections, or evidence to test.]
+
+### [35–45 min] Close and create a forcing function
+**Questions**
+
+1. [Specific question that establishes a decision, owner, date, or next artifact]
+
+**Facilitator note**
+
+[Fallback close if no decision is possible today.]
+
+## Five most important questions
+
+1. [Most decision-relevant question]
+2. [Second most important question]
+3. [Question that exposes a key gap or constraint]
+4. [Question that determines the right next action]
+5. [Specific close: a date, owner, decision, or next artifact]
+
+## Timely note
+
+[Relevant news, publication, deadline, or conversation detail to mention, if any.]</code></pre>
+<p>Adapt the timing to the actual meeting duration. The stages must add up realistically. Put the most important topic before broad updates and background. For short meetings, reduce the number of stages rather than squeezing in a full script.</p>
+<p>Use level-three headings for agenda stages. Under each stage, use <strong>Say</strong>, <strong>Questions</strong>, and <strong>Facilitator note</strong> as appropriate. Keep private guidance compact. Do not put spoken prompts in quotation marks. Use named people, decisions, artifacts, and dates when supported by evidence.</p>
+<p>For a first meeting, say so explicitly. For recurring relationships, summarize the relationship arc: what has changed, what was previously agreed, and what remains unresolved.</p>
+<h4>The five-question cheat sheet</h4>
+<p>The five questions are not a second agenda. They are the user’s fast in-call reference. Rank them by decision value. Keep each to one line, with no script or sub-bullets.</p>
+<p>For persuasive or gap-focused meetings, include at least one question that tests the counterparty’s current gap or constraint and one question that creates a concrete next step. For diagnostic meetings, all five may be discovery questions.</p>
+<p>Never include compensation amounts, equity, pay bands, offer figures, or similarly sensitive employment details in a broadly visible meeting page. If the topic must be acknowledged, use neutral language such as “offer follow-up” or “compensation discussion” without numbers.</p>
+<h3>7. Schedule a post-meeting review when appropriate</h3>
+<p>For a high-stakes meeting intended to move a decision, win commitment, negotiate, recruit, raise funds, or persuade a counterparty, schedule a one-time review shortly after the meeting ends, usually about one hour later.</p>
+<p>The review should use authorized records only. It may draw from a meeting transcript, the preparation page, calendar metadata, and other approved materials. It should:</p>
+<ol>
+<li>Compare the meeting against the intended goal and agenda.</li>
+<li>Identify what was learned, decided, promised, and left unresolved.</li>
+<li>Assess whether the conversation tested the key assumptions and created an effective next step.</li>
+<li>Record concrete improvements for future calls, supported by dated evidence rather than vague self-criticism.</li>
+<li>Save the review in the appropriate coaching or meeting-review location with access controls.</li>
+</ol>
+<p>Do not schedule this review for purely informational calls unless the user requests it. Do not collect or retain transcripts without appropriate notice, consent, and organizational authorization.</p>
+<h3>8. Verify and hand off</h3>
+<p>Before declaring the work complete, verify:</p>
+<ul>
+<li>The preparation page exists in the correct workspace and is accessible to the intended audience.</li>
+<li>The date is correct in the user’s timezone and contains no unintended time or end-date data.</li>
+<li>The title clearly identifies the meeting.</li>
+<li>The context is accurate, concise, and privacy-safe.</li>
+<li>The user answered the targeted questions, unless the meeting qualified for the narrow routine-meeting exception.</li>
+<li>The agenda reflects those answers rather than a generic default.</li>
+<li>The timing fits the meeting duration.</li>
+<li>The five essential questions are ranked, scannable, and include a concrete close where appropriate.</li>
+<li>No sensitive compensation or unrelated personal information appears on the page.</li>
+<li>Any linked artifact was actually read, or its absence is explicitly identified as an open dependency.</li>
+</ul>
+<p>Open or surface the page through the user’s chosen workspace so it is ready before the meeting. Tell the user where it was saved, summarize the confirmed goal and planned close in one or two lines, and mention any scheduled post-meeting review.</p>
+<h3>Common failure modes</h3>
+<div class="table-wrap" tabindex="0" aria-label="Scrollable table"><table><thead><tr><th>Failure mode</th><th>Prevention or recovery</th></tr></thead><tbody><tr><td>Researching people but not the document that caused the meeting</td><td>Locate and read the central artifact in full; if it cannot be found, ask for it before writing the agenda.</td></tr><tr><td>Drafting an agenda without confirming the user’s goal</td><td>Post the situation brief and ask targeted questions first.</td></tr><tr><td>Treating a reference conversation as a generic meeting</td><td>Route it to a dedicated, privacy-aware reference workflow.</td></tr><tr><td>Dumping private correspondence into a shared page</td><td>Extract only meeting-relevant context and apply the appropriate access boundary.</td></tr><tr><td>Giving vague discovery questions when a decision is needed</td><td>Identify the decision, constraints, alternatives, owner, and date; use a forcing close.</td></tr><tr><td>Writing an agenda that cannot fit the slot</td><td>Recalculate stage durations and cut lower-value topics.</td></tr><tr><td>Leaving the user with a long script but no in-call aid</td><td>Add exactly five ranked, one-line essential questions.</td></tr><tr><td>Saving an unfinished chat summary instead of a usable record</td><td>Create and verify the page in the user’s chosen workspace before completing the task.</td></tr></tbody></table></div></article><footer><a href="/skills/LICENSE.txt">CC0</a></footer></main><script>document.querySelector('[data-copy]').addEventListener('click',async function(){try{const text=await fetch(this.dataset.copy).then(r=>{if(!r.ok)throw new Error();return r.text()});await navigator.clipboard.writeText(text);this.textContent='Copied'}catch{this.textContent='Open raw Markdown'}})</script></body></html>
