@@ -3,7 +3,7 @@
   "skills": [
     {
       "title": "Brainstorm options",
-      "description": "Generate distinct options for a decision or problem, assess their tradeoffs honestly, and recommend a short ranked set without forcing a final choice.",
+      "description": "Generate genuinely distinct options for a decision or problem, assess their tradeoffs candidly, and present a short ranked set without forcing a final choice.",
       "category": "Think and decide",
       "page": "https://dewierwan.com/skills/brainstorm/",
       "markdown": "https://dewierwan.com/skills/raw/brainstorm.md"
@@ -31,7 +31,7 @@
     },
     {
       "title": "Shape and draft a document",
-      "description": "Shape consequential documents by reviewing evidence, resolving material choices through answer-dependent interview rounds, checking readiness, and then drafting and auditing the smallest document that can achieve the goal.",
+      "description": "Shape consequential documents by reviewing evidence, resolving material choices, and checking readiness. Then draft and audit the smallest document that can achieve the goal.",
       "category": "Research and write",
       "page": "https://dewierwan.com/skills/shape-and-draft/",
       "markdown": "https://dewierwan.com/skills/raw/shape-and-draft.md"
@@ -45,14 +45,14 @@
     },
     {
       "title": "Learn with a tutor",
-      "description": "Learn a paper, article, post, or topic through a short Socratic dialogue built on retrieval, explanation, challenge, and application rather than passive summary.",
+      "description": "Learn a paper, article, post, or topic through a short Socratic dialogue that builds recall, explanation, and application instead of passive reading.",
       "category": "Research and write",
       "page": "https://dewierwan.com/skills/learning-tutor/",
       "markdown": "https://dewierwan.com/skills/raw/learning-tutor.md"
     },
     {
       "title": "Write in my voice",
-      "description": "Draft or revise email in the user’s established voice by using authorized style evidence and approved factual material, then checking accuracy, tone, and commitments before presenting copy-ready text.",
+      "description": "Draft or revise email in the user’s authentic voice by using approved style evidence, verified facts, and a concise pre-send audit. The workflow keeps messages clear, appropriate to the relationship, and ready to copy and send.",
       "category": "Research and write",
       "page": "https://dewierwan.com/skills/write-in-my-voice/",
       "markdown": "https://dewierwan.com/skills/raw/write-in-my-voice.md"
@@ -66,7 +66,7 @@
     },
     {
       "title": "Write a case study post",
-      "description": "Create an evidence-based, privacy-aware case study post about a person’s professional change, with alternate hooks, quote-card options, approval checks, and a review-ready draft.",
+      "description": "Create an evidence-based case study post about a person’s professional, learning, or career change. This workflow produces a verified, review-ready draft, alternate hooks, quote-card options, approval flags, and a publishing handoff.",
       "category": "Research and write",
       "page": "https://dewierwan.com/skills/case-study-post/",
       "markdown": "https://dewierwan.com/skills/raw/case-study-post.md"
@@ -94,7 +94,7 @@
     },
     {
       "title": "Review and plan a month",
-      "description": "Close one month honestly, then create a small, capacity-checked, explicitly approved plan for the next month using evidence, trade-offs, concrete commitments, and a durable review record.",
+      "description": "Close one month honestly, then create a small, capacity-checked and explicitly approved plan for the next month using evidence, trade-offs, and concrete commitments.",
       "category": "Plan and reflect",
       "page": "https://dewierwan.com/skills/review-and-plan-a-month/",
       "markdown": "https://dewierwan.com/skills/raw/review-and-plan-a-month.md"
@@ -115,21 +115,21 @@
     },
     {
       "title": "Prepare for a meeting",
-      "description": "Gather authorized, decision-relevant context; clarify the meeting’s intended outcome; and create a private, actionable preparation page with a timed agenda, critical questions, and appropriate follow-up.",
+      "description": "Gather the relevant history, clarify the desired outcome, and produce a focused agenda and preparation brief.",
       "category": "Meetings and tasks",
       "page": "https://dewierwan.com/skills/prepare-for-a-meeting/",
       "markdown": "https://dewierwan.com/skills/raw/prepare-for-a-meeting.md"
     },
     {
       "title": "Capture meeting actions",
-      "description": "Review authorized meeting records to identify genuine unfinished commitments, create clear deduplicated tasks for confident follow-ups, and batch only questions that require judgment.",
+      "description": "Review authorized meeting records to identify genuine unfinished commitments, create clear deduplicated tasks for confident follow-ups, and batch only the questions that require user judgment.",
       "category": "Meetings and tasks",
       "page": "https://dewierwan.com/skills/capture-meeting-actions/",
       "markdown": "https://dewierwan.com/skills/raw/capture-meeting-actions.md"
     },
     {
       "title": "Turn a message into a task",
-      "description": "Read the full conversation, work out the real action, do useful preparation, and create a clear task only when needed.",
+      "description": "Read a message or conversation, identify the real work, research only the context needed, and prepare the deliverable as far as authorization allows before creating a task record.",
       "category": "Meetings and tasks",
       "page": "https://dewierwan.com/skills/turn-a-message-into-a-task/",
       "markdown": "https://dewierwan.com/skills/raw/turn-a-message-into-a-task.md"
@@ -150,21 +150,21 @@
     },
     {
       "title": "Use a browser safely",
-      "description": "Complete browser-based tasks safely by choosing the least invasive authorized method, protecting account context and private data, verifying rendered page state, and separating preparation from consequential commitment.",
+      "description": "Complete browser-based tasks safely by selecting the least invasive authorized method, verifying account context and rendered state, and separating preparation from consequential final actions.",
       "category": "Build and automate",
       "page": "https://dewierwan.com/skills/use-a-browser-safely/",
       "markdown": "https://dewierwan.com/skills/raw/use-a-browser-safely.md"
     },
     {
       "title": "Create an AI skill",
-      "description": "A complete workflow for designing, testing, improving, and packaging a reusable AI skill from a new idea, an existing draft, or a repeated workflow captured from a conversation.",
+      "description": "A complete, tool-independent workflow for designing, testing, improving, evaluating, optimizing, and packaging a reusable AI skill from a new idea, an existing draft, or a workflow demonstrated in conversation.",
       "category": "Build and automate",
       "page": "https://dewierwan.com/skills/create-an-ai-skill/",
       "markdown": "https://dewierwan.com/skills/raw/create-an-ai-skill.md"
     },
     {
       "title": "Test every screen size",
-      "description": "Verify UI and CSS changes across representative narrow, wide, short, and tall viewports. Combine screenshots with programmatic layout checks, then fix and retest every failure.",
+      "description": "Verify every UI and CSS change across representative narrow, wide, short, and tall viewports using real screenshots plus programmatic layout checks. Fix and retest failures before reporting the change as complete.",
       "category": "Build and automate",
       "page": "https://dewierwan.com/skills/test-every-screen-size/",
       "markdown": "https://dewierwan.com/skills/raw/test-every-screen-size.md"
