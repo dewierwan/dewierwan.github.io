@@ -1,15 +1,19 @@
 ---
 name: capture-meeting-actions
-description: Review authorized meeting records, identify genuine unfinished commitments, create clear deduplicated tasks for confident follow-ups, and batch only questions that require judgment.
+description: Review authorized meeting records, identify genuine unfinished commitments, create clear deduplicated tasks for confident follow-ups, and batch only the questions that require user judgment.
 ---
 
 # Capture meeting actions
 
-Turn authorized meeting records into reliable post-meeting follow-up tasks. Use this workflow as a daily sweep, for a selected date range, or for a manually supplied set of meetings.
-
-Only access meeting records, transcripts, task systems, and related communications when there is a legitimate work purpose and the user has clear authorization. Use the minimum relevant sources and details. Keep task notes within the appropriate access boundary, and exclude unrelated or sensitive personal information.
+Turn authorized meeting records into reliable post-meeting follow-up tasks. Use this as a daily sweep, for a selected date range, or for a manually supplied set of meetings.
 
 The goal is not to convert every discussion into work. Each meeting should result in zero tasks, one combined follow-up, or multiple separate tasks only when there is a genuine, unfinished commitment that should be tracked.
+
+## Authorization and privacy boundary
+
+Use this workflow only for a legitimate work purpose and with clear authorization to access the selected meeting records and task system. Use the minimum sources needed to determine commitments. Do not copy unrelated personal details, sensitive discussion, health information, compensation details, or private assessments into tasks unless they are necessary for the action and appropriate for everyone with access to that task.
+
+Keep task notes within the access boundary of the source material. If a follow-up requires sensitive context, record only the practical next action and link to an access-controlled source where appropriate. Respect consent expectations when drafting introductions, sharing contact details, or following up after personal conversations.
 
 ## Purpose and operating rules
 
@@ -21,16 +25,16 @@ Before each run, apply these outcomes:
 
 Use this evidence order when sources conflict:
 
-1. **Transcript or recording-derived text**: strongest evidence of who agreed to do what and when.
-2. **Human-written notes**: useful supporting evidence, especially explicit action sections.
-3. **Automated summary**: useful for orientation, but not authoritative for ownership.
-4. **Pre-meeting agenda**: describes intended discussion, not a commitment.
+1. **Transcript or recording-derived text:** strongest evidence of who agreed to do what and when.
+2. **Human-written notes:** useful supporting evidence, especially explicit action sections.
+3. **Automated summary:** useful for orientation, but not authoritative for ownership.
+4. **Pre-meeting agenda:** describes intended discussion, not a commitment.
 
-Automated summaries often misattribute work, especially in recurring one-to-ones, brainstorming sessions, and meetings where attendees list their own to-dos. Never create a task solely because a summary labels it as an action item. Confirm the owner in the transcript or reliable notes.
+Automated summaries often misattribute work, especially in recurring one-to-ones, brainstorming sessions, and meetings where attendees list their own to-dos. Never create a task solely because a summary labels it as an action item. Confirm ownership in the transcript or reliable notes.
 
 Track unfinished outcomes, not conversation. Skip work that was completed live, delegated to another owner, already tracked elsewhere, or merely discussed. An idea, statement of interest, or open question is not a task unless someone accepted responsibility for a concrete outcome.
 
-Apply documented responsibility and delegation boundaries supplied by the user or organization. Attendance at a meeting does not make the user accountable for all work in that area.
+Apply known delegation boundaries supplied by the user or organization. Attendance at a meeting does not make the user accountable for every workstream discussed.
 
 ## 1. Select the meetings
 
@@ -41,10 +45,10 @@ Accept a date in `YYYY-MM-DD` format, a relative date such as “yesterday,” a
 
 State the selected scope once, for example: “Scanning meetings for 23 Apr.” Find meetings attended by the user and collect:
 
-- Title, date, and time
-- Meeting-record link or identifier
-- Attendees, if available
-- Transcript, notes, summary, and relevant linked context
+- Title, date, and time.
+- Meeting-record link or identifier.
+- Attendees, if available and relevant.
+- Transcript, notes, summary, and relevant linked context.
 
 Report a compact count before processing. Do not infer actions from a meeting title alone.
 
@@ -60,7 +64,7 @@ For long transcripts, use a repeatable search, extraction, or chunking method ra
 - “I’ll send …”
 - “I’ll follow up …”
 - “I’ll introduce …”
-- A request followed by explicit acceptance
+- A request followed by explicit acceptance.
 
 Review summary action items as candidates, then verify them against the transcript and surrounding conversation. A promise may have been conditional, reassigned, fulfilled live, or directed at another attendee.
 
@@ -78,13 +82,13 @@ Classify the meeting loosely. Classification provides a starting expectation, no
 
 For every meeting, identify:
 
-- Relationship context and why the meeting occurred
-- Candidate actions owned by the user
-- Work completed during the meeting
-- Work delegated to another named owner
-- Explicit future commitments and timing
-- Enough neutral context for a task to remain understandable weeks later
-- Source and related links that the task audience is authorized to access
+- Relationship context and why the meeting occurred.
+- Candidate actions owned by the user.
+- Work completed during the meeting.
+- Work delegated to another named owner.
+- Explicit future commitments and timing.
+- Enough neutral context for a task to remain understandable weeks later.
+- Relevant source and related links.
 
 Create no task when work was completed live, another person owns it, the meeting was purely informational and any needed synthesis is already recorded, the action is covered by an active task, or the statement was not a commitment.
 
@@ -105,10 +109,10 @@ This is a readiness gate: do not proceed to task creation until each proposed ta
 
 Use the user’s chosen task system and field names. At minimum, capture:
 
-- **Title:** short, verb-led, and specific, such as “Follow up with prospective partner about pilot scope.”
+- **Title:** short, verb-led, and specific, such as “Follow up with partner about pilot scope.”
 - **Status:** the standard open status.
 - **Due date:** based on an explicit commitment whenever possible.
-- **Priority:** use the user’s scale; default to normal important work and reserve the highest level for a real deadline, material risk, or waiting counterparty.
+- **Priority:** use the user’s scale; default to important normal work and reserve the highest level for a real deadline, material risk, or waiting counterparty.
 - **Time estimate:** realistic minutes.
 - **Notes:** context, action checklist, communication drafts, and links.
 
@@ -126,7 +130,7 @@ Do not raise priority merely because capture happened late.
 
 ```markdown
 [Two or three sentences of time-independent context. Include relevant absolute
-dates, why this matters, the commitment, and any necessary sensitivity.]
+dates, why this matters, the commitment, and any necessary sensitivity.] 
 
 ## Actions
 - [Concrete action]
@@ -198,9 +202,9 @@ Before finishing, verify that:
 - Active duplicates were not recreated.
 - Titles are action-oriented and notes stand alone.
 - Dates, priority, and estimates are plausible.
-- Each task links to its source record when appropriate for the task audience.
+- Each task links to its source record where appropriate.
 - Message drafts are ready to send and follow the user’s preferences.
+- Task content respects the source access boundary and omits unnecessary sensitive details.
 - Every uncertain item is either asked as a specific question or explicitly deferred.
-- Task notes contain only information necessary to complete the work and appropriate for the selected task system.
 
 Report the essential outcome only: meetings reviewed, tasks created or updated with due dates, skipped items with brief reasons, unresolved questions, and any reusable guidance changes. Keep status updates terse and factual.
