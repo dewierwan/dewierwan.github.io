@@ -1,65 +1,66 @@
 ---
 name: pressure-test
-description: Find the weak points in a leading strategic idea before committing to it. Steelman the case, test its load-bearing assumptions through sequential challenge, and finish with a clear verdict, decision handoff, and concrete next action.
+description: Find the weak points in a leading strategic idea before committing to it. Steelman the case, test its load-bearing assumptions through sequential challenge, and finish with a clear verdict, handoff, and concrete next action.
 ---
 
 # Pressure-test an idea
 
-Use this workflow when a decision-maker is leaning toward a strategic direction and needs an honest challenge before committing. It tests a leading option; it does not generate a broad option set or create an implementation plan.
+Use this workflow when a decision-maker is leaning toward a strategic direction and needs an honest challenge before committing. It tests a leading option; it does not generate a broad option set or design implementation.
 
-## Where this fits
+## Position in the decision process
 
 Use this sequence:
 
 1. Generate or identify meaningful alternatives.
 2. Pressure-test the leading option.
-3. Make and document the decision with rigor proportionate to its consequences.
+3. Make and document the decision with rigor proportional to its consequences.
 4. Plan or build the chosen approach, if applicable.
 
-**Readiness gate:** If meaningful alternatives have not been considered, pause and generate them first. Testing one option too early often becomes an exercise in defending it.
+**Readiness gates:**
 
-If the idea was pressure-tested recently and no material evidence, assumptions, or conditions have changed, do not repeat the exercise. Use the existing findings to make the decision.
+- If meaningful alternatives have not been considered, pause and generate them first. Testing a single idea too early can become an exercise in defending it.
+- If the idea was pressure-tested recently and no material evidence, assumptions, or conditions have changed, do not repeat the exercise. Use the existing findings to make the decision.
+- If using internal communications, customer records, or other personal information, confirm a legitimate purpose and clear authorization. Use only the minimum relevant sources, omit unrelated sensitive details, and keep the output within the appropriate access boundary.
 
 ## Rules of engagement
 
 - Be direct. Do not treat confidence as evidence.
 - Attack the strongest reasonable version of the idea, not a caricature.
-- Ask one forcing question at a time. Wait for the answer, assess it, and challenge vague, unsupported, or evasive answers before moving on.
-- Use only relevant, authorized evidence sources. If reviewing internal records or communications, have a legitimate purpose, use the minimum necessary information, and omit unrelated personal or sensitive details.
-- Distinguish facts, inferences, estimates, and forecasts.
-- Refer to credible dissenters by relevant role, such as a finance owner, delivery lead, customer representative, domain expert, or skeptical peer. Do not invent their views.
-- Skip a section only when it is genuinely irrelevant, and say why.
+- Ask one forcing question at a time. Wait for an answer, assess it, and challenge vague, unsupported, or evasive answers before moving on.
+- Use available evidence, such as research, metrics, prior experiments, customer feedback, documented decisions, or stakeholder input. Distinguish facts from inferences and forecasts.
+- Refer to relevant dissenters by role, such as finance owner, delivery lead, customer representative, domain expert, or skeptical peer. Do not invent their views.
+- Skip a section only when it is genuinely irrelevant, and state why.
 
 ## 1. Steelman the claim
 
-Restate the idea in its strongest form. Remove unnecessary hedging while preserving the decision-maker's intent. Include the action, expected result, mechanism, timeframe, and conditions that make it sensible.
+Restate the idea in its strongest form. Remove unnecessary hedging while preserving the decision-maker's actual intent. Include the action, expected result, mechanism, timeframe, and conditions that make it sensible.
 
 > We should [take action] because [mechanism] will produce [outcome] for [group] within [timeframe], provided that [key condition] holds.
 
-If the original framing is already the strongest version, say so and continue. If the stronger restatement changes the intended claim, confirm it before testing.
+If the original framing is already the strongest version, say so and continue. If the stronger restatement changes the intended claim, get confirmation before testing it.
 
 ## 2. Identify load-bearing assumptions
 
-List three to five assumptions that must hold. Rank them by the damage caused if they are wrong, starting with the most consequential.
+List three to five assumptions that must hold for the claim to work. Rank them by damage if wrong, starting with the assumption most likely to undermine the decision.
 
 | Assumption | Type: fact, estimate, or belief | Current support | Damage if wrong | Smallest useful test |
 |---|---|---|---|---|
-| [State the assumption] | [Choose one] | [Summarize evidence] | [Low, medium, or high] | [Test or disproof method] |
+| [State the assumption] | [Choose one] | [Summarize evidence] | [Low, medium, or high] | [Name the test] |
 
-Make assumptions observable where possible. Replace “users will value this” with a defined behavior, audience, threshold, or willingness-to-pay condition.
+Make assumptions observable where possible. Replace “customers will value this” with a defined behavior, segment, threshold, or willingness-to-pay condition.
 
 ## 3. Run forcing questions sequentially
 
-Ask five to eight questions total, one at a time. Start with the highest-risk assumptions and adapt later questions to earlier answers. Do not provide the full list as a questionnaire, because that enables selective answering.
+Ask five to eight questions total, one at a time. Select questions based on the highest-risk assumptions and adapt later questions to the answers received. Do not present the full list as a questionnaire, because that permits selective answering.
 
 Choose from these categories:
 
 - **Evidence:** What is the strongest evidence for this? What is the strongest evidence against it?
 - **Falsifiability:** What would need to happen in the next 30 or 90 days to show this is wrong?
-- **Counterfactual:** What similar attempt failed, and why is this case materially different?
+- **Counterfactual:** What similar attempt failed? Why is this case materially different?
 - **Opportunity cost:** What valuable work will not happen if resources go here?
 - **Second-order effects:** If this succeeds, what does the situation look like in 12 months? What could success itself break or constrain?
-- **Stakeholder dissent:** Which relevant role would object most strongly? What would that person say, and has that objection been heard directly?
+- **Stakeholder dissent:** Which role would object most strongly? What would that person say, and has that objection been heard directly?
 - **Reversibility:** If this is wrong, what does unwinding require in time, money, commitments, trust, or organizational disruption?
 - **Null option:** What happens if no action is taken for the next three months?
 
@@ -67,27 +68,27 @@ Push for specificity. “I think it will work” is not evidence. Ask what obser
 
 ## 4. Run a pre-mortem
 
-Assume the initiative failed after a realistic period, often 6 to 12 months. Identify the three most likely failure modes, ordered by likelihood or impact. Include execution failures, changed external conditions, and a wrong underlying premise where relevant.
+Assume the initiative failed after a realistic period, often 6 to 12 months. Identify the three most likely failure modes, ordered by likelihood or impact. Include execution failures, external conditions, and a wrong underlying premise where relevant.
 
 | Failure mode | Why it could happen | Earliest warning sign | Monitoring action or owner |
 |---|---|---|---|
-| [Describe the failure] | [Name the mechanism] | [Observable signal] | [Check or accountable role] |
+| [Describe the failure] | [Name the mechanism] | [Name an observable signal] | [Name the check or accountable role] |
 
-Warning signs must appear early enough to permit a change in course.
+The warning sign must be observable early enough to change course.
 
 ## 5. Surface credible dissent
 
-Identify two or three relevant roles that could reasonably disagree. State each role's strongest likely objection. If the decision-maker has not sought that perspective, mark it as an evidence gap. Do not assume silence means agreement.
+Identify two or three relevant roles that could reasonably disagree. State each role's strongest likely objection. If the decision-maker has not sought that perspective, mark it as an evidence gap; do not assume silence means agreement.
 
 Dissent is not an automatic veto. Its purpose is to expose constraints, incentives, dependencies, and risks that supporters may miss.
 
 ## 6. Define what would change the decision
 
-Require one sentence naming the evidence that would reverse or materially alter the position.
+Require one sentence that names the evidence that would reverse or materially alter the position.
 
 > I would change my mind if [specific observable evidence] occurs by [date or decision point].
 
-If this cannot be stated, the position is not falsifiable. Mark the pressure-test as incomplete or failed rather than approving the idea.
+If this cannot be stated, the position is not falsifiable. Mark the pressure-test as incomplete or failed rather than issuing approval.
 
 ## 7. Give a verdict and handoff
 
@@ -99,7 +100,7 @@ Choose one verdict and explicitly state the next step:
 
 End with exactly one concrete next action: a verb, an owner, and a deadline when useful.
 
-**Example:** `Research owner: interview five target users this week and compare results against the adoption assumption.`
+Example: `Research owner: interview five target users this week and compare results against the adoption assumption.`
 
 ## Final audit
 

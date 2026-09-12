@@ -1,173 +1,167 @@
 ---
 name: get-unstuck
-description: Work out why someone is stuck, apply one short intervention matched to tiredness, dread, uncertainty, or distraction, and help them begin a bounded work block. Use it as a brief rescue workflow rather than a general productivity system.
+description: Work out why someone is stuck, run one short intervention matched to tiredness, dread, confusion, or distraction, and help them begin a bounded work block while prioritizing capacity, privacy, and practical action over self-criticism.
 ---
 
 # Get unstuck
 
-Use this workflow when someone says they cannot start, are dreading a task, feel exhausted, have lost momentum, or keep being pulled into distraction. Its purpose is not to finish the task or deliver a lecture. Its purpose is to diagnose the immediate barrier, run one proportionate intervention, and get the person into one useful work block.
+Use this workflow when a person says they cannot start, are avoiding a task, dread it, feel depleted, have lost momentum, or keep getting pulled into distraction. It is a short rescue intervention, not a full productivity system: diagnose the state, run one appropriate intervention, begin one bounded work block, and learn only from authorized feedback or records.
 
-A successful rescue means the person begins within roughly 10–15 minutes and completes at least one bounded block, even if the output is rough. A failed rescue is one that becomes another avoidance ritual.
+## Purpose and success criteria
 
-## Operating principles
+Avoidance commonly combines four factors:
 
-1. **Diagnose before prescribing.** Do not assume the issue is laziness, discipline, or task complexity.
-2. **Address barriers in order: physical, emotional, then cognitive.** A depleted body makes emotional and planning interventions less effective.
-3. **Choose a coaching style deliberately.** State the style briefly and allow the person to request a switch.
-4. **Aim for a block, not completion.** Starting badly is often enough.
-5. **Keep the rescue short.** Cap diagnosis and intervention at about 15 minutes before either beginning a small block, taking a genuine recovery break, or deciding the task should wait.
-6. **Treat repeated red flags as a capacity issue.** Persistent high exhaustion and dread may require workload changes, rest, support, or escalation—not stronger motivation tactics.
-7. **Learn only from authorized, relevant records.** If using prior session notes, work calendars, documents, messages, or other records, have a legitimate purpose and clear authorization. Use only the minimum relevant information, do not expose unrelated personal details, and keep notes within the appropriate access boundary.
+- **Physical depletion:** tiredness, hunger, discomfort, poor sleep, or overstimulation.
+- **Dread:** anticipated conflict, judgment, failure, boredom, or emotional exposure.
+- **Unclear next step:** uncertainty about what to do first, what “good enough” means, or where needed information is.
+- **Distraction pull:** a device, feed, messages, or another easy-reward activity repeatedly interrupts starting.
 
-## Step 0: Diagnose the state
+The workflow should:
 
-Ask these questions in one short message. If the task is already clear, omit the first question.
+1. Diagnose before prescribing an intervention.
+2. Address physical state before emotional or cognitive work when depletion is significant.
+3. Deliberately choose and name a coaching style, then permit a switch.
+4. Aim to start one work block, not finish an open-ended task.
+5. Keep the rescue brief so it does not become another form of avoidance.
+
+Success means the person starts a useful action within roughly 10–15 minutes and completes, or genuinely begins, one time-boxed block. A rough first pass counts. If the intervention is producing more discussion than action, shorten it and move to a tiny concrete step or stop.
+
+## Privacy, access, and boundaries
+
+If the task involves emails, documents, meeting notes, chat messages, files, or records about other people, first establish a legitimate work purpose and clear authorization. Use only the minimum relevant sources and information. Do not expose unrelated private details, sensitive personal information, or content outside the user’s access boundary.
+
+Do not assume access to any system, history, or log. If the user wants a tool to search or organize materials, ask what capabilities are available and obtain confirmation before using them. A user may choose to keep a private session log, but logging is optional and should use a location and retention practice they approve.
+
+## Step 0: Diagnose in two minutes or less
+
+Ask one compact message with three questions. If the task was already stated, omit the first question.
 
 1. **What is the task in one line?**
-2. **Rate each from 0–10:** tiredness, dread of the content, unclear next step, and distraction pull.
-3. **How much time is available before the next commitment?**
+2. **Rate these from 0–10:** tiredness, dread of the content, unclear next step, and distraction pull.
+3. **How much time do you have before the next commitment?**
 
-If authorized session notes exist, review only a small recent sample before responding. Look for recurring states, interventions that helped, and coaching styles that did not land. Do not recite private notes back to the person unless they ask.
+If the person has explicitly authorized use of a session history, review only recent, relevant entries. Look for which approaches helped, which styles missed, and whether the same combination is recurring. Do not quote or reveal past sensitive material unless it is needed and appropriate.
 
-### Classify the barrier
+### Determine the dominant state
 
-- The highest score is the **dominant mode**.
-- If two or more scores are 5 or above, treat it as a **compound state**.
-- If tiredness and dread are both very high across several recent attempts, treat this as a **capacity warning**.
-
-| Dominant state | What it usually means | First response |
-|---|---|---|
-| Tiredness | Low physical or mental energy | Reset the body; reduce task demand |
-| Dread | Emotional cost, fear, conflict, shame, or identity stakes | Name and soften the emotional barrier |
-| Unclear next step | The task has not been decomposed enough | Turn it into a visible mechanical action |
-| Distraction pull | Easier rewards are too available | Separate the person from the cue |
-| Compound state | Several barriers reinforce each other | Use brief warmth, then physical-to-cognitive sequence |
+- The highest rating is normally the dominant failure mode.
+- If two or more ratings are 5 or above, treat it as a **compound state**.
+- If tiredness and dread are both persistently very high across several recent, authorized check-ins, treat this as a **capacity signal**, not a motivation defect.
 
 ### Capacity branch
 
-If exhaustion and dread have both remained severe across multiple recent sessions, do not automatically run a standard rescue. Say plainly that this may be a capacity problem rather than a motivation problem. Ask:
+When physical depletion and dread have remained high for multiple attempts, do not reflexively coach harder. Ask:
 
-- What is the case for not doing this today?
-- Can it be delegated, reduced, renegotiated, or deferred?
-- What would a short deferral cost?
-- What recovery, support, or workload change is actually needed?
+- What is the case for not doing this task today?
+- Can it be delegated, reduced, deferred, or renegotiated?
+- What is the realistic cost of a short deferral?
+- What would restore capacity: rest, food, medical support, workload changes, help from a collaborator, or a clearer deadline?
 
-If the person still chooses to proceed, acknowledge that they are working against a warning signal and make the block especially small. Do not use pressure, shame, or toughness rhetoric to override persistent depletion.
+If the person still chooses to work, acknowledge that they are working against a capacity signal. Reduce the scope sharply and avoid harsh framing. If there are signs of acute distress, inability to care for basic needs, or risk of self-harm, pause the productivity workflow and encourage appropriate immediate support or emergency help.
 
-## Step 1: Pick and name a coaching style
+## Step 1: Choose and name a coaching style
 
-Use one of four styles. Name it in one sentence: “I’m going to be practical-warm for this; tell me if you want me to switch.”
+State the style briefly: “I’ll be practical and warm for this; tell me if you want me to switch.” Naming the style makes it easier to adapt rather than forcing one tone.
 
-| Situation | Default style | Use it when |
+| Dominant state | Default style | Reason |
 |---|---|---|
-| High dread, adequate energy | Empathetic or analytical | The person needs emotion naming or calm reasoning |
-| High uncertainty, low dread | Analytical | The main problem is decomposition |
-| High distraction, adequate energy | Direct | A short environmental interruption is needed |
-| High tiredness or compound state | Practical-warm | The person needs brevity without harshness |
-| Explicit, same-day request for a firmer tone | Direct | Only if energy is adequate and the person opts in |
+| High dread, manageable tiredness | Empathetic or analytical | Name the emotional cost; use analysis only if the person is receptive. |
+| High uncertainty, low dread | Analytical | The main problem is task decomposition. |
+| High distraction, low dread | Direct | Quickly change the cue and begin. |
+| High tiredness | Practical-warm | Depletion needs brevity, compassion, and reduced demand. |
+| Compound state | Practical-warm | Acknowledge the load without prolonged discussion. |
+| Explicit request for firm accountability, with adequate energy | Direct | Use only as an informed, revocable preference. |
 
-Switch styles when there is a clear signal:
+Switch styles when the response indicates a mismatch:
 
-- If they ask for a plain instruction, become more direct.
-- If they say the framing makes them feel worse, go warmer and reduce pressure.
-- If they argue with the premise, use an analytical approach and let them reason through the barrier.
-- If shame appears—such as harsh self-judgment, self-deprecating jokes, or withdrawal—stop escalating and move to self-compassion.
+- “Just tell me what to do” suggests a direct style.
+- “This is making me feel worse,” shutdown, or self-critical language suggests an empathetic style.
+- Arguing with the framing may call for analytical reasoning and collaborative choice.
 
-A harsh or drill-like style is not a default tool. Use it only with explicit consent, adequate energy, and a clear fit. It is not appropriate for a person who is depleted or shame-flooded.
+Never use humiliation, shame, or aggressive pressure as a default. Firmness is only appropriate when the person explicitly wants it, has enough capacity, and can withdraw that preference at any time.
 
-## Step 2: Run one intervention in the right order
+## Step 2: Run one intervention in order
+
+Use the sequence **physical → emotional → cognitive**. Do not skip upward when the body state is clearly limiting action.
 
 ### A. Physical reset
 
-Use this first when tiredness is high, or when dread is intense enough that the person seems physically activated or shut down.
-
-Offer a short, bounded reset:
+Use this first when tiredness is high or dread is intense enough to feel physically activating. Keep it bounded.
 
 - Drink water.
-- Move for about five minutes: a walk, stairs, stretching, or brisk steps.
-- Get daylight or brighter ambient light where possible.
-- Put the distracting device away; do not attempt to “resist” the feed while holding the device that supplies it.
-- Optionally use a simple sensory reset, such as washing the face or having a small snack if appropriate.
+- Move for about five minutes: a walk, stairs, stretching, or brisk indoor movement.
+- Get daylight or stand near a window when feasible.
+- Put the distracting device away during the reset.
+- Optionally use a snack, a wash of cool water, or a short change of location.
 
-Keep an unstructured reset to about 10 minutes. A deliberately structured outing may be longer, up to about 20 minutes, only if it has a named destination, a clear return cue, and no open-ended browsing. Avoid recommendations that could impair later rest, such as late-day stimulant use, unless the person independently chooses it and understands the tradeoff.
+A simple reset should usually take no more than 10 minutes. A planned, structured break can be up to 20 minutes if it has a stated destination, return cue, and endpoint. Do not make caffeine the default solution, especially when it may impair later sleep.
 
-If they request a break that genuinely changes state, approve it and set a return boundary. Do not turn repeated break extensions into avoidance.
+If the person requests a reasonable break, accept it and set a clear return boundary. A state change can be useful; an unbounded escape usually is not.
 
 ### B. Emotional intervention
 
-If dread or shame is present, choose **one** of the following, not all of them.
+If dread, shame, or identity pressure remains, choose **one** option rather than stacking several.
 
-- **Self-compassion break:** “This is hard right now. Difficulty is part of being human. What would kindness toward myself look like for the next minute?”
-- **Defusion:** “I am having the thought that this will go badly.” This creates distance between the person and the thought.
-- **Values anchor:** “This matters because it serves [a chosen value, commitment, or person]. Doing one small part is an act of that value.”
-- **Importance reframe:** For a calm, receptive person, note that strong avoidance can sometimes signal that the work matters. Do not use this when they are overwhelmed.
+- **Self-compassion:** “This is difficult. Difficulty is part of being human. I can be kind to myself while taking one next step.”
+- **Defusion:** Say, “I am having the thought that I cannot do this,” rather than treating the thought as a fact.
+- **Values anchor:** “This matters because it supports [chosen responsibility, relationship, learning goal, or mission].”
+- **Threshold reframe:** For a calm, analytical person, acknowledge that strong avoidance can signal meaningful work, not personal weakness.
 
-Do not debate whether the feeling is rational. Name it once, reduce its authority, and move to action.
+Switch immediately to compassion if the person calls themselves stupid, hopeless, lazy, or incapable; goes quiet after pressure; or makes self-deprecating jokes that indicate shame. Do not push harder through shame.
 
 ### C. Cognitive intervention
 
-Once physical and emotional barriers have been lowered, make the task mechanical.
+Once physical and emotional barriers are manageable, turn the task from abstract to mechanical.
 
-1. Replace abstract labels with observable verbs. For example, replace “prepare the response” with “open the request, read the first section, and list the needed facts.”
-2. Identify the **30-second version** of the first action. It should be the first click, sentence, file opening, or item placed on a list—not a miniature version of the entire project.
-3. Create an if-then plan: **“If it is [time or cue], then I will [specific action] at [specific place].”** Ask the person to state it once.
-4. Time-box the work rather than outcome-boxing it. Use 25 minutes by default, or 10–15 minutes if energy remains low.
+1. Replace broad labels with observable verbs. For example, replace “prepare the report” with “open the source folder and list the three missing figures.”
+2. Find the **30-second version** of the first action: the first click, document opening, heading, search query, or one-line draft.
+3. Make an if–then plan: “If it is [time or cue], then I will [specific action] at [specific place].”
+4. Set a time box rather than an outcome target: 25 minutes by default, or 15 minutes for a depleted person.
 
-For tasks with relevant searchable materials, offer practical assistance that reduces the work itself: extracting facts from authorized documents, assembling meeting notes, finding prior decisions, drafting a checklist, or creating a scratchpad of raw evidence. Do not search private sources without authorization. Keep the result to material needed for the task; omit unrelated sensitive details.
+For tasks with authorized searchable source material, offer practical assistance that reduces the task itself: identify relevant messages, extract key facts, create a source list, draft a scratch outline, or assemble raw notes. Confirm scope and permissions first. The goal is to remove the blank-page problem, not to collect unnecessary personal data.
 
-## Step 3: Start the block
+## Step 3: Start one block
 
-State the block length. Confirm a minimal working environment:
+State the duration and the first action. Confirm the environment:
 
-- Phone in another room or otherwise inaccessible.
-- One task, one relevant workspace or tab group.
-- Notifications and unrelated applications closed or blocked.
-- The first 30-second action visible.
+- Phone in another room or otherwise out of reach.
+- One work surface or one active tab where possible.
+- Notifications silenced.
+- Optional website or app blocking if the user has chosen it.
 
-Then stop coaching. The person working is more valuable than the person continuing to discuss working.
+Then stop coaching during the block. Working is more valuable than continuing the conversation.
 
 ## Step 4: End-of-block check
 
-When the person returns, ask for only three things:
+When the person returns, ask only:
 
 1. What came out of the block, in one sentence?
 2. What are tiredness and dread now, each from 0–10?
 3. Another block, or stop?
 
-If they stop, acknowledge the action specifically: they showed up despite resistance, and that is meaningful evidence that starting was possible. Do not pressure them into “just one more.”
+If stopping, recognize the completed start plainly: “You worked despite resistance; that counts.” Do not pressure them into extra blocks. If continuing, repeat the same time-box and environment unless their state has clearly changed.
 
-If they continue, repeat the same bounded-block setup. Do not re-diagnose unless the state clearly changed.
+## Optional session record and review
 
-## Step 5: Record and improve, with consent
+With the user’s permission, store a brief, non-sensitive record in their chosen system. Keep it factual and useful for future adaptation.
 
-Only keep a session record if the person has agreed to it and the storage location is appropriate for the sensitivity of the information. A concise, parseable record can help identify patterns without preserving unnecessary personal detail.
+| Field | Entry |
+|---|---|
+| Date and task label | [DD MMM YYYY — short task label] |
+| State at start | [tiredness, dread, uncertainty, distraction ratings] |
+| Dominant mode and style | [mode; direct, analytical, empathetic, or practical-warm] |
+| Intervention and block | [what was tried; number and duration of blocks] |
+| Outcome | [started yes/no; end-state ratings; what helped or did not] |
 
-```text
-## [date and time] — [task, 3–5 words]
+Review patterns only after several sessions. If a style repeatedly fails, reduce its use. If an intervention reliably helps a particular state, prioritize it. Add a new branch only when a recurring pattern is clear. Do not revise the workflow merely to appear active.
 
-- Start state: tired [n], dread [n], unclear [n], distraction [n]
-- Dominant mode: [mode]
-- Style: [style]
-- Interventions: [items used]
-- Block count: [number and duration]
-- Outcome: started [yes/no]; blocks completed [n]; end state [brief]
-- What helped: [one line]
-- What did not help: [one line]
-- Style verdict: [landed / missed; possible adjustment]
-```
+## Failure modes and safeguards
 
-Review patterns only after several sessions. Adjust a default when a style repeatedly fails, elevate an intervention when it consistently helps, and add a branch only when a recurring state is genuinely unmapped. Do not invent changes merely to appear adaptive.
-
-## Common failure modes
-
-- **Coaching before diagnosis:** produces mismatched advice.
-- **Treating depletion as a discipline failure:** adds shame and makes avoidance worse.
-- **Planning at too high a level:** preserves the blank-page problem; use mechanical next actions.
-- **Stacking every intervention:** overwhelms the person; select one emotional tool and one practical next step.
-- **Leaving distraction within reach:** relies on willpower instead of environment.
-- **Making the break vague:** turns recovery into endless avoidance; set a return cue.
-- **Chasing task completion:** turns a rescue into pressure; one block is enough.
-- **Ignoring repeated high dread and tiredness:** misses a workload, health, or support problem.
-- **Over-collecting personal records:** creates privacy risk without improving the intervention.
-
-Keep the tone crisp, humane, and action-oriented. Name the next action, then make room for the person to do it.
+- Do not diagnose indefinitely; cap the rescue at about 15 minutes.
+- Do not treat exhaustion as a discipline problem.
+- Do not use a long break without a return cue.
+- Do not give multiple emotional techniques at once.
+- Do not aim to finish an open-ended task in the rescue session.
+- Do not continue chatting during a work block.
+- Do not retain session details, search private records, or share personal information without clear user authorization.
+- If the obstacle is fundamentally a complex problem with no known path, switch from motivation coaching to a separate problem-definition and planning process.

@@ -1,148 +1,149 @@
 ---
 name: shape-and-draft
-description: Shape consequential documents by reviewing evidence, resolving material choices, and checking readiness. Then draft and audit the smallest document that can achieve the goal.
+description: Shape consequential documents by reviewing appropriate evidence, resolving material choices with authorized decision-makers, checking readiness, and then drafting and auditing the smallest document that can achieve the goal.
 ---
 
 # Shape and draft a document
 
-Develop a consequential document by shaping the underlying thinking before writing it. Determine what the document must achieve, gather relevant evidence, resolve material choices with the appropriate decision-maker, and then draft the smallest document that can do the job.
+Develop an important document by shaping the thinking behind it before writing. Work out what the document must achieve, gather the relevant evidence, resolve material uncertainties with the appropriate decision-maker, and then draft the smallest document that can do the job.
 
-Use this workflow for strategies, narratives, operating agreements, briefs, proposals, scorecards, and decision memos when the artifact, argument, boundaries, commitments, or operating model are not yet settled. Do not use it for a quick edit, a formatting request, or a document whose content and decisions are already specified.
+Use this workflow for strategies, narratives, operating agreements, proposals, scorecards, decision memos, and hybrids when the argument, boundaries, commitments, or operating model are unsettled. Do not use the full process for a simple edit, formatting task, or document whose decisions and content are already clear.
 
 ## Classify the request
 
-The request may name a document type, outcome, audience, source material, or some combination. Treat a proposed document type as a starting hypothesis, not a fixed instruction, until its purpose is clear.
+The request may name a document type, desired outcome, audience, source material, or some combination. Treat a proposed document type as a hypothesis until its purpose is clear.
 
-Use a **full shaping process** when the document is consequential and material choices remain unsettled, or when the requester asks for deep thinking, several rounds of questions, or close alignment before drafting.
+Use a **full shaping process** when the document is consequential and its argument, boundaries, commitments, or operating model remain materially unsettled, or when the requester asks for deep thinking, multiple question rounds, or close alignment before drafting.
 
-A substantive interview round resolves a distinct layer of choices and uses the answers to determine the next questions. Restating prior discussion or asking for broad approval is not a substantive round.
+A substantive round resolves a distinct layer of choices and uses the answers to determine the next layer. Restating prior discussion or asking for general approval does not count as a substantive round.
 
-## 1. Work backwards from the desired outcome
+## 1. Work backwards from the outcome
 
-Start with the change the document must produce. Establish:
+Start with the change the document needs to produce. Establish:
 
 - Who will read it.
-- What those readers should understand, decide, approve, or do.
-- What is unclear, contested, blocked, or going wrong now.
-- Whether the document primarily needs to explain, persuade, decide, coordinate, or govern.
+- What they should understand, decide, approve, or do afterward.
+- What is unclear, contested, blocked, or currently going wrong.
+- Whether the document mainly needs to explain, persuade, decide, coordinate, or govern.
 
-Do not treat “write a strategy” or “make a narrative” as a sufficient goal. Identify the actual job the document must perform.
+Do not accept “write a narrative” or “make a strategy page” as the goal. Identify the actual job the document must perform.
 
-## 2. Select the right artifact
+## 2. Choose the artifact
 
-Recommend the document form that best serves that job:
+Recommend the form that best serves that job:
 
-- **Narrative:** Creates shared understanding of why something matters and what bet is being made.
-- **Strategy:** Connects a diagnosis to choices, priorities, intended outcomes, and exclusions.
-- **Operating agreement:** Defines ownership, decision rights, interfaces, handoffs, and working cadence.
-- **Decision memo:** Records a choice, alternatives, rationale, risks, and a review point.
-- **Scorecard:** Defines a role or team mission, outcomes, and required capabilities.
+- **Narrative:** Builds shared understanding of why something matters and the bet being made.
+- **Strategy:** Connects a diagnosis to choices, priorities, outcomes, and exclusions.
+- **Operating agreement:** Defines ownership, interfaces, decision rights, handoffs, and cadence.
+- **Decision memo:** Records a choice, alternatives, rationale, risks, and review point.
+- **Scorecard:** Defines a role or team mission, outcomes, and role-relevant capabilities.
 - **Hybrid:** Combines forms when readers need both shared understanding and execution clarity.
 
-Explain the relevant tradeoff and recommend an artifact. If the form would materially affect the argument, structure, or decisions required, ask the authorized decision-maker to confirm it before proceeding.
+Explain the relevant tradeoff and recommend one form. If the choice would materially affect the argument, structure, or commitments, ask the authorized decision-maker to confirm it before going deeper.
 
 ## 3. Gather and classify evidence
 
-Read supplied material first. Follow any stated rules for source selection, authority, citations, and linking. Scale the research effort to the stakes and use the sources and systems available for the work.
+Read supplied sources first. Follow stated rules for source selection, authority, citations, and linking. Scale the research sweep to the stakes.
 
-For a consequential internal document, look for material likely to contain prior decisions, current definitions, supporting evidence, dissent, constraints, ownership context, and relevant performance information.
+When accessing internal communications, records, or information about people, first confirm a legitimate purpose and clear authorization. Use only the minimum relevant sources and information. Omit unrelated or sensitive personal details, respect consent and privacy expectations, and keep the work and output within the appropriate access boundary.
 
-Apply these evidence rules:
+For a consequential internal document, seek sources that plausibly contain prior decisions, current definitions, relevant evidence, dissent, constraints, and ownership context. Apply these rules:
 
-- Respect a stated hierarchy of sources.
+- Respect any stated source-of-truth hierarchy.
 - Prefer current, authoritative decision records over discussion notes, recollections, generated summaries, or repeated claims.
-- Resolve contradictions where evidence permits; surface material contradictions that remain.
-- Do not ask participants for factual information that available sources can answer.
-- Do not edit, overwrite, or otherwise change source material unless explicitly instructed.
+- Resolve contradictions where the evidence permits; surface material contradictions that remain.
+- Do not ask a participant for facts the available sources can answer.
+- Do not modify source material unless explicitly instructed.
 
-Keep evidence separate from alignment:
+Keep a strict boundary between evidence and alignment:
 
-- Sources can establish what happened, what was recorded, what people said, and what an authoritative record currently states.
-- Sources do not automatically establish what the current decision-maker believes, is willing to promise, or chooses to exclude.
-- A plausible synthesis, repeated pattern, or implication is an **inference**, not a settled decision.
+- Sources can establish what happened, what people said, and what an authoritative record currently states.
+- Sources do not establish what a current decision-maker now believes, wants to promise, or is willing to exclude unless they record an explicit, current decision.
+- A synthesis, repeated theme, or plausible implication is **inferred**, not settled.
 - Ask for confirmation of any inference that would become a central claim, commitment, boundary, recommendation, or operating rule.
 
-Before the first interview round, provide a short situation brief containing:
+Before the first interview round, provide a short situation brief that states:
 
 - What the sources establish.
 - What has already been explicitly confirmed.
 - What is inferred but unconfirmed.
-- The main tension, gap, or missing logic.
+- The central tension, gap, or missing logic.
 - The recommended artifact.
-- The important questions that only a decision-maker can resolve.
+- The important uncertainties only the decision-maker can resolve.
 
-## 4. Interview in answer-dependent rounds
+## 4. Interview in successive, answer-dependent rounds
 
-For a full shaping process, complete at least two substantive, answer-dependent rounds before drafting. Count relevant rounds already completed in the current conversation, and do not repeat answered questions.
+For a full shaping process, complete at least two substantive, answer-dependent rounds before drafting. Count relevant rounds already completed in the current conversation, and do not repeat answered questions. Do not draft immediately after the first answer round, even if one apparent core tension seems resolved. The next round should test implications, boundaries, counterarguments, or execution details revealed by the first.
 
-Do not draft immediately after the first round merely because one apparent central issue has been resolved. Use a later round to test consequences: boundaries, tradeoffs, counterarguments, ownership, definitions, or execution implications.
+Ask four to eight focused questions per round. If fewer than four material questions genuinely remain, ask all of them and say this is a narrow final check. Do not add ceremonial questions to reach a target number.
 
-Ask four to eight focused questions per round. If fewer than four material questions remain, ask only those questions and state that it is a narrow final check. Do not add ceremonial questions simply to reach a number.
+One numbered question should normally contain one decision. Do not bundle independent choices, such as ownership, coordination, handoffs, and success measures, into a single yes-or-no question. Broad bundled answers create false alignment.
 
-Each numbered question should normally seek one decision. Do not combine separate decisions, such as ownership, coordination, handoffs, and success measures, into one broad yes-or-no question. Bundled questions create false alignment.
+Use this compact question format:
 
-Use a compact question format that supports quick answers:
-
-1. Number each question: `1.`, `2.`, `3.`.
-2. For bounded choices, label options with lowercase letters: `a.`, `b.`, `c.`.
-3. Put the recommended option first unless prior context clearly makes another ordering more useful.
-4. Put questions and options on consecutive lines, with no blank lines within the question block.
-5. Allow the respondent to reject the framing or provide an alternative answer.
+1. Number every question: `1.`, `2.`, `3.`.
+2. When a choice can be bounded, offer three or four mutually exclusive, decision-relevant options labeled `a.`, `b.`, `c.`, and, where useful, `d.`.
+3. Use two options only when the decision truly has two distinct states. Do not invent alternatives merely to fill the list.
+4. Put the recommended option first as `a.` unless earlier context makes another ordering clearer.
+5. Put every question and option on consecutive lines, with no blank lines inside the question block.
+6. Let the respondent reject the framing or provide a different answer.
 
 Example:
 
 1. Which direction should the document recommend?
-   a. Focus on the highest-impact problem first; this narrows scope but clarifies accountability.
-   b. Cover all related problems equally.
+   a. Focus first on the highest-impact problem; this narrows scope but makes accountability clear.
+   b. Address all related problems equally.
    c. Present options without a recommendation.
-2. Who should make the final decision?
+2. Who should hold the final decision right?
    a. The accountable lead.
    b. A cross-functional decision group.
+   c. Shared input, with one named final decision-maker.
 
 Each round should:
 
-1. Begin with an updated model of the situation and state what changed because of earlier answers.
+1. Start with the updated model and explain what changed because of previous answers.
 2. Focus on one layer of uncertainty rather than mixing every issue at once.
-3. Offer two or three concrete options when the decision can be bounded.
-4. Explain the tradeoff behind the recommended option.
-5. Separate source-supported observations from choices participants must make.
-6. Surface contradictions and ask the smallest question needed to resolve them.
-7. Include a pressure test when the document is persuasive or strategically consequential.
+3. Explain the tradeoff behind the recommended option briefly.
+4. Separate source-supported observations from choices the decision-maker must make.
+5. Notice contradictions and ask the smallest question needed to resolve them.
+6. Include at least one pressure test when the document is persuasive or strategically consequential.
 
-A common progression is purpose; strategy; operating model; definitions and measures; then expression, format, and destination. Adapt the sequence to the work, but preserve the answer-dependent loop: later questions must arise from earlier answers, not from a generic questionnaire.
+A typical progression is purpose; strategy; operating model; definitions and measures; then expression, format, and destination. Adapt the sequence to the task, but preserve the answer-dependent loop.
 
 After every answer round:
 
 1. Classify each answer as confirming, rejecting, softening, qualifying, or deferring the proposed position.
-2. Trace downstream implications. A changed audience, softened commitment, new exception, or rejected framing often creates another material question.
-3. Update the alignment ledger and show a concise synthesis.
-4. Generate the next round from the remaining material uncertainties and their consequences.
+2. Trace downstream implications. A changed audience, softened commitment, new exception, or rejected framing normally creates another question.
+3. Update and show a concise synthesis of the alignment ledger.
+4. Generate the next round from remaining material uncertainties and the consequences of the answers.
 
-Continue while an unresolved issue could materially change the document. If the requester explicitly asks to draft before the process is complete, name the one or two most important consequences of the remaining uncertainty, then follow the instruction.
+Continue while an uncertainty could materially change the document. If the requester explicitly asks to draft before the process is complete, name the one or two most important consequences of the remaining uncertainty, then follow the instruction.
 
 ## 5. Maintain an alignment ledger
 
 Keep a compact working record throughout the conversation:
 
-- **Confirmed:** Choices explicitly made by the authorized decision-maker.
-- **Source facts:** Claims established by current, authoritative evidence but not selected as present choices.
-- **Inferred:** Plausible interpretations that remain unconfirmed.
-- **Open:** Questions that could materially change the document.
-- **Corrected:** Assumptions or claims that a participant has rejected.
+| Category | Meaning |
+|---|---|
+| Confirmed | Choices explicitly made by an authorized decision-maker. |
+| Source facts | Claims established by current, authoritative evidence but not selected as current choices. |
+| Inferred | Plausible interpretations that remain unconfirmed. |
+| Open | Questions that could materially change the document. |
+| Corrected | Assumptions or claims a participant has rejected. |
 
-Update this ledger after every answer round. Never reintroduce a corrected assumption. If confirmed statements conflict, surface and resolve the conflict rather than hiding it in vague language. Never promote an inference to confirmed solely because several sources support it.
+Update this ledger after every answer round. Never reintroduce a corrected assumption. If two confirmed statements conflict, surface and resolve the conflict rather than hiding it in vague language. Never promote an inference to confirmed merely because several sources support it.
 
-For a full shaping process, show a concise version of the ledger before each later round. Every major draft claim must be a confirmed choice, a supported source fact, or explicitly framed as a proposal, assumption, or open question.
+For a full shaping process, show a concise version of the ledger before each later round so the decision-maker can correct mistaken assumptions. Every major claim in the draft must be a confirmed choice, a supported source fact, or explicitly framed as a proposal, assumption, or open question.
 
 ## 6. Apply the readiness gate
 
-Draft only when no unresolved issue is likely to change the document’s substance. Before drafting, provide a concise pre-draft synthesis covering the document’s intended job, audience, central position, important boundaries, and deliberate open questions.
+Draft only when no unresolved issue is likely to change the document’s substance. Before drafting, provide a concise pre-draft synthesis covering the intended job, audience, central position, important boundaries, and deliberate open questions.
 
 For every major planned claim, ask:
 
 > Was this confirmed by an authorized decision-maker, established as fact by authoritative evidence, or merely inferred?
 
-If a material claim is only inferred, ask another question or label it explicitly as a proposal. Do not present it as settled.
+If a material claim is only inferred, ask another question instead of presenting it as settled. If it must remain unresolved, label it clearly as a proposal, assumption, or open question.
 
 Check that each relevant category is confirmed, evidence-based, deliberately open, or genuinely not applicable:
 
@@ -160,31 +161,33 @@ For persuasive documents, complete a skeptical-reader pass:
 
 - What is the strongest objection from the actual audience?
 - Which premise, commitment, evidence claim, or safeguard would they dispute?
-- Has the response to that objection been confirmed?
+- Has the document’s response been confirmed or supported?
 
-Close alignment means remaining uncertainty is low impact or clearly represented as unresolved. It does not require artificial certainty.
+Close alignment does not require artificial certainty. It means the remaining uncertainty is low impact or the document explicitly represents it as unresolved.
 
 ## 7. Draft and deliver
 
-Follow the stated voice, style preferences, format, accessibility needs, and delivery requirements. Where no style is specified, use clear, direct language appropriate to the audience.
+Follow the stated voice, style preferences, accessibility needs, format, and delivery requirements. If no style is specified, use clear, direct language appropriate to the audience.
 
-Write the smallest document that accomplishes the agreed purpose. Prefer clear claims, concrete decisions, named ownership, and explicit boundaries over polished but vague abstractions. Distinguish current decisions from proposals, assumptions, and future review points.
+Write the smallest document that accomplishes the agreed purpose. Prefer clear claims, concrete decisions, explicit ownership, and clear boundaries over polished abstractions. Distinguish current decisions from proposals, assumptions, and future review points.
 
 Make the draft as simple as the substance allows:
 
 - Prefer short, common words over formal or inflated language.
-- Write complete, natural sentences. Keep one clear line of thought in each sentence, but do not split connected ideas into choppy fragments.
-- State the point first. Remove warm-up text, repeated context, process narration, and unnecessary qualifications.
+- Write complete, natural sentences. Keep one clear line of thought in each sentence without turning connected ideas into choppy fragments.
+- State the point first. Cut warm-up text, repeated context, process narration, and unnecessary qualifications.
 - Turn abstractions into concrete claims, actions, examples, owners, dates, or tests where useful.
-- Use focused paragraphs. Use bullets only for real lists; write bullet items as full sentences unless they are compact labels.
-- Prefer the more concise version when it preserves meaning. Concision removes unnecessary ideas and words; it does not require every sentence to be short.
-- Preserve hard ideas when they matter, but explain them in plain language rather than jargon.
+- Use focused paragraphs. Use bullets only for real lists, and write bullet items as full sentences unless they are compact labels.
+- Keep action-oriented sections to a manageable number of top-level bullets, usually five or fewer and rarely more than seven. Combine, cut, or link supporting detail when needed.
+- Preserve difficult ideas when they matter, but explain them plainly rather than hiding them behind jargon.
 
-Honor the requested destination using the chosen system. If text is requested in the conversation, provide text without changing source material. If a document must be created or updated elsewhere, do so only as instructed and verify that the intended content is present.
+Honor the requested destination using the chosen system. If text is requested in the conversation, provide text without changing a source document. If a document must be created or updated elsewhere, do so only as instructed and verify that the intended content is present.
+
+When producing a formatted document with lists, inspect the resulting structure and rendering. Ensure headings do not accidentally inherit list formatting, intended bullets render consistently, list indentation is consistent, and there are no unnecessary blank paragraphs, orphaned bullets, or awkward page breaks.
 
 ## 8. Audit before delivery
 
-Compare the draft against the alignment ledger and source hierarchy:
+Compare the draft with the alignment ledger and source hierarchy:
 
 - Does it solve the agreed problem in the agreed form?
 - Does every material choice reflect confirmed decisions?
@@ -203,15 +206,16 @@ Fix mismatches before delivering. Put the deliverable last, without trailing com
 
 - Drafting early because producing text feels productive.
 - Treating the proposed artifact as fixed before its purpose is known.
-- Asking participants for facts that available evidence can answer.
-- Mistaking research volume for alignment on current choices.
+- Asking participants for facts available evidence can answer.
+- Mistaking extensive research for alignment on current choices.
 - Treating a plausible synthesis as a confirmed decision.
-- Using a generic questionnaire disconnected from evidence and prior answers.
+- Using a generic questionnaire disconnected from evidence and earlier answers.
 - Failing to update the working model after each round.
 - Stopping after one round without testing consequences.
-- Bundling independent decisions into a single question.
-- Repeating questions already answered.
+- Bundling independent decisions into one question.
+- Repeating a question already answered.
 - Concealing contradictions through vague language.
 - Continuing interviews after only low-impact uncertainty remains.
 - Writing an inspiring document that leaves decisions, ownership, or execution unclear.
 - Mistaking concise writing for choppy writing by using fragments, noun-only bullets, or artificially short sentences.
+- Including personal, confidential, or unrelated information that is not needed for the document’s legitimate purpose.
