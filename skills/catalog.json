@@ -72,6 +72,13 @@
       "markdown": "https://dewierwan.com/skills/raw/case-study-post.md"
     },
     {
+      "title": "Create editorial cover images",
+      "description": "Create cover images from an article through five distinct concepts, visual review, and three informed improvements using the chosen image generator.",
+      "category": "Research and write",
+      "page": "https://dewierwan.com/skills/create-editorial-cover-images/",
+      "markdown": "https://dewierwan.com/skills/raw/create-editorial-cover-images.md"
+    },
+    {
       "title": "Plan your day",
       "description": "Choose one most important outcome, protect time for it, and make a realistic plan around existing commitments.",
       "category": "Plan and reflect",
@@ -112,6 +119,13 @@
       "category": "Plan and reflect",
       "page": "https://dewierwan.com/skills/wind-down-for-sleep/",
       "markdown": "https://dewierwan.com/skills/raw/wind-down-for-sleep.md"
+    },
+    {
+      "title": "Plan and book a trip",
+      "description": "Plan a trip around its purpose, compare complete journeys and current fares, and prepare or complete a booking within the user's authorization.",
+      "category": "Plan and reflect",
+      "page": "https://dewierwan.com/skills/plan-and-book-a-trip/",
+      "markdown": "https://dewierwan.com/skills/raw/plan-and-book-a-trip.md"
     },
     {
       "title": "Prepare for a meeting",
