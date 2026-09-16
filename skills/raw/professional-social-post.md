@@ -1,245 +1,248 @@
 ---
 name: professional-social-post
-description: Draft, revise, and audit professional social posts from notes, drafts, articles, transcripts, research, or a topic. This workflow emphasizes concrete claims, strong hooks, useful substance, targeted revision, and platform-aware publishing.
+description: Draft, revise, and audit professional social posts from notes, drafts, articles, transcripts, research, or a topic. This workflow helps create specific, useful, evidence-grounded posts with strong hooks, clear structure, and focused calls.
 ---
 
 # Write a professional social post
 
-Use this workflow to draft, revise, or critique a professional social post from notes, a draft, an article, a transcript, a podcast, a research finding, or a simple topic.
+Use this workflow to draft, revise, or critique a professional social post from notes, a rough draft, an article, a transcript, a podcast, a research finding, an announcement, or a simple topic.
 
-The goal is not to make an announcement sound enthusiastic. The goal is to make the right reader stop, understand a useful point, and have a reason to care. Write for a defined professional audience with low tolerance for fluff, generic inspiration, and vague claims.
+The goal is not to make an announcement sound enthusiastic. The goal is to make the right reader stop, understand a useful point, and have a reason to care. The post should sound like a person with evidence, judgment, and a real point to make. It should not sound like a press release, an academic abstract, a generic motivational message, or an empty teaser.
 
-This workflow is platform-independent. Before drafting, ask the user to choose or confirm:
+This is platform-independent. Adapt the final formatting, length, link placement, and publication process to the user’s chosen platform.
 
-- **Platform and format:** text post, caption, document carousel, thread, short-form video caption, or article promotion.
-- **Audience:** for example, technical practitioners, founders, policy professionals, researchers, customers, operators, or job candidates.
-- **Purpose:** share an insight, explain a concept, announce something, promote a longer piece, start a substantive discussion, or support a campaign.
-- **Voice constraints:** formal or conversational, first-person or organizational voice, preferred words, forbidden words, punctuation preferences, and length.
-- **Evidence and permissions:** what sources support claims; what names, outcomes, quotes, or personal details may be shared.
-- **Link strategy:** whether an external link will be included and where that platform or campaign plan places it.
+## Start with context and authorization
 
-If the user has an existing writing guide, approved posts, brand guidance, or audience research, use it as the source of voice rules. Do not assume a particular person’s voice, a particular organization’s style, or a particular publishing system.
+Before drafting, gather or confirm the minimum information needed:
 
-## Routing and scope
+- **Platform and format:** text post, caption, document carousel, thread, short-form post, or article promotion.
+- **Audience:** for example, practitioners, founders, researchers, policy professionals, customers, partners, or job candidates.
+- **Purpose:** share an insight, explain a concept, announce something, promote a longer piece, invite substantive discussion, or support a campaign.
+- **Voice:** first-person, organizational, formal, conversational, technical, plain-language, or another approved style.
+- **Constraints:** word or character limit, required facts, forbidden phrases, punctuation preferences, accessibility requirements, and preferred closing style.
+- **Link strategy:** whether a link is needed and where it should appear under the platform’s current norms.
+- **Source status:** whether claims, data, quotations, names, and outcomes have been approved or can be publicly shared.
 
-Some post genres need a dedicated structure. Identify them before drafting.
+If the user provides a writing guide, approved prior posts, brand guidance, or audience research, use it as the primary source for voice and positioning. Do not assume an individual’s personal writing style or a particular publishing system.
 
-- **Career or participant case study:** A person’s before-and-after story, often involving a program, employer, or career change. Use a case-study structure: starting point, turning point, concrete outcome, evidence, and lesson. Confirm authorization before sharing personal details, and use only details relevant to the post’s purpose.
-- **Research or evidence post:** A claim based on data, a model, a report, or an analysis. Prioritize methodology, assumptions, uncertainty, and defensible interpretation.
-- **Product or organizational announcement:** Lead with the concrete change and why it matters to readers. Do not lead with internal excitement.
-- **Article, podcast, or report promotion:** Lead with the strongest finding from the piece, not with “new article” or “new episode.”
-- **Carousel or document caption:** Give one or two meaningful findings, then point readers to the visual material. Do not duplicate every slide.
-- **Sensitive operational topic:** If the subject involves health, safety, security, people records, regulated work, or high-stakes decisions, avoid unnecessary detail. Share only what is accurate, appropriate for the audience, and authorized for publication.
+If the request involves private communications, participant records, employee records, customer stories, or career outcomes, require a legitimate purpose and clear authorization. Use only the minimum relevant material. Omit unrelated personal details, sensitive information, and identifiable details that are not necessary to make the point. Confirm what may be named, quoted, or disclosed.
 
-If the genre is unclear, ask one concise routing question before writing. If a post relies on a person’s story, private communications, or internal records, require a legitimate purpose and clear authorization. Use the minimum relevant information, omit unrelated sensitive details, and keep the output within the intended access boundary.
+## Route the request before drafting
 
-## Non-negotiable accuracy rules
+Some post types need distinct handling. Identify the genre before selecting a hook or structure.
 
-1. **Do not invent facts.** Do not fabricate statistics, names, quotes, outcomes, clients, organizations, titles, dates, research findings, or testimonials.
-2. **Distinguish evidence from interpretation.** State what the source shows, then clearly label the conclusion, recommendation, or hypothesis.
-3. **Preserve meaningful uncertainty.** If a result has broad ranges, weak evidence, important assumptions, or correlation rather than causation, say so plainly.
-4. **Use exact details when supported.** Specific figures, dates, roles, and outcomes are usually stronger than broad descriptions. Do not turn a rough estimate into falsely precise language.
-5. **Ask for missing evidence early.** If the post depends on a claim the user cannot support, remove it, narrow it, qualify it, or request a source.
-6. **Avoid misleading urgency.** Do not exaggerate stakes to create engagement. A sharp, specific risk and a practical response are more credible than broad catastrophe language.
-7. **Respect privacy and consent.** Do not publish personal outcomes, quotes, employment changes, health information, or other identifying details without clear approval. When a generalized example teaches the same lesson, prefer it.
+- **Career or participant case study:** A person’s starting point, turning point, and outcome. Obtain permission before sharing identifying information or quotations. Use a case-study sequence: starting point, relevant action or mechanism, concrete outcome, evidence, and lesson.
+- **Research or evidence post:** A claim based on data, a model, a report, or analysis. Prioritize methodology, scope, uncertainty, and a defensible interpretation.
+- **Product, program, or organizational announcement:** Lead with the concrete change and reader relevance. Do not lead with internal excitement.
+- **Article, report, or podcast promotion:** Lead with the strongest finding or tension in the longer piece, not with “a new article is out.”
+- **Carousel or document caption:** Give one or two substantive findings, then explain what the visual material adds. Do not reproduce every slide.
+- **Strategy or positioning post:** Explain a deliberate trade-off, including what the organization or team has chosen not to optimize for and why.
+
+If the genre is unclear, ask one concise routing question. For example:
+
+> Is this mainly an evidence post, an announcement, a case study, or promotion for a longer piece? The answer changes the strongest structure.
+
+## Non-negotiable accuracy and safety rules
+
+1. **Do not invent facts.** Never fabricate statistics, names, quotations, roles, organizations, dates, outcomes, testimonials, research findings, or customer results.
+2. **Separate evidence from interpretation.** State what the source shows, then make clear when a conclusion is an inference, recommendation, or personal view.
+3. **Preserve material uncertainty.** If results have broad ranges, weak evidence, important assumptions, or correlation rather than causation, say so plainly.
+4. **Use specific details only when supported.** Exact figures, dates, roles, and outcomes can make a post stronger. Do not convert an estimate into falsely precise language.
+5. **Ask for missing evidence early.** If a post relies on an unsupported claim, request a source, remove the claim, or narrow it.
+6. **Avoid misleading urgency.** Do not exaggerate risks or stakes to create engagement. Name the specific risk, mechanism, uncertainty, and practical response.
+7. **Respect the access boundary.** Do not reveal information that the intended audience is not authorized or expected to receive.
 
 ## Audience and voice
 
-Write for the reader most likely to act on the post, not for everyone who might vaguely relate to it. Specificity is a filter. It helps the right people recognize that the post is for them.
+Write for the reader most likely to benefit from or act on the post, not for everyone who might vaguely relate to it. Specificity is a useful filter. It helps the right audience recognize that the post is for them.
 
-Use this default voice unless the user supplies another one:
+Use this broadly useful default voice unless the user provides another:
 
 - Direct, clear, and conversational.
 - Short sentences and concrete nouns.
 - Active voice where possible.
 - One main claim per sentence.
-- Sober about problems and practical about responses.
 - Specific rather than promotional.
+- Sober about problems and practical about responses.
 - Confident only where the evidence supports confidence.
+- Technical terms only when useful, with a plain-English gloss on first use.
 
-Avoid three common failure modes:
+Avoid these three common failure modes:
 
 | Failure mode | What it sounds like | Better approach |
 |---|---|---|
 | Corporate | “We are thrilled to announce an exciting new initiative.” | State what changed, who it affects, and why it matters. |
-| Academic | Long, hedged sentences full of unexplained terms. | State the claim plainly, then explain necessary terms in ordinary language. |
+| Academic | Long, hedged sentences with unexplained terminology. | State the claim plainly, then explain necessary terms in ordinary language. |
 | Alarmist | Broad catastrophe language without a clear mechanism or response. | Name the specific risk, evidence, uncertainty, and useful intervention. |
 
-## The core workflow
+## Core workflow
 
 ### 1. Inspect the source before choosing a format
 
-Do not start with a template. Read the source and find the strongest material buried inside it.
+Do not begin with a template. Read the source and find the strongest material inside it. A report title or article headline is often not the best social-post angle. The strongest thread may be a specific detail in the middle.
 
 Look for:
 
 - An unusual or surprising fact.
 - A specific number that creates tension.
 - A counterintuitive conclusion that can be defended.
-- A concrete before-and-after outcome.
-- A meaningful trade-off.
+- A concrete before-and-after result.
+- A meaningful strategic trade-off.
 - A sharp disagreement between credible views.
 - A useful framework, checklist, or model.
-- A sentence that changes how a reader sees the problem.
+- A sentence that changes how the reader sees a problem.
 
-The formal headline of an article is often not the best social-post angle. The strongest thread may be a specific detail in the middle of the source.
-
-If there are several strong angles, do not silently choose one. Present two to four numbered options. For each, say what it foregrounds and why it may work for the intended audience.
+If several angles are plausible, do not silently choose one. Present two to four numbered options and let the user choose when the choice is material.
 
 **Angle-selection prompt:**
 
-> I see several viable post angles. Which should lead?
+> I see several viable angles. Which should lead?
 >
 > 1. **[Angle]**: foregrounds [specific finding or tension]. Best for [audience intent].
-> 2. **[Angle]**: foregrounds [specific story, outcome, or disagreement]. Best for [audience intent].
+> 2. **[Angle]**: foregrounds [specific story or outcome]. Best for [audience intent].
 > 3. **[Angle]**: foregrounds [framework or implication]. Best for [audience intent].
 
-Choose one primary thread. A social post is not a summary of every point in the source.
+Choose one primary thread. A post is not a summary of every section in the source.
 
 ### 2. Generate hooks before drafting the body
 
-The opening determines whether the rest of the post is read. Generate five to ten possible hooks before committing. When user choice would help, show a numbered shortlist of three to five strong options.
+The opening determines whether the rest of the post is read. Generate five to ten possibilities, then show a shortlist of three to five strong hooks when user input would help. Do not commit to the first acceptable hook.
 
-A hook should make an honest promise that the body fulfills. It should generally work on its own, without requiring the reader to understand the full source first.
+A hook should make an honest promise that the body fulfills. It should work on its own, without requiring the reader to understand the complete source.
 
-Useful hook patterns:
+Useful hook patterns include:
 
 - **Changed mind:** “I changed my mind about [specific issue].”
-- **Concrete investment:** “I reviewed [specific body of evidence] to answer one question.”
+- **Concrete investment:** “I reviewed [specific evidence base] to answer one question.”
 - **Specific number with tension:** “[Number] of [group] report [surprising result].”
-- **Named outcome:** “[Person or role] moved from [starting point] to [specific outcome] in [timeframe].” Use only with approval and evidence.
-- **Counterintuitive claim:** “[Common assumption] misses the more important problem.” Use only if the post defends the claim.
+- **Specific outcome:** “[Role or participant] moved from [starting point] to [outcome] in [timeframe].” Use only with evidence and permission.
+- **Counterintuitive claim:** “[Common assumption] misses the more important problem.” Use only when the post supports the claim.
 - **Short thesis:** “[Concept] is best understood as [concrete analogy].”
-- **Focused question:** “Why do two credible groups reach such different conclusions about [specific issue]?”
+- **Focused disagreement:** “Why do two credible groups reach such different conclusions about [specific issue]?”
 
 For each shortlisted hook, add a brief strategic note.
 
 | Hook | Strategic purpose |
 |---|---|
-| “[Specific claim or finding].” | Leads with a concrete result and gives readers a reason to continue. |
+| “[Specific finding or claim].” | Leads with a concrete result and creates a clear reason to continue. |
 
-Reject hooks that are interchangeable across unrelated topics. If the topic noun could be replaced with “marketing,” “leadership,” or another broad subject and the line still works, it is probably too generic.
+Use the **swap test**: if a key noun could be replaced with an unrelated topic and the hook still works, it is probably too generic. Make the opening specific to the actual subject.
 
 Avoid:
 
-- Generic announcement openings such as “Excited to share.”
+- “Excited to share,” “thrilled to announce,” or similar internal-excitement framing.
 - Throat-clearing such as “In today’s fast-moving environment.”
 - Empty cliffhangers that do not deliver a payoff.
 - Several rhetorical questions in a row.
-- Broad motivational claims.
+- Broad motivational statements with no mechanism, result, or decision.
 - Clickbait such as “You will not believe” or “This changes everything.”
 
 ### 3. Choose one structure
 
-Select the structure that fits the source. Do not combine several structures unless there is a clear reason.
+Select the structure that matches the source. Do not combine several structures unless there is a clear reason.
 
 1. **Counterintuitive claim → evidence → implication**  
-   Best for research, data, and argument posts. Start with the surprise, show supporting facts, then explain what the reader should do or reconsider.
+   Best for research, data, and argument posts. Start with the surprise, show supporting facts, then explain what the reader should reconsider or do.
 
 2. **Changed mind → trigger → updated view → takeaway**  
-   Best for thoughtful first-person posts. State the previous view, explain what changed it, and give the new conclusion.
+   Best for thoughtful first-person posts. State the previous view, explain what changed it, then give the new conclusion.
 
 3. **Problem → why it matters → practical response**  
-   Best for explainers and operational or policy content. Keep the problem concrete and make the response proportionate.
+   Best for explainers and operational or policy content. Keep both the problem and response concrete.
 
 4. **Result → how it happened → reusable lesson**  
-   Best for launches, team outcomes, and authorized case studies. The result must be real and specific.
+   Best for launches, team outcomes, and approved case studies. The result must be real and specific.
 
 5. **Framework → examples → application**  
-   Best for posts readers may save and revisit. Give the framework a useful name only if the name clarifies rather than brands ordinary advice.
+   Best for material readers may save and revisit. Use a name for the framework only if the name clarifies rather than brands ordinary advice.
 
 6. **Specific announcement → reader relevance → next step**  
    Use only when the announcement itself is genuinely notable. Lead with what happened and its practical significance.
 
 7. **Strategic trade-off → rationale → consequence**  
-   Useful when explaining a deliberate constraint or “anti-goal”: what a team has intentionally chosen not to optimize for, why it made that choice, and what follows from it.
+   Useful for explaining deliberate constraints or anti-goals: what a team has chosen not to optimize for, why, and what this enables.
 
-### 4. Draft the body: hook, tension, payoff
+### 4. Draft: hook, tension, payoff
 
 Use this default shape:
 
-- **Hook:** The strongest claim, result, or tension.
-- **Tension or setup:** Why the point matters, what is surprising about it, or what assumption it challenges.
-- **Payoff:** The evidence, story, framework, or practical insight. The post should be valuable even if the reader never opens a link.
-- **Soft close:** Exactly one focused question, one practical takeaway, or one clear pointer to more material.
+- **Hook:** the strongest claim, result, or tension.
+- **Tension or setup:** why it matters, what is surprising, or which assumption it challenges.
+- **Payoff:** evidence, story, framework, or practical insight. The post must provide value even if the reader does not click, swipe, or buy.
+- **Soft close:** exactly one focused question, one practical takeaway, or one clear pointer to more material.
 
-A useful default length is under 300 words, but length should follow substance and platform norms. Short posts should still make a complete point. Longer posts need a reason for every paragraph.
+A useful default is under 300 words, but substance and platform norms should govern. Longer posts need a reason for every paragraph.
 
-Use white space. Write in one- or two-sentence paragraphs so the post is easy to scan on a phone. Use bullets only when the material is genuinely list-shaped, such as three reasons, four findings, or a checklist.
+Use white space. One- or two-sentence paragraphs are easier to scan on a phone. Use bullets only when the content is genuinely list-shaped, such as three reasons, four findings, or a checklist. Do not turn flowing prose into bullets merely to look structured.
 
 For a carousel or document caption:
 
-- Establish the central idea in the caption.
+- Establish the central idea in the post.
 - Include one or two of the strongest specifics.
-- Tell readers what the visual material adds.
-- Do not turn the caption into a slide-by-slide summary.
+- State what the visual material adds.
+- Do not write a slide-by-slide summary.
 
-For a linked article, report, or podcast:
+For an article, report, or podcast:
 
-- Put the strongest finding in the post body.
-- Treat the linked item as depth, sources, or extended analysis.
-- Follow the user’s platform strategy for link placement.
+- Put the strongest finding in the body.
+- Treat the longer piece as depth, evidence, and extended analysis.
+- Follow the user’s chosen platform strategy for links.
 - Never make “read the link” the main value proposition.
 
 ## Calls to action and questions
 
-Use one close only. A strong close gives the reader a real, bounded way to respond.
+Use one close only. A strong close gives readers a real, bounded way to respond.
 
-Good examples:
+Examples of useful closes:
 
-- “Which of these constraints is most important in your work?”
+- “Which of these constraints matters most in your work?”
 - “What evidence would change your view?”
-- “The full analysis includes the assumptions and source material.”
-- “If you have operated this system, where does this model fail?”
+- “The full analysis includes assumptions and source material.”
+- “If you have operated a similar system, where does this model fail?”
 
-Weak examples:
+Avoid weak or manipulative closes:
 
 - “Thoughts?”
 - “Let me know what you think.”
 - Several questions at once.
-- Requests to comment, tag, repost, or react merely to boost engagement.
+- Requests to comment, tag, repost, or react solely to increase reach.
 
 A question should invite knowledge, disagreement, or experience. Do not use engagement bait.
 
-## Editing rules: remove templated and inflated language
+## Editing pass: remove templated language
 
 Run a separate editing pass after drafting. Cut phrases that sound polished but say little.
 
 Replace or remove:
 
-- Inflated corporate verbs such as “leverage,” “unlock,” “harness,” “navigate,” and “empower.”
+- Corporate verbs such as “leverage,” “unlock,” “harness,” “navigate,” and “empower.”
 - Filler intensifiers such as “truly,” “deeply,” “incredibly,” and “remarkably.”
 - Hedging frames such as “it is worth noting,” “one might say,” and “arguably,” unless uncertainty is genuinely important.
 - Softeners such as “just,” “simply,” “essentially,” and “ultimately.”
-- Abstract nouns doing the work, such as “journey,” “transformation,” or “paradigm,” when a concrete event can be named.
-- Transition sentences that merely repeat the previous paragraph.
-- Dramatic framing such as “The truth is” or “Here is the reality.” State the point directly.
-- Decorative punctuation or formatting that the chosen platform will not render correctly.
+- Abstract nouns such as “journey,” “transformation,” and “paradigm” when a concrete event can be named.
+- Transition sentences that only restate the previous paragraph.
+- Dramatic frames such as “The truth is” and “Here is the reality.” State the point directly.
+- Decorative punctuation or formatting that the platform will not render correctly.
 
-If the user has a punctuation preference, obey it. Otherwise, favor periods, commas, and line breaks over theatrical punctuation. Read the draft aloud. If it sounds like a generic thought-leadership template rather than a person making a specific point, rewrite it.
+Follow user-specified punctuation preferences. Otherwise, favor periods, commas, and line breaks over theatrical punctuation. Read the draft aloud. If it sounds like a generic thought-leadership template rather than a person making a specific point, rewrite it.
+
+Use visual emphasis sparingly. Before using special characters, bold styling, or emoji, verify that the chosen platform renders them reliably and that they improve scanning rather than decorate the prose.
 
 ## Revision protocol
 
-When the user gives feedback, revise the requested line and the nearby logic first. Do not rewrite the entire post unless asked.
+When the user gives feedback, revise the requested line and nearby logic first. Do not rewrite the entire post unless asked.
 
-Examples:
-
-- If the hook is “not sharp enough,” provide several replacement hooks before changing the body.
+- If the hook is not sharp enough, provide several replacement hooks before changing the body.
 - If a claim feels overstated, tighten the evidence or soften only that claim.
-- If a paragraph feels slow, cut setup before adding more explanation.
+- If a paragraph feels slow, cut setup before adding explanation.
 - If the user prefers an earlier sentence, preserve it unless there is a clear reason not to.
+- If a draft has a weak spot, identify it honestly and offer a concrete alternative.
 
-Multiple small options are often more useful than one complete redraft, especially for hooks, closers, and uncertain lines.
-
-Be candid about weak material. For example:
-
-> The second paragraph relies on a broad claim that the source does not yet support. We can add evidence, make it narrower, or replace it with this concrete example: [example].
-
-Do not quietly weaken a previously effective line during revision. Preserve the strongest supported wording unless the user asks to change its tone, claim, or emphasis.
+Multiple small options are often more useful than one full redraft, especially for hooks, closers, and uncertain lines.
 
 ## Readiness gate and audit
 
-Do not present a draft as final until it passes this checklist.
+Do not present a draft as final until it passes this checklist:
 
 - Does the first line earn attention when read alone?
 - Is the post about one clear point rather than several competing ideas?
@@ -249,35 +252,34 @@ Do not present a draft as final until it passes this checklist.
 - Is uncertainty stated where it materially affects the conclusion?
 - Is the language specific to this topic rather than reusable for any industry?
 - Is the close one focused action, question, or pointer?
-- Are all names, quotes, figures, and claims authorized and supported by source material?
-- Does formatting work on the intended platform?
-- Does the tone remain professional, respectful, non-inflammatory, and appropriate for the intended audience?
-- Does the post keep personal, sensitive, or confidential information within the agreed publication boundary?
+- Are names, quotations, figures, and personal details supported, approved, and appropriate for this audience?
+- Does the formatting work on the intended platform and device?
+- Does the tone remain professional, respectful, and non-inflammatory for the intended audience?
+- Does the post stay within its authorized information boundary?
 
-If any answer is no, revise before handoff. It is better to flag one uncertain line than to present a polished but weak or unsupported draft.
+If any answer is no, revise before handoff.
 
 ## Handoff format
 
-When presenting work to the user, provide only what helps them decide and publish:
+Present only what helps the user decide and publish:
 
 1. The recommended hook and one or two alternatives, each with a short strategic note.
-2. The completed draft in the user’s chosen delivery format or location.
-3. Any unsupported claim, missing input, approval requirement, or line that remains uncertain.
+2. The completed draft in the user’s chosen delivery format.
+3. Any unsupported claim, missing input, or uncertain line.
 4. Suggested link or first-comment text, if relevant to the platform strategy.
-5. One concise publishing reminder appropriate to the platform, such as responding promptly and substantively to genuine early comments.
+5. One concise publishing reminder, such as responding promptly and substantively to genuine comments.
 
-Do not claim that a particular format, timing tactic, or engagement metric is guaranteed to improve reach. Platform behavior changes frequently. Treat distribution advice as a testable hypothesis, and encourage users to compare results across several posts.
+Do not claim that a particular format, timing tactic, or engagement metric is guaranteed to improve reach. Platform behavior changes. Treat distribution advice as a testable hypothesis and compare results across several posts.
 
 ## Common failure patterns
 
-- **Announcement disguised as content:** The post tells readers the organization is pleased, but not why readers should care. Fix it by leading with the actual change or lesson.
-- **Pure teaser:** The post asks readers to click but provides no useful insight. Fix it by sharing the main finding and using the linked piece for depth.
-- **Unsupported precision:** The post uses a striking figure without a source, scope, or caveat. Fix it by verifying, qualifying, or removing it.
-- **Generic inspiration:** The post sounds positive but has no mechanism, example, or decision. Fix it by naming the concrete action or trade-off.
-- **Overpacked summary:** The post tries to cover every section of a report. Fix it by selecting one thread and saving the rest for the original material or later posts.
-- **Bolted-on promotion:** A course, product, or service appears at the end without a natural connection. Fix it by removing the pitch, creating a separate promotional post, or making the connection concrete and immediate.
-- **Forced engagement:** The post demands reactions or comments. Fix it by asking one real question or ending with a useful conclusion.
-- **Unnecessary personal disclosure:** The post uses a person’s story, quote, or identifying details when the same lesson could be made with less information. Fix it by obtainining approval, minimizing details, or using an anonymized and accurate example.
-- **False certainty:** The post presents a forecast, model output, or early finding as settled fact. Fix it by naming assumptions, evidence limits, and the practical implication that still follows.
+- **Announcement disguised as content:** The post says the organization is pleased, but not why readers should care. Lead with the actual change or lesson.
+- **Pure teaser:** The post asks readers to click but shares no useful insight. Give the main finding and use the linked piece for depth.
+- **Unsupported precision:** A striking number has no source, scope, or caveat. Verify, qualify, or remove it.
+- **Generic inspiration:** The post sounds positive but has no mechanism, example, or decision. Name the concrete action or trade-off.
+- **Overpacked summary:** The post covers every section of a report. Select one thread and save the rest for the source or later posts.
+- **Bolted-on promotion:** A product, program, or service appears at the end without a natural connection. Remove it, make a separate post, or make the connection immediate and concrete.
+- **Forced engagement:** The post demands reactions or comments. Ask one real question or end with a useful conclusion.
+- **Unapproved personal disclosure:** The post turns an individual’s experience into promotional evidence without clear permission. Generalize, anonymize, or obtain approval.
 
-The final standard is simple: the post should sound like someone with evidence, judgment, and a real point to make. It should not sound like a press release, an academic abstract, or a generic social-media template.
+The final standard is simple: make a specific, useful, defensible point for a defined audience. Every sentence should earn its place.

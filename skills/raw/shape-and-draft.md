@@ -1,23 +1,21 @@
 ---
 name: shape-and-draft
-description: Shape consequential documents by reviewing evidence, resolving material choices through answer-dependent interview rounds, testing readiness, and auditing a clear final draft.
+description: Shape consequential documents by reviewing evidence, resolving material choices, and checking readiness. Then draft and audit the smallest document that can achieve the goal.
 ---
 
 # Shape and draft a document
 
-Develop a consequential document by shaping the underlying thinking before writing it. Determine what the document must achieve, gather relevant evidence, resolve material choices with the authorized decision-maker, and then draft the smallest document that can do the job.
+Develop a consequential document by shaping the underlying thinking before writing it. Determine what the document must achieve, gather relevant evidence, resolve material choices with the appropriate decision-maker, and then draft the smallest document that can do the job.
 
-Use this workflow for strategies, narratives, operating agreements, briefs, proposals, scorecards, and decision memos when the artifact, argument, boundaries, commitments, or operating model are not settled. Do not use it for a quick edit, formatting task, or document whose content and decisions are already specified.
-
-If the work requires access to private communications, internal records, or information about people, confirm a legitimate purpose and clear authorization first. Use only the minimum relevant sources and details, omit unrelated sensitive information, respect consent and privacy expectations, and keep outputs within the appropriate access boundary.
+Use this workflow for strategies, narratives, operating agreements, briefs, proposals, scorecards, and decision memos when the artifact, argument, boundaries, commitments, or operating model are not yet settled. Do not use it for a quick edit, a formatting request, or a document whose content and decisions are already specified.
 
 ## Classify the request
 
-The request may name a document type, desired outcome, audience, source material, or some combination. Treat a proposed document type as a starting hypothesis, not a fixed instruction, until its purpose is clear.
+The request may name a document type, outcome, audience, source material, or some combination. Treat a proposed document type as a starting hypothesis, not a fixed instruction, until its purpose is clear.
 
-Use a **full shaping process** when the document is strategically consequential and material choices remain unsettled, or when the requester asks for deep thinking, several question rounds, or close alignment before drafting.
+Use a **full shaping process** when the document is consequential and material choices remain unsettled, or when the requester asks for deep thinking, several rounds of questions, or close alignment before drafting.
 
-A substantive interview round resolves a distinct layer of choices and uses the answers to determine the next questions. Restating prior discussion or asking for general approval is not a substantive round.
+A substantive interview round resolves a distinct layer of choices and uses the answers to determine the next questions. Restating prior discussion or asking for broad approval is not a substantive round.
 
 ## 1. Work backwards from the desired outcome
 
@@ -45,18 +43,17 @@ Explain the relevant tradeoff and recommend an artifact. If the form would mater
 
 ## 3. Gather and classify evidence
 
-Read supplied material first. Follow any stated rules for source selection, authority, citations, and links. Scale the research effort to the stakes and use only sources and systems you are authorized to access.
+Read supplied material first. Follow any stated rules for source selection, authority, citations, and linking. Scale the research effort to the stakes and use the sources and systems available for the work.
 
-For a consequential internal document, look for material likely to contain prior decisions, current definitions, evidence, dissent, constraints, ownership context, and relevant performance information. Prefer the least sensitive source that can establish the needed fact.
+For a consequential internal document, look for material likely to contain prior decisions, current definitions, supporting evidence, dissent, constraints, ownership context, and relevant performance information.
 
 Apply these evidence rules:
 
 - Respect a stated hierarchy of sources.
 - Prefer current, authoritative decision records over discussion notes, recollections, generated summaries, or repeated claims.
 - Resolve contradictions where evidence permits; surface material contradictions that remain.
-- Do not ask participants for factual information that available, authorized sources can answer.
+- Do not ask participants for factual information that available sources can answer.
 - Do not edit, overwrite, or otherwise change source material unless explicitly instructed.
-- Do not include private personal details unless they are necessary, authorized, and appropriate for the intended audience.
 
 Keep evidence separate from alignment:
 
@@ -72,7 +69,7 @@ Before the first interview round, provide a short situation brief containing:
 - What is inferred but unconfirmed.
 - The main tension, gap, or missing logic.
 - The recommended artifact.
-- The important questions that only an authorized decision-maker can resolve.
+- The important questions that only a decision-maker can resolve.
 
 ## 4. Interview in answer-dependent rounds
 
@@ -84,16 +81,13 @@ Ask four to eight focused questions per round. If fewer than four material quest
 
 Each numbered question should normally seek one decision. Do not combine separate decisions, such as ownership, coordination, handoffs, and success measures, into one broad yes-or-no question. Bundled questions create false alignment.
 
-Use one question surface only: deliver questions once in the conversation unless the user or environment requires a different form. Do not duplicate the same questions across chat and a form. If a response arrives while an interface still marks questions as pending, treat the actual response as the source of progress.
-
 Use a compact question format that supports quick answers:
 
-1. Number each question: `1.`, `2.`, `3.` Continue numbering across rounds so compact replies remain unambiguous.
-2. For bounded choices, provide three or four mutually exclusive, decision-relevant options labeled `a.`, `b.`, `c.`, and, where useful, `d.`.
-3. Use two options only when the decision genuinely has two distinct states.
-4. Put the recommended option first unless prior context makes another ordering clearer, and state its tradeoff briefly.
-5. Put questions and options on consecutive lines, with no blank lines inside the question block.
-6. Allow the respondent to reject the framing or supply a different answer.
+1. Number each question: `1.`, `2.`, `3.`.
+2. For bounded choices, label options with lowercase letters: `a.`, `b.`, `c.`.
+3. Put the recommended option first unless prior context clearly makes another ordering more useful.
+4. Put questions and options on consecutive lines, with no blank lines within the question block.
+5. Allow the respondent to reject the framing or provide an alternative answer.
 
 Example:
 
@@ -104,22 +98,22 @@ Example:
 2. Who should make the final decision?
    a. The accountable lead.
    b. A cross-functional decision group.
-   c. A designated executive sponsor after consulting both groups.
 
 Each round should:
 
 1. Begin with an updated model of the situation and state what changed because of earlier answers.
 2. Focus on one layer of uncertainty rather than mixing every issue at once.
-3. Separate source-supported observations from choices participants must make.
-4. Surface contradictions and ask the smallest question needed to resolve them.
-5. Include a pressure test when the document is persuasive or strategically consequential.
-6. Leave room for qualifications, uncertainty, and alternative framings.
+3. Offer two or three concrete options when the decision can be bounded.
+4. Explain the tradeoff behind the recommended option.
+5. Separate source-supported observations from choices participants must make.
+6. Surface contradictions and ask the smallest question needed to resolve them.
+7. Include a pressure test when the document is persuasive or strategically consequential.
 
 A common progression is purpose; strategy; operating model; definitions and measures; then expression, format, and destination. Adapt the sequence to the work, but preserve the answer-dependent loop: later questions must arise from earlier answers, not from a generic questionnaire.
 
 After every answer round:
 
-1. Match shorthand and free-text answers to their question numbers. Preserve qualifications such as “mostly c” or “not sure.” Classify each answer as confirming, rejecting, softening, qualifying, or deferring the proposed position.
+1. Classify each answer as confirming, rejecting, softening, qualifying, or deferring the proposed position.
 2. Trace downstream implications. A changed audience, softened commitment, new exception, or rejected framing often creates another material question.
 3. Update the alignment ledger and show a concise synthesis.
 4. Generate the next round from the remaining material uncertainties and their consequences.
@@ -183,13 +177,10 @@ Make the draft as simple as the substance allows:
 - State the point first. Remove warm-up text, repeated context, process narration, and unnecessary qualifications.
 - Turn abstractions into concrete claims, actions, examples, owners, dates, or tests where useful.
 - Use focused paragraphs. Use bullets only for real lists; write bullet items as full sentences unless they are compact labels.
-- Keep action-oriented sections short. If a section needs many top-level bullets, combine related items under a clear lead phrase or move detail to an appropriate supporting source.
 - Prefer the more concise version when it preserves meaning. Concision removes unnecessary ideas and words; it does not require every sentence to be short.
 - Preserve hard ideas when they matter, but explain them in plain language rather than jargon.
 
 Honor the requested destination using the chosen system. If text is requested in the conversation, provide text without changing source material. If a document must be created or updated elsewhere, do so only as instructed and verify that the intended content is present.
-
-When delivering a formatted document, inspect both its structure and rendered appearance. Ensure headings do not accidentally inherit bullet or numbered-list formatting, avoid unintended blank paragraphs between a list and the next heading, and fix inconsistent indentation, orphaned bullets, and awkward page breaks where feasible.
 
 ## 8. Audit before delivery
 
@@ -205,7 +196,6 @@ Compare the draft against the alignment ledger and source hierarchy:
 - Does the document match the requested voice and audience?
 - Can each sentence be understood on the first read?
 - Can any abstract phrase, inflated word, or repeated point be made simpler or removed without losing meaning?
-- If formatted externally, does the rendered document preserve the intended hierarchy and list structure?
 
 Fix mismatches before delivering. Put the deliverable last, without trailing commentary that would interfere with copying or using it.
 
@@ -220,9 +210,8 @@ Fix mismatches before delivering. Put the deliverable last, without trailing com
 - Failing to update the working model after each round.
 - Stopping after one round without testing consequences.
 - Bundling independent decisions into a single question.
-- Repeating questions already answered or duplicating them across interfaces.
+- Repeating questions already answered.
 - Concealing contradictions through vague language.
 - Continuing interviews after only low-impact uncertainty remains.
 - Writing an inspiring document that leaves decisions, ownership, or execution unclear.
-- Presenting sensitive personal information that is not necessary for the document’s legitimate purpose.
 - Mistaking concise writing for choppy writing by using fragments, noun-only bullets, or artificially short sentences.

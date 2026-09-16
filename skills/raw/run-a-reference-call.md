@@ -1,178 +1,165 @@
 ---
 name: run-a-reference-call
-description: Prepare, conduct, and document a structured hiring reference call that gathers role-relevant evidence, tests open questions fairly, and keeps sensitive information within the authorized hiring process.
+description: Prepare, document, and run a structured hiring reference call that gathers role-relevant evidence, tests open questions fairly, and records a defensible basis for the hiring decision.
 ---
 
 # Run a reference call
 
-Use this workflow when an authorized hiring team needs to check a candidate’s past work with a reference. The deliverable is a shared, access-controlled call brief and a factual post-call record—not an informal research summary.
+Use this workflow when an authorized hiring team needs to speak with a candidate’s professional reference. Its deliverable is a complete, access-controlled reference-call record in the team’s chosen meeting or hiring workspace, not merely a research summary or chat response.
 
-Only use personal communications, calendars, applicant records, prior reference notes, and public information for a legitimate hiring purpose and with clear authorization. Use the minimum relevant information. Do not include unrelated personal details, protected characteristics, private contact details, or speculation in the brief or record.
+Use a different process when responding to an outside organization that requests a reference about a former participant, employee, or colleague. In that case, confirm authorization and consent requirements before sharing information.
 
-## Readiness gate
+## Purpose and boundaries
 
-Before preparing the call, confirm:
+A reference call should reduce specific uncertainty about role-relevant performance. It should not be a search for general praise, personal gossip, protected information, or confirmation of a pre-made decision.
 
-- The candidate has provided the reference or otherwise authorized contact where required.
-- The referee’s identity, preferred contact method, and relationship to the candidate are known.
-- The role, hiring stage, decision owner, and purpose of the call are clear.
-- The team has an approved system for storing hiring records and appropriate access controls.
-- You know what uncertainty the call should reduce. A reference is not a generic approval step.
+Before accessing communications, calendars, hiring records, or prior notes:
 
-If authorization, role context, or the referee relationship is unclear, pause and ask the hiring owner. Do not search broadly through private records merely to fill gaps.
+- Confirm a legitimate hiring purpose and that you are authorized to access each source.
+- Use the minimum information and sources needed to prepare the call.
+- Keep the record within the hiring team’s appropriate access boundary.
+- Exclude unrelated personal details, sensitive personal data, and speculation.
+- Treat the referee’s observations as evidence with limits, not as a final verdict.
+- Do not disclose confidential interview feedback, private notes from other referees, or internal deliberations to the referee.
 
-## 1. Locate or arrange the call
+## Required inputs
 
-Check the organization’s authorized calendar or scheduling record for the meeting. Capture only what is needed:
+Collect or confirm:
 
-- Call date, time, and joining details.
-- Referee name, organization, and role, if known.
-- Attendees and any scheduling context.
-- Whether the call is confirmed or still needs scheduling.
+- Candidate name.
+- Referee name and reliable contact details.
+- Role under consideration and the role’s expected outcomes.
+- Call date, time, and meeting details, if scheduled.
+- The referee’s relationship to the candidate.
+- Hiring stage and the decision or next step the call informs.
+- Specific uncertainties, strengths, or development areas the call should clarify.
 
-If no event exists, create the preparation record anyway, clearly marked **Scheduling pending**. Do not invent meeting details.
+If key information is missing, identify the gap in the call record and proceed only with what is necessary. Do not invent relationship history, hiring stage, dates, or links.
 
-## 2. Gather decision-relevant context
+## 1. Find the call and establish logistics
 
-Review the candidate’s authorized application materials, interview record, work sample or assessment evidence, and reference list. Identify:
+Search the authorized calendar or scheduling system for the referee’s name or contact details. Record the meeting title, date and time, attendees, joining details, and relevant scheduling context.
 
-- The role’s most important outcomes and capabilities.
-- The candidate’s current stage and next decision.
-- The referee’s relationship to the candidate: manager, colleague, client, collaborator, instructor, or another relevant capacity.
-- How long and how closely the referee observed the candidate’s relevant work.
-- Candidate-provided professional links or work examples that help the hiring team navigate the record.
-- Other listed references, for coordination only.
+If no event exists, create a preparation record anyway and clearly mark logistics as unscheduled or unconfirmed. Do not imply that a meeting has been arranged.
 
-Review completed reference records for the same candidate, if access is appropriate. Extract only job-relevant themes, examples, open questions, and meaningful inconsistencies. Treat each reference as one perspective, not a verdict.
+## 2. Gather only relevant context
+
+### Identify the hiring context
+
+Review authorized hiring materials and relevant correspondence to establish:
+
+- The role and the work outcomes that matter most.
+- The candidate’s current stage.
+- How the referee was introduced or nominated.
+- The nature, duration, and closeness of the working relationship.
+- Open questions arising from role-relevant interviews, work samples, or assessments.
+
+Prefer the candidate’s reference-list introduction and direct hiring records for relationship facts. Distinguish verified facts from assumptions.
 
 ### Research the referee proportionately
 
-Use the minimum sources needed to establish professional context. Prefer candidate-provided information and direct correspondence. If authorized organizational systems contain relevant history, check recent correspondence, prior meetings, and shared project records. Use public professional sources only when they help confirm the referee’s role or working context.
+Use authorized internal sources first, such as direct correspondence, prior meeting records, and organization knowledge. If external public research is appropriate, use only publicly available professional information needed to understand the referee’s role and likely vantage point.
 
-Do not collect personal background details that do not affect the reference’s ability to speak to the candidate’s work. Do not rely on social media content, informal gossip, or unverified claims.
+Look for:
 
-## 3. Turn findings into a call hypothesis
+- Current or relevant past role and organization.
+- Whether the referee directly observed the candidate’s work.
+- Prior professional interactions between the hiring organization and the referee’s organization that could affect context or independence.
+- Previous meetings or reference conversations, where access is authorized.
 
-Write a short briefing that tells the caller what to learn and why. Use direct, evidence-seeking language.
+Do not collect private biographical details or unrelated information. A referee’s seniority or online profile does not by itself establish that they observed the candidate closely.
 
-Good briefing notes:
+### Review candidate materials and previous references
 
-- “A prior referee described strong stakeholder judgment but limited evidence of deadline recovery. Ask for a concrete example of a delayed project and the candidate’s response.”
-- “This referee supervised the candidate directly during a period of rapid growth. Ask how the candidate set priorities when requests conflicted.”
-- “This is the first completed reference. Capture examples of delivery quality, feedback response, and support needs so later calls can test the same themes.”
+Add links to authorized candidate materials that will help the caller navigate during the conversation, such as the application profile, professional profile, work portfolio, or work sample.
 
-Avoid leading language such as “confirm that the candidate is unreliable.” Instead ask neutral questions that allow disconfirming evidence: “Tell me about a time a commitment was at risk. What happened, and what was the candidate’s role?”
+Locate completed reference records for the same candidate, if authorized. Extract only decision-relevant themes: concrete strengths, development areas, contradictions, and unanswered questions. Attribute statements to the source in the internal record, but do not repeat one referee’s comments to another referee as if they were established fact.
 
-## 4. Create the call brief in the team’s approved system
+If this is the first reference, identify the observations that later calls should independently test.
 
-Create a meeting or hiring-record page before the call. Include the call date, candidate, referee, role, authorized attendees, and the content below. Apply the system’s hiring-record access settings. If transcription or automated notes are available, use them only if all required notice, consent, retention, and access rules are met.
+## 3. Create the reference-call record before the call
 
-## Call brief template
+Create one page or record in the team’s chosen meeting or hiring workspace. Include the date, referee, candidate, role, appropriate internal attendees, and meeting link if available. If the workspace supports recording or transcription, use it only with the required notice, consent, and retention controls.
+
+Use this structure:
 
 ```markdown
 ## Context
-- **Candidate:** [Name and authorized profile links]
-- **Role and stage:** [Role; current stage; next decision]
-- **Referee:** [Name] — [professional role and organization, if relevant]
-- **Working relationship:** [How they worked together, approximate period, reporting or collaboration relationship, and closeness of observation]
-- **Call status:** [Confirmed / scheduling pending], [date and time], [joining details if appropriate]
-- **Other references:** [Names or roles, if known and necessary for coordination]
+- **Referee:** [Name] — [role and organization, if verified]; [brief relevant background].
+- **Relationship to candidate:** [how they worked together, capacity, approximate period, and closeness of observation].
+- **Hiring context:** Candidate is being considered for [role] at [stage]. The call informs [decision or next step].
+- **Candidate materials:** [authorized application/profile/portfolio links].
+- **Other references:** [names and relationships, if known and appropriate to record].
 
 ## Opening
-> Thank you for making time. I am calling as part of an authorized hiring process for [candidate] and would like to understand their work in the context you observed. We will use your comments only within the appropriate hiring decision process. Are you comfortable proceeding, and is there anything about your ability to comment that I should know?
+> Thanks for making time. I’m [caller role] with [organization]. [Candidate] is being considered for our [role]. We are collecting role-relevant examples to make a careful decision. We will keep what you share within the appropriate hiring team and use it only for this process. Is it alright to proceed?
 
 ## Briefing notes
-- **Decision to inform:** [What decision or uncertainty this call should help resolve]
-- **What this referee can uniquely assess:** [Directly observed responsibilities or period]
-- **Themes to test:** [Specific prior evidence, open questions, or contradictions]
-- **Role-relevant probes:** [Capabilities tied to the role’s outcomes]
-- **Evidence limits:** [What the referee may not have observed]
+- **Decision questions:** [the two to four uncertainties this call should reduce].
+- **What this referee can uniquely assess:** [work, setting, period, or behavior they directly observed].
+- **Evidence to cross-check:** [prior theme stated neutrally, plus what concrete example would clarify it].
+- **Context or independence considerations:** [relevant organizational connection, limited observation, or possible bias].
+- **First-reference note:** [what later calls should validate, if applicable].
 
 ## Questions
-- How did you work together, and how closely did you observe [candidate]’s work?
-- What responsibilities or outcomes did they personally own?
-- Please describe a specific piece of work they delivered. What was expected, what did they do, and what was the result?
-- What was their strongest contribution in that setting?
-- Where did they need the most support, development, or management attention?
-- Tell me about difficult feedback, a setback, or a missed expectation. How did they respond?
-- What environment, management approach, or team conditions helped them do their best work?
-- In which role or context would you hesitate to place them?
-- Compared with relevant peers you have worked with, how would you assess their performance, and what is the basis for that comparison?
-- What should a future manager do to help them contribute effectively?
-- Is there anything important I have not asked?
+- [questions tailored to the role and referee relationship]
 
-### Role-specific probes
-- [Probe tied to a critical role outcome]
-- [Probe tied to a known uncertainty]
-- [Probe tied to collaboration, judgment, or execution requirements]
-
-## Notes and evidence
-- **Direct observations:** [Examples, outcomes, and context]
-- **Referee interpretation:** [Their assessment and confidence]
-- **Limits or caveats:** [Observation gaps, recency, bias risks, or uncertainty]
-- **Follow-up needed:** [Owner and next step]
+## Notes and assessment
+- **Direct observations:**
+- **Referee interpretation:**
+- **Concrete examples and outcomes:**
+- **Limits of evidence:**
+- **Follow-ups or contradictions:**
+- **Caller inference for the hiring team:**
 ```
 
-## 5. Conduct the call
+Keep context concise. The briefing notes are the highest-value preparation section: write direct, testable prompts rather than vague reminders. For example: “The work sample suggests strong independent analysis but limited stakeholder evidence. Ask for a project where the candidate had to align people with competing priorities.”
 
-Start by confirming the referee’s relationship, their ability to speak candidly, and any limits on their knowledge. Keep the conversation focused on role-relevant performance. Ask for examples, timeline, ownership, actions, results, and comparison point.
+## 4. Ask a consistent core set of questions
 
-When an answer is vague, use neutral follow-ups:
+Start by establishing the referee’s vantage point. Then ask for examples, outcomes, and comparison points.
 
-- “What did that look like in practice?”
-- “What was the candidate personally responsible for?”
-- “What happened next?”
-- “How did you know that was effective?”
-- “Can you give a contrasting example?”
+- How did you work together, and how closely did you observe the candidate’s work?
+- What did the candidate personally own or deliver? What was the result?
+- What did strong performance look like in practice? How did it compare with expectations?
+- What is their most distinctive work-related strength? Please give an example.
+- Where did they need the most support, structure, or feedback?
+- How did they respond when work became difficult, ambiguous, or changed direction?
+- If they struggled in this role after several months, what would be the most likely reason?
+- If they were succeeding, what development area would be most useful to prioritize next?
+- What conditions, management approach, or team environment helped them do their best work?
+- How would you compare their performance with relevant peers you have directly worked with?
+- What have I not asked that would matter for their success in this role?
 
-Do not disclose confidential interview feedback, other referees’ identities or comments, compensation information, health information, family circumstances, or other unnecessary sensitive details. Do not pressure a referee to make claims outside their knowledge.
+When an answer is broad, follow with: “What did that look like?” “What was their personal contribution?” “What happened next?” or “Can you give a specific example?”
 
-## 6. Use role-specific probes
+## 5. Add role-specific probes
 
-Adapt probes to the role’s actual outcomes rather than copying a fixed list.
+Choose three to five probes based on the role’s real outcomes. Avoid treating personality style as a substitute for evidence.
 
-| Role focus | Example neutral probes |
-|---|---|
-| Operations or delivery | How did they manage changing requirements, dependencies, and deadlines? What systems did they improve? |
-| Community or partnerships | How did they build trust, handle difficult conversations, and maintain follow-through with stakeholders? |
-| Leadership | How did they set priorities across competing demands, develop others, and make decisions with incomplete information? |
-| Technical or analytical work | How did they establish quality, communicate trade-offs, and respond when evidence challenged their initial view? |
+For an operations or program role, ask about handling ambiguity, building repeatable systems, communicating with varied stakeholders, prioritizing competing work, and identifying needs without waiting for direction.
 
-## 7. Record and assess signal
+For a community-facing role, ask about building trust and participation, resolving conflict appropriately, creating durable processes, maintaining boundaries, and adapting engagement based on feedback.
 
-Immediately after the call, complete the record. Separate three things:
+For a senior operations role, ask about scaling workflows, making trade-offs across stakeholders, managing budgets or external partners where relevant, and balancing speed with reliable controls.
 
-1. **Observation:** What the referee directly saw or specific examples they gave.
-2. **Interpretation:** The referee’s conclusion about the candidate.
-3. **Hiring inference:** What the hiring team believes the evidence means for this role.
+For any role, ensure each probe tests a capability that is actually relevant to successful performance.
 
-Rate the evidence by directness and relevance, not by the referee’s seniority or confidence. Note material contradictions without trying to force agreement. If a concern arises, identify what additional evidence could clarify it.
+## 6. Test concerns fairly
 
-A useful closing assessment states:
+Translate each hiring concern into a neutral, evidence-seeking question. Do not reveal private assessments or ask leading questions such as “Did they have the same problem with you?” Instead ask about the underlying capability and request examples.
 
-- Which role-relevant capabilities received strong, specific evidence.
-- Which areas remain uncertain or need validation.
-- Whether the reference changes the current hiring view and why.
-- Any proportionate follow-up action, owner, and deadline.
+Weight evidence by directness of observation, recency, specificity, and relevance to the role. A confident opinion without examples is weaker than a concrete account from someone who worked closely with the candidate.
 
-## Audit check
+## 7. Complete the record and audit it
 
-Before sharing the record, verify:
+Immediately after the call, separate:
 
-- The call brief and notes are stored only in the approved hiring system.
-- Content is factual, role-relevant, and necessary for the decision.
-- Claims are attributed to their source and distinguished from team inference.
-- Sensitive or unrelated personal information has been omitted.
-- The referee’s observation limits are documented.
-- No single reference has been treated as conclusive without considering the full evidence set.
-- Any follow-up is specific, authorized, and proportionate.
+- What the referee directly observed.
+- The referee’s interpretation or recommendation.
+- Your inference for the hiring decision.
+- Remaining uncertainty and evidence limits.
 
-## Common failure modes
+Before sharing the record, check that it contains the call logistics, verified relationship context, role-relevant questions, concrete examples, and clear follow-ups. Remove unnecessary sensitive details. Confirm that links and access permissions are limited to the appropriate hiring group.
 
-- **Generic question list:** Fix by naming the actual decision uncertainty and asking for evidence tied to it.
-- **Vague praise treated as signal:** Ask for a concrete example, ownership, result, and comparison point.
-- **Leading questions:** Replace confirmation-seeking language with neutral prompts that permit multiple answers.
-- **Overresearching private records:** Return to the minimum necessary, authorized sources.
-- **Mixing fact and interpretation:** Label direct observation, referee view, and hiring inference separately.
-- **Ignoring evidence limits:** Record whether the referee was a direct observer and how recent the work was.
-- **Unsecured notes:** Store the brief and outcome within the appropriate access boundary and follow retention rules.
+Do not treat one reference as decisive on its own. Compare evidence across interviews, assessments, and multiple references where available. Escalate material contradictions, insufficient direct observation, or concerns requiring further verification to the authorized hiring decision-maker.
