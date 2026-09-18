@@ -1,100 +1,112 @@
 ---
 name: brainstorm
-description: Generate distinct options for a decision or problem, assess their tradeoffs honestly, and recommend a short ranked set without forcing a final choice.
+description: Generate genuinely distinct options for a decision or problem, assess their tradeoffs candidly, and recommend a small ranked set without forcing a final choice.
 ---
 
 # Brainstorm options
 
-Use this workflow when someone needs credible approaches to a decision, problem, or opportunity but is not ready to commit. The goal is not a long idea list: surface genuinely different paths, make tradeoffs clear, and preserve a small set of meaningful choices.
+Use this workflow when someone needs possible approaches to a decision, problem, or opportunity but is not ready to commit. The aim is not a long list of ideas; it is a small set of meaningfully different paths, honest tradeoffs, and clear next choices.
 
 ## 1. Gather relevant context
 
-Start with the information supplied in the request. If the user refers to documents, discussion records, prior decisions, research, or other materials available in the current environment, review the minimum relevant material first.
+Begin with the information the user provided. Review any documents, discussion records, research, or prior decisions that are available and relevant.
 
-When the question is not self-contained, retrieve a small number of high-value sources that could materially change the decision, such as:
+Only access private communications, records, or personal information when there is a legitimate purpose and clear authorization. Use the minimum sources and details needed for the decision. Do not include unrelated sensitive information in the output, and keep the response within the user’s access boundary.
 
-- Earlier decisions and their rationale
-- Constraints, commitments, deadlines, and dependencies
-- Relevant stakeholder concerns and ownership boundaries
-- Evidence about what has already been attempted
+If the question is not self-contained, retrieve a small number of high-value sources that could materially change the options, such as:
 
-Use targeted retrieval rather than broad searching. Access private communications or records only for a legitimate purpose, with clear authorization, and only within the user’s appropriate access boundary. Include only information relevant to the decision; omit unrelated sensitive or personal details.
+- Prior decisions and their rationale
+- Constraints, commitments, deadlines, budgets, or ownership boundaries
+- Evidence about earlier attempts and their results
+- Relevant stakeholder needs or risks
 
-If important context is unavailable, state the assumption or ask a focused question. Do not invent facts.
+Do not search broadly by default. If key context is unavailable, state an assumption or ask a focused question instead of inventing facts.
 
-## 2. Frame the decision before ideating
+## 2. Frame the decision
 
-Write a short framing, usually two to four sentences, that identifies:
+Write a short framing of the decision, usually two to four sentences. State:
 
-- What decision the user is actually making
-- Important constraints and non-negotiables
-- What a good outcome looks like and the criteria for judging options
+- What the user is actually deciding
+- The important constraints and non-negotiables
+- What a good outcome looks like
+- The criteria that should determine the choice
 
-The stated request may describe a symptom or favored solution rather than the underlying decision. For example, “Should we add a feature?” may really mean “How can we reduce a recurring user problem within a limited budget?”
+The user’s initial wording may describe a symptom or a proposed solution rather than the underlying decision. For example, “Should we add this feature?” may really mean “How can we reduce a recurring user problem within a limited budget?”
 
-Ask the user to confirm or correct the framing before producing a substantial option set. Skip this pause only when the framing is obvious and low-stakes, or when the user explicitly requests an immediate first pass. A wrong framing produces irrelevant options.
+Ask the user to confirm or correct the framing before producing a substantial option set. Skip this pause only when the framing is obvious, the decision is low-stakes, or the user explicitly requests an immediate first pass.
+
+**Readiness gate:** Do not generate detailed recommendations if the decision, key constraint, or success criterion remains unclear. Ask the smallest question that resolves the uncertainty.
 
 ## 3. Generate distinct options
 
-Generate five to seven options unless fewer genuinely different paths exist. Each option must represent a fundamentally different approach, not merely a different level of effort. Merge near-duplicates.
+Generate five to seven options unless fewer genuinely meaningful paths exist. Each option must be a fundamentally different approach, not a different level of investment in the same approach. Merge near-duplicates.
 
-Include, when relevant:
+Where relevant, include:
 
 - The obvious or conventional path
 - A lower-effort or incremental path
 - A more ambitious path
-- A path that changes process, incentives, scope, timing, or the problem framing
-- At least one surprising but credible path, such as delaying, partnering, reducing scope, or deliberately doing nothing
+- A path that changes scope, timing, process, incentives, or the problem framing
+- At least one surprising but credible path, such as delaying, partnering, removing scope, observing longer, or doing nothing
 
-Do not be contrarian merely to appear creative. A no-action option is useful only if observation, timing, avoided distraction, or preserving resources has real value.
+Do not be contrarian merely to sound creative. A “do nothing” option is useful only when waiting, avoiding distraction, or gathering evidence has real value.
 
-Give each option a short, memorable label. For every option, provide:
+Give each option a short, memorable label that makes its approach clear. For every option, provide:
 
 | Element | What to include |
 |---|---|
-| **What** | One or two sentences explaining the approach. |
+| **What** | One or two sentences describing the approach. |
 | **Strengths** | One or two concrete advantages. |
-| **Weaknesses** | One or two concrete disadvantages, risks, or limitations. |
-| **Effort** | Low, Medium, or High. |
+| **Weaknesses** | One or two concrete drawbacks, risks, or limitations. |
+| **Effort** | Low, Medium, or High, as a rough implementation burden. |
 
-Use specific tradeoffs. Do not soften serious drawbacks or make a preferred option look better by evaluating alternatives unfairly.
+Use specific tradeoffs. Do not soften serious weaknesses, and do not make a preferred option appear stronger by describing alternatives unfairly.
 
 ## 4. Evaluate and recommend
 
-Choose criteria that fit the decision. Common criteria include likely impact, cost, effort, speed, risk, reversibility, strategic fit, operational burden, and stakeholder impact. Add domain-specific criteria when they matter more than these defaults.
+Select criteria that fit the decision. Common criteria include likely impact, effort, cost, speed, risk, reversibility, strategic fit, quality, and stakeholder burden. Add domain-specific criteria where needed.
 
 Then:
 
-1. Identify options with dealbreaker weaknesses under the stated constraints. Keep them visible if they are informative, but state clearly why they are not recommended.
+1. Identify options with dealbreaker weaknesses under the stated constraints. Keep them visible when they teach something useful, but clearly explain why they are not recommended.
 2. Rank the strongest two or three options.
-3. For each recommendation, explain in one sentence why it fits this situation, its constraints, and its goals—not why it is generally attractive.
-4. Name the key assumption most likely to change the ranking, when one exists.
+3. For each recommendation, explain in one sentence why it fits this situation, constraints, and goals—not why it is generally attractive.
+4. State the assumption most likely to change the ranking, if one exists.
 
-Do not force a single winner unless the user explicitly requests one. The purpose is to support a decision, not to make it on the user’s behalf.
+Do not force a single winner unless the user explicitly asks for one. Preserve genuine choice.
 
 ## 5. Stop for a decision
 
-After presenting recommendations, wait for the user. They may select an option, request more detail, correct the framing, ask for different options, or propose a hybrid.
+After presenting the options and recommendations, wait for the user. They may:
 
-If the user proposes a hybrid, test whether its components are compatible and whether combining them resolves a real tradeoff rather than simply adding complexity. Do not begin implementation merely because an option appears promising.
+- Select an option
+- Ask for more detail on an option
+- Correct the framing or constraints
+- Request additional options
+- Propose a hybrid approach
+
+If the user proposes a hybrid, test whether its parts are compatible and whether it resolves a real tradeoff rather than merely adding complexity.
+
+Do not begin implementation simply because one option appears promising.
 
 ## 6. Hand off with appropriate rigor
 
-After the user selects a path, choose the next activity based on consequence and reversibility:
+After the user chooses a path, match the next activity to the decision’s consequence and reversibility:
 
-- **High-consequence or difficult-to-reverse choices:** Run a structured challenge, pre-mortem, or pressure test before commitment. This applies to major strategic bets, public commitments, long-term obligations, major staffing choices, or decisions with broad organizational effects.
-- **Reversible choices:** Create a right-sized decision record that defines the choice, owner, rationale, assumptions, and review point.
-- **Build-oriented choices:** After recording the decision, move into planning and execution: requirements, milestones, implementation tasks, and validation.
+- **High-consequence or difficult-to-reverse choice:** Run a structured challenge, pre-mortem, or pressure test before commitment. Use this for major strategic bets, public commitments, long-term agreements, major staffing decisions, or choices with broad organizational effects.
+- **Reversible choice:** Create a right-sized decision record covering the choice, owner, rationale, assumptions, and review point.
+- **Build-oriented choice:** After recording the decision, move to planning and execution: requirements, milestones, tasks, dependencies, and validation.
 
-A useful sequence is: brainstorm options, pressure-test consequential choices, make and record the decision, then plan or build. Do not skip the pressure test when the cost of being wrong is high.
+A useful sequence is: brainstorm options, pressure-test consequential choices, record the decision, then plan or build. Do not skip the challenge step when the cost of being wrong is high.
 
 ## Quality checks
 
-Before sending the response, verify that:
+Before sending, verify:
 
-- The framing reflects the actual decision rather than only the first proposed solution.
+- The framing reflects the actual decision rather than only the initial wording.
 - The options are genuinely distinct.
-- The conventional and surprising paths are both considered where relevant.
-- Weaknesses and effort estimates are candid and plausible.
+- The option set includes both credible defaults and at least one meaningfully different path.
+- Strengths and weaknesses are concrete and candid.
+- Effort labels are plausible.
 - Recommendations follow the user’s stated criteria rather than unstated assistant preferences.
-- Any retrieved information was authorized, necessary, and kept within the appropriate privacy boundary.
+- Any retrieved private context was necessary, authorized, minimized, and handled within appropriate privacy boundaries.
