@@ -1,11 +1,11 @@
 ---
 name: review-and-plan-a-month
-description: Close one month honestly, then create a small, capacity-checked and explicitly approved plan for the next month using evidence, trade-offs, and concrete commitments.
+description: Close one month honestly, then create a small, capacity-checked, explicitly approved plan for the next month using evidence, trade-offs, and concrete commitments.
 ---
 
 # Review and plan a month
 
-Use this workflow at a month boundary to review the month ending and build an executable plan for the month ahead. A complete session usually takes 45–75 minutes: roughly half for evidence and review, and roughly half for planning.
+Use this workflow at a month boundary to review the month ending and create an executable plan for the month ahead. A complete session usually takes 45–75 minutes: roughly half for evidence and review, and roughly half for planning.
 
 Review and planning belong in the same session. The structural cause of a missed commitment, energy drain, or delivery problem should directly shape the structure of the next plan.
 
@@ -28,8 +28,9 @@ Run this workflow when the user asks for a monthly review, asks to plan a named 
 Default timing:
 
 - On the first three days of a month, review the prior month and plan the current month.
-- Otherwise, review the current month to date and plan the next month. Clearly label a partial-month review and state the days remaining.
-- If the user asks only for forward planning, review first because the evidence should shape the plan. The user may explicitly choose to skip the review.
+- In the final week of a month, review the current month to date and plan the next month. Clearly label this as a partial-month review and state the days remaining.
+- At other times, use the named month or ask the user which month they intend to review.
+- If the user asks only for forward planning, review first because evidence should shape the plan. The user may explicitly choose to skip the review.
 
 State the ranges plainly before proceeding:
 
@@ -49,7 +50,8 @@ Ask whether the user means calendar months or a practical range that includes an
 8. **No saved plan without explicit approval.** A plan assembled from notes is a draft, not a decision. The user must restate or materially confirm the theme and commitments, then explicitly approve it.
 9. **Use explicit dates.** Use **DD MMM** format unless the user prefers another unambiguous convention.
 10. **Keep records useful, not exhaustive.** Save decisions, evidence, and constraints rather than a meeting transcript.
-11. **Do not lecture.** Where personal practice, training, health, or recovery is in scope, provide the numbers, the direct conclusion, and the agreed commitment. Give specialist advice only when asked and when appropriate.
+11. **Do not lecture.** Where training, health, or recovery is in scope, provide the numbers, direct conclusion, and agreed commitment. Give specialist advice only when asked and appropriate.
+12. **Respect access boundaries.** When reviewing private communications, calendars, journals, health records, or records about other people, require a legitimate purpose and clear authorization. Use only the minimum relevant sources and details. Do not expose unrelated, sensitive, or third-party personal information in summaries or saved records.
 
 ## Step 1: Determine the range and gather evidence
 
@@ -70,13 +72,13 @@ Choose sources that match the user’s chosen system: a task manager, project tr
 
 For large sources, return computed statistics and a few representative themes rather than raw entries. Long journals and month-long event lists can crowd out the actual review. Use filtered queries, aggregation, summaries, or a delegated helper when available.
 
-If a helper is used for a large calendar or journal source, give it a narrow brief: use only authorized read access, analyze only the requested date range, and return a concise planning summary rather than raw data. The summary should include:
+If a helper is used for a large calendar, journal, or task source, give it a narrow brief: use only authorized read access, analyze only the requested date range, omit unnecessary personal details, and return a concise planning summary rather than raw material. The summary should include:
 
 - Fixed multi-day blocks, such as travel, leave, or conferences.
 - Approximate meeting load by week.
 - Important recurring series.
-- Protected personal or social commitments.
-- Planning anomalies, such as meetings inside unavailable periods or likely time-zone mistakes.
+- Protected personal or social commitments when relevant to capacity.
+- Planning anomalies, such as meetings during unavailable periods or likely time-zone mistakes.
 
 Before detailed monthly planning, re-read any weekly plans that overlap the beginning of the planning range. A weekly plan may already define that period in more detail. Reference and reconcile it with monthly outcomes; never duplicate or overwrite it.
 
@@ -303,6 +305,7 @@ Before finishing, verify:
 - Personal or training commitments are specific when in scope.
 - The pre-mortem contains counters.
 - The user explicitly approved the plan before it was saved.
+- Access to private records was authorized and the saved output stays within the appropriate privacy boundary.
 
 ## Common failure modes
 
@@ -317,3 +320,4 @@ Before finishing, verify:
 - Applying generic productivity rituals instead of fixing the actual drain.
 - Overwriting an existing record without resolving the difference.
 - Treating a voice note, brainstorm, or imported task list as a confirmed commitment.
+- Reading or repeating private details that are not needed for the monthly decision.

@@ -1,22 +1,20 @@
 ---
 name: capture-meeting-actions
-description: Review authorized meeting records to identify genuine unfinished commitments, create clear deduplicated tasks for confident follow-ups, and batch only the questions that require the user’s judgment.
+description: Review authorized meeting records, identify genuine unfinished commitments, create clear deduplicated follow-up tasks for confident actions, and batch only the questions that require user judgment.
 ---
 
 # Capture meeting actions
 
-Turn authorized meeting records into reliable post-meeting follow-up tasks. Use this workflow as a daily sweep, for a selected date range, or for a manually supplied set of meetings.
+Turn authorized meeting records into reliable post-meeting follow-up tasks. Use this as a daily sweep, for a selected date or date range, or for a manually supplied set of meetings.
 
-The goal is not to convert every discussion into work. Each meeting should result in zero tasks, one combined follow-up, or multiple separate tasks only when there is a genuine, unfinished commitment that should be tracked.
+The goal is not to convert every discussion into work. Each meeting should result in zero tasks, one combined follow-up, or multiple separate tasks only when there is a genuine, unfinished commitment that should be tracked. Access meeting recordings, transcripts, notes, and related records only for a legitimate work purpose and with clear authorization. Use the minimum relevant information, omit unrelated sensitive details, and keep task outputs within the appropriate access boundary.
 
 ## Purpose and operating rules
 
-Before each run, confirm there is a legitimate work purpose and clear authorization to access the selected meeting records. Use only the minimum sources and personal information needed to establish an action, its owner, timing, and necessary context. Keep sensitive or unrelated details out of tasks, especially where the task system has wider access than the original meeting record.
+Before each run, apply these outcomes:
 
-Use these outcomes:
-
-- **0 tasks** when work was completed in the meeting, belongs to another owner, is already tracked, or the meeting was only for information gathering.
-- **1 task** when related actions can be completed together for the same person or group on the same time horizon.
+- **0 tasks** when work was completed during the meeting, belongs to another owner, is already tracked, or the meeting was solely for information gathering.
+- **1 task** when related actions can be completed together for the same counterparty and time horizon.
 - **Multiple tasks** only when counterparties, outcomes, or timing differ materially.
 
 Use this evidence order when sources conflict:
@@ -26,11 +24,11 @@ Use this evidence order when sources conflict:
 3. **Automated summary:** useful for orientation, but not authoritative for ownership.
 4. **Pre-meeting agenda:** describes intended discussion, not a commitment.
 
-Automated summaries often misattribute work, especially in recurring one-to-ones, brainstorming sessions, and meetings where attendees list their own to-dos. Never create a task solely because a summary labels it as an action item. Confirm the owner in the transcript or reliable notes.
+Automated summaries often misattribute work, especially in recurring one-to-ones, brainstorming sessions, and meetings where attendees list their own to-dos. Never create a task solely because a summary labels something as an action item. Confirm the owner in the transcript or reliable notes.
 
 Track unfinished outcomes, not conversation. Skip work completed live, delegated to another owner, already tracked elsewhere, or merely discussed. An idea, statement of interest, or open question is not a task unless someone accepted responsibility for a concrete outcome.
 
-Apply known responsibility boundaries supplied by the user or organization. Attendance at a meeting does not make the user accountable for all work in that area.
+Apply documented responsibility and delegation boundaries supplied by the user or organization. Meeting attendance does not make the user accountable for all work in that area.
 
 ## 1. Select the meetings
 
@@ -39,18 +37,18 @@ Accept a date in `YYYY-MM-DD` format, a relative date such as “yesterday,” a
 - Before a configurable early-morning cutoff in the user’s local time, process the previous day.
 - Otherwise, process the current day.
 
-State the selected scope once, for example: “Scanning meetings for 23 Apr.” Find meetings attended by the user and collect only what is needed:
+State the selected scope once, for example: “Scanning meetings for 23 Apr.” Find meetings attended by the user and collect:
 
 - Title, date, and time
 - Meeting-record link or identifier
-- Attendees, if available and relevant
-- Transcript, notes, summary, and directly relevant linked context
+- Attendees, if available
+- Transcript, notes, summary, and relevant linked context
 
 Report a compact count before processing. Do not infer actions from a meeting title alone.
 
 ## 2. Fetch and inspect complete records
 
-Fetch full meeting records in parallel where the selected meeting system supports batching. Do not search for existing tasks yet: first identify the people, topics, and candidate outcomes that make deduplication accurate.
+Fetch full meeting records in parallel where the selected meeting system supports batching. Do not search for existing tasks yet: first identify people, topics, and candidate outcomes so duplicate checks are accurate.
 
 For long transcripts, use a repeatable search, extraction, or chunking method rather than relying on truncated previews. Search for commitment language such as:
 
@@ -62,7 +60,7 @@ For long transcripts, use a repeatable search, extraction, or chunking method ra
 - “I’ll introduce …”
 - A request followed by explicit acceptance
 
-Review automated action items as candidates, then verify them against the transcript and surrounding conversation. A promise may have been conditional, reassigned, fulfilled live, or directed at another attendee.
+Review summary action items as candidates, then verify them against the transcript and surrounding conversation. A promise may have been conditional, reassigned, fulfilled live, or directed to another attendee.
 
 ## 3. Triage each meeting
 
@@ -84,7 +82,7 @@ For every meeting, identify:
 - Work delegated to another named owner
 - Explicit future commitments and timing
 - Enough neutral context for a task to remain understandable weeks later
-- Source and related links that the intended task audience is authorized to access
+- Source and related links that the intended task audience may access
 
 Create no task when work was completed live, another person owns it, the meeting was purely informational and needed synthesis is already recorded, the action is covered by an active task, or the statement was not a commitment.
 
@@ -99,16 +97,16 @@ Split tasks when:
 - An internal decision and an external response are distinct outcomes.
 - A combined task would have an unclear finish line.
 
-This is a readiness gate: do not proceed to task creation until each proposed task has a clear owner, unfinished outcome, sensible shape, source evidence, and enough context to stand alone.
+This is a readiness gate: do not proceed to task creation until each proposed task has a clear owner, unfinished outcome, sensible shape, and enough context to stand alone.
 
 ## 5. Write the task
 
 Use the user’s chosen task system and field names. At minimum, capture:
 
-- **Title:** short, verb-led, and specific, such as “Follow up with partner about pilot scope.”
+- **Title:** short, verb-led, and specific, such as “Follow up with prospective partner about pilot scope.”
 - **Status:** the standard open status.
 - **Due date:** based on an explicit commitment whenever possible.
-- **Priority:** use the user’s scale; default to normal important work and reserve the highest level for a real deadline, material risk, or waiting counterparty.
+- **Priority:** use the user’s scale; default to important, time-sensitive work and reserve the highest level for a real deadline, material risk, or waiting counterparty.
 - **Time estimate:** realistic minutes.
 - **Notes:** context, action checklist, communication drafts, and links.
 
@@ -126,7 +124,7 @@ Do not raise priority merely because capture happened late.
 
 ```markdown
 [Two or three sentences of time-independent context. Include relevant absolute
-dates, why this matters, the commitment, and only necessary sensitivity.] 
+dates, why this matters, the commitment, and any necessary sensitivity.] 
 
 ## Actions
 - [Concrete action]
@@ -148,7 +146,7 @@ Best,
 - Related document: <link>
 ```
 
-Avoid unnecessary private discussion in a task system that may be broadly visible. Follow the user’s known writing preferences. Otherwise, draft concise, warm, professional messages with a clear request or promised deliverable. If the task is to send a message, write a ready-to-send draft rather than merely saying “email them.” For introductions, use double opt-in: seek permission from each relevant party before connecting them.
+Use time-independent wording and absolute dates where useful. Avoid unnecessary private discussion in a task system that may be broadly visible. Follow the user’s known writing preferences. Otherwise, draft concise, warm, professional messages with a clear request or promised deliverable. If the task is to send a message, write a ready-to-send draft rather than merely saying “email them.” For introductions, use double opt-in: seek permission from each relevant party before connecting them.
 
 ## 6. Deduplicate before creation
 
@@ -166,7 +164,7 @@ For every skipped meeting, give a brief reason, such as “No out-of-meeting com
 
 Skip this step entirely when all decisions are confident. Do not interrupt for each ambiguity. Create confident tasks first, then ask all remaining questions together.
 
-Ask the smallest question that resolves ownership, scope, timing, completion status, responsibility boundary, or duplicate handling:
+Ask the smallest question that resolves ownership, scope, timing, completion status, delegation, or duplicate handling:
 
 ```markdown
 **[Meeting title]**
@@ -182,11 +180,11 @@ Wait for answers before creating uncertain tasks. After answers arrive, create o
 
 Before declaring the run complete, capture lessons that genuinely improve future runs. Keep this separate from the meeting task itself.
 
-- Add a short example or note to a reusable meeting-archetype reference when a recurring pattern affects triage, such as a common attribution error, reliable sign of in-meeting completion, or an archetype exception.
+- Add a short example or note to a reusable meeting-pattern reference when a recurring pattern affects triage, such as a common attribution error, reliable sign of in-meeting completion, or an archetype exception.
 - Update the core workflow only for cross-cutting principles, changed defaults, or a new required step.
 - Record a new responsibility boundary in the user’s or organization’s maintained reference when it applies beyond one meeting.
 
-Do not turn one-off facts into permanent rules. Small additions to an examples or patterns reference can be made directly. Ask for confirmation before structural workflow changes, such as adding or removing steps or changing the evidence order. Briefly report any reusable guidance added or changed.
+Do not turn one-off facts into permanent rules. Small additions to an examples or patterns reference can be made directly. Ask for confirmation before structural workflow changes, such as adding or removing steps or changing the evidence order. Briefly report reusable guidance added or changed.
 
 ## 10. Audit and report
 
@@ -198,9 +196,9 @@ Before finishing, verify that:
 - Active duplicates were not recreated.
 - Titles are action-oriented and notes stand alone.
 - Dates, priority, and estimates are plausible.
-- Each task links to its authorized source record where appropriate.
+- Each task links to its source record where appropriate.
 - Message drafts are ready to send and follow the user’s preferences.
-- Tasks do not expose unnecessary personal, sensitive, or unrelated information.
+- Outputs do not expose unrelated or sensitive personal information.
 - Every uncertain item is either asked as a specific question or explicitly deferred.
 
 Report the essential outcome only: meetings reviewed, tasks created or updated with due dates, skipped items with brief reasons, unresolved questions, and any reusable guidance changes. Keep status updates terse and factual.

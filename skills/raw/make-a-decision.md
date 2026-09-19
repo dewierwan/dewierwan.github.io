@@ -5,18 +5,18 @@ description: Match decision-making rigor to stakes and reversibility, then make,
 
 # Make a decision
 
-Use this workflow to make decisions with the right amount of rigor. The goal is not maximum analysis. It is to make a clear call when ready, preserve reasoning for meaningful choices, and learn from outcomes.
+Use this workflow to make decisions with the right amount of rigor. The goal is not maximum analysis. It is to make a clear call when ready, preserve the reasoning for meaningful choices, and learn from outcomes.
 
 ## Core rules
 
 1. **Match rigor to stakes and reversibility.** Most choices should take minutes, not days.
 2. **The user owns their position.** Never state, record, or imply that the user believes, prefers, or decided something they did not actually say.
-3. **Separate advice from attribution.** The assistant may recommend an option in conversation, clearly labeled as assistant analysis. Put assistant analysis in a decision record only if the user asks for it.
-4. **Do not confuse a task with a decision.** If there is no meaningful alternative, this is execution. Plan or start the task instead of opening a decision process.
-5. **Record only with permission.** “Should we do X?” is a request for analysis, not permission to create a record. Create or update a decision record only when the user asks to log, track, open, or commit it, or explicitly agrees to that practice.
-6. **Protect privacy and access boundaries.** Before accessing shared communications, personnel records, customer information, or a shared decision register, ensure there is a legitimate purpose and clear authorization. Use only the minimum relevant sources and information. Omit unrelated or sensitive personal details.
+3. **Separate advice from attribution.** The assistant may recommend an option in conversation, clearly labeled as assistant analysis. Put that analysis in a decision record only if the user asks for it.
+4. **Do not confuse a task with a decision.** If there is no meaningful alternative, this is execution. Start or plan the task instead of opening a decision process.
+5. **Record only with permission.** A request such as “Should we do X?” requests analysis, not creation of a record. Create or update a decision record only when the user asks to log, track, open, or commit it, or has explicitly agreed to that practice.
+6. **Protect privacy and access boundaries.** Before accessing shared communications, personnel records, customer data, or a shared decision register, ensure there is a legitimate purpose and clear authorization. Use only the minimum relevant information. Omit unrelated sensitive details.
 
-If a decision register is shared, confirm that its audience is appropriate before writing to it. For sensitive matters such as health, relationships, compensation, or confidential personnel matters, offer a private record in the user’s chosen secure location, or keep the discussion in chat.
+If an organization uses a shared decision register, confirm that its audience is appropriate before writing to it. For sensitive topics such as health, relationships, compensation, or confidential personnel matters, offer a private record or keep the discussion in chat.
 
 ## 1. Choose the mode
 
@@ -29,7 +29,7 @@ Determine whether this is a new or existing decision.
 
 If the user explicitly names the mode, follow that instruction. Otherwise, if authorized, search the available decision register for overlapping decisions before creating a duplicate.
 
-For a resume, retrieve the existing record and append new information rather than overwriting history. For a review, use the original prediction and reasoning as the baseline rather than reconstructing them from memory.
+For a resume, fetch the existing record and append new information rather than overwriting history. For a review, use the original prediction and reasoning as the baseline rather than reconstructing them from memory.
 
 ## 2. Frame the decision
 
@@ -44,7 +44,7 @@ Write the question in a decidable form. Establish:
 
 If the question is broad and no credible options exist yet, generate options before evaluating them. Do not pressure-test a vague problem statement.
 
-If there is only one viable path, say so directly: “This appears to be a task rather than a decision. The next step is to plan or execute it.”
+If the request has only one viable path, say so directly: “This appears to be a task rather than a decision. The next step is to plan or execute it.”
 
 ## 3. Classify scope
 
@@ -52,10 +52,10 @@ Ask one clarifying question at a time when needed. Put the choice in one bucket.
 
 | Bucket | Meaning | Treatment |
 |---|---|---|
-| Trivial | Low stakes and reversible within hours | Decide now; do not record by default |
+| Trivial | Low stakes and reversible within hours | Decide now; do not log by default |
 | Reversible | Moderate stakes; can be changed within days or weeks | Compare a few options; use a light record if useful |
 | Hard to reverse | Meaningful cost, disruption, or loss if undone | Full analysis, challenge the leading option, consult relevant stakeholders |
-| Direction-setting | Shapes strategy, culture, finances, or an operating model for an extended period | Full analysis, explicit dissent, and named prerequisite conversations |
+| Direction-setting | Shapes strategy, culture, finances, or operating model for an extended period | Full analysis, explicit dissent, and named prerequisite conversations |
 
 Use this test if classification is unclear: **What would it cost to unwind this?** Consider money, time, trust, operational disruption, opportunity cost, and reputational effects. If the cost cannot be stated quickly or is uncertain, the decision is probably larger than it first appears.
 
@@ -151,8 +151,6 @@ Use the user’s chosen decision register, document system, or private file. A u
 
 Suggested review defaults are one month for reversible decisions, three months for hard-to-reverse decisions, and six months for direction-setting decisions. Use a calendar, task system, or other reminder mechanism for high-stakes reviews.
 
-For a new open decision, record context, current options, and new inputs. Leave commitment sections blank until the user commits. When resuming, append a new dated thinking-log entry rather than rewriting history.
-
 ```markdown
 ## Context
 Why this decision exists and why it matters now.
@@ -188,7 +186,7 @@ The most credible downside or failure mode.
 To be completed at review.
 ```
 
-For a record that remains open, fill only Context, Options considered, and the dated Thinking log. Do not fill “My choice and why,” confidence, or dissent in the user’s voice until the user has supplied those views.
+For a new open decision, record context, current options, and new inputs. Leave commitment sections blank until the user commits. When resuming, append a new dated thinking-log entry rather than rewriting history.
 
 ## 7. Review the outcome
 
@@ -209,13 +207,9 @@ When a decision is made, summarize it clearly:
 Decision: [one-line call]
 Scope: [bucket]
 Rationale: [two or three honest sentences]
-Next action: [owner] will [action] by [DD MMM]
-Review: [DD MMM YYYY or trigger]
+Next action: [owner] will [action] by [date]
+Review: [date or trigger]
 Record: [location, if one exists]
 ```
 
 Use direct language. Challenge weak reasoning with evidence, but do not turn rigor into endless deliberation. Once the appropriate readiness gates have been met, name the decision and move forward.
-
-## Improve the workflow
-
-After completing a run, check whether the classification, rigor level, record structure, or mode selection fit the decision. If a recurring problem appears, propose a general workflow improvement for the user or workflow owner to approve. Do not silently alter shared procedures, records, or access settings.
