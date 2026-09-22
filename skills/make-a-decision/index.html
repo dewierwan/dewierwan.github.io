@@ -21,7 +21,7 @@
 <li><strong>Review:</strong> A resolved decision has reached its review date and has not yet received an outcome assessment.</li>
 </ul>
 <p>If the user explicitly names the mode, follow that instruction. Otherwise, if authorized, search the available decision register for overlapping decisions before creating a duplicate.</p>
-<p>For a resume, fetch the existing record and append new information rather than overwriting history. For a review, use the original prediction and reasoning as the baseline rather than reconstructing them from memory.</p>
+<p>For a resume, retrieve the existing record and append new information rather than overwriting history. For a review, use the original prediction and reasoning as the baseline rather than reconstructing them from memory.</p>
 <h3>2. Frame the decision</h3>
 <p>Write the question in a decidable form. Establish:</p>
 <ul>
@@ -103,7 +103,7 @@
 <blockquote>By [date or trigger], [observable outcome] will happen or not happen.  </blockquote>
 <blockquote>Confidence: [percentage].</blockquote>
 <p>Use the user’s chosen decision register, document system, or private file. A useful record contains status, domain, stakes, reversibility, decision date, review date, confidence, and outcome.</p>
-<p>Suggested review defaults are one month for reversible decisions, three months for hard-to-reverse decisions, and six months for direction-setting decisions. Use a calendar, task system, or other reminder mechanism for high-stakes reviews.</p>
+<p>Suggested review defaults are one month for reversible decisions, three months for hard-to-reverse decisions, and six months for direction-setting decisions. Use a calendar, task system, or other reminder mechanism for high-stakes reviews when the user authorizes it.</p>
 <pre><code>## Context
 Why this decision exists and why it matters now.
 
@@ -154,4 +154,16 @@ Rationale: [two or three honest sentences]
 Next action: [owner] will [action] by [date]
 Review: [date or trigger]
 Record: [location, if one exists]</code></pre>
-<p>Use direct language. Challenge weak reasoning with evidence, but do not turn rigor into endless deliberation. Once the appropriate readiness gates have been met, name the decision and move forward.</p></article><footer><a href="/skills/LICENSE.txt">CC0</a></footer></main><script>document.querySelector('[data-copy]').addEventListener('click',async function(){try{const text=await fetch(this.dataset.copy).then(r=>{if(!r.ok)throw new Error();return r.text()});await navigator.clipboard.writeText(text);this.textContent='Copied'}catch{this.textContent='Open raw Markdown'}})</script></body></html>
+<p>Use direct language. Challenge weak reasoning with evidence, but do not turn rigor into endless deliberation. Once the appropriate readiness gates have been met, name the decision and move forward.</p>
+<h3>Workflow audit</h3>
+<p>Before closing the session, check:</p>
+<ul>
+<li>Was the question actually a decision rather than a task?</li>
+<li>Did the level of analysis match reversibility and stakes?</li>
+<li>Was a hard-to-reverse decision pressure-tested or explicitly overridden with a reason?</li>
+<li>Were required stakeholder conversations and dissent handled before a direction-setting commitment?</li>
+<li>Are the user’s views clearly separated from assistant analysis?</li>
+<li>If a record was created or updated, did the user authorize it and have an appropriate access boundary?</li>
+<li>Does the record contain a next action, review date, and testable prediction where appropriate?</li>
+</ul>
+<p>If the workflow itself did not fit the decision, note the improvement for the user or workflow owner. Do not silently alter shared processes, records, or instructions.</p></article><footer><a href="/skills/LICENSE.txt">CC0</a></footer></main><script>document.querySelector('[data-copy]').addEventListener('click',async function(){try{const text=await fetch(this.dataset.copy).then(r=>{if(!r.ok)throw new Error();return r.text()});await navigator.clipboard.writeText(text);this.textContent='Copied'}catch{this.textContent='Open raw Markdown'}})</script></body></html>
