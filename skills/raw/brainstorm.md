@@ -9,9 +9,7 @@ Use this workflow when a user needs possible approaches to a decision, problem, 
 
 ## 1. Gather relevant context
 
-Start with the information the user supplied. If they reference documents, discussion threads, prior decisions, research, or other sources accessible in the current environment, review them only when there is a legitimate purpose and clear authorization to do so.
-
-Use the minimum relevant sources and information. Do not include unrelated personal, confidential, or sensitive details in the analysis or output. Respect consent, privacy expectations, and the user’s access boundary.
+Start with the information the user supplied. If they reference documents, discussion threads, prior decisions, research, or other sources that the current environment can access, review them first.
 
 If the question is not self-contained, look for a small number of high-value sources of context, such as:
 
@@ -46,7 +44,7 @@ Include, where relevant:
 - An option that changes the process, incentives, scope, or problem framing
 - At least one surprising option, such as delaying, partnering, removing scope, or doing nothing
 
-Do not be contrarian merely to appear creative. “Do nothing” is useful only when observation, timing, or avoided distraction has value.
+Do not be contrarian merely to appear creative. “Do nothing” is useful only when it is a real strategic choice, such as when observation, timing, or avoided distraction has value.
 
 Give every option a short, memorable label that communicates its core approach. For each, provide:
 
@@ -57,12 +55,6 @@ Give every option a short, memorable label that communicates its core approach. 
 
 Use specific tradeoffs. Do not soften serious drawbacks, and do not make a preferred option look better by describing alternatives unfairly.
 
-### Option format
-
-| Option | What | Strengths | Weaknesses | Effort |
-|---|---|---|---|---|
-| **[Short descriptive label]** | [One or two sentences.] | [Concrete advantages.] | [Concrete disadvantages or risks.] | [Low / Medium / High] |
-
 ## 4. Evaluate and recommend
 
 Choose evaluation criteria that fit the decision. Common criteria include likely impact, effort, cost, risk, speed, reversibility, strategic fit, and stakeholder burden. Add domain-specific criteria when they matter more than the defaults.
@@ -71,7 +63,7 @@ Then:
 
 1. Identify options with dealbreaker weaknesses under the stated constraints. Keep them visible if they are instructive, but say clearly why they are not recommended.
 2. Rank the strongest two or three options.
-3. For each recommendation, explain in one sentence why it fits this situation, constraints, and goals—not why it is generally attractive.
+3. For each recommendation, explain in one sentence why it fits this user’s situation, constraints, and goals—not why it is generally attractive.
 4. Name the key assumption most likely to change the ranking, if one exists.
 
 Do not force a single winner unless the user explicitly requests one. The output should preserve meaningful choice.
@@ -94,13 +86,4 @@ A useful sequence is: brainstorm options, pressure-test consequential choices, m
 
 ## Quality checks
 
-Before sending the response, verify that:
-
-- The decision framing reflects the actual choice rather than only the stated symptom.
-- The options are genuinely distinct and not intensity variations of one approach.
-- At least one credible non-default or reframing option was considered.
-- Strengths and weaknesses are concrete, candid, and comparably specific across options.
-- Effort labels are plausible.
-- Any eliminations are tied to stated constraints.
-- Recommendations follow the user’s criteria rather than the assistant’s default preferences.
-- The response ends with a clear invitation for the user to select, refine, compare, or combine options.
+Before sending the response, verify that the options are truly distinct, the framing reflects the actual decision, weaknesses are candid, effort labels are plausible, and recommendations follow the user’s criteria rather than the assistant’s default preferences.

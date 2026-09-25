@@ -3,8 +3,7 @@
 <meta name="robots" content="noindex,nofollow,noarchive"><title>Brainstorm options · AI skills</title><meta name="description" content="Generate distinct options for a decision or problem, assess their tradeoffs honestly, and recommend a short ranked set without forcing a final choice.">
 <link rel="alternate" type="text/markdown" href="/skills/raw/brainstorm.md"><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%23b4552d%22/><text x=%2250%22 y=%2253%22 dominant-baseline=%22central%22 text-anchor=%22middle%22 font-family=%22Georgia, 'Times New Roman', serif%22 font-size=%2246%22 letter-spacing=%221%22 fill=%22%23fdfaf4%22>DE</text></svg>"><link rel="stylesheet" href="/skills/styles.css"></head><body><main><a class="back" href="/skills/">← Skills</a><header class="skill-header"><h1>Brainstorm options</h1><p class="description">Generate distinct options for a decision or problem, assess their tradeoffs honestly, and recommend a short ranked set without forcing a final choice.</p><div class="skill-actions"><a href="/skills/raw/brainstorm.md">Raw Markdown</a><button class="copy" type="button" data-copy="/skills/raw/brainstorm.md">Copy Markdown</button></div></header><article class="skill-body"><p>Use this workflow when a user needs possible approaches to a decision, problem, or opportunity but is not ready to commit. The goal is not to produce a long idea list. It is to surface genuinely different paths, make their tradeoffs clear, and leave the user with a small number of credible choices.</p>
 <h3>1. Gather relevant context</h3>
-<p>Start with the information the user supplied. If they reference documents, discussion threads, prior decisions, research, or other sources accessible in the current environment, review them only when there is a legitimate purpose and clear authorization to do so.</p>
-<p>Use the minimum relevant sources and information. Do not include unrelated personal, confidential, or sensitive details in the analysis or output. Respect consent, privacy expectations, and the user’s access boundary.</p>
+<p>Start with the information the user supplied. If they reference documents, discussion threads, prior decisions, research, or other sources that the current environment can access, review them first.</p>
 <p>If the question is not self-contained, look for a small number of high-value sources of context, such as:</p>
 <ul>
 <li>Earlier decisions and their rationale</li>
@@ -32,7 +31,7 @@
 <li>An option that changes the process, incentives, scope, or problem framing</li>
 <li>At least one surprising option, such as delaying, partnering, removing scope, or doing nothing</li>
 </ul>
-<p>Do not be contrarian merely to appear creative. “Do nothing” is useful only when observation, timing, or avoided distraction has value.</p>
+<p>Do not be contrarian merely to appear creative. “Do nothing” is useful only when it is a real strategic choice, such as when observation, timing, or avoided distraction has value.</p>
 <p>Give every option a short, memorable label that communicates its core approach. For each, provide:</p>
 <ul>
 <li><strong>What:</strong> One or two sentences explaining the approach</li>
@@ -41,15 +40,13 @@
 <li><strong>Effort:</strong> Low, Medium, or High</li>
 </ul>
 <p>Use specific tradeoffs. Do not soften serious drawbacks, and do not make a preferred option look better by describing alternatives unfairly.</p>
-<h4>Option format</h4>
-<div class="table-wrap" tabindex="0" aria-label="Scrollable table"><table><thead><tr><th>Option</th><th>What</th><th>Strengths</th><th>Weaknesses</th><th>Effort</th></tr></thead><tbody><tr><td><strong>[Short descriptive label]</strong></td><td>[One or two sentences.]</td><td>[Concrete advantages.]</td><td>[Concrete disadvantages or risks.]</td><td>[Low / Medium / High]</td></tr></tbody></table></div>
 <h3>4. Evaluate and recommend</h3>
 <p>Choose evaluation criteria that fit the decision. Common criteria include likely impact, effort, cost, risk, speed, reversibility, strategic fit, and stakeholder burden. Add domain-specific criteria when they matter more than the defaults.</p>
 <p>Then:</p>
 <ol>
 <li>Identify options with dealbreaker weaknesses under the stated constraints. Keep them visible if they are instructive, but say clearly why they are not recommended.</li>
 <li>Rank the strongest two or three options.</li>
-<li>For each recommendation, explain in one sentence why it fits this situation, constraints, and goals—not why it is generally attractive.</li>
+<li>For each recommendation, explain in one sentence why it fits this user’s situation, constraints, and goals—not why it is generally attractive.</li>
 <li>Name the key assumption most likely to change the ranking, if one exists.</li>
 </ol>
 <p>Do not force a single winner unless the user explicitly requests one. The output should preserve meaningful choice.</p>
@@ -65,14 +62,4 @@
 </ul>
 <p>A useful sequence is: brainstorm options, pressure-test consequential choices, make the decision, then plan or build. Avoid skipping the pressure test when the cost of being wrong is high.</p>
 <h3>Quality checks</h3>
-<p>Before sending the response, verify that:</p>
-<ul>
-<li>The decision framing reflects the actual choice rather than only the stated symptom.</li>
-<li>The options are genuinely distinct and not intensity variations of one approach.</li>
-<li>At least one credible non-default or reframing option was considered.</li>
-<li>Strengths and weaknesses are concrete, candid, and comparably specific across options.</li>
-<li>Effort labels are plausible.</li>
-<li>Any eliminations are tied to stated constraints.</li>
-<li>Recommendations follow the user’s criteria rather than the assistant’s default preferences.</li>
-<li>The response ends with a clear invitation for the user to select, refine, compare, or combine options.</li>
-</ul></article><footer><a href="/skills/LICENSE.txt">CC0</a></footer></main><script>document.querySelector('[data-copy]').addEventListener('click',async function(){try{const text=await fetch(this.dataset.copy).then(r=>{if(!r.ok)throw new Error();return r.text()});await navigator.clipboard.writeText(text);this.textContent='Copied'}catch{this.textContent='Open raw Markdown'}})</script></body></html>
+<p>Before sending the response, verify that the options are truly distinct, the framing reflects the actual decision, weaknesses are candid, effort labels are plausible, and recommendations follow the user’s criteria rather than the assistant’s default preferences.</p></article><footer><a href="/skills/LICENSE.txt">CC0</a></footer></main><script>document.querySelector('[data-copy]').addEventListener('click',async function(){try{const text=await fetch(this.dataset.copy).then(r=>{if(!r.ok)throw new Error();return r.text()});await navigator.clipboard.writeText(text);this.textContent='Copied'}catch{this.textContent='Open raw Markdown'}})</script></body></html>
