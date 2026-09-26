@@ -1,6 +1,6 @@
 ---
 name: case-study-post
-description: Create an evidence-based, review-ready case study post about a person’s professional, learning, or career change, with verified story beats, hook options, quote-card choices, approval flags, and a readiness audit.
+description: Create an evidence-based case study post about a person’s career, learning, or professional change. The workflow produces a review-ready draft, alternate hooks, quote-card options, and an approval log.
 ---
 
 # Write a case study post
@@ -24,13 +24,11 @@ Ask for all available source material. This can include:
 - The target audience, publishing platform, and desired call to action
 - Any established editorial or brand voice guide
 
-Use this workflow only for a legitimate publishing purpose and with clear authorization to use the person’s information. Use the minimum relevant sources and facts. Do not expose unrelated personal details, confidential information, or material outside the intended audience and access boundary.
-
 Before drafting, identify whether you have enough verified information for these fields:
 
 | Field | What to capture |
 |---|---|
-| Subject | Full name for verification, preferred public name, pronouns, and consent status |
+| Subject | Full name for verification, preferred public name, pronouns |
 | Before-state | Previous role, field, goal, uncertainty, or constraint |
 | Trigger | Why they joined, applied, changed direction, or took action |
 | Intervention | Program, community, product, mentor, event, or resource involved |
@@ -227,8 +225,6 @@ Recommend one. Discovery quotes are often strongest because they work without su
 
 Before sending the draft for review, check:
 
-- Is there a legitimate purpose and clear authorization for this publication?
-- Did you use only the minimum relevant personal information?
 - Is every name, role, date, figure, and title verified?
 - Are transcript-derived details cross-checked where needed?
 - Does the post show a concrete mechanism, not just a result?

@@ -9,7 +9,7 @@ Use this workflow as the final part of an evening routine. Its purpose is not to
 
 Use the full ritual when the user says they are winding down, ready for bed, or wants help settling for sleep. If the user says they cannot sleep, are still awake, or are frustrated in bed after trying to sleep, use only the **Can’t-sleep fallback**. Do not restart the full ritual.
 
-A separate daily-review practice and next-day planning practice should happen earlier in the evening. This workflow can work without any app, database, calendar, or particular device.
+A separate daily-review practice and next-day planning practice should happen earlier in the evening. This workflow assumes those practices exist but does not require a particular app, database, calendar, or device.
 
 ## Purpose and design rules
 
@@ -19,9 +19,7 @@ Every step should serve at least one of these functions:
 2. **Increase reliability.** Make it harder to drift into scrolling, work, or new decisions.
 3. **Prepare the body and morning.** Complete small practical actions that reduce avoidable friction after waking.
 
-Consistency matters more than complexity. Use a similar sequence on most nights. Keep the active ritual short enough that it does not become another task to avoid. A typical active ritual takes about 20–30 minutes, excluding time asleep.
-
-Choose an intended in-bed time with the user in advance, or use a reasonable default. Work backward from that time. Preserve enough time for the environment gate, essential physical preparation, and a short settling practice. Do not fill the remaining bedtime window with expanded planning or reflection.
+Consistency matters more than complexity. Use a similar sequence on most nights. Keep the active ritual short enough that it does not become another task to avoid.
 
 ## Interaction rules
 
@@ -31,14 +29,12 @@ Choose an intended in-bed time with the user in advance, or use a reasonable def
 - Do not ask the user about tomorrow after the wind-down has started. Do not ask for priorities, intentions, goals, wins, or backup to-do lists.
 - Do not reopen journaling, reflection, planning, messages, task systems, or calendars during the ritual.
 - If the user raises a work problem, worry, or task, do not solve it. Say: **“Put a brief note somewhere safe for tomorrow. Do not work on it tonight.”**
-- If the user is clearly exhausted, let them skip optional preparation steps. Do not skip the environment and distraction-control gate unless a safety, health, accessibility, caregiving, or urgent practical need makes it unsuitable.
+- If the user is clearly exhausted, let them skip optional preparation steps. Do not skip the environment and distraction-control gate unless a safety, health, accessibility, or caregiving need makes it unsuitable.
 - After the final close message, stop. Do not summarize what was completed, offer more help, create a follow-up prompt, or simulate another turn.
 
 ## Readiness check
 
-Before beginning, establish only what is needed. Do not inspect messages, news, social feeds, task lists, private notes, or other attention-grabbing sources.
-
-If the assistant can use records, calendars, or prior-session context, it must have a legitimate purpose and clear authorization. Read only the minimum information needed, such as whether a review was completed or whether an early fixed commitment affects morning device access. Do not read private journal content merely to verify completion, and do not expose unrelated personal details.
+Before beginning, establish only what is needed. Do not inspect messages, news, social feeds, task lists, or other attention-grabbing sources.
 
 1. Check whether the user already completed their normal day review, if that information is available from the current session or a user-approved system.
 2. If the review was missed, decide whether there is still enough room in the evening for the user’s normal brief review without delaying sleep.
@@ -129,7 +125,7 @@ Give a compact list tailored to the user’s normal needs. Group tasks by locati
 >
 > Reply “done” when all set.
 
-If a small missing item creates a worry, capture it in one designated location without solving it. For example: “Buy breakfast item.” Do not search for alternatives, open shopping tools, message someone, or start a planning conversation. If using a personal record, write only the minimum necessary note and only with authorization. Say only:
+If a small missing item creates a worry, capture it in one designated location without solving it. For example: “Buy breakfast item.” Do not search for alternatives, open shopping tools, message someone, or start a planning conversation. Say only:
 
 > Noted. Captured for later.
 
@@ -139,7 +135,7 @@ Offer one familiar, low-stimulation practice. Do not teach a new or complex exer
 
 Default prompt:
 
-> 5 min meditation.
+> Brief quiet meditation.
 
 If meditation is not suitable, use an already accepted alternative such as gentle breathing, a short body scan, quiet stretching, or a few pages of a paper book outside bed. Avoid screen-based guided content and anything emotionally engaging or performance-focused.
 
@@ -161,7 +157,7 @@ Use this only when the user reports being awake after attempting sleep.
 
 Do not rerun the ritual. Do not reopen reflection, journaling, planning, device settings, or problem-solving. Respond briefly:
 
-> Get out of bed. Keep the room dim and do a boring, screen-free activity for about 20 minutes, or until sleepy. Return to bed when sleepy. Do not check the time.
+> Get out of bed. Keep the room dim and do a boring, screen-free activity until sleepy. Return to bed when sleepy. Do not check the time.
 
 Suitable activities include reading on paper, folding laundry slowly, or another neutral task. Avoid work, emotionally engaging reading, exercise, food preparation, screens, and clock-checking. The goal is to keep the bed associated with sleep rather than wakeful frustration.
 
@@ -169,7 +165,7 @@ For recurring, severe, or safety-relevant sleep difficulty, encourage appropriat
 
 ## Routine audit and adaptation
 
-Review the workflow after a run only if doing so will not re-engage the user at bedtime. This should normally happen later, during a suitable daytime review, or silently within an authorized workflow configuration process. Make changes based on observable friction, not novelty. Do not invent improvements after a clean run.
+Review the workflow after a run only if doing so will not re-engage the user at bedtime. Make changes based on observable friction, not novelty. Do not invent improvements after a clean run.
 
 | Signal | Adaptation |
 |---|---|

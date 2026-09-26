@@ -3,7 +3,7 @@
 <meta name="robots" content="noindex,nofollow,noarchive"><title>Wind down for sleep · AI skills</title><meta name="description" content="A quiet, interactive evening workflow that reduces stimulation, secures distractions, prepares essential morning needs offline, and provides a brief stimulus-control response when sleep does not come.">
 <link rel="alternate" type="text/markdown" href="/skills/raw/wind-down-for-sleep.md"><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%23b4552d%22/><text x=%2250%22 y=%2253%22 dominant-baseline=%22central%22 text-anchor=%22middle%22 font-family=%22Georgia, 'Times New Roman', serif%22 font-size=%2246%22 letter-spacing=%221%22 fill=%22%23fdfaf4%22>DE</text></svg>"><link rel="stylesheet" href="/skills/styles.css"></head><body><main><a class="back" href="/skills/">← Skills</a><header class="skill-header"><h1>Wind down for sleep</h1><p class="description">A quiet, interactive evening workflow that reduces stimulation, secures distractions, prepares essential morning needs offline, and provides a brief stimulus-control response when sleep does not come.</p><div class="skill-actions"><a href="/skills/raw/wind-down-for-sleep.md">Raw Markdown</a><button class="copy" type="button" data-copy="/skills/raw/wind-down-for-sleep.md">Copy Markdown</button></div></header><article class="skill-body"><p>Use this workflow as the final part of an evening routine. Its purpose is not to review the day, solve problems, or build tomorrow’s plan. Its purpose is to make the transition from awake-day to sleep predictable: reduce stimulation, remove common distractions, complete a few practical tasks, and go to bed.</p>
 <p>Use the full ritual when the user says they are winding down, ready for bed, or wants help settling for sleep. If the user says they cannot sleep, are still awake, or are frustrated in bed after trying to sleep, use only the <strong>Can’t-sleep fallback</strong>. Do not restart the full ritual.</p>
-<p>A separate daily-review practice and next-day planning practice should happen earlier in the evening. This workflow can work without any app, database, calendar, or particular device.</p>
+<p>A separate daily-review practice and next-day planning practice should happen earlier in the evening. This workflow assumes those practices exist but does not require a particular app, database, calendar, or device.</p>
 <h3>Purpose and design rules</h3>
 <p>Every step should serve at least one of these functions:</p>
 <ol>
@@ -11,8 +11,7 @@
 <li><strong>Increase reliability.</strong> Make it harder to drift into scrolling, work, or new decisions.</li>
 <li><strong>Prepare the body and morning.</strong> Complete small practical actions that reduce avoidable friction after waking.</li>
 </ol>
-<p>Consistency matters more than complexity. Use a similar sequence on most nights. Keep the active ritual short enough that it does not become another task to avoid. A typical active ritual takes about 20–30 minutes, excluding time asleep.</p>
-<p>Choose an intended in-bed time with the user in advance, or use a reasonable default. Work backward from that time. Preserve enough time for the environment gate, essential physical preparation, and a short settling practice. Do not fill the remaining bedtime window with expanded planning or reflection.</p>
+<p>Consistency matters more than complexity. Use a similar sequence on most nights. Keep the active ritual short enough that it does not become another task to avoid.</p>
 <h3>Interaction rules</h3>
 <ul>
 <li>Be quiet, direct, and low-stimulation. Use short prompts with no coaching language, jokes, emojis, or sleep-science lecture.</li>
@@ -21,12 +20,11 @@
 <li>Do not ask the user about tomorrow after the wind-down has started. Do not ask for priorities, intentions, goals, wins, or backup to-do lists.</li>
 <li>Do not reopen journaling, reflection, planning, messages, task systems, or calendars during the ritual.</li>
 <li>If the user raises a work problem, worry, or task, do not solve it. Say: <strong>“Put a brief note somewhere safe for tomorrow. Do not work on it tonight.”</strong></li>
-<li>If the user is clearly exhausted, let them skip optional preparation steps. Do not skip the environment and distraction-control gate unless a safety, health, accessibility, caregiving, or urgent practical need makes it unsuitable.</li>
+<li>If the user is clearly exhausted, let them skip optional preparation steps. Do not skip the environment and distraction-control gate unless a safety, health, accessibility, or caregiving need makes it unsuitable.</li>
 <li>After the final close message, stop. Do not summarize what was completed, offer more help, create a follow-up prompt, or simulate another turn.</li>
 </ul>
 <h3>Readiness check</h3>
-<p>Before beginning, establish only what is needed. Do not inspect messages, news, social feeds, task lists, private notes, or other attention-grabbing sources.</p>
-<p>If the assistant can use records, calendars, or prior-session context, it must have a legitimate purpose and clear authorization. Read only the minimum information needed, such as whether a review was completed or whether an early fixed commitment affects morning device access. Do not read private journal content merely to verify completion, and do not expose unrelated personal details.</p>
+<p>Before beginning, establish only what is needed. Do not inspect messages, news, social feeds, task lists, or other attention-grabbing sources.</p>
 <ol>
 <li>Check whether the user already completed their normal day review, if that information is available from the current session or a user-approved system.</li>
 <li>If the review was missed, decide whether there is still enough room in the evening for the user’s normal brief review without delaying sleep.</li>
@@ -87,12 +85,12 @@
 <blockquote>- Put out required clothing, keys, mobility aids, or medication.</blockquote>
 <blockquote></blockquote>
 <blockquote>Reply “done” when all set.</blockquote>
-<p>If a small missing item creates a worry, capture it in one designated location without solving it. For example: “Buy breakfast item.” Do not search for alternatives, open shopping tools, message someone, or start a planning conversation. If using a personal record, write only the minimum necessary note and only with authorization. Say only:</p>
+<p>If a small missing item creates a worry, capture it in one designated location without solving it. For example: “Buy breakfast item.” Do not search for alternatives, open shopping tools, message someone, or start a planning conversation. Say only:</p>
 <blockquote>Noted. Captured for later.</blockquote>
 <h3>Step 4: Brief settling practice</h3>
 <p>Offer one familiar, low-stimulation practice. Do not teach a new or complex exercise at bedtime.</p>
 <p>Default prompt:</p>
-<blockquote>5 min meditation.</blockquote>
+<blockquote>Brief quiet meditation.</blockquote>
 <p>If meditation is not suitable, use an already accepted alternative such as gentle breathing, a short body scan, quiet stretching, or a few pages of a paper book outside bed. Avoid screen-based guided content and anything emotionally engaging or performance-focused.</p>
 <p>Wait for a simple completion response.</p>
 <h3>Step 5: Close</h3>
@@ -104,10 +102,10 @@
 <h3>Can’t-sleep fallback</h3>
 <p>Use this only when the user reports being awake after attempting sleep.</p>
 <p>Do not rerun the ritual. Do not reopen reflection, journaling, planning, device settings, or problem-solving. Respond briefly:</p>
-<blockquote>Get out of bed. Keep the room dim and do a boring, screen-free activity for about 20 minutes, or until sleepy. Return to bed when sleepy. Do not check the time.</blockquote>
+<blockquote>Get out of bed. Keep the room dim and do a boring, screen-free activity until sleepy. Return to bed when sleepy. Do not check the time.</blockquote>
 <p>Suitable activities include reading on paper, folding laundry slowly, or another neutral task. Avoid work, emotionally engaging reading, exercise, food preparation, screens, and clock-checking. The goal is to keep the bed associated with sleep rather than wakeful frustration.</p>
 <p>For recurring, severe, or safety-relevant sleep difficulty, encourage appropriate medical or sleep-care support.</p>
 <h3>Routine audit and adaptation</h3>
-<p>Review the workflow after a run only if doing so will not re-engage the user at bedtime. This should normally happen later, during a suitable daytime review, or silently within an authorized workflow configuration process. Make changes based on observable friction, not novelty. Do not invent improvements after a clean run.</p>
+<p>Review the workflow after a run only if doing so will not re-engage the user at bedtime. Make changes based on observable friction, not novelty. Do not invent improvements after a clean run.</p>
 <div class="table-wrap" tabindex="0" aria-label="Scrollable table"><table><thead><tr><th>Signal</th><th>Adaptation</th></tr></thead><tbody><tr><td>The user repeatedly misunderstands a prompt</td><td>Rewrite it in plainer language or remove ambiguity.</td></tr><tr><td>A distraction barrier is routinely bypassed</td><td>Choose a stronger physical, account-level, or environmental barrier with the user.</td></tr><tr><td>A checklist item is consistently skipped and adds no value</td><td>Remove it or make it optional.</td></tr><tr><td>A practical issue repeatedly appears at bedtime</td><td>Move its prevention into an earlier review or planning practice.</td></tr><tr><td>A step makes the user more alert</td><td>Shorten it, simplify it, or move it earlier in the evening.</td></tr></tbody></table></div>
 <p>Preserve what reliably works. The best wind-down is usually quiet, repeatable, and boring enough to become an automatic signal that the day is over.</p></article><footer><a href="/skills/LICENSE.txt">CC0</a></footer></main><script>document.querySelector('[data-copy]').addEventListener('click',async function(){try{const text=await fetch(this.dataset.copy).then(r=>{if(!r.ok)throw new Error();return r.text()});await navigator.clipboard.writeText(text);this.textContent='Copied'}catch{this.textContent='Open raw Markdown'}})</script></body></html>

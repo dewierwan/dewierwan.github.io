@@ -1,122 +1,102 @@
 ---
 name: run-a-recurring-community-event
-description: Create, publish, and verify the next occurrence of a recurring community event, including fresh event materials and invitations to an authorized audience, while applying explicit authority, privacy boundaries, and attendee-facing checks.
+description: Create and publish the next occurrence of a recurring community event, prepare fresh materials, invite the approved audience, and verify the live result across the chosen tools.
 ---
 
 # Run a recurring community event
 
-Use this workflow for a recurring social, sports, learning, volunteer, or neighborhood event. Adapt it to the organizer's chosen event platform, calendar, image-generation capability, file storage, and communication channels.
+Use this workflow for a repeated social, sports, learning, volunteer, or community event. Adapt it to the organizer's chosen calendar, event platform, image-creation tool, storage location, and communication channels.
 
-## 1. Establish authority, purpose, and access boundaries
+## Set authority and boundaries
 
-Before making external changes, determine the operating mode:
+Before taking external actions, establish which mode applies:
 
-- **Prepare only:** Create materials and an unpublished draft.
-- **Approval required:** Prepare the event and obtain approval before publishing or inviting.
-- **Standing authorization:** Publish and send invitations according to a documented recurring-event policy.
+- **Prepare only:** create materials and an unpublished draft.
+- **Review before publish:** prepare the event, then request approval before publishing or inviting.
+- **Standing authorization:** publish and send invitations under a documented audience policy.
 
-Standing authorization should identify the series, usual audience, organizers who may be added as hosts, permitted platforms, and invitation rules. Ask for a decision when the occurrence materially changes the normal arrangement, for example a new audience, paid entry, a changed privacy level, a different venue, an unusual safety concern, or a major format change.
+Standing authorization should state the recurrence, normal audience, platform, and any limits. Ask for a decision if the occurrence introduces a material change, such as a new audience, paid admission, changed venue, unusual safety concern, or altered privacy setting.
 
-When accessing prior event records or attendee lists, have a legitimate event-management purpose and clear authorization. Use only the minimum relevant records, honor opt-outs and consent expectations, and do not expose attendee information outside the authorized event-management context.
+## 1. Determine the next occurrence
 
-## 2. Determine the next occurrence
+Calculate the date from the recurrence rule and local time zone; do not rely on mental arithmetic. Confirm the date, weekday, start time, end time, venue, and host arrangement.
 
-Calculate the next occurrence from the recurrence rule and local time zone using a reliable date or calendar capability. Do not rely on mental date arithmetic.
+If events are numbered, inspect prior occurrences and use the next number after the highest existing one. Include early unnumbered events when reviewing the series history.
 
-Confirm:
+Check for relevant conflicts such as holidays, venue closures, organizer availability, or weather-sensitive conditions. A conflict does not automatically cancel the event. Follow the organizer's policy; if the event proceeds, report the conflict and any remaining handoff or cancellation decision.
 
-- weekday and full date;
-- start and end time;
-- time zone;
-- venue or meeting point;
-- host and co-host arrangement; and
-- any sequence number.
+## 2. Reuse stable information and update changing details
 
-If the series is numbered, inspect prior events and use one number higher than the highest existing number. Include any early unnumbered events when reviewing the series history so the invitation process does not omit their attendees.
+Review the latest event or two before creating the new one. Separate details into:
 
-Check relevant conflicts, such as organizer unavailability, venue closures, public holidays, weather-sensitive plans, or calendar overlaps. A conflict does not automatically mean the event should be cancelled. Follow the organizer's policy, and report a remaining handoff, cancellation, or contingency decision.
+- **Stable details:** purpose, usual format, meeting point, regular instructions, contact route, and accessibility guidance.
+- **Occurrence-specific details:** date, sequence number, hosts, route, weather plan, capacity, theme, and exceptions.
 
-## 3. Reuse stable details and refresh changing details
+Use the approved title pattern and description template. Update every changing detail deliberately. Do not carry forward stale dates, expired links, temporary announcements, or venue instructions that no longer apply.
 
-Review the latest one or two events before creating the new one. Separate information into:
+## 3. Prepare event artwork when needed
 
-- **Stable details:** event purpose, usual format, meeting-point instructions, regular contact route, accessibility notes, and standing links.
-- **Occurrence-specific details:** date, sequence number, hosts, route, weather plan, capacity, theme, special instructions, and temporary notices.
+If the series uses recurring visuals, keep a recognizable identity while making each new image distinct. Review recent artwork first so the next concept is not a minor variation of the last one.
 
-Use the approved naming pattern and description template. Deliberately update every date-sensitive or occurrence-specific detail. Do not carry forward stale dates, expired links, a prior week's special instruction, or temporary venue information.
+Create an image brief containing:
 
-## 4. Prepare fresh artwork when artwork is part of the series
-
-Keep a recognizable visual identity while making each occurrence visibly distinct. Review recent artwork before creating a new image so the result is not merely the same composition with minor changes.
-
-Build a concise image brief with:
-
-- required event text;
-- recognizable activity or event symbols;
-- desired illustration, photo, or graphic style;
-- mood and palette;
+- event name or required text;
+- the core activity or recognizable symbols;
+- desired style and mood;
 - one new central visual idea; and
-- quality constraints.
+- quality constraints for the selected image capability.
 
-Vary the main idea through season, weather, lighting, viewpoint, local texture, an activity detail, or a small humorous focal object. Prefer one clear subject over a crowded composition. Request readable typography, restrained color, clean spacing, and no obvious visual-generation defects.
+Vary the main idea through season, light, weather, viewpoint, local texture, an activity detail, or one small humorous focal object. Prefer one clear subject over a crowded scene. Request clean composition, restrained color, readable text, and no obvious generation artifacts.
 
-Review the result before use. If it repeats a recent design, has garbled text, implausible anatomy or objects, excessive gloss, clutter, or poor cropping potential, revise the brief and regenerate a limited number of times. Do not retry indefinitely. If an image tool reports an error, first check whether the image was actually produced before retrying.
+Review the result before use. If it repeats recent work or contains visible defects, revise the concept and regenerate a limited number of times. Do not retry indefinitely. Before treating a tool error as a failed generation, check whether the requested image was actually produced.
 
-Download or export the selected image into a location accessible to the event platform. Upload it and wait for completion before changing unrelated fields. Confirm the visible event image is the intended file and that its crop and legibility are acceptable.
+Export the selected file to a location that the event platform can access, then confirm that the uploaded file is the intended image and displays well after cropping.
 
-## 5. Create the event carefully
+## 4. Create the event
 
-Use the authorized organizer account and verify the active account before editing. If multiple browser profiles or accounts exist, explicitly choose and verify the appropriate one for each service.
+Use the authorized organizer account and verify the account before editing. Prefer a real draft or preview when the platform supports one, but recognize that some platforms create a live event when the control says "Save" or similar.
 
-Complete fields in this order when practical, especially on fragile forms:
+Complete fields in this order when practical:
 
-1. **Title:** Apply the approved title pattern, such as `Community Event #N`.
-2. **Date and time:** Set the local date, start time, and end time.
-3. **Location:** Select the exact venue or map listing, not a similarly named result.
-4. **Description:** Apply the current approved template and occurrence-specific changes.
-5. **Image:** Upload and inspect the artwork.
-6. **Hosts:** Add only authorized hosts or co-hosts.
-7. **Settings:** Confirm visibility, capacity, cost, RSVP rules, notifications, and accessibility information.
+1. **Title:** apply the approved naming pattern, such as `Event Name #N`.
+2. **Date and time:** set the local date and complete time range.
+3. **Location:** choose the exact venue or map result, not a similarly named listing.
+4. **Description:** apply the current template and occurrence-specific updates.
+5. **Image:** upload and inspect the image.
+6. **Hosts:** add only people authorized to host or co-host.
+7. **Settings:** confirm visibility, capacity, cost, RSVP rules, accessibility information, and notifications.
 
-Treat date pickers and dynamic forms as high-risk controls. Complete and verify date and time selection before entering other fields. Some interfaces interpret typing while a picker is open, clear an end date with a close-looking control, or shift layout when menus appear. After opening a menu, scrolling substantially, resizing the window, uploading a file, or changing the page layout, re-check visible state before clicking again. Prefer controls identified by labels and roles rather than fixed screen coordinates.
+Date pickers and dynamic forms deserve extra care. Finish and verify the date/time selection before editing other fields. After opening a menu, resizing a window, scrolling substantially, or causing the page layout to change, re-check the visible state before clicking. Prefer controls identified by their labels or roles rather than fixed screen positions.
 
-Do not assume a button labeled “Save” creates only a draft. Determine whether it publishes immediately, creates a preview, or saves an unpublished event.
-
-## 6. Verify before and after publication
+## 5. Verify before and after publishing
 
 Review the draft or preview as an attendee would. Confirm:
 
-- title and sequence number;
+- title and occurrence number;
 - weekday, date, start time, end time, and time zone;
 - exact venue and map pin;
-- description, links, and contact details;
+- description, links, and contact information;
 - image presence, crop, and legibility;
-- host or co-host status; and
-- visibility, capacity, cost, RSVP, and notification settings.
+- host/co-host status; and
+- visibility, capacity, cost, and RSVP settings.
 
-If a required item cannot be verified, do not claim the event is ready. Correct it, use an approved fallback, or request a decision.
+If a required item cannot be verified, do not claim the event is ready. Correct it, use a safe fallback, or request a decision under the selected authority mode.
 
-Publish only under the selected authority mode. Open the live event page afterward and repeat attendee-facing checks. Save the live URL.
+Publish only when authorized. Then open the live page and repeat the attendee-facing checks. Save the live URL.
 
-## 7. Invite the approved audience
+## 6. Invite the approved audience
 
-Follow the documented invitation policy. Inviting attendees from prior occurrences can be appropriate when authorized, but it is not a universal default. Do not expand the audience without permission.
+Follow the documented invitation policy. A common policy is to invite prior attendees of the same series, but this is not a default. Respect opt-outs, privacy expectations, consent boundaries, and platform restrictions. Do not expand the audience without authorization.
 
-When using prior event attendance as the source:
+When inviting from prior events, list all relevant occurrences and process them systematically. Filter or review one occurrence at a time, add its attendees, clear the filter, and continue. Check whether people are already selected before using a bulk-select control, since platforms may preselect recent attendees.
 
-1. Identify all relevant past occurrences, including early unnumbered ones.
-2. Filter or review one occurrence at a time.
-3. Check whether that group's attendees are already selected before using a bulk-select action.
-4. Add the group, clear the filter, and continue systematically.
-5. After each group, confirm the invitee count increased by a plausible amount.
+After each batch, verify that the invitee count increased by a plausible amount. If it drops or stays unchanged unexpectedly, stop and inspect the current selection before proceeding. Use platform deduplication where available; otherwise compare lists before sending.
 
-Some platforms preselect people from a recent event, and a bulk-select action may toggle them off rather than add them. If the count drops or does not change as expected, stop and inspect the selection before continuing. After any layout shift, re-check the active filter, checkbox state, and count. Use platform deduplication where available; otherwise compare lists sufficiently to avoid repeated invitations.
+Send invitations only when authorized. Confirm the platform's sent state, delivery status, or final invited count. If the platform cannot provide confirmation, state that limitation clearly.
 
-Send invitations only when authorized. Confirm a sent state, delivery confirmation, or final invited count. If the platform cannot provide confirmation, report that limitation rather than assuming delivery.
+## 7. Report completion
 
-## 8. Completion report
-
-Provide a brief report that states:
+Provide a brief operational report with:
 
 - what was created and whether it was published;
 - date, time, and venue;
@@ -124,20 +104,20 @@ Provide a brief report that states:
 - conflicts, unresolved items, or nonstandard settings; and
 - the live event URL.
 
-When the URL must be easy to copy, place it alone on the final line with no text after it.
+When the URL must be easy to copy, put it on the final line with no text after it.
 
-## 9. Maintain reusable lessons
+## 8. Maintain the workflow
 
-After an occurrence, record only durable process improvements: changed platform behavior, field-order constraints, updated templates, recurring audience rules, and content preferences. Keep temporary facts about one event separate from the reusable workflow.
+After each occurrence, record only reusable lessons: changed platform behavior, durable audience rules, template changes, field-order constraints, and content preferences. Keep temporary facts for one event separate from the recurring process.
 
-## Readiness gate
+## Readiness check
 
-Before declaring success, verify all of the following:
+Before declaring success, confirm:
 
-- The next date and sequence number were calculated and checked.
-- The correct organizer account and live event page were verified.
-- Stable details remain current and changing details were updated.
-- Artwork is distinct, usable, and correctly uploaded when required.
-- End time, time zone, venue, hosts, and settings were confirmed.
-- Invitations followed the authorized policy, respected opt-outs, and remained within the appropriate privacy boundary.
-- Publication and invitation outcomes were verified, or any verification limit was clearly reported.
+- The date and sequence number were calculated and checked.
+- The correct organizer account and public event page were verified.
+- Stable details are current and occurrence-specific details were updated.
+- The artwork is fresh, usable, and correctly uploaded, if artwork is required.
+- The end time, time zone, venue, and settings were confirmed.
+- Invitations followed the approved policy and respected opt-outs.
+- Publishing and invitation results were verified or any verification limit was reported.
