@@ -1,80 +1,88 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="robots" content="noindex,nofollow,noarchive"><title>Brainstorm options · AI skills</title><meta name="description" content="Generate genuinely distinct options for a decision or problem, assess their tradeoffs candidly, and recommend a small ranked set without forcing a final choice.">
-<link rel="alternate" type="text/markdown" href="/skills/raw/brainstorm.md"><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%23b4552d%22/><text x=%2250%22 y=%2253%22 dominant-baseline=%22central%22 text-anchor=%22middle%22 font-family=%22Georgia, 'Times New Roman', serif%22 font-size=%2246%22 letter-spacing=%221%22 fill=%22%23fdfaf4%22>DE</text></svg>"><link rel="stylesheet" href="/skills/styles.css"></head><body><main><a class="back" href="/skills/">← Skills</a><header class="skill-header"><h1>Brainstorm options</h1><p class="description">Generate genuinely distinct options for a decision or problem, assess their tradeoffs candidly, and recommend a small ranked set without forcing a final choice.</p><div class="skill-actions"><a href="/skills/raw/brainstorm.md">Raw Markdown</a><button class="copy" type="button" data-copy="/skills/raw/brainstorm.md">Copy Markdown</button></div></header><article class="skill-body"><p>Use this workflow when someone needs possible approaches to a decision, problem, or opportunity but is not ready to commit. The goal is not a long list of ideas; it is a set of meaningfully different paths, clear tradeoffs, and two or three credible choices to consider.</p>
+<meta name="robots" content="noindex,nofollow,noarchive"><title>Brainstorm options · AI skills</title><meta name="description" content="Generate genuinely distinct options for a decision or problem, assess their tradeoffs candidly, and recommend a short ranked set without forcing a final choice.">
+<link rel="alternate" type="text/markdown" href="/skills/raw/brainstorm.md"><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%23b4552d%22/><text x=%2250%22 y=%2253%22 dominant-baseline=%22central%22 text-anchor=%22middle%22 font-family=%22Georgia, 'Times New Roman', serif%22 font-size=%2246%22 letter-spacing=%221%22 fill=%22%23fdfaf4%22>DE</text></svg>"><link rel="stylesheet" href="/skills/styles.css"></head><body><main><a class="back" href="/skills/">← Skills</a><header class="skill-header"><h1>Brainstorm options</h1><p class="description">Generate genuinely distinct options for a decision or problem, assess their tradeoffs candidly, and recommend a short ranked set without forcing a final choice.</p><div class="skill-actions"><a href="/skills/raw/brainstorm.md">Raw Markdown</a><button class="copy" type="button" data-copy="/skills/raw/brainstorm.md">Copy Markdown</button></div></header><article class="skill-body"><p>Use this workflow when someone needs credible approaches to a decision, problem, or opportunity but is not ready to commit. The goal is not a long list of ideas; it is a small set of meaningfully different paths, with clear tradeoffs and a next step chosen at the right level of rigor.</p>
 <h3>1. Gather relevant context</h3>
-<p>Start with the information provided in the request. Review any documents, discussion records, prior decisions, research, or links that are available within the current environment and relevant to the decision.</p>
-<p>If the question is not self-contained, retrieve a small number of high-value sources that could materially change the answer, such as:</p>
+<p>Start with the information provided. If the user references documents, discussion threads, prior decisions, research, or other records that you are authorized to access, review only the sources needed to understand the decision.</p>
+<p>When the question is not self-contained, retrieve a small number of high-value sources, such as:</p>
 <ul>
 <li>Earlier decisions and their rationale</li>
-<li>Constraints, commitments, budget limits, deadlines, or dependencies</li>
-<li>Stakeholder concerns, ownership boundaries, and decision authority</li>
-<li>Evidence about what has already been tried and what happened</li>
+<li>Existing constraints, commitments, deadlines, and dependencies</li>
+<li>Relevant stakeholder concerns and ownership boundaries</li>
+<li>Evidence about attempts already made</li>
 </ul>
-<p>Use targeted retrieval rather than broad searching. If reviewing private communications or records about people, do so only for a legitimate purpose with clear authorization. Use the minimum relevant sources and details, omit unrelated sensitive information, and keep the output within the appropriate access boundary.</p>
-<p>If material information is unavailable, state the assumption or ask a focused question. Do not invent context.</p>
+<p>Use targeted retrieval only when it could materially change the options. Access private communications or records only for a legitimate purpose, with clear authorization, and use the minimum relevant information. Do not include unrelated personal or sensitive details in the output.</p>
+<p>If important context is unavailable, state the assumption or ask a focused question. Do not invent constraints, evidence, or consensus.</p>
 <h3>2. Frame the decision before ideating</h3>
-<p>Write a short framing, usually two to four sentences, that identifies:</p>
+<p>Write a short framing, usually two to four sentences, that states:</p>
 <ul>
-<li>What decision is actually being made</li>
-<li>Important constraints and non-negotiables</li>
-<li>What a good outcome looks like</li>
-<li>The criteria that should be used to compare options</li>
+<li>What the user is actually deciding</li>
+<li>The important constraints and non-negotiables</li>
+<li>What a good outcome looks like and how options should be judged</li>
 </ul>
-<p>The stated request may describe a symptom or a proposed solution rather than the underlying decision. For example, “Should we add a feature?” may really mean “How should we reduce a recurring user problem within a limited budget and timeline?”</p>
-<p>Ask the user to confirm or correct the framing before generating a substantial option set. Skip this pause only when the framing is obvious, the decision is low-stakes, or the user explicitly asks for an immediate first pass. A wrong framing produces polished but irrelevant options.</p>
-<h3>3. Generate a distinct set of options</h3>
-<p>Generate five to seven options unless the decision naturally has fewer meaningful paths. Each option must represent a fundamentally different approach, not merely a different intensity level of the same approach. Merge near-duplicates.</p>
-<p>Where relevant, include:</p>
+<p>The initial question may describe a symptom or a proposed solution rather than the real decision. For example, “Should we add a feature?” may actually mean “How can we reduce a recurring user problem within a limited budget?”</p>
+<p>Ask the user to confirm or correct the framing before generating a substantial option set. Skip the pause only when the framing is obvious, the choice is low-stakes, or the user explicitly requests an immediate first pass. A wrong frame produces polished but irrelevant options.</p>
+<h3>3. Generate distinct options</h3>
+<p>Generate five to seven options unless the decision naturally has fewer meaningful paths. Each option must be a fundamentally different approach, not merely a different level of investment in the same approach. Merge near-duplicates.</p>
+<p>Include, when relevant:</p>
 <ul>
 <li>The obvious or conventional path</li>
 <li>A lower-effort or incremental path</li>
 <li>A more ambitious path</li>
-<li>A path that changes scope, process, incentives, timing, or the framing of the problem</li>
-<li>At least one surprising but credible path, such as delaying, partnering, reducing scope, observing longer, or doing nothing</li>
+<li>A path that changes process, incentives, scope, ownership, or the problem framing</li>
+<li>At least one surprising option, such as delaying, partnering, reducing scope, observing longer, or doing nothing</li>
 </ul>
-<p>Do not be contrarian merely to appear creative. A “do nothing” option is useful only when waiting, learning, preserving focus, or avoiding a bad commitment has real value.</p>
-<p>Give each option a short, memorable label that makes the approach clear. For every option, provide:</p>
-<div class="table-wrap" tabindex="0" aria-label="Scrollable table"><table><thead><tr><th>Element</th><th>Include</th></tr></thead><tbody><tr><td>What</td><td>One or two sentences describing the approach.</td></tr><tr><td>Strengths</td><td>One or two concrete advantages.</td></tr><tr><td>Weaknesses</td><td>One or two concrete disadvantages, risks, or limitations.</td></tr><tr><td>Effort</td><td>Low, Medium, or High.</td></tr></tbody></table></div>
-<p>Use concrete tradeoffs. Do not soften serious weaknesses, and do not make a preferred option appear stronger by describing alternatives unfairly.</p>
+<p>Do not be contrarian just to appear creative. “Do nothing” is useful only when waiting, learning, timing, or avoided distraction has real value.</p>
+<p>Give each option a short, memorable label that communicates its core approach. For every option, provide:</p>
+<ul>
+<li><strong>What:</strong> One or two sentences explaining the approach.</li>
+<li><strong>Strengths:</strong> One or two concrete advantages.</li>
+<li><strong>Weaknesses:</strong> One or two concrete disadvantages, risks, or limitations.</li>
+<li><strong>Effort:</strong> Low, Medium, or High.</li>
+</ul>
+<p>Use specific tradeoffs. Do not hide serious drawbacks or make a preferred option look better by describing alternatives unfairly.</p>
+<h4>Option format</h4>
+<div class="table-wrap" tabindex="0" aria-label="Scrollable table"><table><thead><tr><th>Option</th><th>What</th><th>Strengths</th><th>Weaknesses</th><th>Effort</th></tr></thead><tbody><tr><td><strong>[Short label]</strong></td><td>[Describe the distinct approach.]</td><td>[Concrete benefits.]</td><td>[Concrete drawbacks or risks.]</td><td>[Low / Medium / High]</td></tr></tbody></table></div>
 <h3>4. Evaluate and recommend</h3>
-<p>Choose criteria that fit the decision. Common criteria include likely impact, cost, effort, speed, risk, reversibility, strategic fit, stakeholder burden, and confidence in the evidence. Add domain-specific criteria where needed.</p>
+<p>Choose evaluation criteria that fit the decision. Common criteria include likely impact, effort, cost, speed, risk, reversibility, strategic fit, stakeholder burden, and quality of evidence. Add domain-specific criteria when they matter more than the defaults.</p>
 <p>Then:</p>
 <ol>
-<li>Identify options with dealbreaker weaknesses under the stated constraints. Keep them visible if they are informative, but say clearly why they are not recommended.</li>
+<li>Identify options with dealbreaker weaknesses under the stated constraints. Keep them visible when they clarify the decision, but say plainly why they are not recommended.</li>
 <li>Rank the strongest two or three options.</li>
-<li>For each recommendation, explain in one sentence why it fits this situation, its constraints, and its goals—not merely why it is attractive in general.</li>
-<li>Name the key assumption most likely to change the ranking, if one exists.</li>
+<li>For each recommendation, explain in one sentence why it fits this situation, constraints, and goals—not merely why it is attractive in general.</li>
+<li>Name the assumption most likely to change the ranking, if one exists.</li>
 </ol>
-<p>Do not force a single winner unless explicitly asked. Preserve meaningful choice when more than one option is viable.</p>
+<p>Do not force a single winner unless the user explicitly asks for one. Preserve meaningful choice.</p>
+<h4>Recommendation format</h4>
+<div class="table-wrap" tabindex="0" aria-label="Scrollable table"><table><thead><tr><th>Rank</th><th>Recommendation</th><th>Why it fits</th><th>Condition that could change the ranking</th></tr></thead><tbody><tr><td>1</td><td><strong>[Option label]</strong></td><td>[Situation-specific reason.]</td><td>[Key assumption or new evidence.]</td></tr></tbody></table></div>
 <h3>5. Stop for a decision</h3>
-<p>After presenting the options and recommendations, wait for the user. They may:</p>
+<p>After presenting the recommendations, wait for the user. They may:</p>
 <ul>
-<li>Select an option</li>
+<li>Choose an option</li>
 <li>Ask for more detail on one option</li>
 <li>Correct the framing or constraints</li>
 <li>Request additional options</li>
-<li>Propose a hybrid approach</li>
+<li>Combine options into a hybrid</li>
 </ul>
-<p>If the user proposes a hybrid, check whether the components are compatible and whether combining them resolves a real tradeoff rather than adding unnecessary complexity.</p>
+<p>If the user proposes a hybrid, test whether its components are compatible and whether it resolves a real tradeoff rather than simply adding scope and complexity.</p>
 <p>Do not begin implementation merely because an option appears promising.</p>
-<h3>6. Hand off with appropriate rigor</h3>
+<h3>6. Hand off with the right level of rigor</h3>
 <p>Once a path is selected, choose the next activity based on consequence and reversibility:</p>
 <ul>
-<li><strong>High-consequence or difficult-to-reverse choices:</strong> Run a structured challenge, pre-mortem, or pressure test before commitment. Use this for major strategic bets, public commitments, long-term agreements, major staffing decisions, or decisions with broad organizational effects.</li>
-<li><strong>Reversible choices:</strong> Create a right-sized decision record that captures the choice, owner, rationale, assumptions, and review point.</li>
-<li><strong>Build-oriented choices:</strong> After recording the decision, move into planning and execution: requirements, milestones, implementation tasks, owners, and validation measures.</li>
+<li><strong>High-consequence or difficult-to-reverse choice:</strong> Run a structured challenge, pre-mortem, or pressure test before commitment. Use this for major strategic bets, public commitments, long-term agreements, major staffing decisions, or choices with broad organizational effects.</li>
+<li><strong>Reversible choice:</strong> Create a right-sized decision record that states the choice, decision owner, rationale, assumptions, expected downside, and review point.</li>
+<li><strong>Build-oriented choice:</strong> After the decision is recorded, move into planning and execution: requirements, milestones, tasks, ownership, and validation measures.</li>
 </ul>
-<p>A useful sequence is: brainstorm options, challenge consequential choices, make the decision, then plan or build. Do not skip the challenge step when the cost of being wrong is high.</p>
+<p>A useful sequence is: brainstorm options, pressure-test consequential choices, make and record the decision, then plan or build. Do not skip the pressure test when the cost of being wrong is high.</p>
 <h3>Quality checks</h3>
 <p>Before sending the response, verify that:</p>
 <ul>
-<li>The options are genuinely distinct rather than variations of one approach.</li>
-<li>The framing reflects the actual decision, not just the first proposed solution.</li>
-<li>The obvious option is included when relevant.</li>
-<li>At least one non-obvious but credible alternative was considered.</li>
-<li>Weaknesses are candid and specific.</li>
+<li>The decision framing reflects the real choice rather than only the requested solution.</li>
+<li>Options are genuinely distinct and not variations in intensity.</li>
+<li>The obvious path and a credible alternative framing have both been considered where relevant.</li>
+<li>Weaknesses are candid, concrete, and proportionate.</li>
 <li>Effort labels are plausible.</li>
 <li>Recommendations follow the user’s stated criteria and constraints rather than default preferences.</li>
-<li>The response does not expose unnecessary private, sensitive, or unrelated information.</li>
+<li>Any retrieved private context was authorized, minimal, and kept within the appropriate access boundary.</li>
+<li>The response ends with a clear choice point rather than unrequested implementation.</li>
 </ul></article><footer><a href="/skills/LICENSE.txt">CC0</a></footer></main><script>document.querySelector('[data-copy]').addEventListener('click',async function(){try{const text=await fetch(this.dataset.copy).then(r=>{if(!r.ok)throw new Error();return r.text()});await navigator.clipboard.writeText(text);this.textContent='Copied'}catch{this.textContent='Open raw Markdown'}})</script></body></html>
