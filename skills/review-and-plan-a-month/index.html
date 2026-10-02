@@ -18,34 +18,35 @@
 <p>Default timing:</p>
 <ul>
 <li>On the first three days of a month, review the prior month and plan the current month.</li>
-<li>In the final week of a month, review the current month to date and plan the next month. Clearly label it as a partial-month review and state the remaining days.</li>
-<li>At other times, ask whether the user wants to review the current month to date or the previous complete month.</li>
+<li>Otherwise, review the current month to date and plan the next month. Clearly label a partial-month review and state the days remaining.</li>
 <li>If the user asks only for forward planning, review first because the evidence should shape the plan. The user may explicitly choose to skip the review.</li>
 </ul>
 <p>State the ranges plainly before proceeding:</p>
 <blockquote>Reviewing <strong>March 2026</strong> (01 Mar–31 Mar). Planning <strong>April 2026</strong>.</blockquote>
-<p>Ask whether “the month” means calendar dates or a practical range that includes an overlapping partial week. Record the actual planning range in the finished plan.</p>
+<p>Ask whether the user means calendar months or a practical range that includes an overlapping partial week. Record the actual planning range in the finished plan.</p>
+<h3>Authorization and privacy</h3>
+<p>Use connected calendars, task systems, journals, health data, project records, or private communications only when the user has a legitimate purpose and clear authorization to access them. Read the minimum sources and fields needed for the review. Do not collect unrelated personal information, reproduce private messages, or expose sensitive details in a shared record.</p>
+<p>When summarizing information about other people, retain only role-relevant facts needed for the plan. Respect consent, access boundaries, and reasonable privacy expectations. If the user cannot authorize access to a source, ask for a user-provided summary instead.</p>
 <h3>Operating rules</h3>
 <ol>
 <li><strong>Read first; discuss second.</strong> Show the evidence picture before asking reflective questions.</li>
 <li><strong>Batch independent reads.</strong> If connected sources exist, gather independent evidence in one initial pass. Do not interrupt the conversation with repeated small lookups.</li>
 <li><strong>Use current commitments.</strong> Assess against the user’s live target, not an old schedule, obsolete project scope, or stale goal record.</li>
 <li><strong>Check data quality before a harsh verdict.</strong> Missing syncs, incomplete logs, delayed updates, and inconsistent sources may distort results. Ask the user to confirm surprising findings.</li>
-<li><strong>Use authorized minimum necessary information.</strong> Access private calendars, journals, health records, tasks, or communications only for a legitimate planning purpose and with clear authorization. Read only the requested date range and fields needed for the review. Do not reproduce unrelated personal details or expose them outside the user’s appropriate access boundary.</li>
 <li><strong>The user chooses.</strong> The assistant calculates, summarizes, identifies gaps, and holds constraints. The user chooses priorities, cuts, and commitments.</li>
 <li><strong>One decision at a time.</strong> Do not move to the next planning decision until the current question has a real answer.</li>
 <li><strong>Stay at month altitude.</strong> Define outcomes, milestones, capacity, structure, and commitments. Leave detailed weekly task blocks to a weekly planning workflow.</li>
 <li><strong>No saved plan without explicit approval.</strong> A plan assembled from notes is a draft, not a decision. The user must restate or materially confirm the theme and commitments, then explicitly approve it.</li>
 <li><strong>Use explicit dates.</strong> Use <strong>DD MMM</strong> format unless the user prefers another unambiguous convention.</li>
 <li><strong>Keep records useful, not exhaustive.</strong> Save decisions, evidence, and constraints rather than a meeting transcript.</li>
-<li><strong>Do not lecture.</strong> Where training, health, recovery, or personal practice is in scope, provide the numbers, direct conclusion, and agreed commitment. Give specialist advice only when asked and appropriate.</li>
+<li><strong>Do not lecture.</strong> Where personal practice, training, health, or recovery is in scope, provide the numbers, the direct conclusion, and the agreed commitment. Give specialist advice only when asked and when appropriate.</li>
 </ol>
 <h3>Step 1: Determine the range and gather evidence</h3>
 <p>Determine the review month, prior comparison month, and planning month. Then make one initial batch of reads where possible.</p>
 <p>Choose sources that match the user’s chosen system: a task manager, project tracker, calendar, spreadsheet, notes application, health tracker, training log, or user-supplied facts. If no source is connected, ask for a short factual inventory. Never imply that unavailable data was checked.</p>
 <div class="table-wrap" tabindex="0" aria-label="Scrollable table"><table><thead><tr><th>Evidence area</th><th>Gather in the initial pass</th></tr></thead><tbody><tr><td>Previous monthly record</td><td>Theme, promised outcomes, commitments, and prior review findings</td></tr><tr><td>Weekly records</td><td>Plans and reviews in the review range; repeated blockers, milestones, and carried work</td></tr><tr><td>Goals</td><td>Active weekly, monthly, quarterly, and annual goals; status, deadlines, and notes</td></tr><tr><td>Work delivered</td><td>Completed tasks, decisions, projects, or deliverables; grouped into useful domains</td></tr><tr><td>Calendar</td><td>Next-month travel, leave, events, fixed deadlines, recurring commitments, and heavy meeting weeks</td></tr><tr><td>Daily signals</td><td>User-selected ratings, focus time, journals, habits, or mood notes</td></tr><tr><td>Sleep and recovery</td><td>Optional sleep duration, sleep quality, and same-source recovery trends</td></tr><tr><td>Training or practice</td><td>Optional sessions from the review and prior months, plus the live commitment or schedule</td></tr></tbody></table></div>
-<p>For large sources, return computed statistics and a few representative themes rather than raw entries. Long journals and month-long event lists can crowd out the review. Use filtered queries, aggregation, summaries, or a delegated helper when available.</p>
-<p>If a helper is used for a large calendar, journal, or task source, give it a narrow brief: use only authorized read access, analyze only the requested date range, omit sensitive details not needed for planning, and return a concise summary rather than raw records. For a calendar, request:</p>
+<p>For large sources, return computed statistics and a few representative themes rather than raw entries. Long journals and month-long event lists can crowd out the actual review. Use filtered queries, aggregation, summaries, or a delegated helper when available.</p>
+<p>If a helper is used for a large calendar or journal source, give it a narrow brief: use only authorized read access, analyze only the requested date range, and return a concise planning summary rather than raw data. The summary should include:</p>
 <ul>
 <li>Fixed multi-day blocks, such as travel, leave, or conferences.</li>
 <li>Approximate meeting load by week.</li>
@@ -199,16 +200,13 @@
 [One named behavior, boundary, or system change.]</code></pre>
 <p>Confirm the save in one line and stop.</p>
 <h3>Step 6: Improve the workflow</h3>
-<p>At the end of every run, capture one precise improvement to the reusable workflow, its templates, or its data mapping. Store it in the user’s chosen workflow document or improvement log. If no suitable location exists, present the proposed edit as a short durable rule the user can save where they prefer.</p>
+<p>At the end of every run, make one precise improvement to the reusable workflow, its templates, or its data mapping. Store it in the user’s chosen workflow document or improvement log. If no suitable location exists, present the proposed edit as a short durable rule the user can save where they prefer.</p>
 <p>Look for a read that was noisy, a wrong data assumption, a misleading metric, a question the user corrected, or a repeatable pattern future sessions should know. Prefer one specific edit over a vague reminder.</p>
-<p>Example improvement log entry:</p>
-<div class="table-wrap" tabindex="0" aria-label="Scrollable table"><table><thead><tr><th>Date</th><th>Observation</th><th>Durable change</th></tr></thead><tbody><tr><td>[DD MMM]</td><td>[A source was incomplete or a planning assumption failed.]</td><td>[One precise rule for future monthly reviews.]</td></tr></tbody></table></div>
 <h3>Audit checks</h3>
 <p>Before finishing, verify:</p>
 <ul>
 <li>Review and planning ranges are explicit.</li>
 <li>Evidence was shown before reflective prompts.</li>
-<li>Only authorized, relevant private information was used.</li>
 <li>Strong verdicts account for known data-quality limits.</li>
 <li>The plan has a named theme and no more than three outcomes.</li>
 <li>Each outcome has a test of done, date, path, owner, and forcing function.</li>
@@ -219,6 +217,7 @@
 <li>Personal or training commitments are specific when in scope.</li>
 <li>The pre-mortem contains counters.</li>
 <li>The user explicitly approved the plan before it was saved.</li>
+<li>Saved records contain only information appropriate for their intended access boundary.</li>
 </ul>
 <h3>Common failure modes</h3>
 <ul>
@@ -233,5 +232,5 @@
 <li>Applying generic productivity rituals instead of fixing the actual drain.</li>
 <li>Overwriting an existing record without resolving the difference.</li>
 <li>Treating a voice note, brainstorm, or imported task list as a confirmed commitment.</li>
-<li>Reading whole journals, calendars, or communications when aggregate measures and a few relevant themes would suffice.</li>
+<li>Reading or saving unnecessary personal details instead of the minimum planning-relevant information.</li>
 </ul></article><footer><a href="/skills/LICENSE.txt">CC0</a></footer></main><script>document.querySelector('[data-copy]').addEventListener('click',async function(){try{const text=await fetch(this.dataset.copy).then(r=>{if(!r.ok)throw new Error();return r.text()});await navigator.clipboard.writeText(text);this.textContent='Copied'}catch{this.textContent='Open raw Markdown'}})</script></body></html>

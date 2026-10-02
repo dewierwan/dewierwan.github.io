@@ -1,17 +1,19 @@
 ---
 name: capture-meeting-actions
-description: Review meeting records, identify genuine unfinished commitments, create clear deduplicated tasks for confident follow-ups, and batch only questions that require judgment.
+description: Review authorized meeting records to identify genuine unfinished commitments, create clear deduplicated tasks for confident follow-ups, and batch only the questions that require user judgment.
 ---
 
 # Capture meeting actions
 
-Turn meeting records into reliable post-meeting follow-up tasks. Use this as a daily sweep, for a selected date range, or for a manually supplied set of meetings.
+Turn authorized meeting records into reliable post-meeting follow-up tasks. Use this as a daily sweep, for a selected date range, or for a manually supplied set of meetings.
 
 The goal is not to convert every discussion into work. Each meeting should result in zero tasks, one combined follow-up, or multiple separate tasks only when there is a genuine, unfinished commitment that should be tracked.
 
 ## Purpose and operating rules
 
-Before each run, remember these outcomes:
+Use this workflow only for a legitimate work purpose and when you are authorized to access the relevant meeting records. Inspect only the minimum sources needed to establish ownership, commitment, timing, and context. Do not copy unrelated personal, confidential, or sensitive details into a task system. Keep task content within the access boundary appropriate for the audience of that system.
+
+Before each run, apply these outcomes:
 
 - **0 tasks** when work was completed in the meeting, belongs to another owner, is already tracked, or the meeting was only for information gathering.
 - **1 task** when related actions can be completed together for the same person or group on the same time horizon.
@@ -19,16 +21,16 @@ Before each run, remember these outcomes:
 
 Use this evidence order when sources conflict:
 
-1. **Transcript or recording-derived text**: strongest evidence of who agreed to do what and when.
-2. **Human-written notes**: useful supporting evidence, especially explicit action sections.
-3. **Automated summary**: useful for orientation, but not authoritative for ownership.
-4. **Pre-meeting agenda**: describes intended discussion, not a commitment.
+1. **Transcript or recording-derived text:** strongest evidence of who agreed to do what and when.
+2. **Human-written notes:** useful supporting evidence, especially explicit action sections.
+3. **Automated summary:** useful for orientation, but not authoritative for ownership.
+4. **Pre-meeting agenda:** describes intended discussion, not a commitment.
 
 Automated summaries often misattribute work, especially in recurring one-to-ones, brainstorming sessions, and meetings where attendees list their own to-dos. Never create a task solely because a summary labels it as an action item. Confirm the owner in the transcript or reliable notes.
 
 Track unfinished outcomes, not conversation. Skip work that was completed live, delegated to another owner, already tracked elsewhere, or merely discussed. An idea, a statement of interest, or an open question is not a task unless someone accepted responsibility for a concrete outcome.
 
-Apply known delegation boundaries supplied by the user or organization. Attendance at a meeting does not make the user accountable for all work in that area.
+Apply known responsibility and delegation boundaries supplied by the user or organization. Attendance at a meeting does not make the user accountable for all work in that area.
 
 ## 1. Select the meetings
 
@@ -62,6 +64,8 @@ For long transcripts, use a repeatable search, extraction, or chunking method ra
 
 Review summary action items as candidates, then verify them against the transcript and surrounding conversation. A promise may have been conditional, reassigned, fulfilled live, or directed at another attendee.
 
+When reading records containing sensitive information, retain only the details necessary to complete the proposed follow-up. Do not reproduce health, family, compensation, immigration, performance, or other sensitive details unless they are directly necessary, authorized, and appropriate for the destination task system.
+
 ## 3. Triage each meeting
 
 Classify the meeting loosely. Classification provides a starting expectation, not a rule that overrides evidence.
@@ -82,7 +86,7 @@ For every meeting, identify:
 - Work delegated to another named owner
 - Explicit future commitments and timing
 - Enough neutral context for a task to remain understandable weeks later
-- Source and related links
+- Source and related links that the task audience is permitted to access
 
 Create no task when work was completed live, another person owns it, the meeting was purely informational and any needed synthesis is already recorded, the action is covered by an active task, or the statement was not a commitment.
 
@@ -108,7 +112,7 @@ Use the user’s chosen task system and field names. At minimum, capture:
 - **Due date:** based on an explicit commitment whenever possible.
 - **Priority:** use the user’s scale; default to normal important work and reserve the highest level for a real deadline, material risk, or waiting counterparty.
 - **Time estimate:** realistic minutes.
-- **Notes:** context, action checklist, communication drafts, and links.
+- **Notes:** context, action checklist, communication drafts, and authorized links.
 
 ### Due-date rules
 
@@ -124,7 +128,8 @@ Do not raise priority merely because capture happened late.
 
 ```markdown
 [Two or three sentences of time-independent context. Include relevant absolute
-dates, why this matters, the commitment, and any necessary sensitivity.]
+dates, why this matters, the commitment, and any necessary sensitivity. Omit
+unrelated personal or confidential details.]
 
 ## Actions
 - [Concrete action]
@@ -142,8 +147,8 @@ Best,
 [Sender]
 
 ## Links
-- Meeting record: <link>
-- Related document: <link>
+- Meeting record: <authorized link>
+- Related document: <authorized link>
 ```
 
 Avoid unnecessary private discussion in a task system that may be broadly visible. Follow the user’s known writing preferences. Otherwise, draft concise, warm, professional messages with a clear request or promised deliverable. If the task is to send a message, write a ready-to-send draft rather than merely saying “email them.” For introductions, use double opt-in: seek permission from each relevant party before connecting them.
@@ -154,11 +159,15 @@ Run one batched search of active tasks before creating new ones. Search by meeti
 
 Treat an active task as a duplicate when it covers the same outcome, not merely when its wording matches. Skip the new task, or update the existing task if the meeting adds a meaningful action, deadline, or context. Record the duplicate decision so it can be reported clearly.
 
+Do not use broad searches that expose unrelated tasks or records when narrower identifiers, permitted links, or topic terms are sufficient.
+
 ## 7. Create confident tasks
 
 Create high-confidence tasks in a batch when possible. If the environment supports opening created records, open them in the selected task system rather than filling the status update with management links.
 
 For every skipped meeting, give a brief reason, such as “No out-of-meeting commitment,” “Completed during the call,” “Owned by another role,” or “Already covered by an active task.”
+
+Before creation, perform a final check that task notes do not reveal information beyond what the task recipient needs to act. Use neutral wording where a sensitive discussion can be summarized by its required action alone.
 
 ## 8. Batch uncertain questions
 
@@ -180,11 +189,11 @@ Wait for answers before creating uncertain tasks. After answers arrive, create o
 
 Before declaring the run complete, capture lessons that genuinely improve future runs. Keep this separate from the meeting task itself.
 
-- Add a short example or note to a reusable meeting-archetype reference when a recurring pattern affects triage, such as a common attribution error, reliable sign of in-meeting completion, or an archetype exception.
+- Add a short generalized note to a reusable meeting-archetype reference when a recurring pattern affects triage, such as a common attribution error, reliable sign of in-meeting completion, or an archetype exception.
 - Update the core workflow only for cross-cutting principles, changed defaults, or a new required step.
-- Record a new delegation boundary in the user’s or organization’s maintained responsibility reference when it applies beyond one meeting.
+- Record a new responsibility boundary in the user’s or organization’s maintained responsibility reference when it applies beyond one meeting.
 
-Do not turn one-off facts into permanent rules. Small additions to an examples or patterns reference can be made directly. Ask for confirmation before structural workflow changes, such as adding or removing steps or changing the evidence order. Briefly report any reusable guidance added or changed.
+Do not turn one-off facts, names, or confidential circumstances into permanent rules. Small additions to a patterns reference can be made directly. Ask for confirmation before structural workflow changes, such as adding or removing steps or changing the evidence order. Briefly report any reusable guidance added or changed.
 
 ## 10. Audit and report
 
@@ -196,8 +205,9 @@ Before finishing, verify that:
 - Active duplicates were not recreated.
 - Titles are action-oriented and notes stand alone.
 - Dates, priority, and estimates are plausible.
-- Each task links to its source record.
+- Each task links only to source records the task audience may access.
 - Message drafts are ready to send and follow the user’s preferences.
+- Notes contain no unnecessary sensitive or unrelated personal information.
 - Every uncertain item is either asked as a specific question or explicitly deferred.
 
 Report the essential outcome only: meetings reviewed, tasks created or updated with due dates, skipped items with brief reasons, unresolved questions, and any reusable guidance changes. Keep status updates terse and factual.
