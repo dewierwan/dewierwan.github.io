@@ -1,6 +1,6 @@
 ---
 name: review-and-plan-a-month
-description: Close one month honestly, then create a small, capacity-checked, explicitly approved plan for the next month using evidence, trade-offs, and concrete commitments.
+description: Close one month honestly, then create a small, capacity-checked and explicitly approved plan for the next month using evidence, trade-offs, and concrete commitments.
 ---
 
 # Review and plan a month
@@ -36,12 +36,6 @@ State the ranges plainly before proceeding:
 > Reviewing **March 2026** (01 Mar–31 Mar). Planning **April 2026**.
 
 Ask whether the user means calendar months or a practical range that includes an overlapping partial week. Record the actual planning range in the finished plan.
-
-## Authorization and privacy
-
-Use connected calendars, task systems, journals, health data, project records, or private communications only when the user has a legitimate purpose and clear authorization to access them. Read the minimum sources and fields needed for the review. Do not collect unrelated personal information, reproduce private messages, or expose sensitive details in a shared record.
-
-When summarizing information about other people, retain only role-relevant facts needed for the plan. Respect consent, access boundaries, and reasonable privacy expectations. If the user cannot authorize access to a source, ask for a user-provided summary instead.
 
 ## Operating rules
 
@@ -309,7 +303,6 @@ Before finishing, verify:
 - Personal or training commitments are specific when in scope.
 - The pre-mortem contains counters.
 - The user explicitly approved the plan before it was saved.
-- Saved records contain only information appropriate for their intended access boundary.
 
 ## Common failure modes
 
@@ -324,4 +317,3 @@ Before finishing, verify:
 - Applying generic productivity rituals instead of fixing the actual drain.
 - Overwriting an existing record without resolving the difference.
 - Treating a voice note, brainstorm, or imported task list as a confirmed commitment.
-- Reading or saving unnecessary personal details instead of the minimum planning-relevant information.

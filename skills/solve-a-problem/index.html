@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="robots" content="noindex,nofollow,noarchive"><title>Solve a problem · AI skills</title><meta name="description" content="Take a non-trivial product, technical, process, or automation problem from diagnosis through options, implementation, verification, and handoff, with support for analysis-only work and explicit decisions for hard-to-reverse commitments.">
-<link rel="alternate" type="text/markdown" href="/skills/raw/solve-a-problem.md"><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%23b4552d%22/><text x=%2250%22 y=%2253%22 dominant-baseline=%22central%22 text-anchor=%22middle%22 font-family=%22Georgia, 'Times New Roman', serif%22 font-size=%2246%22 letter-spacing=%221%22 fill=%22%23fdfaf4%22>DE</text></svg>"><link rel="stylesheet" href="/skills/styles.css"></head><body><main><a class="back" href="/skills/">← Skills</a><header class="skill-header"><h1>Solve a problem</h1><p class="description">Take a non-trivial product, technical, process, or automation problem from diagnosis through options, implementation, verification, and handoff, with support for analysis-only work and explicit decisions for hard-to-reverse commitments.</p><div class="skill-actions"><a href="/skills/raw/solve-a-problem.md">Raw Markdown</a><button class="copy" type="button" data-copy="/skills/raw/solve-a-problem.md">Copy Markdown</button></div></header><article class="skill-body"><p>Use this workflow for a non-trivial build, integration, automation, process, or operational problem whose solution is not already obvious. Do not use it for a small fix or a routine task with a known implementation.</p>
+<meta name="robots" content="noindex,nofollow,noarchive"><title>Solve a problem · AI skills</title><meta name="description" content="Take a non-trivial product, technical, process, or automation problem from diagnosis through options, implementation, verification, and handoff. The workflow supports analysis-only work when requested.">
+<link rel="alternate" type="text/markdown" href="/skills/raw/solve-a-problem.md"><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%23b4552d%22/><text x=%2250%22 y=%2253%22 dominant-baseline=%22central%22 text-anchor=%22middle%22 font-family=%22Georgia, 'Times New Roman', serif%22 font-size=%2246%22 letter-spacing=%221%22 fill=%22%23fdfaf4%22>DE</text></svg>"><link rel="stylesheet" href="/skills/styles.css"></head><body><main><a class="back" href="/skills/">← Skills</a><header class="skill-header"><h1>Solve a problem</h1><p class="description">Take a non-trivial product, technical, process, or automation problem from diagnosis through options, implementation, verification, and handoff. The workflow supports analysis-only work when requested.</p><div class="skill-actions"><a href="/skills/raw/solve-a-problem.md">Raw Markdown</a><button class="copy" type="button" data-copy="/skills/raw/solve-a-problem.md">Copy Markdown</button></div></header><article class="skill-body"><p>Use this workflow for a non-trivial build, integration, automation, process, or operational problem whose solution is not already obvious. Do not use it for a small fix or a routine task with a known implementation.</p>
 <p>By default, work from understanding through implementation. If the user asks for analysis only, stop after the recommendation and wait for a decision.</p>
 <h3>1. Understand the problem</h3>
-<p>Start with the underlying problem, not the user&#39;s first proposed solution. If they ask to “build X,” work backward:</p>
+<p>Start with the underlying problem, not the user&#39;s first proposed solution. If they ask to &quot;build X,&quot; work backward:</p>
 <ul>
 <li>Who experiences the problem?</li>
 <li>What are they trying to accomplish?</li>
@@ -14,26 +14,18 @@
 <li>What outcome would make the problem meaningfully better?</li>
 </ul>
 <p>Write a concise problem statement and descriptive requirements. Describe the desired outcome and constraints, not an assumed implementation. If the proposed solution appears mismatched to the problem, say so directly.</p>
-<p>Ask only for information that cannot be found in the available, authorized context, documentation, code, or records. When reviewing private communications or records about people, do so only for a legitimate purpose with clear authorization. Use the minimum relevant sources and information, omit unrelated sensitive details, respect consent and privacy expectations, and keep findings within the appropriate access boundary.</p>
+<p>Ask only for information that cannot be found in the available context, documentation, code, or records.</p>
 <h3>2. Assess whether to solve it now</h3>
-<p>Assess severity, frequency, affected users, opportunity cost, and available alternatives. Include <strong>do nothing</strong> or <strong>deprioritize</strong> as a real option when the issue is rare, low-cost, or adequately handled by a workaround.</p>
+<p>Assess severity, frequency, affected users, opportunity cost, and available alternatives. Include “do nothing” or “deprioritize” as a real option when the issue is rare, low-cost, or adequately handled by a workaround.</p>
 <p>Distinguish reversible decisions from expensive commitments:</p>
 <ul>
-<li><strong>Reversible decisions:</strong> Small, easy-to-change choices. Use reasonable judgment, choose, and move forward.</li>
-<li><strong>Hard-to-reverse decisions:</strong> Public interfaces, persistent data changes, long-lived configuration, migrations, external contracts, security boundaries, or vendor commitments. Pause and obtain an explicit decision before implementing. Record the decision and its rationale when appropriate.</li>
+<li><strong>Reversible decisions:</strong> small, easy-to-change choices. Use reasonable judgment, choose, and move forward.</li>
+<li><strong>Hard-to-reverse decisions:</strong> public interfaces, persistent data changes, long-lived configuration, migrations, external contracts, security boundaries, or vendor commitments. Pause and obtain an explicit decision before implementing. Record the decision and its rationale when appropriate.</li>
 </ul>
-<p>If priority or direction is unclear, present the tradeoff and ask the responsible decision-maker to choose before doing substantial design or implementation work. Enter implementation only after the direction is sufficiently committed.</p>
+<p>If priority or direction is unclear, present the tradeoff and ask the responsible decision-maker to choose before doing substantial design or implementation work.</p>
 <h3>3. Research the current context</h3>
 <p>Read the relevant project instructions, architecture notes, repository guidance, service documentation, existing code, tests, operational procedures, and prior attempts. Look for established patterns and reusable components before inventing new ones.</p>
-<p>Understand constraints such as compatibility requirements, deployment practices, security expectations, supported environments, ownership boundaries, monitoring, and maintenance capacity. Use the system&#39;s existing conventions unless there is a strong reason to change them.</p>
-<p>Research should answer:</p>
-<ul>
-<li>What already solves part of this problem?</li>
-<li>What has been attempted, and what did it reveal?</li>
-<li>Which components, interfaces, data, or workflows would be affected?</li>
-<li>What assumptions are uncertain and need validation?</li>
-<li>What can break, and how would that be detected or reversed?</li>
-</ul>
+<p>Understand constraints such as compatibility requirements, deployment practices, security expectations, supported environments, ownership boundaries, and monitoring. Use the system&#39;s existing conventions unless there is a strong reason to change them.</p>
 <h3>4. Define evaluation criteria</h3>
 <p>Define lightweight, explicit criteria before generating solutions. For example:</p>
 <ul>
@@ -43,7 +35,7 @@
 <li>Must have a clear verification method.</li>
 <li>Must be removable or reversible if it fails.</li>
 </ul>
-<p>Include criteria specific to the problem, such as accessibility, latency, reliability, privacy, cost, or operator effort. These criteria guide both option generation and selection. Without them, the first plausible idea can win by accident.</p>
+<p>These criteria guide both option generation and selection. Without them, the first plausible idea can win by accident.</p>
 <h3>5. Generate varied approaches</h3>
 <p>Generate genuinely different approaches, not minor variations of the same design. Consider:</p>
 <ol>
@@ -53,7 +45,7 @@
 <li>A larger integrated solution.</li>
 <li>Build, buy, or integrate with an existing service.</li>
 </ol>
-<p>For especially ambiguous problems, generate a wider set of candidates before narrowing. Keep each option short: what it is, what it solves, major costs, key risks, and reversibility.</p>
+<p>For especially ambiguous problems, generate a wider set of candidates before narrowing. Keep each option short: what it is, what it solves, major costs, and key risks.</p>
 <h4>Design principles for technical options</h4>
 <ul>
 <li>Prefer one understandable code path over special cases that behave differently depending on runtime conditions.</li>
@@ -73,17 +65,9 @@
 <li>Evaluation criteria.</li>
 <li>The viable options and tradeoffs.</li>
 <li>One clear recommendation and why it is preferred.</li>
-<li>Important risks, irreversible consequences, assumptions, and open decisions.</li>
+<li>Important risks, irreversible consequences, and open decisions.</li>
 </ul>
 <p>Keep proposals direct and short. Store the proposal in the user&#39;s chosen shared documentation system when durable review or collaboration is needed; otherwise provide it in the current workspace. Use a clear, date-prefixed title such as <code>DD MMM YYYY: Solve — topic</code>.</p>
-<p>Before recommending implementation, confirm that the proposal:</p>
-<ul>
-<li>Addresses the underlying problem rather than merely the requested mechanism.</li>
-<li>Meets the stated criteria better than the alternatives.</li>
-<li>Does not introduce an unapproved hard-to-reverse commitment.</li>
-<li>Has a credible test, rollout, and rollback approach.</li>
-<li>Identifies any decision that still requires an owner.</li>
-</ul>
 <p>If this is analysis-only work, stop here.</p>
 <h3>7. Plan, implement, and verify</h3>
 <p>For larger work, create an implementation plan before changing the system. Include scope, ordered steps, affected components, migration or rollback strategy, test strategy, deployment steps, and ownership of follow-up actions. Keep the plan where reviewers can edit and approve it.</p>
@@ -98,15 +82,4 @@
 <li>Any required user action, rollout step, or monitoring.</li>
 <li>Links or references to the proposal, plan, and change set when applicable.</li>
 </ul>
-<p>Keep the handoff focused on outcomes and operationally useful detail. Avoid burying the reader in temporary implementation notes.</p>
-<h3>Failure modes to avoid</h3>
-<ul>
-<li>Treating a requested solution as proof that it is the right problem to solve.</li>
-<li>Skipping priority assessment and spending effort on a weak or avoidable problem.</li>
-<li>Implementing a public, persistent, contractual, or migration-heavy change without explicit approval.</li>
-<li>Choosing the first plausible technical design without criteria or alternatives.</li>
-<li>Adding configuration, branches, or abstractions that create permanent complexity without a demonstrated need.</li>
-<li>Hiding invalid states or programming errors behind broad error handling and misleading fallback behavior.</li>
-<li>Declaring completion without evidence from relevant tests or verification.</li>
-<li>Sharing private or sensitive information beyond the authorized purpose and audience.</li>
-</ul></article><footer><a href="/skills/LICENSE.txt">CC0</a></footer></main><script>document.querySelector('[data-copy]').addEventListener('click',async function(){try{const text=await fetch(this.dataset.copy).then(r=>{if(!r.ok)throw new Error();return r.text()});await navigator.clipboard.writeText(text);this.textContent='Copied'}catch{this.textContent='Open raw Markdown'}})</script></body></html>
+<p>Keep the handoff focused on outcomes and operationally useful detail. Avoid burying the reader in temporary implementation notes.</p></article><footer><a href="/skills/LICENSE.txt">CC0</a></footer></main><script>document.querySelector('[data-copy]').addEventListener('click',async function(){try{const text=await fetch(this.dataset.copy).then(r=>{if(!r.ok)throw new Error();return r.text()});await navigator.clipboard.writeText(text);this.textContent='Copied'}catch{this.textContent='Open raw Markdown'}})</script></body></html>

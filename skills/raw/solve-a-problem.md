@@ -1,6 +1,6 @@
 ---
 name: solve-a-problem
-description: Take a non-trivial product, technical, process, or automation problem from diagnosis through options, implementation, verification, and handoff, with support for analysis-only work and explicit decisions for hard-to-reverse commitments.
+description: Take a non-trivial product, technical, process, or automation problem from diagnosis through options, implementation, verification, and handoff. The workflow supports analysis-only work when requested.
 ---
 
 # Solve a problem
@@ -11,7 +11,7 @@ By default, work from understanding through implementation. If the user asks for
 
 ## 1. Understand the problem
 
-Start with the underlying problem, not the user's first proposed solution. If they ask to “build X,” work backward:
+Start with the underlying problem, not the user's first proposed solution. If they ask to "build X," work backward:
 
 - Who experiences the problem?
 - What are they trying to accomplish?
@@ -22,32 +22,24 @@ Start with the underlying problem, not the user's first proposed solution. If th
 
 Write a concise problem statement and descriptive requirements. Describe the desired outcome and constraints, not an assumed implementation. If the proposed solution appears mismatched to the problem, say so directly.
 
-Ask only for information that cannot be found in the available, authorized context, documentation, code, or records. When reviewing private communications or records about people, do so only for a legitimate purpose with clear authorization. Use the minimum relevant sources and information, omit unrelated sensitive details, respect consent and privacy expectations, and keep findings within the appropriate access boundary.
+Ask only for information that cannot be found in the available context, documentation, code, or records.
 
 ## 2. Assess whether to solve it now
 
-Assess severity, frequency, affected users, opportunity cost, and available alternatives. Include **do nothing** or **deprioritize** as a real option when the issue is rare, low-cost, or adequately handled by a workaround.
+Assess severity, frequency, affected users, opportunity cost, and available alternatives. Include “do nothing” or “deprioritize” as a real option when the issue is rare, low-cost, or adequately handled by a workaround.
 
 Distinguish reversible decisions from expensive commitments:
 
-- **Reversible decisions:** Small, easy-to-change choices. Use reasonable judgment, choose, and move forward.
-- **Hard-to-reverse decisions:** Public interfaces, persistent data changes, long-lived configuration, migrations, external contracts, security boundaries, or vendor commitments. Pause and obtain an explicit decision before implementing. Record the decision and its rationale when appropriate.
+- **Reversible decisions:** small, easy-to-change choices. Use reasonable judgment, choose, and move forward.
+- **Hard-to-reverse decisions:** public interfaces, persistent data changes, long-lived configuration, migrations, external contracts, security boundaries, or vendor commitments. Pause and obtain an explicit decision before implementing. Record the decision and its rationale when appropriate.
 
-If priority or direction is unclear, present the tradeoff and ask the responsible decision-maker to choose before doing substantial design or implementation work. Enter implementation only after the direction is sufficiently committed.
+If priority or direction is unclear, present the tradeoff and ask the responsible decision-maker to choose before doing substantial design or implementation work.
 
 ## 3. Research the current context
 
 Read the relevant project instructions, architecture notes, repository guidance, service documentation, existing code, tests, operational procedures, and prior attempts. Look for established patterns and reusable components before inventing new ones.
 
-Understand constraints such as compatibility requirements, deployment practices, security expectations, supported environments, ownership boundaries, monitoring, and maintenance capacity. Use the system's existing conventions unless there is a strong reason to change them.
-
-Research should answer:
-
-- What already solves part of this problem?
-- What has been attempted, and what did it reveal?
-- Which components, interfaces, data, or workflows would be affected?
-- What assumptions are uncertain and need validation?
-- What can break, and how would that be detected or reversed?
+Understand constraints such as compatibility requirements, deployment practices, security expectations, supported environments, ownership boundaries, and monitoring. Use the system's existing conventions unless there is a strong reason to change them.
 
 ## 4. Define evaluation criteria
 
@@ -59,7 +51,7 @@ Define lightweight, explicit criteria before generating solutions. For example:
 - Must have a clear verification method.
 - Must be removable or reversible if it fails.
 
-Include criteria specific to the problem, such as accessibility, latency, reliability, privacy, cost, or operator effort. These criteria guide both option generation and selection. Without them, the first plausible idea can win by accident.
+These criteria guide both option generation and selection. Without them, the first plausible idea can win by accident.
 
 ## 5. Generate varied approaches
 
@@ -71,7 +63,7 @@ Generate genuinely different approaches, not minor variations of the same design
 4. A larger integrated solution.
 5. Build, buy, or integrate with an existing service.
 
-For especially ambiguous problems, generate a wider set of candidates before narrowing. Keep each option short: what it is, what it solves, major costs, key risks, and reversibility.
+For especially ambiguous problems, generate a wider set of candidates before narrowing. Keep each option short: what it is, what it solves, major costs, and key risks.
 
 ### Design principles for technical options
 
@@ -93,17 +85,9 @@ Compare each viable option against the criteria from Step 4. Present a concise p
 - Evaluation criteria.
 - The viable options and tradeoffs.
 - One clear recommendation and why it is preferred.
-- Important risks, irreversible consequences, assumptions, and open decisions.
+- Important risks, irreversible consequences, and open decisions.
 
 Keep proposals direct and short. Store the proposal in the user's chosen shared documentation system when durable review or collaboration is needed; otherwise provide it in the current workspace. Use a clear, date-prefixed title such as `DD MMM YYYY: Solve — topic`.
-
-Before recommending implementation, confirm that the proposal:
-
-- Addresses the underlying problem rather than merely the requested mechanism.
-- Meets the stated criteria better than the alternatives.
-- Does not introduce an unapproved hard-to-reverse commitment.
-- Has a credible test, rollout, and rollback approach.
-- Identifies any decision that still requires an owner.
 
 If this is analysis-only work, stop here.
 
@@ -126,14 +110,3 @@ Report:
 - Links or references to the proposal, plan, and change set when applicable.
 
 Keep the handoff focused on outcomes and operationally useful detail. Avoid burying the reader in temporary implementation notes.
-
-## Failure modes to avoid
-
-- Treating a requested solution as proof that it is the right problem to solve.
-- Skipping priority assessment and spending effort on a weak or avoidable problem.
-- Implementing a public, persistent, contractual, or migration-heavy change without explicit approval.
-- Choosing the first plausible technical design without criteria or alternatives.
-- Adding configuration, branches, or abstractions that create permanent complexity without a demonstrated need.
-- Hiding invalid states or programming errors behind broad error handling and misleading fallback behavior.
-- Declaring completion without evidence from relevant tests or verification.
-- Sharing private or sensitive information beyond the authorized purpose and audience.

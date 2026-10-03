@@ -1,22 +1,23 @@
 ---
 name: make-a-decision
-description: Match decision-making rigor to stakes and reversibility, then make, record, and review meaningful choices without inventing the user’s views or exposing sensitive information.
+description: Match decision-making rigor to stakes and reversibility, then make, record, and review meaningful choices without inventing the decision-maker’s views or exposing sensitive information.
 ---
 
 # Make a decision
 
-Use this workflow to make decisions with the right amount of rigor. The goal is not maximum analysis. It is to make a clear call when ready, preserve reasoning for meaningful choices, and learn from outcomes.
+Use this workflow to make decisions with the right amount of rigor. The goal is not maximum analysis: make small choices quickly, use stronger safeguards for consequential choices, preserve reasoning when a record is useful, and learn from outcomes.
 
 ## Core rules
 
 1. **Match rigor to stakes and reversibility.** Most choices should take minutes, not days.
-2. **The user owns their position.** Never state, record, or imply that the user believes, prefers, or decided something they did not actually say.
-3. **Separate advice from attribution.** The assistant may recommend an option in conversation, clearly labeled as assistant analysis. Put that analysis in a decision record only if the user asks for it.
+2. **The decision-maker owns their position.** Never state, record, or imply that a person believes, prefers, or decided something they did not actually say.
+3. **Separate advice from attribution.** Assistant recommendations belong in conversation and must be labeled **Assistant analysis**. Add them to a decision record only when the user asks for them there.
 4. **Do not confuse a task with a decision.** If there is no meaningful alternative, this is execution. Plan or do the task instead of opening a decision process.
 5. **Record only with permission.** “Should we do X?” requests analysis, not creation of a record. Create or update a decision record only when the user asks to log, track, open, or commit it, or has explicitly agreed to that practice.
-6. **Protect privacy and access boundaries.** Before accessing shared communications, personnel records, customer information, or a shared decision register, ensure there is a legitimate purpose and clear authorization. Use only the minimum relevant sources and information. Omit unrelated sensitive details.
+6. **Protect privacy and access boundaries.** Before accessing shared communications, personnel records, customer information, or a shared decision register, confirm a legitimate purpose and clear authorization. Use only the minimum relevant sources and information; omit unrelated personal or sensitive details.
+7. **Do not deliberate forever.** Once the appropriate rigor and readiness gates are satisfied, state the decision and move forward.
 
-If an organization uses a shared decision register, confirm that its audience is appropriate before writing to it. For sensitive topics such as health, relationships, compensation, or confidential personnel matters, offer a private record or keep the discussion in chat.
+If a record is visible to others, confirm that its audience is appropriate before writing. For sensitive subjects such as health, relationships, compensation, or confidential personnel matters, offer a private record or keep the discussion in chat.
 
 ## 1. Choose the mode
 
@@ -29,7 +30,7 @@ Determine whether this is a new or existing decision.
 
 If the user explicitly names the mode, follow that instruction. Otherwise, if authorized, search the available decision register for overlapping decisions before creating a duplicate.
 
-For a resume, fetch the existing record and append new information rather than overwriting history. For a review, use the original prediction and reasoning as the baseline rather than reconstructing them from memory.
+For a resume, retrieve the existing record and append new information rather than overwriting history. For a review, use the original prediction and reasoning as the baseline rather than reconstructing them from memory.
 
 ## 2. Frame the decision
 
@@ -38,17 +39,17 @@ Write the question in a decidable form. Establish:
 - What choice is being made?
 - Who has final decision authority?
 - What are the realistic options, including doing nothing?
-- What is the deadline or decision trigger?
+- What deadline, event, or trigger requires a decision?
 - What result is desired?
 - What happens if no action is taken?
 
-If the question is broad and no credible options exist yet, generate options before evaluating them. Do not pressure-test a vague problem statement.
+If the question is broad and credible options do not yet exist, generate options before evaluating them. Do not pressure-test a vague problem statement.
 
-If the request has only one viable path, say so directly: “This appears to be a task rather than a decision. The next step is to plan or execute it.”
+If there is only one viable path, say so directly: “This appears to be a task rather than a decision. The next step is to plan or execute it.”
 
 ## 3. Classify scope
 
-Ask one clarifying question at a time when needed. Put the choice in one bucket.
+Ask one clarifying question at a time if classification is unclear. Put the decision in one bucket.
 
 | Bucket | Meaning | Treatment |
 |---|---|---|
@@ -57,7 +58,7 @@ Ask one clarifying question at a time when needed. Put the choice in one bucket.
 | Hard to reverse | Meaningful cost, disruption, or loss if undone | Full analysis, challenge the leading option, consult relevant stakeholders |
 | Direction-setting | Shapes strategy, culture, finances, or operating model for an extended period | Full analysis, explicit dissent, and named prerequisite conversations |
 
-Use this test if classification is unclear: **What would it cost to unwind this?** Consider money, time, trust, operational disruption, opportunity cost, and reputational effects. If the cost cannot be stated quickly or is uncertain, the decision is probably larger than it first appears.
+Use this test when needed: **What would it cost to unwind this?** Consider money, time, trust, operational disruption, opportunity cost, and reputational effects. If the cost cannot be stated quickly or remains uncertain, the decision is probably larger than it first appears.
 
 | Bucket | Typical stakes | Typical reversibility |
 |---|---|---|
@@ -70,14 +71,14 @@ Use this test if classification is unclear: **What would it cost to unwind this?
 
 ### Trivial
 
-Pick a reasonable default, give a one-sentence rationale, and move on. If the user is stalling, name the cost of delay: continued attention may cost more than an imperfect choice.
+Pick a reasonable default, give a one-sentence rationale, and move on. Do not create a decision record by default. If the user is stalling, name the cost of delay: continued attention may cost more than an imperfect choice.
 
 ### Reversible
 
 In a short working session:
 
 1. List two or three realistic options.
-2. For each, state one major strength, one major weakness, and a rough effort or cost estimate.
+2. For each option, state one major strength, one major weakness, and a rough effort or cost estimate.
 3. Recommend an option and name the decisive reason.
 4. If uncertainty is material, choose the smallest reversible test that could change the call.
 
@@ -91,7 +92,7 @@ If no relevant pressure test has occurred in the current work context, stop the 
 
 Do not continue merely because the user is in a hurry. Proceed only after the pressure test is complete or the user explicitly overrides it with a reason.
 
-If the pressure test identifies a serious unresolved failure, do not force a decision. Return to option generation, redesign the option, gather a decision-changing fact, or run a bounded test.
+If the pressure test finds a serious unresolved failure, do not force a decision. Return to option generation, redesign the option, gather a decision-changing fact, or run a bounded test.
 
 After the gate is satisfied:
 
@@ -107,7 +108,7 @@ Use the hard-to-reverse process plus two readiness gates:
 1. Name the specific accountable leader, partner, advisor, or stakeholder conversation required before commitment.
 2. Ask who disagrees and capture their strongest case fairly.
 
-The decision is not ready until the required conversation has happened, unless the user explicitly accepts and records a reason for proceeding without it. If it is being rushed, state which consultation, evidence, or dissent is being skipped and why it matters.
+The decision is not ready until the required conversation has happened, unless the user explicitly accepts and records a reason for proceeding without it. If it is being rushed, identify which consultation, evidence, or dissent is being skipped and why it matters.
 
 ## 5. Analyze without manufacturing certainty
 
@@ -124,11 +125,11 @@ Choose criteria before comparing options. Separate non-negotiable requirements f
 
 Keep these categories distinct:
 
-- **User’s stated view:** Only positions the user actually expressed.
+- **Decision-maker’s stated view:** Only positions the decision-maker actually expressed.
 - **Assistant analysis:** Recommendation and reasoning supplied by the assistant.
 - **Open question:** Uncertainty not yet resolved.
 
-If the user has not expressed a position, write “No position stated yet” or leave the user-position field blank. Never invent a lean, confidence level, rationale, response to dissent, or final choice for them.
+If the decision-maker has not expressed a position, write “No position stated yet” or leave that field blank. Never invent a lean, confidence level, rationale, response to dissent, or final choice for them.
 
 ## 6. Commit and record
 
@@ -140,18 +141,31 @@ Before finalizing, confirm:
 - What would change the decision?
 - Who owns the next action, and by when?
 - What observable result is predicted?
-- What is the user’s confidence in that prediction?
+- What is the decision-maker’s confidence in that prediction?
 
 For meaningful decisions, make the prediction testable:
 
 > By [date or trigger], [observable outcome] will happen or not happen.  
 > Confidence: [percentage].
 
-Use the user’s chosen decision register, document system, or private file. A useful record contains status, domain, stakes, reversibility, decision date, review date, confidence, and outcome.
+Use the user’s chosen decision register, document system, or private file. A useful record has the following metadata.
 
-Suggested review defaults are one month for reversible decisions, three months for hard-to-reverse decisions, and six months for direction-setting decisions. Adjust these dates when the user identifies a meaningful business, operational, or personal trigger. Use a calendar, task system, or other reminder mechanism for high-stakes reviews.
+| Field | Suggested values or rule |
+|---|---|
+| Status | Open; Resolved: Yes; Resolved: No |
+| Type | Relevant domain, such as strategy, product, finance, operations, people, or personal |
+| Reversibility | One-way; Hard; Reversible |
+| Stakes | Low; Medium; High; Direction-setting |
+| Outcome | Too early; Correct; Incorrect; Mixed; Not applicable |
+| Decision date | The date the decision-maker actually made the call |
+| Review date | The agreed retrospective date or trigger |
+| Confidence | The decision-maker’s confidence in the prediction at decision time |
 
-For a new open decision, record context, current options, and new inputs. Leave commitment sections blank until the user commits. When resuming, append a new dated thinking-log entry rather than rewriting history.
+A decision does not need to be a yes-or-no question. For a question such as “How should we restructure planning?”, mark it **Resolved: Yes** once a direction has been selected. Status means whether a decision was made, not whether the wording of the question was binary.
+
+Suggested review defaults are one month for reversible decisions, three months for hard-to-reverse decisions, and six months for direction-setting decisions. If the user names a more meaningful event or trigger, use that instead. For hard-to-reverse and direction-setting commitments, create a reminder in the user’s chosen calendar, task system, or equivalent reminder method. A review-date field alone may be enough for a reversible decision.
+
+### Decision record template
 
 ```markdown
 ## Context
@@ -163,16 +177,16 @@ Why this decision exists and why it matters now.
 - **Option C:** What it is and its central tradeoff.
 
 ## Thinking log
-### [Date]
+### [YYYY-MM-DD]
 - New inputs, conversations, data, or events
 - How the thinking changed
-- User’s stated position today: open / leaning / decided
+- Decision-maker’s stated position today: open / leaning [option] / decided
 
 ## Dissent
 Who pushed back, their strongest argument, and how it was handled.
 
 ## My choice and why
-The user’s own reasoning, only when stated by the user.
+The decision-maker’s own reasoning, only when they stated it.
 
 ## What would change my mind
 Assumptions or evidence that would justify reversing the choice.
@@ -187,8 +201,24 @@ The most credible downside or failure mode.
 ---
 
 ## Retrospective
-To be completed at review.
+### What happened
+[Concrete actual outcomes]
+
+### Was the prediction right?
+[Comparison with the recorded prediction and confidence]
+
+### Was the process sound?
+[Quality of the decision given information available then]
+
+### Lesson
+[Reusable principle]
 ```
+
+For a new open decision, record context, current options, and new inputs. Leave commitment sections blank until the decision-maker commits. Do not fill “My choice and why,” confidence, or dissent handling from inference.
+
+When resuming, append a new dated thinking-log entry rather than rewriting history. Include only new relevant inputs, how the thinking changed, and the decision-maker’s stated position. Add newly credible options to **Options considered**.
+
+When committing, change status to resolved, set the actual decision date, confidence, and review date, and complete all applicable sections. If assistant analysis is included in the record at the user’s request, place it under a clearly labeled heading such as **Assistant analysis (not the decision-maker’s position)**.
 
 ## 7. Review the outcome
 
@@ -201,9 +231,19 @@ At the review point, assess:
 
 Mark the outcome as correct, incorrect, mixed, too early, or not applicable. Do not collapse a bad outcome into a bad decision process, or a good outcome into a sound process.
 
-## Completion message
+## Completion and audit check
 
-When a decision is made, summarize it clearly:
+Before closing the work, verify:
+
+- The decision record was created or updated only with permission.
+- The record contains only authorized, relevant information.
+- Decision-maker views are quoted or faithfully paraphrased, not inferred.
+- Assistant advice is clearly labeled and separated from the decision-maker’s position.
+- Required challenge, dissent, stakeholder, and prerequisite-conversation gates were completed or explicitly overridden with a reason.
+- Status, decision date, owner, next action, and review trigger are clear.
+- Any reminder for a high-stakes review has been created or intentionally declined.
+
+Then summarize the decision:
 
 ```markdown
 Decision: [one-line call]
@@ -214,4 +254,4 @@ Review: [date or trigger]
 Record: [location, if one exists]
 ```
 
-Use direct language. Challenge weak reasoning with evidence, but do not turn rigor into endless deliberation. Once the appropriate readiness gates have been met, name the decision and move forward.
+Use direct language. Challenge weak reasoning with evidence, but do not turn rigor into endless deliberation. After the decision or review, note recurring process failures—such as unclear scope thresholds, missing record fields, or unreliable mode detection—and propose a deliberate improvement before changing a shared template or system.
