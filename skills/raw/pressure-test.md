@@ -1,19 +1,11 @@
 ---
 name: pressure-test
-description: Find weak points in a leading strategic idea before committing: steelman the case, test its load-bearing assumptions through sequential challenge, and end with a clear verdict, handoff, and concrete next action.
+description: Find the weak points in a leading strategic idea before committing: strengthen the case, test its critical assumptions through sequential challenge, and finish with a verdict, handoff, and concrete next action.
 ---
 
 # Pressure-test an idea
 
 Use this workflow when a decision-maker is leaning toward a strategic direction and needs an honest challenge before committing. It tests a leading option; it does not generate a broad option set or design implementation.
-
-## Input and output format
-
-**Input:** A claim, decision, or direction to test. It may be self-contained or supported by authorized research, metrics, feedback, records, or prior decisions.
-
-**Output:** Run the workflow in order. Present the steelman and assumption table first, then ask forcing questions **one at a time**. Wait for each answer, assess it, and challenge unsupported answers before asking the next question. After the questions, provide the pre-mortem, dissent analysis, mind-change criterion, verdict, handoff, and exactly one next action.
-
-Use dates in `DD MMM` format when a date is needed.
 
 ## Where this fits
 
@@ -26,99 +18,85 @@ Use this sequence:
 
 **Readiness gates**
 
-- If meaningful alternatives have not been considered, pause and generate them first. Testing one idea too early can become an exercise in defending it.
-- If the same idea was pressure-tested recently and no material evidence, assumptions, or conditions have changed, do not repeat the exercise. Use the existing findings to make the decision.
-- If evidence will come from communications, records, feedback, or other information about people, confirm a legitimate decision-related purpose and clear authorization before accessing or using those sources.
-
-## Handling people-related information
-
-Use information about people only when necessary to assess the idea, its impact, or relevant stakeholder concerns.
-
-- State the specific purpose, such as validating demand or assessing a delivery risk.
-- Confirm that the requester and intended audience are authorized to access the sources and receive the analysis.
-- Use the minimum relevant sources and facts. Prefer aggregate, anonymized, or role-level evidence where sufficient.
-- Omit unrelated or sensitive personal details. Respect consent, confidentiality obligations, and reasonable privacy expectations.
-- Share findings only within the appropriate access boundary. If purpose, authorization, consent, or scope is unclear, stop and request clarification or use non-personal evidence.
+- If meaningful alternatives have not been considered, pause and generate them first. Testing one idea too early often becomes defending it.
+- If the same idea was pressure-tested recently and no material evidence, assumptions, or conditions have changed, do not repeat the exercise. Move to a decision using the existing findings.
+- If reviewing internal communications, records, or feedback about people, confirm a legitimate purpose and clear authorization. Use only the minimum relevant material, omit unrelated sensitive details, and keep the output within the appropriate access boundary.
 
 ## Rules of engagement
 
-- Be direct. Do not treat confidence as evidence.
+- Be direct. Confidence is not evidence.
 - Attack the strongest reasonable version of the idea, not a caricature.
-- Separate facts, inferences, and forecasts.
-- Use evidence such as research, metrics, prior experiments, feedback, documented decisions, and stakeholder input.
-- Refer to dissenters by relevant role, such as a finance owner, delivery lead, customer representative, domain expert, or skeptical peer. Do not invent their views.
-- Skip a section only when it is genuinely irrelevant, and state why.
+- Ask **one forcing question at a time**. Wait for an answer, evaluate it, and challenge vague, unsupported, or evasive answers before proceeding.
+- Use available evidence: metrics, research, prior experiments, customer feedback, documented decisions, and authorized stakeholder input. Distinguish facts, inferences, and forecasts.
+- Refer to relevant dissenters by role, such as a finance owner, delivery lead, customer representative, domain expert, or skeptical peer. Do not invent their views.
+- If a section is irrelevant, say `Skipping — N/A because [reason]`.
 
 ## 1. Steelman the claim
 
-Restate the idea in its strongest form. Remove unnecessary hedging while preserving the decision-maker's intent. Include the action, expected result, mechanism, timeframe, and conditions that make it sensible.
+Restate the idea in its strongest form. Remove unnecessary hedging while preserving its intended meaning. Include the action, mechanism, expected outcome, timeframe, and key conditions.
 
 > We should [take action] because [mechanism] will produce [outcome] for [group] within [timeframe], provided that [key condition] holds.
 
-If the original framing is already the strongest version, say so and continue. If the stronger restatement changes the intended claim, obtain confirmation before testing it.
+If this strengthened version changes the intended claim, get confirmation before testing it.
 
 ## 2. Identify load-bearing assumptions
 
-List three to five assumptions that must hold. Rank them by damage if wrong, starting with the assumption most likely to undermine the decision.
+List three to five assumptions that must hold. Rank them by damage if wrong, starting with the one most likely to undermine the decision.
 
 | Rank | Assumption | Type: fact, estimate, or belief | Current support | Damage if wrong | Smallest useful test |
 |---|---|---|---|---|---|
-| 1 | [State the assumption] | [Choose one] | [Summarize evidence] | [Low, medium, or high] | [Name the test] |
+| [1] | [State the assumption] | [Choose one] | [Evidence or lack of it] | [Low/medium/high] | [Test or disproof method] |
 
-Make assumptions observable where possible. Replace “customers will value this” with a defined behavior, segment, threshold, or willingness-to-pay condition.
+Make assumptions observable. Replace “users will value this” with a behavior, segment, threshold, or willingness-to-pay condition.
 
 ## 3. Run forcing questions sequentially
 
-Ask five to eight questions total, one at a time. Start with the highest-risk assumption and adapt later questions to the answers received. Do not present the full set as a questionnaire, because that permits selective answers.
+Ask five to eight questions total, selected for the highest-risk assumptions. Do not present them as a full questionnaire. Adapt each next question to the prior answer.
 
-Choose from these categories:
+Use these categories as needed:
 
 - **Evidence:** What is the strongest evidence for this? What is the strongest evidence against it?
-- **Falsifiability:** What would need to happen in the next 30 or 90 days to show this is wrong?
-- **Counterfactual:** What similar attempt failed, and why is this case materially different?
+- **Falsifiability:** What would happen in the next 30 or 90 days that would show this is wrong?
+- **Counterfactual:** What similar effort failed, and why is this case materially different?
 - **Opportunity cost:** What valuable work will not happen if resources go here?
-- **Second-order effects:** If this succeeds, what does the situation look like in 12 months? What could success itself break or constrain?
-- **Stakeholder dissent:** Which role would object most strongly? What would that person say, and has that objection been heard directly?
-- **Reversibility:** If this is wrong, what does unwinding require in time, money, commitments, trust, or organizational disruption?
+- **Second-order effects:** If this works, what does the situation look like in 12 months? What could success itself break?
+- **Stakeholder dissent:** Which role would object most strongly? What would that person say, and has that view been heard directly?
+- **Reversibility:** If wrong, what does unwinding require in time, money, commitments, trust, or disruption?
 - **Null option:** What happens if no action is taken for the next three months?
 
-Push for specificity. “I think it will work” is not evidence; ask what observed behavior, data, comparison, or commitment supports that belief. If an answer is vague, unsupported, or evasive, challenge it before moving on.
+Push for specifics. “I think it will work” is not evidence; ask for observed behavior, comparative data, a credible commitment, or a relevant test result.
 
 ## 4. Run a pre-mortem
 
-Assume the initiative failed after a realistic period, often 6 to 12 months. Identify the three most likely failure modes, ordered by likelihood or impact. Include execution failures, external changes, and wrong underlying premises where relevant.
+Assume the initiative failed after a realistic period, often 6–12 months. Name the three most likely failure modes, ordered by likelihood or impact. Include an early warning sign that appears soon enough to change course.
 
 | Failure mode | Why it could happen | Earliest warning sign | Monitoring action or owner |
 |---|---|---|---|
-| [Describe the failure] | [Name the mechanism] | [Name an observable signal] | [Name the check or accountable role] |
-
-The warning sign must be observable early enough to change course.
+| [Describe the failure] | [Mechanism] | [Observable signal] | [Check and accountable role] |
 
 ## 5. Surface credible dissent
 
-Identify two or three relevant roles that could reasonably disagree. State each role's strongest likely objection. If the decision-maker has not sought that perspective, mark it as an evidence gap; do not assume silence means agreement.
-
-Dissent is not an automatic veto. Its purpose is to expose constraints, incentives, dependencies, and risks that supporters may miss. When authorized private feedback is relevant, summarize only what is necessary and do not attribute comments beyond the approved audience.
+Identify two or three roles with a credible basis to disagree. State each role’s strongest likely objection. If their perspective has not been sought, mark it as an evidence gap. Silence is not agreement.
 
 ## 6. Define what would change the decision
 
-Require one sentence naming the evidence that would reverse or materially alter the position.
+Require one sentence:
 
 > I would change my mind if [specific observable evidence] occurs by [date or decision point].
 
-If this cannot be stated, the position is not falsifiable. Mark the pressure-test as incomplete or failed rather than issuing approval.
+If this cannot be stated, the position is not falsifiable. Mark the pressure-test incomplete or failed rather than approving it.
 
 ## 7. Give a verdict and handoff
 
-Choose one verdict and explicitly state the next workflow step:
+Choose one outcome:
 
-- **GREEN — proceed to decision.** Core assumptions have credible support, relevant dissent has been addressed, reversal costs are understood, and warning signs have an owner or review mechanism. Next: create a decision record and commit. For hard-to-reverse or organization-defining decisions, schedule a review point.
-- **AMBER — test first.** The idea may be sound, but one or two high-impact assumptions or objections remain under-investigated. Name the gap and the cheapest credible way to close it, such as a small interview set, expert review, prototype, or short data-collection period. Next: run that test, then make the decision with its result recorded. Do not commit while the gap remains open.
-- **RED — stop, redesign, or reopen options.** A core assumption is weak, the downside is unacceptable, or no meaningful falsification criterion can be named. Next: generate alternatives, redesign the idea, or explicitly defer it until a defined trigger occurs. Do not treat RED as approval with caveats.
+- **GREEN — proceed to decision.** Core assumptions have credible support, dissent is addressed, reversal costs are understood, and warning signs have an owner or review point. Next: document and make the decision. For hard-to-reverse or organization-defining choices, schedule a review.
+- **AMBER — test first.** One or two high-impact assumptions or objections remain under-investigated. Name the gap and the cheapest credible test, such as a small interview set, expert review, prototype, or short data collection period. Next: run that test, then decide with the result recorded.
+- **RED — stop, redesign, or reopen options.** A core assumption is weak, downside is unacceptable, or no meaningful falsification criterion exists. Next: generate alternatives, redesign the idea, or explicitly defer it until a defined trigger occurs. Do not treat RED as approval with caveats.
 
-End with exactly one concrete next action: a verb, an owner, and a deadline when useful.
+End with **exactly one** concrete next action: a verb, an owner, and a deadline when useful.
 
-`Research owner: interview five target users by 14 Oct and compare the results with the adoption assumption.`
+`Example: Research owner: interview five target users this week and compare findings against the adoption assumption.`
 
 ## Final audit
 
@@ -133,6 +111,4 @@ Before closing, verify that the output contains:
 - a GREEN, AMBER, or RED verdict with a next workflow step; and
 - one concrete next action.
 
-If people-related sources were used, also verify that the purpose was legitimate, access and sharing were authorized, only necessary information was used, unrelated or sensitive details were omitted, consent and privacy expectations were respected, and the output remains within its approved audience.
-
-Common failures include skipping alternatives, asking every question at once, confusing confidence with evidence, treating unconsulted stakeholders as aligned, repeating a recent test without new facts, using personal information without a clear purpose or authorization boundary, and issuing a positive verdict without falsifiable criteria or monitoring.
+Common failures are skipping alternatives, asking all questions at once, confusing confidence with evidence, treating unconsulted stakeholders as aligned, repeating a recent test without new facts, and issuing a positive verdict without falsifiable criteria or monitoring.

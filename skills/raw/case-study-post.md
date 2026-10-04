@@ -1,274 +1,274 @@
 ---
 name: case-study-post
-description: Create an evidence-based professional case study post that shows a person’s credible change, the concrete mechanism behind it, and a clear next step for the reader.
+description: Create an evidence-based, review-ready case study post that shows a person’s credible professional, learning, or career change through specific facts, a clear mechanism, and an audience-relevant call to action.
 ---
 
 # Write a case study post
 
-Use this workflow to turn raw material about a person into a concise, public case study. It works for professional social posts, newsletters, community updates, program alumni stories, recruitment pages, and customer or member stories.
+Use this workflow to turn source material about a person into a concise public case study for a professional social platform, newsletter, community update, program page, or recruitment campaign. It produces a complete first draft, three alternate hooks, quote-card options, an approval log, and a short delivery note.
 
-The aim is not to make someone sound impressive through vague praise. Show a credible and specific change: where they started, what they were considering, what they did, what concretely helped, what they do now, and what a relevant reader can do next.
+The purpose is not to make the subject sound impressive through praise. The purpose is to show a credible change: where they started, what they were considering, what prompted action, what specifically helped, what happened next, what they do now, and what a relevant reader can do.
 
-A strong case study helps the reader recognize their own situation in the subject’s before-state. It explains the possible contribution of a program, community, service, or resource without claiming it caused everything.
+A good case study gives the reader a recognizable before-state and a concrete path forward. It should not imply that a program, community, employer, or resource single-handedly caused an outcome unless the evidence supports that claim.
 
-## Purpose, authorization, and access boundary
+## Authorization, privacy, and publishing boundary
 
-Before using private communications, applications, interview notes, internal records, or unpublished materials, confirm that there is a legitimate purpose for the post and clear authorization to use those sources. Use the minimum information needed to tell the story.
+Only use personal records, private messages, applications, interview notes, or internal communications when there is a legitimate publishing purpose and clear authorization to access and use them. Use the minimum information needed to tell the story.
 
-Respect the subject’s reasonable privacy expectations. Do not include unrelated personal information, sensitive details, private opinions about other people, or information outside the intended audience’s access boundary. If the story will be public, verify that the subject understands the post may be publicly visible and shareable.
+Before drafting, establish:
 
-When the subject is being discussed in a hiring, learning, or assessment context, focus on role-relevant capabilities, evidence of performance, role alignment, and whether an assessment distinguishes relevant performance. Avoid labels or language that reduces the person to a category.
+- Who is authorized to provide the source material.
+- Whether the subject has agreed to be featured, or what review process applies.
+- Which details are public, approved for publication, internal-only, or unknown.
+- The intended audience, channel, and access boundary for the finished post.
+- Whether naming employers, teams, projects, compensation, or personal circumstances could create risk for the subject.
+
+Omit unrelated sensitive details. Do not publish confidential work, private contact information, health or family information, immigration or legal details, financial circumstances, or personal opinions unless they are relevant, approved, and appropriate for the intended audience.
 
 ## Inputs
 
-Request all available source material. Possible inputs include:
+Ask for all available source material. Useful inputs include:
 
-- An interview transcript and meeting notes
-- An application, intake form, or approved biography
-- A current professional profile
-- Public work samples, papers, projects, product announcements, or official records
-- An internal message reporting a result, if authorized for use
-- A prior draft, outline, or notes from the subject
-- The target audience, platform, publishing account, and desired call to action
-- An editorial, brand, or voice guide
-- The subject’s approval status for names, figures, direct quotes, and sensitive details
+- Interview transcript, recording notes, or meeting summary
+- Application, intake form, or survey response
+- The subject’s current professional profile or approved biography
+- Official announcements, public work samples, publications, projects, or portfolio pages
+- A public or authorized internal message about an outcome
+- A previous draft, outline, or the subject’s own notes
+- A brand or editorial voice guide
+- The intended audience, platform, word count, and CTA
+- The subject’s preferred name, pronouns, and review requirements
 
-Before drafting, check whether you have enough verified information for the following fields.
+Build a working fact sheet before drafting:
 
 | Field | What to capture |
 |---|---|
-| Subject | Full name for verification, preferred public name, pronouns if relevant, and consent status |
-| Before-state | Previous role, field, goal, uncertainty, or constraint |
-| Trigger | Why they joined, applied, changed direction, or acted at that time |
-| Intervention | Program, community, product, mentor, event, or resource involved |
-| Mechanism | Concrete help, such as a realization, introduction, job post, feedback session, or practical resource |
-| Now-state | Current role, organization or team if approved, project, output, or result |
-| Timeline | Dates or time spans from starting point to outcome |
-| Evidence | Verified roles, figures, dates, named work, and direct quotes |
-| Cost or risk | Career change, move, financial tradeoff, uncertainty, or other relevant constraint |
-| CTA | The action the intended reader should take |
+| Subject | Full name for verification, preferred public name, pronouns, and whether first-name usage is appropriate |
+| Before-state | Previous role, field, uncertainty, constraint, or goal |
+| Alternative path | What they were considering or doing instead |
+| Trigger | Why they joined, applied, changed direction, or acted at that moment |
+| Intervention | The program, community, event, resource, mentor, product, or experience involved |
+| Mechanism | One or two concrete things that helped, such as an introduction, opportunity listing, feedback session, or realization |
+| Now-state | Current role, organization, team, project, output, or result |
+| Timeline | Confirmed dates or elapsed time from participation to result |
+| Evidence | Sources supporting names, dates, figures, claims, and quotations |
+| Cost or risk | Any meaningful tradeoff that may be relevant and approved |
+| CTA | What the target reader should do next |
 
-If critical information is missing, ask focused questions before drafting. Do not guess at organization names, job titles, technical terms, paper titles, dates, figures, timelines, or outcomes.
+If critical information is missing, ask focused questions before writing. Never guess at organization names, role titles, project titles, dates, compensation, timelines, or outcomes.
 
 Useful questions include:
 
 1. What was the person doing before this experience?
 2. What were they considering instead?
-3. Why did they decide to take part or make a change at that point?
-4. What are the one or two concrete things that helped them move forward?
+3. Why did they act at that point?
+4. What one or two specific things helped them move forward?
 5. What happened next, and when?
 6. What do they do now in practical terms?
-7. Is there a specific output, project, placement, publication, product, or result that can be named publicly?
-8. Did they take on a meaningful cost or risk that they are comfortable sharing publicly?
-9. Which claims, figures, names, and quotes have been approved for publication?
-10. Who should this post persuade, help, or invite?
-11. What voice should the post use: conversational, formal, technical, energetic, or another stated style?
+7. Is there a named output, project, publication, placement, product, or grant that is public and useful to mention?
+8. Did they take on a tradeoff or risk they are comfortable sharing publicly?
+9. Which names, figures, quotes, and claims have explicit approval?
+10. Who should see themselves in this story, and what blocker do they have?
 
 ## Evidence and verification rules
 
-Never invent facts or strengthen a claim for dramatic effect. If a source says someone contributed to a project, do not call them the lead. If it says they explored an opportunity, do not say they received it. If a result is not public or approved for disclosure, do not include it.
+Never invent, upgrade, or dramatize a fact. If the evidence says the subject contributed to a project, do not describe them as its lead. If they explored an opportunity, do not say they received it. If they found a listing through a community, do not claim the community secured the role for them.
 
-Treat automated transcripts and summaries as useful but fallible. They can mishear names, organizations, technical terms, numbers, dates, titles, and acronyms. Cross-check consequential details against a more reliable source, such as direct subject confirmation, an official public record, an approved profile, published work, or a written application.
+Automated transcripts and summaries are useful but fallible. They commonly mishear names, organizations, technical terms, numbers, job titles, and dates. Cross-check every detail that affects credibility or could be sensitive.
 
-When sources disagree, use this reliability order unless there is a clear reason not to:
+Use this reliability order unless a stronger source is available:
 
-1. The subject’s direct and recent confirmation
-2. Official public records, published work, or employer-approved announcements
-3. A current professional profile
-4. An original written application or statement from the subject
+1. The subject’s direct, recent confirmation
+2. Official public records, published work, or an organization’s formal announcement
+3. A current professional profile maintained by the subject
+4. An original written application or intake response
 5. Interview transcript notes or automated summaries
 6. Informal third-party messages
 
-Separate three kinds of statements in working notes:
+Keep three categories separate in working notes:
 
-- **Verified fact:** A role, date, artifact, figure, or quote supported by a reliable source.
-- **Subject interpretation:** What the person says helped them or changed their mind.
-- **Editorial inference:** A conclusion drawn from the story. Use it only when evidence supports it, and phrase it modestly.
+- **Verified fact:** Supported by a reliable source.
+- **Subject interpretation:** The person’s account of what helped or changed their mind.
+- **Editorial inference:** A conclusion drawn by the writer. Use sparingly, and only when clearly supported.
 
-Do not claim that a course, community, tool, mentor, or organization caused the whole outcome unless the evidence clearly establishes that claim. Prefer precise wording such as “the program helped them understand the field” or “they found the opportunity through the community.”
+If sources conflict, do not quietly choose the most dramatic version. Resolve the conflict with the subject or use the narrower, verified claim.
 
 ## Sensitive-content gate
 
 Flag the following for explicit subject approval before publication:
 
-- Salary, pay cuts, financial hardship, or compensation comparisons
+- Pay, compensation changes, financial hardship, or salary comparisons
 - Health, family, immigration, legal, or other personal circumstances
-- Harsh descriptions of a past employer, role, or career decision
-- Unreleased work, confidential projects, unpublished titles, or non-public results
-- Direct quotations, especially strong opinions or criticisms
+- Strong criticism of a former employer, role, or career choice
+- Unreleased work, confidential projects, or unpublished titles
+- Direct quotes, especially forceful opinions or criticism
 - Claims about why an employer selected or hired the person
-- Claims of causation or impact that cannot be independently verified
-- Precise timelines that could reveal private circumstances
-- Names of collaborators, managers, or organizations not already approved for public mention
+- Claims of causation, impact, or attribution that cannot be verified
+- Exact dates or timelines that reveal private circumstances
 
-If approval is unavailable, use an honest fallback only if it remains approved and useful. For example, replace an exact compensation figure with “they accepted a lower-paying role” only when that broader statement is accurate and approved. Do not conceal uncertainty by making the story more dramatic.
+If approval is unavailable, use an approved, honest fallback or remove the line. For example, replace a precise compensation figure with a broader approved description only if it remains accurate and useful. Do not make a story vaguer merely to conceal uncertainty, and do not make it more dramatic to compensate for missing evidence.
 
 ## Build the story beats
 
-Create a private working outline before writing. Do not expose raw private notes in the public draft.
+Create a private working outline. Do not show raw notes unless requested.
 
 ### 1. Before-state
 
-Capture the subject’s role, background, and the reader-relevant version of their uncertainty. Include what they were considering instead when that alternative mirrors the target audience’s current life.
+Capture the subject’s previous role, background, and reader-relevant uncertainty. Include the alternative path they were considering when it mirrors the target reader’s current life.
 
-Keep only details that move the story. A long list of reading, credentials, earlier roles, or personal history usually weakens the post. Keep a detail when it makes the change believable or explains the decision.
+Keep details only when they explain the decision or make the contrast concrete. A long biography, reading list, or credential inventory usually weakens the post.
 
 ### 2. Trigger
 
-Identify why the subject acted at that moment. They may have wanted to learn about a new field, test whether a career path existed, find collaborators, solve a practical problem, or make a values-driven change.
+Identify why the person acted at that moment. Common triggers include wanting to understand a field, testing whether a career path exists, finding collaborators, improving a practical skill, or aligning work with a concern they had been following.
 
 ### 3. Mechanism
 
-Find the one or two concrete things that helped change the trajectory. Strong mechanisms are observable:
+Find one or two observable turning points. Strong mechanisms include:
 
-- A realization that a field or role was accessible
-- A relevant opportunity shared in a community
-- A conversation that clarified next steps
-- Feedback that improved an application, portfolio, or project
-- A specific introduction, workshop, or resource
+- Realizing that a field has roles for someone with their background
+- Seeing a relevant role or opportunity in a community
+- Receiving feedback that improved an application, project, or decision
+- Having a conversation that clarified a next step
+- Receiving an introduction, resource, workshop, or practical example
 
-Avoid vague statements such as “the experience was transformative.” State what happened instead.
+Avoid claims such as “the experience transformed them.” State what happened instead.
 
 ### 4. Now-state
 
-Record the current role, organization or team if approved, and what the person actually does. Translate technical jargon enough for the target audience to understand the work.
+Record the subject’s current role and what they actually do. Name an organization, team, or output only when verified, approved, and useful. Translate specialist language enough for the intended reader to understand why the work matters.
 
-Use named outputs only when they add proof or interest. Do not pile up credentials. One meaningful project, publication, placement, product, grant, or result often does more work than a résumé-like list.
+One meaningful artifact can establish credibility. Avoid a resume-like pileup of credentials.
 
 ### 5. Timeline and compression
 
-Map the sequence from joining or starting to the current result. Calculate a short, truthful timeframe when it sharpens the story, such as “within six months” or “the following year.” Do not force a compressed timeline if the facts do not support one.
+Map the sequence from participation or decision to current outcome. Calculate a concise, truthful timeframe when it strengthens the story, such as “within six months” or “the following year.” Do not force a compressed timeline if the evidence does not support it.
 
 ### 6. Quotes
 
-Pull three to five verbatim candidate quotes. Favor quotes that speak to the reader’s identity or uncertainty, not only the subject’s achievement.
+Pull three to five candidate quotes verbatim. Favor quotes that speak to the reader’s identity, uncertainty, or decision, rather than merely celebrating the subject.
 
-Useful quote categories are:
+Useful quote categories:
 
 1. **Discovery:** “I did not know this path was open to someone like me.”
 2. **Mechanism:** “I found the opportunity through the community.”
 3. **Conviction:** “I would make the same choice again.”
 
-Light trimming is allowed only when it preserves the exact meaning and grammar. Never rewrite a quote into something the subject did not say.
+Light trimming is acceptable only when it preserves the speaker’s exact meaning and grammar. Never rewrite a quote into a more polished claim.
 
 ## Generate three hook options
 
-For feed-based platforms, the first two lines determine whether someone continues reading. Write three distinct hooks before writing the full post. Keep each hook to two short sentences, usually under about 140 characters total when that fits the platform.
+For feed-based platforms, the first two lines determine whether readers continue. Write three hooks before writing the body. Keep each hook to two short sentences and, where useful for the platform, roughly 140 characters or fewer.
 
 ### Hook A: Discovery
 
-Use this when the audience shares the subject’s former blocker.
+Use when the target audience shares the subject’s former blocker.
 
-**Formula:** The subject did not know or believe a relevant possibility. Soon afterward, they reached a specific outcome through a surprising, concrete mechanism.
+**Formula:** The subject did not know or believe a relevant possibility. Soon afterward, they reached a specific outcome through a concrete mechanism.
 
-This is usually the best default because it makes the reader think, “That might be me.”
+This is the default recommendation when the reader should think, “That could be me.”
 
 ### Hook B: Identity collision
 
-Use this when the before-and-after contrast is vivid and easy to understand.
+Use when the before-and-after contrast is unusually vivid.
 
 **Formula:** A short time ago, the subject was doing a specific thing. Today, they are doing a sharply different specific thing.
 
-This works well for broader audiences who may not share the subject’s exact blocker.
+This often works well for a broader audience that may not share the subject’s exact initial uncertainty.
 
 ### Hook C: Stakes-led
 
-Use this only when a meaningful cost or risk is approved and the audience will read it as honest conviction rather than a warning.
+Use only when a meaningful cost or risk has been approved and the audience is likely to read it as honest conviction rather than a warning.
 
-**Formula:** The subject accepted a specific cost to do something. Now they are taking a concrete action or doing meaningful work.
+**Formula:** The subject accepted a specific cost to do something. Now, they are doing a concrete piece of work or taking a meaningful action.
 
-Do not use a sacrifice hook if it implies that participation requires hardship or if it distracts from a more accessible message.
+Avoid this hook if it implies that participation requires hardship or sacrifice, especially when the aim is to make an opportunity feel accessible.
 
-Choose one recommended hook. Briefly explain why it fits the target audience, and state why the other two are less suitable.
+Recommend one hook. Give one sentence explaining why it fits the audience and one brief reason each alternate is less suitable.
 
 ## Draft the post
 
-Aim for roughly 160 to 220 words unless the platform, evidence, or audience calls for another length. Shorter is often stronger.
+Aim for approximately 160 to 220 words unless the platform or campaign requires another length. Shorter is usually stronger.
 
-Use this sequence:
+Use this structure:
 
 1. **Hook:** Use the recommended hook.
-2. **Before-state:** Write one short paragraph showing the previous situation and a relevant alternative path.
-3. **Name the intervention:** State clearly that the person joined the program, used the resource, or entered the community. Do not leave this touchpoint implicit.
-4. **Mechanism and outcome:** Explain the concrete turning points, then land the immediate result in plain language. A short sentence such as “They applied and got in” can be enough.
-5. **Current work:** Describe what they do now and why it matters in understandable terms.
-6. **Optional honest cost:** Include only if approved and genuinely useful.
-7. **Optional pull quote:** Include it only if it adds a distinct truth not already carried by the hook or body.
+2. **Before-state:** One short paragraph with the previous situation and a relevant alternative path.
+3. **Name the intervention:** Clearly state that the person joined the program, used the resource, or participated in the community. Do not leave this connection implicit.
+4. **Mechanism and outcome:** Explain the concrete turning points, then land the immediate result in plain language.
+5. **Current work:** Say what the person does now and why it matters in understandable terms.
+6. **Optional cost:** Include only if approved and genuinely useful.
+7. **Optional pull quote:** Include only if it adds a distinct truth not already stated in the hook or body.
 8. **CTA:** Address the reader directly and give one clear next action.
 
-Where relevant, use a two-part mechanism: first, the person saw a realistic path; second, they gained a practical route into it, such as an opportunity, introduction, or feedback. This makes the story more credible than a generic claim that the intervention “changed everything.”
+A concise outcome line can be powerful: “They applied and got the role.” Use a short sequence of sentences only when each adds meaning. Do not add credential details merely because they are available.
 
-For platforms that may reduce reach for in-post external links, place the link in a comment, profile page, or other designated destination instead of the body. Treat this as a platform-specific publishing choice, not an unverified universal rule.
+For platforms that may reduce reach for external links in post copy, put the link in an approved comment, profile destination, or other designated location. Treat this as a platform-specific publishing choice, not a universal rule.
 
 ## Style rules
 
-Adapt to the chosen voice guide. If no guide exists, use these broadly useful defaults:
+Adapt to the chosen voice guide. If no voice guide exists, use these defaults:
 
 - Use short paragraphs and generous whitespace.
 - Write direct declarative sentences.
 - Prefer simple past tense when possible.
-- Use concrete names, roles, dates, and figures only when verified and approved.
-- Use the subject’s first name after the first full introduction if this fits the publication’s tone and the subject’s preference.
+- Use specific names, roles, dates, and figures only when verified and approved.
+- Use the subject’s first name after the first full introduction if it suits the publication tone and their preference.
 - Prefer plain verbs over corporate language.
-- Let evidence create admiration. Do not call the subject exceptional, inspiring, or brilliant without showing why.
-- Use contractions if the voice is conversational.
-- Keep the CTA in full second person: “If you are…” and “you can…”
+- Let evidence create admiration. Do not call someone exceptional, inspiring, or brilliant without showing the work.
+- Use contractions when the tone is conversational.
+- Keep the CTA in full second person: “If you are…” and “you can…”.
 - Avoid emojis unless they are an explicit brand choice.
-- Default to periods, commas, and line breaks rather than em dashes.
+- Prefer periods, commas, and line breaks over em dashes.
 
-Remove common machine-like phrasing on the final pass. Cut empty transitions, dramatic setup frames, filler intensifiers, hedge words, abstract nouns that replace evidence, balanced “on one hand/on the other hand” constructions, and reflective summary sentences after the CTA.
+On the final pass, remove machine-like phrasing. Cut empty transition sentences, dramatic setup frames, filler intensifiers, hedges, abstract nouns standing in for evidence, false balance, and reflective summaries after the CTA.
 
-Avoid corporate or vague phrases such as “leverage,” “unlock,” “harness,” “navigate,” “deep dive,” “journey,” “transformation,” and “paradigm,” unless they are necessary in an approved direct quote.
+Avoid corporate or vague language such as “leverage,” “unlock,” “harness,” “navigate,” “deep dive,” “journey,” “transformation,” and “paradigm,” unless it is necessary in an approved direct quote.
 
-Read the post aloud. If it sounds like a generic thought-leadership template, shorten it and replace abstractions with verified facts.
+Read the post aloud. If it sounds like a generic thought-leadership template, shorten it and replace abstractions with facts.
 
 ## Graphic quote options
 
-Provide three options for a visual quote card. Each should be self-contained, under 15 words when possible, and taken verbatim from approved source material.
+Provide three quotes for a visual quote card. Each should be self-contained, ideally under 15 words, and verbatim from approved source material.
 
-Offer one quote from each category:
+Provide one from each category:
 
 - Discovery
 - Mechanism
 - Conviction
 
-Recommend one. Discovery quotes are often strongest because they work without surrounding context and mirror the reader’s uncertainty. Choose a mechanism or conviction quote instead only if it is clearer, more memorable, and understandable on its own.
+Recommend one quote and explain why it will work without surrounding context. Discovery quotes are often strongest because they mirror the reader’s uncertainty. Choose a mechanism or conviction quote only when it is clearer and more memorable on its own.
 
 ## Readiness audit
 
-Before sending the draft for review, check:
+Before sending for review, check:
 
-- Is there a legitimate purpose and authorization for each non-public source used?
 - Is every name, role, date, figure, and title verified?
-- Are transcript-derived details cross-checked where needed?
-- Does the post show a concrete mechanism, not just a result?
+- Have transcript-derived details been cross-checked where needed?
+- Is the story within the agreed authorization and privacy boundary?
+- Does the post explain a concrete mechanism, not merely a result?
 - Does it avoid overstating causation?
 - Is the intervention named clearly?
 - Does the opening mirror a real audience concern?
 - Is the current work understandable to a non-specialist reader?
-- Have sensitive claims and direct quotes been flagged for approval?
-- Does the post omit unrelated personal and confidential information?
+- Are sensitive claims and direct quotes flagged for approval?
 - Is the CTA clear and directed at the intended reader?
-- Are there no unsupported superlatives, corporate phrases, generic filler, or unnecessary em dashes?
+- Are there no unsupported superlatives, corporate phrases, generic filler, or excessive em dashes?
 
 ## Delivery format
 
-Create the draft in the user’s chosen document or content-management system when access is available and authorized. Otherwise, provide it in the agreed review format. Use a clear title format such as:
+Create the draft in the user’s chosen document system when available. Use a clear title, such as:
 
 `YYYY-MM-DD: Case study post, [Subject first name]`
 
 In the accompanying message, provide only:
 
 - The recommended hook and the two alternatives
-- The three graphic quote options and recommendation
-- A list of items requiring approval before publication
-- A list of missing information that would strengthen the post
-- The draft location or link, if applicable
+- The three graphic quote options and the recommendation
+- Approval items before publication
+- Missing information that would strengthen the post
+- The document location or link, if applicable
 
-Do not treat the first draft as final. If feedback says “make the hook better,” generate new hooks rather than making tiny edits. If asked to make it shorter, cut secondary biography first while preserving the mechanism and outcome. If a subject rejects a sensitive line, replace it with an approved fallback without weakening the whole story.
+Do not treat the first draft as final. If feedback says “make the hook better,” generate new hooks rather than making small edits. If asked to make it shorter, cut secondary biography first while preserving the mechanism and outcome. If a subject rejects a sensitive line, replace it with the approved fallback without weakening the whole story.
 
-## Improvement after review
-
-After a final version is accepted, review feedback for reusable lessons. Update the workflow only when a recurring pattern is clear, such as a missing intake question, a consistent voice preference, a repeated structural choice, or a recurring verification issue.
-
-Do not infer new rules from a clean review cycle. Keep any improvements general and reusable. Do not store private source material, confidential feedback, or personally identifying details as workflow rules.
+After final approval, review feedback for reusable lessons. Update this workflow only when a recurring pattern is clear, such as a missing intake question, a consistent voice preference, or a repeated verification issue. Do not invent process changes after a clean review cycle.
