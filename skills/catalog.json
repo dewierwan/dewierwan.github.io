@@ -3,28 +3,28 @@
   "skills": [
     {
       "title": "Brainstorm options",
-      "description": "Generate distinct options for a decision or problem, assess their tradeoffs honestly, and recommend a short ranked set without forcing a final choice.",
+      "description": "Generate genuinely distinct options for a decision or problem, assess their tradeoffs candidly, and recommend a short ranked set without forcing a final choice.",
       "category": "Think and decide",
       "page": "https://dewierwan.com/skills/brainstorm/",
       "markdown": "https://dewierwan.com/skills/raw/brainstorm.md"
     },
     {
       "title": "Pressure-test an idea",
-      "description": "Find the weak points in a leading strategic idea before committing: strengthen the case, test its critical assumptions through sequential challenge, and finish with a verdict, handoff, and concrete next action.",
+      "description": "Find weak points in a leading strategic idea before commitment. Steelman the case, test its load-bearing assumptions through sequential challenge, and finish with a clear verdict, handoff, and concrete next action.",
       "category": "Think and decide",
       "page": "https://dewierwan.com/skills/pressure-test/",
       "markdown": "https://dewierwan.com/skills/raw/pressure-test.md"
     },
     {
       "title": "Make a decision",
-      "description": "Match decision-making rigor to stakes and reversibility, then make, record, and review meaningful choices without inventing the user’s views or exposing sensitive information.",
+      "description": "Match decision-making rigor to stakes and reversibility, make and record meaningful choices only with permission, and review outcomes without inventing the user’s views or exposing sensitive information.",
       "category": "Think and decide",
       "page": "https://dewierwan.com/skills/make-a-decision/",
       "markdown": "https://dewierwan.com/skills/raw/make-a-decision.md"
     },
     {
       "title": "Solve a problem",
-      "description": "Take a non-trivial product, technical, process, or automation problem from diagnosis through options, implementation, verification, and handoff, with an analysis-only stopping point when requested.",
+      "description": "Take a non-trivial product, technical, process, or automation problem from diagnosis through options, recommendation, implementation, verification, and handoff, with an analysis-only stopping point when requested.",
       "category": "Think and decide",
       "page": "https://dewierwan.com/skills/solve-a-problem/",
       "markdown": "https://dewierwan.com/skills/raw/solve-a-problem.md"
@@ -38,7 +38,7 @@
     },
     {
       "title": "Gather context",
-      "description": "Search the authorized sources most likely to matter and turn relevant evidence into a proportionate, well-sourced context brief for a person, organization, project, topic, or decision.",
+      "description": "Search the sources that are likely to matter and turn the findings into one concise, well-sourced brief.",
       "category": "Research and write",
       "page": "https://dewierwan.com/skills/gather-context/",
       "markdown": "https://dewierwan.com/skills/raw/gather-context.md"
@@ -52,28 +52,28 @@
     },
     {
       "title": "Write in my voice",
-      "description": "Draft or revise email in the user’s authentic voice by grounding the work in approved style evidence, verifying the message brief, and auditing tone, facts, commitments, and next steps before delivering copy-ready text.",
+      "description": "Draft or revise email in the user’s authentic voice using an approved style guide or authorized sent-message examples, while checking facts, commitments, privacy, and recipient fit before producing copy-ready text.",
       "category": "Research and write",
       "page": "https://dewierwan.com/skills/write-in-my-voice/",
       "markdown": "https://dewierwan.com/skills/raw/write-in-my-voice.md"
     },
     {
       "title": "Write a professional social post",
-      "description": "Draft, revise, and audit professional social posts from notes, drafts, articles, transcripts, research, or a topic, emphasizing strong evidence-based hooks, useful substance, clear audience fit, and targeted iteration.",
+      "description": "Draft, revise, and audit professional social posts from notes, drafts, articles, transcripts, or a topic. The workflow emphasizes concrete claims, strong hooks, useful substance, and targeted revision.",
       "category": "Research and write",
       "page": "https://dewierwan.com/skills/professional-social-post/",
       "markdown": "https://dewierwan.com/skills/raw/professional-social-post.md"
     },
     {
       "title": "Write a case study post",
-      "description": "Create an evidence-based, review-ready case study post that shows a person’s credible professional, learning, or career change through specific facts, a clear mechanism, and an audience-relevant call to action.",
+      "description": "Create an evidence-based professional case study post from authorized source material, with strong hooks, a concise narrative, quote-card options, approval checks, and a publishing-ready delivery package.",
       "category": "Research and write",
       "page": "https://dewierwan.com/skills/case-study-post/",
       "markdown": "https://dewierwan.com/skills/raw/case-study-post.md"
     },
     {
       "title": "Create editorial cover images",
-      "description": "Create editorial cover images from an article through five distinct concepts, visual review, and three informed improvements using the user’s chosen image-generation workflow. The method produces eight completed options or, when requested,.",
+      "description": "Create cover images from an article through five distinct concepts, visual review, and three informed improvements using the chosen image generator.",
       "category": "Research and write",
       "page": "https://dewierwan.com/skills/create-editorial-cover-images/",
       "markdown": "https://dewierwan.com/skills/raw/create-editorial-cover-images.md"
@@ -129,14 +129,14 @@
     },
     {
       "title": "Prepare for a meeting",
-      "description": "Gather the relevant history, clarify the desired outcome, and produce a focused agenda and preparation brief.",
+      "description": "Gather authorized context, clarify the user’s desired outcome, and create a practical meeting brief and agenda that can be used during the call and for follow-up.",
       "category": "Meetings and tasks",
       "page": "https://dewierwan.com/skills/prepare-for-a-meeting/",
       "markdown": "https://dewierwan.com/skills/raw/prepare-for-a-meeting.md"
     },
     {
       "title": "Capture meeting actions",
-      "description": "Review meeting records, identify genuine unfinished commitments, create clear deduplicated tasks for confident follow-ups, and batch only questions that require judgment.",
+      "description": "Review authorized meeting records to identify genuine unfinished commitments, create clear deduplicated tasks for confident follow-ups, and batch only the questions that require human judgment.",
       "category": "Meetings and tasks",
       "page": "https://dewierwan.com/skills/capture-meeting-actions/",
       "markdown": "https://dewierwan.com/skills/raw/capture-meeting-actions.md"
@@ -150,28 +150,28 @@
     },
     {
       "title": "Design a work sample",
-      "description": "Create or improve a short, paid, asynchronous work sample that produces role-relevant evidence, is practical to review, and is validated through simulated submissions before use.",
+      "description": "Create or improve a short, paid, asynchronous work sample that produces job-relevant evidence and can be scored consistently. Validate that it distinguishes role-relevant performance through simulated submissions.",
       "category": "Hiring and people",
       "page": "https://dewierwan.com/skills/design-a-work-sample/",
       "markdown": "https://dewierwan.com/skills/raw/design-a-work-sample.md"
     },
     {
       "title": "Run a reference call",
-      "description": "Prepare, document, and run a role-relevant hiring reference call using authorized information, targeted questions, and evidence-based notes that support a fair hiring decision.",
+      "description": "Prepare, conduct, and document a structured hiring reference call that gathers concrete, role-relevant evidence while respecting authorization, privacy, and appropriate access boundaries.",
       "category": "Hiring and people",
       "page": "https://dewierwan.com/skills/run-a-reference-call/",
       "markdown": "https://dewierwan.com/skills/raw/run-a-reference-call.md"
     },
     {
       "title": "Use a browser safely",
-      "description": "Complete browser-based tasks safely by using the least invasive authorized method, protecting account and privacy boundaries, verifying what the rendered page accepted, and separating preparation from consequential actions.",
+      "description": "Complete browser-based tasks safely by choosing the least invasive authorized method, protecting account context and private data, verifying rendered state, and separating preparation from consequential commitment.",
       "category": "Build and automate",
       "page": "https://dewierwan.com/skills/use-a-browser-safely/",
       "markdown": "https://dewierwan.com/skills/raw/use-a-browser-safely.md"
     },
     {
       "title": "Create an AI skill",
-      "description": "Create, revise, test, evaluate, and package a reusable AI skill from a new idea, an existing draft, or a workflow demonstrated in conversation. Use this workflow to build skills that are clear, safe, evidence-based, and adaptable to the AI.",
+      "description": "A complete, tool-independent workflow for designing, testing, improving, validating, and packaging a reusable AI skill from a new idea, an existing draft, or a workflow demonstrated in conversation.",
       "category": "Build and automate",
       "page": "https://dewierwan.com/skills/create-an-ai-skill/",
       "markdown": "https://dewierwan.com/skills/raw/create-an-ai-skill.md"
