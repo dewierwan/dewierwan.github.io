@@ -1,119 +1,112 @@
 ---
 name: solve-a-problem
-description: Take a non-trivial product, technical, process, or automation problem from diagnosis through options, recommendation, implementation, verification, and handoff, with an analysis-only stopping point when requested.
+description: Take a non-trivial product, technical, process, or automation problem from diagnosis through options, implementation, verification, and handoff. The workflow supports analysis-only work when requested.
 ---
 
 # Solve a problem
 
-Use this workflow for a non-trivial build, integration, automation, process, or operational problem where the solution is not already obvious. Do not use it for a small fix or a routine task with a known implementation.
+Use this workflow for a non-trivial build, integration, automation, process, or operational problem whose solution is not already obvious. Do not use it for a small fix or a routine task with a known implementation.
 
-By default, work from understanding through implementation. If the user explicitly requests analysis only, stop after the recommendation and wait for a decision.
+By default, work from understanding through implementation. If the user asks for analysis only, stop after the recommendation and wait for a decision.
 
 ## 1. Understand the problem
 
-Start with the underlying problem, not the user's proposed solution. If they ask to build something, work backward:
+Start with the underlying problem, not the user's first proposed solution. If they ask to "build X," work backward:
 
-- Who experiences the problem, and what are they trying to accomplish?
-- What happens today, including workarounds?
+- Who experiences the problem?
+- What are they trying to accomplish?
+- What happens today?
+- What workarounds exist?
 - How frequent, costly, urgent, or blocking is it?
-- What outcome would materially improve the situation?
-- What constraints, dependencies, and success measures apply?
+- What outcome would make the problem meaningfully better?
 
-Write a concise problem statement and descriptive requirements. Describe the desired outcome and constraints, not an assumed implementation. If the proposed solution does not appear to address the real problem, say so clearly.
+Write a concise problem statement and descriptive requirements. Describe the desired outcome and constraints, not an assumed implementation. If the proposed solution appears mismatched to the problem, say so directly.
 
-Ask only for information that cannot be found in authorized, relevant context such as project documentation, code, tests, or operating procedures. When reviewing communications or records about people, confirm a legitimate purpose and clear authorization; use only the minimum relevant sources, exclude unrelated sensitive details, and keep findings within the appropriate access boundary.
+Ask only for information that cannot be found in the available context, documentation, code, or records.
 
-## 2. Decide whether to solve it now
+## 2. Assess whether to solve it now
 
-Assess severity, frequency, affected users, opportunity cost, current alternatives, and maintenance cost. Treat “do nothing,” “deprioritize,” or “improve the workaround” as valid options when the problem is low-impact or adequately handled.
+Assess severity, frequency, affected users, opportunity cost, and available alternatives. Include “do nothing” or “deprioritize” as a real option when the issue is rare, low-cost, or adequately handled by a workaround.
 
-Distinguish between decisions:
+Distinguish reversible decisions from expensive commitments:
 
-- **Reversible decisions:** Small choices that are easy to change. Use reasonable judgment and move forward.
-- **Hard-to-reverse decisions:** Public interfaces, persistent data changes, migrations, long-lived settings, security boundaries, external commitments, or vendor contracts. Pause for an explicit decision before implementation and record the rationale when appropriate.
+- **Reversible decisions:** small, easy-to-change choices. Use reasonable judgment, choose, and move forward.
+- **Hard-to-reverse decisions:** public interfaces, persistent data changes, long-lived configuration, migrations, external contracts, security boundaries, or vendor commitments. Pause and obtain an explicit decision before implementing. Record the decision and its rationale when appropriate.
 
-If priority or direction is unclear, present the tradeoff to the responsible decision-maker before investing in substantial design or implementation.
+If priority or direction is unclear, present the tradeoff and ask the responsible decision-maker to choose before doing substantial design or implementation work.
 
 ## 3. Research the current context
 
-Read relevant project instructions, architecture notes, repository guidance, service documentation, code, tests, deployment procedures, and previous attempts. Identify existing patterns, reusable components, compatibility expectations, ownership boundaries, security requirements, and monitoring practices.
+Read the relevant project instructions, architecture notes, repository guidance, service documentation, existing code, tests, operational procedures, and prior attempts. Look for established patterns and reusable components before inventing new ones.
 
-Use the system’s established conventions unless there is a clear, documented reason to change them. Do not assume a new tool, dependency, or service is necessary before checking what existing capabilities can solve.
+Understand constraints such as compatibility requirements, deployment practices, security expectations, supported environments, ownership boundaries, and monitoring. Use the system's existing conventions unless there is a strong reason to change them.
 
 ## 4. Define evaluation criteria
 
-Define explicit, lightweight criteria before generating options. For example:
+Define lightweight, explicit criteria before generating solutions. For example:
 
-| Criterion | Example standard |
-|---|---|
-| Correctness | Must preserve existing data and authentication behavior. |
-| Effort | Should fit the available delivery and maintenance capacity. |
-| Operational fit | Must work with current deployment, support, and ownership practices. |
-| Reversibility | Should be removable or recoverable if it fails. |
-| Verification | Must have a clear test or observable success condition. |
+- Must preserve existing authentication and data behavior.
+- Must be feasible within the available time and maintenance capacity.
+- Should avoid new dependencies or persistent configuration.
+- Must have a clear verification method.
+- Must be removable or reversible if it fails.
 
-These criteria prevent the first plausible idea from winning by accident.
+These criteria guide both option generation and selection. Without them, the first plausible idea can win by accident.
 
 ## 5. Generate varied approaches
 
-Generate genuinely different approaches, not minor variants of one design. Consider:
+Generate genuinely different approaches, not minor variations of the same design. Consider:
 
 1. Do nothing, defer, or improve the current workaround.
-2. A non-code solution, such as clearer guidance, a process change, a template, or an existing platform capability.
+2. A non-code change, such as clearer instructions, a process adjustment, a template, or a capability already available in an existing platform.
 3. A small targeted technical change.
 4. A larger integrated solution.
-5. Build, buy, or integrate with an external service.
+5. Build, buy, or integrate with an existing service.
 
-For highly ambiguous problems, generate a wider candidate set before narrowing. Keep each option concise: what it is, what it solves, its major costs, and its key risks.
+For especially ambiguous problems, generate a wider set of candidates before narrowing. Keep each option short: what it is, what it solves, major costs, and key risks.
 
 ### Design principles for technical options
 
-- Prefer one understandable code path over runtime-dependent special cases.
-- Validate inputs and fail clearly for invalid states; do not silently turn programmer errors into plausible but incorrect results.
+- Prefer one understandable code path over special cases that behave differently depending on runtime conditions.
+- Use strict validation and fail fast for invalid states. Do not silently convert programmer errors into plausible but incorrect results.
 - Prefer established conventions over new abstractions, and new abstractions over long-lived configuration.
-- Treat new fields, settings, and public interfaces as ongoing maintenance commitments.
+- Treat new fields, settings, and public interfaces as maintenance commitments.
 - Prefer well-bounded changes that can be removed cleanly.
 - Use familiar, proven technology and existing infrastructure where possible.
 - Design for deterministic, isolated testing.
-- Prioritize correctness over performance unless performance is an explicit requirement.
-- Place changes in the appropriate design boundary rather than applying a quick fix elsewhere.
+- Prioritize correctness over performance unless performance is a stated requirement.
+- Do the work cleanly; avoid quick fixes placed outside the appropriate design boundary.
 
 ## 6. Evaluate and recommend
 
-Compare viable options against the criteria. Produce a concise proposal containing:
+Compare each viable option against the criteria from Step 4. Present a concise proposal containing:
 
-- Problem statement and current impact.
+- The problem statement.
 - Evaluation criteria.
-- Viable options and tradeoffs.
+- The viable options and tradeoffs.
 - One clear recommendation and why it is preferred.
-- Important risks, irreversible consequences, assumptions, and open decisions.
+- Important risks, irreversible consequences, and open decisions.
 
-Store the proposal in the user’s chosen shared documentation system when durable review or collaboration is needed; otherwise provide it in the current workspace. Use a clear title, such as `DD MMM YYYY: Solve — [topic]`.
+Keep proposals direct and short. Store the proposal in the user's chosen shared documentation system when durable review or collaboration is needed; otherwise provide it in the current workspace. Use a clear, date-prefixed title such as `DD MMM YYYY: Solve — topic`.
 
-**Readiness gate:** Do not implement a hard-to-reverse commitment without an explicit decision. Do not proceed beyond this step for analysis-only work.
+If this is analysis-only work, stop here.
 
 ## 7. Plan, implement, and verify
 
-For larger work, create an implementation plan before changing the system. Include scope, ordered steps, affected components, dependencies, migration or rollback strategy, test strategy, deployment steps, and follow-up ownership.
+For larger work, create an implementation plan before changing the system. Include scope, ordered steps, affected components, migration or rollback strategy, test strategy, deployment steps, and ownership of follow-up actions. Keep the plan where reviewers can edit and approve it.
 
-Implement the approved solution using project conventions. Run relevant automated tests, static checks, and focused manual verification. Confirm behavior against the evaluation criteria, including compatibility, failure behavior, and rollback assumptions.
+Implement the approved solution using project conventions. Run relevant automated tests, static checks, and focused manual verification. Confirm the result against the evaluation criteria, including compatibility and failure behavior.
 
-**Verification audit:** Before claiming completion, confirm:
-
-- The implemented behavior addresses the stated problem.
-- Required tests and checks were run, with results recorded.
-- Untested paths, assumptions, and known limitations are identified.
-- No unapproved persistent interface, data, security, or vendor commitment was introduced.
-- Release, commit, publication, and deployment actions follow the user’s established practices.
+Do not claim success based only on implementation. Identify what was actually tested and what remains unverified. Commit, publish, or deploy changes only according to the user's repository and release practices.
 
 ## 8. Hand off
 
-Report the outcome in operational terms:
+Report:
 
-- What changed and what it enables.
-- Verification performed and results.
+- What changed and the user outcome it enables.
+- The verification performed and its results.
 - Known limitations, risks, and deferred work.
-- Required user action, rollout steps, monitoring, or rollback conditions.
-- References to the proposal, plan, and change set when applicable.
+- Any required user action, rollout step, or monitoring.
+- Links or references to the proposal, plan, and change set when applicable.
 
-Keep the handoff focused on outcomes and useful operational detail. Do not claim success solely because code was written or a configuration was changed.
+Keep the handoff focused on outcomes and operationally useful detail. Avoid burying the reader in temporary implementation notes.
