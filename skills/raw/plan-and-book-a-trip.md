@@ -1,204 +1,107 @@
 ---
 name: plan-and-book-a-trip
-description: Plan travel around its purpose, compare complete current journeys, and prepare or make authorized bookings while protecting privacy and handling trade-offs clearly.
+description: Plan a trip around its purpose, compare complete journeys and current fares, and prepare or complete a booking within the user's authorization.
 ---
 
 # Plan and book a trip
 
-Plan transport around the purpose of the trip, not around the first cheap fare found. First establish what the traveler needs from the journey, then research a small set of complete, practical options, and finally prepare or complete the selected booking within clear authorization. Current user instructions take priority over remembered preferences, prior receipts, and previous trip plans. A decision made for one trip is evidence for that trip, not an automatic rule for future travel.
+Understand the trip before optimizing its transport. Establish what the traveler wants, compare a small set of complete journeys, and carry the chosen option through preparation or authorized booking. Treat the user's current instructions as authoritative. Previous trips provide context, not permanent rules.
 
-## Principles and boundaries
+## 1. Understand the trip
 
-- Use travel, calendar, correspondence, account, and reservation information only for a legitimate travel-planning purpose and with clear authorization.
-- Search only the minimum relevant sources and information. Do not use access to an account as permission to inspect unrelated messages, records, companions, or personal details.
-- Keep personal information, identity documents, payment details, loyalty numbers, booking references, and private addresses within the appropriate private booking record. Do not place them in reusable instructions or shareable summaries.
-- Do not contact airlines, rail providers, hotels, organizers, companions, or other people unless the traveler authorizes it.
-- Do research and routine factual checking yourself when authorized. Ask the traveler only for a missing fact, required authentication step, or decision that cannot be resolved from available sources.
-- Never represent a search result, a fare held in a basket, or an incomplete checkout as a completed booking. A booking is complete only after confirmation from the provider.
-- Do not promise future fare checks or upgrade monitoring unless an authorized, functioning monitoring method is actually configured.
+Start with a focused discovery pass. For a continuing conversation, reuse the established brief and ask what changed. Follow a request to skip discovery or check one specific fare without forcing a new interview.
 
-## 1. Understand the trip before researching fares
+Read the supplied invitation, itinerary, article, event agenda, or other relevant material. With permission, consult calendars, travel correspondence, and existing reservations for this trip. Use only the minimum relevant sources and information for the legitimate planning purpose. Access to an account does not authorize unrelated searches or investigation of companions. Exclude unrelated or sensitive personal details, respect consent and privacy expectations, and keep findings within the approved private planning space. Do not contact anyone without authorization.
 
-For a new trip, begin with a focused discovery pass. Do not start detailed fare searches, upgrade comparisons, or checkout preparation while questions that could materially change the trip remain unanswered. The aim is to avoid allowing an early schedule or low advertised price to determine the trip's shape.
+Look for the trip's purpose, venues, possible dates, companions, accommodation, existing bookings, and commitments immediately before and after travel. Distinguish an invitation from confirmed attendance, a provisional calendar entry from a hard deadline, and an old receipt from a current preference. Resolve conflicts where possible and label remaining uncertainty.
 
-For a continuing conversation, use the established trip brief and ask what has changed. Follow an explicit request to skip discovery or perform a narrowly defined check, such as checking a particular train or flight.
+Retrieve accessible facts yourself. Ask the traveler about intentions and trade-offs, rather than asking them to copy information already available in an authorized source. Keep the initial research short enough for the traveler to shape the trip before detailed shopping begins.
 
-### Review relevant context
+### Ask questions that shape the journey
 
-Read materials supplied by the traveler, such as invitations, agendas, event pages, accommodation details, travel documents, or existing booking confirmations. If the traveler has authorized access to relevant private sources, conduct a short, scoped review of travel-related calendar events, correspondence, documents, and existing reservations.
+Briefly state what is known, then ask a compact group of relevant questions. Four to six often works for an open-ended trip; use fewer when the answers are already clear.
 
-Look for:
+- **Purpose:** What would make this trip worthwhile? Which events, visits, or activities matter most?
+- **People and places:** Who is traveling or being visited? Which stops are essential, optional, or best visited in a particular order?
+- **Time:** How long would the traveler like in each place? What fixes departure, arrival, and return? If dates are flexible, what range is useful?
+- **Pace:** Is the trip for work, leisure, or both? Is recovery time or arriving rested important? Are quiet workdays or unstructured days needed?
+- **Practical constraints:** What accommodation and local transport already exist? Are there accessibility, spending, or reimbursement constraints?
+- **Scope:** Is the requested outcome research, booking preparation, or an authorized purchase?
 
-- the trip's purpose and desired outcome;
-- event locations, start and end times, and whether attendance is confirmed;
-- companions, hosts, or people the traveler hopes to visit;
-- fixed commitments immediately before and after the likely travel dates;
-- existing transport, accommodation, local transport, or time off;
-- confirmed dates versus tentative holds or invitations;
-- access, health, work, reimbursement, or accessibility needs that affect the journey.
+Wait for answers to choices that materially affect the trip before searching tickets. Continue independent context gathering while waiting. Do not impose a numerical budget when the user wants to understand trade-offs first.
 
-Distinguish facts from inferences. For example, an event invitation may establish a location and proposed time, but it does not by itself prove that the traveler intends to attend or wants to arrive on the first day. Resolve conflicting sources when possible, and visibly label uncertainty that remains.
+### Establish preferences and agree the brief
 
-Keep this pass brief. Retrieve accessible facts instead of asking the traveler to copy them from authorized sources, but give the traveler an early opportunity to set the direction before doing detailed shopping.
+Ask only about preferences that remain unknown and matter to the options. These can include direct versus connecting services, cabin comfort, overnight sleeping needs, seats, luggage, rail class, loyalty benefits, and flexibility. Treat each as the traveler's choice. Do not assume an airline, seat, airport, or premium cabin is universally preferable.
 
-### Ask questions that shape the trip
+Summarize the purpose, people, stops, time in each place, fixed dates, flexible ranges, work and recovery needs, accommodation, and unresolved points. Give the traveler an opportunity to correct the summary. Clear answers can establish agreement without a separate approval ceremony. Keep provisional dates visibly provisional.
 
-State the important facts already known, then ask a concise, substantive set of questions. Four to six questions normally works for an open-ended trip; ask fewer when most answers are already settled. Use one numbered plain-text block so the traveler can answer easily.
+## 2. Research current transport
 
-Choose questions that develop the trip rather than merely collect booking fields:
+Search useful dates and routes against the agreed brief. If available transport would substantially change the trip, return to the traveler with that choice.
 
-1. **Purpose and priorities:** What would make this trip worthwhile? Which event, visit, activity, or outcome matters most?
-2. **People and places:** Who is traveling, being visited, or met? Which stops are essential, optional, or best done in a particular order?
-3. **Time:** How much time does the traveler want in each place? What fixes the earliest departure, required arrival, and latest return? If dates are flexible, what is the useful range?
-4. **Pace, work, and recovery:** Is this work, leisure, or both? Must the traveler arrive rested, work en route, include a quiet day, or leave unstructured time?
-5. **Practical arrangements:** What accommodation, rides, rail passes, local support, or onward transport already exists? Are there accessibility, spending, reimbursement, or documentation constraints?
-6. **Requested outcome:** Does the traveler want research, a recommendation, booking preparation, or an authorized purchase?
+Use current schedules and fares. Search aggregators can reveal routes and date differences, but verify the selected itinerary, operating carrier, fare family, and conditions with the provider when possible. A marketing carrier's name does not establish who operates the service.
 
-Do not make a numeric budget compulsory when the traveler wants to understand the available trade-offs first. Do not turn the first discussion into an unnecessary debate about cabin products, loyalty programs, or upgrades. Ask about those only if they are unknown and likely to change the recommendation.
+If a tool or provider fails, attempt permitted safe recovery. Name the failed source, report the exact error, and explain which facts remain missing or unverified. Disclose any switch of source and the resulting verification limits. Do not imply a blocked checkout or inaccessible personal offer was checked.
 
-### Agree a trip brief
+Compare useful combinations: return tickets, arriving and departing through different cities, nearby airports, rail, and ground transfers. Consider accommodation, cross-city travel, and lost usable time when judging a cheaper fare. Explain any connection or airport change before treating it as acceptable.
 
-Summarize the working brief before detailed fare research. Include:
+Check transport to the actual destination. An airport arrival may leave a long onward journey. Verify the intended station when names are ambiguous. Check timetable-release limits, holiday disruption, and planned engineering work; do not invent a precise service or price before it is available.
 
-- purpose, important people, and stops;
-- desired time in each place;
-- fixed dates, deadlines, and flexible date ranges;
-- work, rest, and arrival-readiness needs;
-- accommodation and ground-transport arrangements;
-- known travel preferences that are relevant to this trip;
-- unresolved choices and assumptions.
+Label each quote as a selected live itinerary, an indicative date-grid price, or an estimate. Record when it was checked, the currency, and what it includes. An advertised starting price is not proof that the required ticket can be bought. Use verified links for options and terms.
 
-Give the traveler a chance to correct the summary. Clear answers can establish agreement; do not ask for ceremonial approval after the traveler has already made the necessary choices. However, wait for answers to unresolved questions that would materially affect the route, dates, or transport type. Keep provisional dates visibly marked as provisional.
+### Compare the actual product
 
-## 2. Research current transport options
+Use the comfort levels relevant to the traveler. When comparing premium economy, verify that it is a distinct cabin rather than an extra-legroom economy seat. For overnight journeys where sleep matters, compare confirmed sleeping arrangements and verify the actual aircraft or train product. A service label alone does not guarantee a lie-flat seat or the expected facilities.
 
-Start detailed research only after the brief is sufficiently clear, unless the traveler explicitly asks for a limited fare check. Keep the search tied to the agreed trip. If available transport would require a meaningful change—such as losing an important day, adding a risky connection, or arriving too tired for a key event—return to the traveler with that decision rather than silently changing the plan.
+Inspect every segment of a mixed-cabin itinerary. A higher cabin on an overnight leg and a lower cabin on a daytime return may suit the trip better than upgrading everything. For rail, confirm the named class and fare conditions rather than trusting a reseller's generic class label.
 
-### Search and verify live options
+Include required seat selection and luggage in the price. Check availability of the preferred seat, any selection fee, and whether assignment is confirmed. Verify the fare's cabin-bag allowance and size or weight restrictions. A personal-item allowance may not cover the traveler's bag. Included services have value only when the traveler needs them.
 
-Search the useful date range and all realistic modes: air, rail, ferry, road transfer, and local transport where relevant. Discovery tools and price calendars are useful for finding routes and date patterns, but verify the chosen itinerary with the operating provider whenever practical.
+### Evaluate upgrades carefully
 
-For each promising option, establish:
+When upgrades are relevant, compare buying the desired cabin outright, changing a ticket by paying the fare difference, and purchasing a separate upgrade. Before booking, compare total costs; afterward, compare additional costs and conditions. Do not assume a previous upgrade payment carries forward to another change.
 
-- local departure and arrival dates and times;
-- airports, stations, terminals, and any change of airport or station;
-- operating provider, not merely a marketing or reseller label;
-- total duration, connection length, and whether tickets are protected together;
-- fare family or named ticket type;
-- actual cabin, class, berth, or seat product on every segment;
-- price, currency, inclusions, and the time checked;
-- change, cancellation, refund, and missed-connection conditions;
-- relevant luggage, seat-selection, and boarding requirements.
+Separate confirmed seats from award or loyalty waitlists. An empty seat map is not proof that an upgrade can clear. If sleep or comfort is essential, recommend a confirmed acceptable option. Buy a lower cabin only if the traveler would be content flying it.
 
-Label every quoted price accurately:
+Verify fare-family eligibility, current loyalty benefits, waitlist rules, and any restrictions before buying a ticket as an upgrade strategy. Do not claim that a particular point before departure is reliably cheapest. Prices can rise, cabins can sell out, and preferred seats can disappear.
 
-- **Live selected itinerary:** currently available for the specified service and fare.
-- **Indicative date-grid price:** useful for comparing dates but not yet verified for the selected itinerary.
-- **Estimate:** a reasoned approximation, clearly separated from a bookable quote.
+Compare cash with points and any copayment using a stated valuation assumption. Read the specific upgrade's change, cancellation, refund, and unsuccessful-waitlist terms. A flexible ticket does not necessarily make an upgrade refundable.
 
-Do not treat an advertised “from” price as proof that the required ticket is available. Use verified links for booking and material fare terms when links can safely be shared.
+For an existing reservation, inspect personal upgrade offers and alternative ticket-change prices when authenticated access is available and authorized. Public fares do not establish a reservation-specific offer. If login or unavailable tools prevent a check, attempt permitted recovery, identify what remains unverified, and request only the user action needed to proceed. Continue independent comparisons.
 
-### Compare complete journeys, not isolated tickets
+## 3. Compare complete journeys
 
-Consider round trips, one-way combinations, open-jaw itineraries, nearby airports, different rail stations, and combinations of air and ground transport when they fit the brief. Include the rail journey, airport transfer, cross-city transfer, hotel, or lost usable time needed to make each option work.
+Give two or three useful options with a recommendation. If only one route meets the brief, explain that rather than inventing alternatives.
 
-A lower base fare is not necessarily cheaper or better if it creates an overnight stay, a difficult transfer, a long drive, or a missed workday. Verify the actual onward destination, especially where place names are ambiguous or a major airport remains far from the final destination.
+Show local departure and arrival dates and times, airport or station names, total journey duration, and overnight date changes. Include realistic buffers for immigration, luggage, station check-in, and travel between terminals or across a city. Verify the provider's current arrival guidance and allow practical contingency.
 
-Check timetable-release dates, planned engineering work, holiday disruption, border procedures, and seasonal schedules. Do not invent an exact train, fare, or transfer time before schedules are released.
-
-### Evaluate product quality and comfort honestly
-
-Compare the actual product, not an imprecise label. Extra-legroom economy is not premium economy. A reseller's generic “first class” label may not establish the provider's named product or conditions. A business-class label does not guarantee a lie-flat seat on every aircraft or route.
-
-When overnight travel or next-day performance matters, compare sleep quality and readiness alongside price. For example, a traveler may reasonably prefer a higher cabin or berth for an overnight segment and a lower-cost product for a daytime return. Assess every segment of mixed-cabin itineraries rather than describing the journey by its best segment.
-
-If the traveler has a seat preference, check whether a suitable seat is currently selectable and include any necessary selection fee. A preference is not a confirmed assignment. Verify cabin-bag allowances, dimensions, and weight limits for the exact fare. A personal-item-only ticket may not meet a traveler who needs a cabin bag.
-
-### Account for jet lag and recovery when relevant
-
-For trips across multiple time zones, rank practical schedules by their likely effect on sleep, alertness, and the traveler's first important day. Do not rely on price and duration alone.
-
-Use the traveler's stated sleep pattern if available. If it is not available, ask whether arrival readiness is important and use broadly sensible sleep-protection principles:
-
-- For eastbound trips, favor schedules that give the traveler a realistic opportunity to sleep during their usual biological night and avoid an exhausting first local day when possible.
-- For westbound trips, daytime travel and arrival in daylight can make it easier to remain awake until a reasonable local bedtime.
-- For an overnight work trip, give extra weight to confirmed sleep conditions, arrival buffers, and a reduced first-day schedule.
-- Suggest a practical pre-trip sleep adjustment and a first-days plan for light exposure, meals, caffeine, and naps, while making clear that individual responses vary.
-
-Do not present medical certainty or assume that the same schedule suits every traveler. Ask whether the traveler prioritizes cost, a low-stress departure, sleep, or immediate performance.
-
-### Evaluate upgrades without false certainty
-
-When upgrades are relevant, compare three distinct strategies:
-
-1. buy the preferred cabin or class outright;
-2. change an existing ticket and pay the fare difference; and
-3. purchase a separate cash, points, or loyalty upgrade offer.
-
-Compare the full cost before booking. After booking, compare the additional cost, terms, and effect on the underlying fare. Do not assume a previous upgrade payment will transfer to a changed itinerary.
-
-Separate a confirmed higher cabin from an upgrade waitlist. An empty-looking seat map is not proof that a loyalty or points upgrade will clear. If reliable sleep or comfort is important, recommend a ticket the traveler would accept even if no upgrade occurs.
-
-Verify upgrade eligibility for the selected fare family, current loyalty benefits, waitlist rules, and refund or cancellation terms. Do not claim that a particular moment before departure is reliably cheapest. Prices may rise, seats may sell out, and desirable seats may disappear. If comparing cash and points, state the valuation assumption used.
-
-For an existing authorized reservation, inspect reservation-specific upgrade and change offers only when authenticated access is available and permitted. Public fares do not establish a personal offer. If authentication, provider restrictions, or tooling prevents inspection, explain exactly what remains unverified and request only the smallest necessary action from the traveler.
-
-### Handle failures and source changes transparently
-
-If a provider site, account, or tool fails:
-
-1. identify the failed source and the relevant error or limitation;
-2. explain which fact cannot be verified as a result;
-3. attempt a safe, permitted recovery or alternate source;
-4. disclose the source switch and its verification limits; and
-5. continue the independent work that remains possible.
-
-Do not silently substitute sources or imply that an inaccessible checkout, membership benefit, or personalized offer was verified.
-
-## 3. Compare complete journeys and recommend an option
-
-Present two or three useful choices, with a clear recommendation. If only one option genuinely meets the brief, say so rather than inventing weak alternatives.
+Distinguish protected connections from independently booked tickets. Explain who bears the risk if the first service is late. Consider a longer connection or overnight stay when appropriate, accounting for accommodation already available.
 
 Use a compact comparison such as:
 
-| Option | Dates and route | Product and conditions | Complete cost | Main benefit | Main drawback |
+| Option | Dates and route | Cabin and fare | Complete cost | Main benefit | Main drawback |
 |---|---|---|---|---|---|
-| [Recommended option] | [Local times, route, duration] | [Cabin/class, fare rules, luggage, seat status] | [Currency and included required extras] | [Why it best fits the brief] | [Cost, restriction, or uncertainty] |
+| [Option] | [Local dates, route, duration] | [Actual product on each segment] | [Currency, tickets, required extras and transfers] | [Time, comfort or flexibility gained] | [Restriction, effort or uncertainty] |
 
-For each option, show local times, dates, next-day arrivals, route, total duration, and realistic connection or transfer requirements. Explain timezone changes. Distinguish protected connections from independently booked tickets and identify who bears the risk if an earlier service is late.
+Explain what extra spending buys. List material change and refund restrictions, luggage, seat fees, and ground transport. Show different currencies separately or clearly label the conversion assumption. Do not add unlike currencies into one unexplained total.
 
-Include practical buffers for immigration, security, station check-in, baggage, terminal changes, and travel across a city. Use larger buffers during holidays, severe-weather periods, or unfamiliar border processes. For rail or international terminal services, verify the provider's current arrival guidance and recommend a practical arrival target rather than planning around the final gate-closure minute.
+## 4. Prepare and complete the booking
 
-Show currencies separately unless using a clearly stated conversion assumption and timestamp. Do not combine amounts in different currencies into an unexplained total. Explain what additional spending buys: less risk, a better sleep opportunity, more flexible changes, a preferred seat, a shorter transfer, or more usable time.
+Lead with the recommended dates and route, the comparison, verified booking links, the quote-check time, unresolved facts, and the decision needed. Keep personal identity and reservation information out of a shareable summary unless required for its purpose.
 
-Lead with the recommended dates and route, followed by the decision still needed. Include when prices were checked, relevant verified links, and any important unverified details.
+Prepare a concrete, reviewable booking before requesting any necessary purchase approval. A request to compare travel does not authorize payment. If the user has already authorized the specific purchase or an adequate scope and price ceiling, continue within that authorization without repeatedly asking. A material mismatch needs resolution before checkout.
 
-## 4. Prepare and complete an authorized booking
+Verify the passenger name against the traveler's supplied identity details; never invent missing information. Check dates, airports or stations, operating provider, routing, class on each segment, fare family, seats, luggage, total price, and terms against the chosen option. Keep payment and identity documents within the authorized booking process.
 
-A request to find or compare transport does not authorize payment. Prepare a concrete, reviewable booking before requesting approval that is actually needed. If the traveler has already authorized a specific purchase or an adequately defined scope and price limit, proceed within that authorization without repeatedly asking merely because checkout is next.
+After purchase, verify a provider confirmation. Report the booked journey and total, any unassigned seat, and remaining transport arrangements. A selected fare or partially completed checkout is not a booking. Keep references and receipts in a private trip record rather than the reusable skill.
 
-Before submitting a booking, verify against the agreed option:
+## 5. Monitor and learn when requested
 
-- traveler name as supplied for the booking;
-- dates, local times, airports, stations, and route;
-- operating provider and connection structure;
-- cabin, class, fare family, and product on each segment;
-- selected seat or any unassigned-seat risk;
-- luggage entitlement and required extras;
-- total price, currency, payment scope, and material terms.
+If the plan includes recurring fare or upgrade checks, establish a real schedule with an available authorized automation facility. Verify that it can access the reservation and report useful changes before describing monitoring as active. Track additional cost, cabin, seat availability, conditions, and check time. Notify the traveler when a decision is useful; monitoring does not authorize a purchase.
 
-Resolve a material mismatch before purchase. Do not invent identity details, travel-document details, payment information, or consent. Keep sensitive details only in the authorized booking process.
+Stop monitoring after departure, a completed upgrade, or a changed plan. If scheduling or authentication is unavailable, state that monitoring is not running. Never promise ongoing checks without an execution mechanism.
 
-After purchase, confirm success from the provider's confirmation. Report the booked journey, total paid, seat status, material restrictions, and any remaining transport or check-in task. Store references and receipts in the appropriate private trip record, not in a reusable workflow or broad shareable summary.
+During active use, apply corrections immediately. When authorized to remember preferences, save clear lasting choices with their qualifications and replace superseded defaults. Keep current fares, event dates, one-off exceptions, and tentative preferences in the trip record. Ask whether a choice applies to this trip or future trips only when that distinction is unclear.
 
-## 5. Monitor and improve when appropriate
-
-If the traveler requests fare or upgrade monitoring, establish an authorized, functioning mechanism before saying monitoring is active. Confirm that it can access the necessary itinerary or provider information and that it will report a useful change. Define what is monitored, such as price difference, cabin availability, seat availability, or a specific upgrade threshold.
-
-Monitoring does not authorize a purchase. Stop it after departure, a completed upgrade, a canceled trip, or a changed plan. If scheduling, authentication, or access is unavailable, state plainly that monitoring is not running.
-
-During active work, apply clear corrections immediately. When the traveler authorizes remembering preferences, retain durable preferences with their qualifications, such as “for overnight work trips,” and replace superseded instructions rather than accumulating contradictions. Keep temporary fares, event dates, one-off exceptions, and tentative preferences in the private trip record.
-
-Learn from verified outcomes and traveler feedback about comfort, connection timing, disruption, and booking friction. A successful booking does not prove that the traveler was satisfied. Do not promote a one-time bargain, a lucky upgrade, or a transient provider issue into a permanent rule. If it is unclear whether a preference applies only to this trip or to future trips, ask that narrow question and preserve the existing default until it is answered.
-
-Learning does not create additional authorization to purchase, access accounts, contact others, or retain sensitive information.
+Learn from verified outcomes and traveler feedback about comfort, connections, and booking friction. Successful checkout does not establish satisfaction. Preserve useful general lessons without accumulating incident histories, personal identifiers, or credentials. Learning creates no additional permission to purchase, message others, or access accounts.
