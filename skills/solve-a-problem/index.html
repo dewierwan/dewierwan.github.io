@@ -1,116 +1,104 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="robots" content="noindex,nofollow,noarchive"><title>Solve a problem · AI skills</title><meta name="description" content="Take a non-trivial problem from diagnosis through recommendation, implementation, verification, and handoff, with a clear analysis-only stopping point.">
-<link rel="alternate" type="text/markdown" href="/skills/raw/solve-a-problem.md"><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%23b4552d%22/><text x=%2250%22 y=%2253%22 dominant-baseline=%22central%22 text-anchor=%22middle%22 font-family=%22Georgia, 'Times New Roman', serif%22 font-size=%2246%22 letter-spacing=%221%22 fill=%22%23fdfaf4%22>DE</text></svg>"><link rel="stylesheet" href="/skills/styles.css"></head><body><main><a class="back" href="/skills/">← Skills</a><header class="skill-header"><h1>Solve a problem</h1><p class="description">Take a non-trivial problem from diagnosis through recommendation, implementation, verification, and handoff, with a clear analysis-only stopping point.</p><div class="skill-actions"><a href="/skills/raw/solve-a-problem.md">Raw Markdown</a><button class="copy" type="button" data-copy="/skills/raw/solve-a-problem.md">Copy Markdown</button></div></header><article class="skill-body"><p>Use this workflow for a non-trivial product, technical, process, integration, or automation problem where the right solution is not yet clear. Do not use it for small fixes or routine tasks with a known implementation.</p>
-<p>By default, work from understanding through implementation and handoff. If the user requests analysis only, stop after the recommendation and wait for an explicit decision.</p>
-<h3>Entry and decision gate</h3>
-<p>Enter this workflow when there is a committed problem worth exploring, but the implementation is unclear. If the underlying problem, priority, or strategic direction is still disputed, first use a suitable discovery, challenge, or decision process rather than designing prematurely.</p>
-<p>Before implementation, classify the main decision:</p>
-<ul>
-<li><strong>Reversible:</strong> A small, cheap-to-change choice. Make a reasonable choice, state the assumption, and proceed.</li>
-<li><strong>Hard to reverse:</strong> A persistent data change, public interface, long-lived setting, migration, security boundary, external contract, or vendor commitment. Pause for an explicit decision before implementation. Record the rationale, owner, alternatives, and consequences when the commitment warrants it.</li>
-</ul>
-<p>Do not hide a hard-to-reverse commitment inside an otherwise ordinary implementation task.</p>
+<meta name="robots" content="noindex,nofollow,noarchive"><title>Solve a problem · AI skills</title><meta name="description" content="Take a non-trivial product, technical, process, or automation problem from diagnosis through options, implementation, verification, and handoff, with an analysis-only mode.">
+<link rel="alternate" type="text/markdown" href="/skills/raw/solve-a-problem.md"><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%23b4552d%22/><text x=%2250%22 y=%2253%22 dominant-baseline=%22central%22 text-anchor=%22middle%22 font-family=%22Georgia, 'Times New Roman', serif%22 font-size=%2246%22 letter-spacing=%221%22 fill=%22%23fdfaf4%22>DE</text></svg>"><link rel="stylesheet" href="/skills/styles.css"></head><body><main><a class="back" href="/skills/">← Skills</a><header class="skill-header"><h1>Solve a problem</h1><p class="description">Take a non-trivial product, technical, process, or automation problem from diagnosis through options, implementation, verification, and handoff, with an analysis-only mode.</p><div class="skill-actions"><a href="/skills/raw/solve-a-problem.md">Raw Markdown</a><button class="copy" type="button" data-copy="/skills/raw/solve-a-problem.md">Copy Markdown</button></div></header><article class="skill-body"><p>Use this workflow for a non-trivial product, technical, process, automation, integration, or operational problem where the right solution is not already clear. Do not use it for a small fix or routine task with a known implementation.</p>
+<p>By default, work from understanding through implementation. If the user requests analysis only, stop after the recommendation and wait for a decision.</p>
 <h3>1. Understand the problem</h3>
-<p>Start with the underlying problem, not the first proposed solution. If someone asks to “build X,” work backward:</p>
+<p>Start from the underlying problem, not the first proposed solution. When someone asks to “build X,” work backward:</p>
 <ul>
-<li>Who is affected, and what are they trying to accomplish?</li>
+<li>Who is affected and what are they trying to accomplish?</li>
 <li>What happens today?</li>
-<li>What workarounds, delays, failures, or risks exist?</li>
-<li>How frequent and how blocking is the problem?</li>
-<li>What outcome would materially improve the situation?</li>
+<li>What workarounds or alternatives exist?</li>
+<li>How frequent, costly, urgent, or blocking is the issue?</li>
+<li>What outcome would make the situation meaningfully better?</li>
 </ul>
-<p>Write a concise problem statement and descriptive requirements. Describe desired outcomes and constraints rather than assuming an implementation. If the proposed solution does not fit the problem, say so directly.</p>
-<p>Ask only for information that cannot reasonably be found in available documentation, code, approved records, or system context.</p>
+<p>Write a concise problem statement and descriptive requirements. Define the desired outcome, constraints, and measures of success without assuming a particular implementation. If the proposed solution does not fit the problem, say so clearly.</p>
+<p>Ask only for information that cannot be found in available documentation, code, approved records, or the user’s supplied context.</p>
 <h4>Boundaries for people-related information</h4>
-<p>If the work requires communications, records, or other information about identifiable people, establish a legitimate stated purpose and clear authorization first. Review only the minimum relevant sources, time range, fields, and excerpts. Omit unrelated personal or sensitive details, respect consent and confidentiality expectations, and keep notes and outputs within the approved audience.</p>
-<p>When authority, consent, or permitted use is unclear, pause and ask the responsible owner. Prefer anonymized or aggregated evidence when it supports the decision equally well.</p>
-<h3>2. Decide whether to solve it now</h3>
-<p>Assess severity, frequency, affected users, opportunity cost, available alternatives, and ongoing maintenance burden. Treat “do nothing,” “deprioritize,” and “improve the current workaround” as real options.</p>
-<p>If priority or direction is unclear, present the tradeoff to the responsible decision-maker before investing substantially in design or implementation.</p>
-<h3>3. Research the current context</h3>
-<p>Read relevant project instructions, architecture notes, repository guidance, service documentation, existing code, tests, operational procedures, and prior attempts. Find established patterns, reusable components, and existing platform capabilities before creating something new.</p>
-<p>Identify compatibility, deployment, access-control, privacy, supported-environment, ownership, monitoring, and rollback constraints. Follow existing conventions unless there is a strong documented reason to depart from them.</p>
-<p>For sensitive research, retain only an appropriate audit record: purpose, authorizing role, sources reviewed, scope, and access restrictions. Do not copy source material into working notes unless necessary.</p>
-<h3>4. Define evaluation criteria</h3>
-<p>Set explicit, lightweight criteria before generating solutions. At minimum, cover:</p>
+<p>If understanding the problem requires reviewing communications, support cases, employee records, customer records, usage data, or other information about people:</p>
 <ul>
-<li>Required user outcome and compatibility constraints.</li>
-<li>Delivery effort and ongoing maintenance capacity.</li>
-<li>Operational risk, rollback, or containment path.</li>
-<li>Simplicity, including avoidance of unnecessary dependencies and permanent settings.</li>
-<li>Verification method and expected failure behavior.</li>
-<li>Privacy and access boundaries where data about people is involved.</li>
+<li>Establish a legitimate, specific purpose for the review.</li>
+<li>Confirm that the requester has clear authorization to access the sources and use them for this purpose.</li>
+<li>Use the minimum sources, date range, fields, and excerpts needed to answer the question.</li>
+<li>Respect applicable consent, notice, confidentiality, retention, and privacy expectations. Do not assume that access to a system authorizes a new use of its contents.</li>
+<li>Avoid collecting or repeating sensitive personal information unless it is necessary for the stated purpose and appropriately authorized. Sensitive information may include health, financial, identity, precise location, legal, family, demographic, or private communication details.</li>
+<li>Remove names, identifiers, and unnecessary personal details from working notes and outputs where possible. Prefer aggregated or anonymized findings.</li>
+<li>Keep outputs within the appropriate access boundary. Share findings only with people authorized to receive them, and do not move sensitive material into broader documentation, tickets, logs, or public channels.</li>
 </ul>
-<p>These criteria prevent the first plausible option from winning by accident.</p>
+<p>If authorization, purpose, consent expectations, or the safe output audience is unclear, pause and ask for clarification before reviewing or disclosing the information.</p>
+<h3>2. Assess whether to solve it now</h3>
+<p>Assess severity, frequency, affected users, opportunity cost, existing alternatives, and maintenance burden. “Do nothing,” “deprioritize,” or “improve the current workaround” are valid options when the problem is low impact or already adequately handled.</p>
+<p>Distinguish between:</p>
+<ul>
+<li><strong>Reversible decisions:</strong> Small choices that are inexpensive to change. Use reasonable judgment and proceed.</li>
+<li><strong>Hard-to-reverse decisions:</strong> Persistent data changes, migrations, public interfaces, long-lived configuration, security boundaries, external contracts, or vendor commitments. Pause for an explicit decision before implementation.</li>
+</ul>
+<p>If priority or direction is unclear, present the tradeoff and ask the accountable decision-maker to choose before investing in detailed design or implementation. Record consequential decisions and their rationale when useful.</p>
+<h3>3. Research the current context</h3>
+<p>Read the relevant project instructions, architecture notes, repository guidance, service documentation, existing code, tests, operating procedures, and previous attempts. Find established patterns and reusable components before creating new ones.</p>
+<p>Understand compatibility requirements, deployment practices, supported environments, access boundaries, security expectations, ownership, observability, and rollback constraints. Follow existing conventions unless there is a clear reason to change them.</p>
+<p>When research involves restricted systems or people-related records, document the purpose, authorized sources, and intended audience at a level appropriate to the work. Do not copy raw sensitive content into proposals or implementation plans unless it is necessary, authorized, and access-controlled.</p>
+<h3>4. Define evaluation criteria</h3>
+<p>Define explicit, lightweight criteria before generating options. For example:</p>
+<div class="table-wrap" tabindex="0" aria-label="Scrollable table"><table><thead><tr><th>Criterion</th><th>Example expectation</th></tr></thead><tbody><tr><td>Compatibility</td><td>Must preserve current authentication and data behavior.</td></tr><tr><td>Delivery</td><td>Should fit the available time and maintenance capacity.</td></tr><tr><td>Operational cost</td><td>Prefer no new dependency or long-lived configuration.</td></tr><tr><td>Quality</td><td>Must have a practical verification method.</td></tr><tr><td>Reversibility</td><td>Should be removable or recoverable if it fails.</td></tr><tr><td>Data handling</td><td>Must use only authorized data and keep outputs within the intended access boundary.</td></tr></tbody></table></div>
+<p>These criteria guide both solution generation and selection. Without them, the first plausible approach can win by accident.</p>
 <h3>5. Generate varied approaches</h3>
-<p>Generate genuinely different options, not minor variants of one design. Consider:</p>
+<p>Generate genuinely different approaches, rather than small variations of one design. Always consider:</p>
 <ol>
 <li>Do nothing, defer, or improve the current workaround.</li>
-<li>A non-code change, such as clearer guidance, a process adjustment, a template, or an existing platform feature.</li>
+<li>A non-code solution, such as clearer guidance, a process adjustment, a template, or an existing platform capability.</li>
 <li>A small targeted technical change.</li>
 <li>A larger integrated solution.</li>
-<li>Building, buying, or integrating an existing service.</li>
+<li>Build, buy, or integrate with an existing service.</li>
 </ol>
-<p>For highly ambiguous work, generate a wider set before narrowing. Keep each approach to one or two short paragraphs: what it is, what it solves, major costs, and key risks.</p>
+<p>For especially ambiguous problems, generate a wider set of candidates before narrowing. Keep each option concise: what it is, what it solves, main costs, and key risks.</p>
 <h4>Design principles for technical options</h4>
 <ul>
 <li>Prefer one understandable code path over runtime-dependent special cases.</li>
-<li>Validate inputs and fail clearly for invalid states. Do not hide programming errors behind plausible fallback results.</li>
+<li>Validate strictly and fail fast for invalid states. Do not silently transform programming errors into plausible but incorrect results.</li>
 <li>Prefer established conventions over new abstractions, and new abstractions over long-lived configuration.</li>
-<li>Treat new fields, settings, and public interfaces as maintenance commitments.</li>
-<li>Prefer bounded changes that can be removed without widespread entanglement.</li>
-<li>Use familiar, proven technology and existing infrastructure where possible.</li>
-<li>Design for deterministic, isolated tests.</li>
-<li>Prioritize correctness over performance unless performance is a stated requirement.</li>
-<li>Put changes in the appropriate design boundary; avoid quick fixes that create future maintenance problems.</li>
-<li>Collect, expose, retain, and transmit only data necessary for the approved purpose.</li>
+<li>Treat new fields, settings, and public interfaces as ongoing maintenance commitments.</li>
+<li>Prefer loosely coupled, well-bounded changes that can be removed cleanly.</li>
+<li>Use familiar, proven technology and existing infrastructure when suitable.</li>
+<li>Design for deterministic, isolated testing.</li>
+<li>Prioritize correctness over performance unless performance is an explicit requirement.</li>
+<li>Avoid quick fixes that bypass the appropriate design boundary.</li>
+<li>For systems handling people-related information, minimize collection, restrict access, avoid unnecessary retention, and make authorization boundaries enforceable rather than relying only on policy.</li>
 </ul>
 <h3>6. Evaluate and recommend</h3>
-<p>Compare viable options against the criteria. Use this proposal format:</p>
-<pre><code>Title: DD MMM YYYY: Solve — [topic]
-
-Problem
-[One concise statement of the user outcome, current gap, and constraints.]
-
-Criteria
-[The criteria used to compare options.]
-
-Options
-1. [Option]: [benefit, cost, and key risk.]
-2. [Option]: [benefit, cost, and key risk.]
-
-Recommendation
-[One recommended option and why it best meets the criteria.]
-
-Decision needed
-[Owner, hard-to-reverse commitments, open questions, and approval needed.]
-
-Risks and verification
-[Main risks, rollback or containment approach, and how success will be checked.]</code></pre>
-<p>Keep the proposal direct and concise. Store it in the user’s approved shared documentation system when durable review or collaboration is needed; otherwise provide it in the current workspace. Share it only with people authorized to receive its content.</p>
-<p><strong>Analysis-only gate:</strong> If analysis-only was requested, stop here. Do not create an implementation plan, change systems, or imply approval to proceed.</p>
-<h3>7. Plan, implement, and verify</h3>
-<p>For larger work, create an implementation plan before changing the system. Include scope, ordered steps, affected components, data or migration needs, rollback strategy, test approach, deployment steps, and follow-up ownership.</p>
-<p>Before implementation, confirm this readiness gate:</p>
+<p>Compare viable options against the evaluation criteria. Present a concise proposal containing:</p>
 <ul>
-<li>The recommendation or chosen direction is approved by the appropriate owner.</li>
-<li>Any hard-to-reverse decision is explicit and documented.</li>
-<li>Required access, privacy, and security approvals are in place.</li>
-<li>Success criteria, test method, rollout path, and rollback or containment path are known.</li>
-<li>The implementation scope has a clear boundary and owner.</li>
+<li>Problem statement and current impact.</li>
+<li>Evaluation criteria.</li>
+<li>Viable options and tradeoffs.</li>
+<li>One clear recommendation and why it is preferred.</li>
+<li>Important risks, irreversible consequences, assumptions, and open decisions.</li>
+<li>For people-data work, the legitimate purpose, authorized information scope, sensitive-data safeguards, consent or notice considerations, and intended output audience.</li>
 </ul>
-<p>Implement using project conventions. Run relevant automated tests, static checks, and focused manual verification. Confirm the result against the evaluation criteria, including compatibility, authorization, privacy, and expected failure behavior.</p>
-<p>Before release, check that the solution enforces its intended access boundary, does not expose sensitive information through logs or shared artifacts, uses authorized test data, and has appropriate retention or deletion behavior for stored data.</p>
-<p>Do not claim success based only on completed code. State what was tested, the results, and what remains unverified. Commit, publish, or deploy only according to the user’s repository and release practices.</p>
+<p>Keep proposals direct and brief. Store durable proposals in the user’s chosen shared documentation system when review or collaboration is needed; otherwise provide them in the current workspace. Use a clear date-prefixed title, such as <code>DD MMM YYYY: Solve — topic</code>.</p>
+<p>Do not include raw private communications, unnecessary identifiers, or sensitive details in a broadly accessible proposal. Use summaries, aggregates, redaction, or a restricted appendix where needed. Confirm that proposal access matches the authorization boundary before sharing it.</p>
+<p>If this is analysis-only work, stop here.</p>
+<h3>7. Plan, implement, and verify</h3>
+<p>For larger work, create an implementation plan before changing the system. Include scope, ordered steps, affected components, access and data handling, migration and rollback strategy, test strategy, deployment steps, and follow-up ownership.</p>
+<p>Implement the approved solution using project conventions. Run relevant automated tests, static checks, and focused manual verification. Confirm results against the evaluation criteria, including compatibility, privacy, security, authorization, and failure behavior.</p>
+<p>If the implementation accesses or processes people-related data, verify that:</p>
+<ul>
+<li>Access is limited to authorized roles and systems.</li>
+<li>The solution collects and retains only necessary information.</li>
+<li>Sensitive values are protected in interfaces, logs, test fixtures, analytics, and error reporting.</li>
+<li>Consent, notice, and user-control requirements are met where applicable.</li>
+<li>Outputs, exports, alerts, and dashboards are available only to appropriate audiences.</li>
+<li>Test data is synthetic or otherwise approved for testing.</li>
+</ul>
+<p>Do not claim success solely because code was written. State what was tested, the results, and what remains unverified. Commit, publish, or deploy only according to the user’s repository and release practices.</p>
 <h3>8. Hand off</h3>
 <p>Report:</p>
 <ul>
 <li>What changed and the outcome it enables.</li>
 <li>Verification performed and results.</li>
 <li>Known limitations, risks, and deferred work.</li>
-<li>Required user actions, rollout steps, monitoring, and ownership.</li>
-<li>Any continuing access, consent, retention, or privacy obligations.</li>
-<li>References to the proposal, plan, and change set where applicable.</li>
+<li>Required user actions, rollout steps, or monitoring.</li>
+<li>References to the proposal, plan, and change set when applicable.</li>
+<li>Any continuing access, consent, retention, or output-sharing constraints relevant to the solution.</li>
 </ul>
-<p>Keep the handoff focused on operationally useful outcomes. Share technical and operational detail only with the approved audience, and exclude unnecessary personal or sensitive information.</p></article><footer><a href="/skills/LICENSE.txt">CC0</a></footer></main><script>document.querySelector('[data-copy]').addEventListener('click',async function(){try{const text=await fetch(this.dataset.copy).then(r=>{if(!r.ok)throw new Error();return r.text()});await navigator.clipboard.writeText(text);this.textContent='Copied'}catch{this.textContent='Open raw Markdown'}})</script></body></html>
+<p>Keep the handoff focused on outcomes and operationally useful detail. Share it only through channels suitable for its information sensitivity, and avoid burying the reader in temporary implementation notes.</p></article><footer><a href="/skills/LICENSE.txt">CC0</a></footer></main><script>document.querySelector('[data-copy]').addEventListener('click',async function(){try{const text=await fetch(this.dataset.copy).then(r=>{if(!r.ok)throw new Error();return r.text()});await navigator.clipboard.writeText(text);this.textContent='Copied'}catch{this.textContent='Open raw Markdown'}})</script></body></html>

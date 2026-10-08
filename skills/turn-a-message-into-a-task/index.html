@@ -1,16 +1,162 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="robots" content="noindex,nofollow,noarchive"><title>Turn a message into a task · AI skills</title><meta name="description" content="Read the full conversation, work out the real action, do useful preparation, and create a clear task only when needed.">
-<link rel="alternate" type="text/markdown" href="/skills/raw/turn-a-message-into-a-task.md"><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%23b4552d%22/><text x=%2250%22 y=%2253%22 dominant-baseline=%22central%22 text-anchor=%22middle%22 font-family=%22Georgia, 'Times New Roman', serif%22 font-size=%2246%22 letter-spacing=%221%22 fill=%22%23fdfaf4%22>DE</text></svg>"><link rel="stylesheet" href="/skills/styles.css"></head><body><main><a class="back" href="/skills/">← Skills</a><header class="skill-header"><h1>Turn a message into a task</h1><p class="description">Read the full conversation, work out the real action, do useful preparation, and create a clear task only when needed.</p><div class="skill-actions"><a href="/skills/raw/turn-a-message-into-a-task.md">Raw Markdown</a><button class="copy" type="button" data-copy="/skills/raw/turn-a-message-into-a-task.md">Copy Markdown</button></div></header><article class="skill-body"><p>Use this when a conversation contains a request or follow-up that may need a task record.</p>
-<h3>1. Read the whole conversation</h3>
-<p>Open the parent message and all replies. Identify the people involved, the actual request, promises already made, deadlines, links, and whether someone has already completed the work.</p>
-<h3>2. Work out the real action</h3>
-<p>Rewrite the request as an outcome. Separate the user&#39;s action from work owned by other people. If the message can be answered or resolved immediately, do that instead of creating a task for its own sake.</p>
-<h3>3. Gather enough context</h3>
-<p>Check relevant documents, prior conversations, meeting notes, records, or public sources when they can answer factual questions. Match research effort to the stakes. Do not delay a simple task with an exhaustive search.</p>
-<h3>4. Do useful preparation</h3>
-<p>When authorized, draft the reply, assemble the figures, outline the document, or prepare the decision before creating the record. Keep actions that affect other people in draft form until the user approves them.</p>
-<h3>5. Decide whether a record helps</h3>
-<p>Create a task when work remains, it may be forgotten, or another commitment depends on it. Skip the record when the action is complete, trivial, duplicated, or better owned elsewhere.</p>
-<h3>6. Create a useful task</h3>
-<p>Use a clear title, binary finish line, relevant context, source link, owner, and real deadline. Avoid copying a whole conversation into the notes. Verify the record after writing it.</p></article><footer><a href="/skills/LICENSE.txt">CC0</a></footer></main><script>document.querySelector('[data-copy]').addEventListener('click',async function(){try{const text=await fetch(this.dataset.copy).then(r=>{if(!r.ok)throw new Error();return r.text()});await navigator.clipboard.writeText(text);this.textContent='Copied'}catch{this.textContent='Open raw Markdown'}})</script></body></html>
+<meta name="robots" content="noindex,nofollow,noarchive"><title>Turn a message into a task · AI skills</title><meta name="description" content="Read a message thread, prepare the real work, and create a trackable task only when a record will help complete it safely.">
+<link rel="alternate" type="text/markdown" href="/skills/raw/turn-a-message-into-a-task.md"><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%23b4552d%22/><text x=%2250%22 y=%2253%22 dominant-baseline=%22central%22 text-anchor=%22middle%22 font-family=%22Georgia, 'Times New Roman', serif%22 font-size=%2246%22 letter-spacing=%221%22 fill=%22%23fdfaf4%22>DE</text></svg>"><link rel="stylesheet" href="/skills/styles.css"></head><body><main><a class="back" href="/skills/">← Skills</a><header class="skill-header"><h1>Turn a message into a task</h1><p class="description">Read a message thread, prepare the real work, and create a trackable task only when a record will help complete it safely.</p><div class="skill-actions"><a href="/skills/raw/turn-a-message-into-a-task.md">Raw Markdown</a><button class="copy" type="button" data-copy="/skills/raw/turn-a-message-into-a-task.md">Copy Markdown</button></div></header><article class="skill-body"><p>Use this workflow when one or more message links, emails, chat threads, or conversation excerpts may require follow-up. The goal is not merely to log a to-do. The goal is to complete as much safe, useful work as possible, then leave a small, clear human action when judgment, approval, memory, or authority is still needed.</p>
+<p>Run the full workflow separately for each source conversation unless several links clearly describe the same request.</p>
+<h3>Core operating rules</h3>
+<ul>
+<li>Read the complete relevant conversation before deciding what to do.</li>
+<li>Never send messages, email, invitations, approvals, or other external actions without explicit authorization. Draft or stage them only.</li>
+<li>Do not create a task for work that is already completed, superseded, reassigned, duplicated, or clearly owned elsewhere.</li>
+<li>Use private communications or records only for a legitimate, authorized purpose. Use the minimum relevant sources and information, and respect consent, confidentiality, and access boundaries.</li>
+<li>Do not invent facts, dates, links, commitments, or a person’s views. Mark unknown facts clearly.</li>
+<li>A task with empty notes or no useful preparation is usually a failed outcome. The record should make the remaining action obvious.</li>
+<li>Preserve the appropriate privacy boundary in outputs. Do not copy unrelated personal, employment, financial, health, or relationship information into a task.</li>
+</ul>
+<h3>1. Read the complete conversation</h3>
+<p>Start from the linked message, but treat it as an anchor rather than the whole request.</p>
+<ol>
+<li>Open the parent message and all replies.</li>
+<li>If the source is a top-level message with replies, read the replies immediately.</li>
+<li>If the link points to a reply, retrieve the entire parent thread.</li>
+<li>Identify the people involved by name and relevant role. Resolve ambiguous identities through authorized profile or directory information rather than referring vaguely to “the person.”</li>
+<li>Note deadlines, promises, dependencies, decisions, linked documents, and ownership.</li>
+<li>Check whether newer replies changed the request. A later answer may mean the work is done, deferred, superseded, or reassigned.</li>
+</ol>
+<p>If the thread appears complete, report that finding and ask before creating a record. Do not turn dead work into a new obligation.</p>
+<h4>Conversation-reading checklist</h4>
+<div class="table-wrap" tabindex="0" aria-label="Scrollable table"><table><thead><tr><th>Check</th><th>What to capture</th></tr></thead><tbody><tr><td>Actual ask</td><td>What outcome is requested, by whom, and for whom?</td></tr><tr><td>Current state</td><td>What has already been done, promised, decided, or blocked?</td></tr><tr><td>Timing</td><td>Explicit deadline, implied timing, wait state, or event date.</td></tr><tr><td>Sources</td><td>Documents, prior messages, records, or public references that may change the answer.</td></tr><tr><td>Sensitivity</td><td>Personal, employment, financial, health, or relationship details requiring narrower handling.</td></tr></tbody></table></div>
+<h3>2. Identify the true task shape</h3>
+<p>State the task shape in working notes before researching. The shape determines what “pre-completed” means.</p>
+<div class="table-wrap" tabindex="0" aria-label="Scrollable table"><table><thead><tr><th>Task shape</th><th>Typical remaining deliverable</th></tr></thead><tbody><tr><td>Reply owed</td><td>A concise draft response, prepared in the correct thread or channel if staging is available.</td></tr><tr><td>Artefact owed</td><td>A draft reference, document, introduction, analysis, data pull, or other requested material.</td></tr><tr><td>Decision needed</td><td>A short decision brief with options, evidence, recommendation, and a draft response for the likely choice.</td></tr><tr><td>Delegation or follow-up</td><td>A draft chase, handoff, scheduling request, or process action ready for review.</td></tr><tr><td>Information request</td><td>A verified answer with sources, caveats, and any follow-up question needed.</td></tr></tbody></table></div>
+<p>A message may contain multiple asks. Keep them in one task when they have the same owner and time horizon, using clear sub-parts in the notes. Split them only if different people own them, their deadlines differ materially, or combining them would obscure completion.</p>
+<p>Rewrite the request as a concrete outcome. Prefer “Send a written reference and feedback” over “Follow up on message.”</p>
+<h3>3. Gather only the context that matters</h3>
+<p>Choose sources based on the task, not as a blanket search. Use the minimum relevant sources and avoid collecting unrelated private details.</p>
+<p>Typical source choices include:</p>
+<ul>
+<li><strong>Person-related work:</strong> authorized prior correspondence, meeting notes, role records, work samples, or prior feedback. For references or performance-related feedback, seek specific observable examples and role-relevant evidence rather than broad labels.</li>
+<li><strong>Project or event work:</strong> recent channel history, project documents, planning pages, logistics records, and relevant linked files.</li>
+<li><strong>Historical data questions:</strong> authoritative internal records, retrospectives, planning correspondence, and verified reports. Read original materials where possible.</li>
+<li><strong>Same-topic requests:</strong> a focused search across authorized conversations may reveal duplicate asks or an existing answer. Reuse one well-supported answer rather than producing inconsistent separate replies.</li>
+<li><strong>Linked files:</strong> open and read them. For multi-section documents, inspect all relevant sections or tabs; the message may mention only one of several required decisions.</li>
+<li><strong>Policy or process questions:</strong> read the current policy, prior approved precedent, and ownership path. Do not treat informal messages as policy.</li>
+<li><strong>Public facts:</strong> use reputable search and retrieval methods. Do not expose private records or open interactive sessions unnecessarily.</li>
+</ul>
+<p>For private communications or personnel-related records, confirm a legitimate purpose and authorization. Include only the minimum information needed in the task output. Omit unrelated sensitive details, particularly personal circumstances that do not affect the requested work.</p>
+<p>Stop researching when you can either complete a useful draft or state exactly what blocks progress. Two or three carefully selected sources are usually better than many shallow searches.</p>
+<h3>4. Pre-complete the work</h3>
+<p>Do as much of the task as is reasonable without crossing an approval boundary.</p>
+<h4>Drafting rules</h4>
+<ul>
+<li>Follow the user’s supplied voice guide, examples, or explicit communication preferences when one exists.</li>
+<li>Keep drafts shorter than first instinct. Remove ceremonial framing, repeated context, and unnecessary checklists unless they serve the recipient.</li>
+<li>Ask one simple, useful question rather than several low-value questions where possible.</li>
+<li>State future commitments cautiously unless they are confirmed.</li>
+<li>For money, hiring, policy, or approval requests, direct the requester through the established process rather than making informal commitments.</li>
+<li>Never guess a URL. Verify it, omit it, or use a clear placeholder such as <code>[LINK TO VERIFY: project page]</code>.</li>
+<li>Mark uncertain factual claims visibly, for example: <code>[VERIFY: confirm attendance count from official record]</code>.</li>
+<li>For details only the user can supply, preserve the draft structure and insert direct placeholders: <code>[FILL IN: your firsthand view of the event]</code>.</li>
+</ul>
+<p>For reply-shaped tasks, stage the draft in the original conversation when the communication system supports drafts and the user has authorized staging. Put the full draft in the task notes too, so the record remains useful outside the messaging tool.</p>
+<p>When formatting a staged chat draft, use readable paragraphs and blank lines before lists so the platform renders them correctly. Avoid list lead-ins that add no meaning; move directly to the useful content.</p>
+<h4>Decision briefs</h4>
+<p>For a decision the user must make, provide two or three realistic options. For each option, give the relevant evidence, trade-offs, and operational implications. End with a recommendation and a reason. The goal is not to present an unranked survey; it is to reduce decision effort while preserving the user’s authority.</p>
+<h4>Remaining work</h4>
+<p>List only what cannot responsibly be done now. Use concrete bullets, such as:</p>
+<ul>
+<li>Confirm whether you are willing to be named as a future reference.</li>
+<li>Replace the firsthand-experience placeholder with one example.</li>
+<li>Review and send the staged reply.</li>
+</ul>
+<p>Do not write vague instructions such as “review and complete.”</p>
+<h3>5. Ask questions only at a real decision fork</h3>
+<p>Before asking the user, check whether they already answered the question in a prior reply, planning note, email, or documented policy. A documented position is usually better than interrupting them for a decision they have already made.</p>
+<p>Ask only when a wrong assumption would waste more time than the interruption, such as when the draft depends on an unrecorded stance, relationship judgment, or commitment.</p>
+<p>When questions are necessary:</p>
+<ol>
+<li>Start with one or two short paragraphs that restore context: who is involved, what happened, what is now being asked, and what tension must be resolved.</li>
+<li>Ask two to four focused questions.</li>
+<li>Allow multiple selections and a free-text answer when the user may reasonably combine options.</li>
+<li>Use the answers to finish the draft before creating the task record.</li>
+</ol>
+<p>If there is no meaningful fork, make a reasonable metadata and drafting choice, disclose the assumption in the final report, and allow correction later.</p>
+<h3>6. Decide whether a task record is needed</h3>
+<p>A task record is useful when work must be deferred, tracked, or coordinated. It is unnecessary bureaucracy when the user can finish immediately.</p>
+<p>Skip the record and report in chat when the only remaining action is a short, single sitting—for example, reviewing a prepared reply and sending it in roughly 15 minutes—and there is no deadline, dependency, or reason to track it.</p>
+<p>Create a record when one or more of these apply:</p>
+<ul>
+<li>Work is genuinely deferred.</li>
+<li>There is a deadline, wait state, or dependency worth tracking.</li>
+<li>Several steps remain or the work spans days.</li>
+<li>The request explicitly asks for a record.</li>
+<li>The remaining work is important enough that it could be lost among conversations.</li>
+</ul>
+<p>When uncertain, prefer chat-only for a simple prepared reply and a record for longer-lived work.</p>
+<h3>7. Create a high-value task record</h3>
+<p>Use the user’s chosen task system. Verify required field names and available categories rather than assuming a fixed schema.</p>
+<div class="table-wrap" tabindex="0" aria-label="Scrollable table"><table><thead><tr><th>Field</th><th>Guidance</th></tr></thead><tbody><tr><td>Title</td><td>Imperative, specific, and short. Name the outcome, not the source message.</td></tr><tr><td>Status</td><td>Set the system’s normal open state.</td></tr><tr><td>Due date</td><td>Use an explicit or strongly implied date; otherwise leave blank.</td></tr><tr><td>Importance and urgency</td><td>Make a best judgment from consequences, timing, and people waiting.</td></tr><tr><td>Time estimate</td><td>Estimate only remaining human effort, not research already completed.</td></tr><tr><td>Area or project</td><td>Choose the best verified category; use a general category if none fits.</td></tr><tr><td>Notes</td><td>Include source, context, prepared material, and exact remaining actions.</td></tr></tbody></table></div>
+<p>Use this notes structure:</p>
+<pre><code>**What:** [one-line statement of the ask and who is waiting]
+**Source:** [link or reference to the original conversation]
+**Context:**
+- [relevant fact or prior commitment]
+- [relevant evidence or linked source]
+- [important caveat, deadline, or dependency]
+
+**Pre-completed:**
+[full draft reply, artefact, or decision brief]
+
+**Remaining for the user:**
+- [specific action]
+- [specific action]</code></pre>
+<p>After creating the record, open or retrieve it to confirm that the title, notes, date, links, and category were stored correctly.</p>
+<h3>8. Report back clearly</h3>
+<p>If a record was created, report in this order:</p>
+<ol>
+<li>What the task is.</li>
+<li>What was pre-completed and where any draft was staged.</li>
+<li>Metadata choices: importance, urgency, due date, and remaining time estimate.</li>
+<li>Any <code>[VERIFY]</code> or <code>[FILL IN]</code> items that prevent immediate sending.</li>
+</ol>
+<p>If no record was needed, separate the briefing from the deliverable exactly. The draft should be the final block, so it can be copied without cleanup.</p>
+<pre><code>## Context for the user (not part of the reply)
+- [ask, recipient, important facts, and assumptions]
+- [whether a draft was staged]
+- [verification flags]
+
+## The reply
+[verbatim draft]</code></pre>
+<h3>9. Run a bounded sent-versus-draft learning loop</h3>
+<p>Whenever a message draft is staged, and the user has authorized access to the relevant conversation and follow-up checking, schedule a follow-up review after a reasonable interval, such as about one hour. Record the conversation location, thread identifier where applicable, and where the staged text can be found.</p>
+<p>At each review:</p>
+<ol>
+<li>Re-read the relevant thread and determine whether the user sent a version of the draft.</li>
+<li>If they did, compare the sent version with the staged version. Identify what was cut, reworded, reordered, added, or intentionally left out.</li>
+<li>Extract only general lessons that can improve future drafting, such as preferred brevity, tone, sequencing, formatting, or a stable approval route.</li>
+<li>If the draft has not been sent, reschedule only a limited number of checks at increasing intervals, then stop. The user may have deliberately chosen not to send it.</li>
+</ol>
+<p>Do not treat a single edit as a universal rule. Do not retain private content merely to learn style. Do not send reminders or take further external action as part of this loop unless separately authorized.</p>
+<h3>10. Improve the workflow after each run</h3>
+<p>After completing the task or chat-only response, briefly review the run for reusable operational lessons. Make only small, general updates to an authorized shared workflow guide or memory system. Examples include:</p>
+<ul>
+<li>A source type that repeatedly provides essential evidence.</li>
+<li>A messaging or task-system formatting quirk and its workaround.</li>
+<li>A task shape not covered by the current taxonomy.</li>
+<li>A step that causes repeated wasted effort and should be clarified or removed.</li>
+<li>A stable correction to drafting, process routing, or research order.</li>
+</ul>
+<p>Do not encode one-off incidents, private facts, individual preferences without evidence of stability, or sensitive personal details. Do not modify user-owned systems, publish changes, or create persistent records without authorization. If no reusable lesson emerged, make no change.</p>
+<h3>Final audit before completion</h3>
+<ul>
+<li>Did you read the whole relevant conversation?</li>
+<li>Is the task still live and owned by the user?</li>
+<li>Did you use only necessary, authorized sources and information?</li>
+<li>Is the requested work substantially pre-completed?</li>
+<li>Are all uncertain facts, links, and firsthand details clearly marked?</li>
+<li>Did you avoid sending, approving, or committing anything externally?</li>
+<li>Is a task record genuinely useful rather than bureaucratic?</li>
+<li>Does the output identify specific remaining actions?</li>
+<li>Does the output stay within the appropriate privacy and access boundary?</li>
+<li>If a draft was staged, is any authorized learning follow-up bounded, documented, and non-intrusive?</li>
+</ul></article><footer><a href="/skills/LICENSE.txt">CC0</a></footer></main><script>document.querySelector('[data-copy]').addEventListener('click',async function(){try{const text=await fetch(this.dataset.copy).then(r=>{if(!r.ok)throw new Error();return r.text()});await navigator.clipboard.writeText(text);this.textContent='Copied'}catch{this.textContent='Open raw Markdown'}})</script></body></html>
