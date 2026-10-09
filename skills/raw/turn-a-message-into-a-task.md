@@ -1,234 +1,223 @@
 ---
 name: turn-a-message-into-a-task
-description: Read a message thread, prepare the real work, and create a trackable task only when a record will help complete it safely.
+description: Read a complete conversation, research and pre-complete safe work, then create a useful task only when tracking the remaining action will help.
 ---
 
 # Turn a message into a task
 
-Use this workflow when one or more message links, emails, chat threads, or conversation excerpts may require follow-up. The goal is not merely to log a to-do. The goal is to complete as much safe, useful work as possible, then leave a small, clear human action when judgment, approval, memory, or authority is still needed.
+Use this workflow when a message, thread, email, support request, or other conversation may require follow-up. The goal is not merely to log work. The goal is to identify the real request, complete as much safe preparation as possible, and leave the user with the smallest clear remaining action.
 
-Run the full workflow separately for each source conversation unless several links clearly describe the same request.
+Use only communication, task-management, document, calendar, and research capabilities the user has authorized. Do not assume a particular product, database schema, organization, or internal process.
 
-## Core operating rules
+If this workflow accesses private communications or records about people, first confirm a legitimate purpose and clear authorization. Use the minimum relevant sources and information. Keep unrelated personal, health, financial, family, performance, or other sensitive details out of the task and report unless they are necessary, authorized, and suitable for the intended access boundary.
 
-- Read the complete relevant conversation before deciding what to do.
-- Never send messages, email, invitations, approvals, or other external actions without explicit authorization. Draft or stage them only.
-- Do not create a task for work that is already completed, superseded, reassigned, duplicated, or clearly owned elsewhere.
-- Use private communications or records only for a legitimate, authorized purpose. Use the minimum relevant sources and information, and respect consent, confidentiality, and access boundaries.
-- Do not invent facts, dates, links, commitments, or a person’s views. Mark unknown facts clearly.
-- A task with empty notes or no useful preparation is usually a failed outcome. The record should make the remaining action obvious.
-- Preserve the appropriate privacy boundary in outputs. Do not copy unrelated personal, employment, financial, health, or relationship information into a task.
+## Core principles
 
-## 1. Read the complete conversation
+- Read the entire relevant conversation before deciding what the task is.
+- Treat later replies as potentially decisive. They may resolve, change, reassign, or cancel the work.
+- Research selectively: a few deeply read sources are better than a blanket search.
+- Draft communications and consequential actions; do not send, publish, schedule, approve, or commit on the user's behalf unless explicitly authorized.
+- Never invent facts, dates, links, commitments, policies, or first-hand experience.
+- Create a task only when it improves follow-through. A task should not outlive a very short finishing action.
+- Make task records self-contained enough that the user can finish without reopening a long research trail.
 
-Start from the linked message, but treat it as an anchor rather than the whole request.
+## 1. Open the source and read the full conversation
 
-1. Open the parent message and all replies.
-2. If the source is a top-level message with replies, read the replies immediately.
-3. If the link points to a reply, retrieve the entire parent thread.
-4. Identify the people involved by name and relevant role. Resolve ambiguous identities through authorized profile or directory information rather than referring vaguely to “the person.”
-5. Note deadlines, promises, dependencies, decisions, linked documents, and ownership.
-6. Check whether newer replies changed the request. A later answer may mean the work is done, deferred, superseded, or reassigned.
+Start with the linked or supplied message. If it points to a reply, open the parent and every reply. If it points to a top-level message, check for and read its full thread. For email, read the complete chain, including relevant quoted text. For a shared document, inspect all relevant sections, tabs, attachments, and linked materials that may contain requests, decisions, or dependencies.
 
-If the thread appears complete, report that finding and ask before creating a record. Do not turn dead work into a new obligation.
+Capture these points in working notes:
 
-### Conversation-reading checklist
+- The anchor message and why it triggered follow-up.
+- The actual ask, including implied deliverables.
+- Who is involved and who is waiting for an answer.
+- Existing commitments, owners, deadlines, and dependencies.
+- Links, files, records, policies, or procedures referenced.
+- Later updates that affect status.
 
-| Check | What to capture |
-|---|---|
-| Actual ask | What outcome is requested, by whom, and for whom? |
-| Current state | What has already been done, promised, decided, or blocked? |
-| Timing | Explicit deadline, implied timing, wait state, or event date. |
-| Sources | Documents, prior messages, records, or public references that may change the answer. |
-| Sensitivity | Personal, employment, financial, health, or relationship details requiring narrower handling. |
+Resolve identities carefully when a system displays incomplete names. Use an authorized profile, displayed identity, or clear identifier from the conversation. Name a person or describe their role where necessary for clarity; do not rely on vague labels.
 
-## 2. Identify the true task shape
+### Recency gate
 
-State the task shape in working notes before researching. The shape determines what “pre-completed” means.
+Before researching or creating a record, determine whether the work is already complete, no longer needed, reassigned, or waiting on another party. Later replies deserve particular attention.
 
-| Task shape | Typical remaining deliverable |
-|---|---|
-| Reply owed | A concise draft response, prepared in the correct thread or channel if staging is available. |
-| Artefact owed | A draft reference, document, introduction, analysis, data pull, or other requested material. |
-| Decision needed | A short decision brief with options, evidence, recommendation, and a draft response for the likely choice. |
-| Delegation or follow-up | A draft chase, handoff, scheduling request, or process action ready for review. |
-| Information request | A verified answer with sources, caveats, and any follow-up question needed. |
+If the work appears complete, do not create duplicate work. Report the evidence and ask whether further follow-up is wanted. If status is unclear, describe the ambiguity rather than assuming work remains open.
 
-A message may contain multiple asks. Keep them in one task when they have the same owner and time horizon, using clear sub-parts in the notes. Split them only if different people own them, their deadlines differ materially, or combining them would obscure completion.
+## 2. Define the real task shape
 
-Rewrite the request as a concrete outcome. Prefer “Send a written reference and feedback” over “Follow up on message.”
+State the task shape in working notes. This determines what “pre-completed” should mean.
 
-## 3. Gather only the context that matters
+| Task shape | What remains for the user | Best preparation |
+|---|---|---|
+| Reply owed | Answer, feedback, decision, or acknowledgement | Draft a concise, fact-checked reply |
+| Artefact owed | A document, reference, introduction, analysis, or data output | Draft or assemble the artefact |
+| Decision needed | A choice only the user can make | Prepare options, evidence, recommendation, and a likely reply |
+| Follow-up or delegation | Chase, hand off, schedule, or monitor work | Draft the follow-up or prepare handoff details |
+| Multi-part request | Several related deliverables | One coordinated plan with separated sub-parts |
 
-Choose sources based on the task, not as a blanket search. Use the minimum relevant sources and avoid collecting unrelated private details.
+Default to one task for related asks in one conversation. Split tasks only when they have different owners, materially different deadlines, or independent completion paths.
 
-Typical source choices include:
+Rewrite the request as an outcome, not a message label. Prefer “Review proposal and send decision” to “Message from project group.”
 
-- **Person-related work:** authorized prior correspondence, meeting notes, role records, work samples, or prior feedback. For references or performance-related feedback, seek specific observable examples and role-relevant evidence rather than broad labels.
-- **Project or event work:** recent channel history, project documents, planning pages, logistics records, and relevant linked files.
-- **Historical data questions:** authoritative internal records, retrospectives, planning correspondence, and verified reports. Read original materials where possible.
-- **Same-topic requests:** a focused search across authorized conversations may reveal duplicate asks or an existing answer. Reuse one well-supported answer rather than producing inconsistent separate replies.
-- **Linked files:** open and read them. For multi-section documents, inspect all relevant sections or tabs; the message may mention only one of several required decisions.
-- **Policy or process questions:** read the current policy, prior approved precedent, and ownership path. Do not treat informal messages as policy.
-- **Public facts:** use reputable search and retrieval methods. Do not expose private records or open interactive sessions unnecessarily.
+## 3. Gather only relevant context
 
-For private communications or personnel-related records, confirm a legitimate purpose and authorization. Include only the minimum information needed in the task output. Omit unrelated sensitive details, particularly personal circumstances that do not affect the requested work.
+Choose sources based on the actual task, not habit. Stop when you can complete useful preparation or can name exactly what blocks it.
 
-Stop researching when you can either complete a useful draft or state exactly what blocks progress. Two or three carefully selected sources are usually better than many shallow searches.
+Useful source choices include:
 
-## 4. Pre-complete the work
+- **Person-related work:** relevant prior correspondence, meeting notes, role records, documented agreements, and prior feedback. For a reference, feedback, transition, or negotiation, look for the user’s documented stance or talking points before asking them to repeat it.
+- **Project or event work:** recent project messages, plans, decision logs, linked documents, schedules, and retrospective notes.
+- **Data questions:** authoritative records, source datasets, prior reports, and operational correspondence that may contain underlying numbers or dates.
+- **Policy or process questions:** the current approved policy, relevant precedent, and procedures from the responsible function. Where a comparable established policy exists, use it as an anchor rather than inventing a new approach.
+- **Repeated asks:** search broadly for the topic, not only a person’s name. A prior answer or parallel request may avoid duplicated effort.
+- **Linked materials:** open them. If a document has multiple sections, tabs, or attachments, check all potentially relevant parts before concluding that the message captures the whole ask.
 
-Do as much of the task as is reasonable without crossing an approval boundary.
+Use public research only when appropriate. Prefer methods that do not expose private information through unnecessary external queries. If a source cannot be accessed or verified, say so rather than guessing.
+
+## 4. Pre-complete the work safely
+
+Do as much useful work as possible without making an external commitment.
+
+For communication in the user’s voice, first consult authorized writing guidance, prior approved examples, or stated preferences. If none exists, use clear, direct language and do not claim to know the user’s personal view. Keep drafts shorter than the research brief unless detail is needed for accuracy or care.
 
 ### Drafting rules
 
-- Follow the user’s supplied voice guide, examples, or explicit communication preferences when one exists.
-- Keep drafts shorter than first instinct. Remove ceremonial framing, repeated context, and unnecessary checklists unless they serve the recipient.
-- Ask one simple, useful question rather than several low-value questions where possible.
-- State future commitments cautiously unless they are confirmed.
-- For money, hiring, policy, or approval requests, direct the requester through the established process rather than making informal commitments.
-- Never guess a URL. Verify it, omit it, or use a clear placeholder such as `[LINK TO VERIFY: project page]`.
-- Mark uncertain factual claims visibly, for example: `[VERIFY: confirm attendance count from official record]`.
-- For details only the user can supply, preserve the draft structure and insert direct placeholders: `[FILL IN: your firsthand view of the event]`.
+- Draft; do not send.
+- Stage a draft in the relevant conversation only when authorized and when the system supports a reversible draft state.
+- Include the complete draft in task notes or the final report so it remains recoverable.
+- Use readable formatting: leave a blank line before lists and write direct list items instead of unnecessary lead-ins.
+- Ask one simple question when one will do; do not turn a small request into a long questionnaire.
+- State future commitments as conditional unless they are already authorized.
+- Route funding, approval, or exception requests through the established process rather than granting an informal approval.
 
-For reply-shaped tasks, stage the draft in the original conversation when the communication system supports drafts and the user has authorized staging. Put the full draft in the task notes too, so the record remains useful outside the messaging tool.
+For a decision, prepare a compact brief with two or three viable options, the strongest evidence for each, and a recommendation with reasons. The purpose is to reduce the user’s thinking load, not merely list information.
 
-When formatting a staged chat draft, use readable paragraphs and blank lines before lists so the platform renders them correctly. Avoid list lead-ins that add no meaning; move directly to the useful content.
+### Uncertainty and memory gaps
 
-### Decision briefs
+Never fabricate a fact. Mark unresolved details directly where they matter:
 
-For a decision the user must make, provide two or three realistic options. For each option, give the relevant evidence, trade-offs, and operational implications. End with a recommendation and a reason. The goal is not to present an unranked survey; it is to reduce decision effort while preserving the user’s authority.
+- `[VERIFY: confirm the date in the source record]`
+- `[SEARCH: locate the current policy link]`
+- `[FILL IN: personal observation or relationship context needed]`
 
-### Remaining work
+Put essential gaps inside the draft rather than removing the affected section. A partial draft can still save framing work if the missing step is obvious. Clearly warn when it cannot be sent unchanged.
 
-List only what cannot responsibly be done now. Use concrete bullets, such as:
+List judgment calls, sensitive relationship context, and first-hand experience the user must provide under **Remaining for the user**. Make every item specific.
 
-- Confirm whether you are willing to be named as a future reference.
-- Replace the firsthand-experience placeholder with one example.
-- Review and send the staged reply.
+## 5. Ask questions only for real forks
 
-Do not write vague instructions such as “review and complete.”
+Before asking, check whether the user already answered the question in a prior message, planning document, decision record, or email. A documented stance is usually better than interrupting the user for the same decision again.
 
-## 5. Ask questions only at a real decision fork
+Ask questions only when a wrong assumption would create meaningful rework, risk, or an inappropriate commitment. If questions are needed:
 
-Before asking the user, check whether they already answered the question in a prior reply, planning note, email, or documented policy. A documented position is usually better than interrupting them for a decision they have already made.
+1. Give a short context recap: who is involved, what has happened, what is now needed, and the relevant tension.
+2. Ask two to four focused questions at most.
+3. Allow combined choices and a free-text response.
+4. Explain the practical consequence of each choice when helpful.
 
-Ask only when a wrong assumption would waste more time than the interruption, such as when the draft depends on an unrecorded stance, relationship judgment, or commitment.
-
-When questions are necessary:
-
-1. Start with one or two short paragraphs that restore context: who is involved, what happened, what is now being asked, and what tension must be resolved.
-2. Ask two to four focused questions.
-3. Allow multiple selections and a free-text answer when the user may reasonably combine options.
-4. Use the answers to finish the draft before creating the task record.
-
-If there is no meaningful fork, make a reasonable metadata and drafting choice, disclose the assumption in the final report, and allow correction later.
+Do not ask merely to perfect metadata such as priority or category. Make a reasonable default and disclose it.
 
 ## 6. Decide whether a task record is needed
 
-A task record is useful when work must be deferred, tracked, or coordinated. It is unnecessary bureaucracy when the user can finish immediately.
+Skip task creation when the remaining action is one short sitting, such as reviewing a prepared reply, making a small edit, and sending it. In that case, provide the context and draft directly.
 
-Skip the record and report in chat when the only remaining action is a short, single sitting—for example, reviewing a prepared reply and sending it in roughly 15 minutes—and there is no deadline, dependency, or reason to track it.
+Create a record when one or more of these are true:
 
-Create a record when one or more of these apply:
+- The work is deferred or cannot be done now.
+- There is a deadline, wait, dependency, or follow-up worth tracking.
+- Multiple steps remain or work will span several days.
+- Another person is waiting and follow-through could be lost.
+- The user explicitly requested a task.
 
-- Work is genuinely deferred.
-- There is a deadline, wait state, or dependency worth tracking.
-- Several steps remain or the work spans days.
-- The request explicitly asks for a record.
-- The remaining work is important enough that it could be lost among conversations.
+When uncertain, prefer chat-only delivery for a simple reply and a task record for longer-lived work.
 
-When uncertain, prefer chat-only for a simple prepared reply and a record for longer-lived work.
+## 7. Create a high-quality task record
 
-## 7. Create a high-value task record
-
-Use the user’s chosen task system. Verify required field names and available categories rather than assuming a fixed schema.
+Use the user’s chosen task system. Verify available fields and valid values instead of assuming a schema.
 
 | Field | Guidance |
 |---|---|
-| Title | Imperative, specific, and short. Name the outcome, not the source message. |
-| Status | Set the system’s normal open state. |
-| Due date | Use an explicit or strongly implied date; otherwise leave blank. |
-| Importance and urgency | Make a best judgment from consequences, timing, and people waiting. |
-| Time estimate | Estimate only remaining human effort, not research already completed. |
-| Area or project | Choose the best verified category; use a general category if none fits. |
-| Notes | Include source, context, prepared material, and exact remaining actions. |
+| Title | Imperative, specific, and short; describe the finish line |
+| Status | The appropriate open status, such as “To do” |
+| Due date | Only when supported by an explicit or clearly implied deadline |
+| Priority | Best judgment based on stakes, waiting parties, and urgency |
+| Estimate | Remaining user time, not time already spent researching |
+| Area or project | Best-fit category, verified against available options |
+| Notes | Context, source, prepared work, and exact remaining steps |
 
-Use this notes structure:
+Use this notes template:
 
 ```markdown
-**What:** [one-line statement of the ask and who is waiting]
-**Source:** [link or reference to the original conversation]
+**What:** [One-line outcome and who is waiting.]
+**Source:** [Conversation or record link, if authorized to store it.]
 **Context:**
-- [relevant fact or prior commitment]
-- [relevant evidence or linked source]
-- [important caveat, deadline, or dependency]
+- [Key fact or decision]
+- [Key dependency or deadline]
+- [Relevant supporting source]
 
 **Pre-completed:**
-[full draft reply, artefact, or decision brief]
+[Full draft, decision brief, outline, or prepared materials. State where a draft is staged, if applicable.]
 
 **Remaining for the user:**
-- [specific action]
-- [specific action]
+- [Specific finishing action]
+- [Specific verification, choice, or approval]
 ```
 
-After creating the record, open or retrieve it to confirm that the title, notes, date, links, and category were stored correctly.
+Open or re-read the saved record after creation to confirm the title, notes, links, ownership, and fields are correct.
 
 ## 8. Report back clearly
 
-If a record was created, report in this order:
+If a task record was created, report in this order:
 
 1. What the task is.
-2. What was pre-completed and where any draft was staged.
-3. Metadata choices: importance, urgency, due date, and remaining time estimate.
-4. Any `[VERIFY]` or `[FILL IN]` items that prevent immediate sending.
+2. What was pre-completed and where any draft is staged.
+3. Metadata assumptions: priority, urgency, due date, and remaining estimate.
+4. Any `[VERIFY]`, `[SEARCH]`, or `[FILL IN]` items.
 
-If no record was needed, separate the briefing from the deliverable exactly. The draft should be the final block, so it can be copied without cleanup.
+If no record was created, sharply separate briefing from deliverable. Put the deliverable last so it can be copied without cleanup:
 
 ```markdown
 ## Context for the user (not part of the reply)
-- [ask, recipient, important facts, and assumptions]
-- [whether a draft was staged]
-- [verification flags]
+- [Ask, waiting party, key facts, assumptions, and unresolved checks.]
+- [State whether a draft has been staged.]
 
 ## The reply
-[verbatim draft]
+[Verbatim draft]
 ```
 
-## 9. Run a bounded sent-versus-draft learning loop
+Do not add commentary after the reply block.
 
-Whenever a message draft is staged, and the user has authorized access to the relevant conversation and follow-up checking, schedule a follow-up review after a reasonable interval, such as about one hour. Record the conversation location, thread identifier where applicable, and where the staged text can be found.
+## 9. Review staged drafts after the outcome is known
 
-At each review:
+Whenever a communication draft is staged, schedule a single later review where authorized and technically available. A reasonable initial delay is about one hour, adjusted for the conversation’s urgency and the user’s normal working pattern.
 
-1. Re-read the relevant thread and determine whether the user sent a version of the draft.
-2. If they did, compare the sent version with the staged version. Identify what was cut, reworded, reordered, added, or intentionally left out.
-3. Extract only general lessons that can improve future drafting, such as preferred brevity, tone, sequencing, formatting, or a stable approval route.
-4. If the draft has not been sent, reschedule only a limited number of checks at increasing intervals, then stop. The user may have deliberately chosen not to send it.
+The review instruction should identify each staged draft, its conversation location, and where the draft text can be found. At review time:
 
-Do not treat a single edit as a universal rule. Do not retain private content merely to learn style. Do not send reminders or take further external action as part of this loop unless separately authorized.
+1. Re-read the relevant conversation and determine whether the user sent a final message.
+2. If a final message exists, compare it with the staged draft. Note what was cut, reworded, reordered, added, or left out.
+3. Extract only general reusable lessons, such as preferred brevity, tone, ordering, conditional commitments, approval routing, or useful source types.
+4. If no message has been sent, reschedule at most two additional checks with increasing intervals, then stop. The user may have deliberately chosen not to send it.
+
+Do not repeatedly chase the user, and do not store private conversation content, individual judgments, or sensitive facts merely to improve future drafts.
 
 ## 10. Improve the workflow after each run
 
-After completing the task or chat-only response, briefly review the run for reusable operational lessons. Make only small, general updates to an authorized shared workflow guide or memory system. Examples include:
+After delivering the task or draft, perform a brief internal quality review. Update approved workflow guidance only when the run revealed a durable, general lesson, such as a necessary source type, a tool limitation and workaround, a missing task shape, or an instruction that caused avoidable effort.
 
-- A source type that repeatedly provides essential evidence.
-- A messaging or task-system formatting quirk and its workaround.
-- A task shape not covered by the current taxonomy.
-- A step that causes repeated wasted effort and should be clarified or removed.
-- A stable correction to drafting, process routing, or research order.
+Keep improvements small and general. Do not encode names, private events, confidential facts, or one-off interpersonal judgments. If no reusable lesson emerged, make no change.
 
-Do not encode one-off incidents, private facts, individual preferences without evidence of stability, or sensitive personal details. Do not modify user-owned systems, publish changes, or create persistent records without authorization. If no reusable lesson emerged, make no change.
+## 11. Quality audit
 
-## Final audit before completion
+Before finishing, check:
 
-- Did you read the whole relevant conversation?
-- Is the task still live and owned by the user?
-- Did you use only necessary, authorized sources and information?
-- Is the requested work substantially pre-completed?
-- Are all uncertain facts, links, and firsthand details clearly marked?
-- Did you avoid sending, approving, or committing anything externally?
-- Is a task record genuinely useful rather than bureaucratic?
-- Does the output identify specific remaining actions?
-- Does the output stay within the appropriate privacy and access boundary?
-- If a draft was staged, is any authorized learning follow-up bounded, documented, and non-intrusive?
+- Did I read the whole relevant conversation and linked materials?
+- Did I confirm the work is still open?
+- Is the task outcome clear and owned by the right person?
+- Did I use only necessary, authorized private information?
+- Did I research enough to prepare useful work without over-researching?
+- Did I draft rather than send or make an external commitment?
+- Are unknown facts marked clearly rather than guessed?
+- Is a task record genuinely useful?
+- Can the user see exactly what remains and complete it quickly?
+- If a draft was staged, is a bounded follow-up review scheduled or consciously unavailable?
+
+If any answer is no, correct it before creating the record or delivering the draft.

@@ -1,248 +1,285 @@
 ---
 name: design-a-work-sample
-description: Create or improve a short, paid, asynchronous work sample that produces role-relevant evidence, is practical to score, and is validated with simulated submissions.
+description: Create or improve a short, paid, asynchronous work sample that produces job-relevant evidence and can be scored consistently. Validate that it distinguishes role-relevant performance through simulated submissions.
 ---
 
 # Design a work sample
 
-Use this workflow to create or improve a short, paid, asynchronous work sample for hiring. A strong work sample gives candidates a bounded, realistic version of the job, creates evidence that is difficult to imitate through polished generalities alone, and lets reviewers assess submissions consistently.
+Use this workflow to create or improve a short, paid, asynchronous hiring exercise. A good work sample asks candidates to do a realistic, bounded version of the job, produces evidence that is hard to fake, and is quick enough for reviewers to score consistently.
 
-Use it for a take-home exercise that usually takes two to four hours. Do not use it for an application-form question, an interview question set, a live interview exercise, or a multi-day work trial. If the requested format is unclear, ask one question before proceeding.
+Use it for both new exercises and revisions. Do not use it for interview questions, application-form screeners, or multi-day work trials. If the request could refer to one of those formats, ask which format is needed before proceeding.
 
-## Purpose and design principles
+## Purpose and principles
 
-A work sample should answer a narrow question: can the candidate demonstrate the few capabilities most important to succeeding in this role?
+A work sample sits between initial screening and interviews. It should help the hiring team answer a narrow question: can this person demonstrate the most important parts of this role under realistic constraints?
 
-It should not try to measure every quality that matters. Other stages may be better suited to assess live communication, motivation, collaboration, sustained reliability, judgment in real internal systems, or performance over an extended period. References may help assess prior working relationships and long-term dependability. Specific tool fluency, internal terminology, and trainable processes often should not be central to a short exercise unless they are essential from the first day.
+A useful work sample does not try to assess everything. Some qualities are better assessed elsewhere:
 
-Focus on three to five load-bearing capabilities that are important to the role and can be observed fairly in a short asynchronous exercise. Examples include prioritization, practical judgment, clear communication, diagnosis, sourcing, execution, systems thinking, and turning ambiguity into useful work.
+- Interviews can assess communication, motivation, collaboration, and live reasoning.
+- References can assess reliability, integrity, and sustained performance.
+- A later trial can assess consistency, judgment over time, and work in real systems.
+- Training can often close gaps in a particular tool, internal process, or domain vocabulary.
 
-Use these defaults unless the hiring owner chooses otherwise:
+The work sample should focus on a small number of load-bearing abilities that are both important to the role and observable in a short exercise. Examples include prioritization, practical judgment, clear writing, problem diagnosis, sourcing, execution speed, systems thinking, or the ability to turn ambiguity into useful work.
+
+Default design constraints:
 
 - Make the exercise paid.
-- Set a clear expected time limit, commonly three hours.
-- Use a self-contained scenario. Candidates should not need internal-system access, private data, or a response from an unavailable stakeholder.
-- Keep review time to about 20 to 25 minutes per submission.
-- Use realistic but fictionalized or approved public details.
-- Do not include credentials, private contact details, sensitive operational facts, or personal data that is not necessary for the task.
-- Do not ask candidates to create work the organization will use commercially unless that use is separately agreed in writing.
-- State whether AI tools are permitted. Assess judgment and output quality rather than trying to infer AI use from writing style.
-- Provide a reasonable-accommodation route or an equivalent accessible format while preserving the relevant performance standard.
-- Assess role-relevant capabilities only. Do not use criteria that assess protected characteristics, identity, or unrelated proxies.
-
-If the workflow requires hiring records, team notes, or prior candidate materials, use them only for a legitimate hiring purpose and with clear authorization. Read the minimum relevant material, keep outputs within the approved hiring access boundary, and omit unrelated personal or sensitive details.
+- Set a clear expected time limit, commonly two to four hours.
+- Use a realistic but fictionalized or safely anonymized scenario.
+- Do not ask candidates to produce work that the organization will use commercially unless that use is separately agreed.
+- Keep grading time to roughly 20 to 25 minutes per submission.
+- Make the exercise self-contained. Candidates should not need access to internal tools, private data, or unavailable stakeholders.
+- State the permitted use of AI and evaluate judgment rather than trying to detect AI use through writing style.
+- Test only capabilities that are materially related to the role. Exclude protected characteristics and unrelated proxy criteria.
+- Offer a clear route for reasonable accommodations or an equivalent accessible format without lowering the role-relevant standard.
 
 ## Step 1: Pre-flight
 
-Before designing the exercise, confirm the hiring team has both:
+Before designing the work sample, confirm that the hiring team has both of the following:
 
-1. A current job description or role brief covering responsibilities, level, expected outcomes, and reporting context.
-2. A role-success profile, hiring plan, or equivalent document describing the capabilities and experience that matter most for success.
+1. A current job description or role brief that explains responsibilities, level, expected outcomes, and reporting context.
+2. A role-success profile, hiring plan, or equivalent document that identifies the capabilities and experience most likely to produce the role's required outcomes.
 
-If either item is missing, stop. Do not try to define the success profile while drafting the exercise. That creates a moving target and commonly results in a plausible task that measures the wrong thing.
+If either is missing, stop and ask for it. Do not attempt to discover the ideal candidate while designing the test. That creates a moving target and usually produces an exercise that feels plausible but measures the wrong things.
 
-Use this request:
+Use this request format:
 
 > Before we design the work sample, I need the role description and a role-success profile or hiring plan. I can help create either one first. Which is missing, and who should confirm it?
 
-Once both exist, read the relevant role context. This can include the role brief, hiring plan, linked project documentation, team constraints, examples of strong work, prior hiring feedback, and existing exercises for comparable roles. Read one or two comparable exercises only to calibrate tone, length, and delivery format. Do not copy their task shape by default: different roles need different evidence.
+If the materials exist, read the full role context. This may include linked project notes, current team constraints, examples of strong work, prior hiring feedback, and any existing exercises for comparable roles. Read one or two reference exercises only to calibrate tone, length, and operational format. Do not copy their task shape automatically. Different roles need different evidence.
 
-Then give a short status update, for example:
+Use only hiring materials the team is authorized to use for this role. Minimize private information: read the minimum relevant evidence, omit unrelated or sensitive candidate details, and do not infer protected traits. Keep alignment notes, simulations, and reviewer guidance inside the approved hiring access boundary.
 
-> Read the role brief, success profile, and two comparable exercises. Moving to the alignment memo.
+After reviewing, give a brief status update stating what sources were read and move to the alignment memo.
 
 ## Step 2: Write the alignment memo before drafting
 
-Do not write candidate-facing instructions yet. First write a one-page memo titled:
+Do not draft candidate-facing instructions yet. First create a one-page memo titled:
 
 **What we are testing for and why: [Role] work sample**
 
-Include the following sections.
+Include these sections.
 
-### Load-bearing capabilities
+### Load-bearing traits
 
-List three to five observable capabilities the role succeeds or fails on and that a short work sample can surface. Avoid broad labels such as “strategic thinking.” Describe visible behavior instead.
+List three to five abilities that this role succeeds or fails on and that can be surfaced in the exercise window. Phrase them as observable capabilities, not vague virtues.
 
 Weak: “Strategic thinking.”
 
-Better: “Identifies the highest-leverage issue in a messy operating situation, explains the tradeoff, and produces a useful first action.”
+Better: “Can identify the highest-leverage problem in a messy operating situation, explain the tradeoff, and deliver a useful first action.”
 
-### What the work sample will not test
+### What the exercise will not test
 
-Name important criteria that belong in other stages. This prevents the exercise from becoming an unrealistic proxy for the whole role. A short written task may not fairly assess long-term reliability, leadership over months, live collaboration, specialized software fluency, or performance in a real internal environment.
+Name important criteria that should be assessed elsewhere. This keeps the test honest and prevents it from growing into an unrealistic proxy for the entire job.
+
+For example, a three-hour written exercise may not fairly test long-term reliability, leadership over months, responsiveness in live meetings, specialized software fluency, or culture contribution.
 
 ### Calibration to role level
 
-State whether the role is entry-level, mid-level, senior, or leadership level, and explain the implications.
+State whether the role is entry-level, mid-level, senior, or leadership level. Explain what this changes in the exercise:
 
-- Entry-level candidates may need more context, examples, and tightly bounded outputs.
-- Mid-level candidates may need to prioritize independently and produce usable work.
-- Senior candidates may need to make consequential tradeoffs, set direction, and create artifacts another person could use without further explanation.
+- Junior candidates may need more context and narrower deliverables.
+- Mid-level candidates may need to prioritize and execute independently.
+- Senior candidates may need to make tradeoffs, establish direction, and create work another person could use without explanation.
 
-### Failure modes the exercise should catch
+### Failure modes to catch
 
-Identify two or three work patterns that could look acceptable in a conventional process but would create problems in this role. Describe evidence, not personality labels. Examples include a polished planner who does not deliver usable work, a fast executor who misses the central problem, a candidate who defers meaningful decisions when independent judgment is required, or a technically capable person whose communication does not serve the intended audience.
+Identify two or three plausible role-misaligned patterns that could otherwise look strong in a conventional hiring process. Describe observable work patterns rather than labeling people. Examples:
+
+- A polished planner who does not ship usable work.
+- A fast executor who misses the central problem or creates avoidable risk.
+- A careful but indecisive candidate who defers every meaningful call.
+- A technically skilled candidate who cannot communicate with the intended audience.
 
 ### What strong looks like
 
-Write a short paragraph describing the evidence in a strong submission: what it notices, what choices it makes, what it produces, and how it handles uncertainty.
+Write one short paragraph describing a top submission. Focus on evidence: what choices it makes, what it notices, what it produces, and how it handles uncertainty.
 
-Present the memo to the hiring owner and ask:
+Present the memo to the hiring owner and ask for explicit confirmation:
 
-> Does this match the capabilities and failure modes you want this work sample to assess?
+> Does this match the abilities and failure modes you want this work sample to assess?
 
-Do not proceed until the owner explicitly confirms or revises it.
+Do not proceed until the owner confirms or revises the memo.
 
-## Step 3: Propose three exercise shapes
+## Step 3: Propose exercise shapes
 
-Once the alignment memo is approved, offer three distinct exercise shapes. Each should be understandable in about a minute, self-contained, realistically completable within the time limit, and scorable quickly.
+Once the memo is locked, offer three possible shapes. Each option should test the load-bearing traits in a distinct way, be understandable within about a minute, be self-contained, and be scorable quickly.
 
 For each option, include:
 
-- **Shape:** A plain-language description of the task.
-- **What it tests:** The load-bearing capabilities it reveals.
-- **Why it is evaluable:** The evidence reviewers will see and why scoring can be consistent.
-- **Main risk:** The likely source of noise, unfairness, or weak signal.
+- **Shape:** a plain-language description of the candidate task.
+- **What it tests:** the specific load-bearing traits it reveals.
+- **Why it is evaluable:** what evidence reviewers would see and why scoring can be consistent.
+- **Main risk:** the most likely way the format could create noise or unfairness.
 
-Keep each option concise. Common shapes include:
+Keep each option concise. Useful shapes include:
 
-- **Triage pile:** The candidate receives realistic messages, requests, and constraints. They prioritize, draft responses or outputs, and recommend one systemic improvement. This works for operations, coordination, support, and communication-heavy roles.
-- **Choose the highest-leverage action and ship it:** The candidate receives several possible priorities, chooses one, explains why, and creates a small usable output. This suits builder and strategic operations roles.
-- **Diagnose and fix:** The candidate reviews a messy situation, identifies the central issue, and ships one focused intervention. This suits analytical, program, product, and process-improvement roles.
-- **Source and pitch:** The candidate defines a target profile, identifies promising channels or prospects from supplied information, and drafts outreach. This suits recruiting, partnerships, sales, and community-growth roles.
-- **Decision-useful analysis:** The candidate analyzes supplied evidence and makes a recommendation for a decision-maker. This suits research, strategy, policy, and specialist roles.
-- **Design a repeatable system:** The candidate builds a lightweight playbook, process, or operating artifact another teammate could use. This suits program, enablement, community, and operational-design roles.
+- **Triage pile:** The candidate receives a realistic set of messages, requests, and constraints. They prioritize, draft responses or work products, and recommend one systemic improvement. This suits operations, coordination, support, and communications-heavy roles.
+- **Choose the highest-leverage action and ship it:** The candidate receives a brief with several possible priorities, selects one, explains the choice, and creates a small usable output. This suits strategic operations and builder roles.
+- **Diagnose and fix:** The candidate reviews a messy situation, identifies the key problem, and ships one targeted intervention. This suits product, program, analytical, and process-improvement roles.
+- **Source and pitch:** The candidate defines a target profile, identifies promising channels or prospects from provided information, and writes outreach. This suits recruiting, partnerships, sales, and community-growth roles.
+- **Decision-useful analysis:** The candidate chooses or is assigned one intervention area, assesses it using supplied evidence, and makes a recommendation for a decision-maker. This suits research, policy, strategy, and specialist knowledge roles.
+- **Design a repeatable system:** The candidate creates a lightweight process, playbook, or operating artifact that a teammate could use. This suits program, community, enablement, and operational design roles.
 
-Do not draft the complete work sample until the hiring owner chooses a shape. If none fits, generate three new options based on the approved memo rather than forcing a familiar pattern.
+Do not draft the full exercise until the hiring owner chooses a shape. If none are right, generate three more based on the confirmed traits rather than forcing a familiar format.
 
 ## Step 4: Draft version 1
 
-Write candidate-facing content in this order.
+Write the candidate-facing exercise in this order.
 
 ## [Role] Work Sample
 
-Open with one or two sentences explaining what the exercise assesses. State the total expected time clearly.
+Open with one or two sentences explaining the abilities the exercise assesses. State the total time expected.
 
 **Your mission**
 
-Describe a specific situation, not an abstract assignment. Give enough context for the task to feel real. If independent judgment is important, identify which stakeholders are unavailable during the exercise so candidates must make reasonable assumptions rather than defer every choice.
+Describe a specific situation, not an abstract assignment. Include enough context to make the work realistic. Where decisiveness is a trait being tested, make clear which stakeholders are unavailable during the exercise so candidates must make reasonable calls instead of deferring everything.
 
-End with one sentence restating what the candidate will produce.
+End with one sentence that restates what the candidate will produce.
 
 **Deliverables**
 
-List two to four parts, with rough time guidance when helpful. A common operational pattern is:
+List two to four parts. Include rough time guidance where useful. A common operations pattern is:
 
 - A short prioritization or analysis section.
 - Several actual drafts, decisions, or shipped outputs.
-- One systemic improvement or reusable artifact.
+- One systemic fix, process improvement, or reusable artifact.
 
-Avoid excessive micro-tasks. One substantive analysis, several meaningful outputs, and one usable artifact usually reveal more than dozens of shallow decisions. If planning and execution both matter, explicitly tell candidates not to let planning consume all available time.
+Avoid excessive micro-tasks. A small number of substantive outputs reveals more than dozens of shallow decisions. If planning and execution both matter, explicitly warn candidates not to spend all their time planning.
 
 **Context**
 
-Provide only the information needed to complete the task: project state, audience, constraints, resources, relevant policy, and stakeholder availability. For a triage-pile exercise, provide roughly eight to ten realistic items. Make some items connected so candidates are rewarded for identifying patterns across the situation, not merely processing volume. Include reference notes containing information needed to make fair decisions, such as capacity limits, escalation rules, or refund policy.
+Provide the minimum information needed to complete the exercise: project state, audience, constraints, available resources, relevant policy, and stakeholder availability. Use fictional names, domains, and identifiers unless the hiring owner explicitly approves use of real public information.
 
-Use clearly fictional names and domains in fictional scenarios. Do not include contact details that could cause a candidate to contact a real person.
+For a triage-pile exercise, include eight to ten realistic items. Some should connect so that candidates are rewarded for seeing patterns across the whole situation. Include reference notes that provide any data needed for a fair decision, such as escalation rules, capacity limits, or refund policy.
 
 **Instructions**
 
-Include the expected time limit, submission deadline and timezone if relevant, submission format, payment amount and payment process, AI-tool policy, and any early-submission bonus. Ask candidates to state important assumptions briefly. Permit incomplete submissions when time runs out. State that the work is for assessment only unless another use is agreed separately. Optionally invite a short informal walkthrough video if it would add useful evidence.
+Include:
 
-A transparent AI policy can read:
+- The expected time limit.
+- The submission deadline, written clearly.
+- Submission format, such as one document or PDF, plus links to supplementary artifacts if needed.
+- Payment amount, payment process, and any early-submission bonus, if offered.
+- What tools and AI assistance are permitted.
+- A request to document important assumptions briefly.
+- Permission to submit incomplete work if time runs out.
+- Optional guidance on a short walkthrough video, if this would add useful signal.
+
+Use a transparent AI policy. For example:
 
 > You may use AI tools. Use them carefully and apply your own judgment. We are evaluating the choices, reasoning, and usefulness of your submission. Briefly note any material use of AI tools.
 
 **Anticipated questions**
 
-Include answers such as:
+Include answers to common questions, such as:
 
 - If a requirement is unclear, make a reasonable assumption and state it briefly.
 - If you do not finish in the expected time, submit what you have and note what you would do next.
-- The submission is for assessment only unless another use is agreed separately.
+- The work will be used only to evaluate candidates unless another use is agreed separately.
 
-After the candidate-facing draft, add a separate section:
+## Candidate-facing writing and format checks
+
+Write in direct, plain US English unless another locale is appropriate. Keep instructions easy to paste into the organization’s chosen hiring system and easy to read in a document.
+
+Before sharing a draft, check that the candidate-facing text:
+
+- Has no tables if the destination system renders tables poorly.
+- Avoids horizontal divider lines if they break the destination editor.
+- Uses simple headings and bullets.
+- Avoids generic AI-sounding slogans, forced contrasts, repetitive sentence patterns, and unnecessary rhetorical flourishes.
+- Uses “by the end of [day]” rather than abbreviated phrasing.
+- Uses clearly fictional email addresses and names in fictional scenarios.
+- Formats multi-line message metadata clearly. If the target editor collapses line breaks, use its supported soft-break method.
+- Does not contain confidential details, credentials, private contact information, or sensitive internal data.
+
+After every draft, add a separate section that is not for candidates:
 
 **Notes for the hiring owner (not for the candidate)**
 
-Include three to six concise bullets about choices the owner may want to revisit: whether an item is too obvious, whether constraints are realistic, whether payment matches the role and time, whether a deliverable is too prescriptive, and whether a walkthrough video should be optional, encouraged, or omitted.
+Include three to six concise bullets on choices the owner may want to change. Typical notes include whether an item is too obvious, whether the scenario is realistic enough, whether the payment structure matches role level, whether a deliverable is too prescriptive, or whether a video should be optional.
 
-End with one focused question: “Which part should we tighten first?”
-
-## Candidate-facing format and style checks
-
-Write in direct, plain English appropriate to the organization and candidate audience. Use the organization’s chosen hiring system or document format, and test the instructions there when possible.
-
-Before sharing every candidate-facing draft, check that it:
-
-- Uses simple headings and bullets.
-- Avoids tables if the destination system renders them poorly.
-- Avoids horizontal divider lines if the destination system breaks them.
-- Uses supported soft line breaks for multi-line message metadata if ordinary line breaks collapse on paste.
-- Uses “by the end of [day]” rather than abbreviated wording.
-- Avoids repetitive rhetorical patterns, forced contrasts, generic slogans, and overly polished AI-sounding phrasing.
-- Uses consistent spelling and locale conventions.
-- Contains no confidential facts, credentials, private records, personal contact information, or unnecessary sensitive details.
+End with one focused decision question, such as: “Which part should we tighten first?”
 
 ## Step 5: Iterate with the hiring owner
 
-Expect multiple feedback rounds. For each revision, provide the complete updated work sample, not only a change list, so the owner can paste it into the chosen system or document.
+Expect multiple rounds. For each revision, provide the complete updated work sample, not only a change list, so it can be copied directly into the selected system.
 
-Apply feedback directly unless it would materially undermine validity, fairness, candidate safety, or privacy. If there is a material concern, state it once in plain language, offer an alternative, and let the accountable hiring owner decide.
+Apply feedback directly unless it would materially undermine validity, fairness, or safety. If that happens, state the concern once in plain language, offer an alternative, and let the hiring owner decide.
 
-Common revisions include tightening vague instructions, loosening over-prescriptive tasks, correcting scenario facts, simplifying deliverables, changing payment, and replacing unrealistic details.
+Common revision directions include tightening vague instructions, loosening over-prescriptive tasks, correcting scenario facts, simplifying deliverables, changing payment, and replacing unrealistic details.
 
-## Step 6: Validate with two simulated submissions
+## Step 6: Simulate two candidates
 
-Before declaring version 1 complete, generate two full simulated submissions using the exact candidate-facing instructions and stated time limit.
+Before declaring version 1 complete, simulate two full submissions in parallel using the exact candidate-facing instructions.
 
-### Simulation A: role-success evidence
+### Role-aligned simulation
 
-Use a persona grounded in the approved role-success profile. Have it complete the actual deliverables, then add a short reflection on key choices, uncertainty, and time allocation.
+Use a persona that matches the confirmed role-success profile. Have them complete the actual deliverables under the stated time limit. Ask for a short reflection on their choices, uncertainty, and time allocation.
 
-### Simulation B: plausible capability gap
+### Plausible role-misaligned simulation
 
-Use an earnest, capable applicant who could pass ordinary screening but lacks one capability central to this role. Choose a job-relevant contrast, such as someone who plans thoroughly but does not deliver, avoids necessary decisions, or executes individual tasks without recognizing a systemic pattern.
+Use an earnest, capable candidate who could pass ordinary screening but whose demonstrated work lacks one role-critical capability. Choose a relevant mismatch, such as a planner where the role needs a builder, a cautious hedger where it needs decisive judgment, or an executor who cannot see systemic patterns. Keep the difference tied to job evidence, never identity or background.
 
-This simulation must concern observable work behavior only. It must not rely on identity, background, protected characteristics, or stereotypes. Have this persona complete the same deliverables.
+Have this persona produce the same complete submission.
 
-Then write a synthesis covering:
+Then synthesize the results:
 
 1. Where the exercise distinguished role-relevant performance sharply.
-2. Where both submissions looked similar.
+2. Where both candidates performed similarly.
 3. What the exercise is likely to predict and what it cannot predict.
-4. Specific improvements, ranked by expected impact.
+4. Specific improvements, ranked by likely impact.
 
-A capability both simulations pass may be a useful floor check. The central question is whether the exercise creates meaningfully different evidence on the load-bearing capabilities.
+Floor checks that both candidates pass are not automatically bad. The concern is when a central trait fails to create meaningfully different evidence.
 
 ## Step 7: Apply validation improvements
 
-Revise the complete exercise based on simulation findings. Fix the weakest diagnostic points first. Useful changes may include linking scenario items so pattern recognition matters, removing obvious noise, adding a realistic constraint that forces a tradeoff, replacing a broad opinion prompt with a usable deliverable, clarifying reviewer guidance, or removing requirements for specialized trainable knowledge that is not essential on day one.
+Revise the full exercise based on the simulation. Target the weakest diagnostic points first. Examples of useful revisions:
 
-Do not make the exercise harder solely to reduce pass rates. Make it more diagnostic of approved, role-relevant capabilities.
+- Make connected scenario items more interdependent.
+- Remove obvious noise that takes seconds to dismiss.
+- Add a concrete constraint that forces a meaningful tradeoff.
+- Replace a broad opinion prompt with a usable deliverable.
+- Clarify the rubric so reviewers reward the intended behavior.
+- Remove specialized knowledge requirements that are trainable and not essential on day one.
+
+Do not make the task harder merely to make it more selective. Make it more diagnostic of the confirmed traits.
 
 ## Step 8: Optional external review
 
-If other reviewers provide feedback, assess each suggestion against the alignment memo. State which suggestions will be integrated, which will be skipped, and why. External feedback is evidence, not an automatic instruction. The accountable hiring owner makes the final design decision.
+If other reviewers provide feedback, assess each suggestion against the alignment memo. State which suggestions to integrate, which to skip, and why. External review is evidence, not an automatic instruction. The hiring owner remains accountable for the assessment design.
 
 ## Step 9: Final readiness gate
 
 Do not mark the work sample complete until all of the following are true:
 
-- The job description and role-success profile are confirmed.
+- The role description and role-success profile are confirmed.
 - The alignment memo is approved.
-- The chosen task shape maps directly to load-bearing capabilities.
+- The chosen task shape maps directly to the load-bearing traits.
 - The task fits the stated time for a qualified candidate.
-- The scenario is self-contained and requires no unauthorized access.
-- Payment, deadline, AI policy, and submission instructions are clear.
-- The candidate-facing text works in the intended delivery system.
-- A reviewer can assess a submission in roughly 20 to 25 minutes.
-- Both simulations are complete and led to necessary revisions.
-- The exercise does not create unpaid production work.
-- Privacy, accommodation, role relevance, and proxy-bias risks have been checked.
+- The scenario is self-contained and does not require private access.
+- Payment and submission instructions are clear.
+- Candidate-facing text is formatted for the destination system.
+- A reviewer can score a submission in about 20 to 25 minutes.
+- A role-aligned and plausible role-misaligned simulation has been completed.
+- The simulation led to any necessary revisions.
+- The final version has no sensitive data and does not create unpaid production work.
+- Role-relevant criteria, accommodation routes, and potential proxy bias have been checked.
 
 ## Common failure modes
 
-Avoid drafting the task before agreeing what it should measure; testing tool familiarity, domain trivia, or trainable knowledge instead of durable judgment; asking for many small outputs rather than a few meaningful ones; making every scenario item independent; letting candidates defer all decisions when decisiveness is meant to matter; giving insufficient context and rewarding insider knowledge; setting word targets that encourage padding; building an exercise that takes longer to score than its signal justifies; treating polish as the main evidence when the role requires something else; and skipping simulations.
+Avoid these patterns:
 
-A finished work sample should feel like a small, fair version of the job: bounded, realistic, clear, paid, respectful of candidate time, and capable of producing decision-useful evidence.
+- Designing the task before agreeing what it should measure.
+- Testing tool familiarity, domain trivia, or trainable knowledge instead of durable judgment.
+- Asking for too many small outputs instead of a few meaningful ones.
+- Making every scenario item independent, which tests volume but not pattern recognition.
+- Allowing candidates to defer every decision to an available stakeholder when decisiveness is meant to matter.
+- Giving vague context that rewards insider knowledge.
+- Setting a word-count target that encourages padding.
+- Creating a test that takes longer to grade than the signal justifies.
+- Treating polished writing or presentation as the main signal when the role requires something else.
+- Declaring success without testing whether the exercise distinguishes the role-relevant evidence it was designed to measure.
+
+A finished work sample should feel like a small, fair version of the job: bounded, realistic, useful for assessment, and clear about what good performance looks like.

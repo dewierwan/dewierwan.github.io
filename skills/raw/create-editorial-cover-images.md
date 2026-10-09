@@ -1,117 +1,146 @@
 ---
 name: create-editorial-cover-images
-description: Create cover images from an article through five distinct concepts, visual review, and three informed improvements using the chosen image generator.
+description: Create eight article-grounded cover-image options through five concepts, visual review, and three evidence-based improvements in any chosen image generator.
 ---
 
 # Create editorial cover images
 
-Turn an article into eight finished cover-image options. Develop five distinct concepts, generate and inspect every result, then create three improvements based on what actually worked. The user chooses from finished images with a clear connection to the article.
+Turn an article into eight finished editorial cover-image options. Develop five distinct concepts, generate and inspect every result, then create three improvements based on what the rendered images actually reveal. The user chooses from finished images that have a clear, honest connection to the article.
 
-Use the user's chosen image generator and publishing format. No particular medium, palette, account, or service is assumed. If the user explicitly requests prompts only, follow the prompt-only branch instead of generating images.
+Use the user's chosen image generator, publishing destination, and delivery method. Do not assume a particular service, account, medium, aspect ratio, palette, or visual aesthetic. If the user explicitly requests prompts only, use the prompt-only branch rather than generating images.
+
+## Purpose, authorization, and boundaries
+
+Work from the complete article, not from a title alone. If the article is unpublished, confidential, or includes personal information, confirm that the user is authorized to use it for this purpose. Send only the minimum visual brief required to the selected generator. Do not paste full unpublished copy, private correspondence, sensitive facts, unrelated names, or identifying details unless they are necessary to the image and the user has clearly authorized their use.
+
+Do not invent scenes, events, identities, or claims that the article does not support. A metaphor may interpret an idea, but it should not falsely present a real event as a factual depiction. Respect access controls, account permissions, spending limits, approval gates, consent expectations, and the intended audience for the final image.
 
 ## Establish the brief
 
-Read the complete article before developing concepts. A title alone is rarely enough to distinguish an image that belongs to this piece from a generic illustration of its topic. If the copy is missing, ask for it before generating.
+Read the article from beginning to end before creating concepts. If the copy is missing, request it before generating. A title rarely provides enough information to create an image that belongs specifically to the piece.
 
-Identify the article's central move: the idea or change in perspective the reader should take away. Notice its emotional progression, including where it becomes quieter, turns, or reaches its conclusion. Extract concrete images, actions, and metaphors already present in the writing. Note the tone, such as reflective, urgent, hopeful, sober, or celebratory, because it constrains the image's mood. Use this analysis to shape the work; do not begin with a lengthy summary unless requested.
+Identify the following internally and use them to guide the work:
 
-Reuse preferences already supplied. Ask only for missing choices that materially change the output, keeping related questions together:
+- **Central move:** the idea, shift in perspective, or conclusion a reader should retain.
+- **Emotional progression:** where the piece is quiet, tense, hopeful, defiant, reflective, or resolved.
+- **Concrete source material:** images, actions, settings, symbols, and metaphors already present in the writing.
+- **Tone:** the article's voice and level of seriousness, intimacy, energy, or restraint.
+- **Publication context:** where the image will appear, how small it may be displayed, and whether later typography will be added.
 
-- **Mood:** Offer interpretations grounded in specific parts of this article. Explain which part each mood emphasizes, so the choice concerns the story rather than abstract adjectives.
-- **Subject:** Explore a human figure, a landscape, a single symbolic object, or an abstract composition as appropriate. Respect explicit restrictions on people, settings, or representations.
-- **Palette:** Offer a few palettes suited to the proposed moods. Describe their lightness, contrast, and character as well as naming colors, so choices do not depend on color labels alone.
-- **Orientation:** Establish the intended placement and crop. A wide header, square preview, and portrait cover need different compositions. Use dimensions supplied by the user or verified for the destination; do not assume one publication's ratio suits another.
+Do not begin with a long summary unless the user requests one. Translate this understanding into visual choices instead.
 
-Also establish the medium or style, such as photography, drawing, painting, or collage, if the request leaves it open. The article and intended audience should guide the options. Do not turn one person's aesthetic into a universal default. Confirm the generator if it is not already clear. Collect outstanding answers before treating a partial reply as the full brief.
+Reuse preferences already supplied in the conversation. Ask only for missing choices that would materially change the image. Group related questions together and collect all outstanding answers before treating a partial response as the complete brief.
 
-Keep a short working brief containing the agreed mood, subject restrictions, palette, medium, format, and generator. Carry it through both rounds without asking the same preference questions again.
+Ask about these areas when they remain unclear:
+
+- **Mood:** Offer three or four interpretations tied to actual beats in the article. For example, distinguish a contemplative opening from a more forward-moving conclusion rather than offering generic labels alone.
+- **Subject:** Establish whether the image should use a human figure, landscape, symbolic object, abstract composition, or another article-appropriate subject. Respect restrictions about faces, bodies, places, cultural references, or factual depictions.
+- **Palette:** Offer a small set of palettes appropriate to the mood. Name specific colors and describe contrast, value, and lightness so the choice does not depend only on color labels.
+- **Orientation and crop:** Determine the intended placement: wide header, social preview, square tile, portrait cover, or a user-supplied dimension. Verify the destination's requirements when possible rather than assuming a universal ratio.
+- **Medium or style:** Establish photography, watercolor, ink, collage, charcoal, digital painting, or another treatment if the user has not already specified one.
+
+Keep a short working brief with the confirmed format, generator, mood, subject constraints, palette, medium, and any required empty space for text. Carry this brief through both rounds without repeatedly asking the same questions.
 
 ## Propose five distinct concepts
 
-Present exactly five ideas in a numbered list. Give each a short title, a one- to three-sentence description of what the viewer sees, and a brief explanation of the article's idea or emotional beat it expresses.
+Present exactly five initial concepts in a numbered list. Each concept must include:
 
-Vary subjects, compositions, and interpretations. Five changes to one scene do not provide a meaningful range. Unless subject restrictions rule them out, include at least one landscape-only option and one single-object or symbolic option. Check that each concept has a specific reason to belong to this article. Replace any concept whose explanation could accompany almost any article about the same topic.
+1. A short title.
+2. A one- to three-sentence description of what the viewer sees.
+3. A brief statement of the article idea or emotional beat it expresses.
 
-Give a one-line initial recommendation, then generate all five without asking the user to choose first. The first round provides visible alternatives for comparison. Do not stop at concepts or written prompts when finished images were requested.
+The five concepts must differ in subject, composition, visual metaphor, or emotional emphasis. Five minor variations on the same scene are not a useful range. Unless user constraints rule them out, include at least one landscape-only option and one single-object or symbolic option. A human figure can be effective, but it should serve the article rather than become an automatic default.
 
-## Write useful visual prompts
+For every concept, ask: could this image reasonably accompany many unrelated articles on the same topic? If yes, replace it with something more grounded in this article's actual language, movement, or insight.
 
-Write one self-contained prompt per concept. Keep the visual direction specific enough to render while avoiding competing instructions. Use this structure, combining sections where that reduces repetition:
+Give a one-line initial recommendation, then generate all five concepts when finished images are requested. Do not make the user choose before the first visual round unless they explicitly ask to select concepts first.
 
+## Write effective visual prompts
+
+Write one self-contained prompt per concept. The prompt should be precise enough to render, but should not pile up competing instructions. Use the following structure, merging sections only when doing so improves clarity:
+
+```text
+Create one image: [medium, format, and overall editorial character].
+
+Subject: [what is visible, what it is doing, its prominence and position. Put relevant exclusions here, such as no visible face, no logo, or no lettering.]
+
+Setting: [surroundings, depth, foreground and background relationships, and what recedes from view.]
+
+Light and palette: [time of day or light direction, named colors, contrast, and visible color transitions.]
+
+Technique: [the medium's actual marks, texture, edge treatment, level of detail, and use of negative space.]
+
+Mood: [the feeling and its connection to the article's central move.]
+
+Composition: [focal point, eye path, placement of major forms, crop, aspect ratio, and reserved space if needed.]
+
+Avoid: [only artifacts, visual conventions, or content that conflict with the brief.]
 ```
-Create one image: [medium, format, and overall visual character].
 
-Subject: [what is visible, its action, prominence, and position; place relevant exclusions alongside the description].
+Name colors and their relationships rather than relying on vague directions such as “warm” or “moody.” For example, “pale ochre ground against muted violet shadows and a cool blue-gray horizon” gives more useful direction than “dramatic golden-hour light.” Use palette examples to make the selected direction concrete, not to impose a fixed palette on every assignment.
 
-Setting: [surroundings, depth, and foreground or background relationships where useful].
+Describe the physical behavior of the chosen medium. Watercolor may need transparent washes, pigment blooms, softened edges, paper texture, and unpainted space. Charcoal may need broad tonal masses, broken edges, and visible tooth of paper. Photography may need lens distance, depth of field, natural light direction, and believable materials. Do not combine incompatible instructions merely because they sound attractive.
 
-Light and palette: [direction and quality of light, specific colors, contrast, and transitions].
+Put important exclusions beside the relevant positive instruction as well as in the final avoidance list. For example, say “a back-turned silhouette with no facial detail” in the subject description, not only “avoid faces” at the end. Specify whether the image should contain no text, borders, logos, or watermark-like marks.
 
-Technique: [visible properties of the chosen medium, edge treatment, texture, detail level, and negative space].
-
-Mood: [the intended feeling and its connection to the article's central idea].
-
-Composition: [focal point, where the eye enters, placement of major shapes, requested dimensions or aspect ratio, and crop considerations].
-
-Avoid: [only the artifacts, visual conventions, or content that conflict with this brief].
-```
-
-Name colors and their relationships instead of relying only on words such as warm or moody. For example, a pale ochre field against dark violet shadows describes a more concrete visual decision than dramatic lighting. Use examples to clarify the selected palette, not to impose a fixed palette on every article.
-
-Explain the physical appearance of the chosen medium. A charcoal drawing might depend on broad tonal masses, broken edges, and visible paper; a photograph might depend on depth of field and the direction of natural light. Avoid incompatible technique instructions simply because they appeared in an earlier prompt.
-
-Place exclusions beside the relevant positive instruction as well as in a final list when useful. If an anonymous figure matters, describe how anonymity is achieved. If the design requires empty space for later typography, specify where it belongs. Establish whether lettering is part of the brief, and avoid unintended text, logos, borders, or watermark-like artifacts.
-
-Send the generator only the visual brief needed for the image. Do not paste the full unpublished article or unrelated personal details by default. Use article-specific facts only when supported by the copy and appropriate for the user's intended publication. A visual metaphor should not invent an event or imply a factual depiction the source does not support.
+Send the generator only the visual prompt needed for that image. Explicitly request that it create an image, so a text explanation is not mistaken for a completed result.
 
 ## Generate the first five
 
-Use the chosen generator's supported workflow. Adapt the prompt format to its actual capabilities, and explicitly request an image so a text response is not mistaken for the deliverable. Respect existing access, spending, and approval boundaries. If the chosen service is unavailable, report the limitation and attempt safe recovery; agree on any replacement before sending content elsewhere.
+Use the chosen generator's supported workflow. If browser or account access is required, use the authorized account and current supported controls. Do not take over unrelated workspaces or conversations. If access is unavailable, an approval gate blocks action, or a rate limit applies, report the blocker and ask for only the action needed to continue. Do not silently send the article to another service as a substitute.
 
-Keep a working record of each option's number, title, concept, submitted prompt, generation status, output location, and review notes. Preserve the complete prompt so a truncated or failed submission can be repaired accurately. Start independent jobs concurrently only when the tool supports that safely and within its limits.
+Maintain a working record for each option: number, title, concept, full submitted prompt, generation status, output location, and visual-review notes. Preserve the exact prompt so a truncated or failed request can be repaired accurately.
 
-Confirm that every submission was accepted with the intended brief. Then confirm the actual image completed and can be opened at a useful size. An accepted request, elapsed time, placeholder, progress indicator, or text description does not establish completion. If an error appears, check whether an image already exists before retrying to avoid unnecessary duplicate work. Keep failed attempts separate from finished options.
+Independent jobs may be started without waiting for each image to finish when the tool supports this safely. Keep browser actions sequential, grounded in the current page state, and within the generator's limits. Confirm that each submission contains the complete intended prompt. If text is cut off, cancel or correct the incomplete attempt and resend the complete brief.
+
+A submitted prompt, spinner, thumbnail placeholder, elapsed time, or text response is not proof of completion. Confirm that a real image has rendered and can be opened at useful size. If an error appears, check whether an image was nonetheless completed before retrying, to avoid duplicate output. Keep unsuccessful attempts separate from the five finished options.
 
 ## Inspect all five before improving
 
-View every completed image at a useful size and evaluate the actual pixels. Do not evaluate only the generator's description or what you hoped the prompt would produce. Also inspect a small preview, because a cover must communicate when reduced or cropped.
+View every completed image at useful size. Evaluate the actual pixels, not the generator's description or the intended prompt. Also inspect a small preview or reduced crop, because editorial covers often need to communicate quickly at thumbnail size.
 
-For each image, record:
+For each option, assess:
 
-- Whether it communicates the article's central idea and emotional tone.
-- Whether the subject and action read immediately, with a clear focal point.
+- Whether it communicates the central idea and emotional tone.
+- Whether the subject and action read immediately and have a clear focal point.
 - Whether the requested style, palette, orientation, and composition survived generation.
-- Whether it feels too busy, generic, sentimental, static, or literal.
-- Any visible anatomy, object, perspective, construction, or lettering artifacts.
+- Whether it feels too busy, generic, sentimental, static, overly literal, or visually confusing.
+- Whether anatomy, objects, perspective, construction, lettering, or other visible artifacts undermine it.
 
-Only after reviewing all five, design three new prompts. Tie each improvement to a visible observation: a strength to retain, a weakness to correct, and the change likely to help. Do not prewrite this round before seeing the first outputs.
+Only after all five have been inspected, write three new prompts. Each improved prompt must name, in working notes, a visible strength to retain, a weakness to correct, and a concrete visual change likely to help. Do not prewrite the second round before reviewing the first results.
 
-A useful spread is one refinement of the strongest image, one combination of strengths from different images, and one new concept addressing a gap. Use judgment when a different spread would serve the article better. Each new image should contribute a meaningful alternative rather than another copy of an existing result.
+A useful second-round spread is often: one refinement of the strongest result, one combination of strengths from different results, and one new concept that addresses an uncovered gap. This is a guide, not a rigid formula. Choose another distribution if it better serves the article.
 
-Fix the cause of a weak result. If a composition is cluttered, reduce the number of objects or competing focal points before adding more instructions. If an image looks like a photograph with a painting filter, describe larger shapes, selective edges, and the medium's actual marks. If the scene resembles generic travel or office imagery, reconsider its action or metaphor instead of adding decoration.
+Correct causes rather than decorating symptoms. If an image is cluttered, reduce competing objects and focal points before adding detail. If a painting looks like a photograph with a filter applied, request fewer large forms, selective edges, visible medium marks, and more negative space. If a scene reads as generic travel, business, or lifestyle imagery, reconsider the action or metaphor instead of adding ornamental detail.
 
-Give a short progress update explaining what the first images revealed and what the next three will improve. Continue without requesting another selection or repeating the creative brief.
+Give the user a short progress update on what the first round revealed and what the next three will improve. Continue without asking for another selection unless the user requests a pause.
 
 ## Generate, review, and deliver options six through eight
 
-Generate three new images from the revised prompts. Keep the first five intact so the user can compare originals with improvements. Inspect each new result using the same visual criteria and completion checks. Repair failed generation attempts where possible without counting them as finished options or substituting an old image.
+Generate three images from the revised prompts. Keep the first five intact so the user can compare originals and improvements. Inspect each new result with the same completion checks and visual criteria. If a generation fails or returns only text, repair it where possible in the same task context. Do not count a failed attempt as a finished option and do not quietly substitute an older image.
 
-Before delivery, verify that there are eight distinct, completed outputs that you personally inspected. Check that each can be opened from the final handoff and that titles and numbering match the working record. Use accessible files or verified output links supported by the chosen generator. Preserve the finished outputs for the user to compare.
+Before delivery, verify that there are eight distinct completed images that you personally inspected. Confirm that titles, numbering, prompts, and output locations match the working record. Preserve the final outputs using the generator's supported links, assets, tabs, or files so the user can compare them.
 
-Recommend the strongest rendered image in a short sentence explaining why it fits the article. Follow with a numbered list of all eight titles and their outputs, clearly identifying the final three as the second round. Keep the outputs as the final deliverable block. Avoid turning the handoff into a long design report.
+Give a short recommendation based on the rendered work, explaining why the strongest option fits the article. Then provide a numbered list of all eight titles and verified output locations, clearly marking options six through eight as the second round. Make that list the final deliverable block. If output is delivered through browser tabs, leave the finished tabs open and clearly identifiable when the environment supports doing so.
 
-If access, rate limits, or repeated generation errors prevent completion, state exactly which options are finished and which remain blocked. Preserve useful work for resuming. Do not claim eight images exist when some are only prompts or unsuccessful attempts.
-
-After completion or selection, learn from explicit user feedback and observed results. When authorized to remember or update the workflow, save reusable lessons about interpreting articles, composition, prompt constraints, or verified generator conventions. Distinguish the user's stated preferences from your own aesthetic judgments. Do not turn one article's subject or a single successful image into a permanent default. Keep private article content out of reusable lessons, and make no update when nothing durable was learned. Report any saved lesson before the final deliverable block.
+If access restrictions, rate limits, or repeated errors prevent completion, state exactly which options are finished and which are blocked. Preserve useful partial work for resumption. Never claim that eight images exist when some are only prompts, placeholders, or unsuccessful attempts.
 
 ## Prompt-only branch
 
-When the user explicitly wants prompts only, read the article and reuse or collect the same creative preferences. Propose five concepts, then wait for a selection unless the request already specifies concepts or asks for all prompts. Write each selected prompt in a separate fenced code block. If combining concepts, explain the combination in one line before the prompt.
+When the user explicitly requests prompts only, do not generate images. Read the article, establish the same creative brief, and propose five concepts. Wait for a selection unless the user already selected concepts or requested prompts for all five.
 
-Do not generate images in this branch. Do not describe hypothetical second-round prompts as improvements informed by visual review. Put the selected prompts last, with nothing after the final block.
+Write each selected prompt in a separate fenced code block using the prompt structure above. If combining concepts, provide one sentence describing what is being combined before the prompt. Put the selected prompts last, with nothing after the final code block.
+
+Do not describe hypothetical second-round prompts as though they were informed by visual review. No visual review occurred in this branch.
 
 ## Adapt to another generator
 
-When the user requests a version for another generator, preserve the concept, mood, composition, palette, and format. Change the prompt's structure or parameters only as needed by the target tool. A prose-oriented generator may suit a compact paragraph; another may accept short descriptive phrases and separate controls.
+When the user requests a version for another generator, preserve the core concept, mood, palette, composition, and format. Change only the syntax and structure required by the target tool. A prose-oriented tool may use a compact paragraph, while another tool may work best with short descriptive phrases and supported controls.
 
-Check the target tool's supported conventions before specifying parameter flags or version identifiers. If the version matters and remains unclear, ask once rather than guessing. Keep each platform variant separate and clearly labeled. Changing generators should not quietly change the underlying creative idea.
+Verify current conventions before adding parameter flags, version identifiers, style codes, or aspect-ratio syntax. If a version choice materially affects the result and is unclear, ask once rather than guessing. Keep platform variants separate and clearly labeled. Changing tools should not quietly change the underlying image idea.
+
+## Learn from completed work
+
+After the user chooses an image, accepts a prompt, or clearly ends iteration, identify durable lessons from explicit feedback and observed results. Useful lessons include better ways to translate article structure into a visual metaphor, constrain composition, describe a medium, or avoid a repeated generator failure.
+
+Separate stated user preferences from personal aesthetic judgment. Do not save article-specific names, private content, sensitive facts, or one-off subject matter as a general rule. Do not treat a single successful image as a permanent default. Save or apply a reusable lesson only when the user has authorized memory or workflow updates; otherwise use the lesson only within the current task.
