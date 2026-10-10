@@ -1,131 +1,156 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="robots" content="noindex,nofollow,noarchive"><title>Make a decision · AI skills</title><meta name="description" content="Match decision-making rigor to stakes and reversibility, make authorized records without inventing the user’s views, and review outcomes to improve future choices.">
-<link rel="alternate" type="text/markdown" href="/skills/raw/make-a-decision.md"><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%23b4552d%22/><text x=%2250%22 y=%2253%22 dominant-baseline=%22central%22 text-anchor=%22middle%22 font-family=%22Georgia, 'Times New Roman', serif%22 font-size=%2246%22 letter-spacing=%221%22 fill=%22%23fdfaf4%22>DE</text></svg>"><link rel="stylesheet" href="/skills/styles.css"></head><body><main><a class="back" href="/skills/">← Skills</a><header class="skill-header"><h1>Make a decision</h1><p class="description">Match decision-making rigor to stakes and reversibility, make authorized records without inventing the user’s views, and review outcomes to improve future choices.</p><div class="skill-actions"><a href="/skills/raw/make-a-decision.md">Raw Markdown</a><button class="copy" type="button" data-copy="/skills/raw/make-a-decision.md">Copy Markdown</button></div></header><article class="skill-body"><p>Use this workflow to make a clear choice with rigor proportional to its stakes and reversibility. The aim is not maximum analysis: most decisions should take minutes, while costly or direction-setting choices deserve challenge, consultation, a record, and a later review.</p>
+<meta name="robots" content="noindex,nofollow,noarchive"><title>Make a decision · AI skills</title><meta name="description" content="Match decision-making rigor to stakes and reversibility, then make, record, and review meaningful choices without inventing the user’s views or exposing sensitive information.">
+<link rel="alternate" type="text/markdown" href="/skills/raw/make-a-decision.md"><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%23b4552d%22/><text x=%2250%22 y=%2253%22 dominant-baseline=%22central%22 text-anchor=%22middle%22 font-family=%22Georgia, 'Times New Roman', serif%22 font-size=%2246%22 letter-spacing=%221%22 fill=%22%23fdfaf4%22>DE</text></svg>"><link rel="stylesheet" href="/skills/styles.css"></head><body><main><a class="back" href="/skills/">← Skills</a><header class="skill-header"><h1>Make a decision</h1><p class="description">Match decision-making rigor to stakes and reversibility, then make, record, and review meaningful choices without inventing the user’s views or exposing sensitive information.</p><div class="skill-actions"><a href="/skills/raw/make-a-decision.md">Raw Markdown</a><button class="copy" type="button" data-copy="/skills/raw/make-a-decision.md">Copy Markdown</button></div></header><article class="skill-body"><p>Use this workflow to apply the right amount of rigor, make a clear call when ready, preserve reasoning for meaningful choices, and learn from outcomes. The goal is not maximum analysis: most decisions should take minutes, while a small number deserve a complete record and later review.</p>
 <h3>Core rules</h3>
 <ol>
-<li><strong>Match rigor to stakes.</strong> Use a quick default for small, reversible choices; reserve lengthy work for decisions that are expensive to unwind.</li>
-<li><strong>The user owns their position.</strong> Never state, record, or imply that the user favors, opposes, is leaning toward, or decided an option unless they explicitly said so.</li>
-<li><strong>Separate advice from attribution.</strong> Put recommendations in chat under <strong>Assistant analysis</strong>. Add them to a record only if the user specifically asks. If the user has stated no position, write “No position stated yet” or leave their position blank.</li>
-<li><strong>Record only with permission.</strong> “Should we do this?” asks for analysis, not for a new record. Create or update a record only when the user asks to log, track, open, record, or commit it, or explicitly agrees.</li>
-<li><strong>Respect privacy and access boundaries.</strong> Before consulting shared messages, internal records, personal information, or a shared register, establish a legitimate purpose and clear authorization. Use only the minimum relevant sources and omit unrelated sensitive information.</li>
-<li><strong>Do not turn execution into a decision.</strong> If there is no meaningful alternative, say so and move to planning or doing the task.</li>
-<li><strong>Do not use rigor to delay.</strong> Once the appropriate checks are complete, name the call and move forward.</li>
+<li><strong>Match rigor to stakes and reversibility.</strong> Spend more time only where reversal is costly or consequences are broad.</li>
+<li><strong>The user owns their position.</strong> Never state, record, or imply that the user believes, prefers, or decided something they did not actually say.</li>
+<li><strong>Separate advice from attribution.</strong> The assistant may recommend an option in conversation, clearly labeled as assistant analysis. Add it to a record only if the user asks for that.</li>
+<li><strong>Record only with permission.</strong> “Should we do X?” asks for analysis, not for a decision record. Create or update a record only when the user asks to log, track, open, or commit it, or explicitly agrees to recording.</li>
+<li><strong>Protect privacy and access boundaries.</strong> Before accessing shared communications, personnel information, customer data, or a shared register, confirm a legitimate purpose and clear authorization. Use only the minimum relevant sources and omit unrelated sensitive personal details.</li>
+<li><strong>Do not confuse a task with a decision.</strong> If there is no meaningful alternative, redirect to planning or execution.</li>
 </ol>
-<p>Before writing to a shared record, confirm that its audience is appropriate. For sensitive subjects, including health, relationships, compensation, or confidential personnel matters, keep the discussion in chat or offer a private record.</p>
+<p>If a shared register has an audience beyond the user, confirm that the audience is appropriate before writing. For sensitive matters such as health, relationships, compensation, or confidential personnel issues, offer a private record in the user’s chosen private workspace or keep the discussion in chat.</p>
 <h3>1. Select the mode</h3>
-<p>Choose the mode from the user’s request and, only if authorized, the relevant decision register.</p>
+<p>Determine whether the work concerns a new or existing decision.</p>
 <ul>
-<li><strong>New:</strong> No relevant record exists, or the user wants a fresh decision.</li>
-<li><strong>Resume:</strong> An existing decision is still open and the user wants to continue.</li>
-<li><strong>Commit:</strong> An open decision exists and the user is ready to decide.</li>
-<li><strong>Review:</strong> A resolved decision has reached its review point and has not yet received an outcome assessment.</li>
+<li><strong>New:</strong> No matching record exists, or the user wants a fresh decision.</li>
+<li><strong>Resume:</strong> An open decision exists and the user wants to continue thinking.</li>
+<li><strong>Commit:</strong> An open decision exists and the user is ready to make the call.</li>
+<li><strong>Review:</strong> A resolved decision has reached its review point and has not yet received a meaningful outcome assessment.</li>
 </ul>
-<p>Follow an explicit user instruction over automatic detection. Otherwise, search for overlapping records before creating a duplicate. On resume, append new inputs and shifts in thinking; do not rewrite history. On review, use the original prediction and reasoning as the baseline.</p>
+<p>If the user explicitly names the mode, follow that instruction. Otherwise, if authorized to access the decision register, search for overlapping records before creating a duplicate. Search only the authorized register and only for information relevant to the decision.</p>
+<p>For a resumed decision, append new information rather than rewriting history. For a review, use the recorded prediction and original reasoning as the baseline rather than reconstructing them from memory.</p>
 <h3>2. Frame the decision</h3>
-<p>Write a question that can be answered. Ask one clarifying question at a time when needed:</p>
+<p>Put the question in a decidable form. Establish:</p>
 <ul>
-<li>What is being chosen?</li>
+<li>What exact choice is being made?</li>
 <li>Who has final decision authority?</li>
-<li>What are the realistic options, including doing nothing?</li>
+<li>What are the realistic options, including doing nothing where relevant?</li>
 <li>What is the deadline or decision trigger?</li>
-<li>What outcome is sought, and what happens if nothing changes?</li>
+<li>What result is sought?</li>
+<li>What happens if no action is taken?</li>
 </ul>
-<p>If the problem is open-ended and there are no credible options, generate options first. If only one viable path exists, say: “This is a task rather than a decision; the next step is to plan or execute it.”</p>
+<p>If the issue is broad and credible options do not yet exist, generate options before evaluating them. If there is only one viable route, say so directly: “This appears to be a task rather than a decision. The next step is to plan or execute it.”</p>
 <h3>3. Classify scope</h3>
-<p>Classify by the cost of unwinding the choice: money, time, trust, operational disruption, opportunity cost, and reputation—not apparent size alone.</p>
-<div class="table-wrap" tabindex="0" aria-label="Scrollable table"><table><thead><tr><th>Bucket</th><th>Meaning</th><th>Default treatment</th></tr></thead><tbody><tr><td>Trivial</td><td>Low stakes; reversible within hours</td><td>Decide now; do not record by default</td></tr><tr><td>Reversible</td><td>Moderate stakes; reversible in days or weeks</td><td>Short comparison and, if useful, a light record</td></tr><tr><td>Hard to reverse</td><td>Material cost, disruption, or loss if undone</td><td>Full analysis, challenge, and stakeholder check</td></tr><tr><td>Direction-setting</td><td>Shapes strategy, culture, finances, or operating model for a long period</td><td>Full analysis, explicit dissent, and prerequisite conversations</td></tr></tbody></table></div>
-<p>If the user calls it trivial, ask: <strong>“What would it cost to unwind?”</strong> If the cost is uncertain, disruptive, or cannot be stated quickly, use a larger bucket.</p>
-<h3>4. Apply the appropriate rigor</h3>
+<p>Ask one clarifying question at a time when classification is unclear. Use the cost of unwinding the choice as the main test: consider money, time, trust, operational disruption, opportunity cost, and reputational effects.</p>
+<div class="table-wrap" tabindex="0" aria-label="Scrollable table"><table><thead><tr><th>Bucket</th><th>Meaning</th><th>Treatment</th></tr></thead><tbody><tr><td>Trivial</td><td>Low stakes and reversible within hours</td><td>Decide now; do not log by default.</td></tr><tr><td>Reversible</td><td>Moderate stakes; can be changed within days or weeks</td><td>Compare a few options; use a light record if useful.</td></tr><tr><td>Hard to reverse</td><td>Meaningful cost, disruption, or loss if undone</td><td>Full analysis, challenge the leading option, and consult relevant stakeholders.</td></tr><tr><td>Direction-setting</td><td>Shapes strategy, culture, finances, or operations over an extended period</td><td>Full analysis, explicit dissent, and named prerequisite conversations.</td></tr></tbody></table></div>
+<p>If a user calls something trivial, ask what it would cost to unwind. If they cannot state the cost quickly, or the cost is uncertain, treat the choice as at least reversible rather than trivial.</p>
+<div class="table-wrap" tabindex="0" aria-label="Scrollable table"><table><thead><tr><th>Bucket</th><th>Typical stakes</th><th>Typical reversibility</th></tr></thead><tbody><tr><td>Trivial</td><td>Low</td><td>Easy</td></tr><tr><td>Reversible</td><td>Low or medium</td><td>Reversible</td></tr><tr><td>Hard to reverse</td><td>High</td><td>Hard</td></tr><tr><td>Direction-setting</td><td>Very high</td><td>Difficult or effectively one-way</td></tr></tbody></table></div>
+<h3>4. Apply the right rigor</h3>
 <h4>Trivial</h4>
-<p>Pick a reasonable default, give a one-sentence rationale, and move on. If the user is stalling, say so plainly: further attention may cost more than an imperfect choice.</p>
+<p>Pick a reasonable default, give a one-sentence rationale, and move on. If the user is stalling, name the cost of delay: continued attention can cost more than an imperfect choice.</p>
 <h4>Reversible</h4>
-<p>Aim for roughly ten minutes:</p>
+<p>In a short working session:</p>
 <ol>
 <li>List two or three realistic options.</li>
-<li>For each, state one strength, one weakness, and a rough effort, cost, or time estimate.</li>
-<li>Give an <strong>Assistant analysis</strong> recommendation and the decisive reason.</li>
-<li>Where uncertainty matters, choose the smallest reversible test that could change the call.</li>
+<li>For each option, state one major strength, one major weakness, and a rough effort or cost estimate.</li>
+<li>Recommend an option and name the decisive reason.</li>
+<li>If uncertainty matters, identify the smallest reversible test that could change the call.</li>
 </ol>
 <h4>Hard to reverse: challenge gate</h4>
-<p>A hard-to-reverse decision normally deserves roughly 30–60 minutes of work. Before commitment, pressure-test the leading option by examining assumptions, disconfirming evidence, likely failure modes, the strongest alternative, and important objections from affected people or relevant experts.</p>
-<p>If no relevant challenge has occurred in the current working context, stop and say:</p>
+<p>Before committing, pressure-test the leading option. A valid pressure test examines assumptions, disconfirming evidence, likely failure modes, the strongest alternative, and substantial stakeholder objections.</p>
+<p>If no relevant pressure test has occurred in the current work context, stop the commitment flow and state:</p>
 <blockquote>This is hard to reverse. Pressure-test the leading option before committing. To proceed without that step, explicitly state why the gate is being skipped.</blockquote>
-<p>Do not bypass this merely because the user is in a hurry. Continue only after the challenge is complete or the user explicitly overrides it with a reason.</p>
-<p>Use the challenge result as a decision rule:</p>
-<ul>
-<li><strong>Green:</strong> No material unresolved issue; proceed with options, pre-mortem, stakeholder check, and recommendation.</li>
-<li><strong>Amber:</strong> Risks or unknowns remain but are understood and bounded; proceed only after stating mitigations, owners, and review triggers.</li>
-<li><strong>Red:</strong> A serious failure mode, missing evidence, or unresolved constraint remains; do not force commitment. Return to option generation, redesign the proposal, gather a decision-changing fact, or run a bounded test.</li>
-</ul>
-<h4>Direction-setting</h4>
-<p>Use the hard-to-reverse process plus two gates:</p>
+<p>Do not bypass the gate merely because the user is in a hurry. Continue only after the pressure test is complete or the user explicitly overrides it with a reason. If the test reveals a serious unresolved failure, return to option generation, redesign the option, gather decision-changing evidence, or run a bounded test.</p>
+<p>After the gate is satisfied:</p>
 <ol>
-<li>Name the specific leader, partner, advisor, or stakeholder conversation required before commitment.</li>
+<li>Define the options and decision criteria.</li>
+<li>Run a pre-mortem: “It is later and this failed. What most likely caused it?”</li>
+<li>Check stakeholders: who has relevant expertise, bears consequences, or may reveal a constraint?</li>
+<li>Offer a recommendation labeled as assistant analysis unless the user adopts it in their own words.</li>
+</ol>
+<h4>Direction-setting</h4>
+<p>Use the hard-to-reverse process plus two readiness gates:</p>
+<ol>
+<li>Name the specific accountable leader, partner, advisor, or stakeholder conversation required before commitment.</li>
 <li>Ask who disagrees and capture their strongest case fairly.</li>
 </ol>
-<p>The decision is not ready until the required conversation has happened, unless the user explicitly records why proceeding is necessary. If the choice is being rushed, identify exactly what consultation, evidence, or dissent is being skipped and why it matters.</p>
+<p>The decision is not ready until the required conversation has occurred, unless the user explicitly accepts and records a reason for proceeding without it. If the work is being rushed, state which consultation, evidence, or dissent is being skipped and why it matters.</p>
 <h3>5. Analyze without manufacturing certainty</h3>
-<p>For each serious option, capture what it enables; what it costs, delays, or prevents; strongest supporting evidence; strongest objection; key assumptions; and reversal cost. Choose criteria before comparison and separate non-negotiables from preferences. Use scores only when they clarify tradeoffs.</p>
-<div class="table-wrap" tabindex="0" aria-label="Scrollable table"><table><thead><tr><th>Category</th><th>What belongs here</th></tr></thead><tbody><tr><td>User’s stated view</td><td>Only the user’s expressed choice, reasoning, confidence, and response to concerns</td></tr><tr><td>Assistant analysis</td><td>The assistant’s recommendation, evidence, and reasoning</td></tr><tr><td>Open question</td><td>Material uncertainty not yet resolved</td></tr></tbody></table></div>
-<p>Run a pre-mortem: “It is later and this failed. What most likely caused it?” Then identify stakeholders with relevant expertise, consequences, or constraints.</p>
+<p>For each serious option, capture:</p>
+<ul>
+<li>What it enables.</li>
+<li>What it costs, delays, or prevents.</li>
+<li>Strongest evidence in its favor.</li>
+<li>Strongest objection.</li>
+<li>Key assumptions.</li>
+<li>Ease and cost of reversal.</li>
+</ul>
+<p>Choose criteria before comparing options. Separate non-negotiable requirements from preferences. Use scoring only when it clarifies a tradeoff rather than disguising judgment.</p>
+<p>Keep these categories distinct:</p>
+<ul>
+<li><strong>User’s stated view:</strong> Positions the user actually expressed.</li>
+<li><strong>Assistant analysis:</strong> Recommendation and reasoning supplied by the assistant, identified using the assistant identity active in the current environment.</li>
+<li><strong>Open question:</strong> Uncertainty not yet resolved.</li>
+</ul>
+<p>If the user has not expressed a position, write “No position stated yet” or leave the user-position field blank. Never invent a lean, confidence level, rationale, response to dissent, or final choice for them.</p>
 <h3>6. Commit and record</h3>
-<p>Before finalizing a meaningful decision, confirm the choice, rationale, reversal conditions, next action owner and date, observable prediction, and the user’s confidence in that prediction. Make predictions testable:</p>
+<p>Before finalizing, confirm:</p>
+<ul>
+<li>What is the decision?</li>
+<li>Which option was chosen?</li>
+<li>Why is it preferred now?</li>
+<li>What would change the decision?</li>
+<li>Who owns the next action, and by when?</li>
+<li>What observable result is predicted?</li>
+<li>What is the user’s confidence in that prediction?</li>
+</ul>
+<p>For meaningful decisions, make the prediction testable:</p>
 <blockquote>By [date or trigger], [observable outcome] will happen or not happen.  </blockquote>
-<blockquote>Confidence: [X%].</blockquote>
-<p>Use the user’s chosen document system, register, or private file. A record should include status, domain, stakes, reversibility, decision date, review date, confidence, and outcome. For non-binary questions, mark the record resolved when a decision has been made.</p>
-<div class="table-wrap" tabindex="0" aria-label="Scrollable table"><table><thead><tr><th>Scope</th><th>Default review point</th><th>Reminder approach</th></tr></thead><tbody><tr><td>Reversible</td><td>One month</td><td>Record a review date</td></tr><tr><td>Hard to reverse</td><td>Three months</td><td>Record a review date and reminder</td></tr><tr><td>Direction-setting</td><td>Six months</td><td>Record a review date and reminder</td></tr></tbody></table></div>
-<p>Use a meaningful milestone or trigger instead when it is better than a calendar date. For high-stakes choices, create a reminder in the user’s chosen calendar or task capability if authorized.</p>
+<blockquote>Confidence: [percentage].</blockquote>
+<p>Use the user’s chosen document system, decision register, or private file. A useful record contains status, domain, stakes, reversibility, decision date, review date, confidence, and outcome. Use these review defaults unless the user names a better trigger: one month for reversible choices, three months for hard-to-reverse choices, and six months for direction-setting choices. Add a reminder through the user’s authorized calendar or task system for high-stakes reviews.</p>
+<p>For a new open decision, record context, current options, and new inputs. Leave commitment sections blank until the user commits. When resuming, append a dated thinking-log entry rather than altering earlier entries.</p>
 <pre><code>## Context
 Why this decision exists and why it matters now.
 
 ## Options considered
-- **Option A:** [What it is and central tradeoff]
-- **Option B:** [What it is and central tradeoff]
-- **Option C:** [What it is and central tradeoff]
+- **Option A:** What it is and its central tradeoff.
+- **Option B:** What it is and its central tradeoff.
+- **Option C:** [Optional third option.]
 
 ## Thinking log
 ### [Date]
 - New inputs, conversations, data, or events
 - How the thinking changed
-- User’s stated position: open / leaning / decided
+- User’s stated position today: open / leaning / decided
 
 ## Dissent
-[Who raised concerns, their strongest argument, and how it was handled.]
+Who pushed back, their strongest argument, and how it was handled.
 
 ## My choice and why
-[User’s own reasoning, only when stated by the user.]
+The user’s own reasoning, only when stated by the user.
 
 ## What would change my mind
-[Assumptions or evidence that would justify reversal.]
+Assumptions or evidence that would justify reversing the choice.
 
 ## Prediction
 By [date], [observable outcome] will happen or not happen.
 Confidence: [X%]
 
 ## Worries
-[Most credible downside or failure mode.]
+The most credible downside or failure mode.
 
 ---
 
 ## Retrospective
-[To be completed at review.]</code></pre>
-<p>For a new open decision, record context, current options, and new inputs; leave commitment sections blank. On resume, append a dated thinking-log entry and add genuinely new options without replacing prior reasoning.</p>
+To be completed at review.</code></pre>
 <h3>7. Review the outcome</h3>
-<p>At the review point, complete four sections:</p>
+<p>At the review point, assess:</p>
 <ol>
 <li><strong>What happened?</strong> Use concrete actuals, not impressions.</li>
-<li><strong>Was the prediction accurate?</strong> Compare actual events to the recorded prediction and confidence.</li>
-<li><strong>Was the process sound?</strong> Judge the evidence, assumptions, alternatives, and reasoning available at the time.</li>
-<li><strong>What is the reusable lesson?</strong> State a principle that can improve a later decision.</li>
+<li><strong>Was the prediction accurate?</strong> Compare events with the recorded prediction and confidence.</li>
+<li><strong>Was the process sound?</strong> Judge the information, assumptions, alternatives, and reasoning available at the time.</li>
+<li><strong>What is the reusable lesson?</strong> State a principle for future decisions.</li>
 </ol>
-<p>Mark the outcome as correct, incorrect, mixed, too early, or not applicable. Keep outcome quality separate from decision quality: a sound decision can have a poor result under uncertainty, and a weak process can get lucky.</p>
+<p>Mark the outcome as correct, incorrect, mixed, too early, or not applicable. Do not treat a bad outcome as proof of a bad process, or a good outcome as proof of a sound process.</p>
 <h3>Completion message</h3>
-<p>When a decision is made, summarize it plainly:</p>
+<p>When a decision is made, summarize it clearly:</p>
 <pre><code>Decision: [one-line call]
 Scope: [bucket]
 Rationale: [two or three honest sentences]
-Next action: [owner] will [action] by [date]
-Review: [date or trigger]
+Next action: [owner] will [action] by [DD MMM]
+Review: [DD MMM YYYY or trigger]
 Record: [location, if one exists]</code></pre>
-<p>Use direct language and challenge weak reasoning with evidence. Once the required gates are satisfied, commit, record only within the authorized boundary, and proceed.</p></article><footer><a href="/skills/LICENSE.txt">CC0</a></footer></main><script>document.querySelector('[data-copy]').addEventListener('click',async function(){try{const text=await fetch(this.dataset.copy).then(r=>{if(!r.ok)throw new Error();return r.text()});await navigator.clipboard.writeText(text);this.textContent='Copied'}catch{this.textContent='Open raw Markdown'}})</script></body></html>
+<p>Use direct language. Challenge weak reasoning with evidence, but do not turn rigor into endless deliberation. Once the appropriate readiness gates are met, name the decision and move forward.</p></article><footer><a href="/skills/LICENSE.txt">CC0</a></footer></main><script>document.querySelector('[data-copy]').addEventListener('click',async function(){try{const text=await fetch(this.dataset.copy).then(r=>{if(!r.ok)throw new Error();return r.text()});await navigator.clipboard.writeText(text);this.textContent='Copied'}catch{this.textContent='Open raw Markdown'}})</script></body></html>
