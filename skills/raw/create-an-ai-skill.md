@@ -1,261 +1,264 @@
 ---
 name: create-an-ai-skill
-description: Design, test, refine, evaluate, and package reusable AI skills with realistic reviews, measurable checks, safe access boundaries, and accurate activation rules.
+description: Design, test, improve, evaluate, and package reusable AI skills through an evidence-based, user-centered workflow.
 ---
 
 # Create an AI skill
 
-Use this workflow to design a reusable AI skill, improve an existing skill, evaluate whether it helps, and refine when it activates. A skill is a focused set of instructions, with optional supporting resources, that helps an AI perform a recurring job reliably.
+Use this workflow to create a reusable AI skill, improve an existing one, evaluate whether it helps, or refine when it activates. A skill is a focused set of instructions, plus optional resources, that helps an AI perform a recurring job consistently.
 
-The standard loop is:
+The core loop is:
 
-1. Understand the job, intended users, boundaries, and approved access.
+1. Understand the intended job and its boundaries.
 2. Draft or revise the skill.
 3. Test it with realistic requests.
-4. Review representative outputs with the user and measure objective requirements where appropriate.
-5. Improve the skill based on evidence rather than isolated preferences.
-6. Repeat until it is useful, reliable, and not narrowly fitted to its test examples.
-7. Optionally improve the description that determines when the skill is used.
+4. Review outputs with a person and measure objective requirements where useful.
+5. Improve the skill from evidence, not guesswork.
+6. Repeat until it is useful, reliable, and not narrowly fitted to a few tests.
+7. Optionally improve the description that determines when the skill activates.
 8. Package and hand off the finished skill.
 
-Adapt the depth of this process to the user’s goal. A user may want a quick collaborative draft rather than a benchmark. Another may need careful comparison before relying on a skill for important recurring work. First identify where the user is in the loop, then help them take the next useful step.
+Adapt the depth of this process to the user’s goal. Some users want a quick collaborative draft. Others need a rigorous comparison with baselines, formal checks, and several revision rounds. First determine where they are in the loop, then help them take the next useful step.
 
 ## Communication principles
 
-Match the user’s technical familiarity. Use plain language by default. Terms such as *evaluation* and *benchmark* are often understandable, but define them briefly when useful. Do not use terms such as “JSON,” “assertion,” “schema,” or “baseline” without explanation unless the user clearly works with them already.
+Match the user’s technical background. Use plain language by default. Terms such as *evaluation* and *benchmark* are usually acceptable if briefly defined. Explain specialized terms such as *JSON*, *assertion*, *baseline*, or *schema* before relying on them unless the user clearly uses them comfortably.
 
-Explain why a question matters. For example:
+Ask questions because their answers affect the design, not merely to fill out a checklist. For example:
 
-> What should a successful result look like: a chat response, a structured report, a file, or a proposed action? This determines how completion can be checked.
+- “What should a successful result look like: a chat response, a report, a file, or an action?”
+- “What information may the skill use, and what should it do if that information is unavailable?”
+- “Should it make a reasonable best effort, or pause when a decision could materially change the result?”
 
-Keep the user involved at meaningful decision points:
+Keep the user involved at meaningful decision points. Confirm intended scope before writing extensive instructions, share proposed tests before treating them as representative, and let human judgment guide subjective issues such as writing quality, visual design, and practical usefulness.
 
-- Confirm the intended job before writing a large instruction set.
-- Ask before adding a restrictive scope, required capability, or approval requirement.
-- Share proposed test cases before treating them as authoritative.
-- Let human judgment lead when quality is subjective, such as tone, visual design, creative value, or strategic usefulness.
-- Make uncertainty visible rather than silently choosing a high-impact interpretation.
+When the task involves private communications, records, or personal information, require a legitimate purpose and clear authorization. Use the minimum relevant sources and information, omit unrelated sensitive details, respect consent and reasonable privacy expectations, and keep results within the appropriate access boundary.
 
 ## 1. Identify the starting point
 
-Determine which situation best fits.
+Determine which of these situations applies.
 
 ### New skill
 
-The user has an idea for recurring work, such as preparing structured summaries or checking files before release. Begin with discovery and a first draft.
+The user has an idea for recurring work, such as preparing project updates, reviewing structured documents, or transforming approved files. Start with discovery and a first draft.
 
 ### Existing skill
 
-The user has instructions that need editing, simplification, testing, or improvement. Read the current skill before proposing changes. Preserve its established name and identity unless the user asks to rename it. If the installed copy may be read-only, make an editable copy in a user-approved working location before changing it.
+The user has a draft or installed skill and wants it edited, simplified, tested, or improved. Read the current instructions before proposing changes. Preserve its established identity, including its name, unless the user explicitly asks to rename it.
+
+If the existing copy may be read-only, make an editable working copy in a user-approved location. Keep the original unchanged until the user accepts the revision.
 
 ### Workflow demonstrated in the conversation
 
-The user may ask to turn a demonstrated process into a skill. Extract what is already known before asking repeated questions:
+The user may ask to “turn this into a skill.” First extract what is already known from the conversation:
 
-- Inputs and approved sources used.
-- The sequence of decisions and actions.
-- Tools or capabilities involved.
-- Corrections and preferences the user expressed.
-- Output form and acceptance criteria.
-- Conditions that caused the process to change direction.
+- Inputs, files, and approved sources used.
+- Sequence of decisions and actions.
+- Tools or capabilities needed.
+- Corrections and preferences supplied by the user.
+- Observed output format and acceptance criteria.
+- Conditions that changed the approach.
 
-Summarize the inferred workflow and identify gaps for the user to confirm. Do not convert a one-time workaround into a general rule without checking that it is reusable.
+Summarize the inferred workflow and identify gaps for confirmation. Do not quietly convert a one-time workaround into a general instruction without checking that it applies broadly.
 
-### Evaluation or activation request
+### Evaluation or optimization request
 
-The user may have a finished-looking skill and want to know whether it works or whether it activates appropriately. Go directly to test design, evaluation, and evidence-based revision. Do not rewrite a useful skill merely because a rewrite is possible.
+The user may already have a plausible skill and want to know whether it actually improves outcomes. Go directly to test design, evaluation, and revision. Do not rewrite a skill merely because a rewrite is possible.
 
-## 2. Capture intent, scope, and authorization
+## 2. Capture intent, scope, and boundaries
 
-Gather enough information to define one coherent job. Do not ask every question mechanically; begin with the unknowns that would most change the design.
+Gather enough information to define a coherent job. Start with the questions whose answers matter most; do not force every question when the conversation already answers it.
 
-1. **Purpose:** What should the AI accomplish?
-2. **Trigger:** What requests, wording, or situations should cause this skill to be used?
-3. **Inputs:** What information, files, systems, examples, or permissions may it use?
-4. **Outputs:** What should it produce, change, or recommend? Is a specific format needed?
-5. **Success:** How will the user know the result is correct or useful?
-6. **Boundaries:** What should it not do? When should it ask, pause, decline, or return work to the user?
-7. **Variation:** What normal alternatives, difficult cases, and exceptions matter?
-8. **Dependencies:** Does it need a particular capability, template, reference, or script?
-9. **Testing:** Should it be tested with representative requests before release?
+1. **Purpose:** What should the skill enable the AI to accomplish?
+2. **Activation:** What user requests, phrasing, or situations should cause it to be used?
+3. **Inputs:** What information, files, examples, systems, references, and permissions may it use?
+4. **Outputs:** What should it produce, change, or communicate? Is there a required format?
+5. **Success criteria:** How will the user decide that the result is correct, useful, safe, and complete?
+6. **Boundaries:** What should it not do? When should it ask a question, request approval, decline, or return work to the user?
+7. **Variations:** What common cases, difficult cases, or meaningful exceptions should it handle?
+8. **Dependencies:** Does it need a particular tool capability, template, script, reference source, or user-provided access?
+9. **Testing:** Should it be tested with realistic example requests?
 
-Offer clear choices where useful:
+Recommend tests when outputs can be objectively checked, the workflow is consequential, the skill will be reused often, or the user needs evidence that a revision improves on an earlier version. For highly subjective work, recommend representative human review instead of weak numerical proxies.
 
-- Should the skill make a best effort when data is incomplete, or stop and ask?
-- Should the output be concise, detailed, or user-selectable?
-- Should it work with any source, or only explicitly approved sources?
-- Should it draft an external action or require approval before taking it?
+Offer useful choices when requirements are unclear:
 
-### Privacy and access boundary
+- “Should missing information cause a question, a clearly labeled assumption, or an incomplete draft?”
+- “Should the output be concise, detailed, or selectable by the user?”
+- “Should the skill work with any source the user provides, or only specifically approved sources?”
+- “Does this action need confirmation because it is external, irreversible, or high impact?”
 
-A skill may need to inspect records, messages, documents, or information about people. In that case, require a legitimate purpose and clear authorization before accessing them. Use only the minimum relevant sources and information. Do not include unrelated personal details in prompts, test data, logs, examples, or outputs.
+## 3. Research and inspect available context
 
-Respect consent, confidentiality expectations, and the access boundary of the user’s role. If authorization, purpose, or source scope is unclear, ask a focused question before proceeding. Design the skill to summarize, aggregate, or redact sensitive information when that meets the task’s need better than reproducing raw material.
+Before drafting, inspect relevant user-approved materials when they would reduce uncertainty: documentation, templates, comparable skills, file specifications, standards, or existing evaluation data. Use available research capabilities in parallel when practical, but do not research private material without authorization.
 
-Do not design a skill to conceal actions, bypass authorization, obtain data outside the user’s access boundary, or expose confidential material. If a request cannot be safely completed, explain the limitation and offer a safe alternative where possible.
+Research should reduce burden on the user, not replace their authority over requirements. Use it to identify:
 
-### Research before drafting
+- Existing conventions or output standards.
+- Constraints imposed by a file format, system, or available capability.
+- Reusable patterns for similar tasks.
+- Safety, privacy, compliance, or approval requirements.
+- Existing tests or feedback that should inform a revision.
 
-If approved documentation, comparable skills, templates, or domain guidance are available, review them before drafting. Research should reduce burden on the user, not replace their authority over requirements.
+If sources conflict or important requirements remain uncertain, present the uncertainty rather than inventing a rule.
 
-Use research to find:
+## 4. Choose a maintainable skill structure
 
-- Existing conventions and required output standards.
-- Constraints imposed by available capabilities or file formats.
-- Reusable approaches for comparable work.
-- Applicable safety, privacy, compliance, or approval expectations.
+Keep a skill focused enough that users and AI systems can predict its purpose. A skill may support related variants, but unrelated jobs should be split when they have different audiences, permissions, source-of-truth rules, or definitions of completion.
 
-If evidence conflicts or a requirement is uncertain, report that uncertainty rather than inventing a rule.
-
-## 3. Choose a structure and supporting resources
-
-Keep a skill focused enough that both users and AI systems can predict what it does. A skill can support variations of one job, but unrelated jobs should normally be separate when they have different users, permissions, sources of truth, or completion criteria.
-
-A portable package can use this structure:
+A typical package can contain:
 
 ```text
 skill-name/
 ├── SKILL.md                 # Core instructions
 ├── scripts/                 # Optional deterministic helpers
-├── references/              # Optional detailed documentation
-├── assets/                  # Optional templates and output resources
-└── evals/                   # Optional test prompts and grading material
+├── references/              # Optional supporting documentation
+├── assets/                  # Optional templates or output resources
+└── evals/                   # Optional tests and evaluation material
 ```
 
 Use progressive disclosure:
 
-1. **Metadata:** A short name and description used to decide whether the skill applies.
-2. **Core instructions:** The normal workflow loaded when the skill applies.
-3. **Supporting resources:** Detailed references, templates, or scripts consulted only when needed.
+1. **Metadata:** a short name and description used to decide whether the skill is relevant.
+2. **Core instructions:** the workflow needed for normal use.
+3. **Supporting resources:** detailed references, templates, and scripts loaded only when relevant.
 
-Keep the core instructions readable. When they become too large, move specialized guidance into clearly named reference files and state exactly when each file should be consulted. Give lengthy references a navigation section. For a skill supporting several platforms or domains, keep one shared workflow and separate variant-specific guidance so the AI loads only the relevant material.
+Keep core instructions readable. If they become too long, move domain-specific detail into clearly named supporting files and state exactly when to consult each one. Large reference files should include a navigation section or table of contents.
 
-### When to bundle a script
+For a skill with several variants, use a shared selection workflow plus separate references for each variant. The AI should load only the relevant material rather than carrying every variant into every request.
 
-If several test runs independently reconstruct the same helper procedure, consider bundling it. Scripts are especially valuable for deterministic work such as conversion, validation, calculations, file generation, or repetitive cleanup.
+### Bundle resources only when they earn their place
 
-Bundle a script only when it is reusable, within the intended permission boundary, and easier to verify than repeated natural-language steps. Document what it does, its inputs and outputs, expected failure behavior, and when not to use it. Do not add automation merely because it is possible.
+If several test runs independently recreate the same helper process—such as validation, document generation, conversion, or formatting—consider bundling a reusable script or template. A resource is worthwhile when it is repeatable, easier to verify than free-form reasoning, safe within the user’s authority, and likely to be reused.
 
-## 4. Write the skill
+Document each resource’s purpose, inputs, outputs, limitations, and when not to use it. Do not automate actions that would surprise the user or extend beyond approved permissions.
 
-Draft in clear imperative language. Explain the reason behind important instructions, especially when a rule prevents a predictable failure. A capable AI can adapt better when it understands the quality, usability, safety, or authorization goal behind a step.
+## 5. Write the skill instructions
 
-A useful skill commonly includes the following sections.
+Write in clear imperative language and explain the reason for important steps. AI systems generally follow guidance better when they understand what a step protects: correctness, usability, privacy, safety, or efficient use of time.
+
+Avoid long lists of unexplained absolute rules. Strong boundaries are appropriate for authorization, safety, privacy, data integrity, and irreversible actions. Elsewhere, give the AI enough judgment to adapt to normal variation.
+
+A useful skill usually contains the following sections as applicable.
 
 ### Purpose and scope
 
-State the job, intended context, and boundaries. Clarify whether the skill creates a response, produces a file, makes a recommendation, performs an action, or guides the user through a process.
+State the job, intended outcome, intended users, and limits. Make clear whether the skill provides advice, produces an artifact, modifies a file, performs an external action, or guides a user through a process.
 
 ### Inputs and prerequisites
 
-List required information, permitted sources, needed capabilities, and optional inputs. State what happens when a required item is absent.
+List required inputs, permitted sources, required capabilities, and optional context. Specify what happens when a required input is missing.
 
 ```markdown
-Before preparing the requested output, confirm the relevant period, scope, and approved source.
-If a required source is unavailable, ask for an approved substitute or provide a draft clearly marked as incomplete.
+Before preparing the report, confirm the reporting period and approved source material.
+If the source is unavailable, ask for an export or provide a draft clearly marked as incomplete.
 ```
 
-### Workflow
+### Workflow and decision points
 
-Describe the normal sequence and its decision points rather than trying to list every possible edge case.
+Provide the normal sequence and its important branches. A durable pattern is:
 
 1. Inspect the request and available inputs.
-2. Ask for clarification only when it materially changes the work or its risk.
+2. Clarify only when the answer materially changes the work.
 3. Gather evidence from approved sources.
 4. Perform the task using the appropriate method.
-5. Check the result against the requested format and success criteria.
-6. Present the result, key assumptions, and unresolved limitations.
+5. Check the output against requested format and success criteria.
+6. Present results, assumptions, sources, and unresolved limitations.
 
-Use conditional instructions where they help:
+Use conditional rules for meaningful variation:
 
 ```markdown
-If the user provides an approved template, follow it.
+If the user provides a required template, follow it.
 If no template is provided, use the default structure below.
-If an action could overwrite, publish, send, or otherwise materially affect work, explain the impact and request confirmation first.
+If a requested change could overwrite important work or send information externally, explain the impact and request confirmation first.
 ```
 
 ### Output format
 
-When consistency matters, define an exact or near-exact structure.
+Use an exact template when consistency matters. For example:
 
 ```markdown
 # [Title]
 
 ## Summary
-[Short overview]
+[One short paragraph]
 
 ## Findings
-- [Finding with evidence]
+- [Finding with supporting evidence]
 
 ## Recommendations
 1. [Action]
 
 ## Assumptions and open questions
-- [Uncertainty or required follow-up]
+- [Uncertainty or missing input]
 ```
 
-Do not impose rigid formatting where adapting to the user’s situation is more valuable. For those tasks, define the outcome and quality standard, then include a small generalized example only if it teaches a distinct pattern.
+Do not impose rigid formatting when contextual adaptation is more valuable. In those cases, define goals, required content, and one or two short generalized examples instead.
 
-### Quality, safety, and failure behavior
+### Quality, privacy, and safety checks
 
-State checks needed before completion: required fields, validated calculations, evidence for important claims, preservation of original data, clear uncertainty labels, or approval before sensitive actions.
+State the checks needed before completion. Examples include validating calculations, confirming required fields, preserving originals, citing key sources, separating verified facts from assumptions, and flagging unresolved uncertainty.
 
-Describe general recovery behavior:
+The skill must behave in ways a user would reasonably expect from its description. Do not create instructions that hide actions, bypass access controls, extract confidential information, damage systems, or facilitate unauthorized access. For people-related work, focus on role-relevant evidence, stated criteria, and appropriate access; avoid irrelevant personal details or unsupported labels.
 
-- **Missing or conflicting input:** Identify the gap and ask a focused question.
-- **Unavailable capability or reference:** Say what could not be verified and offer a safe alternate path.
-- **Ambiguous request:** Make a low-risk assumption only when it will not materially affect the result; otherwise ask.
-- **Validation failure:** Do not present the result as complete. Correct it, report the issue, or request guidance.
-- **High-impact action:** Pause for confirmation before irreversible, external, or consequential actions.
-- **Unauthorized or unsafe request:** Do not bypass access controls, conceal actions, expose sensitive information, or perform harmful work.
+### Failure behavior
 
-## 5. Write a strong skill description
+Describe recovery in general terms:
 
-The description is a routing instruction. It should state both what the skill does and when it should be used. Cover realistic phrasing, including requests that imply the task without naming it.
+- **Missing or conflicting inputs:** identify the gap and ask a focused question.
+- **Unavailable tool or source:** explain what cannot be verified and offer an approved alternative.
+- **Ambiguous request:** make a low-risk assumption only if it does not materially affect the result; otherwise ask.
+- **Failed validation:** do not present the output as complete; correct it, label the limitation, or seek guidance.
+- **Sensitive or high-impact action:** pause for confirmation before acting.
+
+## 6. Write an effective description
+
+The skill description is a routing instruction. It should state both **what the skill does** and **when it should be used**. Include realistic request contexts, including cases where the user implies the job without naming it.
 
 A good description includes:
 
-- The outcome or job.
-- Common contexts and phrases that signal relevance.
+- The intended task or outcome.
+- Common contexts or user language that indicate the task.
 - Important scope limits that prevent costly false activation.
 
-Example pattern:
+Example:
 
 ```text
-Produce structured summaries from approved source material. Use when a user asks for a concise update, a review of progress, key risks, open questions, or next actions, including when they describe the need without using the word “summary.”
+Create clear project status reports from approved updates and source material. Use for requests involving progress summaries, leadership updates, milestone reviews, risks, blockers, or next steps, even when the user does not say “status report.”
 ```
 
-Do not put the whole procedure in the description. Do not use vague descriptions such as “help with documents.” Also avoid making it so broad that it captures adjacent work that another skill should handle.
+Do not place the whole workflow in the description. Avoid vague labels such as “help with documents,” but also avoid making the description so broad that it captures nearby work better handled by another skill.
 
-## 6. Review before testing
+## 7. Review the draft before testing
 
-Read the draft as a new user would. Check:
+Read the skill as if encountering it for the first time. Check:
 
-- Is the job clear, coherent, and bounded?
-- Does the description say when to activate it?
-- Are inputs, permissions, and outputs clear?
-- Does the workflow explain important checks?
-- Does it handle missing information and unavailable capabilities?
-- Is it free of unnecessary rules, repeated guidance, and brittle wording?
-- Does it avoid personal defaults, hidden access assumptions, and undeclared dependencies?
-- Does it preserve enough flexibility for normal variation?
+- Is the job coherent and bounded?
+- Does the description explain when to activate it?
+- Are inputs, outputs, permissions, and dependencies clear?
+- Does the workflow explain why important checks exist?
+- Does it handle missing information and tool failure honestly?
+- Are there repeated rules, unnecessary constraints, or brittle wording?
+- Does it assume a particular person’s habits, access, tools, or vocabulary?
+- Does it keep private information and external actions within approved boundaries?
+- Does a capable AI have enough discretion to handle normal variation?
 
-Prefer a lean instruction set over a long list of rules that do not change outcomes. Excessive absolute language is a warning sign unless the behavior is genuinely non-negotiable, such as respecting authorization or preventing destructive actions.
+Prefer a lean instruction set over one filled with rules that do not improve outcomes. If execution traces later show that a section causes wasted planning or redundant work, revise or remove it.
 
-## 7. Design realistic test cases
+## 8. Design realistic tests
 
-Once the draft is stable enough to test, create two or three realistic requests and show them to the user for review. Add more only when they cover meaningful variation.
+After the draft is stable enough to test, create two or three realistic prompts. Share them with the user and invite corrections or additions before relying on them.
 
-For each case, record a descriptive name, prompt, inputs, expected outcome, and objective checks where suitable. A portable record can look like this:
+For each test, record a descriptive identifier, prompt, input files or context, expected outcome, and objective checks if appropriate.
 
 ```json
 {
   "skill_name": "example-skill",
   "evals": [
     {
-      "id": "incomplete-input-handling",
-      "prompt": "Create the requested structured output from the supplied material and clearly flag anything that cannot be verified.",
-      "expected_output": "A useful structured result that distinguishes supported information from missing information.",
+      "id": "missing-source-handling",
+      "prompt": "Prepare a weekly summary from the attached updates. Flag information you cannot verify.",
+      "expected_output": "A structured summary that separates verified updates from missing information.",
       "files": [],
       "assertions": []
     }
@@ -263,16 +266,26 @@ For each case, record a descriptive name, prompt, inputs, expected outcome, and 
 }
 ```
 
-Cover distinct situations such as a typical request, incomplete input, a format-sensitive request, an edge case that changes the workflow, and an approval-sensitive action when relevant. Vary wording and detail level. Avoid retaining personal, confidential, or unnecessary sensitive material in test cases.
+Cover meaningful variation:
 
-## 8. Run comparisons and collect evidence
+- A typical successful request.
+- An incomplete or ambiguous request.
+- A format-sensitive, policy-sensitive, or evidence-sensitive request.
+- A realistic case that changes the workflow.
+- A request requiring confirmation or safe refusal, when relevant.
 
-When the environment supports independent runs, compare the skill against a meaningful baseline:
+Avoid tests that merely repeat the skill’s wording. Vary phrasing, detail level, and user familiarity. Avoid private or one-off scenarios unless they are fully authorized and necessary; test the broader challenge instead.
+
+## 9. Run comparisons and preserve evidence
+
+When independent execution is available, compare the skill to a meaningful baseline.
 
 - For a new skill, run each test with the skill and without it.
-- For an existing skill, preserve an unchanged snapshot before editing and compare the revised version with that snapshot or another clearly identified prior version.
+- For a revision, save an unchanged snapshot before editing, then compare the revised skill with the earlier version.
 
-Run both conditions under comparable settings. If parallel execution is available, start all skill and baseline runs together. Store each iteration, test case, configuration, inputs, outputs, and available metadata in a clear directory structure.
+Launch the skill and comparison runs under equivalent conditions. When parallel execution is available, start all configurations in the same evaluation round so conditions are comparable.
+
+Use a clear iteration structure:
 
 ```text
 workspace/
@@ -286,88 +299,125 @@ workspace/
 └── iteration-2/
 ```
 
-Record elapsed time and resource-use information as soon as the execution environment reports it, because some systems do not preserve it. Keep inputs and outputs within the appropriate access boundary; do not copy confidential source material into broadly accessible evaluation locations.
+For each run, save the prompt, permitted input files, outputs, and available metadata such as elapsed time and resource use. Capture timing immediately if the environment reports it only at completion.
 
-If independent runs are unavailable, perform a transparent sanity check: apply the skill to each prompt, save the results, and ask the user to inspect them. Do not present this as a rigorous baseline comparison.
+If independent comparison is unavailable, run a transparent sanity check: follow the skill for each test, preserve outputs, and ask the user to review them. Do not describe this as a rigorous baseline comparison.
 
-## 9. Define, grade, and analyze checks
+## 10. Define, grade, and interpret checks
 
-While tests run, draft objective checks when they genuinely measure user value. Explain them before treating them as the definition of success.
+While runs are in progress, draft objective checks if they genuinely measure value. Explain them to the user before treating them as success criteria.
 
-Good checks are specific, observable, and meaningful:
+Good checks are observable and meaningful, for example:
 
-- Required sections are present.
-- A produced file opens and includes required fields.
-- A calculation matches a known result within an agreed tolerance.
-- Missing mandatory inputs are identified.
-- Required citations or source references appear.
+- Required sections or fields are present.
+- A produced file opens correctly.
+- Calculations match an approved source within an agreed tolerance.
+- The response identifies missing mandatory inputs.
+- Required citations, source notes, or approval prompts are included.
 
-Use a stable grading record with a check, pass/fail result, and evidence:
+Record each check with clear wording, a pass/fail result, and supporting evidence:
 
 ```json
 {
   "expectations": [
     {
-      "text": "Identifies required information that is unavailable.",
+      "text": "Includes an assumptions section when source information is missing.",
       "passed": true,
-      "evidence": "The output separates unsupported items from the completed result and requests the missing input."
+      "evidence": "The final section identifies unavailable data and requests it."
     }
   ]
 }
 ```
 
-Use programmatic checks when practical. They are more repeatable than visual judgment and can be reused in later iterations. Do not force numerical checks onto subjective quality; usefulness, tone, aesthetics, and judgment need human review.
+Use scripts for checks that can be programmatically verified. They are faster, more repeatable, and reusable across iterations. Do not force numerical checks onto subjective work such as tone, visual quality, strategic judgment, or creative usefulness. Those need informed human review.
 
-Aggregate pass rates, time, resource use, and variation where possible. Then look beyond averages:
+Aggregate available pass rates, time, resource use, and variation. Then inspect patterns the totals may hide:
 
-- Checks that pass in every condition may not distinguish the skill’s value.
-- Large variation may reveal unclear instructions or environmental instability.
-- Higher quality may come with an unacceptable time or resource cost.
+- Checks that pass equally with and without the skill may not measure its value.
+- High variation can indicate ambiguity, an unstable environment, or unreliable instructions.
+- A quality gain may not justify excessive time or resource cost.
 - Several failures may share one cause, such as unclear source selection.
-- Execution traces may reveal redundant planning or research.
-- Repeated helper construction may justify a bundled script or template.
+- Repeated helper work may justify a script or template.
 
-## 10. Review with the user and improve
+## 11. Review results with a human
 
-Present outputs alongside measurements using an available review interface or accessible files. For each test, show the prompt, relevant inputs, outputs from each condition, objective grades with evidence, and available timing or resource data. Give the user a simple way to provide feedback.
+Present outputs and measurements through an available review interface or, if necessary, directly in the conversation or accessible files. For each test, show the original prompt, relevant inputs, each output, grades and evidence, and available timing or resource data.
 
 Ask focused questions:
 
-- Which result would you trust in routine use, and why?
-- What was missing, misleading, or difficult to use?
-- Did the skill add work or detail that was not valuable?
-- Would this work with different wording or data?
+- “Which output would you trust in normal use, and why?”
+- “What was missing, misleading, or difficult to use?”
+- “Did the skill add work or detail that was not valuable?”
+- “Would this still work with different wording, data, or constraints?”
 
-Generalize from feedback rather than encoding one test example into the prompt. Fix the underlying cause with the smallest change likely to work. Keep instructions lean, explain intent, preserve valued behavior, and add reusable resources only when evidence justifies them.
+Human review should happen before making speculative corrections based only on the author’s preferences. Empty feedback can mean a test is acceptable, but it is not proof that the skill is complete.
 
-After revision, rerun the full relevant test set in a new iteration and compare it with the same baseline policy. Stop when the user is satisfied, requirements are reliably met, feedback is consistently positive, further revisions do not create meaningful improvement, or the remaining issue requires a product decision or unavailable capability.
+## 12. Improve without overfitting
 
-## 11. Optional blind comparison and trigger optimization
+Revise from the combined evidence of feedback, outputs, execution behavior, and checks. Change the smallest part likely to address the underlying cause.
 
-For a consequential choice between two versions, give an independent evaluator two outputs without revealing which version produced each one. Have it judge against a shared rubric such as correctness, completeness, clarity, constraint adherence, safety, and practical usability. Reveal the source only after recording the judgment.
+Generalize from complaints. If one output fails to distinguish verified facts from assumptions, do not add a rule tied only to that test. Clarify the broader rule: when evidence is incomplete or mixed, separate verified information, assumptions, and unresolved questions.
 
-Once the workflow itself is stable, test the description’s activation behavior. Create a balanced set of realistic requests that should activate the skill and difficult near-misses that should not. Review the set with the user. Use substantive prompts: simple one-step requests may not activate a specialized skill even if its description matches.
+Use these principles:
 
-For positive cases, vary formality, wording, implied versus explicit requests, and common versus less common valid uses. For negative cases, use close alternatives that share vocabulary but belong to another job. Avoid obviously irrelevant negatives because they do not test routing quality.
+1. Fix causes, not examples.
+2. Keep instructions lean and remove unproductive guidance.
+3. Explain intent rather than relying on rigid wording.
+4. Add reusable resources only when repeated work proves their value.
+5. Preserve behavior users already value.
+6. Add tests only for real categories of failure.
 
-If the environment can evaluate candidate descriptions repeatedly, separate improvement examples from held-out examples. Choose the description that performs best on held-out requests, not merely the one that fits the examples used during editing. Show the user the old description, new description, and results before applying it.
+After revision, rerun the full test set in a new iteration and use the same baseline policy. Show prior outputs alongside the new ones when possible.
 
-## 12. Package, audit, and hand off
+Stop when the user says the skill is ready, feedback is consistently positive across meaningful tests, objective requirements are reliably met, further edits produce no meaningful gain, or remaining issues require a product decision or unavailable information rather than better instructions.
 
-Package the core instructions and only the resources needed for normal use. Before delivery, audit the package:
+## 13. Optional blind comparison
 
-- The name and description are clear and stable.
-- The instructions accurately describe scope and activation conditions.
-- Required capabilities, references, and scripts are present and documented.
-- No private paths, credentials, confidential records, personal data, or undeclared local conventions remain.
-- Scripts behave predictably and stay within intended authorization boundaries.
-- Test material is retained only when safe and useful.
-- A new user can install or adapt the package in their chosen environment.
+For a rigorous comparison between two versions, provide their outputs to an independent evaluator without identifying which version created each one. Ask for judgment against a shared rubric, then reveal the mapping after the evaluation is recorded.
 
-Provide a short handoff note describing what the skill does, required capabilities, known limitations, and a simple way to test it after installation.
+Use blind comparison when versions have similar formal results but differ in qualitative value, when a decision has material consequences, or when a newer version may be favored merely because it is newer. Evaluate correctness, completeness, clarity, adherence to constraints, safety, and practical usability.
+
+## 14. Optimize activation after the workflow works
+
+Only optimize the description after the underlying skill is useful. Create a realistic, balanced set of activation queries: some that should use the skill and some difficult near-misses that should not.
+
+Positive queries should vary in wording, formality, implied versus explicit intent, and common versus uncommon valid cases. Negative queries should share concepts or keywords but belong to a different job, require another capability, or lack the conditions that make this skill appropriate.
+
+```json
+[
+  {
+    "query": "I need a concise leadership update from these team notes, including risks and next steps.",
+    "should_trigger": true
+  },
+  {
+    "query": "Can you explain what project status reports are used for?",
+    "should_trigger": false
+  }
+]
+```
+
+Review the query set with the user. If evaluation tools support repeated trials, separate the examples used to improve the description from held-out examples used to choose it. Select based on held-out performance to reduce overfitting.
+
+Remember that an AI may handle a simple one-step request directly even when a specialized skill matches. Use substantive activation tests where consulting the skill would offer real value.
+
+## 15. Package and hand off
+
+Package the core instructions and only the resources needed for ordinary use. If packaging tools are available, use the user’s chosen format and provide the resulting artifact or installation location.
+
+Before delivery, audit the package:
+
+- The name is stable and appropriate.
+- The description accurately states activation conditions.
+- Instructions do not depend on undeclared tools, private conventions, or personal access.
+- Scripts, references, and assets are present, clearly named, and documented.
+- No credentials, private identifiers, confidential records, or sensitive examples are included.
+- The user can install, access, or adapt the skill in their chosen environment.
+- Retained tests are safe and useful to distribute.
+
+Provide a short handoff note explaining what the skill does, required capabilities, known limitations, and a simple way to test it after installation.
 
 ## Final readiness gate
 
-A skill is ready when it has a clear job, accurate activation guidance, instructions that handle normal variation, explicit boundaries for uncertainty and permission-sensitive work, and evidence from realistic use that it improves outcomes.
+A skill is ready when it has a clear job, an honest description that routes suitable requests, instructions that handle normal variation, explicit boundaries for uncertainty and authorization, and evidence from realistic use that it improves outcomes.
 
-Do not confuse a long instruction file with a reliable skill. The goal is a reusable workflow that helps an AI make better decisions and deliver better results for recurring user work.
+Do not confuse a long instruction file with a reliable skill. The goal is a reusable workflow that helps an AI make better decisions and deliver better results for recurring user needs.

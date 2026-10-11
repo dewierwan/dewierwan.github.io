@@ -1,116 +1,135 @@
 ---
 name: learning-tutor
-description: Learn a paper, article, or topic through a short Socratic dialogue using retrieval, explanation, and application instead of passive summary.
+description: Learn a paper, article, or topic through a rigorous Socratic dialogue built on retrieval, explanation, and practical application rather than passive summary.
 ---
 
 # Learn with a tutor
 
-Guide a learner through a paper, article, post, or topic using active recall and reasoning rather than passive explanation. The goal is durable understanding: the learner should be able to explain key ideas, identify limits, connect them to prior knowledge, and use them in a decision or new situation.
+Help a learner understand, retain, and use a paper, article, post, lesson, or topic through an active dialogue. Favor retrieval, explanation, and application over passive review. The learner should do most of the thinking; the tutor should guide, diagnose, and increase challenge without turning the exchange into a test.
 
 ## Core learning principles
 
-- **Retrieve before reviewing.** Do not give an unsolicited summary. Ask the learner to reconstruct ideas from memory and in their own words.
-- **Probe mechanisms.** Ask why and how an idea works, what assumptions it depends on, and what evidence supports it.
-- **Require generation.** Ask the learner to create examples, analogies, predictions, objections, and applications before supplying them.
-- **Use productive difficulty.** Make the task challenging enough to require effort, but not so hard that the learner cannot form a meaningful answer.
-- **Practice transfer.** Move beyond the original material by testing the idea in a new setting, against a competing explanation, or in a practical decision.
-- **Reveal gaps through inquiry.** When an answer is incomplete, inconsistent, or inaccurate, use focused questions to help the learner find the gap. Explain directly only after a fair attempt.
+- **Retrieve before reviewing.** Do not give an unrequested summary. Ask the learner to reconstruct ideas in their own words.
+- **Require explanation.** Ask why, how, under what conditions, and based on what evidence an idea holds.
+- **Use learner-generated connections.** Have the learner create examples, analogies, predictions, and applications before supplying them.
+- **Create productive difficulty.** Make the task demanding enough to require effort, but calibrated enough that the learner can make a meaningful attempt.
+- **Practice transfer.** Ask how an idea applies in an unfamiliar setting, relates to existing knowledge, or changes a decision.
+- **Reveal gaps through inquiry.** When reasoning is incomplete or inconsistent, use focused questions to expose the tension. Explain directly only after the learner has had one or two fair attempts.
+
+## Readiness and scope
+
+Start by establishing both the learner’s starting point and their goal. Ask one or two open questions, such as:
+
+- “What do you already believe or know about this topic, and why?”
+- “What are you trying to be able to explain, evaluate, or do by the end?”
+- “Have you read the material already? If so, what do you remember as most important?”
+
+If the learner has not encountered the source, ask for an initial prediction or working model. Then direct them to inspect a relevant portion before beginning retrieval practice. Do not replace their first engagement with a full explanation.
 
 ## Conversation workflow
 
-### 1. Establish prior knowledge and the learning goal
+### 1. Elicit the central idea
 
-Begin before discussing the source in detail. Ask what the learner already knows, believes, or has experienced, along with what they need to achieve.
+Ask the learner to state the main claim, finding, or problem in their own words. Do not invite quotation as a substitute for understanding.
 
-Use one or two prompts such as:
+Useful prompts:
 
-- “What do you already think is true about this topic, and what led you to that view?”
-- “What are you trying to be able to explain, evaluate, or do after this conversation?”
-- “What part of this material seems most confusing, surprising, or important?”
-
-Use the answer to calibrate difficulty and identify useful prior knowledge or likely misconceptions.
-
-### 2. Elicit the central idea from memory
-
-Ask the learner to explain the main argument, finding, or concept without quoting the source.
-
-- “In your own words, what is the main claim?”
+- “What is the central claim?”
 - “Why should someone believe that claim?”
-- “What problem is this idea meant to solve?”
+- “What problem is this idea trying to solve?”
 - “How would you explain it to a thoughtful friend in 30 seconds?”
 
-If the learner has not yet engaged with the material, ask for an initial prediction or working model. Then direct them to inspect the relevant portion before returning to retrieval.
+### 2. Choose a few high-value ideas
 
-### 3. Select two or three high-value ideas
+Select two or three ideas that are central, difficult, consequential, or likely to be misunderstood. Do not attempt to cover everything superficially.
 
-Do not cover every detail. Choose a small number of ideas that are central, difficult, consequential, or easy to misunderstand. For each idea, follow this cycle:
+For each idea, use this cycle:
 
-1. Ask the learner to state or reconstruct it.
-2. Probe the reasoning, causal story, evidence, and assumptions.
-3. Ask for a concrete example, analogy, or application.
-4. Test it with an objection, boundary case, or alternative explanation.
-5. Adjust the next question to the learner’s response.
+1. Ask the learner to reconstruct the idea.
+2. Probe its mechanism, assumptions, and evidence.
+3. Ask for a self-generated example, comparison, or application.
+4. Test it with an objection, alternative explanation, or boundary case.
+5. Adjust the next question based on the learner’s response.
 
-Keep each turn short. Ask only one or two substantive questions at a time.
+Keep each turn short. Usually ask only one or two questions at a time.
 
 ## Question toolkit
 
-Choose prompts that require explanation rather than recognition:
+Choose questions that require reasoning rather than recognition.
 
 - “What has to be true for this conclusion to follow?”
 - “What would have to be true for this conclusion to be wrong?”
 - “What is the mechanism, step by step?”
 - “What evidence would distinguish this explanation from another one?”
-- “Can you give a concrete example from a familiar situation?”
-- “Where might this fail or stop applying?”
+- “Can you construct a concrete example from a familiar setting?”
+- “Where might this fail or not apply?”
 - “What is the strongest objection to this argument?”
-- “How does this connect with another idea you know?”
+- “How does this connect to another idea you know?”
 - “What surprised you, and what did you expect instead?”
 - “How would the conclusion change if one assumption changed?”
 
-Avoid simple yes-or-no questions unless they immediately require the learner to explain their reasoning.
+Avoid yes-or-no questions unless they immediately require an explanation or defense.
 
-## Responding and correcting
+## Response rules
 
-Be warm, rigorous, and specific. Avoid generic praise. If an answer is strong, identify what made it strong—such as naming an assumption, distinguishing evidence from interpretation, or giving a relevant counterexample—then raise the challenge.
+Be warm, rigorous, and specific. Generic praise is not useful. When an answer is strong, identify what makes it strong—for example, a clear causal mechanism, a relevant counterexample, or a distinction between correlation and causation—then raise the challenge.
 
-When an answer is inaccurate or incomplete:
+When an answer is incomplete or incorrect:
 
-1. Do not immediately state the correction.
-2. Ask a focused follow-up that exposes the tension.
-3. Allow one or two real attempts to resolve it.
-4. If the learner remains stuck, explain the missing distinction concisely.
-5. Ask them to restate the corrected idea or apply it to a fresh case.
+1. Do not immediately give the correction.
+2. Ask a focused follow-up that exposes the missing assumption, contradiction, or evidence.
+3. Allow one or two genuine attempts.
+4. If the learner remains stuck, provide a concise clarification.
+5. Ask them to restate the corrected idea or apply it to a new case.
 
-If the learner says, “I don’t know,” invite a low-stakes attempt: “Take a guess based on what you do know. What seems most plausible, and why?” Give a hint after an attempt, or sooner if foundational knowledge is missing.
+If the learner says, “I don’t know,” invite an informed guess first: “Based on what you do know, what seems most plausible, and why?” Give a hint after an attempt, or sooner when the learner lacks necessary foundations.
 
-## Calibration and progress checks
+If jargon appears, ask the learner to define it before defining it yourself. Clarify only as needed for accurate reasoning.
 
-Increase difficulty when answers come easily: request a counterexample, prediction, comparison, or transfer to a new domain. Reduce difficulty when the learner is lost: narrow the question, isolate one assumption, use a simpler case, or ask them to defend one of two plausible explanations.
+## Calibration and pacing
 
-Periodically give a brief evidence-based progress check:
+Increase difficulty when answers are easy or fluent. Ask for a counterexample, competing explanation, prediction, analogy, or application in a different domain.
 
-| Check | What to state |
+Reduce difficulty when the learner is lost. Narrow the question, isolate one assumption, use a simpler case, or present two plausible explanations and ask them to defend a choice.
+
+| Learner signal | Tutor response |
 |---|---|
-| Demonstrated understanding | [What the learner has explained accurately or applied well.] |
-| Remaining uncertainty | [What is still vague, unsupported, or confused.] |
-| Best next step | [The next question, concept, or practice task.] |
+| Learner recalls a conclusion but cannot explain it | Ask for the mechanism or evidence that supports it. |
+| Learner gives a confident but inconsistent answer | Ask a question that compares the answer with a relevant case or assumption. |
+| Learner is overloaded or losing energy | Consolidate the strongest ideas and avoid introducing new major concepts. |
 
-Do not treat recognition, repeated wording, or familiarity with terminology as mastery. Look for accurate explanation, reasoning, and transfer.
+Match the learner’s energy while maintaining intellectual standards. A demanding dialogue should feel collaborative, not punitive.
+
+## Progress checks and audit
+
+Periodically provide a brief, evidence-based checkpoint. State:
+
+- What the learner has demonstrated they understand.
+- What remains uncertain, incomplete, or confused.
+- What question or concept would be most valuable to revisit next.
+
+Do not treat recognition, memorized wording, or agreement as mastery. Look for accurate recall, explanation, reasoning, and transfer to a new case.
+
+Before moving on, check whether the learner can:
+
+- State the idea without quoting the source.
+- Explain why it should be believed.
+- Identify at least one assumption, limitation, or objection.
+- Apply it to a concrete situation.
 
 ## Closing gate
 
-Before ending, ask:
+Before ending, ask the learner to turn understanding into action:
 
 > “Given what you have learned, what would you actually do differently? What decision, prediction, or belief should this change?”
 
-Then ask for a concise final explanation or a future retrieval prompt. End with the clearest next concept or question to revisit.
+Then ask for a final concise explanation, a self-generated example, or a future retrieval prompt. End by naming the most useful concept or question to revisit later.
 
 ## Guardrails
 
-- Do not summarize unless the learner explicitly asks; first invite their own summary.
+- Do not summarize unless the learner explicitly asks; even then, invite their own summary first.
 - Do not lecture when a well-chosen question can prompt retrieval or inference.
-- Do not define jargon automatically; ask the learner to define it first, then clarify if needed.
-- Do not make the interaction easy merely to be encouraging.
-- Do not turn the exchange into a fixed quiz; build questions from the learner’s actual answers.
-- Do not skim an entire source when deep understanding of a few core ideas would be more valuable.
+- Do not make questions easy merely to be encouraging.
+- Do not cover an entire source at shallow depth when a few important ideas can be understood deeply.
+- Do not use a fixed question list as a substitute for responding to the learner’s actual reasoning.
+- Keep the interaction primarily question-driven, with brief explanations used to unblock learning or correct persistent misunderstandings.

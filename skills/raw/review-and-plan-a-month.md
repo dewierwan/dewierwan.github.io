@@ -1,92 +1,100 @@
 ---
 name: review-and-plan-a-month
-description: Close one month with evidence, then create and explicitly approve a small, capacity-checked plan for the next month.
+description: Close one month honestly, then create a small, capacity-checked, explicitly approved plan for the next month using evidence, trade-offs, and concrete commitments.
 ---
 
 # Review and plan a month
 
-Use this workflow at a month boundary to review the period ending and create an executable plan for the month ahead. A full session usually takes 45–75 minutes: about half for evidence and review, and about half for planning.
+Use this workflow at a month boundary to review the month ending and build an executable plan for the month ahead. A complete session usually takes 45–75 minutes: roughly half for evidence and review, and roughly half for planning.
 
-Review and planning belong in one session. The structural cause of a missed commitment, energy drain, or delivery problem should directly shape the next month’s plan.
+Review and planning belong in the same session. The structural cause of a missed commitment, delivery problem, or energy drain should directly shape the structure of the next plan.
 
 ## Purpose
 
 This workflow produces:
 
-- An evidence-based account of what happened during the review period.
-- A direct verdict on progress toward current commitments and longer-range goals.
-- A compact picture of selected work, wellbeing, training, or personal-practice signals.
+- An evidence-based account of what happened during the review month.
+- A direct verdict on progress toward active long-range goals.
+- A month-level picture of selected delivery, wellbeing, training, or personal-practice signals.
 - A written **Review** for the month ending.
 - A written **Plan** for the month beginning, with a memorable theme, no more than three major outcomes, explicit trade-offs, and a pre-mortem.
 
-Only gather, discuss, or save information that serves one of these outputs. Do not turn a monthly review into a complete archive of the user’s life or work.
+Only gather, discuss, or save information that supports these outputs. Do not turn a monthly review into general surveillance, an assessment of other people, or a transcript of private material.
 
 ## When to run it
 
 Run this workflow when the user asks for a monthly review, asks to plan a named month, or asks to close one month and start another.
 
-Default range rules:
+Default timing:
 
-- On the first three days of a month, review the prior calendar month and plan the current month.
-- Otherwise, review the current month to date and plan the next month. Label a partial review clearly and state the days remaining.
-- If the user asks only for forward planning, review first because evidence should shape the plan. The user may explicitly choose to skip the review.
+- On the first three days of a month, review the prior month and plan the current month.
+- Otherwise, review the current month to date and plan the next month. Clearly label a partial-month review and state the days remaining.
+- If the user asks only for forward planning, review first because the evidence should shape the plan. The user may explicitly choose to skip the review.
 
 State the ranges before proceeding:
 
-> Reviewing **March 2026** (01 Mar–31 Mar). Planning **April 2026**.
+> Reviewing **[Month YYYY]** ([DD MMM]–[DD MMM]). Planning **[Month YYYY]**.
 
-Ask whether the user means strict calendar months or a practical range that includes an overlapping partial week. Record the actual planning range in the plan.
+Ask whether the user means calendar months or a practical planning range that includes an overlapping partial week. Record the actual planning range in the finished plan.
 
-## Privacy, access, and source rules
+## Privacy, authorization, and access boundaries
 
-Use private records, communications, journals, health data, calendars, and work systems only for a legitimate planning purpose and with clear authorization from the person entitled to authorize access. Use the minimum relevant sources, fields, and date range.
+Apply these rules whenever the workflow may access calendars, journals, health data, private messages, records about other people, or shared work systems.
 
-Do not expose raw journal entries, unrelated messages, sensitive health details, or personal details about other people in summaries or saved records. Describe patterns without unnecessary quotations or identifying detail. Keep outputs within the user’s appropriate access boundary.
+1. **Establish a legitimate purpose.** A source must be necessary for the review or plan. For example, calendar availability can establish capacity; a training log can assess an agreed practice commitment; a project tracker can establish delivery state.
+2. **Confirm authorization.** Use a source only when the user has clearly authorized access and the assistant has the necessary permission. For shared records or information about other people, confirm that the intended use is authorized and consistent with the expected use of that source. Technical access alone is not enough.
+3. **Use the minimum necessary scope.** Limit reads to the requested date range, relevant fields, and information needed for the stated purpose. Prefer dates, status, availability, counts, and aggregated patterns over message bodies, detailed health records, or personal notes.
+4. **Handle sensitive information carefully.** Health, sleep, journal, relationship, financial, location, and private-communication information may be sensitive. Do not quote, copy, or save sensitive details unless necessary to the plan and specifically requested by the user. Prefer high-level summaries.
+5. **Respect consent and expectations.** Do not use private communications to evaluate another person, infer personal traits, or expose information that participants would not reasonably expect to appear in a monthly plan. If consent, relevance, or expected access is unclear, exclude the material and ask for clarification.
+6. **Keep outputs within the right boundary.** Save the review and plan only where the intended audience may appropriately access the included content. A personal observation belongs in a private record, while a shared plan should contain only delivery constraints and commitments needed by authorized readers.
+7. **Limit delegated work.** Any helper used to summarize a large source must receive a purpose-limited brief and return only a concise summary. It must omit unrelated sensitive information, private text, and identifying details about third parties unless essential to an agreed commitment.
 
-When using a helper or delegated process, provide only the access and information required for its narrow task. Ask for user-provided facts or exports when a source is unavailable. Never imply that an unavailable source was checked.
+If these conditions are not met, use a user-provided summary or proceed without that source. Never imply that an unavailable, unauthorized, or excluded source was reviewed.
 
 ## Operating rules
 
 1. **Read first; discuss second.** Show the evidence picture before asking reflective questions.
-2. **Batch independent reads.** Gather independent evidence in one initial pass where the chosen system allows it. Do not interrupt the conversation with repeated small lookups.
-3. **Use live commitments.** Assess against the user’s current agreed target, not an old schedule, abandoned scope, or stale goal record.
-4. **Check data quality before a harsh verdict.** Missing syncs, delayed updates, and incomplete logs may distort results. Ask the user to confirm surprising findings.
-5. **The user chooses.** The assistant calculates, summarizes, identifies gaps, and holds constraints. The user chooses priorities, cuts, and commitments.
-6. **One decision at a time.** Do not advance planning until the current question has a real answer.
-7. **Stay at month altitude.** Define outcomes, milestones, capacity, structure, and commitments. Leave week-by-week task blocks to a weekly planning process.
-8. **No saved plan without explicit approval.** A draft assembled from notes is not a decision. The user must restate or materially confirm the theme and commitments, then explicitly approve the plan.
-9. **Use explicit dates.** Use **DD MMM** unless the user chooses another unambiguous format.
-10. **Keep records useful, not exhaustive.** Save decisions, evidence, constraints, and commitments rather than a conversation transcript.
-11. **Do not lecture.** For training, health, recovery, or personal practice, give the numbers, direct conclusion, and agreed commitment. Give specialist advice only when requested and appropriate.
+2. **Batch independent reads.** Gather independent evidence in one initial pass where possible. Do not interrupt the conversation with repeated small lookups.
+3. **Use current commitments.** Assess progress against the user’s live target, not an old schedule, obsolete scope, or stale goal record.
+4. **Check data quality before a harsh verdict.** Missing syncs, delayed entries, incomplete logs, and inconsistent sources can distort conclusions. Ask the user to confirm surprising findings.
+5. **The user chooses.** The assistant calculates, summarizes, identifies constraints, and asks hard questions. The user chooses priorities, cuts, and commitments.
+6. **One decision at a time.** Do not move to the next planning decision until the current question has a real answer.
+7. **Stay at month altitude.** Define outcomes, milestones, capacity, structure, and commitments. Leave detailed weekly task blocks to a weekly planning workflow.
+8. **No saved plan without explicit approval.** A plan assembled from notes is a draft, not a decision. The user must restate or materially confirm the theme and commitments, then explicitly approve it.
+9. **Use explicit dates.** Use **DD MMM** format unless the user prefers another unambiguous convention.
+10. **Keep records useful, not exhaustive.** Save decisions, evidence, constraints, and commitments rather than a meeting transcript.
+11. **Do not lecture.** For training, health, recovery, or specialist practice, present relevant numbers, a direct conclusion, and the agreed commitment. Provide specialist advice only when asked and appropriate.
 
 ## Step 1: Determine the range and gather evidence
 
-Determine the review month, comparison month, and planning month. Then perform one initial batch of reads where possible.
+Determine the review month, prior comparison month, and planning month. Then make one initial batch of reads where possible.
 
-Use the user’s chosen system, such as a project tracker, task manager, calendar, spreadsheet, notes application, training log, health tracker, or a short user-provided inventory.
+Use the user’s chosen system: a task manager, project tracker, calendar, spreadsheet, notes application, health tracker, training log, or user-supplied facts. If no source is connected, ask for a short factual inventory. Never imply that unavailable data was checked.
+
+Before reading a sensitive or shared source, state its purpose and scope when that is not already clear. For example: “I will use only next month’s availability to estimate capacity and will summarize commitments without private event details.”
 
 | Evidence area | Gather in the initial pass |
 |---|---|
-| Previous monthly record | Theme, promised outcomes, commitments, and prior review findings. |
-| Weekly records | Plans and reviews in the review range; repeated blockers, milestones, and carried work. |
-| Goals | Active weekly, monthly, quarterly, and annual goals; status, deadlines, and notes. |
-| Work delivered | Completed tasks, decisions, projects, or deliverables, grouped into useful domains. |
-| Calendar | Next-month travel, leave, deadlines, recurring commitments, and heavy meeting weeks. |
-| Daily signals | User-selected ratings, focus time, habits, or brief journal themes. |
-| Sleep and recovery | Optional sleep duration, sleep quality, and same-source recovery trends. |
-| Training or practice | Optional sessions in the review and comparison months, plus the live commitment or schedule. |
+| Previous monthly record | Theme, promised outcomes, commitments, and prior review findings |
+| Weekly records | Plans and reviews in the review range; repeated blockers, milestones, and carried work |
+| Goals | Active weekly, monthly, quarterly, and annual goals; status, deadlines, and notes |
+| Work delivered | Completed tasks, decisions, projects, or deliverables; grouped into useful domains |
+| Calendar | Leave, travel, fixed deadlines, recurring commitments, and heavy meeting weeks |
+| Daily signals | User-selected ratings, focus time, habits, or high-level journal themes |
+| Sleep and recovery | Optional sleep duration, sleep quality, and same-source recovery trends |
+| Training or practice | Optional sessions from the review and prior months, plus the live commitment or schedule |
 
-For large sources, return computed statistics and a few representative themes rather than raw entries. Month-long journals and event lists can crowd out the review. Use filters, aggregation, or a narrowly briefed helper when available.
+For large sources, return computed statistics and a few representative themes rather than raw entries. Long journals and month-long event lists can crowd out the actual review. Use filtered queries, aggregation, summaries, or an authorized helper when available.
 
-A calendar helper should analyze only the requested planning window and return a concise summary of:
+A calendar summary should include:
 
-- Fixed multi-day blocks, such as travel, leave, or conferences.
+- Fixed multi-day blocks, such as leave, travel, or events.
 - Approximate meeting load by week.
 - Important recurring commitments.
-- Protected personal or social commitments.
-- Anomalies, such as meetings within unavailable periods or likely time-zone errors.
+- Protected personal commitments only at the level needed for planning.
+- Planning anomalies, such as commitments during unavailable periods or likely time-zone errors.
 
-Before detailed planning, re-read weekly plans overlapping the start of the planning range. Reference and reconcile their commitments with the month plan; never duplicate, replace, or silently conflict with the weekly plan.
+Before detailed monthly planning, re-read any weekly plans that overlap the beginning of the planning range. A weekly plan may already define that period in more detail. Reference and reconcile it with monthly outcomes; never duplicate or overwrite it.
 
 ## Step 2: Show the evidence picture
 
@@ -94,27 +102,27 @@ Present a compact factual picture before asking the user to explain it. Be direc
 
 ### Training, health, or personal-practice verdict
 
-If the user has a current commitment in this area, include it unless they explicitly place it out of scope. Compare actual activity with the live target. Depending on the domain, calculate:
+If the user has a current commitment in this area, include this section unless they explicitly put it out of scope. Compare actual activity with the live target. Depending on the domain, calculate:
 
 - Total volume, sessions, repetitions, or practice instances.
 - Average weekly volume.
 - Number of active days.
 - Completion of key sessions or milestones.
 - Longest gap between sessions.
-- Relevant balance measures, such as easy versus demanding sessions, when records support them.
+- Relevant balance measures, such as easier versus demanding work, when records support them.
 - Relevant performance or recovery measures.
 - Month-over-month changes.
 
-Use this taxonomy when it fits:
+Use this verdict taxonomy when it fits:
 
 - **ON TRACK**: key measures meet at least 90% of target and consistency is intact.
 - **BEHIND**: a key measure is about 60–90% of target, or there was a meaningful consistency break.
 - **OFF TRACK**: a key measure is below 60% of target or there was a prolonged gap.
-- **AT RISK**: an injury, safety concern, burnout signal, or sustained decline makes the plan unsafe or unlikely.
+- **AT RISK**: injury, safety, burnout, or sustained decline makes the plan unsafe or unlikely.
 
-Adjust thresholds only when the domain needs different ones, and state the adjustment. If records may be incomplete, ask: “The record shows this. Does that match reality?” before making a strong judgment.
+Adjust thresholds only when the domain needs different measures, and state the adjustment. If tracking may be incomplete, ask: “The record shows this. Does that match reality?” before making a strong judgment.
 
-State one biggest corrective action for next month. This is a concrete commitment, not a full program.
+State one biggest corrective action for the next month. This is a concrete commitment, not a full program.
 
 ### Goals and delivery
 
@@ -124,13 +132,13 @@ Also summarize completed work in a few useful domains. Avoid a wall of bullets. 
 
 ### Life signals
 
-Include only measures the user chooses to track. Useful measures include rating distribution and average, focus hours, low-focus days, sleep duration, sleep quality, recovery trends from a consistent source, and repeated themes in notes.
+Include only measures the user chooses to track. Useful measures include rating distribution and average, focus hours, low-focus days, sleep duration, sleep quality, recovery trends from a consistent source, and repeated themes in written notes.
 
-Flag meaningful patterns such as low average sleep, repeated short nights, several consecutive low-rating days, an extended low-focus streak, or a mismatch between positive ratings and written evidence of exhaustion or stress. Numerical averages are not complete truth; raise material mismatches directly.
+Flag meaningful patterns, such as low average sleep, repeated short nights, several consecutive low-rating days, an extended low-focus streak, or an apparent mismatch between positive ratings and written notes describing exhaustion or stress. Numerical averages are not complete truth. Raise the mismatch directly and briefly, without quoting or retaining sensitive journal text unless necessary and authorized.
 
 ## Step 3: Reflect on the month
 
-Start with one specific observation grounded in the evidence. Ask one question at a time and follow no more than two or three threads unless the user wants depth.
+Start with one specific observation from the evidence. Ask one question at a time and pursue no more than two or three threads unless the user wants depth.
 
 Cover these questions before closing the review:
 
@@ -138,15 +146,15 @@ Cover these questions before closing the review:
 2. What cost more time or energy than it returned?
 3. Was the main miss structural, circumstantial, or a genuine priority change?
 4. What one behavior, boundary, or pattern must change next month?
-5. If training or personal practice is in scope, what is the concrete next-month commitment?
+5. If training or a personal practice is in scope, what is the concrete next-month commitment?
 
-Useful prompts:
+Useful prompts include:
 
-- “This outcome slipped across several weeks. What made it structurally hard to complete?”
+- “This outcome slipped in several weeks. What made it structurally hard to complete?”
 - “Your ratings were stable, but your notes repeatedly mention strain. What was happening?”
 - “This goal moved while the others did not. What conditions made that possible?”
 
-For a time-constrained user, the minimum viable review is: the in-scope practice verdict, any material wellbeing flags, one structural fix, and one concrete next-month commitment.
+For a time-constrained user, the minimum viable review is the in-scope personal-practice verdict, any material wellbeing flags, one structural fix, and one concrete next-month commitment.
 
 ## Step 4: Plan the new month
 
@@ -158,15 +166,17 @@ For each candidate priority, ask:
 
 > What specifically is true by the final day of this planning range?
 
-Make the answer measurable or plainly verifiable. Limit the plan to three outcomes; one or two is usually better. Each outcome should connect to a long-range goal or explicitly chosen responsibility.
+Make the answer measurable or plainly verifiable. Limit the plan to three outcomes; one or two is usually better. Each outcome should connect to a long-range goal or an explicitly chosen responsibility.
 
 ### Move 2: Establish current state
 
-Size the gap with evidence, not mood. Inspect the relevant draft, pipeline, milestone, backlog, baseline metric, or other domain reality. If the gap cannot be described, gather the missing evidence before designing the path.
+Size the gap with evidence, not mood. Inspect the relevant draft, pipeline, milestone, backlog, baseline metric, or other domain-specific reality. If the gap cannot be described, gather the missing evidence before designing the path. For shared systems, collect only role-relevant operational facts, not unrelated personal details about collaborators.
 
 ### Move 3: Work backward to build a path
 
-For each outcome, identify three to six moves by reasoning backward from the due date. Every move needs a date or window, owner, and evidence of completion.
+For each outcome, identify three to six moves by reasoning backward from the due date. Every move needs a date or window, an owner, and evidence of completion.
+
+Ask:
 
 > For this to be true by the end date, what must be true halfway through? What must happen before that?
 
@@ -176,7 +186,7 @@ Estimate usable focused capacity honestly:
 
 > available working days × recently observed focused hours per day
 
-Account for travel, leave, meeting-heavy weeks, fixed commitments, and recovery needs. Compare available capacity with the effort implied by the paths. If demand exceeds supply, cut, defer, reduce scope, or add real help now.
+Account for leave, travel, meeting-heavy weeks, and fixed commitments. Compare available capacity with the effort implied by the paths. If demand exceeds supply, cut, defer, reduce scope, or add real help now.
 
 ### Move 5: Make the NOT-doing list
 
@@ -184,13 +194,13 @@ Ask:
 
 > What will explicitly not happen this month so these outcomes can?
 
-The user names the cuts. A plan without genuine exclusions is a wish.
+The user names the cuts. A plan without a real not-doing list is a wish.
 
 ### Move 6: Add forcing functions and protective structure
 
-Fragile outcomes need external pressure: a named reviewer expecting a deliverable on a date, a booked review, a public commitment, or a dependent team waiting on the work.
+Fragile outcomes need external pressure: an authorized stakeholder expecting a deliverable on a date, a booked review, a public commitment, or a downstream owner waiting on the work.
 
-Protect work vulnerable to interruption. If one outcome requires long uninterrupted work while another tolerates fragmentation, batch flexible work around meetings and reserve the best available blocks for the fragile work. If calendar conflicts undermine protected time, add their removal to the plan as an immediate action.
+Also protect work that is vulnerable to interruption. If one outcome requires long uninterrupted work while another can tolerate fragmentation, batch the flexible work around meetings and reserve the best available blocks for the fragile work. If calendar conflicts undermine protected time, add their removal to the plan as an immediate action.
 
 ### Move 7: Run a pre-mortem
 
@@ -202,7 +212,9 @@ The user answers first. Record the top two or three failure modes and a specific
 
 ### Move 8: Get sign-off
 
-Read the whole plan back in ten lines or fewer. The user must be able to state the theme and main outcomes from memory, then explicitly approve it.
+Read the full plan back in ten lines or fewer. The user must be able to state the theme and main outcomes from memory, then explicitly approve it.
+
+Ask:
 
 > Is this the plan?
 
@@ -216,7 +228,7 @@ If approval is vague, revise. Do not save yet.
 **Planning range:** [DD MMM–DD MMM].
 
 ## Shape of the month
-[Travel, leave, fixed events, heavy weeks, effective working weeks, and immediate post-month constraints.]
+[Leave, travel, fixed events, heavy weeks, effective working weeks, and immediate post-month constraints.]
 
 ## Outcomes
 1. **[Outcome]** — Done by [DD MMM] when [binary test of done].
@@ -240,6 +252,8 @@ If approval is vague, revise. Do not save yet.
 - Failure mode: [likely cause]. Counter: [specific response.]
 ```
 
+Keep the plan suitable for its destination. For a shared record, remove private health, journal, relationship, or personal-calendar detail and retain only the constraints and commitments required for the authorized audience.
+
 ## Step 5: Save the review and plan
 
 After explicit sign-off, write two records in the user’s chosen system:
@@ -248,6 +262,8 @@ After explicit sign-off, write two records in the user’s chosen system:
 2. A **Plan** attached to the new month.
 
 Create a missing monthly record if the system supports it. Use one final write operation when possible. Before overwriting an existing plan, show it to the user and resolve the conflict.
+
+Confirm that the destination and audience are appropriate before saving. If the review includes sensitive personal material but the plan destination is shared, either create a private review, redact the sensitive material, or ask the user to choose a suitable location.
 
 Use this review template:
 
@@ -287,9 +303,9 @@ Confirm the save in one line and stop.
 
 ## Step 6: Improve the workflow
 
-At the end of every run, make one precise improvement to the reusable workflow, its templates, or its data mapping. Store it in the user’s chosen workflow document or improvement log. If no suitable location exists, present a short durable rule the user can save where they prefer.
+At the end of every run, make one precise improvement to the reusable workflow, its templates, or its data mapping. Store it in the user’s chosen workflow document or improvement log, using an access boundary appropriate to the content. If no suitable location exists, present the proposed edit as a short durable rule the user can save where they prefer.
 
-Look for a noisy read, a wrong data assumption, a misleading metric, a user correction, or a repeatable pattern. Prefer one specific edit over a vague reminder.
+Look for a read that was noisy, a wrong data assumption, a misleading metric, a question the user corrected, or a repeatable pattern future sessions should know. Prefer one specific edit over a vague reminder. Do not preserve private facts or identifying details in the improvement; convert the lesson into a general rule.
 
 ## Audit checks
 
@@ -297,7 +313,8 @@ Before finishing, verify:
 
 - Review and planning ranges are explicit.
 - Evidence was shown before reflective prompts.
-- Sources and details stayed within the authorized access boundary.
+- Each private, sensitive, or shared source had a legitimate planning purpose and clear authorization.
+- Data collection was limited to the requested range and minimum relevant fields.
 - Strong verdicts account for known data-quality limits.
 - The plan has a named theme and no more than three outcomes.
 - Each outcome has a test of done, date, path, owner, and forcing function.
@@ -308,19 +325,21 @@ Before finishing, verify:
 - Personal or training commitments are specific when in scope.
 - The pre-mortem contains counters.
 - The user explicitly approved the plan before it was saved.
+- Saved summaries omit unrelated sensitive details and are stored only where the intended audience is authorized to access them.
 
 ## Common failure modes
 
 - Starting with prompts instead of evidence.
-- Judging performance against stale targets.
-- Treating incomplete tracking as complete reality.
+- Judging against stale targets.
 - Confusing a list of events with a plan.
 - Overloading capacity and refusing to cut scope.
-- Letting the assistant choose priorities that the user has not chosen.
+- Letting the assistant choose priorities.
 - Saving an unapproved draft.
 - Duplicating or conflicting with weekly plans.
 - Treating wellbeing averages as more truthful than repeated written evidence.
 - Applying generic productivity rituals instead of fixing the actual drain.
 - Overwriting an existing record without resolving the difference.
-- Treating a brainstorm, imported task list, or request from another person as a confirmed commitment.
-- Gathering more personal information than is necessary for the review.
+- Treating a voice note, brainstorm, or imported task list as a confirmed commitment.
+- Treating technical access as authorization to inspect private or shared records.
+- Reading or preserving more personal information than the review requires.
+- Saving private observations into a shared workspace or giving a summary to an audience outside the agreed access boundary.
