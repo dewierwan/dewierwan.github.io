@@ -1,69 +1,76 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="robots" content="noindex,nofollow,noarchive"><title>Process an inbox to zero · AI skills</title><meta name="description" content="Triage authorized email and chat inboxes into five buckets (do now, quick win, delegate, task, delete) so no commitment lives only in an inbox.">
-<link rel="alternate" type="text/markdown" href="/skills/raw/process-an-inbox-to-zero.md"><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%23b4552d%22/><text x=%2250%22 y=%2253%22 dominant-baseline=%22central%22 text-anchor=%22middle%22 font-family=%22Georgia, 'Times New Roman', serif%22 font-size=%2246%22 letter-spacing=%221%22 fill=%22%23fdfaf4%22>DE</text></svg>"><link rel="stylesheet" href="/skills/styles.css"></head><body><main><a class="back" href="/skills/">← Skills</a><header class="skill-header"><h1>Process an inbox to zero</h1><p class="description">Triage authorized email and chat inboxes into five buckets (do now, quick win, delegate, task, delete) so no commitment lives only in an inbox.</p><div class="skill-actions"><a href="/skills/raw/process-an-inbox-to-zero.md">Raw Markdown</a><button class="copy" type="button" data-copy="/skills/raw/process-an-inbox-to-zero.md">Copy Markdown</button></div></header><article class="skill-body"><p>Process one or more authorized inboxes into a trusted task system. Every reviewed item ends in exactly one bucket: <strong>do now</strong>, <strong>quick win</strong>, <strong>delegate</strong>, <strong>task</strong>, or <strong>delete</strong>. When a run is finished, nothing that needs doing should exist only in an email account, team chat, or messaging app. It is either done, assigned to someone, recorded in the task system, or intentionally removed.</p>
-<p>The method follows Getting Things Done and Inbox Zero. Processing an inbox means deciding what each item is and where it belongs. It does not mean doing all the work the items describe. The task system is the single trusted list. Choosing what to work on from that list belongs to a separate daily-planning process, not to this workflow.</p>
-<p>Urgency comes from what happens if an item waits, not from how it looks. Being new, unread, long, loud, or posted in a group conversation does not raise priority by itself.</p>
-<p>Use this workflow when the user asks to triage, clear, process, prioritize, or &quot;get through&quot; an email inbox, a team chat, or personal messaging apps.</p>
+<meta name="robots" content="noindex,nofollow,noarchive"><title>Process an inbox to zero · AI skills</title><meta name="description" content="Turn authorized email and chat inboxes into clear next actions by sorting every item into one bucket: do now, quick win, delegate, task, or delete.">
+<link rel="alternate" type="text/markdown" href="/skills/raw/process-an-inbox-to-zero.md"><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%23b4552d%22/><text x=%2250%22 y=%2253%22 dominant-baseline=%22central%22 text-anchor=%22middle%22 font-family=%22Georgia, 'Times New Roman', serif%22 font-size=%2246%22 letter-spacing=%221%22 fill=%22%23fdfaf4%22>DE</text></svg>"><link rel="stylesheet" href="/skills/styles.css"></head><body><main><a class="back" href="/skills/">← Skills</a><header class="skill-header"><h1>Process an inbox to zero</h1><p class="description">Turn authorized email and chat inboxes into clear next actions by sorting every item into one bucket: do now, quick win, delegate, task, or delete.</p><div class="skill-actions"><a href="/skills/raw/process-an-inbox-to-zero.md">Raw Markdown</a><button class="copy" type="button" data-copy="/skills/raw/process-an-inbox-to-zero.md">Copy Markdown</button></div></header><article class="skill-body"><p>Process one or more authorized inboxes into a trusted task system. Each reviewed item ends in exactly one bucket: <strong>do now</strong>, <strong>quick win</strong>, <strong>delegate</strong>, <strong>task</strong>, or <strong>delete</strong>. When a run is finished, no commitment that needs action should exist only in an inbox. It has been done, handed to someone else, recorded as a task, or removed on purpose.</p>
+<p>This workflow follows Getting Things Done and Inbox Zero principles. Processing an inbox means deciding what each item is and where it goes. It does not mean doing all the work the messages describe. The task system is the one trusted list. Choosing what to work on from that list belongs to a separate planning process.</p>
+<p>An item is urgent because of what happens if it waits. Being new, unread, long, loud, or in a group conversation does not raise its priority on its own.</p>
+<h3>Setup choices</h3>
+<p>Confirm these once, or use the defaults. Record the user&#39;s choices so later runs do not ask again.</p>
+<div class="table-wrap" tabindex="0" aria-label="Scrollable table"><table><thead><tr><th>Choice</th><th>What it controls</th><th>Suggested default</th></tr></thead><tbody><tr><td>Sources</td><td>Which inboxes count as &quot;all&quot;</td><td>Every inbox the user has authorized</td></tr><tr><td>Task system</td><td>Where task items are recorded, and which fields it uses</td><td>The user&#39;s chosen task list, with title, status, and due date at minimum</td></tr><tr><td>Planning sources</td><td>Where goals and today&#39;s plan live, if anywhere</td><td>None; rank on deadlines and blockers only</td></tr><tr><td>Work cap</td><td>The longest item that can still be do-now work</td><td>15 minutes</td></tr><tr><td>Quick-win limit</td><td>The longest item that counts as a quick win</td><td>About 2 minutes</td></tr><tr><td>Chat lookback</td><td>How far back to look for unanswered chats</td><td>2 weeks</td></tr><tr><td>Staleness signals</td><td>When an unanswered item starts to cost the relationship</td><td>A few days, shorter for direct personal messages</td></tr><tr><td>Response standards</td><td>Promised reply times for specific processes</td><td>None unless the user names them</td></tr><tr><td>Inbox actions</td><td>Who sends, archives, or marks items</td><td>The user does it; the assistant only recommends</td></tr><tr><td>Focus check</td><td>Whether to ask if inbox work is the right use of time now</td><td>On, when a planned top task exists</td></tr></tbody></table></div>
 <h3>Operating rules</h3>
 <ol>
-<li><strong>The user takes every external action.</strong> Do not send, react, archive, delete, label, mark read, or mark complete. Do not run bulk actions, even when a tool allows them. The user may explicitly authorize a specific action; treat that authorization as covering only that action.</li>
-<li><strong>No drafts unless asked.</strong> Draft only when the user asks for a specific one, and follow the drafting rules below.</li>
-<li><strong>One write, per item.</strong> When the user says &quot;task it&quot; (or similar) about a clearly identified item, create that one task. Never create tasks in bulk or without a per-item instruction.</li>
-<li><strong>Work cap.</strong> Ask the user for a cap or default to 15 minutes. Anything that would take longer is a task, not do-now work. On inbox days, the main time sink is usually doing the work a message describes, not replying to it.</li>
-<li><strong>Respect access boundaries.</strong> Read private communications, calendars, and records only for the user&#39;s legitimate purpose and with clear authorization. Use the minimum sources and details needed to decide where an item goes. Leave unrelated or sensitive personal details out of the output. Keep results within the user&#39;s own access boundary.</li>
-<li><strong>Keep evidence separate from decisions.</strong> Report what a message shows and why a recommendation follows. Never state the user&#39;s beliefs, commitments, or decisions for them.</li>
+<li><strong>The user takes every inbox action by default.</strong> Do not send, react, archive, delete, label, mark read, or mark complete unless the user explicitly authorizes that specific action. Never run bulk actions, even if a tool allows them.</li>
+<li><strong>No drafts unless asked.</strong> Write a draft only when the user asks for a specific one.</li>
+<li><strong>Create tasks one at a time.</strong> When the user says &quot;task it&quot; (or similar) about one clearly identified item, create that one task. Never create tasks in bulk or without a per-item instruction.</li>
+<li><strong>Respect the work cap.</strong> Anything longer than the cap is a task, not do-now work. On inbox days the real time sink is doing the work a message describes, not replying to it.</li>
+<li><strong>Respect access boundaries.</strong> Read private communications, calendars, records, and documents only for a legitimate purpose and with clear authorization. Use the fewest sources and the least information each decision needs. Leave unrelated or sensitive personal details out of all output. Keep results within the user&#39;s own view unless they choose to share them. Personal accounts stay read-only.</li>
+<li><strong>Keep evidence separate from decisions.</strong> Say what the message shows and why a recommendation follows. Never state the user&#39;s beliefs, commitments, or relationship judgments for them.</li>
+<li><strong>Verify, don&#39;t assume.</strong> Get the current date and time from a reliable clock. Check that each retrieval is complete before trusting it. Give only links you know work.</li>
 </ol>
 <h3>Step 1: Set scope and time</h3>
-<p>Get the current date, weekday, and time from a reliable clock set to the user&#39;s time zone. Never work these out mentally; deadlines and response windows depend on them.</p>
-<p>Map the user&#39;s words to sources:</p>
-<div class="table-wrap" tabindex="0" aria-label="Scrollable table"><table><thead><tr><th>User says</th><th>Source to review</th></tr></thead><tbody><tr><td>&quot;email&quot;, &quot;work email&quot;</td><td>The authorized work email account</td></tr><tr><td>&quot;personal email&quot;</td><td>The authorized personal account, read-only</td></tr><tr><td>&quot;team chat&quot;</td><td>The internal workspace: saved-for-later items, direct messages, mentions, unreads</td></tr><tr><td>&quot;community chat&quot;</td><td>Only the specific community workspace the user names</td></tr><tr><td>&quot;messages&quot;, &quot;chats&quot;, or a named messaging service</td><td>Authorized messaging services, filtered to the named service if one was given</td></tr><tr><td>&quot;all&quot;, &quot;everything&quot;, &quot;my inboxes&quot;</td><td>All authorized email and messaging sources the user normally includes</td></tr></tbody></table></div>
-<p>If scope is unclear, default to all authorized sources and say so in one line. Do not ask a separate question about scope.</p>
-<p>The task system is a destination, not an inbox. If the user actually wants to prioritize existing tasks, switch to a planning workflow.</p>
-<p>A request that names a sensitive source (such as personal email) counts as the explicit request to read it. Keep access to such sources read-only. Before reading each source, review any access rules or policies the user has set for it.</p>
-<h3>Step 2: Read goals and open tasks</h3>
-<p>If the user keeps goals and tasks in a system you can read, retrieve in parallel only what triage needs:</p>
 <ol>
-<li><strong>Longer-term goals:</strong> the active quarter or season plan and its open goals, with deadlines and priority.</li>
-<li><strong>Weekly goals:</strong> the plan covering today. If several weekly records match, use the one that has a filled-in plan.</li>
-<li><strong>Today:</strong> the day&#39;s intention, plan, and most important task (MIT). Request only those fields. Never pull journal entries or other private reflections.</li>
-<li><strong>Open tasks:</strong> title, status, and due date for anything to-do or in progress. You need these to spot inbox items that are already tasked.</li>
+<li>Get the current date, weekday, and time in the user&#39;s time zone. Deadlines and response windows depend on it, so never estimate it.</li>
+<li>Map the user&#39;s words to sources:</li>
 </ol>
-<p>Use the system&#39;s proper date functions for date filters. Plain text comparisons on dates often return nothing without an error. If results are unexpectedly empty, check the filter before concluding the data is missing.</p>
-<p>If a level is missing or empty, say so in one line and continue with what exists. Do not invent goals. If a higher level is empty but weekly goals say what they support, use that as the higher-level goal.</p>
-<p>Summarize the goals for yourself in three to six lines. You will judge every item against them.</p>
-<h4>Check the most important thing</h4>
-<p>If today&#39;s MIT is not inbox work and the user is inside or close to its planned time, ask once, before reading any inbox:</p>
+<div class="table-wrap" tabindex="0" aria-label="Scrollable table"><table><thead><tr><th>User says</th><th>Source to review</th></tr></thead><tbody><tr><td>&quot;email&quot;</td><td>The user&#39;s main authorized email account</td></tr><tr><td>&quot;personal email&quot; or another named account</td><td>That account only, read-only</td></tr><tr><td>&quot;team chat&quot;</td><td>The team workspace: saved-for-later items, unread direct messages, and mentions</td></tr><tr><td>&quot;chats&quot; or a named messaging service</td><td>Authorized messaging services, filtered to the named one</td></tr><tr><td>&quot;all&quot; or &quot;my inboxes&quot;</td><td>Every source in the user&#39;s &quot;all&quot; list</td></tr></tbody></table></div>
+<p>If scope is unclear, default to all and say so in one line instead of asking. Naming an account, or asking for &quot;all&quot;, counts as the request to read it. Before reading each source, review any access rules the user has set for it.</p>
+<p>The task system is not an inbox here; it is where items go. If the user wants to prioritize existing tasks rather than messages, switch to a planning workflow.</p>
+<h3>Step 2: Read goals and open tasks</h3>
+<p>If the user has planning sources, read only what triage needs, in parallel:</p>
+<ol>
+<li><strong>Longer-term goals</strong> that are currently active.</li>
+<li><strong>This week&#39;s goals.</strong></li>
+<li><strong>Today&#39;s plan:</strong> intention, plan, and most important task (MIT). Request only those fields; never pull private fields such as journals or reflections.</li>
+<li><strong>Open tasks:</strong> title, status, and due date, so you can spot items already tasked.</li>
+</ol>
+<p>If a level is missing or empty, say so in one line and carry on with what exists. Do not invent goals. If a lower level states what it supports, use that as the higher-level goal. Summarize the goals in three to six lines for your own use when judging items.</p>
+<p><strong>Focus check.</strong> If today&#39;s MIT is not inbox work and the user is in or near its planned time, ask once before reading any inbox:</p>
 <blockquote>Is this the most important thing right now, or does it just feel productive?</blockquote>
-<p>Trust the answer. Skip this if there is no MIT or inbox work is part of the plan.</p>
+<p>Trust the answer. Skip this if there is no MIT or inbox work is part of today&#39;s plan.</p>
 <h3>Step 3: Read the inboxes</h3>
-<p>Read every source in scope in parallel. For each item, collect: source, sender or participants, subject or conversation, date of the last message, who sent the last message, a one-line gist, and a stable link where the system supports one.</p>
-<p><strong>Email.</strong> List inbox messages and group them by thread, keeping the latest message per thread. If the listing hits its page limit, run a second query for older messages so old threads are not missed. Newsletters, receipts, calendar notifications, and automated updates go straight to Delete without further reading, unless the preview suggests a deadline, security issue, or money at stake. Open a full message only when the preview leaves the ask or deadline unclear. Build links only when you have verified the link format for that account; otherwise cite by sender, subject, and date.</p>
-<p><strong>Team chat.</strong> Prefer a purpose-built inbox or audit view over search, because search often misses saved, unread, or completion state. Saved-for-later items are actions the user already chose to keep. Unreads are attention debt, not automatic priorities. Review direct messages and mentions first.</p>
-<p><strong>Messaging apps.</strong> Check that each service is connected. Use a lookback window the user chooses, or 14 days by default. Find reply debt by checking who sent the last message and whether a reply is expected; a search that does not show the last sender cannot find reply debt alone. Read recent messages when the last one does not make the ask clear. Direct chats rank above group chats unless a group message names the user or asks them something. Cite chats as &quot;&lt;service&gt;: &lt;person&gt;&quot; if no real link exists.</p>
-<p><strong>Failures.</strong> If a source fails or a service is disconnected, name the source, the exact error, and what data is missing. Try only safe repairs (such as reconnecting or reauthorizing). Continue with the other sources. Never quietly drop a source or substitute another one. Put the gap at the top of the output so the user sees it first.</p>
+<p>Read every source in scope in parallel. For each item collect: source, sender, subject or conversation, date of the last message, who sent the last message, a one-line gist, and a working link if one exists. If not, cite by source, sender, and date.</p>
+<p>Apply these principles to any source:</p>
+<ul>
+<li><strong>Group to the unit of decision.</strong> For email, group messages into threads and keep the latest message per thread.</li>
+<li><strong>Make sure nothing was cut off.</strong> If a listing hits a result limit or a filter returns surprisingly little, run a follow-up query or check the filter before concluding the inbox is small.</li>
+<li><strong>Skim before opening.</strong> Routine newsletters, receipts, calendar notices, and automated updates go straight to Delete unless the preview hints at a decision, deadline, security issue, or money. Open a full item only when the preview leaves the ask or deadline unclear.</li>
+<li><strong>Respect what the user already chose to keep.</strong> Saved-for-later items are actions the user kept on purpose; unreads are attention debt. Direct messages and mentions come before broad channel traffic.</li>
+<li><strong>Find reply debt by the last sender.</strong> An unanswered chat is one where someone else spoke last and expects a reply, within the chosen lookback. Search that does not show the last sender cannot find this on its own. Read recent messages when the last one does not show the ask. Direct chats rank above group chats unless a group message names the user.</li>
+<li><strong>Prefer complete views over search.</strong> A purpose-built inbox view usually shows saved, unread, and completion state that search misses.</li>
+</ul>
+<p><strong>Failures.</strong> If a source fails or is not connected, name the source, the exact error, and what data is missing. Try the safe repair the source&#39;s rules allow, such as reauthorizing, then continue with the others. Never quietly drop a source or substitute one that cannot give the same information. Put failures at the top of the output.</p>
 <h3>Step 4: Sort into buckets</h3>
 <p>Put every item in exactly one bucket:</p>
 <ol>
-<li><strong>Do now:</strong> important and urgent, and finishable within the work cap. Aim for three to five. If there are more, the extras are probably tasks.</li>
-<li><strong>Quick wins:</strong> under about two minutes each: a short reply, a yes/no, an RSVP, a forward. The user batches these.</li>
-<li><strong>Delegate:</strong> someone else should own it. Name the suggested owner and give the evidence in a few words, such as &quot;runs operations&quot; or &quot;is leading this project&quot;. Find owners from the thread itself, recent discussion in the relevant channel, and documented roles. Check stored notes about roles against current evidence, since roles change. If no credible owner appears, write &quot;owner unclear&quot; rather than guessing.</li>
-<li><strong>Task:</strong> real work longer than the cap, or work that cannot happen yet. Give a suggested task name, a due date if the item implies one, and why. If an open task already covers it, say so and suggest clearing the inbox copy.</li>
-<li><strong>Delete:</strong> no action needed: FYIs, newsletters, resolved threads, automated notices, conversations that ended naturally. Show counts by type and name only items the user might be surprised to see here.</li>
+<li><strong>Do now:</strong> important, time-sensitive, and finishable within the work cap. Aim for three to five; more usually means some are tasks.</li>
+<li><strong>Quick win:</strong> within the quick-win limit: a short reply, a yes/no, an RSVP, a forward. The user batches these.</li>
+<li><strong>Delegate:</strong> someone else should own it. Name the suggested owner and brief evidence, such as &quot;operations lead owns vendor contracts&quot;. Find owners from the thread, recent team discussion, and documented roles, and check remembered roles against current evidence. If no credible owner appears, say <strong>owner unclear</strong>.</li>
+<li><strong>Task:</strong> work longer than the cap, or that cannot happen yet. Give a suggested task name, an implied due date, and why. If an open task already covers it, say so and suggest clearing the inbox copy.</li>
+<li><strong>Delete:</strong> no action needed: FYIs, resolved threads, automated notices, chats that ended naturally. Show counts by type and name only items the user might be surprised to see here.</li>
 </ol>
-<p>Rank do-now items, and order every other bucket, using these criteria in order:</p>
+<p>Rank Do now, and order every other bucket, using these criteria in order:</p>
 <ol>
-<li><strong>Hard deadline or time-bound decision:</strong> due today or tomorrow, an offer or event that expires, or a meeting that needs a reply first.</li>
-<li><strong>Someone is blocked on the user:</strong> a teammate, candidate, or partner cannot move until they answer. If the organization has a response-time target (for example, for job candidates), treat it as a deadline.</li>
-<li><strong>Ladders to a goal:</strong> today&#39;s MIT first, then weekly goals, then longer-term goals. Name the goal.</li>
-<li><strong>Relationship cost of delay:</strong> key collaborators, funders, and personal relationships that cool if left. Email older than about two days and chats older than about three days are stronger staleness signals than the age of a saved-for-later item.</li>
+<li><strong>Hard deadline or time-bound decision:</strong> due today or tomorrow, an expiring offer, or a meeting that needs a reply first.</li>
+<li><strong>Someone is blocked on the user,</strong> including any response standard the user has set for a process.</li>
+<li><strong>Ladders to a goal:</strong> today&#39;s MIT, then weekly, then longer-term goals. Name the goal.</li>
+<li><strong>Relationship cost of delay,</strong> using the user&#39;s staleness signals. Age supports a ranking; it never overrides consequences.</li>
 </ol>
 <h3>Step 5: Snapshot and questions</h3>
-<p>Show the sorted result, then ask two to four questions in one plain-text numbered block, with lettered options where possible so the user can reply <code>1b, 2a</code>. End the turn and wait.</p>
+<p>Show the sorted result, then ask two to four questions in one plain-text numbered block, with lettered options so the user can reply <code>1b, 2a</code>. End the turn and wait.</p>
 <pre><code>## Inbox zero: &lt;date&gt;, &lt;sources&gt;
 
 **Goals used:** &lt;longer-term&gt; · &lt;week&gt; · &lt;today&#39;s MIT&gt;
-**Missing data:** &lt;failed or stale sources, or &quot;none&quot;&gt;
+**Missing data:** &lt;failed or incomplete sources, or &quot;none&quot;&gt;
 **Counts:** &lt;N items: X do now, Y quick wins, Z delegate, T task, D delete&gt;
 
 ### Do now
@@ -80,44 +87,48 @@
 
 ### Delete
 - &lt;counts by type, plus any surprising item&gt;</code></pre>
-<p>Use a real list for every group. Never show severity with color alone; use labels and order so the snapshot works for everyone.</p>
-<p>Good questions resolve real uncertainty about where an item belongs: whether a goal is still live, whether the user wants to handle a sensitive relationship or hiring thread personally, whether an unfamiliar sender matters, or how much time is available. Do not ask what the data already answers. If nothing is uncertain, ask one question about time available.</p>
-<p>The user will move items between buckets in their answer. Their bucket choice is final.</p>
+<p>Use a real list for every group. Show severity with labels and order, never color alone.</p>
+<p>Example question block:</p>
+<pre><code>1. Is the partnership goal still live this week? a) yes b) paused
+2. The scheduling thread with the external partner: a) handle it yourself b) delegate
+3. How much time do you have? a) 15 min b) 30 min c) an hour</code></pre>
+<p>Ask only about real uncertainty: whether a goal is still live, whether the user wants to handle a sensitive thread personally, whether an unfamiliar sender matters, or how much time is available. Do not ask what the data already answers. If nothing is uncertain, ask about time. The user&#39;s bucket choices are final.</p>
 <h3>Step 6: Work the buckets</h3>
-<p>Go in this order and stop whenever the user wants to stop.</p>
+<p>Go in this order and stop whenever the user wants.</p>
 <ol>
-<li><strong>Do now, one at a time.</strong> Read the full thread or chat and check the calendar around any dates it mentions; the user may want to place a hold before replying. Gather only the context this decision needs, such as earlier exchanges with the person or the relevant project document. For hiring or candidate items, use only authorized, role-relevant evidence and focus on role-relevant capabilities, role alignment, diagnostic evidence, and whether the assessment so far distinguishes relevant performance. Then write a short paragraph: who this is, what they want, what is at stake if the user waits, and the action you recommend, with evidence linked. Ask one to three questions only the user can answer. When the user says it is handled, move to the next.</li>
-<li><strong>Quick wins.</strong> List them together so the user can clear them in one sprint.</li>
-<li><strong>Delegate and task.</strong> The user confirms owners and tasks. Create a task only for each item they say to task.</li>
+<li><strong>Do now, one at a time.</strong> Read the full thread and check the calendar around any dates it mentions. Gather only the context this decision needs. For hiring or assessment items, use only authorized, role-relevant evidence: required capabilities, role alignment, diagnostic evidence, and whether the assessment step distinguishes relevant performance. Then give one short paragraph: who this is, what they want, what is at stake if the user waits, and your recommended action, with evidence linked. Ask one to three questions only the user can answer. When they say it is handled, move on.</li>
+<li><strong>Quick wins.</strong> List them together for one clearing sprint.</li>
+<li><strong>Delegate and Task.</strong> The user confirms owners and tasks. Create a task only for each item they say to task.</li>
 <li><strong>Delete.</strong> Remind the user what to archive or delete; they do it.</li>
 </ol>
-<h4>Drafts, only when asked</h4>
-<p>Give one copy-ready plain-text draft per response, as the final block, so it is easy to copy. Match the channel, the user&#39;s voice, and any writing guidelines they keep. Keep claims factual and make no commitments the user has not approved. Do not save drafts into the email or chat system; the user pastes from the conversation.</p>
-<h4>Creating a task</h4>
-<p>When told to task a specific item, create one record in the chosen task system with: a clear action title, status set to to-do, the implied due date, importance, urgency, a time estimate, and the relevant area or project. Write the notes as:</p>
+<p><strong>Drafts, only when asked.</strong> Give one copy-ready plain-text draft per response, as the final block. Follow the user&#39;s writing guidance and the channel&#39;s norms. Keep claims factual and make no commitments the user has not approved. Do not save drafts into the email or chat system unless authorized.</p>
+<p><strong>Creating a task.</strong> Create one record with an action-style title, open status, implied due date, and whatever other fields the user&#39;s system uses, such as importance, urgency, time estimate, or project. Notes:</p>
 <pre><code>**What:** one line: the ask and who is waiting.
-**Source:** &lt;link, or &quot;&lt;service&gt;: &lt;person&gt;, &lt;date&gt;&quot; for chats&gt;
-**Context:** two to four bullets with key facts and links.
+**Source:** &lt;link, or &quot;service: person, date&quot;&gt;
+**Context:**
+- Key fact or constraint, with link.
+- Relevant deadline or decision.
 **Next step:** the first concrete action.</code></pre>
-<p>Do not pre-write replies in the task unless asked. After creating it, tell the user the item can now leave its inbox and give the task link if the system provides one.</p>
+<p>Do not pre-draft replies in the task unless asked. Afterward, tell the user the item can leave its inbox and give the task link if one exists.</p>
 <h3>Step 7: Close and improve</h3>
-<p>End with a short status per source: how many items are cleared, tasked, delegated, still open, or unreviewed because of access or time. If many loops remain open, say so plainly.</p>
-<p>Then review the run for friction: a question the user found pointless, an item in the wrong bucket, a source that misbehaved, or context you had to hunt for. If the user keeps written instructions for this workflow and has authorized updates, record a general fix rather than one tied to a single message. Never store message content, credentials, or personal details in those notes.</p>
+<p>End with a short status per source: cleared, tasked, delegated, still open, or unreviewed because of access or time. If many loops remain open, say so plainly.</p>
+<p>Review the run for friction: a pointless question, a wrong bucket, a misbehaving source, context you had to hunt for, or a privacy risk. With permission, update the user&#39;s workflow notes or setup choices to fix the cause. Keep changes general, and never store message content, credentials, or personal details.</p>
 <h3>Single-item mode</h3>
-<p>Use this when the user, or a reminder they set up, points to one specific item (for example, their oldest email or oldest saved chat item).</p>
+<p>Use this when the user, or a reminder they set up, points to one specific item.</p>
 <ol>
-<li>Skip goal reading, sorting, the snapshot, and closing. Do not read any other inbox item. Review the access rules for that item&#39;s source.</li>
-<li>Read the item with the normal method for its source, plus only the context needed.</li>
-<li>Treat it as a single do-now item: who this is, what they want, what happens if it waits. Recommend one bucket and the concrete next action, with the item&#39;s link. Ask only the questions Step 6 allows.</li>
+<li>Skip goal reading, full collection, sorting, the snapshot, and the closing review. Do not read other inbox items.</li>
+<li>Read the item using the principles in Step 3, under its source&#39;s access rules.</li>
+<li>Treat it as one Do now item: who, what they want, and what happens if it waits. Recommend one bucket and the next action, with its link.</li>
 <li>Help the user finish it under the normal rules for drafts and tasks.</li>
-<li>Tell the user which inbox action will clear it, such as archiving the email or marking the saved item complete. Do not require a special confirmation phrase; if a reminder tool is involved, let it check the inbox state itself.</li>
+<li>Tell the user which inbox action clears it. Do not require a special confirmation phrase.</li>
 </ol>
 <h3>Common failure modes</h3>
 <ul>
-<li><strong>Doing instead of processing:</strong> starting a 45-minute job inside triage. Make it a task.</li>
-<li><strong>Treating noise as urgency:</strong> ranking by unread count, recency, or group activity instead of consequence.</li>
-<li><strong>Silent gaps:</strong> a disconnected source left out of the report.</li>
-<li><strong>Duplicate tasks:</strong> tasking something already on the list.</li>
-<li><strong>Guessed owners:</strong> delegating without current evidence.</li>
-<li><strong>Overreach:</strong> sending, archiving, bulk-tasking, or reading private material the decision did not need.</li>
+<li>Doing the work a message describes instead of deciding where it belongs.</li>
+<li>Treating unread or recent as urgent.</li>
+<li>Taking inbox actions or creating tasks without a per-item instruction.</li>
+<li>Trusting a cut-off or empty result, or quietly skipping a failed source.</li>
+<li>Guessing a delegate from outdated role information.</li>
+<li>Duplicating a task that already exists.</li>
+<li>Pulling more personal context than the decision needs.</li>
 </ul></article><footer><a href="/skills/LICENSE.txt">CC0</a></footer></main><script>document.querySelector('[data-copy]').addEventListener('click',async function(){try{const text=await fetch(this.dataset.copy).then(r=>{if(!r.ok)throw new Error();return r.text()});await navigator.clipboard.writeText(text);this.textContent='Copied'}catch{this.textContent='Open raw Markdown'}})</script></body></html>

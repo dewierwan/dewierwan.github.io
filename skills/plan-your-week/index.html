@@ -1,291 +1,263 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="robots" content="noindex,nofollow,noarchive"><title>Plan your week · AI skills</title><meta name="description" content="Review last week and plan the next: shape one to three verifiable goals, protect health and focus time, cut low-value work, and schedule approved tasks and blocks.">
-<link rel="alternate" type="text/markdown" href="/skills/raw/plan-your-week.md"><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%23b4552d%22/><text x=%2250%22 y=%2253%22 dominant-baseline=%22central%22 text-anchor=%22middle%22 font-family=%22Georgia, 'Times New Roman', serif%22 font-size=%2246%22 letter-spacing=%221%22 fill=%22%23fdfaf4%22>DE</text></svg>"><link rel="stylesheet" href="/skills/styles.css"></head><body><main><a class="back" href="/skills/">← Skills</a><header class="skill-header"><h1>Plan your week</h1><p class="description">Review last week and plan the next: shape one to three verifiable goals, protect health and focus time, cut low-value work, and schedule approved tasks and blocks.</p><div class="skill-actions"><a href="/skills/raw/plan-your-week.md">Raw Markdown</a><button class="copy" type="button" data-copy="/skills/raw/plan-your-week.md">Copy Markdown</button></div></header><article class="skill-body"><p>Plan the upcoming week as a deliberate shaping session. Research sets the constraints. A few rounds of questions, each building on the previous answers, establish what matters. Only then turn the result into goals, tasks, calendar blocks, and a short written plan.</p>
-<p>Aim for about an hour. This is the ritual that anchors the week, so it may run longer when the shaping needs it. The conversation does the complex work. The final plan should feel simple.</p>
-<h3>When to use this</h3>
-<p>Use this workflow when the user asks to plan the week, review and plan the week, or run a weekly planning session. Any request that combines reviewing the past week with planning the next belongs here, not in a daily review or daily plan.</p>
-<h3>Setup: confirm once, then reuse</h3>
-<p>On the first run, ask for these choices. Offer the default when the user has no preference.</p>
-<div class="table-wrap" tabindex="0" aria-label="Scrollable table"><table><thead><tr><th>Choice</th><th>Question to ask</th><th>Default</th></tr></thead><tbody><tr><td>Planning day</td><td>Which day do you plan the week?</td><td>Friday or Sunday</td></tr><tr><td>Target week</td><td>Which week is being planned?</td><td>The week starting next Monday; the current week if run on Monday</td></tr><tr><td>Planning system</td><td>Where do goals, tasks, plan notes, and events live?</td><td>One goals-and-notes space, one task list, one calendar</td></tr><tr><td>Higher-level goals</td><td>Which annual or quarterly goals should weekly goals serve?</td><td>Ask for 2 to 5</td></tr><tr><td>Goal cap</td><td>Maximum weekly goals</td><td>3, with 1 as the ideal</td></tr><tr><td>Buffer</td><td>How much of the week stays unscheduled?</td><td>20 percent</td></tr><tr><td>Working hours and time zone</td><td>When do you actually work, and where are you this week?</td><td>Ask each time travel is possible</td></tr><tr><td>Health and recovery floor</td><td>What sleep, exercise, rest, and relationship time must be protected?</td><td>Ask; never assume</td></tr><tr><td>Allowed sources</td><td>Which records may be read, and which are off limits?</td><td>Only what the user explicitly allows</td></tr><tr><td>Calendar style</td><td>How should solo focus blocks look?</td><td>A focus-time event type with plain titles</td></tr></tbody></table></div>
-<h3>Deliverables</h3>
-<p>The session is not complete until these exist, unless the user explicitly skips one:</p>
-<ol>
-<li>Up to three weekly goal records, each linked to a named higher-level goal and carrying a definition of done of two to four checkable outputs.</li>
-<li>The target week&#39;s plan note filled with the simple plan, and the previous week&#39;s record holding the user&#39;s answers to the four review prompts.</li>
-<li>Task records, created or updated in place, for every concrete chunk of work needed to hit each goal. Each task takes 5 minutes to 3 hours and has notes that make starting easy. Each is approved individually.</li>
-<li>Calendar events for approved blocks, each slot approved individually.</li>
-<li>Updated statuses for every overdue task the user made a decision on.</li>
-<li>Drafted messages for any meetings the user chose to cut or move. Print them; never send them.</li>
-</ol>
-<p>Analysis without these artefacts is not a finished session.</p>
+<meta name="robots" content="noindex,nofollow,noarchive"><title>Plan your week · AI skills</title><meta name="description" content="Review the past week, shape one to three verifiable goals through focused interview rounds, then turn them into approved tasks, calendar blocks, and a one-screen plan.">
+<link rel="alternate" type="text/markdown" href="/skills/raw/plan-your-week.md"><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%23b4552d%22/><text x=%2250%22 y=%2253%22 dominant-baseline=%22central%22 text-anchor=%22middle%22 font-family=%22Georgia, 'Times New Roman', serif%22 font-size=%2246%22 letter-spacing=%221%22 fill=%22%23fdfaf4%22>DE</text></svg>"><link rel="stylesheet" href="/skills/styles.css"></head><body><main><a class="back" href="/skills/">← Skills</a><header class="skill-header"><h1>Plan your week</h1><p class="description">Review the past week, shape one to three verifiable goals through focused interview rounds, then turn them into approved tasks, calendar blocks, and a one-screen plan.</p><div class="skill-actions"><a href="/skills/raw/plan-your-week.md">Raw Markdown</a><button class="copy" type="button" data-copy="/skills/raw/plan-your-week.md">Copy Markdown</button></div></header><article class="skill-body"><p>Plan the coming week as a deliberate shaping session. Research sets the constraints. A few interview rounds, each built on the last set of answers, find out what actually matters. Only then turn the result into a short written plan, approved tasks, and approved calendar blocks.</p>
+<p>Aim for about an hour. This ritual anchors the week, so it may run longer when the shaping needs it. The conversation does the hard work. The final plan should feel simple.</p>
 <h3>Core principles</h3>
-<p><strong>Pressure is not importance.</strong> A deadline, a stale task, a senior counterpart, or a visible event shows pressure. It does not show importance. Never recommend a goal only because it is scheduled, overdue, or easy to make concrete. The user must first say what they want to make true, why it matters now, and what they will set aside for it.</p>
-<p><strong>Ask or search; do not guess.</strong> If the user mentions an unfamiliar person, project, or reference that affects the goals, the calendar, or a rollover decision, run one or two quick searches in allowed sources or ask. If it is incidental, move on.</p>
-<p><strong>Facts expire.</strong> Stored notes such as &quot;this is delegated until X&quot; or &quot;paused for two weeks&quot; age quickly. Check whether the trigger has passed before citing one. If the user corrects a stored fact, update it in the same session.</p>
-<p><strong>Sync gaps are not behaviour.</strong> Zero exercise sessions, missing sleep nights, or an empty log often mean a sync or device problem, especially after travel or a device change. Report the gap and ask; never average across a hole.</p>
-<p><strong>Respect the privacy boundary.</strong></p>
+<ol>
+<li><strong>Pressure is not importance.</strong> A deadline, a stale task, a senior counterpart, or a visible event is evidence of pressure. It is not evidence that something deserves to be a weekly goal. Never recommend a goal only because it is scheduled, overdue, or easy to make concrete. The user must first say what they want to make true, why it matters now, and what they will deprioritize for it.</li>
+<li><strong>Evidence prompts questions; it does not answer them.</strong> Sources can show deadlines, obligations, slippage, and capacity. Only the user can say what they value this week.</li>
+<li><strong>Complex conversation, simple output.</strong> Keep research detail, task metadata, and calendar mechanics out of the final plan unless they change a decision.</li>
+<li><strong>Propose, approve, then write.</strong> Every goal, task, status change, and calendar event is written only after the user approves that specific item. Never batch-create.</li>
+<li><strong>Ask or search; do not guess.</strong> If the user mentions an unfamiliar name, project, or reference that affects goals, the calendar, or a rollover decision, run one or two quick searches in authorized sources. If it is incidental, move on.</li>
+<li><strong>Check that stored context is still true.</strong> Notes like &quot;delegated until X happens&quot; or &quot;paused for two weeks&quot; expire. Before citing one, check whether its trigger has passed. If the user corrects a stored note, update it in the same session.</li>
+</ol>
+<h3>Privacy and access boundary</h3>
+<p>This workflow may touch calendars, messages, tasks, health data, and records about colleagues or candidates.</p>
 <ul>
-<li>Read only sources the user has authorised, for the purpose of planning their week.</li>
-<li>Do not read freeform private journals unless the user explicitly allows it. Prefer structured fields (ratings, short reasons, daily plans) and what the user says in the conversation. If private content cannot be reliably excluded from a source, skip that source.</li>
-<li>For email and messages, use counts and metadata. Open content only when the user asks or a specific item is load-bearing.</li>
-<li>When records involve other people, use the minimum needed and refer to them by role where possible. Never record health or other sensitive details about others in the plan.</li>
-<li>Keep outputs inside the user&#39;s own planning space unless they choose to share them.</li>
+<li><strong>Purpose and authorization.</strong> Read only sources the user has connected and agreed to use for weekly planning. Health, sleep, and exercise data are opt-in.</li>
+<li><strong>Minimum necessary.</strong> Prefer counts and metadata over contents. For email and chat, counts and days-waiting are usually enough. Open a message only when the user asks or one specific item is needed for a decision.</li>
+<li><strong>Private writing stays private.</strong> Do not read or quote a freeform private journal unless the user shares it in the session. Use structured fields instead (daily plans, ratings, stated reasons, fields the user designates for brain dumps). If a source mixes private text with planning data and you cannot exclude the private part before reading, skip that source.</li>
+<li><strong>Other people.</strong> Mention colleagues and candidates only as far as the decision needs. Keep health, emotional, and personal details about others out of the plan. Write &quot;rebalance workload for the operations lead&quot;, not why they are struggling.</li>
+<li><strong>Output boundary.</strong> The plan lives in the user&#39;s own system. Do not copy colleague or candidate details into shared spaces. Draft messages for the user to send; never send on their behalf.</li>
 </ul>
-<h3>Run variants</h3>
-<p>Detect the variant before gathering context.</p>
-<ul>
-<li><strong>Before the week starts (default).</strong> Part of the current week remains. Review it as &quot;last week&quot; and ask what must still ship before Monday. Treat that as current-week work, not a goal for the target week.</li>
-<li><strong>Same-day or late run.</strong> If the target week has already started, plan only the remaining days, use elapsed days as review context, and never block time in the past. On a Monday, ask early &quot;What must ship today?&quot; and build that day first. Say how much runway is actually left, because it shapes everything.</li>
-<li><strong>Time-off week.</strong> Skip the work machinery: no work goals, triage, or meeting review beyond checking recurring meetings were declined. Plan rest, travel logistics, and any loose ends in the place the user prefers.</li>
-<li><strong>Tired user.</strong> If the user says they are too tired to answer, stop the rounds and decide for them with stated reasoning, or offer two or three concrete options.</li>
-</ul>
+<h3>Setup: user choices</h3>
+<p>Ask once, store the answers, and reuse them. Offer the default when the user has no preference.</p>
+<div class="table-wrap" tabindex="0" aria-label="Scrollable table"><table><thead><tr><th>Choice</th><th>Broadly useful default</th></tr></thead><tbody><tr><td>Planning day</td><td>Last workday of the week, or Sunday evening</td></tr><tr><td>Week boundaries</td><td>Monday to Sunday</td></tr><tr><td>Maximum weekly goals</td><td>3, with 1 as the ideal</td></tr><tr><td>Unplanned buffer</td><td>20% of free working time</td></tr><tr><td>Planning system</td><td>The user&#39;s task manager, notes app, or spreadsheet</td></tr><tr><td>Calendar conventions</td><td>Solo work as focus-time events in a distinct colour; plain titles</td></tr><tr><td>Time zone</td><td>Ask; restate it to any helper that reads the calendar</td></tr><tr><td>&quot;Behind&quot; thresholds</td><td>Email older than 48 hours; direct messages unanswered over 3 days</td></tr><tr><td>Health floor</td><td>User-defined sleep, exercise, and recovery targets, or none</td></tr><tr><td>Chronic-deferral threshold</td><td>Tasks deferred more than 5 times move to a parked list</td></tr><tr><td>Workflow self-improvement</td><td>Note lessons at the end; ask before structural changes</td></tr></tbody></table></div>
+<h3>Deliverables</h3>
+<p>The session is complete only when these exist, or the user has explicitly waived one:</p>
+<ol>
+<li>Up to three weekly goal records, each linked to a longer-term goal, each with a definition of done of two to four checkable outputs.</li>
+<li>The target week&#39;s plan record holding the simple plan, and the previous week&#39;s record holding the user&#39;s review answers.</li>
+<li>Task records, created or updated in place, for every concrete chunk of work each goal needs. Each is 5 minutes to 3 hours, clearly titled, with prepared notes, and approved individually.</li>
+<li>Calendar events, each slot approved, for goal and task blocks and protected routines.</li>
+<li>Status updates for overdue tasks the user decided on (unless they triage themselves).</li>
+<li>Drafted messages for any meetings the user chose to cut or move.</li>
+</ol>
+<p>Analysis without these artefacts is not a finished weekly plan.</p>
+<h3>When to use and which variant</h3>
+<p>Use this when the user asks to plan the week, or to review and plan it, and on their planning day. Any request that combines reviewing and planning the week belongs here, not in a daily review.</p>
+<p>Default target: the week starting next Monday. On a Monday, the current week.</p>
+<div class="table-wrap" tabindex="0" aria-label="Scrollable table"><table><thead><tr><th>Situation</th><th>Adjustment</th></tr></thead><tbody><tr><td>End-of-week run (default)</td><td>Review the current week as &quot;last week&quot;. Ask what must still ship before Monday and treat it as current-week work, not a next-week goal.</td></tr><tr><td>Run on the first day of the target week</td><td>Ask early, &quot;What must ship today?&quot; and build that day first. Re-read calendar and task status before writing.</td></tr><tr><td>Belated mid-week run</td><td>Plan only the remaining days. Treat elapsed days as review context. State the runway up front.</td></tr><tr><td>Time-off week</td><td>Skip goals, tasks, hiring, and cuts. Confirm recurring meetings are declined. Plan rest and logistics in whatever document the user names.</td></tr><tr><td>User is exhausted</td><td>Stop open questions. Offer 2 or 3 concrete options, or decide with stated reasoning and let them veto.</td></tr></tbody></table></div>
 <h3>Hard rules</h3>
 <ul>
-<li><strong>Goal cap.</strong> At most three goals; one is ideal. If the user proposes more, merge, demote to an intention, or defer. With three, label one as stretch.</li>
-<li><strong>Verifiable done.</strong> Each goal needs two to four outputs a teammate could check, such as &quot;Sent revised role description and scorecard to the hiring lead.&quot; A binary but unscoped goal (&quot;everyone has next steps&quot;) is not enough, because nobody can estimate it. A direction is not a goal.</li>
-<li><strong>The week must fit the buffer.</strong> If goals do not fit, cut or shrink a goal. Never shrink time estimates to make them fit.</li>
-<li><strong>Every goal serves a higher-level goal.</strong> If it does not, ask which one it serves. A weak answer means reject.</li>
-<li><strong>Approve before writing.</strong> Calendar events are created only after the specific slot is approved. Tasks are created only after each is approved. Never batch-create.</li>
-<li><strong>Write task decisions immediately</strong>, not at the end.</li>
-<li><strong>Reuse existing records.</strong> Check whether the target week&#39;s plan record already exists, possibly with goals linked. Create one only if truly missing.</li>
-<li><strong>At least two substantive question rounds before proposing goals</strong>, unless the user asks you to skip and decide. Each round resolves a different layer of the week.</li>
-<li><strong>Keep an alignment ledger</strong> and show a compact version before each later round. Never reintroduce an assumption the user corrected.</li>
+<li><strong>At most three weekly goals.</strong> Merge, demote to intentions, or defer the rest. With three, label one the stretch goal. One is ideal.</li>
+<li><strong>Definition of done a teammate could verify:</strong> two to four concrete outputs, such as &quot;Sent version 2 of the scorecard and job description to the hiring partner.&quot; &quot;Everyone in the process has next steps&quot; is binary but unscoped. A direction is not a goal.</li>
+<li><strong>The week fits with the buffer unplanned.</strong> If it does not fit, cut or shrink a goal. Never shrink time estimates.</li>
+<li><strong>Every goal links to an active longer-term goal.</strong> Ask &quot;Which longer-term goal does this serve?&quot; A weak answer means reject.</li>
+<li><strong>Use the existing week record</strong> if one exists; it may already have goals linked. Create one only if missing.</li>
+<li><strong>Write task status after each decision</strong>, not all at the end.</li>
+<li><strong>No goal proposals before two substantive, answer-dependent interview rounds</strong>, unless the user asks to skip questions. Each round resolves a different layer.</li>
+<li><strong>Keep an alignment ledger.</strong> Show it compactly before each later round. Never reintroduce a corrected assumption.</li>
 </ul>
+<h3>Generic data model</h3>
+<p>Map these to the user&#39;s systems. Field names are suggestions.</p>
+<div class="table-wrap" tabindex="0" aria-label="Scrollable table"><table><thead><tr><th>Record</th><th>Key fields</th></tr></thead><tbody><tr><td>Plan (week, month, quarter, year)</td><td>type, start, end, linked goals, plan text, review text. Higher levels hold theme, non-negotiables, any scorecard.</td></tr><tr><td>Goal</td><td>statement, deadline, status, priority, level, linked plan, notes (&quot;Links to&quot; and &quot;Done when&quot;), deadline-change count</td></tr><tr><td>Task</td><td>name, due date, status (todo, in progress, done, parked, archived), importance, urgency, estimate, notes, deferral count</td></tr><tr><td>Daily log</td><td>date, daily plan, overall rating and reason, focused hours, intention for tomorrow</td></tr><tr><td>Recovery and exercise (opt-in)</td><td>per night: hours asleep, hours in bed, device score, variability; per session: date, type, volume</td></tr></tbody></table></div>
+<p>Useful saved queries: current and previous week records, active higher-level plans, active longer-term goals, last week&#39;s goals with a four-week hit rate, overdue and due-soon tasks, parked tasks (titles and deferral counts only), recent daily logs, and the last two weeks of recovery and exercise data.</p>
 <h3>Step 1: Gather context</h3>
-<p>Run reads in parallel where possible. Send any read likely to return a large result (a full week of events, a long parked-task list, a hiring pipeline) to a filtered query or helper process that returns a short summary. Do not dump raw data into the conversation. If a query is slow or fails twice, report it as a gap and use other signals.</p>
-<p>Read, as available and authorised:</p>
-<ol>
-<li><strong>Plans:</strong> current and previous week records; current month and quarter records (theme, non-negotiables, scorecard).</li>
-<li><strong>Goals:</strong> active higher-level goals, last week&#39;s weekly goals with how often each deadline moved, and the hit rate over the last four weeks.</li>
-<li><strong>Tasks:</strong> overdue and due-next-week items, plus a titles-only summary of parked items with deferral counts.</li>
-<li><strong>Daily records:</strong> about ten days of structured fields such as rating, focus, focused hours, and daily plan.</li>
-<li><strong>Health data, if tracked:</strong> sleep for the last two weeks; exercise completed last week and prescribed for next week.</li>
-<li><strong>Team context, read-only:</strong> team goals, projects the user owns, and the user&#39;s own input to any team planning meeting.</li>
-<li><strong>Calendars:</strong> the work calendar summarised as meetings per day, notable meetings in the form <code>DD MMM start-end - title</code>, weekend intrusions, and cut candidates; personal and social calendars read-only, since they constrain evenings and weekends. Treat unconfirmed invitations as unconfirmed.</li>
-<li><strong>Communication load:</strong> email threads older than the user&#39;s response window, total inbox, the chat action queue, unread mentions, and direct messages awaiting a reply, with age in days.</li>
-<li><strong>Role-specific load:</strong> for example interviews and pending hiring decisions (see the audit template below), or dated external commitments such as programme starts or launches the user owns. These often live outside the calendar, so scan the shared trackers or channels where they are announced.</li>
-</ol>
-<p><strong>Optional process retro.</strong> If the user wants it and grants access, spend up to three minutes scanning their recent requests to their assistant for repeated corrections, annoyance, confusion, or missing capabilities. Exclude anything that may contain private journal material. Cluster duplicates, check whether each already became a standing instruction, and propose specific edits for the user to apply, skip, or modify. If nothing recurs, say so in one line.</p>
-<h3>Step 2: Recap, the user&#39;s review, then the brief</h3>
-<p>Run these three parts in order.</p>
-<h4>a) Recap (five lines maximum, no analysis)</h4>
+<p>Run reads in parallel. Delegate anything likely to be large (a full week of calendar events, a long parked list, a hiring pipeline) to a helper with a tight brief and a word limit, and ask for only what a decision needs. Bound each helper&#39;s runtime. If a call fails twice, record the gap and move on. Never present partial data as complete.</p>
+<p>Read:</p>
 <ul>
-<li>Active higher-level goals, one line each with a countdown.</li>
-<li>Last week&#39;s goals: done, missed, or still open.</li>
-<li>Four-week hit rate, such as &quot;3 of 7 goals hit&quot;. Goals open past their deadline count as missed unless the user says they shipped.</li>
+<li><strong>Planning records</strong> from the data model above.</li>
+<li><strong>Team context (read-only):</strong> current sprint or planning page, active team goals, projects the user owns. If the team held a goal-setting meeting today, read only the user&#39;s own review answers and shortlisted goals.</li>
+<li><strong>Calendars:</strong> the target week, via a helper that returns meetings per day, non-trivial meetings as &quot;date, time — title (counterpart role)&quot;, weekend conflicts, and cut candidates, in under 400 words. Read personal and social calendars if authorized; never block work over personal events. Treat unconfirmed invites as unconfirmed and sanity-check imported time zones.</li>
+<li><strong>Inbox signals (counts only):</strong> email past the threshold and in total, the chat action queue, unread direct messages and mentions, and unanswered direct messages with days waiting. Count threads, not messages. If a result hits its cap, report &quot;&gt;N&quot;.</li>
+<li><strong>Opt-in signals:</strong> recovery data, completed and prescribed training, hiring load (see below).</li>
 </ul>
-<h4>b) The user&#39;s review</h4>
-<p>Ask these four prompts in one block, then end your turn:</p>
+<h3>Step 2: Recap, the user&#39;s review, then the brief</h3>
+<p>Run these in order: short overview, the user&#39;s own review, then your analysis.</p>
+<p><strong>a) Recap, five lines maximum, no analysis:</strong> active longer-term goals with countdowns; last week&#39;s goals as done, missed, or open; four-week hit rate (&quot;3 of 7 goals hit&quot;). Open goals past deadline count as missed unless the user says they shipped.</p>
+<p><strong>b) The user&#39;s review.</strong> Ask in one block, then end your turn:</p>
 <ol>
 <li>Did you hit your goals for the week?</li>
 <li>What went well?</li>
 <li>What didn&#39;t go so well?</li>
 <li>What will you do differently next week?</li>
 </ol>
-<p>If the user already answered elsewhere, quote their answers and ask only what changed. The aim is one thing to change, not blame. Save the answers to the reviewed week&#39;s record. Carry the &quot;do differently&quot; answer into shaping and the final failure-mode line.</p>
-<h4>c) The brief</h4>
-<p>Show only facts that could change a decision, in eight bullets or fewer. Group routine signals; foreground tensions, surprises, constraints, and gaps. Do not recommend goals and do not repeat the user&#39;s review back to them. Consider:</p>
+<p>If they already answered at a team meeting, quote their answers and ask only what changed. The aim is one thing to change, not blame. Save the answers to the reviewed week. Carry &quot;do differently&quot; into shaping and the failure-mode line.</p>
+<p><strong>c) The brief.</strong> Synthesize internally. Show at most eight bullets, only facts that could change a decision. Group routine signals; foreground tensions, surprises, real constraints, and data gaps. Do not recommend goals. Check these areas and include only what matters:</p>
 <ul>
-<li><strong>Rollover candidates</strong>, each with its deadline-moved count. Any goal moved four or more times and still open gets the question: &quot;This has slipped N times. Is the goal still right, or is the format, scope, or lane wrong?&quot;</li>
-<li><strong>Close-out:</strong> did last week&#39;s end-of-week work actually ship? Ask rather than assume.</li>
-<li><strong>Capacity:</strong> meetings per day, heavy days (more than four meetings) and clear days, protected days that are already claimed.</li>
-<li><strong>Energy and health</strong> against the thresholds below, with numbers, not vague phrasing.</li>
-<li><strong>Backlog:</strong> overdue count, important and time-sensitive count, and one to three parked items that now fit, if any.</li>
-<li><strong>Communication debt:</strong> email past the response window, stale ownerless items in the action queue, direct messages waiting over three days. Non-zero queues are normal; stale ones are the problem.</li>
-<li><strong>External and team commitments</strong> the user owns this week or next, which usually beat self-set goals on timing.</li>
-<li><strong>People load</strong>, only from what the user has shared or from team records they own: a colleague the user has said is overloaded, or several recent joiners. Ask whether supporting them is the real priority.</li>
-<li><strong>Non-negotiables status</strong> against the current plan, with specific misses.</li>
+<li><strong>Rollover and slippage:</strong> each unfinished goal with its deadline-change count. Anything open after four or more changes gets the question: &quot;This has slipped N times. Is it still the right goal, or is the format, scope, or lane wrong?&quot; Raise it here, not an hour in.</li>
+<li><strong>Close-out:</strong> did end-of-week items actually ship? Ask rather than assume.</li>
+<li><strong>Capacity:</strong> meetings per day, energy, sleep, focused hours, training (thresholds below).</li>
+<li><strong>Backlog:</strong> overdue count, important-and-time-sensitive count, and one to three parked items that now fit (or &quot;none fit&quot;).</li>
+<li><strong>Messages:</strong> what is past the thresholds. A non-empty action queue is not failure; stale items with no owner are.</li>
+<li><strong>Commitments that may not be on the calendar:</strong> externally dated work such as a program cohort the user must onboard or a registration window. Check the relevant records or ask. These beat self-set goals on timing.</li>
+<li><strong>People:</strong> team goals that imply user action; a colleague the user has said is overloaded (ask at goal-setting whether reducing that load is the real priority); two or more recent joiners (ask whether onboarding is scheduled).</li>
+<li><strong>Non-negotiables:</strong> hits and misses against the current higher-level plan.</li>
 </ul>
-<h4>Signal thresholds (adjustable defaults)</h4>
-<div class="table-wrap" tabindex="0" aria-label="Scrollable table"><table><thead><tr><th>Signal</th><th>Flag when</th><th>Notes</th></tr></thead><tbody><tr><td>Sleep</td><td>Any night under 6.5 hours asleep, three or more nights under 7, or the recovery metric under 90 percent of the prior week</td><td>Use time asleep, not time in bed. Compare metrics only within one device. Ask the user&#39;s own target.</td></tr><tr><td>Energy</td><td>Two or more clearly negative days in seven, a run of neutral days if the user uses neutral as a soft negative, or focused work under about 3 hours a day</td><td>Ask how the user uses their rating scale. Treat as a hypothesis to test.</td></tr><tr><td>Goal slippage</td><td>Deadline moved four or more times and still open</td><td>Ask whether the goal itself is wrong</td></tr><tr><td>Task deferral</td><td>Deferred more than five times</td><td>Candidate to park</td></tr><tr><td>Messages</td><td>Email past the response window; direct messages waiting over three days</td><td>Behind-ness signal, not failure</td></tr></tbody></table></div>
-<p>After crossing several time zones, short nights mean the body clock is adjusting, not poor discipline. Frame mitigation as resetting the clock (morning light, morning exercise, steady wake time).</p>
-<h4>The alignment ledger</h4>
-<p>End the brief with this working model:</p>
-<pre><code>**Confirmed:** &lt;choices the user has made here or in current plans&gt;
-**Source facts:** &lt;current constraints and evidence&gt;
-**Inferred:** &lt;your tentative reading, labelled as such&gt;
-**Open:** &lt;decisions only the user can make&gt;
-**Corrected:** &lt;assumptions the user rejected; omit if empty&gt;</code></pre>
-<h3>Step 3: Rolled-over goals</h3>
+<h4>Signal thresholds (defaults; let the user set their own)</h4>
+<div class="table-wrap" tabindex="0" aria-label="Scrollable table"><table><thead><tr><th>Signal</th><th>Flag when</th><th>Notes</th></tr></thead><tbody><tr><td>Energy</td><td>2+ clearly negative days in 7, or a run of neutral ratings</td><td>On a -2 to +2 scale, neutral often hides a bad day. If logs are blank, say so and name the fallback signals used.</td></tr><tr><td>Focus</td><td>Focused work trending under about 3 hours a day</td><td>Context, not a verdict</td></tr><tr><td>Sleep</td><td>Any night under 6.5h asleep; 3+ nights under 7h; variability below 90% of last week; device score average under 75</td><td>Use time asleep, not time in bed. Compare variability only within one device and method.</td></tr><tr><td>Training</td><td>Sessions below target, or the key session missed</td><td>Zero sessions for two weeks usually means a sync gap; ask before concluding</td></tr><tr><td>Meetings</td><td>Days over 4 meetings</td><td>Also note meeting-free days</td></tr><tr><td>Messages</td><td>Items past the user&#39;s &quot;behind&quot; thresholds</td><td>Report counts and days waiting</td></tr></tbody></table></div>
+<p>Report fired flags with numbers and dates (&quot;3 nights under 6.5h: Mon 6.4, Wed 6.2, Thu 6.3; average 6.7h&quot;). Vague phrasing is not acceptable. Do not average across missing nights after travel or device changes; call it a device gap. After crossing time zones, frame short nights as circadian adjustment, not bedtime discipline.</p>
+<h4>Hiring load (if the user hires)</h4>
+<p>The purpose is allocating the user&#39;s time, not assessing anyone. Ask a helper for a report under 250 words:</p>
 <ol>
-<li><strong>Find the real source.</strong> If last week&#39;s goals were written in the plan note rather than as separate records, use that section.</li>
-<li><strong>Check delegation.</strong> If an unfinished goal now belongs to someone else, note the handoff and move on.</li>
-<li><strong>Check whether it shipped.</strong> Open statuses are often stale. If daily plans or the review show it finished, propose marking it done.</li>
-<li><strong>Decide one goal at a time.</strong> Never batch.</li>
+<li>Confirmed interviews this week with the user as interviewer, with day, time, role, and total hours. Exclude &quot;needs scheduling&quot; placeholders. If the query fails, use the calendar.</li>
+<li>Late-stage candidates whose decision may be owed. Measure time in stage only from the real stage-entry date, never the application date, which makes everyone look overdue. If entry dates are unavailable, report stage counts only and say so.</li>
 </ol>
-<div class="table-wrap" tabindex="0" aria-label="Scrollable table"><table><thead><tr><th>Decision</th><th>Action</th></tr></thead><tbody><tr><td>Roll over</td><td>Candidate goal for Step 4. Ask &quot;why did this slip?&quot; and log one line. Increment the deadline-moved counter and set the new deadline.</td></tr><tr><td>Demote</td><td>Not a weekly goal; list it as an intention.</td></tr><tr><td>Drop</td><td>Mark archived or missed.</td></tr></tbody></table></div>
-<h3>Step 4: Shape the week</h3>
-<h4>Check for a plan of record first</h4>
-<p>The user may already have written an ordered action list after a planning event, or shortlisted goals with their team. Ask: &quot;Is there a written plan of record anywhere?&quot; A plan of record outranks inference. Treat team-agreed goals as decided; only check that each has a verifiable definition of done and fits the week.</p>
-<h4>Question format</h4>
-<p>Ask four to eight questions per round. Number every question. When choices are bounded, letter the options and put your recommendation first. One question normally holds one decision.</p>
-<pre><code>1. Which outcome would make this week worth it?
-   a) &lt;recommended option&gt; (recommended: &lt;one-line reason&gt;)
-   b) &lt;option&gt;
-   c) Something else
-2. What are you willing to let slip for it?</code></pre>
-<h4>Round 1: brain dump, then desired change</h4>
-<p>Ask for a quick, unfiltered list of everything the user might work on. Group it by goal or project and show it back in a few lines, so the chosen goal is not simply the first idea. Note small items for triage; do not do them now. Then work backwards:</p>
+<p>If decisions are past the user&#39;s service target (a common one is five days, ideally two) or interviewing exceeds about three hours, name the cost of delay and ask who owns the response. Propose a block only after the user confirms hiring belongs on their week. Say &quot;none overdue&quot; when true. Keep candidate details and evaluations out of the plan.</p>
+<h4>Alignment ledger</h4>
+<p>End the brief with this, and update it before each later round:</p>
+<ul>
+<li><strong>Confirmed:</strong> choices the user made in this conversation, or current agreed plans.</li>
+<li><strong>Source facts:</strong> constraints and evidence.</li>
+<li><strong>Inferred:</strong> your tentative interpretations, labelled.</li>
+<li><strong>Open:</strong> decisions only the user can make.</li>
+<li><strong>Corrected:</strong> assumptions the user rejected (omit if empty).</li>
+</ul>
+<h3>Step 3: Rollover decisions</h3>
+<p>Last week&#39;s goals may be goal records or freeform lines in last week&#39;s plan text; check both. Before treating an item as unfinished, check whether it was <strong>delegated</strong> (then it is not a weekly goal; note the handoff) or <strong>already done</strong> (records go stale; propose marking it done).</p>
+<p>For each item still on the user, ask separately: <strong>roll over, demote, or drop.</strong></p>
+<ul>
+<li><strong>Roll over:</strong> a candidate goal. Ask &quot;Why did it slip?&quot; and log one line. Increment the change count and set the new deadline.</li>
+<li><strong>Demote:</strong> an intention in the plan text, not a goal.</li>
+<li><strong>Drop:</strong> mark missed or archived.</li>
+</ul>
+<h3>Step 4: Shape the week through interview rounds</h3>
+<p><strong>Check for a plan of record first.</strong> A recent written priority list, or goals shortlisted at a team meeting, outranks anything inferred from tasks. Ask &quot;Is there a written plan of record?&quot; Treat shortlisted goals as decided: check each has a verifiable definition of done and fits the week, then mirror them into goal records.</p>
+<p><strong>Question format.</strong> Ask 4 to 8 questions per round. Number every question. When options are bounded, letter them and put your recommendation first. One decision per question, so the user can reply &quot;1a, 2c, 3 skip&quot;. Example:</p>
+<pre><code>1. Which area most needs attention this week?
+   a) Shipping the proposal (recommended: it is the open longer-term goal)
+   b) Hiring decisions
+   c) Recovery
+2. What would you regret neglecting even if the proposal ships?</code></pre>
+<p><strong>Round 1: brain dump, then desired change.</strong> Ask for a quick, unfiltered list of everything they might work on, task-shaped or vague. Group it by goal or project and show it back in a few lines, so the chosen goal is not just their first idea. Park small items for triage. Then work backward:</p>
 <ul>
 <li>What outcome would make the week genuinely matter?</li>
-<li>Why does it matter now, beyond having a deadline?</li>
+<li>Why does it matter now, beyond a deadline?</li>
 <li>What has changed since last week&#39;s plan?</li>
-<li>Which area (work, health, relationships, personal) most needs attention?</li>
-<li>What is emotionally or strategically unresolved?</li>
+<li>Which area (work, personal, health, relationships) most needs attention?</li>
+<li>What is strategically or emotionally unresolved?</li>
 <li>What would you regret neglecting even if the visible work shipped?</li>
 </ul>
-<p>Do not answer these from source material. Evidence can prompt a question; it cannot say what the user values. Classify each answer as confirming, rejecting, softening, qualifying, or deferring your model, and show the updated ledger.</p>
-<h4>Round 2: shortlist</h4>
-<p>Apply the prompts that bite this week:</p>
+<p>Do not answer these from sources. Classify each answer as confirming, rejecting, softening, qualifying, or deferring your current model. Trace the implications and show the updated ledger.</p>
+<p><strong>Round 2: shortlist.</strong> Apply the prompts that bite this week:</p>
 <ul>
 <li>What can you do best, and what could someone else do as well?</li>
-<li>What would most move the team&#39;s main goal or the relevant higher-level goal?</li>
-<li>What would benefit most from lead time?</li>
-<li>What unfinished work will steal attention if not closed now?</li>
+<li>What would most move the team&#39;s main goal or the relevant longer-term goal?</li>
+<li>What benefits most from lead time?</li>
+<li>What unfinished work will keep stealing attention unless closed now?</li>
 <li>What is the strongest case for not doing this?</li>
 <li>Which fires are you willing to let burn?</li>
 </ul>
-<p>Also settle real capacity given meetings, energy, and health, and which commitments depend on others. Everything not shortlisted goes to &quot;Not this week&quot; or a &quot;Later&quot; list.</p>
-<h4>Round 3 when needed</h4>
-<p>Run another round if an important choice about sequencing, success criteria, ownership, or week shape is still open. Fatigue is a reason to narrow options, not permission to revive an earlier inference.</p>
+<p>Also settle real capacity (meetings, energy, sleep, exercise) and which commitments depend on others. Everything not shortlisted goes to &quot;Not this week&quot; or a &quot;Later&quot; list.</p>
+<p><strong>Round 3, when needed:</strong> if sequencing, success criteria, ownership, or the week&#39;s shape is still materially open. If the user is tired, narrow to two or three options; fatigue is not permission to revive an earlier inference.</p>
 <h4>Readiness gate</h4>
-<p>Propose goals only when each item is confirmed, established, or deliberately left open:</p>
+<p>Propose goals only when every item is confirmed, established, or deliberately left open:</p>
+<div class="table-wrap" tabindex="0" aria-label="Scrollable table"><table><thead><tr><th>Gate item</th><th>Status</th></tr></thead><tbody><tr><td>The one change that would make the week worthwhile</td><td>[confirmed / open]</td></tr><tr><td>Why it matters now</td><td>[confirmed / open]</td></tr><tr><td>The longer-term goal it serves</td><td>[confirmed / open]</td></tr><tr><td>Definition of done: 2–4 verifiable outputs</td><td>[confirmed / open]</td></tr><tr><td>Main competing claim on time or attention</td><td>[confirmed / open]</td></tr><tr><td>What is explicitly not advancing</td><td>[confirmed / open]</td></tr><tr><td>Realistic health and energy floor</td><td>[confirmed / open]</td></tr><tr><td>Most likely failure mode</td><td>[confirmed / open]</td></tr></tbody></table></div>
+<p>For each candidate goal, ask yourself: did the user call this important, or am I promoting a visible deadline? If the latter, ask another question. Then propose the smallest set of goals that expresses the alignment, usually one or two, each in one sentence.</p>
+<h4>Validate each goal</h4>
 <ul>
-<li>The one change that would make the week worthwhile.</li>
-<li>Why it matters now.</li>
-<li>The higher-level goal it serves.</li>
-<li>Two to four verifiable outputs.</li>
-<li>The main competing claim on time.</li>
-<li>What the user is explicitly not advancing.</li>
-<li>The realistic health and energy floor.</li>
-<li>The most likely failure mode.</li>
+<li><strong>Links up:</strong> name the longer-term goal and record it.</li>
+<li><strong>Verifiable:</strong> two to four outputs. Narrow a direction to a named set and a named output.</li>
+<li><strong>Scoped:</strong> sketch sub-tasks with rough hours and sum against free time minus the buffer. Under an hour is a task, not a goal.</li>
+<li><strong>Realistic:</strong> heavy meetings plus low energy means cut one.</li>
+<li><strong>Stretch:</strong> with three goals, mark one that may give way.</li>
 </ul>
-<p>For each candidate, ask yourself: did the user call this important, or am I promoting a visible deadline? If the latter, ask another question.</p>
-<h4>Propose and validate</h4>
-<p>Propose the smallest set of goals that fits the alignment, usually one or two. Explain each in one sentence. For each:</p>
+<h4>Shaping rules of thumb</h4>
 <ul>
-<li><strong>Serves a higher-level goal?</strong> Name it and record it in the goal notes.</li>
-<li><strong>Verifiable?</strong> Narrow any direction into a named set and named outputs.</li>
-<li><strong>Scoped?</strong> Sketch sub-tasks with rough hours and sum them against free time after meetings, minus the buffer. Under an hour of work is a task, not a goal.</li>
-<li><strong>Realistic?</strong> A heavy calendar plus a low-energy signal means cut one.</li>
-</ul>
-<h4>Shaping checks</h4>
-<ul>
-<li><strong>Recurring overload means one goal.</strong> If the current plan&#39;s cut-scope rule keeps firing, the answer is usually a single goal executed well. Use the current rule only; never import an expired one. Ask what has changed before accepting more scope.</li>
-<li><strong>People-heavy weeks.</strong> If meetings, interviews, logistics, or supporting others dominate, ask whether this is a people week or whether to cut enough to protect one deep goal. &quot;Defend harder&quot; usually fails. Ring-fence any deep item on the cleanest day.</li>
-<li><strong>External deadlines first.</strong> With two or more goals, ask which has the harder external deadline. That one ships first, whatever feels heavier.</li>
-<li><strong>Team goals need a team target.</strong> If a goal needs others, ask what the team should achieve by week&#39;s end and where it will be announced. Offer two or three framings with a recommendation, and draft the announcement for the user to send.</li>
-<li><strong>Soft stop.</strong> If after two or three rounds of pushback the user says &quot;just write it down&quot;, accept the plan. Record your concern in the failure-mode line instead of arguing.</li>
+<li><strong>Shrink scope when the pattern says so.</strong> If the current higher-level plan has a cut-scope rule that keeps firing, or goals keep slipping, default to one goal and ask what has changed before accepting more.</li>
+<li><strong>Name the kind of week.</strong> If meetings, hiring, logistics, or supporting colleagues dominate, ask whether they want a people week or want to cut enough to protect one deep goal. &quot;Defend harder&quot; usually fails; ring-fence one deep item on the cleanest day.</li>
+<li><strong>External deadlines go first.</strong> With two or more goals, ask which has the harder external deadline. It ships first, even if the other feels heavier or has rolled over longer.</li>
+<li><strong>Team goals need an announcement.</strong> If a goal needs the team, ask what end-of-week goal to give them and where to announce it. Offer two or three framings with a recommendation and draft the message.</li>
+<li><strong>Respect the soft stop.</strong> If after two or three rounds of pushback the user says &quot;stop arguing, write it down&quot;, accept and move on. Record your concern in the failure-mode line.</li>
+<li><strong>Be firm when it helps:</strong> &quot;That&#39;s four goals; pick three.&quot; &quot;You said this three weeks ago. What&#39;s different?&quot;</li>
 </ul>
 <h3>Step 5: Non-negotiables</h3>
-<ol>
-<li><strong>Check the current higher-level plan.</strong> If it lists non-negotiables, ask whether they still fit. If the user corrects one, update the higher-level plan too, after approval.</li>
-<li><strong>Score the current scorecard</strong> if one exists, using its own items, lookback, and threshold. If none exists, say so once and ask what minimum health, relationship, and recovery floor the user wants.</li>
-<li><strong>Honour explicit pauses.</strong> Drop habits the user has paused or retired. Ask at most once per session whether they are back.</li>
-<li><strong>Verify protected days are free.</strong> Check for events or travel on any rest or focus day, and agree a move or an accepted slip.</li>
-<li><strong>Push for concrete mitigations</strong> when something is faltering. Ask up to three follow-ups until the user names an action and a day or time.</li>
-</ol>
-<ul>
-<li>Good: &quot;Phone out of the bedroom from Tuesday, with a wind-down alarm an hour before my usual bedtime.&quot;</li>
-<li>Not enough: &quot;I&#39;ll try to sleep more.&quot;</li>
-</ul>
-<p>For sleep in particular: lead with the numbers and nights; respect the user&#39;s stable sleep window and cap any proposed bedtime shift at about 30 minutes, since bigger shifts usually fail; require both a bedtime and a wind-down trigger; and if the same problem appeared last week, ask what is actually different this time. Record commitments verbatim so the next session can compare.</p>
+<p>Check whether the current quarter or month plan lists non-negotiables or a scorecard. If one exists, score its own lookback with its own items and threshold, and raise any fired cut-scope rule during shaping. If an item is out of date, update the higher-level plan after approval, not just this week. If no current plan exists, say so once and ask what minimum health, relationship, and recovery floor they want. Never revive an expired scorecard.</p>
+<p>Honour explicit pauses: do not re-propose a paused habit or retired experiment; ask at most once whether it is back. Check that a protected day (writing day, rest day) is actually free before relying on it.</p>
+<p>If a non-negotiable is faltering, ask up to three follow-ups until the user names <strong>a specific action plus a day and time.</strong></p>
+<div class="table-wrap" tabindex="0" aria-label="Scrollable table"><table><thead><tr><th>Quality</th><th>Example</th></tr></thead><tbody><tr><td>Accept</td><td>&quot;Phone out of the bedroom from Tuesday; wind-down alarm at [time] each evening.&quot;</td></tr><tr><td>Accept</td><td>&quot;Long run Saturday at [time]. Mobility session Thursday after lunch.&quot;</td></tr><tr><td>Reject</td><td>&quot;I&#39;ll try to sleep more.&quot;</td></tr><tr><td>Reject</td><td>&quot;I&#39;ll exercise more this week.&quot;</td></tr></tbody></table></div>
+<p><strong>When sleep is flagged:</strong> lead with the numbers and the user&#39;s target. Protect their normal sleep window rather than moving it; cap any shift at about 30 minutes earlier, since large shifts under load rarely hold. Require both a bedtime and a wind-down trigger, because the hour before bed is what fails. If the same issue appeared last week, ask what is actually different. Record the commitment word for word so next week can compare.</p>
 <h3>Step 6: Cut the calendar</h3>
-<p>First ask: &quot;Do you want to cut meetings this week, or keep them all?&quot; If keep, note &quot;No cuts this week (chose to keep)&quot; and move on.</p>
-<p>Otherwise, for each meeting, ask whether it serves a goal, a non-negotiable, or a team commitment. List those that do not. The user decides each: keep, cut, shorten, or reschedule. If someone else organises a recurring meeting, the change is a message to them, not a calendar edit. Print a short message for each change; the user picks the channel.</p>
-<pre><code>Hi &lt;name&gt;, I&#39;m protecting time this week for &lt;goal&gt; and need to &lt;cancel / move / shorten&gt; our &lt;meeting&gt; on &lt;DD MMM&gt;. Could we &lt;async update / next week / shorter slot&gt; instead? Thanks for understanding.</code></pre>
+<p>Ask first: &quot;Do you want to cut meetings this week, or keep them all?&quot; If keep, note &quot;No cuts&quot; and skip.</p>
+<p>Otherwise, for each meeting ask whether it serves a weekly goal, a non-negotiable, or a team commitment. If none, it is a candidate. The user decides per meeting: keep, cut, shorten, or reschedule. Draft a short, warm, specific message for each change; the user picks the channel and sends it. For recurring meetings someone else organizes, the action is a message to the organizer, not a calendar edit.</p>
 <h3>Step 7: Task triage</h3>
-<p>Ask first whether the user wants to triage alone. If so, note it and skip the writes. If the user pauses to clear tasks or messages themselves, re-read live data when they return.</p>
-<p><strong>First pass: chronic deferrals.</strong> Show tasks deferred more than five times as one batch: &quot;Move these N to parked?&quot; Default to parked, not archived or deferred again. One yes or no, then update in a batch.</p>
-<p><strong>Second pass: one by one,</strong> sorted by importance, urgency, then age. Write each decision immediately.</p>
-<div class="table-wrap" tabindex="0" aria-label="Scrollable table"><table><thead><tr><th>Decision</th><th>Action</th></tr></thead><tbody><tr><td>Do this week</td><td>Keep open with a due date in the target week; candidate for a block</td></tr><tr><td>Done</td><td>Mark done; finished tasks are often left open</td></tr><tr><td>Defer</td><td>Set a future date and increment the deferral counter</td></tr><tr><td>Delegate</td><td>The user names the owner; note &quot;Delegated to &lt;name&gt; on &lt;date&gt;&quot;</td></tr><tr><td>Delete</td><td>Archive</td></tr></tbody></table></div>
-<p>Do not park tasks the user calls important; give them dated slots. Before proposing delegation, check whether the task can only be done by the user.</p>
-<h3>Step 8: Pre-mortem and deprioritise</h3>
-<p>Do this before calendar blocking, so the answers shape which blocks need the most protection.</p>
+<p>Ask whether the user wants to triage themselves. If yes, note it and skip the writes. If they pause mid-session to clear loops, re-read tasks and inboxes live before advising. Do not park tasks the user called important; give them dated slots. Check who is responsible before suggesting delegation.</p>
+<p><strong>First pass:</strong> offer tasks past the deferral threshold as one batch: &quot;These N tasks have been deferred 5+ times. Move to parked?&quot; Default to parked, not archived.</p>
+<p><strong>Second pass, one by one</strong>, sorted by importance, urgency, then age:</p>
+<div class="table-wrap" tabindex="0" aria-label="Scrollable table"><table><thead><tr><th>Decision</th><th>Write</th></tr></thead><tbody><tr><td>Do this week</td><td>Keep todo; due date in target week; candidate for a block</td></tr><tr><td>Already done</td><td>Mark done</td></tr><tr><td>Punt</td><td>New due date; increment deferral count</td></tr><tr><td>Delegate</td><td>User names the role or person; note &quot;Delegated to [role] on [date]&quot;</td></tr><tr><td>Delete</td><td>Archive</td></tr></tbody></table></div>
+<p>Write after each decision; small batches are fine if the user is moving fast.</p>
+<h3>Step 8: Pre-mortem and deprioritize</h3>
+<p>Do this before blocking time, so the answers shape the blocks.</p>
 <ul>
-<li><strong>Pre-mortem:</strong> &quot;If this week fails, what is the most likely reason?&quot; Record one to three lines.</li>
-<li><strong>Deprioritise:</strong> &quot;What can you delete, delegate, reschedule, or reset expectations on? What in-flight work will you explicitly not push this week?&quot; Pausing one stream often helps others ship.</li>
+<li><strong>Pre-mortem:</strong> &quot;If this week fails, what is the most likely reason?&quot; One to three lines.</li>
+<li><strong>Deprioritize:</strong> &quot;What can you delete, delegate, reschedule, or reset expectations on? What in-flight work will you explicitly not push this week?&quot; Pausing one parallel stream helps the others ship.</li>
 </ul>
 <h3>Step 9: Break goals into tasks</h3>
-<p>For each goal, create one to five tasks of 5 minutes to 3 hours that together complete it. Also add tasks for &quot;do this week&quot; triage items, delegation follow-ups, and meeting prep. If a pending decision could reshape a goal, create only tasks that survive either outcome.</p>
-<p><strong>Do the work before proposing.</strong> Gather the links and context the user will need. Draft what you can: outlines, email drafts, review lists, or decision options with tradeoffs.</p>
-<p>For four or more tasks, show a compact table first:</p>
-<div class="table-wrap" tabindex="0" aria-label="Scrollable table"><table><thead><tr><th>#</th><th>Task</th><th>Due</th><th>Minutes</th><th>Owner</th></tr></thead><tbody><tr><td>[1]</td><td>[Verb-first title]</td><td>[DD MMM]</td><td>[estimate]</td><td>[user or role]</td></tr></tbody></table></div>
-<p><strong>Per-task flow:</strong></p>
-<ol>
-<li><strong>Check for duplicates</strong> among open and parked tasks using two or three distinctive title words. If it is the same work, update that record in place.</li>
-<li><strong>Propose</strong> the title, notes, and fields.</li>
-<li><strong>The user approves, edits, or rejects.</strong> Rejected means dropped.</li>
-<li><strong>Create or update</strong> one at a time and keep the reference for blocking.</li>
-</ol>
-<p><strong>Defaults:</strong> importance follows the goal; urgency is time-sensitive only if it must land this week; spread due dates across the week; use realistic estimates (5, 15, 30, 60, 90, 120, 180 minutes); match the style of existing task titles.</p>
-<pre><code>Serves weekly goal: &lt;goal&gt;. Ladders to: &lt;higher-level goal&gt;.
+<p>For each goal, propose one to five tasks of 5 minutes to 3 hours that together complete it. Also add tasks for &quot;do this week&quot; triage items, delegation follow-ups, and meeting prep that needs its own time.</p>
+<ul>
+<li><strong>Hold creation when a decision is pending.</strong> If an upcoming decision could reshape a goal, create only tasks that survive either outcome.</li>
+<li><strong>Use a compact table for four or more tasks</strong> (number, task, due, estimate, owner). Write full notes on approval.</li>
+<li><strong>Prepare before proposing.</strong> Gather links from what you already read. For writing, sketch an outline; for an email, draft it; for a review, list the items; for a decision, lay out options and trade-offs.</li>
+</ul>
+<p><strong>Per task:</strong> (1) check for duplicates by searching open and parked tasks for two or three distinctive title words, and update the existing record if it is the same work; (2) propose title, notes, and fields inline; (3) accept edits and drop rejections; (4) write one at a time and keep the reference for calendar linking.</p>
+<p><strong>Field defaults:</strong> importance follows goal priority; urgency is time-sensitive if it must land this week, immediate only for same-day external asks, otherwise flexible. Spread due dates in natural order across the week. Use realistic estimates (5, 10, 20, 45, 60, 90, 120, 180 minutes). Match existing title style; verb-first is usually clearest.</p>
+<p><strong>Notes template</strong> (use checkbox syntax the user&#39;s system renders):</p>
+<pre><code>Serves weekly goal: [goal]. Links to: [longer-term goal].
 
-**Done when:** &lt;one-sentence binary criterion&gt;
+Done when: [one binary sentence]
 
-**Checklist:**
-[] &lt;first concrete action&gt;
-[] &lt;next action&gt;
+Checklist:
+[] [first concrete action]
+[] [next action]
 
-**Refs:**
-- &lt;anchor document or thread&gt;
+Refs:
+- [anchor document or thread]
+- [draft or research already gathered]
 
-&lt;optional: draft, outline, or options&gt;</code></pre>
-<p>Use whatever checkbox syntax the user&#39;s system renders. Avoid single tasks that restate a multi-day goal, more than five tasks per goal (that is a project; say so), and task records for routines like exercise, which belong in the plan and calendar.</p>
+[Optional: draft, outline, or option trade-offs]</code></pre>
+<p>If a section is genuinely empty, say so in one sentence. <strong>Avoid:</strong> a single task that restates the goal; more than five tasks per goal (flag it as a project); tasks for routines, which belong in the plan and calendar; silent batch creation.</p>
 <h3>Step 10: Calendar blocking</h3>
-<p><strong>Show the week as day-by-day paragraphs first,</strong> one short paragraph per day, with open questions at the end. Use tables only after the shape is agreed.</p>
-<p><strong>Check the buffer.</strong> If proposed blocks exceed the agreed share of free hours, cut or shrink a goal rather than squeezing.</p>
-<p><strong>Block:</strong> every task of 45 minutes or more, every task with a hard deadline, and every timed non-negotiable such as training or recovery. If a training plan prescribes sessions, give each a specific slot; the key session wins if only one fits. Count evening work as capacity only if the user really works evenings, and pair late work with a stated stop time when sleep is shaky.</p>
-<p><strong>Propose a message-processing block</strong> of one to two hours whenever communication debt crossed a threshold.</p>
-<p><strong>Size check.</strong> If a block is shorter than its task estimate, flag it and offer a longer block, a split, or a smaller task.</p>
-<p><strong>Reuse the user&#39;s placeholders.</strong> Rename generic focus blocks the user already created rather than duplicating them, but split any block that spans meals or meetings into precise work slots.</p>
-<p>Ask &quot;What else am I missing?&quot; before creating anything.</p>
-<p><strong>Per-slot flow:</strong></p>
-<ol>
-<li>Re-read the live calendar just before writing. Treat changes the user made during the session as a diff and fold them in.</li>
-<li>Propose one slot: &quot;Draft two - Sat &lt;start&gt;-&lt;end&gt; (3h). OK?&quot;</li>
-<li>On approval, create it in the confirmed time zone, using the user&#39;s focus-block style for solo work and normal events for meetings, calls, and exercise.</li>
-<li>If rejected, offer the next best slot.</li>
-</ol>
+<p><strong>Show the week as short day-by-day paragraphs first</strong>, with open questions at the end. Detailed tables come only after the shape is agreed.</p>
+<p><strong>Check capacity:</strong> total the proposed blocks against working hours left after meetings. If they exceed the non-buffer share, cut or shrink a goal with the user. Count evenings as capacity only if the user really works them, and pair late work with a hard stop when sleep is shaky.</p>
+<p><strong>Block rules:</strong></p>
+<ul>
+<li>Reuse focus blocks the user already created by renaming them instead of adding new ones. Do not label a long block that spans meals or meetings as one task; split it into precise slots.</li>
+<li>Treat blocks the user adds mid-session as theirs; fill only real gaps.</li>
+<li>Solo work uses the focus event type and colour; ordinary events are for meetings, calls, workouts, and errands.</li>
+<li>Re-read the live calendar right before writing and verify every slot.</li>
+<li>If a block is shorter than the task estimate, flag it and offer a longer block, a split, or a smaller task.</li>
+<li>Propose a 1–2 hour inbox and messages block whenever anything is past the &quot;behind&quot; thresholds or a regular team update is due.</li>
+<li>Block protected routines explicitly, including prescribed training sessions; the key session wins if only one fits. If a routine conflicts with a protected rest day, ask once and carry the answer forward.</li>
+</ul>
+<p><strong>Per slot:</strong> propose day, exact start and end, and duration (&quot;Writing — draft 2 — Saturday [start]–[end], 3h. OK?&quot;), create on approval, or offer the next best slot. Before creating anything, ask: <strong>&quot;What else am I missing?&quot;</strong></p>
 <h3>Step 11: Write the simple plan</h3>
-<p><strong>Goal records.</strong> Check goals already linked to the week. Update matching ones in place instead of creating near-duplicates. When linking new goals, add to existing links; never replace them.</p>
-<p><strong>Plan note.</strong> This is the canonical summary, not an audit log. Tasks hold checklists; the calendar holds times. Keep it to one screen and omit empty headings.</p>
+<p><strong>Goal records:</strong> check goals already linked to the week record first. If one matches, update it in place and increment its change count. Create only genuinely new goals. Add links; never replace existing ones.</p>
+<p><strong>Week record:</strong> write the plan text. It is a clarifying summary, not an audit log; aim for one screen. Omit empty headings. Use at most two goals unless the user chose a third. Keep triage, rollover detail, and meeting mechanics in the underlying records.</p>
 <pre><code>## Theme
-&lt;theme from the higher-level plan, or 2-5 words&gt;
+[theme from the higher-level plan, or a 2–5 word theme]
 
 ## Weekly goals
-[] &lt;Goal 1&gt; - ladders to &lt;higher-level goal&gt;
-    Done when: &lt;2-4 checkable outputs&gt;
+[] [Goal 1] — links to [longer-term goal]
+    Done when: [2–4 checkable outputs]
+[] [Goal 2] (stretch, if three goals) — links to [longer-term goal]
+    Done when: [2–4 checkable outputs]
 
 ## Protect
-- &lt;health, relationship, or recovery floor with concrete slots&gt;
+- [health, relationship, or recovery floor with concrete slots]
 
 ## Week shape
-- &lt;day&gt;: &lt;the one essential focus or constraint&gt;
+- [day]: [the one essential focus or constraint]
 
 ## Not this week
-- &lt;explicitly deprioritised work&gt;
+- [explicitly deprioritized work]
 
 ## Failure mode
-- &lt;most likely failure&gt; -&gt; &lt;specific counter&gt;</code></pre>
-<p>Use at most two goals unless the user chose a third, marked stretch.</p>
+- [most likely failure] → [specific counter]</code></pre>
 <h3>Step 12: Close</h3>
-<p>Give operational counts in one sentence: goals committed, tasks created or updated, blocks booked, meetings cut, tasks triaged. Show the current scorecard&#39;s success bar briefly if one exists. End with the final plan on one screen, then one closing sentence. Do not recap research, questions, or tool mechanics.</p>
+<p>Give one sentence of counts: goals committed, tasks created or updated, blocks booked, meetings cut, tasks triaged. If a current scorecard exists, show its success bar compactly. Then end with the final plan on one screen: theme, goals with definitions of done, what to protect, the day shape, what is not happening, and the failure mode with its counter.</p>
+<p>Do not recap the research, interview, or tool mechanics. End with one sentence. No thanks, no extra summary.</p>
 <h3>Step 13: Improve the workflow</h3>
-<p>At the end, note what to change next time: what wasted effort, which assumption proved wrong, what the user corrected, and which step fired pointlessly. Make precise edits to the user&#39;s stored instructions for this workflow and show a two- or three-bullet summary. Make small fixes directly if allowed; ask before adding or removing steps. If nothing needs changing, say so.</p>
-<h3>Hiring audit template</h3>
-<p>Use this for a short, delegated check when the user hires. Keep candidate data to names, stages, and dates needed for scheduling, and keep it inside the user&#39;s planning space.</p>
-<pre><code>Audit hiring load for &lt;Mon DD MMM&gt; to &lt;Sun DD MMM&gt;. Under 250 words, names and numbers only, about 3 minutes. If a call fails twice, skip it and note the gap.
-1. Confirmed interviews where the user is an interviewer (exclude unscheduled placeholders): day, time, candidate, role, total hours.
-2. Late-stage candidates whose next step depends on the user. Flag one as overdue only if a real current-stage entry date exceeds the response target; never use the application creation date. Otherwise report counts per stage and say stage age was not checked.</code></pre>
-<p>If decisions are overdue or interviews exceed about three hours, name the cost of delay and ask who owns the response. In planning discussions, focus on role-relevant decisions: whether each assessment still distinguishes relevant performance, who is waiting on a decision, and how much interviewer time the week holds.</p>
+<p>Before finishing, note what to change next time: what wasted time, which assumption was wrong, what the user corrected, what new pattern appeared, and which step never helped. If the user has opted in, also look briefly at the week&#39;s interactions with their assistant for repeated corrections or frustration that never became a saved instruction, and propose a specific fix.</p>
+<p>Write precise edits to the user&#39;s saved workflow notes; one exact line beats a general reminder. Show a two- or three-bullet summary. Apply small fixes directly if the user agreed to that; ask before adding or removing a step. If nothing is worth changing, say so.</p>
+<h3>Common failure modes</h3>
+<div class="table-wrap" tabindex="0" aria-label="Scrollable table"><table><thead><tr><th>Failure</th><th>Counter</th></tr></thead><tbody><tr><td>Promoting the most visible deadline into the top goal</td><td>Ask why it matters before proposing</td></tr><tr><td>Rolling the same goal over again and again</td><td>Show the change count in the brief; question goal, format, scope, or lane</td></tr><tr><td>Planning the week before learning what must ship today</td><td>On first-day runs, ask first</td></tr><tr><td>Missing a commitment that is not on the calendar</td><td>Check external dates; ask</td></tr><tr><td>Assuming deep-work capacity in a people-heavy week</td><td>Ask which kind of week the user wants</td></tr><tr><td>Writing from stale reads, notes, or scorecards</td><td>Re-read live; check expiry triggers and dates</td></tr><tr><td>Treating a data gap as real behaviour</td><td>Ask before concluding</td></tr><tr><td>Blocks shorter than task estimates</td><td>Compare and flag</td></tr><tr><td>Overwhelming proposals</td><td>Day paragraphs first; compact tables for batches</td></tr><tr><td>Arguing past the soft stop</td><td>Accept, write it down, record the concern</td></tr></tbody></table></div>
 <h3>Style</h3>
 <ul>
-<li>Be direct and terse. Say &quot;this is likely to fail because X&quot; when you believe it.</li>
-<li>Be firm when needed: &quot;That&#39;s four goals; pick three.&quot; &quot;What&#39;s actually different from three weeks ago?&quot;</li>
-<li>Skip end-of-step celebrations. Use one date format, such as <code>DD MMM</code>.</li>
-<li>If no higher-level plan exists, ask whether to continue without one or pause for a monthly review. Do not invent a stand-in.</li>
-</ul>
-<h3>Common failure modes</h3>
-<div class="table-wrap" tabindex="0" aria-label="Scrollable table"><table><thead><tr><th>Failure</th><th>Counter</th></tr></thead><tbody><tr><td>Promoting the most visible deadline into the goal</td><td>Readiness gate; ask what the user wants to make true</td></tr><tr><td>Planning deep work inside a meeting-heavy week</td><td>People-heavy week check; ring-fence one clean day</td></tr><tr><td>Rolling the same goal over repeatedly</td><td>Show the slip count in the brief; ask if the goal is wrong</td></tr><tr><td>A hidden external commitment appears late</td><td>Scan for plans of record and dated commitments early; ask what is missing</td></tr><tr><td>Treating sync gaps as real behaviour</td><td>Report gaps and confirm</td></tr><tr><td>Stale calendar at write time</td><td>Re-read right before creating events</td></tr><tr><td>Duplicate goals or tasks</td><td>Check existing records and update in place</td></tr><tr><td>Overwhelming proposals</td><td>Day-by-day paragraphs, compact tables, one decision per question</td></tr><tr><td>Arguing past the user&#39;s decision</td><td>Soft stop; record the concern as the failure mode</td></tr><tr><td>Reviving paused habits or expired rules</td><td>Use only the current plan; honour pauses</td></tr><tr><td>Reading more personal data than needed</td><td>Authorised sources, structured fields first, minimum detail about others</td></tr></tbody></table></div></article><footer><a href="/skills/LICENSE.txt">CC0</a></footer></main><script>document.querySelector('[data-copy]').addEventListener('click',async function(){try{const text=await fetch(this.dataset.copy).then(r=>{if(!r.ok)throw new Error();return r.text()});await navigator.clipboard.writeText(text);this.textContent='Copied'}catch{this.textContent='Open raw Markdown'}})</script></body></html>
+<li>Be direct and brief. Say &quot;this will fail because X&quot; when you believe it.</li>
+<li>No celebratory step summaries. Move on.</li>
+<li>Use one unambiguous date format throughout.</li>
+<li>When stuck, narrow with two or three concrete options; do not propose the whole week before the gate passes.</li>
+<li><strong>Low-capacity signal:</strong> if energy, focus, or sleep flags fire, treat it as a hypothesis to test. Ask how much capacity is real and what recovery must be protected. Once confirmed, shape a lighter plan, usually one goal, with more rest and harder cuts.</li>
+</ul></article><footer><a href="/skills/LICENSE.txt">CC0</a></footer></main><script>document.querySelector('[data-copy]').addEventListener('click',async function(){try{const text=await fetch(this.dataset.copy).then(r=>{if(!r.ok)throw new Error();return r.text()});await navigator.clipboard.writeText(text);this.textContent='Copied'}catch{this.textContent='Open raw Markdown'}})</script></body></html>

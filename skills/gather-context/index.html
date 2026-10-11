@@ -1,98 +1,98 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="robots" content="noindex,nofollow,noarchive"><title>Gather context · AI skills</title><meta name="description" content="Search the sources most likely to matter, at the depth the request warrants, and turn the findings into one concise, well-sourced context brief.">
-<link rel="alternate" type="text/markdown" href="/skills/raw/gather-context.md"><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%23b4552d%22/><text x=%2250%22 y=%2253%22 dominant-baseline=%22central%22 text-anchor=%22middle%22 font-family=%22Georgia, 'Times New Roman', serif%22 font-size=%2246%22 letter-spacing=%221%22 fill=%22%23fdfaf4%22>DE</text></svg>"><link rel="stylesheet" href="/skills/styles.css"></head><body><main><a class="back" href="/skills/">← Skills</a><header class="skill-header"><h1>Gather context</h1><p class="description">Search the sources most likely to matter, at the depth the request warrants, and turn the findings into one concise, well-sourced context brief.</p><div class="skill-actions"><a href="/skills/raw/gather-context.md">Raw Markdown</a><button class="copy" type="button" data-copy="/skills/raw/gather-context.md">Copy Markdown</button></div></header><article class="skill-body"><p>Build a well-sourced context brief on a person, organization, project, topic, or decision. Search the sources that plausibly hold relevant information. Then combine the findings into one organized brief with direct links to the evidence.</p>
-<p><strong>Right-size the effort first. This is the most important rule.</strong> Match the depth of the search to what the user actually needs. &quot;Remind me where we are with X&quot; needs a quick look at two or three obvious sources and a short answer. &quot;Deep-dive before a major decision&quot; needs a broad, verified search. Most requests sit in between.</p>
-<p>Two failure modes are equally bad:</p>
+<meta name="robots" content="noindex,nofollow,noarchive"><title>Gather context · AI skills</title><meta name="description" content="Search only the sources likely to matter, at an effort level matched to the stakes, and turn the findings into one concise, well-sourced context brief.">
+<link rel="alternate" type="text/markdown" href="/skills/raw/gather-context.md"><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%23b4552d%22/><text x=%2250%22 y=%2253%22 dominant-baseline=%22central%22 text-anchor=%22middle%22 font-family=%22Georgia, 'Times New Roman', serif%22 font-size=%2246%22 letter-spacing=%221%22 fill=%22%23fdfaf4%22>DE</text></svg>"><link rel="stylesheet" href="/skills/styles.css"></head><body><main><a class="back" href="/skills/">← Skills</a><header class="skill-header"><h1>Gather context</h1><p class="description">Search only the sources likely to matter, at an effort level matched to the stakes, and turn the findings into one concise, well-sourced context brief.</p><div class="skill-actions"><a href="/skills/raw/gather-context.md">Raw Markdown</a><button class="copy" type="button" data-copy="/skills/raw/gather-context.md">Copy Markdown</button></div></header><article class="skill-body"><p>Use this workflow to build a well-sourced context brief on a person, organization, project, topic, or decision. Search only the sources that plausibly hold relevant information. Then combine the findings into one organized brief with direct links to the evidence.</p>
+<p>Typical requests include &quot;gather context on X&quot;, &quot;what do we have on X&quot;, &quot;pull everything about X&quot;, &quot;get me up to speed on X&quot;, &quot;what&#39;s the latest with X&quot;, and &quot;background on X before my call&quot;. The user usually wants this before acting: writing, deciding, meeting, pitching, hiring, or catching up.</p>
+<p>If the user wants a structured meeting-preparation document, such as an agenda page, use a dedicated meeting-prep workflow if one exists. This workflow gathers raw context. If it is unclear which the user wants, ask.</p>
+<h3>The most important rule: right-size the effort</h3>
+<p>Match the depth of the search to what the user actually needs. &quot;Remind me where we are with X&quot; needs a quick look at two or three obvious sources and a short answer. &quot;Deep-dive on this partner before a major decision&quot; needs a broad search. Most requests fall in between.</p>
+<p>There are two failure modes, and both are bad:</p>
 <ul>
-<li><strong>Over-gathering:</strong> searching every connected system, starting many parallel searches, and writing an essay when the user asked a quick question.</li>
-<li><strong>Under-gathering:</strong> checking one source, finding a few items, and stopping when the request clearly needed more. The key fact is often in a chat thread or meeting record the user has forgotten.</li>
+<li><strong>Over-gathering.</strong> Querying every connected system, starting many parallel workers, and writing an essay when the user asked a quick question.</li>
+<li><strong>Under-gathering.</strong> Checking one source, finding a few messages, and stopping when the request clearly needed more. The key fact is often in a chat thread or meeting record the user forgot about.</li>
 </ul>
-<p>The test for any source: <em>for this specific request, would a sensible researcher think it is worth checking here?</em> Relevance and effort level both limit breadth. A topic question does not need the hiring system. A quick status check does not need every source, even if each might hold a small detail. Skipping a source is judgment, not laziness.</p>
-<h3>When to use this</h3>
-<p>Use this when the user wants context before acting: writing, deciding, meeting, pitching, hiring, or getting up to speed. Typical requests: &quot;gather context on...&quot;, &quot;what do we have on...&quot;, &quot;get me up to speed on...&quot;, &quot;what&#39;s the latest with...&quot;, &quot;background on... before my call&quot;.</p>
-<p>If the user wants a structured preparation document for a specific scheduled meeting, use a dedicated meeting-prep workflow if one exists. This workflow is for raw context assembly. If unsure, ask.</p>
+<p>For each source, ask: <em>for this specific request, would a sensible researcher think it is worth checking here?</em> Both relevance and effort level limit breadth. Skipping an irrelevant source is good judgement, not laziness.</p>
 <h3>Step 1: Set purpose and access boundary</h3>
-<p>State in one line the decision, task, or question the research supports. Use private sources only when the user is authorized to access them and they are relevant to that purpose. Having access is not a reason to search.</p>
+<p>State the decision, task, or question the brief must support. Use private sources only when the user is authorized to access them and they are relevant to that purpose. Having access to a source is not, by itself, a reason to search it.</p>
 <p>When the subject is a person, apply a stricter boundary:</p>
 <ul>
 <li>Use the minimum sources and information needed for the stated task.</li>
-<li>Do not read private communications just because they are available.</li>
-<li>Omit unrelated or sensitive personal details. Do not infer private or protected traits.</li>
-<li>Respect consent, confidentiality, need-to-know limits, and reasonable privacy expectations.</li>
-<li>Put the brief only where its audience is allowed to see the underlying material.</li>
-<li>For hiring subjects, focus on role-relevant capabilities, role alignment, and diagnostic evidence from the assessment process.</li>
+<li>Do not search private messages or records just because they are available.</li>
+<li>Leave out unrelated or sensitive personal details. Do not guess at private or protected traits.</li>
+<li>Respect consent, confidentiality, need-to-know limits, and the person&#39;s reasonable privacy expectations.</li>
+<li>For hiring or assessment, focus on role-relevant capabilities, diagnostic evidence of past work, and how well the person&#39;s experience aligns with the role&#39;s actual requirements. Use only the hiring records the user is permitted to see.</li>
+<li>Put the brief only where its audience is allowed to see the source material.</li>
 </ul>
-<p>If purpose, authorization, or destination is unclear, resolve it before searching private sources.</p>
-<h3>Step 2: Scope the gather</h3>
+<p>If the purpose, authorization, or destination is unclear, settle it before searching private sources.</p>
+<h3>Step 2: Scope the request</h3>
 <h4>Pick an effort level</h4>
-<div class="table-wrap" tabindex="0" aria-label="Scrollable table"><table><thead><tr><th>Tier</th><th>When</th><th>How</th></tr></thead><tbody><tr><td>Quick</td><td>Status check or &quot;remind me&quot;</td><td>1-3 obvious sources, one pass each, a few lines of answer. Search directly.</td></tr><tr><td>Standard</td><td>The common case</td><td>A handful of relevant sources, a couple of queries each, a tight brief. Parallelize only if it clearly saves time.</td></tr><tr><td>Deep</td><td>High-stakes prep: major decision, big pitch, key hire</td><td>Search broadly, run searches in parallel, use several queries per source, verify claims.</td></tr></tbody></table></div>
-<p>When unsure, choose the lighter tier and offer to go deeper. Escalating is cheap; an unnecessary exhaustive sweep is expensive. State the tier in one short line so the user can redirect, for example: &quot;Quick look across email, chat, and docs. Say the word if you want the full sweep.&quot;</p>
+<div class="table-wrap" tabindex="0" aria-label="Scrollable table"><table><thead><tr><th>Level</th><th>When to use</th><th>What to do</th></tr></thead><tbody><tr><td>Quick</td><td>Status check or &quot;remind me&quot;</td><td>Check the one to three most obvious sources, one pass each. Answer in a few lines. Search directly; no parallel workers.</td></tr><tr><td>Standard</td><td>The common case</td><td>Check a handful of relevant sources with a couple of queries each. Write a tight brief. Use parallel workers only if they clearly save time.</td></tr><tr><td>Deep</td><td>High stakes: major decision, big pitch, key hire</td><td>Search broadly, use parallel workers if available, run several queries per source, and verify important claims.</td></tr></tbody></table></div>
+<p>If unsure, choose the lighter level and offer to go deeper. Escalating is cheap; an oversized search is expensive. State your chosen level in one short line so the user can redirect, for example: &quot;Quick look across email, chat, and notes. Say the word if you want the full sweep.&quot;</p>
 <h4>Classify the subject</h4>
-<p>The subject type decides which sources matter most.</p>
-<div class="table-wrap" tabindex="0" aria-label="Scrollable table"><table><thead><tr><th>Subject</th><th>Start with</th><th>Add when relevant</th></tr></thead><tbody><tr><td>Person</td><td>Email, chat, docs, past meeting records</td><td>Public web profile; hiring records only if the purpose is hiring-related</td></tr><tr><td>Organization</td><td>Public web</td><td>Internal email, chat, docs for any existing relationship; relationship or pipeline records</td></tr><tr><td>Project or initiative</td><td>Docs and wiki, chat</td><td>Shared files, operational databases, code, analytics if there are metrics</td></tr><tr><td>Topic or question</td><td>Several web searches from different angles</td><td>Internal docs and chat for prior thinking</td></tr><tr><td>Decision</td><td>Whatever the options touch</td><td>Organize around the options and the evidence for and against each</td></tr></tbody></table></div>
-<h4>Resolve ambiguity once</h4>
-<p>If the subject is genuinely ambiguous, such as a name shared by several people or a one-word topic with several meanings, ask <strong>one</strong> tight clarifying question before searching. A wrong-target sweep wastes effort. If the subject is clear, go straight to searching.</p>
-<h4>Named sources are a floor, not a ceiling</h4>
-<p>Sources the user names are mandatory. If another source obviously holds decision-relevant context, check it too. The most common case: when results show or the request implies a recent interaction with the subject, such as a meeting this week, read the notes or transcript of that interaction. It is often the richest single source.</p>
+<p>The subject type tells you which sources matter most.</p>
+<div class="table-wrap" tabindex="0" aria-label="Scrollable table"><table><thead><tr><th>Subject type</th><th>Likely sources</th></tr></thead><tbody><tr><td>Person (partner, funder, contact, candidate)</td><td>Email, chat, notes, calendar and meeting records, public web and professional profiles; the hiring system only if the request is hiring-related and authorized</td></tr><tr><td>Company or organization</td><td>Public web first; then email, chat, and notes for any existing relationship; relationship or partner databases if they are a partner or prospect</td></tr><tr><td>Project or initiative</td><td>Notes and wiki, chat, shared documents, operational databases, task records, code repositories, product analytics if metrics matter</td></tr><tr><td>Topic or question</td><td>Several web searches from different angles, plus internal documents and chat for prior thinking</td></tr><tr><td>Decision</td><td>Any of the above, organized around the options and the evidence for and against each</td></tr></tbody></table></div>
+<h4>Clarify only when needed</h4>
+<p>If the subject is truly ambiguous, such as a bare name that could be several people or a one-word topic with several meanings, ask <strong>one</strong> short clarifying question before searching. A wrong-target search wastes many tool calls. If the subject is clear, start. Do not over-ask.</p>
+<h4>Treat named sources as a floor</h4>
+<p>If the user names sources (&quot;search my email and online&quot;), those are required, but they are not the full list. If another source clearly holds decision-relevant context, check it too.</p>
+<p>The most common example: <strong>if the results show, or the request implies, a recent conversation with the subject, read the notes or transcript of it.</strong> A calendar invite or a &quot;good to meet you today&quot; message is the signal. A record of what was actually said is often the richest single source.</p>
 <h4>Set the time window</h4>
-<p>Use the window the user gives. If none is given, pick one that fits the subject, such as the last few months for an active topic, and extend it when the relationship or project is older. State the window in the brief.</p>
-<h3>Step 3: Search the relevant sources</h3>
-<p>For quick and standard tiers, search directly so you see results as they arrive. For deep searches across many sources, search in parallel, one search per source or cluster. Each should return a short digest with links, not raw dumps.</p>
-<p>Depth within each source also scales with the tier. For a deep search, query by name, organization, project keyword, and related people, and do not conclude &quot;nothing there&quot; until you have tried the available search methods. For a quick look, one or two well-chosen queries is correct.</p>
-<h4>Source principles</h4>
-<p>Apply these to whatever systems the user has chosen to connect:</p>
+<p>Use the window the user gives. If none is given, a reasonable default is the last six months, extended further back when the relationship or project is older.</p>
+<h3>Step 3: Search the chosen sources</h3>
+<p>For quick and standard requests, search directly so you see results as they arrive. For deep requests, or when many sources are involved, run searches in parallel if your tools allow, one per source or source cluster. Each parallel search should return a short digest with links, not a raw dump.</p>
+<p>Depth within each source also scales with the level. In a deep search, query by name, organization, project keyword, and related people, and do not conclude &quot;nothing there&quot; until you have tried the available search tools. In a quick search, one or two well-chosen queries on obvious sources is the correct amount.</p>
+<h4>General search principles</h4>
 <ul>
-<li><strong>Start with direct records, then widen.</strong> Search direct correspondence or the subject&#39;s own pages first; when going deeper, search mentions to find where others discuss the subject.</li>
-<li><strong>Read whole items.</strong> Some documents hide content in tabs, sections, attachments, or collapsed threads that a basic read skips. Make sure you read every relevant part and say where a finding came from.</li>
-<li><strong>Check attribution.</strong> Speaker labels, authors, and record owners can be wrong or shared. Attribute quotes and decisions carefully.</li>
-<li><strong>Prefer canonical, maintained records.</strong> Use schema notes or known structure to go straight to the right table or page. Treat weakly maintained records as leads to verify, and do not trust auto-filled fields, such as timestamps, without checking what they actually mean.</li>
-<li><strong>Check freshness.</strong> Verify roles, titles, and statuses against dated, current sources rather than old articles or snapshots. Stored notes and assistant memory reflect what was true when written; verify before relying on them.</li>
-<li><strong>Use conditional sources only when they fit.</strong> Hiring records for hiring purposes, analytics for usage questions, code history for engineering subjects, the user&#39;s personal planning records only for work the user did personally.</li>
+<li><strong>Search for mentions, not just direct contact.</strong> In email and chat, direct correspondence shows the relationship; keyword and name searches show how others discuss the subject.</li>
+<li><strong>Know your tools&#39; blind spots.</strong> Default search modes, readers, and labels can hide content. A &quot;smart&quot; search may bury results under low-value items; a document reader may return only the first tab, section, or sheet; transcript speaker labels may be wrong; auto-filled fields such as timestamps may be placeholders. Prefer the plain or complete option, read every part of a document, and note where each finding came from.</li>
+<li><strong>Use maps before crawling.</strong> If a schema map, data dictionary, or index exists for a database or workspace, read it first so you go straight to the right place.</li>
+<li><strong>Weigh data quality.</strong> Some systems are more reliable than others. Verify records from weaker systems, and ask before relying on sandbox, temporary, or low-priority copies.</li>
+<li><strong>Check freshness.</strong> Confirm role and title claims against dated, current sources rather than old snapshots. Treat stored assistant notes as true when written, and confirm any file, setting, or record they name still exists.</li>
+<li><strong>Use conditional sources only when they fit.</strong> Hiring systems for authorized hiring questions, product analytics when numbers help, code history for engineering subjects, and the user&#39;s own task or journal records when the subject is their own work.</li>
 </ul>
-<h4>Never invent links</h4>
-<p>Never write a URL you have not verified or the user did not supply. Verify it, or omit it and flag the gap.</p>
-<h4>Do not silently substitute sources</h4>
-<p>If a source you judged relevant returns nothing or is unavailable, say so in the brief. Do not quietly fill the gap with an adjacent source. If a connected source fails, try the safe diagnosis and repair steps you control first. Involve the user only for a step that needs them, such as re-authenticating. Report the failure, what you tried, and the one remaining action.</p>
-<p>A source you skipped as irrelevant is not a gap and need not be reported, but never imply you checked it.</p>
-<h3>Step 4: Synthesize into a context brief</h3>
-<p>Combine the findings into one brief, organized by theme rather than by tool. Lead with what matters most for the user&#39;s next action. Resolve contradictions instead of listing both versions. For example, if an old article and a current profile disagree about where someone works, note the conflict, which you trust, and why. Prefer primary and current sources over summaries and secondhand discussion.</p>
-<p><strong>Every sourced claim gets a clickable link</strong> to its primary source. A quote without a link is not finished.</p>
+<h4>Handle missing or failing sources honestly</h4>
+<ul>
+<li><strong>Never invent a link.</strong> Include only links you verified or the user supplied. Otherwise omit the link and flag it. Cite items with links the user can open, not bare internal IDs.</li>
+<li><strong>Do not silently substitute sources.</strong> If a source you judged relevant returns nothing or is unavailable, say so in the brief.</li>
+<li><strong>Try to fix tool failures first.</strong> Attempt safe diagnosis and repair before involving the user. Ask the user only for a step that truly needs them, such as a login or restart, and report the exact failure, what you tried, and the one remaining action.</li>
+<li>A source you deliberately skipped as irrelevant is not a gap. Just do not imply you checked it.</li>
+</ul>
+<h3>Step 4: Synthesize into a brief</h3>
+<ul>
+<li><strong>Resolve contradictions.</strong> Do not list conflicting claims without comment. Example: &quot;An older article says they work at Organization A; their current profile says they left in March. The profile is newer, so I trust it.&quot;</li>
+<li><strong>Prefer primary and current sources.</strong> Treat discussion and summaries as weaker than recorded decisions.</li>
+<li><strong>Lead with what matters for the user&#39;s next action.</strong></li>
+<li><strong>Organize by theme, not by source.</strong></li>
+<li><strong>Link every sourced claim.</strong> A quote without a link is not done.</li>
+</ul>
 <h4>Output template</h4>
-<p>Adapt the headings to the subject:</p>
-<pre><code>## [Subject]: context brief
-*Searched: [sources]. Window: [dates]. Tier: [quick/standard/deep].*
+<p>Adapt headings to the subject. The core structure is:</p>
+<pre><code>## [Subject] — context brief
+*Searched: [sources]. Window: [dates]. Effort: [quick/standard/deep].*
 
 ## Summary
-3-5 bullets: the most decision-relevant facts.
+Three to five bullets: the most decision-relevant facts.
 
 ## What we know
-Who or what this is, current state, history. By theme, with inline links.
+Who or what this is, current state, history. Grouped by theme, with inline links.
 
 ## Relationship and timeline
-(People and organizations) How the user&#39;s organization connects to them; chronology of contact.
+(For people and organizations) How the user&#39;s organization connects to them; chronology of contact.
 
 ## Open questions and gaps
-What no source answered, and which source would likely hold it.
-Any relevant source that was unavailable or empty.
+What no source answered, and which source you would expect to hold it.
+Any relevant source that was unavailable or returned nothing.
 
 ## Sources
-Key links, grouped.</code></pre>
-<p>Calibrate length to the tier. A quick check gets a few lines; a deep dive gets the full structure. This is a scan-and-act document, not an essay.</p>
+Key links, grouped, so the user can dig in.</code></pre>
+<p>Match length to depth. A quick check gets a few lines; a deep dive gets the full structure. This is a scan-and-act document, not an essay.</p>
 <h3>Step 5: Deliver the brief</h3>
+<p>Follow the user&#39;s stated preferences for where briefs go and how they are named. If none exist, use these defaults:</p>
 <ul>
-<li><strong>Short brief:</strong> put it directly in the reply.</li>
-<li><strong>Long or reference brief:</strong> save it as a document in the location the user chooses, within the access boundary from Step 1. Give it a specific, human-readable title; if the user has no convention, a date prefix plus a clear headline works well. Reply with a compact summary of key findings and the link.</li>
+<li><strong>Short brief</strong> (fits on one screen): put it directly in the reply.</li>
+<li><strong>Long or reference brief:</strong> save it as a document in the location the user chooses, if access rules allow. Give it a concise, specific, human-readable title, such as a date plus a headline. Avoid filename-style slugs and type labels. In the reply, give a short summary of key findings and the document link.</li>
 </ul>
-<p>By default, make the brief or link the final block of the reply so it is easy to copy, and put any follow-up offer before it. Follow the user&#39;s preference if they want a different layout.</p>
-<p>If you write into an existing formatted document, check the result in a view that shows structure and styles, not just plain text, before reporting the edit complete. Inserted text can inherit nearby formatting.</p>
-<h3>Final checks</h3>
-<ul>
-<li>The effort tier matched the request, and you stated it.</li>
-<li>Every named source was searched, and any other clearly relevant source was added.</li>
-<li>Any recent interaction with the subject had its record read.</li>
-<li>Unavailable or empty relevant sources are reported, not hidden.</li>
-<li>Every sourced claim links to evidence, and every link is verified.</li>
-<li>Contradictions are resolved or clearly flagged.</li>
-<li>Personal information is limited to what the purpose requires, and the brief sits within an appropriate access boundary.</li>
-</ul></article><footer><a href="/skills/LICENSE.txt">CC0</a></footer></main><script>document.querySelector('[data-copy]').addEventListener('click',async function(){try{const text=await fetch(this.dataset.copy).then(r=>{if(!r.ok)throw new Error();return r.text()});await navigator.clipboard.writeText(text);this.textContent='Copied'}catch{this.textContent='Open raw Markdown'}})</script></body></html>
+<p>Make the deliverable easy to find and copy. Put follow-up offers (&quot;Want me to draft the outreach email too?&quot;) before the brief rather than after it, and avoid trailing commentary that buries the result.</p>
+<p>If you write into an existing formatted document, verify the result at the formatting level, not just as plain text. New text can inherit the style of where it was inserted, so insert into plain body paragraphs or replace whole sections, then re-read the affected range in a view that shows styles before reporting the edit complete.</p>
+<h3>Final checklist</h3>
+<div class="table-wrap" tabindex="0" aria-label="Scrollable table"><table><thead><tr><th>Check</th><th>Pass condition</th></tr></thead><tbody><tr><td>Purpose and access</td><td>Legitimate purpose stated; private sources used only with authorization and relevance</td></tr><tr><td>Effort level</td><td>Level stated in one line and matched to stakes</td></tr><tr><td>Source selection</td><td>Named sources covered; clearly relevant extras added; recent conversation records read</td></tr><tr><td>Honesty</td><td>Gaps and failures reported; no invented links; skipped sources not implied as checked</td></tr><tr><td>Synthesis</td><td>Organized by theme; contradictions resolved; every claim linked</td></tr><tr><td>Privacy</td><td>Unrelated or sensitive personal details omitted; destination fits the audience</td></tr><tr><td>Delivery</td><td>Matches user preferences; brief easy to find; follow-up offers placed before it</td></tr></tbody></table></div></article><footer><a href="/skills/LICENSE.txt">CC0</a></footer></main><script>document.querySelector('[data-copy]').addEventListener('click',async function(){try{const text=await fetch(this.dataset.copy).then(r=>{if(!r.ok)throw new Error();return r.text()});await navigator.clipboard.writeText(text);this.textContent='Copied'}catch{this.textContent='Open raw Markdown'}})</script></body></html>
