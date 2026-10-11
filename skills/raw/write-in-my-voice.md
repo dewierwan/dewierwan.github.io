@@ -1,90 +1,102 @@
 ---
 name: write-in-my-voice
-description: Draft email in the user's real voice while keeping facts, commitments, and tone appropriate. Use a style guide or recent sent messages as evidence, then audit voice and accuracy.
+description: Draft or revise email in the user’s established voice, verify facts and commitments, and optionally create one reviewable draft in the user’s chosen email system.
 ---
 
 # Write in my voice
 
-Use this workflow when drafting or replying to an email on the user's behalf.
+Use this workflow when the user asks to write, reply to, revise, or polish an email. The goal is a concise, copy-ready message that sounds like the user while remaining accurate, appropriate, and within the user’s authority.
 
-## Goal
+## 1. Load the voice profile
 
-Write a copy-ready email that sounds like the user, not like a generic assistant. Preserve the user's usual level of warmth, directness, structure, and punctuation while adapting to the recipient, relationship, and stakes.
+Before drafting, read the user’s current writing profile in full, if one is available. A profile may include examples of sent emails, a style guide, approved reusable wording, and a fact bank.
 
-## 1. Gather voice evidence
+Build or confirm these settings:
 
-Before drafting, read the user's current style guide in full, if one exists. Also use recent examples of emails the user actually sent, especially examples that are similar in audience or purpose.
+| Voice element | What to identify |
+|---|---|
+| Greeting and sign-off | The user’s usual opening, closing, and name format. |
+| Tone | Their normal balance of casualness, warmth, directness, and formality. |
+| Structure | Typical sentence length, paragraph length, use of bullets, and first-sentence pattern. |
+| Language | Preferred contractions, recurring phrases, punctuation habits, and useful colloquialisms. |
+| Avoidances | Words, filler, formatting, or tones the user does not use. |
+| Approved material | Current facts, links, scheduling options, boilerplate, and standard replies the user has authorized. |
 
-Extract a practical voice profile:
+Use recent, genuinely sent messages as stronger evidence than older examples. If examples conflict, use the most recent consistent pattern or ask the user which preference is current.
 
-- Typical greeting and sign-off.
-- Formality level and relationship cues.
-- Usual sentence and paragraph length.
-- Preferred vocabulary, contractions, and degree of directness.
-- Punctuation habits and formatting preferences.
-- Words, phrases, punctuation, or tones to avoid.
-- How the user makes requests, declines, follows up, apologizes, gives feedback, or expresses uncertainty.
-- Approved reusable facts, links, boilerplate, and standard responses.
+Do not access private messages, records, or mailboxes unless the user has a legitimate purpose and has clearly authorized access. Read only the minimum relevant messages and omit unrelated personal or sensitive information from the draft and response.
 
-Recent edits and sent messages are stronger evidence than old examples or general writing advice. If the evidence conflicts, ask the user which preference is current, or use the most recent consistent pattern.
+## 2. Establish the email brief
 
-## 2. Confirm the email brief
-
-Identify or ask for the minimum information needed to send a safe email:
+Identify the minimum information needed to write safely:
 
 1. Who is the recipient, and what is their relationship to the user?
-2. What outcome should the email produce?
-3. What facts, dates, links, attachments, names, or commitments must be included?
-4. What level of warmth or firmness is appropriate?
-5. Is there a deadline, sensitivity, or approval requirement?
+2. What result should the email produce?
+3. Is this a new message, a reply, a follow-up, or a revision?
+4. What facts, dates, names, links, attachments, decisions, or commitments must appear?
+5. What tone is appropriate: routine, warm, firm, sensitive, urgent, or formal?
+6. Is there a deadline, approval boundary, or issue that needs careful wording?
 
-Do not invent facts, availability, decisions, promises, prices, opinions, or emotional reactions. If a missing detail materially changes the meaning, ask a focused question rather than guessing.
+If a missing fact would change the message or create a commitment, ask one focused question. Do not invent availability, decisions, prices, timelines, recipient context, opinions, emotional reactions, or promises.
 
-## 3. Choose the right level of adaptation
+## 3. Adapt voice to the situation
 
-Voice is not a fixed template. Adjust formality to the recipient and stakes without losing the user's recognizable style.
+Keep the user recognizable, but do not treat voice as a rigid template.
 
-- For close working relationships, use the user's normal concise, familiar pattern.
-- For new, senior, external, or sensitive recipients, retain the user's voice but use clearer context and more careful wording.
-- For conflict, rejection, or correction, be direct and factual. Do not add defensive explanations, exaggerated praise, or unnecessary apologies.
-- For requests, state the requested action, owner, and timing plainly.
+- For familiar contacts, follow the user’s ordinary level of brevity and informality.
+- For new, external, senior, or sensitive recipients, retain the user’s voice while making context and requests clearer.
+- For corrections, refusals, conflict, or delays, state the relevant facts and next step plainly. Avoid defensiveness, hollow praise, and excessive apology.
+- For requests, make the requested action, responsible party, and timing easy to identify.
+- Use an approved reusable response, link, or fact when it fits the current context. Never reuse material that is stale, misleading, or unauthorized.
 
-Use approved standard wording or factual material when it fits. Do not reuse it when the context makes it misleading.
+## 4. Draft the smallest complete message
 
-## 4. Draft the smallest complete email
+Use the user’s established greeting and sign-off when appropriate. If no evidence exists, use a broadly useful default: warm-professional, direct, concise, and conventional.
 
-Write only what helps the recipient understand and act. A useful default structure is:
+A reliable structure is:
 
-1. Greeting, if the user's examples normally include one.
-2. Purpose or response in the first sentence.
-3. Essential context, decision, request, or next step.
-4. Clear close and sign-off, if appropriate.
+1. Greeting, if useful.
+2. The purpose, answer, or decision in the first sentence.
+3. Essential context, request, or next step.
+4. Closing and sign-off, if appropriate.
 
-Prefer concrete nouns, active verbs, short sentences, and short paragraphs. Put requests and decisions where they are easy to find. Use bullets only when they make actions, options, or logistics clearer.
+Prefer active verbs, concrete language, short sentences, and short paragraphs. Use bullets only when they make actions, choices, or logistics easier to scan.
 
-Remove:
+Remove material that does not help the recipient act or understand:
 
-- Throat-clearing and process narration.
-- Generic compliments or repeated thanks.
-- Filler such as "just wanted to," "I hope you're well," or similar language unless it is genuinely part of the user's normal voice and useful here.
-- Unnecessary hedging that weakens a clear message.
-- Explanations of how the draft was produced.
+- Generic openings or filler.
+- Process explanations about drafting or internal work.
+- Repeated thanks, praise, or apologies.
+- Hedges that weaken a clear statement.
+- Unnecessary context and unsupported claims.
 
-## 5. Run a voice and safety audit
+## 5. Audit before delivery
 
-Review line by line before presenting the email. Ask:
+Review the draft line by line:
 
-- Would the user plausibly write these exact words?
-- Does the greeting, closing, punctuation, and rhythm match the evidence?
-- Is the tone right for this recipient and situation?
-- Did the draft add a commitment, claim, opinion, or emotion the user did not provide?
-- Are all names, dates, links, attachments, and references accurate?
-- Is the requested action unmistakable?
-- Can any sentence be removed without losing meaning or usefulness?
-- Does the email avoid language the user has identified as undesirable?
+- Does it plausibly sound like the user?
+- Do the greeting, sign-off, punctuation, and rhythm match the available evidence?
+- Is the level of warmth and formality right for this recipient and situation?
+- Are all names, dates, links, attachments, references, and thread details accurate?
+- Did the draft add any commitment, factual claim, decision, or emotion not supplied by the user?
+- Is the requested action or decision unmistakable?
+- Can any sentence be removed without reducing usefulness?
+- Does the draft avoid the user’s known style anti-patterns?
 
-If no style evidence exists, state the assumption briefly and use a broadly useful default: clear, warm-professional, concise, and direct. Invite the user to provide a few real examples or preferences for future drafts.
+If no voice evidence exists, state the assumption briefly only when helpful, then provide the draft. Invite the user to share a few representative sent emails or preferences for future work.
 
-## Output format
+## 6. Deliver or create a reviewable draft
 
-Provide the final email as copy-ready text. If clarification is necessary, ask only the specific question needed to draft safely. Do not add commentary after the final copy unless the user asks for alternatives, rationale, or a revision.
+By default, provide only the copy-ready email in chat. Do not add explanation after it unless the user asks for options, rationale, or edits.
+
+If the user explicitly asks for a draft in an email system:
+
+1. Confirm authorization to use that system and the intended account or workspace when necessary.
+2. Follow the user’s applicable email-system policies and permissions.
+3. For a reply, attach the draft to the correct conversation and preserve the appropriate reply subject convention.
+4. Verify that the created draft belongs to the intended thread or conversation.
+5. Create the draft once for review. Do not send it, and do not silently replace or update it.
+6. If a replacement is needed, explain the change, obtain confirmation when appropriate, then remove the old draft or leave it clearly identified according to the user’s instruction.
+7. Give the user a safe way to open the draft for review and final sending, without exposing unnecessary account or message data.
+
+The user remains responsible for reviewing and sending the message unless they explicitly authorize a separate sending action and the system’s permissions and policies allow it.
