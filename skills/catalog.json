@@ -38,7 +38,7 @@
     },
     {
       "title": "Gather context",
-      "description": "Search the sources that are likely to matter and turn the findings into one concise, well-sourced brief.",
+      "description": "Search the sources most likely to matter, at the depth the request warrants, and turn the findings into one concise, well-sourced context brief.",
       "category": "Research and write",
       "page": "https://dewierwan.com/skills/gather-context/",
       "markdown": "https://dewierwan.com/skills/raw/gather-context.md"
@@ -94,7 +94,7 @@
     },
     {
       "title": "Plan your week",
-      "description": "Review the previous week, choose a few outcomes, cut lower-value work, and protect time for what matters.",
+      "description": "Review last week and plan the next: shape one to three verifiable goals, protect health and focus time, cut low-value work, and schedule approved tasks and blocks.",
       "category": "Plan and reflect",
       "page": "https://dewierwan.com/skills/plan-your-week/",
       "markdown": "https://dewierwan.com/skills/raw/plan-your-week.md"
@@ -108,21 +108,21 @@
     },
     {
       "title": "Get unstuck",
-      "description": "Work out why you are stuck, then use a short intervention suited to tiredness, dread, confusion, or distraction.",
+      "description": "A 10 to 15 minute rescue routine for when you are tired, dreading a task, unclear on the next step, or distracted. Diagnose the state, run one matched intervention, and start one timed block.",
       "category": "Plan and reflect",
       "page": "https://dewierwan.com/skills/get-unstuck/",
       "markdown": "https://dewierwan.com/skills/raw/get-unstuck.md"
     },
     {
       "title": "Wind down for sleep",
-      "description": "A quiet, interactive evening workflow that reduces stimulation, secures distractions, prepares essential morning needs offline, and provides a brief stimulus-control response when sleep does not come.",
+      "description": "A quiet, interactive bedtime workflow that lowers stimulation, secures distractions, prepares the morning offline, and handles sleeplessness with brief stimulus control.",
       "category": "Plan and reflect",
       "page": "https://dewierwan.com/skills/wind-down-for-sleep/",
       "markdown": "https://dewierwan.com/skills/raw/wind-down-for-sleep.md"
     },
     {
       "title": "Plan and book a trip",
-      "description": "Plan a trip around its purpose, compare complete journeys and current fares, and prepare or complete a booking within the user's authorization.",
+      "description": "Plan a trip around its purpose, compare complete door-to-door journeys with current fares and conditions, and prepare or complete a booking within the traveler's authorization.",
       "category": "Plan and reflect",
       "page": "https://dewierwan.com/skills/plan-and-book-a-trip/",
       "markdown": "https://dewierwan.com/skills/raw/plan-and-book-a-trip.md"
@@ -150,21 +150,21 @@
     },
     {
       "title": "Process an inbox to zero",
-      "description": "A privacy-aware workflow for converting authorized email and message inboxes into clear next actions without confusing triage with planning or deep work.",
+      "description": "Triage authorized email and chat inboxes into five buckets (do now, quick win, delegate, task, delete) so no commitment lives only in an inbox.",
       "category": "Meetings and tasks",
       "page": "https://dewierwan.com/skills/process-an-inbox-to-zero/",
       "markdown": "https://dewierwan.com/skills/raw/process-an-inbox-to-zero.md"
     },
     {
       "title": "Design a work sample",
-      "description": "Create or improve a short, paid, asynchronous work sample that produces job-relevant evidence and can be scored consistently. Validate that it distinguishes role-relevant performance through simulated submissions.",
+      "description": "Create or improve a short, paid, asynchronous work sample that yields job-relevant evidence, scores quickly, and is validated with simulated submissions before use.",
       "category": "Hiring and people",
       "page": "https://dewierwan.com/skills/design-a-work-sample/",
       "markdown": "https://dewierwan.com/skills/raw/design-a-work-sample.md"
     },
     {
       "title": "Run a reference call",
-      "description": "Prepare and run a concise reference conversation that gathers specific evidence instead of vague praise.",
+      "description": "Prepare and run a hiring reference call using authorized, minimal research, a tailored opening, direct briefing notes, and consistent role-relevant questions.",
       "category": "Hiring and people",
       "page": "https://dewierwan.com/skills/run-a-reference-call/",
       "markdown": "https://dewierwan.com/skills/raw/run-a-reference-call.md"

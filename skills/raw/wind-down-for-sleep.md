@@ -1,178 +1,215 @@
 ---
 name: wind-down-for-sleep
-description: A quiet, interactive evening workflow that reduces stimulation, secures distractions, prepares essential morning needs offline, and provides a brief stimulus-control response when sleep does not come.
+description: A quiet, interactive bedtime workflow that lowers stimulation, secures distractions, prepares the morning offline, and handles sleeplessness with brief stimulus control.
 ---
 
 # Wind down for sleep
 
-Use this workflow as the final part of an evening routine. Its purpose is not to review the day, solve problems, or build tomorrow’s plan. Its purpose is to make the transition from awake-day to sleep predictable: reduce stimulation, remove common distractions, complete a few practical tasks, and go to bed.
+This workflow guides a user through the last part of their evening, from awake-day to asleep. It is a physical and reliability routine only. It does not review the day or plan tomorrow. Those belong to separate practices that should run earlier in the evening, in this order:
 
-Use the full ritual when the user says they are winding down, ready for bed, or wants help settling for sleep. If the user says they cannot sleep, are still awake, or are frustrated in bed after trying to sleep, use only the **Can’t-sleep fallback**. Do not restart the full ritual.
+**day review -> next-day plan -> wind down**
 
-A separate daily-review practice and next-day planning practice should happen earlier in the evening. This workflow assumes those practices exist but does not require a particular app, database, calendar, or device.
+This workflow always runs last. The active routine (Steps 1 to 4) should take about 20 to 30 minutes.
 
-## Purpose and design rules
+## When to use it
 
-Every step should serve at least one of these functions:
+- **Full routine (Steps 0 to 6):** the user says "wind down", "help me wind down", "ready for bed", "going to bed", "time for bed", or something similar.
+- **Can't-sleep fallback only:** the user says "can't sleep", "still awake", "still up", or something similar after the routine has already run tonight. Skip everything else and go straight to the fallback.
 
-1. **Reduce stimulation.** Lower bright light, screen use, active conversation, and problem-solving.
-2. **Increase reliability.** Make it harder to drift into scrolling, work, or new decisions.
-3. **Prepare the body and morning.** Complete small practical actions that reduce avoidable friction after waking.
+## Setup choices
 
-Consistency matters more than complexity. Use a similar sequence on most nights. Keep the active ritual short enough that it does not become another task to avoid.
+Agree on these once with the user and reuse them every night. Change them only when the user asks or when the post-run review shows a clear need.
 
-## Interaction rules
+| Choice | Broadly useful default |
+|---|---|
+| Target asleep time | The user's natural sleep window; work backwards from it |
+| Routine start | About 75 to 90 minutes before the target asleep time |
+| Earlier bedtime tonight | If the user states an earlier in-bed time, work backwards from that instead |
+| Phone return time | Shortly after the user's normal wake time, leaving room for the first morning steps |
+| Distraction barrier | A physical lockbox or a charger in another room; software locks alone are often too easy to bypass |
+| Environment cues | Dim warm or red light, overhead lights off, optional blue-blocking glasses, quiet audio |
+| Morning card | A short handwritten list of the first morning steps |
+| Physical prep list | Water, teeth, simple breakfast prep |
+| Settling practice | A brief meditation the user already knows |
+| Late-note capture location | A dedicated next-day notes field or a paper note, never a private journal |
+| Prep and travel buffer | The time the user needs between phone access and their first fixed commitment |
 
-- Be quiet, direct, and low-stimulation. Use short prompts with no coaching language, jokes, emojis, or sleep-science lecture.
-- Give one small group of actions at a time. Do not turn the ritual into a long conversation.
-- For checklists, use plain bullet lists rather than interactive checkboxes. End each list with: **Reply “done” when all set.**
-- Do not ask the user about tomorrow after the wind-down has started. Do not ask for priorities, intentions, goals, wins, or backup to-do lists.
-- Do not reopen journaling, reflection, planning, messages, task systems, or calendars during the ritual.
-- If the user raises a work problem, worry, or task, do not solve it. Say: **“Put a brief note somewhere safe for tomorrow. Do not work on it tonight.”**
-- If the user is clearly exhausted, let them skip optional preparation steps. Do not skip the environment and distraction-control gate unless a safety, health, accessibility, or caregiving need makes it unsuitable.
-- After the final close message, stop. Do not summarize what was completed, offer more help, create a follow-up prompt, or simulate another turn.
+## Purpose
 
-## Readiness check
+Common wind-down failure modes this routine targets:
 
-Before beginning, establish only what is needed. Do not inspect messages, news, social feeds, task lists, or other attention-grabbing sources.
+- Too much stimulation late at night, leading to scrolling or lying awake.
+- Rumination about tomorrow (reduced by doing the day review and a specific next-day plan earlier).
+- An inconsistent routine, so the body gets no signal that the day is ending.
+- Phone controls that break down because they are too easy to override.
 
-1. Check whether the user already completed their normal day review, if that information is available from the current session or a user-approved system.
-2. If the review was missed, decide whether there is still enough room in the evening for the user’s normal brief review without delaying sleep.
-3. Optionally check the next morning’s first fixed commitment, but only if the user has authorized calendar access and it is needed to choose practical access to a locked device.
-4. Treat next-day planning status as silent information. If planning was missed, do not mention it, offer planning, or ask a substitute planning question.
+Success looks like this: the next morning the user wakes well, starts their morning routine without reaching for the phone, and the phone stayed out of reach until the agreed return time.
 
-If the day review was completed, say:
+Every step must do at least one of three things: (a) reduce stimulation, (b) act as a reliability mechanism, or (c) prepare the body or the morning. If a step does none of these, cut it.
 
-> Day closed. Starting wind-down.
+### Design basis (keep out of the conversation)
 
-If the review was missed but there is still enough room for it, offer it once:
+- Writing a specific to-do list at bedtime has been shown to shorten the time it takes to fall asleep, so a specific next-day plan should exist before this routine begins.
+- Scheduled worry time earlier in the evening reduces bedtime anxiety, so the day review runs earlier by design.
+- Dim, warm light and no bright screens in the last hours before bed support sleepiness, so the environment check comes first and gates progress.
+- Consistency matters more than contents. The same short sequence every night beats a perfect routine done occasionally.
 
-> The day review was missed. Do you want to do the short review first?
+Do not lecture on any of this during the routine.
 
-If the user declines, or it is too late for a useful review, say:
+## Hard rules
 
-> Leave the review for tomorrow. Start winding down now.
+1. **Nothing phone-dependent after Step 1.** The phone is put away at the end of Step 1. Everything afterwards must work offline or on one agreed low-stimulation device.
+2. **Step 1 is a gate.** Do not move on until the user confirms every environment item. Never let it be skipped, except where a health, safety, accessibility, or caregiving need makes an item unsuitable.
+3. **Never ask about tomorrow.** No outcomes, intentions, priorities, wins, or fallback planning questions. If the next-day plan was skipped, note it silently and continue. Planning re-stimulates at the moment the goal is to de-stimulate.
+4. **Do not reopen reflection or planning.** If the user raises a worry or work problem, say: "Put a short note somewhere safe. The review will handle it tomorrow. Not tonight."
+5. **No second writing session.** Any freeform journaling belongs to the earlier review, not here.
+6. **No summary at the end.** Deliver the close message and stop.
+7. **After the close, stop completely.** If the user says good night, reply with nothing or at most "Good night." Never generate a follow-up message, narration, placeholder, or simulated user turn. An unexpected message after bedtime can wake the user.
 
-Then continue. If a review was skipped, any later bedtime note should go into a designated next-day capture location rather than creating a partial or empty journal record.
+## Privacy and data access
 
-## Step 1: Environment and distraction gate
+If the user keeps their review, plan, or calendar in a digital system, access it only with their clear authorization and only for this purpose.
 
-This is the load-bearing step. Do not continue until the user confirms it is complete.
+- Read the minimum: whether the review finished, whether the plan exists, and tomorrow morning's first fixed commitment.
+- **Do not read private journal text.** Confirm the review finished from a structured signal such as a rating field, a completion flag, or a saved-result record. A journal entry that exists or autosaved does not by itself prove the review finished.
+- Do not read messages, inboxes, news, or feeds. The review already handled them.
+- Calendar access is read-only and limited to tomorrow morning. If the user has both a work and a personal calendar, check both, because early personal plans move the phone return time as much as meetings do.
+- If a connection fails, say so once in one line, use what the user has mentioned, and offer to fix the connection tomorrow, not tonight.
 
-Choose a simple set of cues that the user can repeat. A broadly useful default is:
+## Step 0: Readiness check
 
-> Before we start:
+**If the review and plan ran earlier in this same session,** their status and tomorrow's calendar are already known. Do not re-fetch. Just get the current time and continue.
+
+**If run on its own,** make the minimal reads in one parallel batch: current time and dates, today's review status, tomorrow's plan status, and tomorrow morning's calendar events.
+
+Data-handling principles:
+
+- Use tolerant lookups for date-named records (for example, "contains this date" rather than an exact match), because exact matches can fail silently.
+- A single date may have more than one record (for example, one created by planning and one by review). Check all matches before deciding something is missing.
+- Test whether a field is present, not whether it is truthy. A rating of 0 is a valid completed rating.
+
+State variables:
+
+- `review_done` = today's structured review signal is present.
+- `plan_done` = tomorrow's plan is present. Used only silently.
+- `late_cutoff` = about 75 minutes before the target asleep time.
+
+| review_done | Time | Action |
+|---|---|---|
+| Yes | Any | Say "Day reviewed. Starting wind-down." Go to Step 1. |
+| No | Before late_cutoff | Ask once: "The day review didn't run. Do it now (about 10 minutes)?" If yes, run it, then return. If no, go to Step 1 with `review_skipped = true`. |
+| No | At or after late_cutoff | Say "Too late to review tonight. We'll pick it up tomorrow." Go to Step 1 with `review_skipped = true`. |
+
+If `plan_done` is false, do not mention it, do not offer planning, and do not ask a substitute question.
+
+If the user has set an earlier bedtime tonight, protect time for physical prep and the settling practice. Do not let upstream planning expand into the remaining window.
+
+## Checklist format (Steps 1 and 3)
+
+Use plain `-` bullets in one message, ending with "Reply 'done' when all set." Do not use checkbox syntax, since many interfaces cannot tick boxes, and do not say "tick each". Do not send items one at a time, because that adds extra turns at bedtime. One message out, one "done" back.
+
+## Step 1: Environment and phone gate
+
+**Phone return time:** use the agreed default. If tomorrow's first fixed commitment leaves less than the user's prep and travel buffer after the default return time, move the return earlier to the first commitment minus that buffer. State the chosen time and the reason. Compute the timer length from the current time.
+
+Template:
+
+```
+Before we start:
+- Day clothes off, sleepwear on
+- Low-light glasses on (if used)
+- Overhead lights off, dim warm or red lights on
+- Quiet sleep audio playing
+- Phone in the lockbox, timer {hours}h {minutes}m (returns at {return time}{, reason if earlier than default})
+- From here, only {agreed device} is used
+
+Reply "done" when all set.
+```
+
+Example reason line: "returns earlier than usual - travel to an early meeting."
+
+If the user delays an item ("I'll do the lights in a sec"), say once: "Do it now. These are the biggest levers. I'll wait." Then wait.
+
+## Step 2: Offline morning card (about 3 minutes)
+
+The user handwrites a small card so the morning does not depend on the phone. The physical act is the commitment device, so do not create a digital version.
+
+> "Write your morning card. Template:
+> 1. Brush teeth
+> 2. Medication (if any)
+> 3. Drink water
+> 4. Exercise or physio
+> 5. Shower and dress
+> 6. Leave or start first block
 >
-> - Change out of day clothes into sleep clothes.
-> - Put on preferred low-light glasses, if used, or otherwise reduce bright light.
-> - Turn off overhead lights; use dim, warm light only if needed.
-> - Start quiet, familiar audio if it helps without demanding attention.
-> - Put the phone in a charger outside reach or in a physical barrier that prevents casual checking.
-> - Set the phone’s return or unlock point for the morning.
-> - Keep any remaining device use limited to one necessary, low-stimulation device.
->
-> Reply “done” when all set.
+> Anything to add or change tonight?"
 
-### Set device return access
+If they name a change, say: "Write it on the card where it fits." Then: "Card done?" Keep the template short enough to fit on the card, and update it when the user's routine changes (for example, dropping a commute step after a move to remote work).
 
-Let the user choose a normal morning access point. If an early fixed commitment requires it, make access available earlier only when necessary for preparation, travel, communication, or safety. State the choice and reason briefly.
+## Step 3: Physical prep (about 5 minutes)
 
-Example:
+Order tasks by location to save steps (bathroom tasks together, kitchen tasks together).
 
-> Phone access returns before the first morning commitment so you can prepare and travel.
+```
+- Fill water bottle for the morning
+- Brush teeth
+- Prep breakfast
 
-A physical barrier is often more reliable than a software restriction alone. The aim is not punishment. It is to prevent automatic late-night or early-morning scrolling.
+Reply "done" when all set.
+```
 
-If the user says they will change the lights or secure the phone later, respond once:
+**Late notes.** If a small to-do surfaces ("out of yoghurt, need to buy some"), do not solve it. Capture one line and move on with "Noted. Captured."
 
-> Do it now. This is the highest-leverage step. I’ll wait.
+Capture rules:
 
-Do not negotiate the rest of the routine while this gate remains incomplete.
-
-## Step 2: Offline morning card
-
-Offer a small physical morning card. Its role is to make the first part of the day independent from a phone, notifications, and memory.
-
-Prompt:
-
-> Write a small morning card. Keep it short enough to read at a glance. A useful template is:
->
-> 1. Hygiene
-> 2. Medication or supplements, if applicable
-> 3. Water and breakfast
-> 4. Movement, rehabilitation, or another health practice
-> 5. Shower and get dressed
-> 6. Leave for the day or begin the first planned block
->
-> Add only a practical exception that matters tomorrow. Is anything different?
-
-If the user names a change, tell them to write it in the appropriate place on the card. Do not make a digital card for them and do not turn this into planning.
-
-Then ask:
-
-> Card done?
-
-This step is optional if the user is too tired or already has a dependable offline morning cue.
-
-## Step 3: Physical preparation
-
-Give a compact list tailored to the user’s normal needs. Group tasks by location to minimize movement and decisions. A default list is:
-
-> - Fill water for the morning.
-> - Brush teeth and complete essential nighttime hygiene.
-> - Prepare a simple breakfast or place needed items together.
-> - Put out required clothing, keys, mobility aids, or medication.
->
-> Reply “done” when all set.
-
-If a small missing item creates a worry, capture it in one designated location without solving it. For example: “Buy breakfast item.” Do not search for alternatives, open shopping tools, message someone, or start a planning conversation. Say only:
-
-> Noted. Captured for later.
+- Write to the agreed late-note location (default: a next-day notes field or paper).
+- If writing into an existing record, re-read its current contents first, preserve them exactly, and append one line. Never overwrite from an earlier cached copy.
+- If `review_skipped = true` or the review is incomplete, always use the next-day notes location. Do not create a partial or empty review record.
+- Never write into or read a private journal entry.
 
 ## Step 4: Brief settling practice
 
-Offer one familiar, low-stimulation practice. Do not teach a new or complex exercise at bedtime.
+Prompt with one line: "5 minutes of meditation." If the user already knows the practice, give no instructions. Wait for "done" or similar. If the user asks to drop or restore this step, do so.
 
-Default prompt:
-
-> Brief quiet meditation.
-
-If meditation is not suitable, use an already accepted alternative such as gentle breathing, a short body scan, quiet stretching, or a few pages of a paper book outside bed. Avoid screen-based guided content and anything emotionally engaging or performance-focused.
-
-Wait for a simple completion response.
+Alternatives if meditation does not suit: slow breathing, a short body scan, or gentle stretching. Nothing screen-based or new.
 
 ## Step 5: Close
 
-After the settling practice, send only:
+Say exactly:
 
-> Close the device. Go straight to bed—no detour.
+> "Close the device. Straight to bed, no detour.
 >
-> See you tomorrow.
+> See you tomorrow."
 
-This is the final user-facing message. If the user says good night, remain silent or reply only: **Good night.**
+This is the last user-facing message. No "sweet dreams", no summary.
 
-## Can’t-sleep fallback
+## Step 6: Silent post-run review
 
-Use this only when the user reports being awake after attempting sleep.
+If the assistant can maintain the workflow, do this silently after the close, with no output to the user. Do not ask the tired user to diagnose their own routine.
 
-Do not rerun the ritual. Do not reopen reflection, journaling, planning, device settings, or problem-solving. Respond briefly:
-
-> Get out of bed. Keep the room dim and do a boring, screen-free activity until sleepy. Return to bed when sleepy. Do not check the time.
-
-Suitable activities include reading on paper, folding laundry slowly, or another neutral task. Avoid work, emotionally engaging reading, exercise, food preparation, screens, and clock-checking. The goal is to keep the bed associated with sleep rather than wakeful frustration.
-
-For recurring, severe, or safety-relevant sleep difficulty, encourage appropriate medical or sleep-care support.
-
-## Routine audit and adaptation
-
-Review the workflow after a run only if doing so will not re-engage the user at bedtime. Make changes based on observable friction, not novelty. Do not invent improvements after a clean run.
-
-| Signal | Adaptation |
+| Signal in this run | Change |
 |---|---|
-| The user repeatedly misunderstands a prompt | Rewrite it in plainer language or remove ambiguity. |
-| A distraction barrier is routinely bypassed | Choose a stronger physical, account-level, or environmental barrier with the user. |
-| A checklist item is consistently skipped and adds no value | Remove it or make it optional. |
-| A practical issue repeatedly appears at bedtime | Move its prevention into an earlier review or planning practice. |
-| A step makes the user more alert | Shorten it, simplify it, or move it earlier in the evening. |
+| User misread a prompt or asked "what do you mean?" | Rewrite the prompt in plainer words |
+| User pushed back on a step | Rewrite or cut it |
+| A lookup returned nothing or found the wrong record | Fix the lookup instructions |
+| An item was skipped without comment, adding nothing | Cut it or make it optional |
+| User stated a preference ("don't ask me X") | Add it as a hard rule |
+| A worry keeps surfacing at bedtime | Move its prevention into the earlier review or plan |
+| The distraction barrier is routinely bypassed | Agree a stronger physical or environmental barrier with the user later |
 
-Preserve what reliably works. The best wind-down is usually quiet, repeatable, and boring enough to become an automatic signal that the day is over.
+If the run was clean, change nothing. Do not invent improvements. Do not report changes to the user tonight; they can review them later if they want.
+
+## Can't-sleep fallback
+
+Do not rerun the routine or reopen reflection or planning. Reply briefly:
+
+> "Out of bed. Dim room, boring screen-free activity (paper reading, no problem-solving), about 20 minutes. Back to bed when sleepy. Don't check the time."
+
+This is stimulus control: the bed stays linked with sleep, not with lying awake. Do not extend the reply. For ongoing or severe sleep problems, suggest appropriate medical or sleep-care support at a later, non-bedtime moment.
+
+## Style
+
+- Quiet and short. One prompt at a time, no preamble.
+- No narration ("great, now let's..."), no emojis, no coaching tone.
+- If the user is exhausted, allow skipping Steps 2 and 3, but not Step 1.
+- Use the user's preferred date format.

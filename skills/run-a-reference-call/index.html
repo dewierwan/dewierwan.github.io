@@ -1,24 +1,131 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="robots" content="noindex,nofollow,noarchive"><title>Run a reference call · AI skills</title><meta name="description" content="Prepare and run a concise reference conversation that gathers specific evidence instead of vague praise.">
-<link rel="alternate" type="text/markdown" href="/skills/raw/run-a-reference-call.md"><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%23b4552d%22/><text x=%2250%22 y=%2253%22 dominant-baseline=%22central%22 text-anchor=%22middle%22 font-family=%22Georgia, 'Times New Roman', serif%22 font-size=%2246%22 letter-spacing=%221%22 fill=%22%23fdfaf4%22>DE</text></svg>"><link rel="stylesheet" href="/skills/styles.css"></head><body><main><a class="back" href="/skills/">← Skills</a><header class="skill-header"><h1>Run a reference call</h1><p class="description">Prepare and run a concise reference conversation that gathers specific evidence instead of vague praise.</p><div class="skill-actions"><a href="/skills/raw/run-a-reference-call.md">Raw Markdown</a><button class="copy" type="button" data-copy="/skills/raw/run-a-reference-call.md">Copy Markdown</button></div></header><article class="skill-body"><p>Use this when checking a candidate&#39;s past work for a hiring decision.</p>
-<h3>1. Prepare from the decision</h3>
-<p>Read the role outcomes, interview evidence, remaining concerns, and the candidate&#39;s relationship with the referee. Decide which uncertainty the call must reduce. Do not ask a generic list when the hiring team already knows what it needs to test.</p>
-<h3>2. Establish context</h3>
-<p>Confirm how the referee worked with the candidate, for how long, and how closely they observed the relevant work. Weight evidence by direct observation rather than title or confidence.</p>
-<h3>3. Ask for examples</h3>
-<p>Useful questions include:</p>
+<meta name="robots" content="noindex,nofollow,noarchive"><title>Run a reference call · AI skills</title><meta name="description" content="Prepare and run a hiring reference call using authorized, minimal research, a tailored opening, direct briefing notes, and consistent role-relevant questions.">
+<link rel="alternate" type="text/markdown" href="/skills/raw/run-a-reference-call.md"><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%23b4552d%22/><text x=%2250%22 y=%2253%22 dominant-baseline=%22central%22 text-anchor=%22middle%22 font-family=%22Georgia, 'Times New Roman', serif%22 font-size=%2246%22 letter-spacing=%221%22 fill=%22%23fdfaf4%22>DE</text></svg>"><link rel="stylesheet" href="/skills/styles.css"></head><body><main><a class="back" href="/skills/">← Skills</a><header class="skill-header"><h1>Run a reference call</h1><p class="description">Prepare and run a hiring reference call using authorized, minimal research, a tailored opening, direct briefing notes, and consistent role-relevant questions.</p><div class="skill-actions"><a href="/skills/raw/run-a-reference-call.md">Raw Markdown</a><button class="copy" type="button" data-copy="/skills/raw/run-a-reference-call.md">Copy Markdown</button></div></header><article class="skill-body"><p>Use this workflow when your organization is checking references on a job candidate. It produces one meeting page that the person making the call can open just before the call and use during it. The research supports the page. The page is the deliverable, and it must stand on its own.</p>
+<p><strong>Direction check:</strong> This workflow is for references you collect about <em>your</em> candidate. If another organization asks you to give a reference about someone you know, use a separate reference-giving workflow.</p>
+<p><strong>Completion rule:</strong> Do every step in order. Do not stop after research or give the user only a chat summary. The task is done only when the meeting page exists in the user&#39;s chosen notes or document system. If no system is connected, return the page as a complete document.</p>
+<h3>People-data boundary (check before any search)</h3>
+<p>This workflow touches records and messages about real people: the candidate, the referee, and earlier referees. Confirm each condition below before searching. If any condition is not met, stop and ask the user.</p>
+<ol>
+<li><strong>Legitimate purpose:</strong> There is an active hiring decision, and the user is part of the hiring team for it. Use what you find only for this decision.</li>
+<li><strong>Clear authorization:</strong> The user names which sources are in scope, and is allowed to use them for hiring work. Typical in-scope sources are the user&#39;s own calendar, the user&#39;s own hiring correspondence, the hiring records, and earlier reference pages for this candidate. Do not search sources the user has not approved.</li>
+<li><strong>Consent:</strong> Call only referees the candidate provided or agreed to. Do not contact unlisted people unless the candidate has consented and your organization&#39;s policy allows it.</li>
+<li><strong>Minimum information:</strong> Collect only what the call needs: the referee&#39;s professional role, how and for how long they worked with the candidate, the hiring stage, and prior reference findings. Do not copy whole messages or threads.</li>
+<li><strong>Omit unrelated and sensitive details:</strong> Never record personal social media, family, health, finances, age, religion, politics, other protected characteristics, gossip, or message content unrelated to this hire. If you see such details, do not record or repeat them.</li>
+<li><strong>Privacy expectations:</strong> Treat what earlier referees said as confidential to the hiring team. Public web research covers professional background only.</li>
+<li><strong>Access boundary:</strong> Store the page where only the hiring team can see it. Do not share it beyond that group. Follow your organization&#39;s retention rules for candidate records.</li>
+<li><strong>Recording:</strong> Use transcription or recording only if the referee agrees at the start of the call.</li>
+<li><strong>Consistency:</strong> Ask every referee for a candidate the same core questions, and only about role-relevant topics.</li>
+</ol>
+<h3>Inputs</h3>
 <ul>
-<li>What result did the candidate personally own?</li>
-<li>What did strong performance look like in practice?</li>
-<li>Where did they need the most support?</li>
-<li>How did they respond to difficult feedback?</li>
-<li>Which environment helped or hurt their performance?</li>
-<li>What kind of role would you hesitate to place them in?</li>
-<li>Would you choose to work with them again, and in what capacity?</li>
+<li><strong>Candidate name:</strong> the person being considered.</li>
+<li><strong>Referee name and contact:</strong> from a calendar invite, an email, or the candidate&#39;s reference list.</li>
+<li><strong>Role:</strong> if missing, look it up in the hiring records.</li>
+<li><strong>Call date:</strong> defaults to today, or the date on the calendar event.</li>
+<li><strong>User choices:</strong> the notes system and page collection, attendees, the caller&#39;s name and role, a one-sentence description of the organization, and the approved source list.</li>
 </ul>
-<p>Follow vague praise with “What did that look like?” or “Can you give a specific example?”</p>
-<h3>4. Test concerns fairly</h3>
-<p>Ask neutral questions about the hiring team&#39;s uncertainties without revealing private interview judgments or inviting confirmation. Note contradictions and seek concrete evidence.</p>
-<h3>5. Record signal</h3>
-<p>Separate observations, the referee&#39;s interpretation, and your inference. Record confidence and any important limits on what the referee could know. Do not turn one reference into a final verdict on its own.</p></article><footer><a href="/skills/LICENSE.txt">CC0</a></footer></main><script>document.querySelector('[data-copy]').addEventListener('click',async function(){try{const text=await fetch(this.dataset.copy).then(r=>{if(!r.ok)throw new Error();return r.text()});await navigator.clipboard.writeText(text);this.textContent='Copied'}catch{this.textContent='Open raw Markdown'}})</script></body></html>
+<h3>Step 1: Find the call</h3>
+<ul>
+<li>Search the user&#39;s calendar for an event with the referee&#39;s name or contact.</li>
+<li>Record the title, time, attendees, meeting link, and any scheduling notes.</li>
+<li>If there is no event yet, say so and continue.</li>
+</ul>
+<h3>Step 2: Gather context</h3>
+<p>Search only approved sources. Keep only facts that fit the boundary above.</p>
+<h4>2a. Hiring context</h4>
+<p>From the hiring records and related hiring correspondence, find:</p>
+<ul>
+<li>the role and current stage, such as interview, work trial, or final stage</li>
+<li>the dates and location of any next step</li>
+<li>how the referee was introduced; the candidate&#39;s reference list message is usually the best source</li>
+<li>the referee&#39;s working relationship to the candidate, such as manager, client, peer, direct report, or teacher</li>
+</ul>
+<h4>2b. Referee background</h4>
+<p>In approved sources only, and in parallel where possible:</p>
+<ol>
+<li>The user&#39;s direct correspondence with the referee.</li>
+<li>Hiring-related messages that mention the referee, such as introductions or scheduling threads.</li>
+<li>The notes system and calendar, for earlier professional meetings with the referee.</li>
+<li>If the user approves it, a public web search on name plus organization, limited to current professional role and background.</li>
+</ol>
+<p>Read the three to five most recent relevant results from each correspondence search. Note only facts that help the call, such as an existing working connection between the two organizations.</p>
+<h4>2c. Candidate links</h4>
+<p>Collect quick-access links the hiring team already holds: the candidate&#39;s applicant tracking profile, the professional profile they shared, and any portfolio, code repository, or site they submitted.</p>
+<h4>2d. Completed references</h4>
+<ul>
+<li>Look for earlier reference pages for this candidate inside the hiring team&#39;s space.</li>
+<li>Pull out themes, strengths, concerns, and development areas, and note which referee said each.</li>
+<li>Turn these into specific angles this call should confirm or challenge.</li>
+<li>If none exist, mark this call as the first reference.</li>
+</ul>
+<h4>2e. Compile</h4>
+<p>Summarize under: who the referee is, the working relationship, the hiring context, candidate links, other referees on the list, and briefing notes.</p>
+<h3>Step 3: Create the meeting page</h3>
+<p>This step is required. Create the page in the user&#39;s chosen collection, with properties and content together, in a location limited to the hiring team.</p>
+<ul>
+<li><strong>Title:</strong> <code>[Date] [Referee name] ([Candidate name] reference)</code></li>
+<li><strong>Date:</strong> date only, no time.</li>
+<li><strong>Attendees:</strong> the caller plus anyone else the user names.</li>
+<li><strong>Optional:</strong> a meeting-notes or transcription block at the top containing only the title. Leave summary and transcript areas for the tool to fill, and use it only with the referee&#39;s consent.</li>
+</ul>
+<p>Template:</p>
+<pre><code>## Context
+- [Referee name](professional profile link): [role, organization, one-line professional background].
+- [Candidate] worked with [Referee] as [relationship, capacity, duration].
+- This is a reference call for [Candidate name](profile link) ([tracking system link], [other submitted links]), who is at [stage] for [Role]. Next step: [work trial dates and location, or other next step].
+- [Prior professional contact with the referee, or &quot;First contact.&quot;]
+- Other references: [list].
+
+## Opening
+&gt; Hi [Referee], thanks for making the time. I&#39;m [caller name], [caller role] at [organization]. We [one-sentence description]. [Candidate] has applied for our [Role] role, and we&#39;re excited about their background. We&#39;re doing reference checks now so we can decide quickly. Everything you share stays within our hiring team. [Ask permission here if you plan to record or transcribe.]
+
+## Briefing notes
+- **Themes from completed references:** [who said what, and what to check with this referee]
+- **What this referee is uniquely placed to speak to:** [based on the working relationship]
+- **Organization or relationship context:** [any existing professional connection]
+- **Open questions and flags:** [anything from the process that still needs evidence]
+
+## Questions
+- **How did you work together?** What was [first name]&#39;s role, and what was yours? How closely did you work day to day?
+- **What did they concretely deliver, and how did it compare to your expectations?**
+- **What is their outlier strength?**
+- **If they joined us and we parted ways after three months, what is the most likely reason?**
+- **If things are going well at three months, which development area should be their top priority?**
+- **Compared to others you have worked with in similar roles, how does their work compare?**
+- **If I were their manager, what could I do to help them contribute their best?**
+- **What should I have asked that I didn&#39;t?**
+
+### [Role]-specific probes to weave in
+- [Probe 1]
+- [Probe 2]
+- [Probe 3]
+- [Probe 4]</code></pre>
+<h3>Writing the briefing notes</h3>
+<p>This is the most valuable section. The caller will not read the research thread, so put everything useful on the page, and nothing outside the boundary.</p>
+<ul>
+<li>Write direct, actionable lines. Example: &quot;Referee A said the candidate sometimes leaves final polish unfinished. Ask Referee B how the candidate handled project endings.&quot; Avoid hedges such as &quot;it may be worth exploring.&quot;</li>
+<li>Name the source of each prior theme so the caller can weigh it.</li>
+<li>Ask about concerns neutrally on the call. Do not reveal interview judgments or what earlier referees said, and do not lead the referee.</li>
+<li>For a first reference, list what to listen for that later calls can confirm or challenge.</li>
+</ul>
+<h3>Role-specific probes</h3>
+<p>Write three to five probes that test capabilities the role actually needs. Base them on role outcomes and diagnostic evidence of relevant performance, not general personality impressions.</p>
+<div class="table-wrap" tabindex="0" aria-label="Scrollable table"><table><thead><tr><th>Role type</th><th>Example probes</th></tr></thead><tbody><tr><td>Program or operations</td><td>How do they handle ambiguity and changing requirements? Do they build systems or mostly solve problems as they arise? How clearly do they communicate with non-specialists? Do they find what needs doing, or wait to be told?</td></tr><tr><td>Community lead</td><td>How have they built an active community? Examples? How do they handle conflict or difficult members? Do they create processes, or mainly work through relationships? Do they spot community needs early?</td></tr><tr><td>Operations leadership</td><td>Have they scaled operations at a growing organization, and what broke? How do they balance competing stakeholder priorities? Are they comfortable owning vendors, budgets, and contracts? How do they trade off speed against process?</td></tr></tbody></table></div>
+<h3>During and after the call</h3>
+<ul>
+<li>Follow vague praise with &quot;What did that look like?&quot; or &quot;Can you give a specific example?&quot;</li>
+<li>Weigh evidence by how directly the referee saw the work, not by title or confidence.</li>
+<li>Keep three things apart in notes: what the referee observed, how they interpreted it, and what you infer. Record confidence and limits on what the referee could know.</li>
+<li>Record only role-relevant points. Leave out any unrelated personal information the referee mentions.</li>
+<li>Do not let one reference decide the outcome. Add findings to the page so the next briefing can build on them.</li>
+</ul>
+<h3>Final checks</h3>
+<ul>
+<li>The page exists in the chosen collection and is visible only to the hiring team.</li>
+<li>Context uses concise bullets and includes candidate links and other referees.</li>
+<li>Questions form one unnumbered list, with role probes underneath.</li>
+<li>The Opening is tailored to this referee, with tone adjusted if you already know each other.</li>
+<li>Every placeholder is filled or marked unknown.</li>
+<li>Every fact came from an approved source, and no unrelated or sensitive personal details appear.</li>
+</ul></article><footer><a href="/skills/LICENSE.txt">CC0</a></footer></main><script>document.querySelector('[data-copy]').addEventListener('click',async function(){try{const text=await fetch(this.dataset.copy).then(r=>{if(!r.ok)throw new Error();return r.text()});await navigator.clipboard.writeText(text);this.textContent='Copied'}catch{this.textContent='Open raw Markdown'}})</script></body></html>
