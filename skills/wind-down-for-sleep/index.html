@@ -1,109 +1,130 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="robots" content="noindex,nofollow,noarchive"><title>Wind down for sleep · AI skills</title><meta name="description" content="A quiet bedtime routine that lowers stimulation, puts distractions out of reach, prepares the morning offline, and gives a short stimulus-control reply when sleep does not come.">
-<link rel="alternate" type="text/markdown" href="/skills/raw/wind-down-for-sleep.md"><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%23b4552d%22/><text x=%2250%22 y=%2253%22 dominant-baseline=%22central%22 text-anchor=%22middle%22 font-family=%22Georgia, 'Times New Roman', serif%22 font-size=%2246%22 letter-spacing=%221%22 fill=%22%23fdfaf4%22>DE</text></svg>"><link rel="stylesheet" href="/skills/styles.css"></head><body><main><a class="back" href="/skills/">← Skills</a><header class="skill-header"><h1>Wind down for sleep</h1><p class="description">A quiet bedtime routine that lowers stimulation, puts distractions out of reach, prepares the morning offline, and gives a short stimulus-control reply when sleep does not come.</p><div class="skill-actions"><a href="/skills/raw/wind-down-for-sleep.md">Raw Markdown</a><button class="copy" type="button" data-copy="/skills/raw/wind-down-for-sleep.md">Copy Markdown</button></div></header><article class="skill-body"><p>This is an interactive, low-stimulation routine that moves the user from the awake day to sleep. It covers the environment, distraction control, a few practical preparations, and a short settling practice. It does not review the day or plan tomorrow. Those belong to separate practices that should happen earlier in the evening.</p>
-<p>Recommended evening order: <strong>day review, then next-day planning, then wind-down.</strong> This routine comes last. Keep the active part short, roughly 15 to 30 minutes, so it does not become another task to avoid.</p>
-<h3>Setup choices (agree once, then reuse)</h3>
-<p>Before first use, ask the user to choose the following. Save the answers wherever the user keeps preferences. Suggested defaults are only starting points.</p>
-<div class="table-wrap" tabindex="0" aria-label="Scrollable table"><table><thead><tr><th>Choice</th><th>What the user decides</th><th>Broadly useful default</th></tr></thead><tbody><tr><td>Target sleep time</td><td>When they want to be asleep, based on their natural sleep window</td><td>Start the routine 45 to 90 minutes before it</td></tr><tr><td>Tonight&#39;s override</td><td>An earlier in-bed time for one night</td><td>Work backwards from the stated time</td></tr><tr><td>Distraction barrier</td><td>How the phone and other tempting devices go out of reach</td><td>A physical barrier, such as a timed box or a charger in another room</td></tr><tr><td>Device return time</td><td>When the phone becomes available in the morning</td><td>Shortly after the morning routine is done</td></tr><tr><td>Early-commitment buffer</td><td>How much time is needed before an early commitment</td><td>Enough for getting ready and travel</td></tr><tr><td>Environment cues</td><td>Light, clothing, sound, or other signals that the day is over</td><td>Overhead lights off, dim warm light, quiet familiar audio</td></tr><tr><td>Morning card</td><td>Whether to use a paper card, and what goes on it</td><td>A short list of the first few morning actions</td></tr><tr><td>Prep list</td><td>Practical tasks to finish before bed</td><td>Water, hygiene, and items needed in the morning</td></tr><tr><td>Settling practice</td><td>One familiar, calm practice</td><td>A few minutes of quiet breathing or meditation</td></tr><tr><td>Record access</td><td>Which records, if any, the assistant may check</td><td>None; rely on the current conversation</td></tr></tbody></table></div>
-<h3>Purpose</h3>
-<p>Common reasons wind-downs fail:</p>
+<meta name="robots" content="noindex,nofollow,noarchive"><title>Wind down for sleep · AI skills</title><meta name="description" content="A quiet, repeatable bedtime workflow that lowers stimulation, secures distractions, prepares the morning offline, and gives a short stimulus-control reply when sleep does not come.">
+<link rel="alternate" type="text/markdown" href="/skills/raw/wind-down-for-sleep.md"><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%23b4552d%22/><text x=%2250%22 y=%2253%22 dominant-baseline=%22central%22 text-anchor=%22middle%22 font-family=%22Georgia, 'Times New Roman', serif%22 font-size=%2246%22 letter-spacing=%221%22 fill=%22%23fdfaf4%22>DE</text></svg>"><link rel="stylesheet" href="/skills/styles.css"></head><body><main><a class="back" href="/skills/">← Skills</a><header class="skill-header"><h1>Wind down for sleep</h1><p class="description">A quiet, repeatable bedtime workflow that lowers stimulation, secures distractions, prepares the morning offline, and gives a short stimulus-control reply when sleep does not come.</p><div class="skill-actions"><a href="/skills/raw/wind-down-for-sleep.md">Raw Markdown</a><button class="copy" type="button" data-copy="/skills/raw/wind-down-for-sleep.md">Copy Markdown</button></div></header><article class="skill-body"><p>This is an interactive evening workflow. It moves the user from the awake part of the day to sleep. It lowers stimulation, puts distractions out of reach, finishes a few practical tasks, and then ends the conversation. It does not handle reflection or planning. Those belong to an earlier day-review practice and an earlier next-day planning practice.</p>
+<p>Recommended evening order: <strong>day review, then next-day planning, then wind-down.</strong> This workflow comes last.</p>
+<p>Keep the active ritual short. Most people do well with 15 to 30 minutes. Longer rituals tend to get skipped.</p>
+<h3>Settings the user chooses</h3>
+<p>Agree on these once. Reuse them every night until the user changes them. Do not assume values the user has not chosen. Offer the starting points below only as suggestions.</p>
+<div class="table-wrap" tabindex="0" aria-label="Scrollable table"><table><thead><tr><th>Setting</th><th>What to decide</th><th>Suggested starting point</th></tr></thead><tbody><tr><td>Target sleep time</td><td>When the user wants to be asleep</td><td>Based on their natural sleep window and wake time</td></tr><tr><td>Ritual start</td><td>When wind-down begins</td><td>45 to 90 minutes before target sleep time</td></tr><tr><td>Review cutoff</td><td>The point after which a missed review is skipped</td><td>When doing a review would push sleep back</td></tr><tr><td>Distraction barrier</td><td>How the phone or other distracting device is put out of reach</td><td>A physical barrier, such as a timed box or a charger in another room</td></tr><tr><td>Morning access time</td><td>When the device becomes available again</td><td>After the first part of the morning routine is done</td></tr><tr><td>Early-commitment rule</td><td>How much earlier access moves for an early fixed commitment</td><td>Enough time to get ready and travel</td></tr><tr><td>Environment cues</td><td>The light, sound, and clothing changes that signal night</td><td>Overhead lights off, dim warm light, sleep clothes</td></tr><tr><td>Allowed device</td><td>The one low-stimulation device, if any, used after the gate</td><td>None, or one device used only for this workflow</td></tr><tr><td>Settling practice</td><td>A short familiar practice</td><td>A few minutes of meditation, slow breathing, or stretching</td></tr><tr><td>Capture location</td><td>Where stray worries or tasks get written down</td><td>A notes field or paper notepad for tomorrow</td></tr></tbody></table></div>
+<p>If the user names an earlier bedtime for tonight, work backwards from it. Protect the time for physical preparation and the settling practice. Do not let earlier planning spill into this window.</p>
+<h3>Why each step exists</h3>
+<p>Common failure modes this workflow targets:</p>
 <ul>
-<li>The user is too stimulated late in the evening, which leads to scrolling or lying awake.</li>
-<li>The user ruminates about tomorrow. An earlier review that offloads worries and a specific plan help with this.</li>
-<li>The routine is inconsistent, so the body gets no clear signal that the day is ending.</li>
-<li>Device limits are easy to bypass in the moment.</li>
+<li>Too much stimulation late in the evening, which leads to scrolling or lying awake.</li>
+<li>Worry about tomorrow. The earlier review (a worry offload) and planning (a specific next-day list) mostly handle this.</li>
+<li>An inconsistent routine that gives the body no clear signal that the day is ending.</li>
+<li>Distraction controls that are easy to bypass. Software limits on the same device are often weak. Physical distance or a physical barrier is usually more reliable.</li>
 </ul>
-<p>Success looks like this: the user wakes rested, starts the morning from the paper card or another offline cue, and the phone stayed out of reach until the chosen return time.</p>
-<p>Every step must do at least one of these: <strong>(a) reduce stimulation, (b) add reliability, or (c) prepare the body and morning.</strong> If a step does none of these, remove it during the audit.</p>
-<h3>Design principles (shape the routine, never lecture them)</h3>
+<p>Success signal: the user wakes rested, starts the morning routine without scrolling, and the device stays out of reach until the chosen access time.</p>
+<p>Every step must do at least one of these: (a) reduce stimulation, (b) add reliability, or (c) prepare the body or the morning. If a step does none of these, remove it during the audit.</p>
+<p>Design anchors. Use these to shape the routine, but do not explain them at bedtime:</p>
 <ul>
-<li><strong>Specific planning belongs before bed, not during wind-down.</strong> Writing a concrete plan earlier tends to reduce bedtime worry. Planning during wind-down re-stimulates.</li>
-<li><strong>Worry belongs earlier.</strong> Scheduled worry time earlier in the evening, a technique from cognitive behavioral therapy for insomnia, lowers anxiety at sleep onset.</li>
-<li><strong>Light matters.</strong> Dim, warm light in the late evening and less screen light support sleepiness. That is why the environment step comes first and gates everything else.</li>
-<li><strong>Consistency beats contents.</strong> Running a similar sequence most nights matters more than the exact items in it.</li>
-<li><strong>Physical barriers beat willpower.</strong> A barrier that takes effort to undo works better than a setting that can be switched off in seconds.</li>
+<li>Writing a specific to-do list before bed has been linked to falling asleep faster. Specificity matters, so planning happens before this workflow, not inside it.</li>
+<li>Scheduled worry time earlier in the evening reduces bedtime anxiety. The review owns the worry offload.</li>
+<li>Dim, warm light late in the evening, with bright overhead light off and little screen light, supports sleep onset. That is why the environment check is a gate.</li>
+<li>Consistency matters more than contents. Use the same sequence every night.</li>
 </ul>
 <h3>Triggers</h3>
 <ul>
-<li><strong>Full routine:</strong> &quot;wind down,&quot; &quot;ready for bed,&quot; &quot;going to bed,&quot; &quot;help me get to sleep,&quot; or similar.</li>
-<li><strong>Fallback only:</strong> &quot;can&#39;t sleep,&quot; &quot;still awake,&quot; or similar after the user has tried to sleep. Go straight to the Can&#39;t-sleep fallback. Do not restart the routine.</li>
+<li><strong>Full ritual:</strong> &quot;wind down&quot;, &quot;ready for bed&quot;, &quot;going to bed&quot;, &quot;help me get to sleep&quot;, or similar.</li>
+<li><strong>Can&#39;t-sleep fallback only:</strong> &quot;can&#39;t sleep&quot;, &quot;still awake&quot;, or similar, after the ritual already ran tonight. Skip every other step.</li>
 </ul>
 <h3>Hard rules</h3>
 <ul>
-<li><strong>Gate first.</strong> Do not continue past Step 1 until the user confirms it. If a safety, health, accessibility, or caregiving need makes part of the gate unsuitable, adapt that item with the user instead of dropping the gate.</li>
-<li><strong>Nothing phone-dependent after Step 1.</strong> Later steps must work offline or on one remaining low-stimulation device.</li>
-<li><strong>Never ask about tomorrow.</strong> No questions about priorities, intentions, outcomes, or wins, and no backup planning question if planning was skipped.</li>
-<li><strong>Do not reopen reflection or planning.</strong> If the user raises a worry or task, say: &quot;Put a brief note somewhere safe. It can wait until tomorrow.&quot;</li>
-<li><strong>Respect private writing.</strong> Do not read, quote, or reconstruct a private journal. Check completion only through a dedicated status marker or the current conversation. A freeform entry with no completion marker does not mean the review is done.</li>
-<li><strong>No summary at the end.</strong></li>
-<li><strong>After the close message, stop completely.</strong> If the user says good night, reply with nothing or only &quot;Good night.&quot; Never create a pretend user turn or a follow-up message. An unexpected message after bedtime can wake the user.</li>
+<li><strong>Environment gate first.</strong> Do not continue past Step 1 until the user confirms it. Do not negotiate it.</li>
+<li><strong>No distracting-device step after Step 1.</strong> Everything afterward must work offline or with the one allowed device.</li>
+<li><strong>Never ask about tomorrow.</strong> No priorities, intentions, wins, or backup one-line plan. If planning was skipped, note it silently and continue. Planning questions raise alertness at the moment the goal is to lower it.</li>
+<li><strong>Do not reopen reflection or planning.</strong> Do not start a new writing session.</li>
+<li><strong>Deflect worries and tasks.</strong> Say: &quot;Put a short note in your capture spot. The review will handle it tomorrow. Not tonight.&quot;</li>
+<li><strong>No summary at the end.</strong> Send the close message and stop.</li>
+<li><strong>Stay silent after the close.</strong> If the user says good night, reply with nothing or only &quot;Good night.&quot; Never send a follow-up, a placeholder, or a simulated user turn. An unexpected message after bedtime can wake someone up.</li>
 </ul>
-<h3>Step 0: Readiness check (minimal)</h3>
-<p>Gather only what is needed to check whether the earlier review happened and to set the device return time.</p>
+<h3>Step 0: Readiness check</h3>
+<p>Gather only what is needed to confirm the earlier practices ran and to set the morning access time. Do not open messages, inboxes, news, or feeds.</p>
+<p>If the review and planning ran earlier in the same session, skip all lookups. That information is already known. Check the current time and continue.</p>
+<p>If this workflow runs on its own, gather the following in one batch, using only sources the user has authorized:</p>
+<ol>
+<li>Current time and tomorrow&#39;s date.</li>
+<li>Whether today&#39;s review is complete.</li>
+<li>Whether tomorrow&#39;s plan exists.</li>
+<li>The first fixed commitment tomorrow morning, from each calendar the user has approved. Read-only.</li>
+</ol>
+<p>Data-handling principles:</p>
 <ul>
-<li><strong>If review and planning just ran in the same conversation,</strong> reuse what is already known. Get the current time and continue. Re-checking adds delay when the goal is to slow down.</li>
-<li><strong>If this routine runs on its own,</strong> check, in one batch and only with the user&#39;s authorization: the current date and time, the review and plan completion markers in the user&#39;s chosen system, and the start time of tomorrow morning&#39;s first fixed commitment across the calendars the user has approved, including personal plans.</li>
+<li><strong>Check status, not content.</strong> Confirm the review is finished from a completion signal, such as a rating or a done marker. Do not read the text of private journal entries. A freeform note saved on its own does not mean the review is finished.</li>
+<li><strong>Read records carefully.</strong> Treat a valid low value as present, not missing. Allow for loose date matching and more than one record per day.</li>
+<li><strong>Degrade quietly.</strong> If a source is unavailable, say so once, proceed with what you have, and leave any repair until daytime.</li>
 </ul>
-<p>Data-access principles:</p>
-<ul>
-<li>Read the smallest fields that answer the question, such as a status marker or an event start time. Do not open event details, messages, feeds, or task lists.</li>
-<li>Match records tolerantly and check every match, because a day can have more than one record.</li>
-<li>Treat an empty but valid value, such as a rating of zero, as present.</li>
-<li>If a source is unavailable, mention it once in one line, use what is available plus anything the user has said, and leave fixing it for another time.</li>
-</ul>
-<h4>Decision table</h4>
-<p>Use a <code>review_cutoff</code>: the latest time a short review still fits without delaying sleep. A reasonable default is the start of the user&#39;s normal wind-down window.</p>
-<div class="table-wrap" tabindex="0" aria-label="Scrollable table"><table><thead><tr><th>Review done?</th><th>Time</th><th>Action</th></tr></thead><tbody><tr><td>Yes</td><td>Any</td><td>Say &quot;Day closed. Starting wind-down.&quot; Go to Step 1.</td></tr><tr><td>No</td><td>Before review_cutoff</td><td>Ask once: &quot;The day review didn&#39;t happen. Do a short one now?&quot; If yes, run it and return. If no, go to Step 1 and note that the review was skipped.</td></tr><tr><td>No</td><td>At or after review_cutoff</td><td>Say &quot;Too late to review tonight. Pick it up tomorrow.&quot; Go to Step 1 and note that the review was skipped.</td></tr></tbody></table></div>
-<p>If planning was missed, say nothing about it. Do not offer it.</p>
+<div class="table-wrap" tabindex="0" aria-label="Scrollable table"><table><thead><tr><th>Review complete?</th><th>Time</th><th>Action</th></tr></thead><tbody><tr><td>Yes</td><td>Any</td><td>Say &quot;Day reviewed. Starting wind-down.&quot; Go to Step 1.</td></tr><tr><td>No</td><td>Before review cutoff</td><td>Say &quot;The day review didn&#39;t run. Do it now (about 10 minutes)?&quot; If yes, run it and return. If no, mark the review as skipped and go to Step 1.</td></tr><tr><td>No</td><td>At or after review cutoff</td><td>Say &quot;Too late to review tonight. We&#39;ll pick it up tomorrow.&quot; Mark the review as skipped. Go to Step 1.</td></tr></tbody></table></div>
+<p>If tomorrow&#39;s plan is missing, do not mention it and do not offer planning.</p>
 <h3>Checklist format (Steps 1 and 3)</h3>
-<p>Send each checklist as one message of plain bullets, ending with <strong>&quot;Reply &#39;done&#39; when all set.&quot;</strong> Do not use checkbox syntax or &quot;tick each&quot; wording, since many interfaces cannot tick boxes. Do not send items one at a time, because extra turns add stimulation.</p>
-<h3>Step 1: Environment and device gate</h3>
-<p>Set the device return time. Use the user&#39;s default unless tomorrow&#39;s first commitment is too early for it. In that case, set it to the commitment time minus the user&#39;s buffer, and state the reason briefly. If the barrier uses a timer, give the countdown from now.</p>
-<p>Template, filled with the user&#39;s own cues:</p>
+<p>Use plain bullet lists, not checkboxes. Many interfaces cannot tick boxes, and &quot;tick each one&quot; wording confuses people. Send the whole list in one message. End with &quot;Reply &#39;done&#39; when all set.&quot; Expect one reply. Do not send items one at a time, because that adds turns at bedtime.</p>
+<h3>Step 1: Environment and distraction gate</h3>
+<p>Set the morning access time:</p>
+<ul>
+<li>Default: the user&#39;s chosen access time.</li>
+<li>If tomorrow&#39;s first fixed commitment would not leave enough time to get ready and travel, move access earlier using the user&#39;s early-commitment rule.</li>
+<li>State the time. If it is earlier than usual, give the reason in a few words. If the barrier uses a timer, show the duration from now.</li>
+</ul>
+<p>Template, filled with the user&#39;s chosen cues:</p>
 <pre><code>Before we start:
-- [Change into sleep clothes]
-- [Low-light cue, such as overhead lights off and dim warm light on]
-- [Optional sound cue, such as quiet familiar audio]
-- Phone in [barrier], returns [time]{, reason if earlier than usual}
-- [One low-stimulation device] is the only screen from here
+- [Clothing change, e.g. day clothes off, sleep clothes on]
+- [Light change, e.g. overhead lights off, dim warm light on]
+- [Optional sound cue, e.g. quiet sleep audio]
+- [Distraction barrier], access at [time][, reason if earlier]
+- [Allowed device, if any] is the only screen from here
 
 Reply &quot;done&quot; when all set.</code></pre>
-<p>If the user stalls (&quot;I&#39;ll do it in a minute&quot;), say once: &quot;Do it now. This is the step that matters most. I&#39;ll wait.&quot; Then wait.</p>
-<h3>Step 2: Offline morning card (optional, a few minutes)</h3>
-<p>If the user chose this, they handwrite a small card so the morning does not depend on the phone. The physical act is the commitment, so do not write it for them.</p>
-<blockquote>Write your morning card from your usual list: [user&#39;s first few morning actions]. Anything different tomorrow?</blockquote>
-<p>If they name a change, say: &quot;Add it where it fits.&quot; Then ask: &quot;Card done?&quot; Keep the card short enough to read at a glance. This is not planning; only practical exceptions belong here.</p>
-<h3>Step 3: Physical preparation (a few minutes)</h3>
-<p>Send the user&#39;s prep list, grouped by location to reduce walking and decisions.</p>
-<pre><code>- [Task in one room]
-- [Task in the same room]
-- [Item to set out for the morning]
+<p>If the user delays an item (&quot;I&#39;ll do the lights in a minute&quot;), say once: &quot;Do it now. This is the biggest lever. I&#39;ll wait.&quot; Then wait.</p>
+<h3>Step 2: Offline morning card (optional, about 3 minutes)</h3>
+<p>A short handwritten card lets the morning start without the phone. Build the template from the user&#39;s real routine once, then reuse it. Example prompt:</p>
+<blockquote>Write your morning card. Template:</blockquote>
+<blockquote>1. [Hygiene]</blockquote>
+<blockquote>2. [Medication, if any]</blockquote>
+<blockquote>3. [Water or breakfast]</blockquote>
+<blockquote>4. [Movement or health practice]</blockquote>
+<blockquote>5. [Get ready]</blockquote>
+<blockquote>6. [Leave or start the first block]</blockquote>
+<blockquote></blockquote>
+<blockquote>Anything different tomorrow?</blockquote>
+<p>Keep it short enough to read at a glance. If the user names a change, say &quot;Write it where it fits.&quot; Then ask: &quot;Card done?&quot; Do not write the card for them digitally. The physical act is the commitment. Skip this step if the user already has a reliable offline morning cue.</p>
+<h3>Step 3: Physical preparation (about 5 minutes)</h3>
+<p>List the user&#39;s chosen tasks, grouped by location so they move around less. Example:</p>
+<pre><code>- [Kitchen task, e.g. fill water for the morning, set out breakfast]
+- [Bathroom task, e.g. brush teeth, nighttime hygiene]
+- [Door task, e.g. lay out clothes, keys, medication]
 
 Reply &quot;done&quot; when all set.</code></pre>
-<p>If a small to-do comes up, do not solve it. Capture one short line in a designated next-day capture location the user has approved, adding to what is there and never overwriting it. Never write into a private journal. Then say: &quot;Noted. Captured.&quot; If no capture location exists, tell the user to jot it on paper.</p>
-<h3>Step 4: Settling practice (a few minutes)</h3>
-<p>Prompt in one line, for example: &quot;Quiet breathing, a few minutes.&quot; Use the practice the user already knows; give no instructions and avoid screen-guided content. Wait for &quot;done.&quot; If the user asks to drop or change this step, follow the request.</p>
+<p>If a small task or worry comes up, such as a missing grocery item, do not solve it. Capture one line so it leaves the user&#39;s head:</p>
+<ul>
+<li>Write to the user&#39;s capture location for tomorrow. If the review was skipped or is incomplete, never create a partial review record. Use the next-day capture spot instead.</li>
+<li>Add to what is already there. Never overwrite or rewrite existing text.</li>
+</ul>
+<p>Then say: &quot;Noted. Captured.&quot;</p>
+<h3>Step 4: Settling practice</h3>
+<p>One line naming the user&#39;s chosen practice, for example: &quot;Five minutes of quiet breathing.&quot; Give no instructions unless asked, and never introduce a new or complex practice at bedtime. Wait for &quot;done&quot; or similar. Add, remove, or swap this step whenever the user asks.</p>
 <h3>Step 5: Close</h3>
-<p>Say only:</p>
-<blockquote>Device closed. Straight to bed, no detour.</blockquote>
+<p>Say only, adapted to the user&#39;s setup:</p>
+<blockquote>[Device] closed. Straight to bed, no detour.</blockquote>
 <blockquote></blockquote>
 <blockquote>See you tomorrow.</blockquote>
-<p>This is the final message tonight.</p>
-<h3>Silent audit (after close, no user output)</h3>
-<p>If the workflow can be updated, review the run without messaging the user. Do not ask a tired user to diagnose the routine. Change only what the run showed:</p>
-<div class="table-wrap" tabindex="0" aria-label="Scrollable table"><table><thead><tr><th>Signal</th><th>Adaptation</th></tr></thead><tbody><tr><td>A prompt was misread or questioned</td><td>Rewrite it more plainly or remove it</td></tr><tr><td>A barrier was bypassed</td><td>Choose a stronger barrier with the user later</td></tr><tr><td>An item was skipped and added nothing</td><td>Remove it or make it optional</td></tr><tr><td>A data check failed or returned nothing</td><td>Fix the readiness instructions</td></tr><tr><td>The user said &quot;don&#39;t do X&quot;</td><td>Add it as a hard rule</td></tr><tr><td>The same practical issue keeps appearing at bedtime</td><td>Move its prevention into the earlier review or planning</td></tr></tbody></table></div>
-<p>If the run was clean, change nothing and report nothing.</p>
-<h3>Can&#39;t-sleep fallback</h3>
-<p>Do not rerun the routine or reopen reflection or planning. Reply briefly:</p>
-<blockquote>Out of bed. Dim room, a boring screen-free activity, about 20 minutes. Back to bed when sleepy. Don&#39;t check the time.</blockquote>
-<p>This is stimulus control: the bed stays linked to sleep, not to lying awake. Do not extend the reply. For recurring or severe sleep problems, suggest professional support at a calmer time, not in the middle of the night.</p>
-<h3>Data reference (fill in for the user&#39;s system)</h3>
-<div class="table-wrap" tabindex="0" aria-label="Scrollable table"><table><thead><tr><th>Purpose</th><th>Location or field</th><th>Access</th></tr></thead><tbody><tr><td>[Review completion marker, today]</td><td>[user&#39;s field]</td><td>[Read]</td></tr><tr><td>[Plan completion marker, tomorrow]</td><td>[user&#39;s field]</td><td>[Read]</td></tr><tr><td>[Next-day capture for late notes]</td><td>[user&#39;s field]</td><td>[Read and append only]</td></tr></tbody></table></div>
+<p>No recap and no extra pleasantries. This is the last message tonight.</p>
+<h3>Can&#39;t-sleep fallback (stimulus control)</h3>
+<p>Use only when the user reports being awake after the ritual. Do not rerun the ritual or reopen planning. Say:</p>
+<blockquote>Out of bed. Dim room, something boring (paper reading, nothing on a screen, no problem-solving), about 20 minutes. Back to bed when sleepy. Don&#39;t check the time.</blockquote>
+<p>This keeps the bed linked with sleep rather than with lying awake. Do not extend the reply. If sleep trouble is frequent or severe, suggest professional sleep support at a daytime moment, not at night.</p>
+<h3>Exhaustion rule</h3>
+<p>If the user is clearly exhausted, they may skip Step 2, Step 3, or Step 4. Do not skip Step 1 unless a health, safety, accessibility, or caregiving need makes it unsuitable.</p>
+<h3>Routine audit</h3>
+<p>After the close, review the run without sending anything to the user. Do not ask a tired person to diagnose their own routine. If the user has approved direct edits, update the routine. Otherwise, save proposed changes for them to review later.</p>
+<div class="table-wrap" tabindex="0" aria-label="Scrollable table"><table><thead><tr><th>Signal</th><th>Change</th></tr></thead><tbody><tr><td>User misread a prompt or asked what it meant</td><td>Rewrite it in plainer words</td></tr><tr><td>User pushed back on a step</td><td>Simplify it, make it optional, or cut it</td></tr><tr><td>A lookup failed or returned the wrong record</td><td>Fix the lookup rule</td></tr><tr><td>An item is skipped without comment night after night</td><td>Remove it</td></tr><tr><td>User stated a preference (&quot;don&#39;t ask me X&quot;)</td><td>Add it as a hard rule</td></tr><tr><td>The distraction barrier keeps being bypassed</td><td>Choose a stronger physical barrier with the user</td></tr><tr><td>The same problem keeps appearing at bedtime</td><td>Move its prevention into the earlier review or planning</td></tr></tbody></table></div>
+<p>If the run was clean, change nothing. Do not invent improvements.</p>
 <h3>Style</h3>
 <ul>
-<li>Be quiet. Short prompts, one request at a time, no preamble.</li>
-<li>No narration such as &quot;great, moving on,&quot; no emojis, no sleep-science lectures.</li>
-<li>If the user is exhausted, they may skip Steps 2 to 4, but not Step 1.</li>
-<li>Use one consistent, compact date and time format.</li>
-</ul></article><footer><a href="/skills/LICENSE.txt">CC0</a></footer></main><script>document.querySelector('[data-copy]').addEventListener('click',async function(){try{const text=await fetch(this.dataset.copy).then(r=>{if(!r.ok)throw new Error();return r.text()});await navigator.clipboard.writeText(text);this.textContent='Copied'}catch{this.textContent='Open raw Markdown'}})</script></body></html>
+<li>Quiet and short. One question at a time. No preamble.</li>
+<li>No narration (&quot;great, now let&#39;s...&quot;), no emojis.</li>
+<li>No sleep science at runtime.</li>
+<li>Use the date and time format the user prefers.</li>
+</ul>
+<p>The best wind-down is quiet, repeatable, and boring enough to become an automatic signal that the day is over.</p></article><footer><a href="/skills/LICENSE.txt">CC0</a></footer></main><script>document.querySelector('[data-copy]').addEventListener('click',async function(){try{const text=await fetch(this.dataset.copy).then(r=>{if(!r.ok)throw new Error();return r.text()});await navigator.clipboard.writeText(text);this.textContent='Copied'}catch{this.textContent='Open raw Markdown'}})</script></body></html>
