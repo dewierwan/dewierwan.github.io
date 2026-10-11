@@ -1,23 +1,28 @@
 ---
 name: test-every-screen-size
-description: Verify every UI and CSS change across representative screen sizes, realistic content, screenshots, and layout checks before completion.
+description: Verify UI and CSS changes across representative narrow, wide, short, and tall viewports. Combine screenshots with programmatic layout checks, then fix and retest every failure.
 ---
 
 # Test every screen size
 
-Run this workflow after any UI, visual, or CSS change and before requesting review, publishing, or calling the work complete. Small edits to spacing, backgrounds, or sizing can create overflow, blank areas, wrapping problems, or collisions at sizes that were not inspected.
+Use this workflow after **any UI, visual, or CSS change** and before declaring the work complete, requesting review, publishing, or releasing. Apply it even to a small spacing, color, or background edit: local changes can affect wrapping, height, overflow, alignment, and backgrounds at other screen sizes.
 
-A layout passes only when **both** screenshots and programmatic checks pass. Measurements can miss visual defects; screenshots can miss off-screen overflow or unusable controls.
+A bounding-box check alone is not enough. One desktop and one mobile screenshot are not enough. Use real screenshots and numerical checks together.
 
-## 1. Prepare a representative state
+## 1. Prepare realistic page states
 
-Use an authorized test environment and test only the minimum data needed to reproduce normal use. Populate the changed surface with realistic content, such as long text, representative lists or cards, field values, and validation messages. Include loading, empty, or error states when the change affects them.
+Run the real interface in a safe test environment. Populate the changed surface with representative content before testing:
 
-Do not test only an empty or unusually sparse page. Sparse states often conceal clipping, overlap, and unwanted blank space.
+- long paragraphs, formatted text, and long field values;
+- representative lists, cards, rows, and validation messages;
+- realistic item counts or content near expected limits;
+- loading, empty, and error states when the change affects them.
 
-## 2. Select the viewport sweep
+Do not validate only an empty or unusually clean state. Sparse content can hide clipping, overlap, wrapping, and unintended blank space.
 
-Use a repeatable browser-testing system. Start with these widths:
+## 2. Choose the viewport sweep
+
+Test these baseline widths:
 
 - 320 px
 - 480 px
@@ -26,41 +31,73 @@ Use a repeatable browser-testing system. Start with these widths:
 - 1024 px
 - 1440 px
 
-Add a wide desktop size, such as 1920 px, when large displays are a supported use case. Include any known target viewport.
+Add a large desktop width, such as 1920 px, when the interface is expected to be used on large displays.
 
-When vertical behavior matters, test both a short and tall height, for example about 700 px and 1400 px or more. Explicitly include a very tall viewport for changes involving viewport-height sizing, flexible page shells, backgrounds, vertical padding, sticky footers, or bottom alignment.
+When vertical layout matters, test at least two heights at each relevant width:
+
+- a short height around 700 px;
+- a tall height around 1400 px or greater.
+
+Also include any known target viewport. Explicitly test a very tall viewport, such as 1800 px, for changes involving viewport-height sizing, flexible page shells, page backgrounds, vertical padding, sticky footers, or bottom alignment.
+
+Use a headless browser automation tool, or another repeatable browser-testing system selected for the project.
 
 ## 3. Capture and inspect screenshots
 
-Capture screenshots for each relevant viewport and state. Use visible-viewport screenshots for sticky, fixed, and viewport-height behavior; use full-page screenshots when page flow, backgrounds, or total page length matter.
+Capture real screenshots at each relevant viewport and state. Use full-page screenshots when page length matters. Also capture the visible viewport when fixed, sticky, or viewport-height behavior matters.
 
-Inspect the changed surface on all four sides: top, right, bottom, and left. Compare the result with the requested outcome, not merely with the edited CSS.
+Inspect every changed component on **all four sides**:
 
-Give extra attention to full-bleed or edge-to-edge changes. Removing containment on one edge can reveal leftover wrapper margin or padding as an unintended strip on another edge.
+1. top;
+2. right;
+3. bottom;
+4. left.
 
-## 4. Run programmatic layout checks
+For each side, ask whether it matches the intended design after the component's role changed.
 
-At every relevant viewport, verify that:
+Pay special attention to edge-to-edge or full-bleed changes. A component that becomes flush with an edge may expose leftover wrapper margins or padding as visible background strips. Check every edge, not only the edge edited.
 
-- there is no unintended horizontal overflow;
-- viewport-fitting screens do not have unintended vertical overflow, allowing a small rendering tolerance;
-- changed elements do not overlap adjacent content or escape their intended containers;
-- buttons, links, fields, cards, and lists remain visible and usable;
-- fixed or sticky elements do not hide required content; and
-- prose remains readable rather than becoming excessively wide.
+Reread the original requested outcome after making the change, then compare it directly with the screenshots. Do not accept a result merely because the CSS appears logically correct.
 
-For prose, use an approximate warning threshold of 80 characters per line; reading-focused layouts commonly target about 60–70 characters per line. Check relevant bounding rectangles for overlaps and compare document height with viewport height where fitting the viewport is intended.
+## 4. Run programmatic checks at each viewport
 
-## 5. Resolve failures and retest
+Run numerical checks alongside screenshots. At minimum, verify:
 
-If any viewport or state fails, stop the completion process. Find the underlying layout rule, fix that behavior, and rerun the relevant sweep. Do not add a size-specific patch merely to make one screenshot pass.
+- no unintended horizontal overflow;
+- no unintended vertical overflow when the screen is meant to fit the viewport;
+- no changed element overlaps neighboring content or its intended container;
+- buttons, links, and fields remain visible and usable;
+- fixed or sticky UI does not hide essential content;
+- cards, lists, and form controls remain within intended bounds;
+- body text retains a readable line length.
 
-If a fix improves one size but breaks another, revisit the diagnosis. The layout model or component constraints are incomplete.
+For fit-to-viewport screens, compare document height with viewport height and allow only a small rendering tolerance. For overlap detection, compare relevant bounding rectangles with adjacent elements and container boundaries.
 
-## 6. Readiness gate and report
+For prose-heavy pages, flag excessively wide text measures. A broad warning threshold is about 80 characters per line; reading-focused designs commonly use a narrower target of roughly 60–70 characters per line.
 
-Do not report only that the interface works on “mobile and desktop.” State what was tested and what passed. For example:
+## 5. Require both forms of evidence
 
-> Verified at 320, 480, 600, 720, 1024, and 1440 px; tested short and tall heights where relevant; screenshots and layout checks found no unintended overflow or overlap; controls remain usable.
+Automated measurements can miss visual defects such as exposed background strips, poor balance, or unexpected empty regions. Screenshots can miss subtle off-screen overflow, inaccessible controls, and small collisions.
 
-If a viewport, state, or check was not run, state that clearly and do not represent the UI change as fully verified.
+A viewport passes only when both visual inspection and relevant programmatic checks pass.
+
+## 6. Fix failures and rerun the sweep
+
+If any viewport or realistic state fails:
+
+1. stop the completion or release process;
+2. identify the layout rule causing the failure;
+3. fix the underlying behavior rather than adding a viewport-specific cosmetic patch;
+4. rerun the complete relevant sweep, not only the failing size.
+
+If a fix makes one viewport correct but breaks another, reconsider the diagnosis. The layout model is likely incomplete.
+
+## 7. Readiness gate and reporting
+
+Do not report vague claims such as “works on mobile and desktop.” Report the tested widths, relevant heights or states, and the checks performed.
+
+Use a concise report such as:
+
+> Verified at 320, 480, 600, 720, 1024, and 1440 px; tested short and tall layouts where relevant; no unintended overflow or overlap; controls remain visible and usable; tall viewport clean.
+
+If any viewport or state remains unverified, say so clearly and do not represent the UI change as complete.
