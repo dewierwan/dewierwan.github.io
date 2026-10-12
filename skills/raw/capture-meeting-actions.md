@@ -1,5 +1,5 @@
 ---
-name: capture-meeting-actions
+name: meeting-actions
 description: Review authorized meeting records, capture genuine unfinished commitments as clear deduplicated tasks, and batch only the judgment calls that need clarification.
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: create-editorial-cover-images
+name: cover-images
 description: Create and review eight article-specific cover-image options through five initial concepts and three evidence-based improvements.
 ---
 

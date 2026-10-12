@@ -1,5 +1,5 @@
 ---
-name: professional-social-post
+name: professional-posts
 description: Draft, revise, and audit professional social posts that lead with concrete value, fit a defined audience, and remain accurate, defensible, and easy to scan.
 ---
 

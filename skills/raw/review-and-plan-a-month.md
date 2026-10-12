@@ -1,5 +1,5 @@
 ---
-name: review-and-plan-a-month
+name: plan-your-month
 description: Close one month honestly, then create a small, capacity-checked, explicitly approved plan for the next month using evidence, trade-offs, and concrete commitments.
 ---
 

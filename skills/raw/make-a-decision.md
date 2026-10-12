@@ -1,5 +1,5 @@
 ---
-name: make-a-decision
+name: decide
 description: Match decision-making rigor to stakes and reversibility, make clear calls, preserve authorized records, and review outcomes without inventing the user’s views.
 ---
 

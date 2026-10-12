@@ -1,5 +1,5 @@
 ---
-name: turn-a-message-into-a-task
+name: message-to-task
 description: Turn a message thread into researched, pre-completed work, and create a clear task record only when tracking will help.
 ---
 

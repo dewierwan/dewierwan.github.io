@@ -1,5 +1,5 @@
 ---
-name: run-a-recurring-community-event
+name: recurring-events
 description: Create, publish, verify, and invite the approved audience to authorized recurring community events using adaptable tools, privacy-aware controls, and readiness checks.
 ---
 

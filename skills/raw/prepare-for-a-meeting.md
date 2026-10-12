@@ -1,5 +1,5 @@
 ---
-name: prepare-for-a-meeting
+name: meeting-prep
 description: Research the right context, clarify the user’s intended outcome, and produce a focused, access-appropriate meeting brief and agenda.
 ---
 

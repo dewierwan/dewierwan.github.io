@@ -19,8 +19,8 @@
       "title": "Make a decision",
       "description": "Match decision-making rigor to stakes and reversibility, make clear calls, preserve authorized records, and review outcomes without inventing the user’s views.",
       "category": "Think and decide",
-      "page": "https://dewierwan.com/skills/make-a-decision/",
-      "markdown": "https://dewierwan.com/skills/raw/make-a-decision.md"
+      "page": "https://dewierwan.com/skills/decide/",
+      "markdown": "https://dewierwan.com/skills/raw/decide.md"
     },
     {
       "title": "Solve a problem",
@@ -31,7 +31,7 @@
     },
     {
       "title": "Shape and draft a document",
-      "description": "Shape consequential documents through evidence review, answer-dependent alignment rounds, readiness checks, drafting, and delivery audit.",
+      "description": "Shape a consequential document through evidence review, answer-dependent question rounds, an alignment ledger, a readiness gate, plain drafting, and a final audit.",
       "category": "Research and write",
       "page": "https://dewierwan.com/skills/shape-and-draft/",
       "markdown": "https://dewierwan.com/skills/raw/shape-and-draft.md"
@@ -61,8 +61,8 @@
       "title": "Write a professional social post",
       "description": "Draft, revise, and audit professional social posts that lead with concrete value, fit a defined audience, and remain accurate, defensible, and easy to scan.",
       "category": "Research and write",
-      "page": "https://dewierwan.com/skills/professional-social-post/",
-      "markdown": "https://dewierwan.com/skills/raw/professional-social-post.md"
+      "page": "https://dewierwan.com/skills/professional-posts/",
+      "markdown": "https://dewierwan.com/skills/raw/professional-posts.md"
     },
     {
       "title": "Write a case study post",
@@ -75,8 +75,8 @@
       "title": "Create editorial cover images",
       "description": "Create and review eight article-specific cover-image options through five initial concepts and three evidence-based improvements.",
       "category": "Research and write",
-      "page": "https://dewierwan.com/skills/create-editorial-cover-images/",
-      "markdown": "https://dewierwan.com/skills/raw/create-editorial-cover-images.md"
+      "page": "https://dewierwan.com/skills/cover-images/",
+      "markdown": "https://dewierwan.com/skills/raw/cover-images.md"
     },
     {
       "title": "Plan your day",
@@ -94,7 +94,7 @@
     },
     {
       "title": "Plan your week",
-      "description": "Review the previous week, choose a few outcomes, cut lower-value work, and protect time for what matters.",
+      "description": "Review the past week and shape the next one: commit to one to three checkable goals, protect capacity, triage tasks, trim meetings, and record a short plan.",
       "category": "Plan and reflect",
       "page": "https://dewierwan.com/skills/plan-your-week/",
       "markdown": "https://dewierwan.com/skills/raw/plan-your-week.md"
@@ -103,8 +103,8 @@
       "title": "Review and plan a month",
       "description": "Close one month honestly, then create a small, capacity-checked, explicitly approved plan for the next month using evidence, trade-offs, and concrete commitments.",
       "category": "Plan and reflect",
-      "page": "https://dewierwan.com/skills/review-and-plan-a-month/",
-      "markdown": "https://dewierwan.com/skills/raw/review-and-plan-a-month.md"
+      "page": "https://dewierwan.com/skills/plan-your-month/",
+      "markdown": "https://dewierwan.com/skills/raw/plan-your-month.md"
     },
     {
       "title": "Get unstuck",
@@ -131,29 +131,29 @@
       "title": "Prepare for a meeting",
       "description": "Research the right context, clarify the user’s intended outcome, and produce a focused, access-appropriate meeting brief and agenda.",
       "category": "Meetings and tasks",
-      "page": "https://dewierwan.com/skills/prepare-for-a-meeting/",
-      "markdown": "https://dewierwan.com/skills/raw/prepare-for-a-meeting.md"
+      "page": "https://dewierwan.com/skills/meeting-prep/",
+      "markdown": "https://dewierwan.com/skills/raw/meeting-prep.md"
     },
     {
       "title": "Capture meeting actions",
       "description": "Review authorized meeting records, capture genuine unfinished commitments as clear deduplicated tasks, and batch only the judgment calls that need clarification.",
       "category": "Meetings and tasks",
-      "page": "https://dewierwan.com/skills/capture-meeting-actions/",
-      "markdown": "https://dewierwan.com/skills/raw/capture-meeting-actions.md"
+      "page": "https://dewierwan.com/skills/meeting-actions/",
+      "markdown": "https://dewierwan.com/skills/raw/meeting-actions.md"
     },
     {
       "title": "Turn a message into a task",
       "description": "Turn a message thread into researched, pre-completed work, and create a clear task record only when tracking will help.",
       "category": "Meetings and tasks",
-      "page": "https://dewierwan.com/skills/turn-a-message-into-a-task/",
-      "markdown": "https://dewierwan.com/skills/raw/turn-a-message-into-a-task.md"
+      "page": "https://dewierwan.com/skills/message-to-task/",
+      "markdown": "https://dewierwan.com/skills/raw/message-to-task.md"
     },
     {
       "title": "Process an inbox to zero",
-      "description": "A privacy-aware workflow for converting authorized email and message inboxes into clear next actions without confusing triage with planning or deep work.",
+      "description": "Turn authorized email, chat, comment, and messaging inboxes into clear decisions and trusted tasks, one bucket at a time, without confusing triage with doing the work.",
       "category": "Meetings and tasks",
-      "page": "https://dewierwan.com/skills/process-an-inbox-to-zero/",
-      "markdown": "https://dewierwan.com/skills/raw/process-an-inbox-to-zero.md"
+      "page": "https://dewierwan.com/skills/inbox-zero/",
+      "markdown": "https://dewierwan.com/skills/raw/inbox-zero.md"
     },
     {
       "title": "Design a work sample",
@@ -171,17 +171,17 @@
     },
     {
       "title": "Use a browser safely",
-      "description": "Complete browser-based tasks safely by choosing the least invasive route, protecting authenticated context, verifying rendered state, and separating preparation from consequential actions.",
+      "description": "Complete browser tasks safely: pick the least invasive route, verify the account and every edit, and gate irreversible actions behind a readiness check.",
       "category": "Build and automate",
       "page": "https://dewierwan.com/skills/use-a-browser-safely/",
       "markdown": "https://dewierwan.com/skills/raw/use-a-browser-safely.md"
     },
     {
       "title": "Create an AI skill",
-      "description": "Design, test, improve, evaluate, and package reusable AI skills through an evidence-based, user-centered workflow.",
+      "description": "Create, test, and improve reusable AI skills through realistic tests, human review, objective checks, and activation tuning, then package them for handoff.",
       "category": "Build and automate",
-      "page": "https://dewierwan.com/skills/create-an-ai-skill/",
-      "markdown": "https://dewierwan.com/skills/raw/create-an-ai-skill.md"
+      "page": "https://dewierwan.com/skills/create-a-skill/",
+      "markdown": "https://dewierwan.com/skills/raw/create-a-skill.md"
     },
     {
       "title": "Test every screen size",
@@ -194,8 +194,8 @@
       "title": "Run a recurring community event",
       "description": "Create, publish, verify, and invite the approved audience to authorized recurring community events using adaptable tools, privacy-aware controls, and readiness checks.",
       "category": "Build and automate",
-      "page": "https://dewierwan.com/skills/run-a-recurring-community-event/",
-      "markdown": "https://dewierwan.com/skills/raw/run-a-recurring-community-event.md"
+      "page": "https://dewierwan.com/skills/recurring-events/",
+      "markdown": "https://dewierwan.com/skills/raw/recurring-events.md"
     }
   ]
 }
