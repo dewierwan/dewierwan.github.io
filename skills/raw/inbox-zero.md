@@ -1,6 +1,6 @@
 ---
 name: inbox-zero
-description: Triage authorized email, chat, and comment inboxes into five buckets and one trusted task list, one batch at a time, without doing the work the messages describe.
+description: Work through an email or message inbox to zero, turning each item into a clear next action without drifting into deep work. Use when someone wants to triage, clear, or prioritize an inbox.
 ---
 
 # Process an inbox to zero

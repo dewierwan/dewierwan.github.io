@@ -1,6 +1,6 @@
 ---
 name: professional-posts
-description: Draft, revise, and audit professional social posts that lead with concrete value, fit a defined audience, and remain accurate, defensible, and easy to scan.
+description: Draft, revise, and audit professional social posts that lead with concrete value and stay accurate and easy to scan. Use when someone wants to write a post, promote their work, or improve a draft.
 ---
 
 # Write a professional social post

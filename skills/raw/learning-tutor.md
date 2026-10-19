@@ -1,6 +1,6 @@
 ---
 name: learning-tutor
-description: Learn a paper, article, or topic through a rigorous Socratic dialogue built on retrieval, explanation, and practical application rather than passive summary.
+description: Teach a paper, article, or topic through Socratic questions and retrieval practice instead of passive summary. Use when someone says teach me this, help me understand it, or quiz me on it.
 ---
 
 # Learn with a tutor

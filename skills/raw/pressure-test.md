@@ -1,6 +1,6 @@
 ---
 name: pressure-test
-description: Find weak points in a leading strategic idea before commitment by testing its strongest case, critical assumptions, dissent, failure modes, and falsifiable evidence.
+description: Find the weak points in a strategic idea before committing to it, through a steelman, assumption tests, a pre-mortem, and a verdict. Use when someone asks to stress-test an idea or wonders if they are wrong.
 ---
 
 # Pressure-test an idea

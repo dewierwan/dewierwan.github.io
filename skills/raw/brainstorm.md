@@ -1,6 +1,6 @@
 ---
 name: brainstorm
-description: Generate distinct options for a decision, assess their tradeoffs candidly, and recommend a short ranked set without forcing a final choice.
+description: Generate genuinely distinct options for a decision, weigh their tradeoffs honestly, and recommend a short ranked set. Use when someone asks for options, alternatives, or ways they could approach something.
 ---
 
 # Brainstorm options

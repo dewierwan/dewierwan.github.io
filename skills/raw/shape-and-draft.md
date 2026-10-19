@@ -1,6 +1,6 @@
 ---
 name: shape-and-draft
-description: Shape a consequential document through evidence review, answer-dependent question rounds, an alignment ledger, a readiness gate, plain drafting, and a final audit.
+description: Shape a high-stakes document through evidence review and rounds of questions until the thinking is settled, then draft and audit it. Use when writing a strategy doc, proposal, or decision memo that must land.
 ---
 
 # Shape and draft a document

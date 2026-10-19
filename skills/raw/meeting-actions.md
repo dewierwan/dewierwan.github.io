@@ -1,6 +1,6 @@
 ---
 name: meeting-actions
-description: Review authorized meeting records, capture genuine unfinished commitments as clear deduplicated tasks, and batch only the judgment calls that need clarification.
+description: Review meeting notes or transcripts, capture real unfinished commitments as clear tasks, and batch only the unclear ones as questions. Use when someone asks what they committed to or wants meeting follow-ups.
 ---
 
 # Capture meeting actions

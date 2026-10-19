@@ -1,6 +1,6 @@
 ---
 name: access-check
-description: Before giving someone access to a shared chat workspace or knowledge base, find content about them they could read and recommend what to restrict.
+description: Before someone joins a shared chat workspace or knowledge base, find content about them they could read and recommend what to restrict. Use when adding a new hire, advisor, or collaborator.
 ---
 
 # Check before granting access

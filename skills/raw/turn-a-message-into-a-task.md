@@ -1,6 +1,6 @@
 ---
 name: message-to-task
-description: Turn a message thread into researched, pre-completed work, and create a clear task record only when tracking will help.
+description: Turn a message thread into researched, partly completed work, and create a task only when tracking will help. Use when someone shares a message and says make this a task, track this, or deal with it.
 ---
 
 # Turn a message into a task

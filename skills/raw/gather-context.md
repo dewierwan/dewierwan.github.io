@@ -1,6 +1,6 @@
 ---
 name: gather-context
-description: Search only the sources that matter, at a depth that fits the stakes, and turn the findings into one concise context brief where every claim links to its evidence.
+description: Search the sources that matter, at a depth that fits the stakes, and turn the findings into one brief where every claim links to evidence. Use when someone wants to get up to speed on a person, project, or decision.
 ---
 
 # Gather context

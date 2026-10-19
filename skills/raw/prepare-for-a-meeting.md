@@ -1,6 +1,6 @@
 ---
 name: meeting-prep
-description: Prepare one meeting: research proportionately, post a situation brief, ask targeted questions, then build an access-appropriate page with a goal, agenda, and close.
+description: Research the people and history behind a meeting, clarify the outcome wanted, and produce a focused brief and agenda. Use when someone says prep my meeting with a person, or before an important call.
 ---
 
 # Prepare for a meeting

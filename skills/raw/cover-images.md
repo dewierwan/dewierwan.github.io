@@ -1,6 +1,6 @@
 ---
 name: cover-images
-description: Create and review eight article-specific cover-image options through five initial concepts and three evidence-based improvements.
+description: Create cover images for articles and newsletters through five concepts, a close look at the results, and three improved versions. Use when someone needs a header image or an image-generator prompt for a post.
 ---
 
 # Create editorial cover images

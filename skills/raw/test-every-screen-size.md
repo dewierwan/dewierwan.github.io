@@ -1,6 +1,6 @@
 ---
 name: test-every-screen-size
-description: Verify every UI and CSS change across representative screen sizes, realistic content, screenshots, and layout checks before completion.
+description: Check every UI or CSS change across narrow, wide, short, and tall screens with screenshots and layout checks before calling it done. Use before shipping any front-end change.
 ---
 
 # Test every screen size

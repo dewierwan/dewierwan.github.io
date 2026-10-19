@@ -1,6 +1,6 @@
 ---
 name: use-a-browser-safely
-description: Complete browser tasks safely: pick the least invasive route, verify the account and every edit, and gate irreversible actions behind a readiness check.
+description: Complete browser tasks safely: pick the least invasive route, protect logged-in accounts, check what the page actually shows, and confirm before acting. Use when filling forms or fixing dashboards in a browser.
 ---
 
 # Use a browser safely

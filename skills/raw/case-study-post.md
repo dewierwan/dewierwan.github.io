@@ -1,6 +1,6 @@
 ---
 name: case-study-post
-description: Create an evidence-based case study post with strong hooks, a review-ready draft, quote-card options, approvals, and a publishing checklist.
+description: Turn a real person's career or learning story into an evidence-based case study post, with hooks, quote cards, and an approval checklist. Use when someone wants to feature a person's journey publicly.
 ---
 
 # Write a case study post

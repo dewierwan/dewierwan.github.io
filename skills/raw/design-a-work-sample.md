@@ -1,6 +1,6 @@
 ---
 name: design-a-work-sample
-description: Create or improve a short, paid, asynchronous work sample that yields job-relevant evidence, scores quickly, and is validated with simulated submissions.
+description: Design a short, paid, take-home work sample that produces job-relevant evidence and is tested with simulated submissions. Use when someone is hiring and needs a work test or wants to improve one.
 ---
 
 # Design a work sample

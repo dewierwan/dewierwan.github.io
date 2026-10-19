@@ -1,6 +1,6 @@
 ---
 name: create-a-skill
-description: Create, test, and improve reusable AI skills through realistic tests, human review, objective checks, and activation tuning, then package them for handoff.
+description: Design, test, and improve a reusable AI skill, from a rough idea or a repeated workflow to a tested, well-triggered skill. Use when someone wants to turn a workflow into a skill or improve one.
 ---
 
 # Create an AI skill

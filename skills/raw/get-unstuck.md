@@ -1,6 +1,6 @@
 ---
 name: get-unstuck
-description: A 10-15 minute rescue for when you are tired, dreading a task, unclear on the next step, or distracted: diagnose the state, run one matched intervention, and start one work block.
+description: Diagnose why someone is stuck, then run one short, matched intervention to get the first work block started. Use when someone feels tired, dreads a task, cannot get started, or keeps getting distracted.
 ---
 
 # Get unstuck

@@ -1,6 +1,6 @@
 ---
 name: decide
-description: Match decision-making rigor to stakes and reversibility, make clear calls, preserve authorized records, and review outcomes without inventing the user’s views.
+description: Match decision rigor to stakes and reversibility, make a clear call, record it with a prediction, and review it later. Use when someone asks for help deciding, weighing X against Y, or reviewing a past decision.
 ---
 
 # Make a decision

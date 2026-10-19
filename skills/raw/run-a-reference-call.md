@@ -1,6 +1,6 @@
 ---
 name: run-a-reference-call
-description: Prepare a reference call for a job candidate by gathering minimal, authorized context and building a briefing page with a tailored opening, briefing notes, and questions.
+description: Prepare a focused reference call for a job candidate, with a briefing page, an opening, and questions that draw out specific evidence. Use when someone has a reference call coming up.
 ---
 
 # Run a reference call
@@ -9,17 +9,21 @@ Use this workflow when a hiring manager is checking references on a candidate fo
 
 **Direction check:** this workflow is for references you collect on a candidate you might hire. If an outside organization is asking *you* for a reference on someone you know, use a separate "give a reference" workflow instead.
 
+## Quick version
+
+Light path: paste the candidate's CV (or a short summary of it), the role, and the referee's name and role. Ask for the briefing page. No connected tools are needed.
+
+- The assistant writes a short context section: who the referee is and how they worked with the candidate.
+- It drafts a tailored opening you can read out in under a minute.
+- It writes briefing notes: what this referee can uniquely confirm, and any themes from earlier references to test.
+- It gives one list of core questions plus three or four probes for the role.
+- After the call, paste your rough notes back and ask it to separate what the referee saw from what they concluded.
+
 **The page is the deliverable.** Do not stop after research or reply with a chat summary. The hiring manager will read the page, not the conversation. Everything useful must be on the page.
 
 ## Privacy and authorization
 
-Reference checks involve personal information about two people: the candidate and the referee. Before you start:
-
-- Confirm there is a legitimate hiring purpose. Confirm the candidate has supplied or agreed to this referee. Do not contact or research "back-channel" referees unless the user's policy and the candidate's consent allow it.
-- Only search sources the user has authorized you to access, such as their email, calendar, chat, notes, or applicant tracking system.
-- Use the minimum information needed. Keep research to professional facts: role, organization, working relationship, and work history relevant to the role. Leave out personal life, health, family, protected characteristics, and anything unrelated to job performance.
-- Keep the page inside the hiring team's access boundary. Do not share it with the candidate, other referees, or anyone outside the hiring decision.
-- Only add recording or transcription if the user's policy allows it and the referee is told and agrees at the start of the call.
+Reference checks involve personal information about two people: the candidate and the referee. Research only when you are authorized for a legitimate hiring purpose, the candidate has supplied or agreed to this referee, and the user has connected the sources you search. Use the minimum relevant information: role, organization, working relationship, and work history that bears on the job, and leave out personal life, health, family, protected characteristics, and anything unrelated to performance. Keep the page within the hiring team, and record or transcribe the call only if your policy allows it and the referee agrees at the start.
 
 ## Inputs
 
@@ -33,7 +37,7 @@ Reference checks involve personal information about two people: the candidate an
 
 ## Steps
 
-Run every step in order.
+When tools are connected, run every step in order. Otherwise, use the Quick version with what the user pastes in.
 
 ### Step 1: Find the scheduled call
 
@@ -59,7 +63,7 @@ Run every step in order.
 5. Calendar: past events with the referee.
 6. Public web: "{Name}" plus their organization, for current role and professional background only.
 
-Read the three to five most recent messages from each email search.
+From each email search, read only the few recent messages that concern the candidate, the reference, or the scheduling of this call.
 
 **2c. Candidate links.** Collect links the hiring manager will want during the call: the applicant tracking profile, a professional profile, and any portfolio, code repository, or personal site the candidate shared in their application.
 
@@ -87,7 +91,7 @@ Use this template and tailor every placeholder:
 
 ```markdown
 ## Context
-- [{Referee Name}]({professional profile link}) — {role, organization, one-line background}.
+- [{Referee Name}]({professional profile link}): {role, organization, one-line background}.
 - {Candidate} worked with {Referee} as {relationship, capacity, duration}.
 - This is a reference call for [{Candidate Name}]({profile link}) ([applicant profile]({link}), {other links}), who is at {stage} for {Role} at {Organization}. Next step: {e.g., work trial dates and location}.
 - {Any prior contact or relationship history with the referee.}
@@ -123,8 +127,8 @@ Use this template and tailor every placeholder:
 
 This is the highest-value section. It turns research into actions for this specific call.
 
-- **Use direct language.** Write "Referee A said the candidate tends to leave final polish late. Ask whether this referee saw the same." Do not write "It may be worth exploring...".
-- **Attribute themes internally, test them neutrally on the call.** The page may say who raised a point. On the call, ask an open question such as "How did they handle the last stretch of a project?" Do not reveal what other referees or interviewers said, and do not lead the referee toward a conclusion.
+- **Use direct language.** Write "The first referee said Jordan sometimes over-commits to side requests. Ask how this referee saw Jordan handle a crowded week." Do not write "It may be worth exploring...".
+- **Attribute themes internally, test them neutrally on the call.** The page may say who raised a point. On the call, ask an open question such as "How did they decide what to drop when too much was on their plate?" Do not reveal what other referees or interviewers said, and do not lead the referee toward a conclusion.
 - **Name the unique angle.** A former manager can speak to reliability and how much support the candidate needed. A peer can speak to collaboration. A client can speak to communication and delivery under pressure.
 - **Flag organization links** the hiring manager should know about, such as past collaborations or shared channels.
 - **If this is the first reference,** say so. List what to listen for that will be useful to compare across later calls.
@@ -133,9 +137,19 @@ This is the highest-value section. It turns research into actions for this speci
 
 Pick probes that test capabilities the role actually needs. Write three or four. Examples:
 
-- **Operations or program role:** How do they handle ambiguity and changing requirements? Do they tend to build lasting systems, or mainly solve problems as they come up? How clear is their writing and speaking with non-specialist colleagues? Do they spot what needs doing, or wait to be asked?
-- **Community role:** How have they built and energized a community? How do they handle conflict or difficult members? Are they stronger at designing processes or at building one-to-one relationships, and how do they balance both? Do they notice what the community needs without being told?
-- **Senior operations role:** Have they scaled operations at a growing organization, and what broke along the way? How do they handle competing priorities from several stakeholders? Are they comfortable owning vendors, budgets, and contracts? How do they balance speed against process?
+- **Data analyst:** How do they check their own numbers before sharing them? How do they explain a messy result to someone without a data background? Do they push back when a question is badly framed?
+- **Customer support lead:** How do they stay calm with an angry customer? Have they turned repeat complaints into a fix rather than a workaround? How do they coach newer teammates?
+- **Engineering manager:** How do they handle an underperforming report? What do they do when the roadmap and the team's capacity disagree? How much do they still write code, and is that the right amount?
+
+## Worked example (invented)
+
+Inputs pasted into a plain chat: Jordan Lee's CV, applying for Data Analyst; referee Sam Ortiz, Jordan's manager for two years at a regional grocery chain. One earlier reference, from a peer, praised Jordan's clear dashboards but said Jordan sometimes says yes to too many side requests.
+
+Briefing notes the assistant writes:
+
+- **Theme to test:** the peer said Jordan over-commits. Sam managed Jordan's workload directly, so ask how Jordan handled a crowded week, without mentioning the peer.
+- **Sam is uniquely placed to speak to:** how much support Jordan needed, and whether Jordan's analysis changed real decisions.
+- **Probe:** "Tell me about a time Jordan's numbers turned out wrong. What happened next?"
 
 ## During and after the call
 
@@ -148,7 +162,7 @@ Pick probes that test capabilities the role actually needs. Write three or four.
 
 - Context is short bullet points, not paragraphs.
 - The opening is tailored to this referee and candidate. Adjust the tone if there is prior contact.
-- Questions are one unbulleted-numbering list, with no separate agendas.
+- Questions sit in one bulleted list, not numbered, with no separate agendas.
 - Candidate links and other references are on the page.
 - Probes match the real role, not a generic list.
 - No unrelated personal details about the candidate or referee appear on the page.

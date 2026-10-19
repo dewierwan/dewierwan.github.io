@@ -1,6 +1,6 @@
 ---
 name: solve-a-problem
-description: Take a non-trivial product, technical, process, or automation problem from diagnosis through recommendation, implementation, verification, and handoff.
+description: Take a non-trivial build or process problem from diagnosis through options, recommendation, implementation, and verification. Use when someone wants a problem solved end to end, or analysis only before building.
 ---
 
 # Solve a problem

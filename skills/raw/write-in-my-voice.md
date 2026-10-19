@@ -1,6 +1,6 @@
 ---
 name: write-in-my-voice
-description: Draft or revise email in the user’s established voice, verify facts and commitments, and optionally create one reviewable draft in the user’s chosen email system.
+description: Draft or revise email in the user's own voice, built from real samples, with facts and commitments checked before anything is sent. Use when someone asks to write, reply to, or polish an email.
 ---
 
 # Write in my voice
