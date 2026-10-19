@@ -150,7 +150,7 @@
     },
     {
       "title": "Process an inbox to zero",
-      "description": "Turn authorized email, chat, comment, and messaging inboxes into clear decisions and trusted tasks, one bucket at a time, without confusing triage with doing the work.",
+      "description": "Triage authorized email, chat, and comment inboxes into five clear buckets and one trusted task list, working one batch at a time without doing the work itself.",
       "category": "Meetings and tasks",
       "page": "https://dewierwan.com/skills/inbox-zero/",
       "markdown": "https://dewierwan.com/skills/raw/inbox-zero.md"

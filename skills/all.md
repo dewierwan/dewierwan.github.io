@@ -803,22 +803,22 @@ description: Search only the sources that matter, at a depth that fits the stake
 
 # Gather context
 
-Build a well-sourced context brief on whatever the user names: a person, organization, project, topic, or decision. Search the sources that plausibly hold relevant information, then combine the findings into one organized brief in which every sourced claim links to its evidence.
+Build a well-sourced context brief on whatever the user names: a person, organization, project, topic, or decision. Search the sources that plausibly hold relevant information. Then combine the findings into one organized brief in which every sourced claim links to its evidence.
 
-Use this workflow when the user wants context before they act: before writing, deciding, meeting, pitching, or hiring, or simply to get up to speed. Typical requests include "gather context on X", "what do we have on X", "get me up to speed on X", and "background on X before my call".
+Use this workflow when the user wants context before they act. That might be before writing, deciding, meeting, pitching, or hiring, or simply to get up to speed. Typical requests include "gather context on X", "what do we have on X", "pull everything about X", "what's the latest with X", and "background on X before my call".
 
-If the user wants a structured meeting-preparation document and has a separate workflow for that, use it instead. This workflow is for raw context assembly. If you are unsure which one they want, ask.
+The user may have a separate workflow for structured meeting preparation, such as one that creates a meeting page. If that is what they want, use that workflow instead. This workflow is for raw context assembly. If you are unsure which one they want, ask.
 
 ## The most important rule: right-size the effort
 
-Match the depth of the search to what the user actually needs. "Remind me where we are with X" needs a quick look at two or three obvious sources and a short answer. A deep dive before a high-stakes decision needs a broad search with verification. Most requests fall in between. Decide how much effort is warranted, and do that much.
+Match the depth of the search to what the user actually needs. "Remind me where we are with X" needs a quick look at two or three obvious sources and a short answer. A deep dive before a high-stakes decision needs a broad search with verification. Most requests fall in between. Read the request, decide how much effort is warranted, and do that much. Do not reach for maximum effort by reflex.
 
 Two failure modes are equally bad:
 
 - **Over-gathering:** querying every connected system, starting many parallel helpers, and writing an essay for a quick question.
 - **Under-gathering:** checking one source, finding a few results, and stopping when the request clearly needed more. The key fact is often in a chat thread or meeting record the user has forgotten.
 
-For each source, ask: *for this specific request, would a sensible researcher think it is worth checking here?* Relevance and effort level together set the breadth. Skipping an irrelevant source is good judgment, not laziness.
+For each source, ask: *for this specific request, would a sensible researcher think it is worth checking here?* Relevance and effort level together set the breadth. A topic question does not need recruiting records. A quick status check does not need every source, even if each might hold a small detail. Skipping an irrelevant source is good judgment, not laziness.
 
 ## Step 0: Set the purpose and access boundary
 
@@ -830,6 +830,7 @@ When the subject is a person, apply stricter limits:
 - Do not search private messages or records just because they are available.
 - Leave out unrelated or sensitive personal details. Do not guess at private or protected traits.
 - Respect consent, confidentiality, need-to-know limits, and the person's reasonable privacy expectations.
+- For personal chat apps and direct messages, summarize what other people said in your own words. Do not quote their messages, and do not save them to files.
 - Keep the brief in a location whose access matches the sensitivity of the sources and the intended audience.
 - For hiring-related subjects, focus on role-relevant capabilities, alignment with the role's requirements, and evidence that actually reflects relevant performance.
 
@@ -841,11 +842,11 @@ If the purpose, authorization, or output destination is unclear, resolve it befo
 
 | Tier | When | How to search | Output |
 |---|---|---|---|
-| Quick | Status check, "remind me" | 1–3 obvious sources, one pass each, searched directly | A few lines |
+| Quick | Status check, "remind me" | One to three obvious sources, one pass each, searched directly | A few lines |
 | Standard | The common case | A handful of relevant sources, a couple of queries each; parallel helpers only if they truly save time | A tight brief |
 | Deep | High-stakes preparation, such as a major decision, big pitch, or key hire | Broad search, parallel helpers, several queries per source, verification of key claims | The full brief structure |
 
-If unsure, choose the lighter tier and offer to go deeper. Escalating is cheap; over-searching is expensive. State the chosen tier in one line so the user can redirect, for example: "Quick look across email, chat, and the team wiki. Say the word if you want the full sweep."
+If unsure, choose the lighter tier and offer to go deeper. Escalating is cheap; over-searching is expensive. State the chosen tier in one short line so the user can redirect, for example: "Quick look across email, chat, and the team wiki. Say the word if you want the full sweep."
 
 ### Classify the subject
 
@@ -861,58 +862,63 @@ The subject type tells you which sources matter most.
 
 ### Clarify only when necessary
 
-If the subject is truly ambiguous, such as a bare name that could mean several people, ask **one** short clarifying question before searching. A wrong-target search wastes a lot of effort. If the subject is clear, go ahead.
+If the subject is truly ambiguous, such as a bare name that could mean several people or a one-word topic with several meanings, ask **one** short clarifying question before searching. A wrong-target search wastes a lot of effort. If the subject is clear, go ahead. The default is to proceed, not to ask.
 
 ### Named sources are a floor, not a ceiling
 
-Sources the user names are mandatory, but they are not necessarily the full list. If another source clearly holds decision-relevant context, check it too. The most common case: when results show or the request implies a recent meeting with the subject, read the notes or transcript for that meeting. It is often the richest single source, and a brief without it misses what was actually said.
+Sources the user names are mandatory, but they are not necessarily the full list. If another source clearly holds decision-relevant context, check it too.
+
+The most common case is a recent meeting. When results show, or the request implies, a meeting with the subject (especially the same day or week), read the notes or transcript for that meeting. Signals include a calendar invite or a "great to meet you this morning" message in the results. The meeting record is often the richest single source, and a brief without it misses what was actually said.
 
 ### Set the time window
 
-Use the window the user gives. If they give none, pick one that fits the subject's age, such as the last several months for an active relationship, extending back to the start for older relationships or projects. State the window in the brief.
+Use the window the user gives. If they give none, a sensible default is the last six months, extended back further for older relationships or projects. State the window in the brief.
 
 ## Step 2: Search the relevant sources
 
 - **Quick or standard:** search directly in the main conversation so you see results as they arrive.
-- **Deep, or many sources:** run read-only searches in parallel, one helper per source or cluster. Each helper returns a short digest with links, not raw dumps.
+- **Deep, or many sources:** run read-only searches in parallel, one helper per source or cluster. Each helper returns a short digest with links, not raw dumps. Pass the privacy rules from Step 0 to every helper, including the rule to summarize rather than quote personal chat messages.
 
-Depth within a source also follows the tier. For a deep search, query several ways: by name, organization, project keyword, and related people. Do not conclude "nothing there" until you have used the search capabilities available. For a quick look, one or two well-chosen queries is correct.
+Depth within a source also follows the tier. For a deep search, query several ways: by name, organization, project keyword, and related people. Do not conclude "nothing there" until you have used the search capabilities available. For a quick look, one or two well-chosen queries on the obvious sources is correct, not a failure.
 
 ### Source-handling principles
 
-These apply whatever tools the user has. For lighter tiers, apply them to fewer sources and fewer results.
+These apply whatever tools the user has. The list describes a thorough pass, which suits a deep search. For lighter tiers, apply them to fewer sources and only the top results.
 
-1. **Search direct and indirect.** Look for direct contact with the subject, and in deeper passes for mentions where others discuss it.
-2. **Prefer precise search modes.** If a tool's default search returns noisy or loosely related results, switch to exact or keyword search.
-3. **Read the whole item.** Some documents, pages, or records hide content in tabs, sections, attachments, or threads that a simple read skips. Open what matters in full and note where each finding came from.
-4. **Know which records are authoritative.** For structured databases, use any map of canonical tables and field meanings before crawling. Treat lower-quality or temporary data as weak until confirmed, and watch for fields that hold default values rather than real ones.
-5. **Check freshness.** Web profiles and news go stale; cross-check current roles against dated sources. Stored notes or assistant memory reflect what was true when written; confirm any named file, setting, or fact still holds.
-6. **Read attribution carefully.** Speaker labels in transcripts and authorship in shared records can be imprecise. Do not attribute a statement to someone without reasonable confidence.
-7. **Use conditional sources only when they fit.** Recruiting records for hiring matters, product analytics for usage questions, code history for engineering subjects, and the user's personal task or journal system only for work they did themselves and have chosen to include.
-8. **Never invent a link.** Use only URLs you have verified or that the user supplied. Otherwise leave it out and flag it.
+1. **Search direct and indirect.** Look for direct contact with the subject (messages from or to them). In deeper passes, also search for mentions where others discuss the subject.
+2. **Prefer precise search modes.** If a tool's default search returns noisy or loosely related results, such as calendar entries flooding a document search, switch to exact or keyword search.
+3. **Read the whole item.** Some documents, pages, or records hide content in tabs, sections, attachments, or threads that a simple read skips. For example, a document reader may return only the first tab unless you list the tabs and read each one. Open what matters in full and note where each finding came from.
+4. **Know which records are authoritative.** For structured databases, use any map of canonical tables and field meanings before crawling. Go first to the tables the user's organization treats as the source of truth. Treat lower-quality, temporary, or sandbox data as weak until confirmed, and ask before relying on it. Watch for fields that hold default values rather than real ones, such as an automatic midnight timestamp; use a creation date instead when you need to know when something happened.
+5. **Check freshness.** Web profiles and news go stale; cross-check current roles against dated sources rather than trusting an old snapshot. Stored notes or assistant memory reflect what was true when written; confirm any named file, setting, or fact still holds.
+6. **Read attribution carefully.** Speaker labels in transcripts and authorship in shared records can be imprecise. For example, a transcript's label for the user may include anyone speaking from the same room. Do not attribute a statement to someone without reasonable confidence.
+7. **Use conditional sources only when they fit.** Recruiting records for hiring matters, product analytics for usage questions, code and its history for engineering subjects, and the user's personal task or journal system only for work they did themselves and have chosen to include.
+8. **Cite properly.** Use clickable links to threads, pages, messages, and documents, not raw internal IDs.
+9. **Never invent a link.** Use only URLs you have verified or that the user supplied. Otherwise leave it out and flag it.
 
 ### Gaps and unavailable sources
 
 **Do not silently substitute sources.** If a source you judged relevant returns nothing or is unavailable, say so in the brief. Do not cover the gap with an adjacent source.
 
-If a source should be reachable but is not, try every safe diagnosis and repair you can first, such as checking the connection configuration or restarting a service you are allowed to manage. Ask the user only for steps that need them, such as re-authenticating. Report the exact failure, what you tried, and the one remaining action.
+If a source should be reachable but is not, treat it as a connection or loading problem. Try every safe diagnosis and repair you can first, such as checking the connection configuration, confirming the source's name mapping, or restarting a service you are allowed to manage. Ask the user only for steps that need them, such as re-authenticating in a browser or restarting the application. Report the exact failure, what you tried, and the one remaining action.
 
-A source you deliberately skipped as irrelevant is not a gap, but never imply you checked it.
+A source you deliberately skipped as irrelevant is not a gap and need not be reported, but never imply you checked it.
 
 ## Step 3: Synthesize into a context brief
 
 Combine findings into one brief organized by theme, not by tool. Lead with what matters most for the user's next action. Resolve contradictions rather than listing both blindly, for example: "A news profile says they work at Organization A; their dated professional profile says they left in March. The profile is more recent and more likely correct."
 
-**Every sourced claim gets a clickable link** to its primary source. A quote without a link is not finished.
+**Every sourced claim gets a clickable link** to its primary source. A quote without a link is not finished. The user must be able to click straight through to check.
 
 ### Output template
+
+Adapt the headings to the subject, but keep this spine:
 
 ```markdown
 ## [Subject]: context brief
 *Searched: [sources]. Window: [dates]. Effort: [quick/standard/deep].*
 
 ## TL;DR
-3–5 bullets with the most decision-relevant facts.
+Three to five bullets with the most decision-relevant facts.
 
 ## What we know
 Who or what this is, current state, history. By theme, with inline evidence links.
@@ -928,16 +934,23 @@ Any relevant source that was unavailable or empty.
 Key links, grouped, so the user can dig in.
 ```
 
-Match length to depth and keep prose short. This is a document to scan and act on.
+Match length to depth and keep prose blocks short. A quick check gets a tight brief; a deep dive gets the full structure. This is a document to scan and act on, not an essay.
 
 ### Where the brief goes
 
-- **Short brief:** give it directly in the reply.
-- **Long or reference brief:** save it where the user keeps generated documents, at an access level that suits the content. Follow the user's naming convention; if none exists, use a date plus a concise, specific, human-readable headline rather than a filename-style slug. Reply with a compact summary of key findings and the link.
+- **Short brief (fits comfortably on screen):** give it directly in the reply.
+- **Long or reference brief:** save it as a document where the user keeps generated documents, at an access level that suits the content. Follow the user's naming convention. If none exists, use the ISO date plus a concise, specific, human-readable headline, in the form "[YYYY-MM-DD]: Options for next year's partner program". Avoid filename-style slugs and type suffixes like "(context brief)". Do not scatter briefs into stray local files unless the user prefers that. Reply with a compact summary of key findings and the link.
 
-Make the brief (or summary plus link) the final part of the reply, and put any follow-up offer, such as "Want me to draft the outreach email?", before it. This keeps the deliverable easy to copy.
+Make the brief (or summary plus link) the final part of the reply, with no closing meta-summary after it. Put any follow-up offer, such as "Want me to draft the outreach email?", before the brief. This keeps the deliverable easy to copy.
 
-If you write into an existing formatted document, insert content where it will not inherit unintended styles, then verify the result by re-reading its structure or rendering it. A plain-text read does not confirm formatting.
+### Editing an existing formatted document
+
+If you insert the brief into an existing formatted document:
+
+1. Do not insert at the first character of an existing heading, list item, table cell, or other styled paragraph. New text can inherit that style, turning body text into headings.
+2. Insert into a known plain body paragraph, or replace a complete section whose boundaries and styles you have read from the document's structure.
+3. After every insertion, re-read the affected range at the structural level and check each paragraph's style. Body text and bullets should be normal text; only intended headings should carry heading styles.
+4. A plain-text read or heading search does not confirm formatting. Do not report the edit complete until the style check passes. If layout matters beyond paragraph styles, render or export the document and inspect it.
 
 ## Readiness checklist
 
@@ -946,7 +959,7 @@ If you write into an existing formatted document, insert content where it will n
 | Purpose and access | Task stated; sources authorized and relevant; person-related data minimal |
 | Effort | Tier matches the stakes and is stated in one line |
 | Coverage | Named sources searched; obviously decision-relevant sources, especially recent meeting records, added |
-| Evidence | Every sourced claim has a verified link; no invented URLs |
+| Evidence | Every sourced claim has a verified, clickable link; no invented URLs |
 | Conflicts | Contradictions resolved or clearly flagged |
 | Gaps | Unavailable or empty relevant sources reported; skipped sources not implied as checked |
 | Delivery | Output in the right place with appropriate access; brief is the final block |
@@ -961,7 +974,9 @@ If you write into an existing formatted document, insert content where it will n
 | Trusting stale profiles or memory | Cross-check against dated, current sources |
 | Reading only part of a document or record | Open hidden sections, tabs, and threads |
 | Covering a gap with a nearby source | Report the gap explicitly |
+| Quoting or storing personal chat messages | Summarize in your own words and do not save them |
 | Including unrelated personal details | Keep only what the stated task needs |
+| Reporting a document edit done after a plain-text check | Verify paragraph styles at the structural level |
 
 
 ---
@@ -2003,15 +2018,15 @@ description: Review the past week and shape the next one: commit to one to three
 
 # Plan your week
 
-Use this workflow to review the week that is ending and shape the week ahead in one deliberate session of about an hour. It works with any goal tracker, task list, calendar, and notes system the user chooses.
+Use this workflow to review the week that is ending and shape the week ahead in one deliberate session of about an hour. It works with any goal tracker, task list, calendar, and notes system the user chooses. It can run longer when the shaping needs it, because this session anchors the whole week.
 
-The method has two halves. First, research sets the **constraints**: deadlines, meetings, backlog, energy, and capacity. Then a few interview rounds, each built on the previous answers, set **what matters**. Only then do you turn the result into goals, tasks, calendar blocks, and a short written plan.
+The method has two halves. First, research sets the **constraints**: deadlines, meetings, backlog, energy, and capacity. Then a few interview rounds set **what matters**. Each round builds on the answers to the one before. Only then do you turn the result into goals, tasks, calendar blocks, and a short written plan.
 
 The conversation does the hard work. The final plan should feel simple.
 
 ## When to use it
 
-Use it when the user asks to plan their week, review and plan their week, or do their weekly session. Any request that combines reviewing the past week with planning the next one belongs here, not in a daily review.
+Use it when the user asks to plan their week, review and plan their week, or do their weekly session. Any request that combines reviewing the past week with planning the next one belongs here, not in a daily review. It also fits the user's regular planning day, or the evening before the week starts if they prefer that.
 
 By default, the target week starts next Monday. If the session runs on a Monday, the target is the current week. The user can name a different week. See "Adapting to timing" near the end.
 
@@ -2019,14 +2034,14 @@ By default, the target week starts next Monday. If the session runs on a Monday,
 
 The session is not complete until these exist:
 
-1. **One to three weekly goals** in the user's goal tracker, each linked to a longer-term goal and carrying a definition of done of 2-4 checkable outputs.
-2. **A short written plan** on the target week's record, plus the user's review answers saved on the week being reviewed.
+1. **One to three weekly goals** in the user's goal tracker. Each is linked to a longer-term goal and has a definition of done of 2-4 checkable outputs.
+2. **A short written plan** on the target week's record. The user's review answers are also saved on the record for the week being reviewed.
 3. **Tasks** created or updated for each concrete chunk of work behind each goal. Each takes 5 minutes to 3 hours, has a clear title, and has notes that make starting easy. The user approves each one.
-4. **Calendar blocks** for goal work and protected commitments, each slot approved individually.
+4. **Calendar blocks** for goal work and protected commitments. The user approves each slot individually.
 5. **Task decisions applied** for overdue tasks the user chose to triage.
 6. **Drafted messages** for meetings the user chose to cut or move. The user sends them.
 
-If the user declines a step ("I'll triage myself", "keep all meetings"), record that choice and treat the step as done.
+If you present analysis without producing these, the session is not done. If the user declines a step ("I'll triage myself", "keep all meetings"), record that choice and treat the step as done.
 
 ## Setup: choices to confirm once
 
@@ -2037,21 +2052,38 @@ Ask these the first time, then reuse the answers until the user changes them.
 | Planning day | End of the working week |
 | Goal tracker and task system | Wherever goals and tasks already live |
 | Calendars | Write to one; read others (personal, social, training) only |
-| Time zone | The user's current location; ask if unsure |
-| Longer-term goals | The longest active level plus the current quarter or month |
+| Time zone | The user's current location; ask if unsure, and restate it to any helper |
+| Longer-term goals | The longest active level, plus the current quarter or month |
 | Protected floor | Only the health, rest, or relationship items the user wants tracked |
 | Working hours | Ask; count only hours the user actually works, including evenings if they do |
-| Thresholds | Suggested values below until the user sets their own |
+| Date format | The user's usual format, used consistently |
+| Thresholds | The suggested values below until the user sets their own |
 
-If no longer-term goals are written down, say so and ask whether to plan without them or pause to set them first. Do not invent stand-in goals.
+Suggested thresholds:
+
+| Signal | Suggested threshold |
+|---|---|
+| Slipping goal | 4 or more deadline moves while still open |
+| Chronic deferral | More than 5 due-date moves; offer to park it |
+| Heavy meeting day | More than 4 meetings |
+| Unplanned buffer | 20% of working hours after meetings |
+| Old email | Inbox threads older than about two days |
+| Waiting conversation | A direct message unanswered for more than 3 days |
+| Assessment decisions | Decision within 5 working days of the last step, ideally 2 |
+| Health signal (opt-in) | Any day well below the user's own target, several days below it, or a clear drop against the prior week from the same source |
+
+If no longer-term goals are written down, say so. Check the next level down (for example, a month plan if the quarter is empty). If nothing exists, ask whether to plan without them or pause to set them first. Do not invent stand-in goals.
 
 ## Privacy and access boundary
 
-- **Authorization.** Read only sources the user has connected and asked you to use for planning.
-- **Private reflections are off-limits.** Do not read, quote, or use freeform journal or diary entries, including copies in logs or transcripts. Use structured fields (daily plans, ratings, rating reasons) and what the user says in the conversation. Request only allowed fields when a record mixes them. If a scan cannot exclude private content before it reaches you, skip it and say so in one line.
-- **Messages: counts and waits, not content.** For direct messages, show only who is waiting, how long, and a one-line gist if it helps a decision.
-- **Other people.** Use only what bears on the user's own time and obligations. Leave out unrelated or sensitive details. Never diagnose or label anyone.
-- **Keep outputs inside the boundary.** The plan is for the user. Do not copy private details about others into shared spaces.
+This workflow touches calendars, messages, and records that involve other people. Keep it within these limits:
+
+- **Legitimate purpose and authorization.** Read only sources the user has connected and asked you to use for planning their own week.
+- **Minimum information.** Pull only what could change a planning decision. Counts and dates usually suffice.
+- **Private reflections are off-limits.** Do not read, quote, or use freeform journal or diary entries. This includes copies in logs or transcripts. Use structured fields (daily plans, ratings, rating reasons) and what the user says in the conversation. When a record mixes allowed and private fields, request only the allowed fields by name. If a scan cannot exclude private content before it reaches you, skip it and say so in one line.
+- **Messages: counts and waits, not content.** For email and chat, report counts and ages. For direct messages awaiting a reply, show only who is waiting, on which channel, and for how long. Do not summarize message content.
+- **Other people.** Use only what bears on the user's own time and obligations. Leave out unrelated or sensitive details. Never diagnose, speculate about, or label anyone. If a colleague has openly said they are overloaded, you may ask whether supporting them is a priority. Do not infer anyone's condition from private material.
+- **Keep outputs inside the boundary.** The plan is for the user. Do not copy private details about others into shared spaces. Drafted messages say only what the recipient needs.
 - **Health data is optional.** Use it only if the user opted in, and only to judge capacity.
 
 ## Core principles
@@ -2062,27 +2094,27 @@ If no longer-term goals are written down, say so and ask whether to plan without
 
 **Approve before writing.** Goals, tasks, and calendar slots are proposed, approved, then written, one at a time.
 
-**Check before you cite.** Saved notes about time-bound states ("delegated until a milestone", "paused for two weeks") expire. Check whether the trigger has passed. If the user corrects a note, update it in the same session.
+**Check before you cite.** Saved notes about time-bound states expire. Examples include "delegated until a milestone" or "paused for two weeks". Before citing such a note, check whether its trigger has passed. If the user corrects a note, update it in the same session, not later.
 
-**Look up what matters.** If an unfamiliar name or term affects goals, the calendar, or a rollover decision, run one or two quick searches in authorized sources. Otherwise move on. Read voice-dictation slips from context instead of asking about them.
+**Look up what matters.** If an unfamiliar name, project, or term affects goals, the calendar, or a rollover decision, run one or two quick searches in authorized sources before assuming. If it is incidental, move on. If the user dictates by voice, read obvious transcription slips from context instead of asking about them. Skip garbled fragments that carry no decision.
 
 **Simple output.** Research detail, task metadata, and calendar mechanics stay out of the final plan unless they change a decision.
 
 ## Hard rules
 
-- **At most 3 weekly goals; one is ideal.** Merge, demote to an intention, or defer the rest. With three, label one as the stretch goal.
-- **Every goal has a definition of done a teammate could verify:** 2-4 concrete outputs, such as "Sent version 2 of the proposal and budget to the reviewer." A direction is not a goal. A binary but unscoped statement ("everyone in the process has next steps") needs the work named and estimated.
-- **Leave 20% of the week unplanned.** If goals do not fit, cut or shrink a goal. Never shrink estimates.
-- **Every goal links to an active longer-term goal.** If the link is weak, reject. If the user has deliberately set longer-term goals aside, write "Links to: deferred" and do not re-argue.
-- **No goal proposals before two substantive interview rounds**, unless the user asks you to skip questions and decide.
-- **Calendar events only after the user approves the specific slot.**
+- **At most 3 weekly goals; one is ideal.** If the user proposes more, push back: merge, demote to an intention, or defer. With three, label one as the stretch goal.
+- **Every goal has a definition of done a teammate could verify.** Use 2-4 concrete outputs, such as "Sent version 2 of the proposal and budget to the reviewer." A direction is not a goal. A binary but unscoped statement ("everyone in the process has next steps") needs the work named and estimated, or it will fall short.
+- **Leave 20% of the week unplanned.** If goals do not fit, cut or shrink a goal. Never shrink time estimates to make them fit.
+- **Every goal links to an active longer-term goal.** Ask "Which longer-term goal does this serve?" If the answer is weak, reject the goal. If the user has deliberately set longer-term goals aside, write "Links to: deferred" and do not re-argue it.
+- **No goal proposals before two substantive interview rounds**, unless the user explicitly asks you to skip questions and decide. Each round resolves a different layer of the week. Many shallow questions do not replace shaping.
+- **Calendar events only after the user approves the specific slot.** Never batch-create.
 - **Write task and goal updates right after each decision**, not at the end.
-- **Reuse existing records.** Check whether the target week's record exists and what is linked to it. Update matching goals in place; add links, never replace them.
+- **Reuse existing records.** Check whether the target week's record already exists and what is linked to it. Update matching goals in place. Add links; never replace them.
 - **Keep an alignment ledger** and never reintroduce a corrected assumption.
 
 ## The alignment ledger
 
-This is your working model of the week, not the plan. Show a compact version at the end of the brief and before each later round.
+This is your working model of the week, not the plan. Show a compact version at the end of the brief and before each later interview round.
 
 | Line | Contents | Example |
 |---|---|---|
@@ -2094,13 +2126,13 @@ This is your working model of the week, not the plan. Show a compact version at 
 
 ## Step 1: Opening turn — recap and review prompts only
 
-The first screen should be short, then give the user room to think. Do nothing else in this turn: no broad research, no background jobs that will interrupt, no preamble, no closing offer.
+The first screen should be short. Then give the user room to think. Do nothing else in this turn. Run no broad research. Start no background jobs that will interrupt the user with notifications. Write no preamble and no closing offer.
 
 Show:
 
-- Active longer-term goals, one line each, with a countdown.
-- Last week's goals with status: done, missed, or open.
-- Hit rate over 4 weeks, such as "3 of 7 goals hit". Count done against all non-archived goals; a goal still open after its deadline counts as missed unless the user says it shipped.
+- Active longer-term goals, one line each, with a countdown to their deadline.
+- Last week's goals with status: done, missed, or still open.
+- Hit rate over the last 4 weeks, such as "3 of 7 goals hit". Count done goals against all non-archived goals. A goal still open after its deadline counts as missed unless the user says it shipped.
 
 Then ask the four review prompts in one plain block and end the turn:
 
@@ -2109,69 +2141,81 @@ Then ask the four review prompts in one plain block and end the turn:
 3. What didn't go so well?
 4. What will you do differently next week?
 
-If the user already answered these somewhere authorized, such as their own section of a team planning page, quote the answers back and ask only whether anything changed. The aim is one thing to change, not blame. Save the answers to the reviewed week's record and carry the "do differently" answer into shaping and the failure-mode line.
+The user may already have answered these somewhere authorized, such as their own section of a team planning page. If so, quote their answers back and ask only whether anything changed. Treat their answers there as their own work, not as team input to analyze. The aim is one thing to change, not blame.
 
-If a saved recap query exists, use it so this turn takes seconds. If it fails, say so in one line and build the recap by hand.
+Save the answers to the reviewed week's record. Carry the "do differently" answer into shaping and into the failure-mode line of the plan.
+
+If a saved recap query or script exists, use it so this turn takes seconds. If it fails, say so in one line with the error and build the recap by hand.
 
 ## Step 2: Gather context
 
-Start only after the review answers are saved. In the same turn, say a brief is coming and ask the timing question: on an end-of-week run, "What must still ship before Monday?" (current-week work, not a goal); on a Monday run, "What must ship today?"
+Start only after the review answers are saved. In the same turn, tell the user in one line that a brief is coming. Also ask the timing question:
 
-If you can delegate, use **one** helper so a single result returns. Give it the target week, time zone, privacy boundary, a read-only rule, and a limit of about 900 words grouped by brief heading. It must name every failed source and its error.
+- On an end-of-week run: "What must still ship before Monday?" Treat the answer as current-week work, not a goal for the target week.
+- On a Monday run: "What must ship today?"
+
+If you can delegate, use **one** helper so a single result returns. Several helpers mean several interruptions. Give it the target week, the time zone, the privacy boundary, a read-only rule, and a limit of about 900 words grouped by the brief headings below. It must name every failed source and its error. If any result is too large to handle directly, have a helper summarize it with a narrow brief rather than loading raw data.
 
 Read whichever of these the user has:
 
-- **Plans and goals:** current and previous week records; month and quarter plans (theme, non-negotiables, scorecard); active longer-term goals; last week's goals with deadline-move counts; team goals or projects naming the user as owner.
-- **Tasks:** overdue and due this week. For large parked lists, return titles and deferral counts only.
-- **Daily records (allowed fields only):** last 10 days of plans, ratings, and focus hours.
-- **Calendars:** per-day meeting counts, non-trivial meetings, weekend intrusions, cut candidates. Summarize; full listings are large.
-- **Messages (counts only):** old inbox threads, the team chat's real action queue, unread mentions, and people waiting for replies.
-- **Health and training (if opted in):** completion counts for the last two weeks and any sessions prescribed for the target week.
-- **Assessment load (if the user is involved):** interviews they conduct this week with rough hours, and decisions past their response-time target. Deeper pipeline analysis belongs in a monthly review.
+- **Plans and goals:** current and previous week records; month and quarter plans (theme, non-negotiables, scorecard); active longer-term goals; last week's goals with their deadline-move counts; team goals or projects that name the user as owner.
+- **Tasks:** overdue and due this week. For large parked or "someday" lists, return titles and deferral counts only, never full notes.
+- **Daily records (allowed fields only):** the last 10 days of daily plans, ratings, rating reasons, and focus hours.
+- **Calendars:** per-day meeting counts, non-trivial meetings with times, weekend intrusions, and cut candidates. Summarize; full week listings are large. Read personal and social calendars too, because evening and weekend events limit what can be planned.
+- **Messages (counts only):** inbox threads older than the threshold and the total; the team chat's real action queue (saved-for-later or assigned items, not just starred ones); unread direct messages and mentions; people waiting for replies, with age.
+- **Health and training (if opted in):** completion counts for the last two weeks against the user's targets, and any sessions prescribed for the target week.
+- **Assessment load (if the user takes part in hiring or reviews):** interviews or reviews they conduct this week with rough hours, and decisions past the response target. Deeper pipeline analysis belongs in a monthly review.
 
 **Data-quality rules:**
 
-- Check each synced source's newest record. A stopped sync is a broken pipeline, not behavior; do not compute signals from it.
-- Treat zero as a likely gap. Ask before calling it real.
-- Compare like with like; do not mix devices or methods, and do not average across gaps.
-- Use the right date. A creation date is not a stage-entry or start date. Without a proving date, report counts and say age was not checked.
-- Ignore placeholders and tentative holds. Sanity-check events that look imported in the wrong time zone.
-- If a slow source fails twice, skip it, name the gap, and use another source for the same picture.
+- **Check freshness.** Look at each synced source's newest record. A sync that stopped weeks ago is a broken pipeline, not behavior. Report its last date and do not compute signals from it.
+- **Treat zero as a likely gap.** "No exercise in 14 days" or "no sleep data" usually means a sync failed. Ask the user before calling it real.
+- **Compare like with like.** Do not mix measures from different devices or methods. Do not average across gaps. After a move, travel, or device change, expect a hole and say so.
+- **Use the right date.** A record's creation date is not the date it entered its current stage. Without a date that proves how long something has waited, report counts only and say that age was not checked. Never invent overdue flags.
+- **Filter noise.** Ignore placeholders, unscheduled stubs, and tentative holds. Sanity-check events that look imported in the wrong time zone.
+- **Bound slow sources.** If a slow source fails twice, skip it, name the gap, and use another source for the same picture (for example, calendar invites instead of a pipeline tool).
 
 ## Step 3: The brief
 
-Show only facts that could change a decision. **Maximum 8 bullets.** Group routine signals; put tensions, surprises, real constraints, and data gaps first. Do not recommend goals. Do not repeat the user's review; mention only what it left out or what data contradicts. End with the compact ledger.
+Synthesize the reads, then show only facts that could change a decision. **Maximum 8 bullets.** Group routine signals together. Put tensions, surprises, real constraints, and data gaps first. Do not dump every source just because you read it. Do not recommend goals. Do not repeat the user's review back to them; mention only what it left out or what the data contradicts. End with the compact ledger.
+
+The brief should help the user answer questions. It should not steer them toward whichever deadline looks most concrete.
 
 Consider these, and include each only when it matters:
 
-- **Target week:** number and any theme from the higher-level plan.
-- **Capacity and energy:** ratings, focus hours, meeting density, and opted-in health data against the user's own targets. Use numbers and days ("3 nights under target: Mon, Wed, Thu"), never vague wording. A run of neutral ratings can be a soft warning. If records are blank, name the fallback signals used.
-- **Slipped goals:** by name, with deadline-move counts. At 4 or more moves (suggested), ask now: "This has slipped N times. Is it still the right goal, or is the format, scope, or lane wrong?"
-- **Close-out reality:** whether last week's final items shipped. Ask rather than assume.
-- **Calendar load:** heavy days (suggested: more than 4 meetings) and free days.
-- **Backlog:** overdue count, important and time-sensitive count, and at most 1-3 parked tasks that now fit.
-- **Behind-ness:** old email, stale ownerless queue items, people waiting several days. A non-empty queue is normal. Name any unavailable source.
-- **People obligations:** late assessment decisions, recent joiners who may need deliberate onboarding, or a teammate who has openly said they are overloaded. Ask whether any of these is the week's real priority and who owns the response. State "none overdue" when true. Do not infer personal conditions from private material.
-- **External dated commitments:** things the user owns that may not be on their calendar, such as a cohort start, launch, or filing in the next two weeks. These beat self-set goals on timing.
-- **Protected floor:** status of the current plan's non-negotiables, in its own terms.
+- **Target week:** week number, and any theme from the higher-level plan.
+- **Capacity and energy:** ratings, focus hours, meeting density, and opted-in health data against the user's own targets. Use numbers and days ("3 days under target: Mon, Wed, Thu; average 6.7 against a target of 7.5"), never vague wording. A run of neutral ratings can be a soft warning, since many people rate a hard day as neutral. If records are blank, say so and name the fallback signals you used.
+- **Slipped goals:** by name, with deadline-move counts. At the slip threshold, ask now, not later: "This has slipped N times. Is it still the right goal, or is the format, scope, or lane wrong?"
+- **Close-out reality:** whether last week's final items actually shipped. Ask rather than assume. "All three still in flight" and "two of three shipped" lead to very different plans.
+- **Calendar load:** heavy days and meeting-free days.
+- **Backlog:** the overdue count, the important and time-sensitive count, and at most 1-3 parked tasks that now fit the week's likely goals or energy. If none fit, say so in one line.
+- **Behind-ness:** old email, stale ownerless queue items, and people waiting several days. A non-empty action queue is normal; stale, ownerless items are the warning sign. Name any source that was unavailable; never silently omit it.
+- **People obligations:** assessment decisions past the response target, with the cost of delay; new team members who joined recently and may need deliberate onboarding; or a colleague who has openly said they are overloaded. Ask whether any of these is the week's real priority and who owns the response. Propose a dedicated block only after the user confirms it belongs on their week. State "none overdue" when true.
+- **External dated commitments:** things the user owns that may not appear on their calendar or task list. Examples are a cohort start, a launch, an application window, or a filing in the next two weeks. Check the relevant team channels or source-of-truth records. These beat self-set goals on timing.
+- **Protected floor:** status of the current plan's non-negotiables, in the plan's own terms.
 
 ## Step 4: Rolled-over goals
 
-Find last week's goals, in goal records or in last week's written plan. Before treating an item as rollover, check whether it was handed off (note the handoff and move on) or already shipped (propose marking it done).
+Find last week's goals. They may be separate goal records, or the user may have written them freely in last week's plan. If the goal query returns nothing, check last week's written plan.
 
-For each goal still on the user, ask one at a time: **roll over, demote, or drop.**
+Before treating an unfinished item as rollover, check two things:
 
-- **Roll over:** a candidate for shaping. Ask "Why did this slip?" and log one line. Increase the move count and set the new deadline.
-- **Demote:** add it as an intention in the plan.
-- **Drop:** mark archived or missed.
+- **Was it handed off?** If the work now belongs to someone else, note the handoff in the plan and move on.
+- **Did it already ship?** Open records are often stale. If the user's allowed records or answers show it was done, propose marking it done instead of rolling it over.
+
+For each goal still on the user, ask one at a time, never in a batch: **roll over, demote, or drop.**
+
+- **Roll over:** it becomes a candidate for shaping. Ask "Why did this slip?" and log one line in the goal's notes. Increase the deadline-move count and set the new deadline.
+- **Demote:** it is not a weekly goal; add it as an intention in the plan.
+- **Drop:** mark it archived or missed.
 
 ## Step 5: Shape the week through interview rounds
 
-**First, ask: "Is there a written plan of record?"** People often post an ordered action list after a big planning event or shortlist goals in a team meeting. If one exists, treat its goals as decided. Only check that each has a verifiable definition of done and fits the week.
+**First, ask: "Is there a written plan of record?"** After a big planning event, people often post an ordered action list. Teams also shortlist goals in a weekly meeting. A plan of record outranks anything you infer from tasks or records. If one exists, treat its goals as decided and do not argue them again. Only check that each goal has a verifiable definition of done and fits the week, then carry them into the goal tracker.
 
 ### Question format
 
-Ask 4-8 focused questions per round. Number every question. When options are bounded, letter them and put the recommended option first. One question, one decision.
+Ask 4-8 focused questions per round. Number every question. When the options are bounded, letter them and put the recommended option first. Keep to one decision per question so the user can answer quickly.
 
 ```
 3. Which area most needs attention this week?
@@ -2182,9 +2226,9 @@ Ask 4-8 focused questions per round. Number every question. When options are bou
 
 ### Round 1 — brain dump, then desired change
 
-Ask for a quick, unfiltered dump of everything the user might work on. Group it by goal or project and show it back in a few lines, so the chosen goal is not simply the first idea. Note small items for triage; do not do them now.
+Ask for a quick, unfiltered dump of everything the user might work on next week, whether task-shaped or vague. Group it by goal or project and show it back in a few lines. This keeps the chosen goal from simply being the first idea. Note small items for triage or task creation; do not do them during the session.
 
-Then work backwards from the week the user wants:
+Then work backwards from the week the user wants to have:
 
 - What outcome would make this week genuinely matter?
 - Why does it matter now, beyond having a deadline?
@@ -2193,24 +2237,26 @@ Then work backwards from the week the user wants:
 - What is strategically or emotionally unresolved?
 - What would you regret neglecting even if the visible work shipped?
 
-Do not answer these from records. After the answers, classify each as confirming, rejecting, softening, qualifying, or deferring your model. Trace the implications and update the ledger.
+Do not fill these answers from records. Evidence can prompt a question; it cannot answer what the user now values.
+
+After the answers, classify each as confirming, rejecting, softening, qualifying, or deferring your current model. Trace what follows from it and show the updated ledger.
 
 ### Round 2 — shortlist
 
-Apply the prompts that bite this week:
+Apply the prioritizing prompts that bite this week to the grouped list from Round 1:
 
 - What can you do best, and what could someone else do as well?
 - What would most move the team's main goal or the relevant longer-term goal?
 - What benefits most from lead time?
-- What unfinished work will keep stealing attention if not closed now?
+- What unfinished work will keep stealing attention if not closed now? (Reduce work in progress.)
 - What is the strongest case for not doing this?
 - Which fires are you willing to let burn?
 
-Also settle what capacity is real and which commitments depend on others. Anything not shortlisted goes to "Not this week" or a "Later" list.
+Also settle what capacity is real, given meetings, energy, and protected commitments, and which commitments depend on other people. Anything not shortlisted goes to "Not this week" or to a "Later" list for the next session.
 
 ### Round 3 — only when needed
 
-Run a third round when a real choice remains about sequencing, success criteria, ownership, or the shape of the week.
+Run a third round when the answers reveal a real unresolved choice about sequencing, success criteria, ownership, or the shape of the week. If the user is tired or says they do not know, narrow the remaining questions to 2-3 concrete options. Fatigue is never permission to revive an earlier guess.
 
 ### Readiness gate
 
@@ -2219,54 +2265,61 @@ Propose goals only when each item is confirmed, established, or deliberately lef
 - [ ] The one change that would make the week worthwhile
 - [ ] Why it matters now
 - [ ] The longer-term goal it serves
-- [ ] A definition of done a teammate could verify
+- [ ] A definition of done of 2-4 outputs a teammate could verify
 - [ ] The main competing claim on time or attention
-- [ ] What the user is explicitly not advancing
+- [ ] What the user is explicitly not advancing this week
 - [ ] The realistic energy and health floor
 - [ ] The most likely failure mode
 
-For each goal you are about to propose, ask yourself: did the user call this important, or am I promoting a visible deadline? If the latter, ask another question.
+For each goal you are about to propose, ask yourself: did the user call this important, or am I promoting a visible deadline into a priority? If the latter, ask another question instead.
 
 ### Proposing and validating goals
 
-Propose the smallest set that expresses the alignment, usually one or two, each explained in one sentence. Check each:
+Propose the smallest set of goals that expresses the alignment. That is usually one or two, never more than three. Explain each in one sentence. Then check each:
 
-- **Linked?** Name the longer-term goal in the goal's notes.
-- **Verifiable?** Narrow a direction to a named set and a named output.
-- **Scoped?** Sketch sub-tasks with rough hours and sum them against free time after meetings, minus 20%. Under an hour of work is a task, not a goal.
-- **Realistic?** Heavy meetings plus low energy means cut one.
-- **Three?** Mark one as stretch: planned for, but allowed to give way.
+- **Linked?** Name the longer-term goal and record it in the goal's notes ("Links to: ..."). If the link is weak, reject the goal.
+- **Verifiable?** Write 2-4 concrete outputs. Narrow a direction ("all candidates have next steps") to a named set and a named output.
+- **Scoped?** Sketch the sub-tasks with rough hours. Sum them against free time after meetings, minus the 20% buffer. If it does not fit, cut or shrink the goal. Under an hour of work is a task, not a goal.
+- **Realistic?** A heavy meeting week plus low energy means cut one.
+- **Three goals?** Mark one as stretch: planned for, but allowed to give way if something more important comes up.
 
 ### Shaping rules
 
-- **Repeated misses mean less scope.** If the current plan's cut-scope rule keeps firing or goals keep slipping, default to one goal and ask what has changed before accepting more. Never use an expired rule.
-- **Name the kind of week.** Use the calendar to test capacity, not importance. If meetings, hiring, logistics, or supporting others dominate, ask whether the user wants a people week or wants to cut enough to protect one deep goal. "Defend harder" usually fails; ring-fence a deep item on the cleanest day.
-- **Sequence by outside deadline.** With two or more goals, the one with the harder external deadline ships first.
-- **Team goals need a target and an announcement.** Ask what end-of-week target to give the team and where to announce it. Offer 2-3 framings (coverage, habit, or volume), recommend one, and draft the message.
-- **Pending decisions pause detail.** If an upcoming decision could reshape a goal, plan only work that survives every outcome.
-- **Soft stop.** If after 2-3 rounds of pushback the user says "let me just start", accept the plan and record your concern in the failure-mode line.
+- **Repeated misses mean less scope.** If the current plan's cut-scope rule has fired repeatedly, or goals keep slipping, default to one goal and ruthless execution. Ask what has changed before accepting more scope. Use only the current plan's rule and threshold; never import an expired one.
+- **Name the kind of week.** Use the calendar to test capacity, not to decide importance. If meetings, hiring, logistics, or supporting a colleague dominate the week, ask whether the user wants a people week or wants to cut enough commitments to protect one deep goal. "Defend the deep work harder" usually fails on a full calendar. If the user still chooses one deep item, ring-fence it on the cleanest day.
+- **Question the stuck bet.** If the same goal has slipped for two or more weeks, do not just propose another rollover. Ask whether the goal, its format, its scope, or its lane is wrong. Often the real fix is to ship a smaller piece or drop part of it.
+- **Sequence by outside deadline.** With two or more goals, ask which has the harder external deadline. External pressure (an event date, limited places, a counterparty's decision) beats self-imposed pressure. That goal ships first, even if the other feels heavier or has been waiting longer.
+- **Team goals need a target and an announcement.** If a goal needs the team (a group push, a launch), ask what end-of-week target to give the team and where and when to announce it. Offer 2-3 framings (for example coverage, habit, or volume), recommend one, and draft the announcement for the user to send.
+- **Pending decisions pause detail.** If the user mentions an upcoming decision that could reshape a goal, plan only the work that survives every outcome. Do not build tasks for one branch.
+- **Soft stop.** If after 2-3 rounds of pushback the user says "let me just start", "I'll push through", or any clear "stop arguing, write it down", accept the plan and move on to writing it. Record your concern in the failure-mode line (for example, "Chose to push despite the cut-scope rule firing; re-check mid-week"). Arguing past this point wastes the user's energy.
 
 ## Step 6: Protect the floor
 
-Check the current higher-level plan for non-negotiables (sleep, exercise, a rest day, family time) and ask whether they still match reality. If the user corrects one, update the source plan after approval. If a current scorecard exists, score its lookback period in its own terms and raise any fired cut-scope rule during shaping. If none exists, say so once and ask what floor the user wants. Never rebuild an old scorecard from habit.
+Check the current higher-level plan for non-negotiables, such as sleep, exercise, a rest day, or family time. Ask whether they still match reality. If the user corrects one, update the source plan after approval, not just this week's plan, so the same friction does not recur.
 
-Honor deliberate pauses: do not re-propose a paused habit; ask at most once whether it is back. Verify protected days are actually free.
+If a current scorecard exists, score the lookback period it specifies, using its own items, threshold, and wording. Count partial failures consistently. If its cut-scope rule fires, raise it during shaping, because it changes realistic scope. If no scorecard exists, say so once and ask what floor the user wants this week. Never rebuild an old scorecard from habit.
+
+Honor deliberate pauses. If the user has paused a habit, take it off the list and do not re-propose it; ask at most once per session whether it is back. If the user has retired an experiment that did not work, do not suggest it again.
+
+Verify that protected days are actually free. A workshop, trip, or event can claim a day that is normally reserved. If so, raise it and agree on moving the commitment or accepting the miss.
 
 If a commitment is faltering, ask up to 3 follow-ups until the user names a concrete mitigation:
 
-- **Concrete means a named action plus a day and time.** Good: "Phone out of the bedroom from Tuesday, wind-down alarm an hour before my usual bedtime." Bad: "I'll try to sleep more."
-- **Lead with the numbers** that fired.
-- **Work with the user's baseline.** Protect the existing routine and keep shifts small; large changes under load usually fail. Ask for both the commitment and the trigger that starts it.
-- **Escalate once on repeats:** "The same fix didn't land. What is actually different this time?"
-- **After travel, illness, or a move,** frame it as recovery, not discipline.
+- **Concrete means a named action plus a specific day and time slot.** Good: "Phone out of the bedroom from Tuesday, wind-down alarm an hour before my usual bedtime." Good: "Long run Saturday early morning; strength session Thursday after lunch." Bad: "I'll try to sleep more." Bad: "I'll exercise more this week."
+- **Lead with the numbers** that fired, not a vague impression.
+- **Work with the user's baseline.** Protect the existing routine during busy weeks, and keep any shift small. Large changes under load usually fail. Ask for both the commitment and the trigger that starts it, because the hour before a habit is often where it breaks.
+- **Escalate once on repeats.** If the same commitment failed last week, quote the current plan's rule if it exists and ask: "The same fix didn't land. What is actually different this time?"
+- **After travel, illness, or a move,** frame it as recovery and adjustment, not discipline.
 
-Record each commitment word for word so the next review can compare.
+Record each commitment word for word in the plan, so the next review can compare against it.
 
 ## Step 7: Cut the calendar
 
-Ask: "Do you want to cut meetings this week, or keep them all?" If keep, note it and skip.
+First ask: "Do you want to cut meetings this week, or keep them all?" If the user keeps them all, note "No cuts this week (chose to keep)" and skip the rest of this step.
 
-Otherwise, flag each meeting that serves no goal, protected commitment, or team obligation. The user decides keep, cut, shorten, or reschedule. Draft a short, warm message for each change; the user picks the channel and sends it. If someone else organizes the meeting, the change is a message to them, not a calendar edit.
+Otherwise, review the target week's meetings. Flag each one that serves no weekly goal, protected commitment, or team obligation. Present the candidates as a list. The user decides for each: keep, cut, shorten, or reschedule.
+
+For each change, draft a short, warm, specific message. The user picks the channel and sends it; never send on their behalf. If someone else organizes the meeting, the change is a message to them, not a calendar edit.
 
 ```
 Hi [name], I'm protecting time for [goal] this week, so I'd like to [skip / move / shorten] our [meeting] on [day]. [Alternative, e.g. async update by Thursday]. Does that work for you?
@@ -2274,38 +2327,61 @@ Hi [name], I'm protecting time for [goal] this week, so I'd like to [skip / move
 
 ## Step 8: Task triage
 
-Ask whether the user wants to triage themselves. If yes, note it and skip.
+Ask first whether the user wants to triage themselves. If yes, note it and skip the per-task writes. Offer a suggested-decision table only if they want it.
 
-**First pass — chronic deferrals.** Offer tasks deferred more than the threshold (suggested: 5) as one batch to move to someday. Default to someday, not archive. Tasks the user calls important but not urgent get dated slots instead.
+**First pass — chronic deferrals.** Tasks deferred more than the threshold do not belong on the active list. Offer them as one batch: "These N tasks have been deferred more than 5 times. Move them to someday?" Default to someday, not archive and not another deferral. Archive only if the user asks. Do not handle these one by one. Tasks the user calls important but not urgent should get dated slots next week instead.
 
-**Second pass — one by one**, by importance, urgency, then age: **do this week, done, defer, delegate, or delete.** Always offer "done", since people forget to close things. For defer, increase the deferral count. For delegate, the user names the owner; check any notes on who must own the work first. Write each decision right away.
+**Second pass — one by one**, sorted by importance, then urgency, then age. For each: **do this week, done, defer, delegate, or delete.**
 
-If the user pauses mid-session to clear tasks or messages, re-read those sources before advising.
+- **Do this week:** keep it open and set a due date in the target week. It becomes a calendar-block candidate.
+- **Done:** mark it done. Always offer this, since people forget to close things.
+- **Defer:** set a later due date and increase the deferral count.
+- **Delegate:** the user names the owner. Before suggesting delegation, check any notes on who must own the work. Add "Delegated to [role or name] on [date]" to the notes, then close or keep tracking as the user prefers.
+- **Delete:** archive it.
+
+Write each decision right away. Small batches are fine if the user is moving fast.
+
+The user may pause mid-session to clear tasks or messages themselves. When they return, re-read those sources before advising. What remains often makes the goal obvious.
 
 ## Step 9: Pre-mortem and deprioritize
 
-Do this before blocking time, so the answers shape what you protect.
+Do this before blocking time, so the answers shape what you protect. For example, if "got pulled into hiring" is the likely failure, protect the writing blocks harder.
 
 - **Pre-mortem:** "If this week fails, what is the most likely reason?" Record 1-3 lines.
-- **Deprioritize:** "What can you delete, delegate, reschedule, or reset expectations on? What in-flight work will you explicitly not push?" Pausing one stream often helps the others ship.
+- **Deprioritize:** "What can you delete, delegate, reschedule, or reset expectations on? What in-flight work will you explicitly not push this week?" Pausing one parallel stream often helps the others ship.
 
 ## Step 10: Break goals into tasks
 
-Break each goal into 1-5 tasks of 5 minutes to 3 hours. Also create tasks for "do this week" triage items, delegation follow-ups, and meeting prep that needs its own time.
+A weekly goal is not executable; a task is. Break each goal into 1-5 tasks of 5 minutes to 3 hours that together complete it. Also create tasks for:
 
-**Do the work before proposing.** Use what you already read and search for missing links. Draft an outline, an email, a review list, or options with tradeoffs, so the task is ready to start. Do not leave notes empty because "the user knows the context".
+- "Do this week" items from triage that have no task record yet.
+- Delegation follow-ups ("check in with the owner on Thursday").
+- Meeting prep that needs its own time.
 
-For 4 or more tasks, propose them in a compact table:
+**Do the work before proposing.** When the user opens the task later, everything needed to start should be in its notes. Use what you already read, and run targeted searches for missing links. Then draft what you can: an outline and anchor sources for a writing task, the message for an email task, the items and links for a review task, the options and tradeoffs for a decision task. Do not leave notes empty because "the user knows the context".
+
+For 4 or more tasks, propose them in a compact table. Keep full notes in your working draft and write them on approval. Use prose only for one or two tasks.
 
 | # | Task | Due | Time | Owner |
 |---|---|---|---|---|
 | [1] | [Verb-first task title] | [date] | [mins] | [owner] |
 
-**Per-task flow:** search open and parked tasks for 2-3 distinctive title words and update a duplicate in place; propose title, notes, and fields; accept edits or drop rejected tasks; create on approval, one at a time.
+**Per-task flow, one at a time:**
 
-**Defaults:** importance follows the goal's priority, with the single blocking step marked critical; urgency is time-sensitive if it must land this week; due dates are spread across the week in natural order; estimates are realistic (5 to 180 minutes); titles are short and verb-first.
+1. **Check for duplicates.** Search open and parked tasks for 2-3 distinctive words from the proposed title, not common words. If a match is the same work, propose updating it in place: refresh the notes, move it from someday to open if needed, and set a due date in the target week. Increase the deferral count only if it was previously due.
+2. **Propose** the title, full notes, and fields: due date, importance, urgency, time estimate.
+3. **Accept edits freely.** If the user rejects a task, drop it.
+4. **Create on approval,** one at a time, and keep the record reference so calendar blocks can point to it.
 
-**Notes template:**
+**Defaults** (the user can override):
+
+- **Importance** follows the goal's priority. A must-have goal's tasks are important; mark the single blocking step critical.
+- **Urgency** is time-sensitive if the task must land this week for the goal; immediate only for same-day external requests; flexible otherwise.
+- **Due dates** fall within the target week, spread across days in natural order, not all on the last day.
+- **Estimates** are realistic, not hopeful. Common sizes: 5, 10, 20, 45, 60, 90, 120, 180 minutes.
+- **Titles** are short, verb-first, and match the style of the user's existing tasks.
+
+**Notes template** (fill every section unless there is genuinely nothing to add; if so, say that in one sentence):
 
 ```
 Serves weekly goal: [goal]. Links to: [longer-term goal].
@@ -2318,27 +2394,53 @@ Checklist:
 
 Refs:
 - [anchor document or thread]
+- [draft or research already gathered]
 
 [Optional: outline, draft, options and tradeoffs]
 ```
 
-Use checkbox markers the user's system displays. **Avoid** one task that restates a multi-day goal, more than 5 tasks per goal (flag it as a project), and tasks for routine protected commitments.
+Use checkbox markers that the user's system actually displays; some rich-text fields show list syntax as literal characters.
+
+**Avoid:**
+
+- One task that just restates a multi-day goal. Break it down.
+- More than 5 tasks per goal. That is a project; flag it to the user.
+- Tasks for routine protected commitments. Those live in the plan and the calendar.
+- Creating tasks silently in a batch.
 
 ## Step 11: Calendar blocking
 
-**Show the week as short day-by-day paragraphs first**, with open questions at the bottom. Use tables only for details after the shape is agreed.
+**Show the week as short day-by-day paragraphs first,** one per day, with open questions at the bottom. Several tables at once are hard to read. Use tables only for details after the shape is agreed.
 
-**Check capacity.** Total the blocks against real working hours after meetings. Above 80%, cut or shrink a goal. If a block is shorter than its task estimate, offer a longer block, a split, or a smaller task.
+**Check capacity.** Total the proposed blocks against real working hours after meetings. If they exceed 80%, cut or shrink a goal with the user rather than squeezing blocks. Compare each block to its task's estimate. If the block is clearly shorter, say so and offer a longer block, a split across days, or a smaller task. Do not quietly under-book a shipping window.
 
-**Block:** tasks of 45 minutes or more or with a hard deadline; protected commitments, including any prescribed training (unblocked exercise rarely happens); and a 1-2 hour messages block whenever the brief showed backlog or people waiting. If a protected day conflicts with a prescribed session, ask once and carry the answer forward.
+**What to block:**
 
-**Respect the calendar.** Honor protected and meeting-free days and never schedule over personal events. Reuse placeholder blocks the user already placed, splitting long ones that span meals or meetings. Mark solo work as focus time if supported, so it does not look like a meeting.
+- Tasks of 45 minutes or more, or with a hard deadline.
+- Protected commitments, including any prescribed training sessions. Pick a specific slot for each. If only one session survives, keep the most important one. Unblocked exercise rarely happens.
+- A 1-2 hour messages block whenever the brief showed old email, stale queue items, unread mentions, people waiting, or an overdue regular team update. Propose it without waiting to be asked.
 
-**Re-read the calendar right before creating.** Fold in blocks the user added and fill only real gaps. Ask, "What else am I missing here?" Then propose each slot ("Writing — proposal draft — [day], [start]-[end]. OK?"), create it on approval, and offer the next best slot if declined.
+If a protected day conflicts with a prescribed session, ask once: skip, move, or change the protected day. Carry the answer forward.
+
+**Respect the calendar:**
+
+- Honor protected days and meeting-free days. Never schedule work over personal events.
+- Count evening hours as capacity only if the user works evenings. Pair late nights with a stated hard stop when rest is shaky.
+- Reuse placeholder focus blocks the user already placed by renaming them rather than adding new events. Do not rename a long block as one task if it spans meals or meetings. Split it into precise slots instead.
+- Mark solo work as focus time if the calendar supports it, and use a consistent color or label so it does not look like a meeting. Use plain titles unless the user wants a prefix.
+- Do not write calendar times back onto task records unless the user's system expects that.
+
+**Re-read the calendar right before creating.** The earlier read is stale by now; the user may have moved, deleted, or added events. Treat the fresh read as a comparison against your proposal. Fold blocks the user created into the day-by-day summary as theirs, and fill only real gaps.
+
+Before creating anything, ask: "What else am I missing here?" Then, for each block:
+
+1. Propose the slot: "Writing — proposal draft — [day], [start]-[end] ([hours]). OK?"
+2. Create it on approval.
+3. If declined ("not that day"), offer the next best slot.
 
 ## Step 12: Write the plan
 
-**Goals first.** Update matching goals in place; create only new ones; add links without replacing existing ones. Create the week record if missing.
+**Goals first.** Check what is already linked to the target week's record. Update matching goals in place: improve the title, tighten the definition of done, adjust priority or deadline. Create only genuinely new goals. Duplicates force the user to clean up. Add links to the week record without removing existing ones. Create the week record if it is missing (first to last day of the week).
 
 ```
 Goal: [verb-first outcome]
@@ -2352,7 +2454,7 @@ Done when:
 Stretch: [yes / no]
 ```
 
-**Then the written plan.** It is a clarifying summary, not an audit log. Aim for one screen, omit empty headings, and show at most two goals unless the user chose a third.
+**Then the written plan.** It is a clarifying summary, not an audit log. Aim for one screen. Omit empty headings. Show at most two goals unless the user chose a third.
 
 ```
 ## Theme
@@ -2360,6 +2462,8 @@ Stretch: [yes / no]
 
 ## Weekly goals
 [] [Goal 1] — links to [longer-term goal]
+    Done when: [2-4 checkable outputs]
+[] [Goal 2] — links to [longer-term goal]
     Done when: [2-4 checkable outputs]
 
 ## Protect
@@ -2375,44 +2479,67 @@ Stretch: [yes / no]
 - [most likely failure] → [specific counter]
 ```
 
-Keep rollover, triage, and meeting-cut details in the underlying records.
+Keep rollover details, task checklists, triage decisions, meeting-cut mechanics, and any process notes in the underlying records or session notes, not in the plan.
 
 ## Step 13: Close
 
-Give counts in one sentence: goals committed, tasks created or updated, blocks booked, meetings cut, tasks triaged. If a current scorecard exists, show its success bar compactly. Make the final plan the last block, on one screen. Do not recap the research or tool mechanics. End with one sentence; no further summary, no thanks.
+Give the counts in one sentence: goals committed, tasks created or updated, blocks booked, meetings cut, tasks triaged.
+
+If a current scorecard exists, show its success bar compactly before the plan. Do not show an expired scorecard or revive paused habits.
+
+Make the final plan the last block, on one screen. Show only the theme, one or two goals with their definitions of done, what to protect, the essential day shape, what is not happening, and the main failure mode with its counter. Do not recap the research, the interview, task metadata, or tool mechanics. The depth of the session should make the output clearer, not longer.
+
+End with one sentence. No further summary and no thanks.
 
 ## Step 14: Improve the workflow
 
-Ask what took too long, what assumption was wrong, what the user corrected, what new pattern future runs should know, and what step fired pointlessly. Write concrete changes to your saved notes for this workflow; one precise line beats a general reminder. Make small fixes directly with a 2-3 bullet summary, and ask before adding or removing a step.
+After each session, ask:
+
+- What took too long or wasted effort?
+- Which assumption was wrong?
+- What did the user correct or push back on?
+- What new pattern in data, process, or preferences should future sessions know?
+- Which step fired pointlessly and could be cut or made conditional?
+
+Write concrete changes to your saved notes for this workflow. One precise line beats a general reminder. Make small fixes directly and show a 2-3 bullet summary. Ask before adding or removing a step. If nothing is worth changing, say so, but expect to find at least one improvement.
+
+### Optional: recurring-friction review
+
+Some frustrations repeat across many sessions without being fixed. If the user asks, scan their own recent requests to you for correction or frustration language ("that's wrong", "again", "I meant", "why does this keep"). Run this only when private reflections and journal-style entries can be excluded before any text reaches you; otherwise skip it and say so in one line. Limit it to a few minutes.
+
+Group repeated hits, ignore one-off bugs, and check whether each group already led to a saved change. For those that did not, propose a specific edit: where it goes and what it says. The user approves, skips, or modifies each. Apply approved edits in the same session. If nothing recurs, write one line saying so. Keep these findings out of the weekly plan.
 
 ## Adapting to timing
 
 Plan only the time that is actually available, and match the machinery to the week.
 
-- **End of week (default):** the current week is "last week"; anything due before Monday is current-week work.
-- **Monday:** settle what must ship today first, and re-read calendar and tasks before writing.
-- **Mid-week:** plan only the remaining days; use elapsed days for review, and state the runway up front.
-- **Time off:** skip work goals, tasks, and cuts; check that recurring meetings were declined; plan rest and logistics where the user chooses.
-- **Tired or unsure user:** offer 2-3 concrete options or decide with stated reasoning. Fatigue is never permission to revive a rejected assumption.
+- **End of week (default):** the current week is "last week" for the review. Anything due before Monday is current-week work, not a target-week goal.
+- **Monday:** day one is already underway. Settle what must ship today first and build that day around it before shaping the rest. Re-read the calendar and task statuses before writing; things may have changed overnight.
+- **Mid-week:** target the current week and plan only the remaining days. Use elapsed days for review, never as planning surface. State the real runway up front, because it shapes everything.
+- **Time off:** if the target week is a booked holiday, skip work goals, tasks, assessment checks, and meeting cuts. Only check that recurring meetings were declined. Plan rest, personal commitments, and travel logistics wherever the user chooses.
+- **Tired or unsure user:** offer 2-3 concrete options, or decide with stated reasoning if they ask. Fatigue is never permission to revive a rejected assumption.
 
 ## Style
 
 - Be direct and brief. Say "this will fail because X" when you believe it.
-- No celebratory step summaries.
-- Use the user's date format.
-- Be firm when needed: "That's four goals; pick three." "You said this three weeks ago; what's different?"
-- **Low capacity is a hypothesis.** Low ratings, low focus hours, the user saying they feel drained, or a flagged health signal should prompt a question about real capacity and needed recovery. If confirmed, plan a lighter week: usually one goal, more rest, harder cuts.
+- No celebratory step summaries ("Great, goals picked!"). Move on.
+- Use the user's date format consistently.
+- Be firm when needed: "That's four goals; pick three." "That doesn't link to any longer-term goal." "You said this three weeks ago; what's different?"
+- When stuck, narrow the live uncertainty with 2-3 options. Do not propose the whole week before the readiness gate passes.
+- **Low capacity is a hypothesis.** Several low or neutral ratings, falling focus hours, the user saying they feel drained, or a flagged health signal should prompt a question about real capacity and needed recovery. If confirmed, plan a lighter week: usually one goal, never a default of three, more rest, and harder cuts.
 
 ## Common failure modes
 
 | Failure | Counter |
 |---|---|
 | Promoting the most visible deadline into the goal | Ask what the user wants to make true first |
-| Carrying a goal that keeps slipping | Show the slip count early and question the goal |
+| Carrying a goal that keeps slipping | Show the slip count in the brief and question the goal |
 | Finding an outside deadline or plan of record late | Ask and scan for both before shaping |
 | Planning deep work into a people-heavy week | Ask which kind of week it is; ring-fence one day |
 | Treating a sync gap or expired note as fact | Check freshness and triggers; confirm with the user |
+| Rolling over work that already shipped or was handed off | Check status and ownership before asking roll, demote, or drop |
 | Writing to a stale calendar or duplicating records | Re-read and search right before creating |
+| Under-booking a shipping window | Compare block length to the task estimate |
 | Arguing past the user's decision | Apply the soft stop and record the concern |
 | An overlong final plan | One screen; details stay in tasks and calendar |
 
@@ -4147,34 +4274,50 @@ Before finishing, check:
 
 ---
 name: inbox-zero
-description: Turn authorized email, chat, comment, and messaging inboxes into clear decisions and trusted tasks, one bucket at a time, without confusing triage with doing the work.
+description: Triage authorized email, chat, and comment inboxes into five clear buckets and one trusted task list, working one batch at a time without doing the work itself.
 ---
 
 # Process an inbox to zero
 
-Help the user empty one or more inboxes into a single trusted task system. Every item ends in exactly one bucket: **do now**, **quick win**, **delegate**, **task**, or **no action**. When a run is finished, nothing that needs doing should exist only in an email, chat, comment thread, or messaging app. Each item is done, delegated, recorded as a task, or cleared because it needs nothing.
+Help the user empty one or more inboxes into a single trusted task system. Every item ends in exactly one bucket: **do now**, **quick win**, **delegate**, **task**, or **no action**. When a run is finished, nothing that needs doing should exist only in an email, team chat, comment thread, or messaging app. Each item is done, delegated, recorded as a task, or cleared because it needs nothing.
 
-This follows Getting Things Done and Inbox Zero. Processing an inbox means deciding what each item is and where it goes. It does not mean doing all the work the items describe. The task system is the one trusted list. Choosing what to work on from that list belongs to a separate planning workflow.
+This follows the Getting Things Done and Inbox Zero methods. Processing an inbox means deciding what each item is and where it goes. It does not mean doing all the work the items describe. The task system is the one trusted list. Choosing what to work on from that list belongs to a separate planning workflow.
 
-A message is urgent because of what happens if it waits. Being new, unread, long, loud, or in a busy group chat does not raise its priority.
+A message is urgent because of what happens if it waits. Being new, unread, long, loud, or in a busy group chat does not raise its priority on its own.
+
+## Setup choices
+
+Confirm these once with the user, or use the defaults. Store the answers as configuration, not as message content.
+
+| Choice | Default | Notes |
+|---|---|---|
+| Work cap for do-now items | 15 minutes | Anything longer becomes a task |
+| Quick win threshold | 2 minutes | Short reply, yes or no, RSVP, forward, access approval |
+| Batch sizes | Do now 1, quick wins 5, delegate 3, task 3 | Smaller batches feel less overwhelming |
+| Chat lookback window | 14 days | Unread views may still show older chats |
+| Muted feeds | None | For example automated status channels; still include messages that tag the user |
+| Opt-in-only sources | None | Secondary workspaces read only when named |
+| Delegated clearing | None | Named sources where the assistant may clear items after the user confirms |
+| Response-time standard | None | For example a target reply time for candidates or partners |
+| Draft destinations | Copy-ready text | Saved drafts only where the user authorizes it |
 
 ## Ground rules
 
-1. **The user takes external actions.** Do not send, archive, delete, label, mark read, react, or mark complete unless the user has explicitly delegated that action for a named source. No bulk actions by default, even when a tool allows them. Record any delegated action as a standing user choice, such as clearing notifications in a tool with no quick manual way to empty its inbox. If the user asks you to archive cleared items, archive only items that are finished or handed off. Keep anything still waiting on an unsent reply, and ask about FYIs the user may still want to read.
+1. **The user takes external actions.** Do not send, archive, delete, label, mark read, react, or mark complete unless the user has explicitly delegated that action for a named source. No bulk actions by default, even when a tool allows them. A common delegated case is clearing notifications in a tool that has no quick manual way to empty its inbox. If the user asks you to archive cleared items, archive only items that are finished or handed off. Keep anything still waiting on a reply the user has not sent, and ask about FYIs they may still want to read.
 2. **No drafts unless asked** for a specific item or group.
 3. **One write by default:** when the user says "task it" (or similar) about a specific item, create that one task. Never create tasks in bulk or without a per-item instruction.
-4. **Work cap.** Ask the user for a cap, or default to 15 minutes. Anything longer is a task, not do-now work. On inbox days the real time sink is doing the work a message describes, not replying to it.
+4. **Respect the work cap.** On inbox days the real time sink is doing the work a message describes, not replying to it.
 5. **Privacy and access.** Read private communications, calendars, and records only to process the user's own inbox, and only in sources they have authorized. Use the minimum information each decision needs. Request only named fields from planning records and never read private fields such as journals. Leave unrelated or sensitive personal details about other people out of the output, and keep output inside the user's own session or task system. Treat personal accounts as read-only unless the user says otherwise.
 6. **Evidence, not assumptions.** Say what the messages show. Never state the user's beliefs, commitments, or decisions for them.
 
 ## Single-item mode
 
-Use this when the user, a reminder, or a scheduled prompt hands over one item, such as the oldest unhandled email or saved item.
+Use this when the user, a reminder, or a scheduled prompt hands over one item, such as the oldest unhandled email or saved-for-later message.
 
-1. Skip goals, sorting, the opening message, and closing. Read only that item, its source's access rules, and the context it needs.
-2. Treat it as one do-now item: who this is, what they want, and what happens if it waits. Recommend one bucket and the concrete next action, with the item's link. Ask only questions only the user can answer.
+1. Skip goals, sorting, the opening message, and closing. Do not read other inbox items. Read only that item, its source's access rules, and the context it needs.
+2. Treat it as one do-now item: who this is, what they want, and what happens if it waits. Recommend one bucket and the concrete next action, with the item's link. Ask only questions the user alone can answer.
 3. Help them finish it under the normal drafting and task rules.
-4. Tell them which inbox action clears it (archive the email, mark the saved item complete). If a reminder system checks the inbox itself, let it detect the change. Never require a special confirmation phrase.
+4. Tell them which inbox action clears it, such as archiving the email or marking the saved item complete. If a reminder system checks the inbox itself, let it detect the change. Never require a special confirmation phrase like "done".
 5. If you clear it on request and the action succeeds, continue straight into any waiting request in the same turn. Never make the user send a filler message to move on.
 
 ## Step 1: Set scope and time
@@ -4191,7 +4334,7 @@ Use this when the user, a reminder, or a scheduled prompt hands over one item, s
 | chats, or a named network | Messaging apps, filtered to the named network if given |
 | all, everything | Every configured source except opt-in-only ones |
 
-If scope is unclear, default to all and say so in one line rather than asking. Secondary workspaces can be opt-in only: read them only when named. A request that names a personal account, or "all" when one is configured, counts as the explicit request needed to read it.
+If scope is unclear, default to all and say so in one line rather than asking a separate question. A request that names a personal account, or "all" when one is configured, counts as the explicit request needed to read it.
 
 The task list is not an inbox here; it is where items go. If the user asks to prioritise tasks, route to a planning workflow.
 
@@ -4201,49 +4344,49 @@ Read each source's access rules before reading the source.
 
 Read these in parallel from the user's planning system, requesting only the fields you need:
 
-1. **Longer-term goals:** the active quarter or similar period, with open goals, deadlines, and priority.
+1. **Longer-term goals:** the active quarter or similar period, with open goals, deadlines, priority, and short notes.
 2. **Weekly goals:** the plan covering today. If several records match, use the one with content. If the longer-term level is empty but weekly goals say what they ladder up to, use that as the higher goal.
 3. **Today:** intention, plan, and most important task (MIT).
 4. **Open tasks:** title, status, and due date, so you can spot items that are already tasked.
 
-Use the system's documented date functions; plain string comparisons on dates often fail silently, so treat unexpectedly empty results as a possible query error. If a level is missing, say so in one line and continue. Do not invent goals. Summarise the goals in three to six lines for yourself and use them to judge every item.
+Use the system's documented date functions. Plain string comparisons on dates often fail silently, so treat an unexpectedly empty result as a possible query error. If a level is missing, say so in one line and continue with what exists. Do not invent goals. Summarise the goals in three to six lines for yourself and use them to judge every item.
 
 **MIT check.** If today's MIT is not inbox work and the user is inside or near its planned block, ask once, before reading any inbox: "Is this the most important thing right now, or does it just feel productive?" Trust the answer. Skip this when there is no MIT or inbox work is part of the plan.
 
 ## Step 3: Read the inboxes
 
-Read every source in parallel. For each item collect: source, sender, subject or chat, date of the last message, who sent it, a one-line gist, and a link copied from tool output.
+Read every source in parallel. For each item collect: source, sender, subject or chat, date of the last message, who sent the last message, a one-line gist, and a link.
 
 Apply these principles across sources:
 
 - **Use the right view.** Prefer a purpose-built inbox, notification, or reply-debt view over general search, which often misses saved, unread, and last-sender state.
-- **Get everything.** If a result hits its page limit, query again for older items. For a notification inbox, process every uncleared item, read or unread; the run is done only when the total is zero.
-- **Group to the decision unit.** Group email messages by thread and keep the latest. Treat several comments feeding one document as one decision: has the user already used them? If yes, clear them; if not, offer one task for the document.
-- **Skim, then open only when needed.** Open the full thread when the preview leaves the ask, deadline, owner, or status unclear.
-- **Find reply debt by last sender, then read back.** For chats, check who sent the last meaningful message within a lookback window (default 14 days). Before calling a chat handled, read back to the user's last real reply: a quick logistics exchange or closing message can sit on top of an older unanswered ask.
+- **Get everything.** If a result hits its page limit, query again for older items. For a notification inbox, process every uncleared item, read or unread; the run is done only when the total is zero. Note that opening a notification may mark it read without clearing it.
+- **Group to the decision unit.** Group email messages by thread and keep the latest. Treat several comments feeding one document as one decision: has the user already used them? If yes, clear them; if not, offer one task for the document rather than one per comment.
+- **Skim, then open only when needed.** Open the full thread when the preview leaves the ask, deadline, owner, or status unclear. A reply deep in a long thread usually needs the full thread.
+- **Find reply debt by last sender, then read back.** For chats, check who sent the last meaningful message within the lookback window. Before calling a chat handled, read back to the user's last real reply: a quick logistics exchange or closing message can sit on top of an older unanswered ask.
 - **Rank direct above broadcast.** Direct messages and explicit mentions come before group or channel traffic, unless a group message names the user or has a time-bound consequence.
-- **Respect deliberate saves; mute chosen noise.** Saved-for-later items count, even from low-value channels. Unreads are attention debt, not priority. The user can name feeds to skip, such as status channels; leave their unreads out of every bucket and count unless a message tags the user.
-- **Default automated items to no action.** Newsletters, receipts, calendar notices, reactions, automated mentions, stale pointers to deleted content, and resolved discussions go to no action, unless they point to a deadline, money or security issue, or a record that now needs the user. Permission requests are quick wins. Items over two weeks old with no open ask are usually stale; group them for one decision.
-- **Never invent links.** Prefer links that open the exact item in the app the user uses. Copy them from tool output, or use a format verified in this setup. Otherwise cite sender, subject, and date and say the link is missing.
+- **Respect deliberate saves; mute chosen noise.** Saved-for-later items count, even from muted feeds, because the user chose to keep them. Unreads are attention debt, not priority. Leave muted-feed unreads out of every bucket and count unless a message tags the user.
+- **Default automated items to no action.** Newsletters, receipts, calendar notices, reactions, automated mentions, pointers to deleted or emptied content, and resolved discussions go to no action, unless they point to a deadline, a money or security issue, or a record that now needs the user (for example a record newly assigned to them with no next step). Permission requests are quick wins. Items over two weeks old with no open ask are usually stale; group them for one decision.
+- **Never invent links.** Prefer links that open the exact item in the app the user uses rather than a browser, when that is their preference. Copy links from tool output, or use a format verified in this setup. Otherwise cite sender, subject, and date and say the link is missing.
 
-**Failures.** If a source fails or is disconnected, name the source, the exact error, and the missing data. Try the safe repairs in its access rules, then continue. Never drop a source quietly or substitute one that cannot provide the same data. Put failures at the top of the output.
+**Failures.** If a source fails or is disconnected, name the source, the exact error, and the missing data. Try the safe repairs in its access rules, such as re-authentication steps, then continue with the other sources. Never drop a source quietly or substitute one that cannot provide the same data. Put failures at the top of the output so the user sees the gap first.
 
 ## Step 4: Sort into buckets
 
 Put every item in exactly one bucket:
 
 1. **Do now:** important and urgent, finishable within the cap. Aim for three to five; extras are probably tasks.
-2. **Quick wins:** under two minutes each: a short reply, a yes or no, an RSVP, a forward, an access approval. The user batches these.
-3. **Delegate:** someone else should own it. Name the suggested owner with brief evidence ("owns operations", "is running this hiring process"). Find owners from the thread, recent discussion, project records, and notes on team roles; check notes against current evidence because roles change. If nothing is credible, say "owner unclear".
+2. **Quick wins:** under the quick win threshold. The user batches these.
+3. **Delegate:** someone else should own it. Name the suggested owner by name or role with brief evidence ("owns operations", "is running this hiring process"). Find owners from the thread, recent discussion in the relevant channel, project records, and notes on team roles. Check notes against current evidence, because roles change. If nothing is credible, say "owner unclear" rather than guessing.
 4. **Task:** real work over the cap, or work that cannot happen yet. Give a suggested name, any implied due date, and why. If an open task already covers it, say so and suggest clearing the inbox copy.
-5. **No action:** FYIs, resolved threads, automated notices, chats that ended naturally. Show counts by type and name only items the user might be surprised to see.
+5. **No action:** FYIs, resolved threads, automated notices, chats that ended naturally. The user clears these rather than deleting them, so do not call this bucket "delete". Show counts by type and name only items the user might be surprised to see.
 
 Rank do-now items, and order every other bucket, by these signals in order:
 
-1. **Hard deadline or time-bound decision:** due today or tomorrow, an expiring offer, a meeting that needs a reply first.
-2. **Someone blocked on the user:** a teammate, partner, or candidate cannot move. Apply any response-time standard the user sets.
+1. **Hard deadline or time-bound decision:** due today or tomorrow, an expiring offer or event, a meeting that needs a reply first.
+2. **Someone blocked on the user:** a teammate, partner, or candidate cannot move until they answer. Apply any response-time standard the user sets.
 3. **Ladders to a goal:** today's MIT, then weekly, then longer-term. Name the goal.
-4. **Relationship cost of delay:** key contacts, funders, personal relationships. Age is a supporting signal that differs by channel: an unanswered email or direct chat a few days old usually matters more than an old saved item.
+4. **Relationship cost of delay:** key contacts, funders, personal relationships that go cold. Age is a supporting signal that differs by channel: an email unanswered for two days or a direct chat unanswered for three usually matters more than an old saved item.
 
 ## Step 5: Open the run
 
@@ -4256,39 +4399,39 @@ Do not show the full sorted list; seeing every bucket at once overwhelms. The op
 **Counts:** <N items: X do now, Y quick wins, Z delegate, T task, A no action>
 ```
 
-Then go straight into the first non-empty bucket in the same message. Keep the full sort to yourself.
+Then go straight into the first non-empty bucket in the same message. Keep the full sort to yourself and reveal one batch at a time.
 
 ## Step 6: Work the buckets, one batch at a time
 
-Go in order and stop whenever the user wants. Each message shows one batch, or one do-now item, and asks only about what is on screen. Never ask about a later bucket early. End the turn and wait.
+Go in bucket order and stop whenever the user wants. Each message shows one batch, or one do-now item, and asks only about what is on screen. Never ask about a later bucket early. End the turn and wait.
 
 Answering a batch's questions is a decision, not completion. Move on only when the user says the batch is done. Until then, help them finish it, for example by drafting the replies they chose.
 
 **Formatting:**
 
-- Every time you name an item or person, including recaps and question titles, link the name to its source.
+- Every time you name an item or person, including status notes, recaps, reminders, and question titles, link the name to its source.
 - Number questions and letter options so the user can reply `1b, 2a`.
 - Use real lists for groups. Never show severity by colour alone; use words and order.
 
-**Batches** (sizes are defaults the user can change):
+**Batches:**
 
-1. **Do now, one item per message.** Read the full thread and check the calendar around any dates; the user may already have added holds. Gather only the context this decision needs. Before saying the user still owes a reply or introduction, search every channel they might have used; it is often done elsewhere. For hiring or assessment items, use the user's chosen hiring guidance and only authorized evidence about role-relevant capabilities, role alignment, diagnostic evidence, and whether an assessment distinguishes relevant performance. Then write a short paragraph: who, what they want, what is at stake if it waits, and the recommended action, with evidence linked. Ask one to three questions only the user can answer.
-2. **Quick wins, five per message.** Link, a line of context, one recommended action, options when there is a real choice. Say how many remain.
-3. **Delegate, three per message.** Link, suggested owner, evidence. The user confirms or changes the owner.
-4. **Task, three per message.** Link, suggested name, due date. Create each one the user says to task.
+1. **Do now, one item per message.** Read the full thread and check the calendar around any dates it mentions; the user may already have added holds. Gather only the context this decision needs, such as earlier threads with the sender or a related project record. Before saying the user still owes a reply or introduction, search every channel they might have used; it is often done elsewhere. For hiring or assessment items, use the user's chosen hiring guidance and only authorized evidence about role-relevant capabilities, role alignment, diagnostic evidence, and whether an assessment distinguishes relevant performance. Then write a short paragraph: who this is, what they want, what is at stake if it waits, and the recommended action, with evidence linked. Ask one to three questions only the user can answer. When they say it is done, show the next item.
+2. **Quick wins, a small batch per message.** Each item gets its link, a line of context, and one recommended action, with lettered options when there is a real choice. Say how many remain.
+3. **Delegate, a small batch per message.** Link, suggested owner, evidence. The user confirms or changes the owner.
+4. **Task, a small batch per message.** Link, suggested name, due date. Create each one the user says to task. Flag existing tasks that already cover an item.
 5. **No action.** Counts by type plus surprising items. The user clears them, unless they delegated clearing to you.
 
-**Delegated clearing.** Clear an item only after the user says it is handled or not worth acting on, or confirms the no action bucket. Never clear an item that is decided but not yet acted on. Clearing a notification or marking a chat processed must never resolve, edit, or delete the underlying comment or record. Retry a transient error once, verify the result, and report it in one line ("Cleared 4, all verified, 29 left"). Name anything unverified as a failure, and know how to undo.
+**Delegated clearing.** Clear an item only after the user says it is handled, done, or not worth acting on, or confirms the no action bucket. Never clear an item that is decided but not yet acted on, such as a reply still to post. Clearing a notification or marking a chat processed must never resolve, edit, or delete the underlying comment, thread, page, or record. Pass item identifiers in a way the tool reliably accepts, retry a transient error once, verify the result, and report it in one line ("Cleared 4, all verified, 29 left"). Name anything unverified as a failure, and know how to undo a mistaken clear. For chats, marking an item processed (so it does not return next run) is appropriate when the user handled it elsewhere, chose to ignore it, or confirmed no action; do not mark chats the user still has to answer.
 
-**Catch work done mid-run.** Before each new batch, check recently sent mail and messages, drop anything already answered, and note each in one line.
+**Catch work done mid-run.** Users often reply while the run is going. Before each new batch, check recently sent mail and messages, drop anything already answered, and note each in one line instead of asking again.
 
-**Good questions** resolve real uncertainty: whether a goal is still live, whether the user wants to handle a sensitive thread personally, whether an unfamiliar sender matters, how much time they have. Do not ask what the data already answers. The user can move any item to any bucket; their choice is final.
+**Good questions** resolve real uncertainty: whether a goal is still live, whether the user wants to handle a relationship or hiring thread personally, whether an unfamiliar sender matters, how much time they have. Do not ask what the data already answers. The user can move any item to any bucket; their choice is final.
 
 ### Drafts, only when asked
 
-- **Check the request against the thread.** If a requested point repeats or contradicts what the other person already said, or misreads the ask, say so in one line and draft the version that makes sense. Follow the user's voice and channel conventions.
-- **Saved drafts, where authorized:** save the draft as a reply in its own thread, confirm it attached to the right conversation, and open it so the user can edit and send. Use the channel's real mention format for anyone the draft asks to act. Never overwrite an existing draft; if you cannot read saved drafts back, ask the user to paste their edited text rather than recreating yours. Never send.
-- **Everywhere else:** give one draft per response as copy-ready plain text in the final block, with the item's link on the line above. Finish all tool calls first so nothing pushes the draft out of the final block.
+- **Check the request against the thread first.** If a requested point repeats or contradicts what the other person already said, or misreads the ask, say so in one line and draft the version that makes sense. Follow the user's voice and channel conventions.
+- **Saved drafts, where authorized:** save each draft as a reply in its own thread, never at the top level of a channel or conversation. Confirm it attached to the right thread, then open it in the app the user prefers so they can edit and send. In group threads, use the channel's real mention format for the person being answered and anyone the draft asks to act. Do not also paste the draft into the conversation; just say it is saved and opened. If a draft already exists there, say so rather than overwriting it. If you cannot read saved drafts back, ask the user to paste their edited text before revising, and save the new version only after they remove the old one. Never send.
+- **Everywhere else:** give one draft per response as copy-ready plain text in the final block, with the item's link on the line directly above. If the user wants it, also copy the text to their clipboard and say so. Finish all tool calls first so nothing pushes the draft out of the final block.
 
 ### Creating a task
 
@@ -4303,7 +4446,7 @@ Create one record with: a clear action name, open status, due date, importance, 
 **Next step:** the first concrete action.
 ```
 
-Do not pre-draft replies in the task unless asked. Afterwards, tell the user the item can leave its inbox and give the record link if available.
+Do not pre-draft replies in the task unless asked. Afterwards, tell the user the item can now leave its inbox and give the record link if available.
 
 ## Step 7: Close and improve
 
@@ -4315,7 +4458,15 @@ End with a short per-source status:
 
 If many loops remain open, say so plainly.
 
-Then audit the run for friction: a pointless question, a wrong bucket, a misbehaving source, context you had to hunt for, or a privacy risk. With the user's permission, update the workflow's configuration to fix the cause, keeping changes general rather than tied to one message. Never store message content, credentials, or unnecessary personal details.
+**Readiness check before calling a run complete:**
+
+- Every in-scope source was read, or its failure is named.
+- Every item is in exactly one bucket.
+- Nothing actionable lives only in an inbox: it is done, delegated, tasked, or explicitly left open.
+- Every delegated clear was verified.
+- No private or unrelated personal detail left the user's session or task system.
+
+Then audit the run for friction: a pointless question, an item in the wrong bucket, a misbehaving source, context you had to hunt for, or a privacy risk. With the user's permission, update the workflow's configuration to fix the cause, keeping changes general rather than tied to one message. Never store message content, credentials, or unnecessary personal details.
 
 ## Common failure modes
 
@@ -4324,9 +4475,10 @@ Then audit the run for friction: a pointless question, a wrong bucket, a misbeha
 - Doing the work a message describes instead of tasking it.
 - Flagging a reply as owed when it was sent elsewhere, or calling a chat handled when an older ask sits under small talk.
 - Duplicating a task that already exists, or guessing an owner instead of saying "owner unclear".
-- Quietly dropping a failed source.
+- Quietly dropping a failed source or substituting a weaker one.
 - Treating unread, new, or loud as urgent.
 - Inventing links, or clearing a notification by changing the record behind it.
+- Taking an external action, such as sending or archiving, that the user did not delegate.
 
 
 ---
