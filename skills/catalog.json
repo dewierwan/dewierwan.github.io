@@ -115,7 +115,7 @@
     },
     {
       "title": "Wind down for sleep",
-      "description": "Guide a short evening routine that closes open loops, lowers stimulation, and prepares the morning, with a fallback for sleepless nights. Use when someone says they want to wind down or cannot sleep.",
+      "description": "Guides a short evening routine that lowers stimulation, prepares the body and morning, and handles sleepless nights. Use when someone says \"wind down\", \"ready for bed\", or \"can't sleep\".",
       "category": "Plan and reflect",
       "page": "https://dewierwan.com/skills/wind-down-for-sleep/",
       "markdown": "https://dewierwan.com/skills/raw/wind-down-for-sleep.md"
@@ -150,7 +150,7 @@
     },
     {
       "title": "Process an inbox to zero",
-      "description": "Work through an email or message inbox to zero, turning each item into a clear next action without drifting into deep work. Use when someone wants to triage, clear, or prioritize an inbox.",
+      "description": "Works through email, chat, and notification inboxes to zero, turning each item into one clear next step. Use when someone says triage my inbox, clear my messages, or help me prioritize email.",
       "category": "Meetings and tasks",
       "page": "https://dewierwan.com/skills/inbox-zero/",
       "markdown": "https://dewierwan.com/skills/raw/inbox-zero.md"
