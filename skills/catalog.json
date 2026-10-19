@@ -150,7 +150,7 @@
     },
     {
       "title": "Process an inbox to zero",
-      "description": "Triage authorized email, chat, and comment inboxes into five clear buckets and one trusted task list, working one batch at a time without doing the work itself.",
+      "description": "Triage authorized email, chat, and comment inboxes into five buckets and one trusted task list, one batch at a time, without doing the work the messages describe.",
       "category": "Meetings and tasks",
       "page": "https://dewierwan.com/skills/inbox-zero/",
       "markdown": "https://dewierwan.com/skills/raw/inbox-zero.md"
@@ -168,6 +168,13 @@
       "category": "Hiring and people",
       "page": "https://dewierwan.com/skills/run-a-reference-call/",
       "markdown": "https://dewierwan.com/skills/raw/run-a-reference-call.md"
+    },
+    {
+      "title": "Check before granting access",
+      "description": "Before giving someone access to a shared chat workspace or knowledge base, find content about them they could read and recommend what to restrict.",
+      "category": "Hiring and people",
+      "page": "https://dewierwan.com/skills/access-check/",
+      "markdown": "https://dewierwan.com/skills/raw/access-check.md"
     },
     {
       "title": "Use a browser safely",

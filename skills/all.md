@@ -4274,7 +4274,7 @@ Before finishing, check:
 
 ---
 name: inbox-zero
-description: Triage authorized email, chat, and comment inboxes into five clear buckets and one trusted task list, working one batch at a time without doing the work itself.
+description: Triage authorized email, chat, and comment inboxes into five buckets and one trusted task list, one batch at a time, without doing the work the messages describe.
 ---
 
 # Process an inbox to zero
@@ -4293,13 +4293,15 @@ Confirm these once with the user, or use the defaults. Store the answers as conf
 |---|---|---|
 | Work cap for do-now items | 15 minutes | Anything longer becomes a task |
 | Quick win threshold | 2 minutes | Short reply, yes or no, RSVP, forward, access approval |
-| Batch sizes | Do now 1, quick wins 5, delegate 3, task 3 | Smaller batches feel less overwhelming |
+| Batch sizes | Do now 1, quick wins 5, delegate 3, task 3 | Small batches feel less overwhelming; too small feels slow |
 | Chat lookback window | 14 days | Unread views may still show older chats |
 | Muted feeds | None | For example automated status channels; still include messages that tag the user |
 | Opt-in-only sources | None | Secondary workspaces read only when named |
 | Delegated clearing | None | Named sources where the assistant may clear items after the user confirms |
 | Response-time standard | None | For example a target reply time for candidates or partners |
 | Draft destinations | Copy-ready text | Saved drafts only where the user authorizes it |
+| Link preference | Open in the native app | Use browser links only if the user prefers them |
+| Person-grouping threshold | 4 items | One person with this many items gets one grouped decision |
 
 ## Ground rules
 
@@ -4360,14 +4362,14 @@ Read every source in parallel. For each item collect: source, sender, subject or
 Apply these principles across sources:
 
 - **Use the right view.** Prefer a purpose-built inbox, notification, or reply-debt view over general search, which often misses saved, unread, and last-sender state.
-- **Get everything.** If a result hits its page limit, query again for older items. For a notification inbox, process every uncleared item, read or unread; the run is done only when the total is zero. Note that opening a notification may mark it read without clearing it.
+- **Get everything.** If a result hits its page limit, query again for older items. For a notification inbox, process every uncleared item, read or unread; the run is done only when the total is zero. Opening a notification may mark it read without clearing it.
 - **Group to the decision unit.** Group email messages by thread and keep the latest. Treat several comments feeding one document as one decision: has the user already used them? If yes, clear them; if not, offer one task for the document rather than one per comment.
-- **Skim, then open only when needed.** Open the full thread when the preview leaves the ask, deadline, owner, or status unclear. A reply deep in a long thread usually needs the full thread.
-- **Find reply debt by last sender, then read back.** For chats, check who sent the last meaningful message within the lookback window. Before calling a chat handled, read back to the user's last real reply: a quick logistics exchange or closing message can sit on top of an older unanswered ask.
+- **Skim, then open only when needed.** Send obvious newsletters and automated mail straight to no action. Open the full thread when the preview leaves the ask, deadline, owner, or status unclear. A reply deep in a long thread usually needs the full thread.
+- **Find reply debt by last sender, then read back.** For chats, check who sent the last meaningful message within the lookback window. Before calling a chat handled, read back to the user's last real reply: a quick logistics exchange or closing message can sit on top of an older unanswered ask, such as an invitation sent the day before.
 - **Rank direct above broadcast.** Direct messages and explicit mentions come before group or channel traffic, unless a group message names the user or has a time-bound consequence.
 - **Respect deliberate saves; mute chosen noise.** Saved-for-later items count, even from muted feeds, because the user chose to keep them. Unreads are attention debt, not priority. Leave muted-feed unreads out of every bucket and count unless a message tags the user.
 - **Default automated items to no action.** Newsletters, receipts, calendar notices, reactions, automated mentions, pointers to deleted or emptied content, and resolved discussions go to no action, unless they point to a deadline, a money or security issue, or a record that now needs the user (for example a record newly assigned to them with no next step). Permission requests are quick wins. Items over two weeks old with no open ask are usually stale; group them for one decision.
-- **Never invent links.** Prefer links that open the exact item in the app the user uses rather than a browser, when that is their preference. Copy links from tool output, or use a format verified in this setup. Otherwise cite sender, subject, and date and say the link is missing.
+- **Never invent links.** Prefer links that open the exact item in the app the user uses, when that is their preference. Copy links from tool output, or build them only from a format verified in this setup. Otherwise cite sender, subject, and date and say the link is missing.
 
 **Failures.** If a source fails or is disconnected, name the source, the exact error, and the missing data. Try the safe repairs in its access rules, such as re-authentication steps, then continue with the other sources. Never drop a source quietly or substitute one that cannot provide the same data. Put failures at the top of the output so the user sees the gap first.
 
@@ -4399,7 +4401,7 @@ Do not show the full sorted list; seeing every bucket at once overwhelms. The op
 **Counts:** <N items: X do now, Y quick wins, Z delegate, T task, A no action>
 ```
 
-Then go straight into the first non-empty bucket in the same message. Keep the full sort to yourself and reveal one batch at a time.
+Then go straight into the first non-empty bucket (or a person group, below) in the same message. Keep the full sort to yourself and reveal one batch at a time.
 
 ## Step 6: Work the buckets, one batch at a time
 
@@ -4411,17 +4413,29 @@ Answering a batch's questions is a decision, not completion. Move on only when t
 
 - Every time you name an item or person, including status notes, recaps, reminders, and question titles, link the name to its source.
 - Number questions and letter options so the user can reply `1b, 2a`.
-- Use real lists for groups. Never show severity by colour alone; use words and order.
+- Use real lists for groups. Never show severity or status by colour alone; use words, symbols, and order.
+
+**Group by person first.** When one person accounts for several items across buckets (at or above the grouping threshold), show their pile before the buckets in one message, split into "needs you", "discussion", and "reading or FYI", and suggest one way to batch them, such as one task or an already scheduled one-to-one. Clearing a person's pile in one decision beats meeting the same name in every bucket.
 
 **Batches:**
 
 1. **Do now, one item per message.** Read the full thread and check the calendar around any dates it mentions; the user may already have added holds. Gather only the context this decision needs, such as earlier threads with the sender or a related project record. Before saying the user still owes a reply or introduction, search every channel they might have used; it is often done elsewhere. For hiring or assessment items, use the user's chosen hiring guidance and only authorized evidence about role-relevant capabilities, role alignment, diagnostic evidence, and whether an assessment distinguishes relevant performance. Then write a short paragraph: who this is, what they want, what is at stake if it waits, and the recommended action, with evidence linked. Ask one to three questions only the user can answer. When they say it is done, show the next item.
-2. **Quick wins, a small batch per message.** Each item gets its link, a line of context, and one recommended action, with lettered options when there is a real choice. Say how many remain.
+2. **Quick wins, a small batch per message.** Each item gets its link, a line of context, and one recommended action, with lettered options when there is a real choice. Say how many remain. Show the next batch when the user says this one is done.
 3. **Delegate, a small batch per message.** Link, suggested owner, evidence. The user confirms or changes the owner.
 4. **Task, a small batch per message.** Link, suggested name, due date. Create each one the user says to task. Flag existing tasks that already cover an item.
 5. **No action.** Counts by type plus surprising items. The user clears them, unless they delegated clearing to you.
 
-**Delegated clearing.** Clear an item only after the user says it is handled, done, or not worth acting on, or confirms the no action bucket. Never clear an item that is decided but not yet acted on, such as a reply still to post. Clearing a notification or marking a chat processed must never resolve, edit, or delete the underlying comment, thread, page, or record. Pass item identifiers in a way the tool reliably accepts, retry a transient error once, verify the result, and report it in one line ("Cleared 4, all verified, 29 left"). Name anything unverified as a failure, and know how to undo a mistaken clear. For chats, marking an item processed (so it does not return next run) is appropriate when the user handled it elsewhere, chose to ignore it, or confirmed no action; do not mark chats the user still has to answer.
+**Meeting-related items.** When an item asks for a meeting, check the calendar for meetings already booked with that person in the next week before suggesting a new slot; an existing one-to-one or session often covers the ask. When a do-now item is preparation for a meeting in the next day or two, such as a document to review before a call, offer a meeting-prep workflow once the user has decided on the item.
+
+**Tick lists for items only the user can clear.** When the user must clear several saved items themselves, give them a list that mirrors their app's screen, in the same order the app shows:
+
+| # | Opening words as previewed | Date | Decision |
+|---|---|---|---|
+| [position] | [first words of the message] | [date] | [✓ Clear, or Keep, plus a few words of reason] |
+
+Afterwards, re-read the saved list to check the right items were cleared.
+
+**Delegated clearing.** Clear an item only after the user says it is handled, done, or not worth acting on, or confirms the no action bucket. Never clear an item that is decided but not yet acted on, such as a reply still to post. Clearing a notification or marking a chat processed must never resolve, edit, or delete the underlying comment, thread, page, or record. Pass item identifiers in a way the tool reliably accepts, retry a transient error once, verify the result, and report it in one line ("Cleared 4, all verified, 29 left"). Name anything unverified as a failure, and know how to undo a mistaken clear. For chats, marking an item processed (so it does not return next run) is appropriate when the user handled it elsewhere, chose to ignore it, or confirmed no action; do not mark chats the user still has to answer, since a sent reply drops off on its own.
 
 **Catch work done mid-run.** Users often reply while the run is going. Before each new batch, check recently sent mail and messages, drop anything already answered, and note each in one line instead of asking again.
 
@@ -4430,7 +4444,7 @@ Answering a batch's questions is a decision, not completion. Move on only when t
 ### Drafts, only when asked
 
 - **Check the request against the thread first.** If a requested point repeats or contradicts what the other person already said, or misreads the ask, say so in one line and draft the version that makes sense. Follow the user's voice and channel conventions.
-- **Saved drafts, where authorized:** save each draft as a reply in its own thread, never at the top level of a channel or conversation. Confirm it attached to the right thread, then open it in the app the user prefers so they can edit and send. In group threads, use the channel's real mention format for the person being answered and anyone the draft asks to act. Do not also paste the draft into the conversation; just say it is saved and opened. If a draft already exists there, say so rather than overwriting it. If you cannot read saved drafts back, ask the user to paste their edited text before revising, and save the new version only after they remove the old one. Never send.
+- **Saved drafts, where authorized:** save each draft as a reply in its own thread, never at the top level of a channel or conversation. Confirm it attached to the right thread, then open it in the app the user prefers so they can edit and send. In group threads, use the channel's real mention format for the person being answered and anyone the draft asks to act. Do not also paste the draft into the conversation; just say it is saved and opened. If a draft already exists there, say so rather than overwriting it. If you cannot read saved drafts back, never recreate an edited draft from your own version: ask the user to paste their current text, and save the revision only after they remove the old one. Never send.
 - **Everywhere else:** give one draft per response as copy-ready plain text in the final block, with the item's link on the line directly above. If the user wants it, also copy the text to their clipboard and say so. Finish all tool calls first so nothing pushes the draft out of the final block.
 
 ### Creating a task
@@ -4474,6 +4488,8 @@ Then audit the run for friction: a pointless question, an item in the wrong buck
 - Moving on after the user decided but before they acted.
 - Doing the work a message describes instead of tasking it.
 - Flagging a reply as owed when it was sent elsewhere, or calling a chat handled when an older ask sits under small talk.
+- Proposing a new meeting when one with the same person is already booked.
+- Showing the same person in every bucket instead of grouping their pile.
 - Duplicating a task that already exists, or guessing an owner instead of saying "owner unclear".
 - Quietly dropping a failed source or substituting a weaker one.
 - Treating unread, new, or loud as urgent.
@@ -4908,6 +4924,126 @@ Pick probes that test capabilities the role actually needs. Write three or four.
 - Probes match the real role, not a generic list.
 - No unrelated personal details about the candidate or referee appear on the page.
 - The page exists in the chosen system before you report the task complete.
+
+
+---
+name: access-check
+description: Before giving someone access to a shared chat workspace or knowledge base, find content about them they could read and recommend what to restrict.
+---
+
+# Check before granting access
+
+Use this workflow before adding a new hire, advisor, contractor or collaborator to a shared chat workspace, a knowledge base, or both. It answers one question: **once they join, could they read anything about themselves that should not be visible to them?** It finds those items and recommends what to restrict, move or redact before access is granted.
+
+Typical requests: "check before I add [person]" or "is there anything about [person] I should hide first?"
+
+## Purpose and boundaries
+
+- **Authorization.** Run this only for someone who can manage access to these systems, such as a workspace admin or the person's sponsor. Search only the systems the person is about to join.
+- **Narrow scope.** Look only for content that mentions the incoming person directly. Ignore other sensitive material, however interesting, unless it is about them. Do not collect or summarize unrelated conversations.
+- **Minimum detail.** Quote only the line needed to judge a finding. For health, family or other personal-life details, name the category (for example "mentions a family matter") instead of repeating the detail.
+- **Access boundary.** Send the report only to the requester. Do not post it in shared spaces.
+- **Not a cover-up tool.** Prefer restricting access over deleting. Do not delete or alter records that fall under a retention duty, a legal hold, or the person's legal right to access data about them. If unsure, flag it and let the requester check with the right owner.
+
+## Inputs to collect
+
+| Input | Why it matters |
+|---|---|
+| Full name, nicknames, likely misspellings | Catches mentions that exact-name search misses |
+| Chat user ID or handle, if they already have one | Catches tagged mentions |
+| A disambiguator, such as current or past employers | Rules out people with the same name |
+| Which private channels and restricted spaces they will join | Defines what they can actually see |
+
+If the requester says "standard team-member access", assume every public channel and every open knowledge-base space, with no private channels.
+
+## Step 1: Identify the person
+
+1. Look up the person in the user directory of each system.
+2. Many first names are shared. Keep the disambiguator handy and drop namesakes as you go.
+3. List the spelling variants you will search (for example a surname with swapped vowels or a missing letter).
+
+## Step 2: Map what they will and will not see
+
+This decides what counts as exposed. Skip what they cannot see, but say what you skipped.
+
+- **Usually not visible:** direct messages and group messages they are not in; private channels they will not join; the requester's personal or private spaces (if the requester excludes them); pages in another user's private section.
+- **Usually visible:** public channels; private channels they will join; every page in shared spaces and shared databases, including meeting notes, hiring, strategy, projects and archives.
+
+Rules for unclear cases:
+
+- **Search tools often cannot see page-level permissions.** A page may be restricted while still sitting in a shared database, and search returns it anyway. Treat every page in a shared space as visible unless the requester confirms it is restricted. Then move it to the skipped list as "restricted, confirmed by requester".
+- **Pages with no parent location** (for example auto-generated meeting notes) are often private to their creator. Treat them as not visible unless they show explicit sharing or the requester says otherwise.
+- **System-generated user profile pages** usually carry no content. Skip them. An access error on them is expected and not worth reporting.
+
+## Step 3: Search the chat workspace
+
+Run these searches in parallel, covering every channel you are allowed to search:
+
+- Full name, surname alone, and each misspelling, newest first. Page through results until they stop being about the person.
+- First name alone, to catch casual mentions. Skim for context and drop namesakes.
+- Their user ID as a keyword, to catch tagged mentions.
+- Any announcement about adding them. Read the full thread, since colleagues may have replied with concerns.
+
+For each relevant hit, record the channel type and a permanent link. Read the full thread around any hit that has replies. Direct messages are not visible to the person, but list them with links in the skipped section so the requester knows they were seen.
+
+## Step 4: Search the knowledge base
+
+1. Search the full name, each misspelling, and the name combined with their main employers or role. Ask for a large page of results.
+2. If the requester's private space is excluded, run the same search limited to that space. Hits that appear only there are out of scope.
+3. Open every remaining hit that mentions the person beyond a passing name-drop. Read the full text and check its location.
+4. Check structured properties as well as body text: hiring status fields, pipeline stages, contact-relationship fields, and similar.
+5. If a page fails to open, report it with its link and ask the requester to check it by hand.
+
+## Step 5: Judge each mention
+
+Flag a mention when the person would plausibly feel hurt, misled or awkward reading it, or when it reveals plans about them that they do not know about.
+
+**Flag:**
+
+- Candid assessments: doubts about their skills, commitment or results.
+- Hiring, offer, compensation or persuasion strategy aimed at them, including records marking them as a lost or declined candidate.
+- Other people's plans for them that they may not know about.
+- Reference feedback, gossip, or health, family or personal-life details.
+- Colleagues' doubts about what they contribute.
+
+**Do not flag:**
+
+- Neutral mentions: event replies, being tagged on a link, a field recording who introduced them.
+- Praise and accurate bios.
+- Their own advice recorded in meeting notes. **Exception:** if those notes include their candid remarks about third parties, mention this once. They may not expect those remarks to sit in a team-wide space.
+
+Rate every finding with a word and a symbol, never colour alone:
+
+| Rating | Meaning |
+|---|---|
+| **▲ Hide** | Restrict, move or redact before they join |
+| **◆ Consider** | Mild; the requester decides |
+| **○ Fine** | Checked and harmless; listed briefly for completeness |
+
+## Step 6: Report
+
+Lead with the answer: the number of ▲ and ◆ items, and whether anything blocks granting access today. Then list one item per finding:
+
+- Bold rating, then the page or message label as a short hyperlink (for example `[#announcements, 4 Oct](link)`), never a bare URL
+- Where it lives, and whether the person would see it
+- The exact line that matters (or the category, for sensitive personal details)
+- Recommended fix: restrict the page, move it to a private space, or redact one line
+
+Every item gets its own working link, including **○ Fine** items and skipped direct messages. The requester will check each one, so an item without a link is not useful. Close with failed fetches and the list of what was skipped as not visible.
+
+## Making changes
+
+Do not change permissions, move pages or edit content without explicit approval. Moving or redacting someone else's page is a material change, so confirm with its owner where appropriate. After approval, make the edits, then re-run the searches to confirm nothing visible remains.
+
+## Common failure modes
+
+- Searching only the exact name and missing misspellings, nicknames or tagged IDs.
+- Confusing a namesake with the person.
+- Assuming a page is private because search cannot show its permissions.
+- Reading only the first message and missing a critical reply in the thread.
+- Missing sensitive content stored in page properties rather than body text.
+- Drifting into unrelated sensitive material outside the scope.
+- Acting on findings before approval.
 
 
 ---

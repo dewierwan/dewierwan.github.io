@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow,noarchive"><title>Check before granting access · AI skills</title><meta name="description" content="Before giving someone access to a shared chat workspace or knowledge base, find content about them they could read and recommend what to restrict.">
+<link rel="alternate" type="text/markdown" href="/skills/raw/access-check.md"><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%23b4552d%22/><text x=%2250%22 y=%2253%22 dominant-baseline=%22central%22 text-anchor=%22middle%22 font-family=%22Georgia, 'Times New Roman', serif%22 font-size=%2246%22 letter-spacing=%221%22 fill=%22%23fdfaf4%22>DE</text></svg>"><link rel="stylesheet" href="/skills/styles.css"></head><body><main><a class="back" href="/skills/">← Skills</a><header class="skill-header"><h1>Check before granting access</h1><p class="description">Before giving someone access to a shared chat workspace or knowledge base, find content about them they could read and recommend what to restrict.</p><div class="skill-actions"><a href="/skills/raw/access-check.md">Raw Markdown</a><button class="copy" type="button" data-copy="/skills/raw/access-check.md">Copy Markdown</button></div></header><article class="skill-body"><p>Use this workflow before adding a new hire, advisor, contractor or collaborator to a shared chat workspace, a knowledge base, or both. It answers one question: <strong>once they join, could they read anything about themselves that should not be visible to them?</strong> It finds those items and recommends what to restrict, move or redact before access is granted.</p>
+<p>Typical requests: &quot;check before I add [person]&quot; or &quot;is there anything about [person] I should hide first?&quot;</p>
+<h3>Purpose and boundaries</h3>
+<ul>
+<li><strong>Authorization.</strong> Run this only for someone who can manage access to these systems, such as a workspace admin or the person&#39;s sponsor. Search only the systems the person is about to join.</li>
+<li><strong>Narrow scope.</strong> Look only for content that mentions the incoming person directly. Ignore other sensitive material, however interesting, unless it is about them. Do not collect or summarize unrelated conversations.</li>
+<li><strong>Minimum detail.</strong> Quote only the line needed to judge a finding. For health, family or other personal-life details, name the category (for example &quot;mentions a family matter&quot;) instead of repeating the detail.</li>
+<li><strong>Access boundary.</strong> Send the report only to the requester. Do not post it in shared spaces.</li>
+<li><strong>Not a cover-up tool.</strong> Prefer restricting access over deleting. Do not delete or alter records that fall under a retention duty, a legal hold, or the person&#39;s legal right to access data about them. If unsure, flag it and let the requester check with the right owner.</li>
+</ul>
+<h3>Inputs to collect</h3>
+<div class="table-wrap" tabindex="0" aria-label="Scrollable table"><table><thead><tr><th>Input</th><th>Why it matters</th></tr></thead><tbody><tr><td>Full name, nicknames, likely misspellings</td><td>Catches mentions that exact-name search misses</td></tr><tr><td>Chat user ID or handle, if they already have one</td><td>Catches tagged mentions</td></tr><tr><td>A disambiguator, such as current or past employers</td><td>Rules out people with the same name</td></tr><tr><td>Which private channels and restricted spaces they will join</td><td>Defines what they can actually see</td></tr></tbody></table></div>
+<p>If the requester says &quot;standard team-member access&quot;, assume every public channel and every open knowledge-base space, with no private channels.</p>
+<h3>Step 1: Identify the person</h3>
+<ol>
+<li>Look up the person in the user directory of each system.</li>
+<li>Many first names are shared. Keep the disambiguator handy and drop namesakes as you go.</li>
+<li>List the spelling variants you will search (for example a surname with swapped vowels or a missing letter).</li>
+</ol>
+<h3>Step 2: Map what they will and will not see</h3>
+<p>This decides what counts as exposed. Skip what they cannot see, but say what you skipped.</p>
+<ul>
+<li><strong>Usually not visible:</strong> direct messages and group messages they are not in; private channels they will not join; the requester&#39;s personal or private spaces (if the requester excludes them); pages in another user&#39;s private section.</li>
+<li><strong>Usually visible:</strong> public channels; private channels they will join; every page in shared spaces and shared databases, including meeting notes, hiring, strategy, projects and archives.</li>
+</ul>
+<p>Rules for unclear cases:</p>
+<ul>
+<li><strong>Search tools often cannot see page-level permissions.</strong> A page may be restricted while still sitting in a shared database, and search returns it anyway. Treat every page in a shared space as visible unless the requester confirms it is restricted. Then move it to the skipped list as &quot;restricted, confirmed by requester&quot;.</li>
+<li><strong>Pages with no parent location</strong> (for example auto-generated meeting notes) are often private to their creator. Treat them as not visible unless they show explicit sharing or the requester says otherwise.</li>
+<li><strong>System-generated user profile pages</strong> usually carry no content. Skip them. An access error on them is expected and not worth reporting.</li>
+</ul>
+<h3>Step 3: Search the chat workspace</h3>
+<p>Run these searches in parallel, covering every channel you are allowed to search:</p>
+<ul>
+<li>Full name, surname alone, and each misspelling, newest first. Page through results until they stop being about the person.</li>
+<li>First name alone, to catch casual mentions. Skim for context and drop namesakes.</li>
+<li>Their user ID as a keyword, to catch tagged mentions.</li>
+<li>Any announcement about adding them. Read the full thread, since colleagues may have replied with concerns.</li>
+</ul>
+<p>For each relevant hit, record the channel type and a permanent link. Read the full thread around any hit that has replies. Direct messages are not visible to the person, but list them with links in the skipped section so the requester knows they were seen.</p>
+<h3>Step 4: Search the knowledge base</h3>
+<ol>
+<li>Search the full name, each misspelling, and the name combined with their main employers or role. Ask for a large page of results.</li>
+<li>If the requester&#39;s private space is excluded, run the same search limited to that space. Hits that appear only there are out of scope.</li>
+<li>Open every remaining hit that mentions the person beyond a passing name-drop. Read the full text and check its location.</li>
+<li>Check structured properties as well as body text: hiring status fields, pipeline stages, contact-relationship fields, and similar.</li>
+<li>If a page fails to open, report it with its link and ask the requester to check it by hand.</li>
+</ol>
+<h3>Step 5: Judge each mention</h3>
+<p>Flag a mention when the person would plausibly feel hurt, misled or awkward reading it, or when it reveals plans about them that they do not know about.</p>
+<p><strong>Flag:</strong></p>
+<ul>
+<li>Candid assessments: doubts about their skills, commitment or results.</li>
+<li>Hiring, offer, compensation or persuasion strategy aimed at them, including records marking them as a lost or declined candidate.</li>
+<li>Other people&#39;s plans for them that they may not know about.</li>
+<li>Reference feedback, gossip, or health, family or personal-life details.</li>
+<li>Colleagues&#39; doubts about what they contribute.</li>
+</ul>
+<p><strong>Do not flag:</strong></p>
+<ul>
+<li>Neutral mentions: event replies, being tagged on a link, a field recording who introduced them.</li>
+<li>Praise and accurate bios.</li>
+<li>Their own advice recorded in meeting notes. <strong>Exception:</strong> if those notes include their candid remarks about third parties, mention this once. They may not expect those remarks to sit in a team-wide space.</li>
+</ul>
+<p>Rate every finding with a word and a symbol, never colour alone:</p>
+<div class="table-wrap" tabindex="0" aria-label="Scrollable table"><table><thead><tr><th>Rating</th><th>Meaning</th></tr></thead><tbody><tr><td><strong>▲ Hide</strong></td><td>Restrict, move or redact before they join</td></tr><tr><td><strong>◆ Consider</strong></td><td>Mild; the requester decides</td></tr><tr><td><strong>○ Fine</strong></td><td>Checked and harmless; listed briefly for completeness</td></tr></tbody></table></div>
+<h3>Step 6: Report</h3>
+<p>Lead with the answer: the number of ▲ and ◆ items, and whether anything blocks granting access today. Then list one item per finding:</p>
+<ul>
+<li>Bold rating, then the page or message label as a short hyperlink (for example <code>[#announcements, 4 Oct](link)</code>), never a bare URL</li>
+<li>Where it lives, and whether the person would see it</li>
+<li>The exact line that matters (or the category, for sensitive personal details)</li>
+<li>Recommended fix: restrict the page, move it to a private space, or redact one line</li>
+</ul>
+<p>Every item gets its own working link, including <strong>○ Fine</strong> items and skipped direct messages. The requester will check each one, so an item without a link is not useful. Close with failed fetches and the list of what was skipped as not visible.</p>
+<h3>Making changes</h3>
+<p>Do not change permissions, move pages or edit content without explicit approval. Moving or redacting someone else&#39;s page is a material change, so confirm with its owner where appropriate. After approval, make the edits, then re-run the searches to confirm nothing visible remains.</p>
+<h3>Common failure modes</h3>
+<ul>
+<li>Searching only the exact name and missing misspellings, nicknames or tagged IDs.</li>
+<li>Confusing a namesake with the person.</li>
+<li>Assuming a page is private because search cannot show its permissions.</li>
+<li>Reading only the first message and missing a critical reply in the thread.</li>
+<li>Missing sensitive content stored in page properties rather than body text.</li>
+<li>Drifting into unrelated sensitive material outside the scope.</li>
+<li>Acting on findings before approval.</li>
+</ul></article><footer><a href="/skills/LICENSE.txt">CC0</a></footer></main><script>document.querySelector('[data-copy]').addEventListener('click',async function(){try{const text=await fetch(this.dataset.copy).then(r=>{if(!r.ok)throw new Error();return r.text()});await navigator.clipboard.writeText(text);this.textContent='Copied'}catch{this.textContent='Open raw Markdown'}})</script></body></html>
