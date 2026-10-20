@@ -40,7 +40,8 @@
 <li><strong>Today:</strong> intention, plan, and MIT.</li>
 <li><strong>Open tasks:</strong> title, status, and due date, so you can spot items that are already tasked.</li>
 </ol>
-<p>Use the system&#39;s documented date functions. Plain string comparisons on dates often fail silently, so treat an unexpectedly empty result as a possible query error. If a level is missing, say so in one line and continue with what exists. Do not invent goals. Summarize the goals in three to six lines for yourself and use them to judge every item.</p>
+<p>Write queries that survive change. Where the system supports it, refer to fields by stable identifiers rather than display names, in both filters and requested fields; names can differ between tables and break when someone renames them. Use the system&#39;s documented date functions, because plain equality or range comparisons against date strings often fail silently. If a query errors on an unknown field, or returns nothing where a record should exist (for example today&#39;s daily record), inspect the schema and fix the query before reporting that level as missing.</p>
+<p>If a level is genuinely missing, say so in one line and continue with what exists. Do not invent goals. Summarize the goals in three to six lines for yourself and use them to judge every item.</p>
 <p><strong>MIT check.</strong> If today&#39;s MIT is not inbox work and the user is inside or near its planned block, ask once, before reading any inbox: &quot;Is this the most important thing right now, or does it just feel productive?&quot; Trust the answer. Skip this when there is no MIT or inbox work is part of the plan.</p>
 <h3>5. Read the inboxes</h3>
 <p>Read every source in parallel. For each item collect: source, sender, subject or chat, date of the last message, who sent the last message, a one-line gist, and a link.</p>
@@ -50,6 +51,7 @@
 <li><strong>Get everything.</strong> If a result hits its page limit, query again for older items. For a notification inbox, process every uncleared item, read or unread; the run is done only when the total is zero. Opening a notification may mark it read without clearing it.</li>
 <li><strong>Group to the decision unit.</strong> Group email messages by thread and keep the latest. Treat several comments feeding one document as one decision: has the user already used them? If yes, clear them; if not, offer one task for the document rather than one per comment.</li>
 <li><strong>Skim, then open only when needed.</strong> Send obvious newsletters and automated mail straight to no action. Open the full thread when the preview leaves the ask, deadline, owner, or status unclear. A reply deep in a long thread usually needs the full thread.</li>
+<li><strong>Open attachments that carry the ask.</strong> When the substance sits in a photo, scan, screenshot, or file, open it before choosing a bucket. Never task an item you have not actually seen: a forwarded letter that looks official may turn out to be marketing or a notice needing nothing.</li>
 <li><strong>Judge chats on everything unanswered.</strong> Find reply debt by last sender within the lookback window, then read back to the user&#39;s last real reply. Judge the chat on that whole unanswered stretch, never on its last message: a logistics exchange, a confirmation, or a friendly closer can sit on top of an older ask. A chat whose unanswered part contains a question is never no action until the user has answered it.</li>
 <li><strong>Rank direct above broadcast.</strong> Direct messages and explicit mentions come before group or channel traffic, unless a group message names the user, asks them something, or has a time-bound consequence.</li>
 <li><strong>Respect deliberate saves; mute chosen noise.</strong> Saved-for-later items count, even from muted feeds, because the user chose to keep them. Unreads are attention debt, not priority. Leave muted-feed unreads out of every bucket and count unless a message tags the user.</li>
@@ -126,10 +128,11 @@
 <li>Every in-scope source was read, or its failure is named.</li>
 <li>Every item is in exactly one bucket.</li>
 <li>No chat with an unanswered question sits in no action.</li>
+<li>Every attachment that carried an ask was opened before its item was bucketed.</li>
 <li>Nothing actionable lives only in an inbox: it is done, delegated, tasked, or explicitly left open.</li>
 <li>Every delegated clear was verified.</li>
 </ul>
-<p>Then audit the run for friction: a pointless question, an item in the wrong bucket, a misbehaving source, or context you had to hunt for. With the user&#39;s permission, update the workflow&#39;s configuration to fix the cause, keeping changes general rather than tied to one message. Never store message content or credentials in it.</p>
+<p>Then audit the run for friction: a pointless question, an item in the wrong bucket, a misbehaving source or query, or context you had to hunt for. With the user&#39;s permission, update the workflow&#39;s configuration to fix the cause, keeping changes general rather than tied to one message. Never store message content or credentials in it.</p>
 <h3>Common failure modes</h3>
 <ul>
 <li>Dumping every bucket at once instead of one batch at a time.</li>
@@ -137,6 +140,8 @@
 <li>Doing the work a message describes instead of tasking it.</li>
 <li>Flagging a reply as owed when it was sent elsewhere.</li>
 <li>Judging a chat by its last message, so a closer or confirmation hides an older question.</li>
+<li>Tasking or bucketing an item from its preview when the real content sits in an unopened photo or file.</li>
+<li>Reporting a goal level as missing when the query, not the data, was wrong.</li>
 <li>Relaying an ask the user cannot place, instead of first finding the event, plan, or person it refers to.</li>
 <li>Proposing a new meeting when one with the same person is already booked.</li>
 <li>Showing the same person in every bucket instead of grouping their pile.</li>

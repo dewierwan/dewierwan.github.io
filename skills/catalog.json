@@ -80,7 +80,7 @@
     },
     {
       "title": "Plan your day",
-      "description": "Chooses one most important outcome for the day, protects time for it, and plans around real commitments. Use when someone says 'plan my day', 'plan tomorrow', or asks what to focus on.",
+      "description": "Chooses one outcome for the day, protects time for it, and plans around real commitments. Use when someone says 'plan my day', 'plan tomorrow', or asks what to focus on.",
       "category": "Plan and reflect",
       "page": "https://dewierwan.com/skills/plan-your-day/",
       "markdown": "https://dewierwan.com/skills/raw/plan-your-day.md"
@@ -94,7 +94,7 @@
     },
     {
       "title": "Plan your week",
-      "description": "Reviews last week, commits to a few outcomes with a clear definition of done, cuts low-value work, and protects time. Use when someone says \"plan my week\" or wants to reset after a messy week.",
+      "description": "Reviews last week, commits to one to three goals with checkable outputs, cuts low-value work, and protects time. Use when someone says \"plan my week\" or wants to reset after a messy week.",
       "category": "Plan and reflect",
       "page": "https://dewierwan.com/skills/plan-your-week/",
       "markdown": "https://dewierwan.com/skills/raw/plan-your-week.md"
@@ -178,14 +178,14 @@
     },
     {
       "title": "Use a browser safely",
-      "description": "Complete browser tasks safely: pick the least invasive route, protect logged-in accounts, check what the page actually shows, and confirm before acting. Use when filling forms or fixing dashboards in a browser.",
+      "description": "Completes browser tasks safely: least invasive route, verified account and fields, confirmation before acting. Use when filling forms, fixing dashboards, or working in a signed-in app.",
       "category": "Build and automate",
       "page": "https://dewierwan.com/skills/use-a-browser-safely/",
       "markdown": "https://dewierwan.com/skills/raw/use-a-browser-safely.md"
     },
     {
       "title": "Create an AI skill",
-      "description": "Design, test, and improve a reusable AI skill, from a rough idea or a repeated workflow to a tested, well-triggered skill. Use when someone wants to turn a workflow into a skill or improve one.",
+      "description": "Designs, tests, and improves a reusable AI skill from a rough idea or repeated workflow. Use when someone says \"turn this into a skill,\" \"improve this skill,\" or \"does my skill help?\"",
       "category": "Build and automate",
       "page": "https://dewierwan.com/skills/create-a-skill/",
       "markdown": "https://dewierwan.com/skills/raw/create-a-skill.md"

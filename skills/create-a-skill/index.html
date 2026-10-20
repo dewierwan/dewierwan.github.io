@@ -1,9 +1,19 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="robots" content="noindex,nofollow,noarchive"><title>Create an AI skill · AI skills</title><meta name="description" content="Design, test, and improve a reusable AI skill, from a rough idea or a repeated workflow to a tested, well-triggered skill. Use when someone wants to turn a workflow into a skill or improve one.">
-<link rel="alternate" type="text/markdown" href="/skills/raw/create-a-skill.md"><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%23b4552d%22/><text x=%2250%22 y=%2253%22 dominant-baseline=%22central%22 text-anchor=%22middle%22 font-family=%22Georgia, 'Times New Roman', serif%22 font-size=%2246%22 letter-spacing=%221%22 fill=%22%23fdfaf4%22>DE</text></svg>"><link rel="stylesheet" href="/skills/styles.css"></head><body><main><a class="back" href="/skills/">← Skills</a><header class="skill-header"><h1>Create an AI skill</h1><p class="description">Design, test, and improve a reusable AI skill, from a rough idea or a repeated workflow to a tested, well-triggered skill. Use when someone wants to turn a workflow into a skill or improve one.</p><div class="skill-actions"><a href="/skills/raw/create-a-skill.md">Raw Markdown</a><button class="copy" type="button" data-copy="/skills/raw/create-a-skill.md">Copy Markdown</button></div></header><article class="skill-body"><p>Use this workflow to create a new AI skill, improve an existing one, test whether a skill actually helps, or tune when it activates. A skill is a focused set of instructions, plus optional scripts, reference documents, and templates, that helps an AI do a recurring job well and consistently.</p>
+<meta name="robots" content="noindex,nofollow,noarchive"><title>Create an AI skill · AI skills</title><meta name="description" content="Designs, tests, and improves a reusable AI skill from a rough idea or repeated workflow. Use when someone says &quot;turn this into a skill,&quot; &quot;improve this skill,&quot; or &quot;does my skill help?&quot;">
+<link rel="alternate" type="text/markdown" href="/skills/raw/create-a-skill.md"><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%23b4552d%22/><text x=%2250%22 y=%2253%22 dominant-baseline=%22central%22 text-anchor=%22middle%22 font-family=%22Georgia, 'Times New Roman', serif%22 font-size=%2246%22 letter-spacing=%221%22 fill=%22%23fdfaf4%22>DE</text></svg>"><link rel="stylesheet" href="/skills/styles.css"></head><body><main><a class="back" href="/skills/">← Skills</a><header class="skill-header"><h1>Create an AI skill</h1><p class="description">Designs, tests, and improves a reusable AI skill from a rough idea or repeated workflow. Use when someone says &quot;turn this into a skill,&quot; &quot;improve this skill,&quot; or &quot;does my skill help?&quot;</p><div class="skill-actions"><a href="/skills/raw/create-a-skill.md">Raw Markdown</a><button class="copy" type="button" data-copy="/skills/raw/create-a-skill.md">Copy Markdown</button></div></header><article class="skill-body"><p>Use this workflow to create a new AI skill, improve an existing one, test whether a skill actually helps, or tune when it activates. A skill is a focused set of instructions, plus optional scripts, reference documents, and templates, that helps an AI do a recurring job well and consistently.</p>
+<h3>Quick version</h3>
+<ul>
+<li>Tell your assistant what the skill should do, when it should be used, and what a good output looks like. If you already did the job in a conversation, paste it and ask the assistant to extract the steps, corrections, and formats, then confirm the gaps.</li>
+<li>Before drafting, have it ask only questions that change the design: missing information, edge cases, actions that need your confirmation, and what would make you reject an output.</li>
+<li>Draft the skill: a short name, a slightly assertive description that leads with trigger phrases, imperative instructions that explain why each step matters, an output template, and what to do when something is missing or unclear.</li>
+<li>Write two or three realistic test requests. Paste the skill into a fresh chat with each one and read the outputs yourself before changing anything.</li>
+<li>Revise from the general cause of each problem, not the specific example. Fold each lesson into the rule it refines instead of appending notes about what went wrong.</li>
+<li>Repeat until you are happy or progress stops, then run the audit checklist in section 10.</li>
+</ul>
 <p>The method works with any AI system that supports reusable instructions. Where this guide mentions files, folders, or tools, substitute whatever your platform provides.</p>
-<h3>The core loop</h3>
+<h3>1. Work out where the user is</h3>
+<p>The core loop:</p>
 <ol>
 <li>Understand what the skill should do and roughly how.</li>
 <li>Write or revise a draft.</li>
@@ -15,21 +25,19 @@
 <li>Optionally tune the description so the skill activates for the right requests.</li>
 <li>Package and hand off the skill.</li>
 </ol>
-<p>Your first job is to work out where the user is in this loop and help them take the next step. Someone who says &quot;I want a skill for X&quot; needs discovery, a draft, tests, and review. Someone with an existing draft can go straight to testing and revision. Someone who says &quot;skip the formal evaluation, just work on it with me&quot; should get that. Stay flexible about order and depth.</p>
+<p>Your first job is to find the user&#39;s place in this loop and help them take the next step. Stay flexible about order and depth: someone who says &quot;skip the formal evaluation, just work on it with me&quot; should get that.</p>
+<div class="table-wrap" tabindex="0" aria-label="Scrollable table"><table><thead><tr><th>Situation</th><th>What to do first</th></tr></thead><tbody><tr><td>New idea (&quot;a skill for X&quot;)</td><td>Capture intent, interview, draft</td></tr><tr><td>Existing draft or installed skill</td><td>Read it fully, then go to testing and revision. Keep its name unless the user asks to rename it</td></tr><tr><td>Workflow already shown in the conversation (&quot;turn this into a skill&quot;)</td><td>Extract the workflow from the conversation, then confirm gaps</td></tr><tr><td>&quot;Does this skill actually help?&quot;</td><td>Go straight to test design and evaluation. Do not rewrite just because you can</td></tr></tbody></table></div>
+<p>When extracting from a conversation, pull out the tools and sources used, the sequence of steps, corrections the user made, input and output formats, and conditions that changed the approach. Summarize this, ask the user to fill gaps, and get confirmation before moving on. Do not quietly turn a one-time workaround into a general rule.</p>
 <p>If you have a task list, add the loop steps to it, including &quot;show test outputs to the user before revising&quot;. That step is the one most often skipped.</p>
-<h3>Communicating with the user</h3>
+<h3>2. Communicate at the right level</h3>
 <p>Users range from experienced developers to people who have never used a command line. Read context cues and adjust.</p>
 <ul>
 <li>Words like &quot;evaluation&quot; and &quot;benchmark&quot; are usually fine.</li>
 <li>Words like &quot;JSON&quot;, &quot;assertion&quot;, &quot;baseline&quot;, and &quot;schema&quot; need clear signs that the user knows them. Otherwise add a short definition the first time.</li>
 <li>When in doubt, explain briefly. It costs little.</li>
 </ul>
-<p>Ask questions whose answers change the design, not to fill out a form. Keep the user involved at decision points: confirm scope before writing a lot, share test prompts before relying on them, and let human judgment settle subjective questions such as tone, design, and usefulness.</p>
-<p>If the skill will touch private communications, records, or information about people, confirm a legitimate purpose and clear authorization. Design the skill to use only the minimum relevant sources, leave out unrelated or sensitive personal details, respect consent and privacy expectations, and keep outputs within an appropriate access boundary.</p>
-<h3>1. Find the starting point</h3>
-<div class="table-wrap" tabindex="0" aria-label="Scrollable table"><table><thead><tr><th>Situation</th><th>What to do first</th></tr></thead><tbody><tr><td>New idea (&quot;a skill for X&quot;)</td><td>Capture intent, interview, draft</td></tr><tr><td>Existing draft or installed skill</td><td>Read it fully, then go to testing and revision. Keep its name unless the user asks to rename it</td></tr><tr><td>Workflow already shown in the conversation (&quot;turn this into a skill&quot;)</td><td>Extract the workflow from the conversation, then confirm gaps</td></tr><tr><td>&quot;Does this skill actually help?&quot;</td><td>Go straight to test design and evaluation. Do not rewrite just because you can</td></tr></tbody></table></div>
-<p>When extracting from a conversation, pull out the tools and sources used, the sequence of steps, corrections the user made, input and output formats, and conditions that changed the approach. Summarize this, ask the user to fill gaps, and get confirmation before moving on. Do not quietly turn a one-time workaround into a general rule.</p>
-<h3>2. Capture intent</h3>
+<p>Keep the user involved at decision points: confirm scope before writing a lot, share test prompts before relying on them, and let human judgment settle subjective questions such as tone, design, and usefulness.</p>
+<h3>3. Capture intent</h3>
 <p>Make sure you can answer these questions:</p>
 <ol>
 <li>What should the skill enable the AI to do?</li>
@@ -38,9 +46,8 @@
 <li>Should we build test cases to check that it works?</li>
 </ol>
 <p>For question 4, suggest a default based on the skill type and let the user decide. Skills with objectively checkable outputs (file conversions, data extraction, code generation, fixed workflow steps) benefit from test cases with checks. Skills with subjective outputs (writing style, visual design) usually need human review more than numerical checks.</p>
-<h3>3. Interview and research</h3>
-<p>Ask about edge cases, input and output formats, example files, success criteria, permissions, and dependencies. Hold off on writing test prompts until these are settled.</p>
-<p>Useful question formats:</p>
+<h3>4. Interview and research</h3>
+<p>Ask about edge cases, input and output formats, example files, success criteria, permissions, and dependencies. Hold off on writing test prompts until these are settled. Useful question formats:</p>
 <ul>
 <li>&quot;If information is missing, should the skill ask, make a labeled assumption, or produce a draft marked incomplete?&quot;</li>
 <li>&quot;Should it work with any source you give it, or only specific approved sources?&quot;</li>
@@ -48,8 +55,8 @@
 <li>&quot;What would make you reject an output?&quot;</li>
 <li>&quot;Who will use this skill, and what can they already be assumed to know?&quot;</li>
 </ul>
-<p>If you have research capabilities, such as documentation search or a way to look up similar skills and good practices, use them before asking the user things you could find yourself. Run research in parallel if you can, otherwise one step at a time. Arrive with context so the user has less to explain. If sources conflict or requirements stay unclear, say so instead of inventing a rule.</p>
-<h3>4. Choose the structure</h3>
+<p>If you can search documentation or look up similar skills and good practices, do that before asking the user things you could find yourself. If sources conflict or requirements stay unclear, say so instead of inventing a rule.</p>
+<h3>5. Choose the structure</h3>
 <p>A typical skill package looks like this. Use your platform&#39;s naming conventions:</p>
 <pre><code>skill-name/
 ├── [main instruction file]   # required: name, description, instructions
@@ -58,39 +65,36 @@
 └── assets/                   # optional: files used in outputs (templates, icons, fonts)</code></pre>
 <p>Most skill systems load content in layers, so design for progressive disclosure:</p>
 <div class="table-wrap" tabindex="0" aria-label="Scrollable table"><table><thead><tr><th>Layer</th><th>Content</th><th>When loaded</th><th>Size guide</th></tr></thead><tbody><tr><td>1. Metadata</td><td>Name and description</td><td>Always visible to the AI</td><td>A sentence or two</td></tr><tr><td>2. Main instructions</td><td>The body of the skill</td><td>Whenever the skill activates</td><td>Short enough to read in one pass; a few hundred lines at most</td></tr><tr><td>3. Bundled resources</td><td>Scripts, references, assets</td><td>Only when needed</td><td>Can be large; scripts can run without being read</td></tr></tbody></table></div>
-<p>These are guides. Follow any limits your platform sets. Key patterns:</p>
+<p>Follow any limits your platform sets. If it sets none, choose a size limit for the main file yourself (adjustable) and check against it whenever you edit. Key patterns:</p>
 <ul>
-<li>If the main instructions grow long, add a layer of hierarchy: move detail into reference files and say exactly when to read each one.</li>
-<li>Point to every reference file from the main instructions, with guidance on when to use it.</li>
+<li>If the main instructions grow long, move detail into reference files and say exactly when to read each one.</li>
 <li>Give long reference files a table of contents.</li>
-<li>When a skill supports several variants (for example, deploying to different hosting providers), keep the shared workflow and variant selection in the main file and put each variant in its own reference file. The AI then reads only the one it needs.</li>
+<li>When a skill supports several variants (for example, deploying to different hosting providers), keep the shared workflow and variant selection in the main file and put each variant in its own reference file.</li>
+<li>Split unrelated jobs into separate skills when they have different audiences, permissions, sources of truth, or definitions of done.</li>
 </ul>
-<p>Keep a skill focused. Split unrelated jobs into separate skills when they have different audiences, permissions, sources of truth, or definitions of done.</p>
-<h3>5. Write the skill</h3>
+<h3>6. Write the skill</h3>
 <h4>Required parts</h4>
 <ul>
 <li><strong>Name:</strong> a short, stable identifier.</li>
-<li><strong>Description:</strong> what the skill does and when to use it. This is usually the main thing that decides whether the AI uses the skill, so put all &quot;when to use&quot; information here, not in the body.</li>
+<li><strong>Description:</strong> what the skill does and when to use it. This usually decides whether the AI uses the skill, so put all &quot;when to use&quot; information here, not in the body.</li>
 <li><strong>Compatibility (optional):</strong> required tools or dependencies, only if they are not obvious.</li>
 <li><strong>Instructions:</strong> the body.</li>
 </ul>
 <h4>Writing the description</h4>
-<p>AI systems often under-use skills, skipping them when they would help. Counter this by making descriptions slightly assertive. Instead of &quot;How to build a simple dashboard for internal data&quot;, write &quot;How to build a simple dashboard for internal data. Use this whenever the user mentions dashboards, data visualization, internal metrics, or wants to display company data, even if they don&#39;t say &#39;dashboard&#39;.&quot;</p>
-<p>Guidelines:</p>
+<p>AI systems often under-use skills. Counter this by making descriptions slightly assertive. Instead of &quot;How to build a quick inventory dashboard&quot;, write &quot;How to build a quick inventory dashboard. Use this whenever the user mentions dashboards, stock-level charts, operational metrics, or wants to see warehouse data visually, even if they don&#39;t say &#39;dashboard&#39;.&quot;</p>
 <ul>
 <li>Keep it short. Respect your platform&#39;s length limit; if there is none, one or two sentences is a good default.</li>
-<li>Lead with the phrases and situations that should trigger it.</li>
-<li>Include cases where the user implies the job without naming it.</li>
+<li>Lead with the phrases and situations that should trigger it, including cases where the user implies the job without naming it.</li>
 <li>Add scope limits only where false activation would be costly.</li>
 <li>Do not put the workflow itself in the description.</li>
 </ul>
-<p>If the user&#39;s platform offers different ways to reach a skill, such as automatic activation, grouping under a routing skill, or manual invocation by name, ask which fits. A sensible default is automatic for general workflows and manual for command-style skills that should run only on request. If many skills share one area, grouping can keep the always-visible list manageable. After adding, renaming, or removing a skill, run whatever registration or validation step the platform provides.</p>
+<p>If the platform offers different ways to reach a skill, such as automatic activation, grouping under a routing skill, or manual invocation by name, ask which fits. A sensible default is automatic for general workflows and manual for command-style skills. If many skills share one area, grouping keeps the always-visible list manageable. After adding, renaming, or removing a skill, run whatever registration or validation step the platform provides.</p>
 <h4>Safety: no surprises</h4>
 <p>A skill must not contain malware, exploit code, or anything that compromises security. Its contents should not surprise the user given its description. Decline to build misleading skills or skills meant for unauthorized access, data extraction, or other harm. Ordinary creative uses, such as a role-play persona, are fine.</p>
 <h4>Writing style</h4>
 <ul>
 <li>Use the imperative form.</li>
-<li>Explain why things matter instead of stacking unexplained commands. Capable AI systems follow reasoning better than rigid rules. If you find yourself writing ALWAYS or NEVER in capitals, treat it as a warning sign and explain the reason instead. Keep firm rules for authorization, privacy, safety, data integrity, and irreversible actions.</li>
+<li>Explain why things matter instead of stacking unexplained commands. If you find yourself writing ALWAYS or NEVER in capitals, treat it as a warning sign and explain the reason instead. Keep firm rules for authorization, privacy, safety, data integrity, and irreversible actions.</li>
 <li>Write for general use, not for the specific examples you have in mind.</li>
 <li>Write a draft, then reread it with fresh eyes and improve it.</li>
 </ul>
@@ -105,12 +109,12 @@ Use this template:
 <p>Include examples when they teach something:</p>
 <pre><code>## Commit message format
 Example:
-Input: Added user login with token-based sessions
-Output: feat(auth): add token-based login</code></pre>
-<p>Also cover, as needed: required inputs and what to do if they are missing; the normal workflow and its branches; checks to run before finishing; and failure behavior for missing inputs, unavailable tools, ambiguous requests, failed validation, and high-impact actions that need confirmation.</p>
-<h3>6. Write test cases</h3>
-<p>After the draft, write two or three realistic test prompts, the kind of thing a real user would type. Share them: &quot;Here are a few test cases I&#39;d like to try. Do these look right, or do you want to add more?&quot; Then run them.</p>
-<p>Save tests in a simple structured file. Leave checks empty for now; you will draft them while runs are in progress.</p>
+Input: Fixed rounding error in invoice totals
+Output: fix(billing): correct invoice total rounding</code></pre>
+<p>Also cover, as needed: required inputs and what to do if they are missing; the normal workflow and its branches; checks to run before finishing; and failure behavior for unavailable tools, ambiguous requests, failed validation, and high-impact actions that need confirmation.</p>
+<h3>7. Write test cases</h3>
+<p>After the draft, write two or three realistic test prompts, the kind of thing a real user would type. Share them, for example: &quot;Here are three requests I plan to test with. Do they look like what you&#39;d really ask, or should we add one?&quot;</p>
+<p>Cover meaningful variety: a typical request, an incomplete or ambiguous one, a format-sensitive one, and, if relevant, one that should lead to a confirmation or refusal. Give each test a descriptive name. Leave checks empty for now; draft them while runs are in progress.</p>
 <pre><code>{
   &quot;skill_name&quot;: &quot;[skill name]&quot;,
   &quot;tests&quot;: [
@@ -123,22 +127,56 @@ Output: feat(auth): add token-based login</code></pre>
     }
   ]
 }</code></pre>
-<p>Cover meaningful variety: a typical request, an incomplete or ambiguous one, a format-sensitive one, and, if relevant, one that should lead to a confirmation or refusal. Give each test a descriptive name, not just a number.</p>
-<h3>7. Run and evaluate the tests</h3>
-<p>Treat this section as one continuous sequence. Do not stop partway.</p>
-<h4>Organize the workspace</h4>
-<p>Keep results in a workspace next to the skill, organized by iteration and test case. Create folders as you go, not all up front.</p>
+<h3>8. Run and review the tests</h3>
+<p>Treat this as one continuous sequence. Do not stop partway.</p>
+<ol>
+<li><strong>Run each test</strong> with the skill available. In a plain chat, paste the skill and one test prompt into a fresh conversation, or follow the skill yourself. Call this a sanity check, not a rigorous comparison, since the author is also the runner. If you can run independent helpers with baselines, see Optional extras.</li>
+<li><strong>Draft checks while you wait.</strong> Good checks are objectively verifiable and have descriptive names that make sense at a glance: required sections are present; the produced file opens; totals match the source; missing inputs are flagged. Do not force checks onto subjective qualities; those need human review. If checks already exist, explain what they verify and adjust if needed.</li>
+<li><strong>Grade each output</strong> against its checks. For checks a script can verify, write and run a script; it is faster, more reliable, and reusable. Record the check text, pass or fail, and evidence.</li>
+<li><strong>Present results to the user before you start fixing things yourself.</strong> For each test, show the prompt and output, save any file the user must inspect and say where it is, and ask: &quot;How does this look? Anything you&#39;d change?&quot;</li>
+<li><strong>Read the feedback.</strong> Empty feedback usually means the output was fine, though it is not proof the skill is complete. Focus on tests with specific complaints.</li>
+</ol>
+<h3>9. Improve the skill</h3>
+<p>This is the heart of the loop. Take your time. Draft a revision, then reread it fresh and improve it.</p>
+<ol>
+<li><strong>Generalize from feedback.</strong> The skill will be used many times on many different requests. You iterate on a few examples only because it is fast; a skill that works only for those is useless. Avoid narrow, overfitted fixes and oppressive rules. If a problem persists, try a different framing, metaphor, or working pattern.</li>
+<li><strong>Keep it lean.</strong> Remove what is not earning its place. Read the run transcripts, not just final outputs. If the skill makes the AI waste effort, remove the cause and see what happens.</li>
+<li><strong>Explain the why.</strong> Even if feedback is terse or frustrated, work out what the user actually needs and put that understanding into the instructions.</li>
+<li><strong>Bundle repeated work.</strong> If several runs independently wrote similar helper scripts or followed the same multi-step routine, write it once, add it to the skill, and tell the skill to use it.</li>
+<li><strong>Fold lessons into existing rules.</strong> When a run teaches a lesson, edit or merge the rule it refines instead of adding a new paragraph about the incident. Do not append dated incident notes to the skill. If you want an audit trail, keep it in a separate change log that the skill does not load when it runs.</li>
+<li><strong>Preserve what works.</strong> Do not break behavior the user already liked while fixing something else.</li>
+</ol>
+<p>Then rerun all tests as a new iteration, show the new results with previous outputs and feedback alongside, wait for the user to finish reviewing, and repeat. Stop when the user is happy, feedback is consistently empty across meaningful tests, or you are no longer making meaningful progress.</p>
+<h3>10. Package and hand off</h3>
+<p>If a packaging tool is available, package the skill in the user&#39;s chosen format and say where the result is. Include only resources needed for normal use. When updating an installed skill, keep the original name and folder name; do not create a &quot;v2&quot; copy unless the user asks.</p>
+<p>Pre-delivery audit:</p>
+<ul>
+<li>[ ] Name is stable and appropriate.</li>
+<li>[ ] Description states what the skill does and when to use it, within the platform&#39;s limits.</li>
+<li>[ ] Main file is within the size limit, and any validation step passes.</li>
+<li>[ ] Lessons are merged into rules, with no appended incident notes.</li>
+<li>[ ] Instructions do not depend on undeclared tools, private conventions, or personal access.</li>
+<li>[ ] Every bundled resource is referenced, clearly named, and explained.</li>
+<li>[ ] No credentials, private identifiers, confidential records, or sensitive examples are included.</li>
+<li>[ ] Any retained tests are safe to distribute.</li>
+<li>[ ] If the skill will be shared in a collection, the decision to include or exclude it is recorded, it has passed privacy and quality review, and any public identifier stays stable (keep old identifiers as aliases if renamed).</li>
+</ul>
+<p>Give a short handoff note: what the skill does, required capabilities, known limits, and a quick way to test it.</p>
+<p><strong>Readiness gate:</strong> a skill is ready when it has a clear job, a description that routes the right requests to it, instructions that handle normal variation, explicit boundaries for uncertainty and authorization, and evidence from realistic tests that it improves outcomes. A long file is not the same as a reliable skill.</p>
+<h3>11. Avoid common failure modes</h3>
+<div class="table-wrap" tabindex="0" aria-label="Scrollable table"><table><thead><tr><th>Failure</th><th>Fix</th></tr></thead><tbody><tr><td>Revising before the user has seen any outputs</td><td>Present results for human review first</td></tr><tr><td>Fixes tailored to the test examples</td><td>Find the general cause and fix that</td></tr><tr><td>Incident notes piling up at the end of the skill</td><td>Merge each lesson into the rule it refines; keep history in a separate log</td></tr><tr><td>Many capitalized absolute rules</td><td>Replace with explained reasoning, except for true hard boundaries</td></tr><tr><td>Vague or timid description, so the skill is rarely used</td><td>Lead with trigger phrases and name implied use cases</td></tr><tr><td>Checks that pass with or without the skill</td><td>Replace with checks that show the skill&#39;s added value</td></tr><tr><td>Calling a self-run sanity check a rigorous comparison</td><td>Label it honestly</td></tr><tr><td>Assuming one person&#39;s tools, limits, or conventions</td><td>Ask the user for their platform&#39;s rules and use those</td></tr></tbody></table></div>
+<h3>Optional extras</h3>
+<h4>Parallel runs with baselines</h4>
+<p>If you can run independent helper agents, launch a with-skill run and a baseline run for every test in the same round, so they finish around the same time under similar conditions. For a new skill, the baseline is the same prompt with no skill. When improving a skill, snapshot it before editing and point the baseline at the snapshot. In later iterations, say whether the baseline is the original version or the previous iteration.</p>
 <pre><code>[skill-name]-workspace/
-├── skill-snapshot/              # only when improving an existing skill
+├── skill-snapshot/
 ├── iteration-1/
 │   ├── [test-name]/
-│   │   ├── with-skill/          # outputs from the skill under test
-│   │   ├── baseline/            # outputs from no skill or the old version
+│   │   ├── with-skill/
+│   │   ├── baseline/
 │   │   └── [test details, run data, grades]
 │   └── [benchmark summary]
 └── iteration-2/</code></pre>
-<h4>Step 1: Launch all runs together</h4>
-<p>If you can run independent helper agents, launch both a with-skill run and a baseline run for every test case in the same round, so they finish around the same time and run under similar conditions. Do not run the with-skill versions first and the baselines later.</p>
 <p>Run instructions template:</p>
 <pre><code>Execute this task:
 - Skill location: [path to skill, or &quot;none&quot; for a no-skill baseline]
@@ -146,21 +184,7 @@ Output: feat(auth): add token-based login</code></pre>
 - Input files: [files, or &quot;none&quot;]
 - Save outputs to: [workspace]/iteration-[N]/[test-name]/[with-skill or baseline]/
 - Outputs to save: [what the user cares about, e.g. &quot;the final spreadsheet&quot;]</code></pre>
-<p>Choose the baseline by situation:</p>
-<ul>
-<li><strong>New skill:</strong> same prompt, no skill.</li>
-<li><strong>Improving a skill:</strong> snapshot the current skill before editing and point the baseline at the snapshot.</li>
-</ul>
-<p>If an iteration uses new or changed prompts, write fresh test details for it; do not assume they carry over.</p>
-<h4>Step 2: Draft checks while runs are in progress</h4>
-<p>Use the waiting time. Draft objective checks for each test and explain them to the user. If checks already exist, review them, explain what they verify, and adjust if needed.</p>
-<p>Good checks are objectively verifiable and have descriptive names that make sense at a glance. Examples: required sections are present; the produced file opens; totals match the source; missing inputs are flagged. Do not force checks onto subjective qualities; those need human review. Tell the user what they will see when results are ready.</p>
-<h4>Step 3: Record run data as each run finishes</h4>
-<p>If your environment reports elapsed time or resource use when a run completes, save it immediately for that run. Some environments report this only once, so record each result as it arrives instead of batching. A simple record: time taken, resource use (such as tokens or cost), and any errors.</p>
-<h4>Step 4: Grade, aggregate, analyze, and present</h4>
-<ol>
-<li><strong>Grade each run</strong> against its checks, using a separate grader if available. For checks a script can verify, write and run a script; it is faster, more reliable, and reusable across iterations. Save each result with the check text, pass or fail, and evidence. Keep field names consistent so any review tool can read them:</li>
-</ol>
+<p>If the environment reports time or resource use when a run finishes, save it immediately; some environments report it only once. Keep grade field names consistent so any review tool can read them:</p>
 <pre><code>{
   &quot;results&quot;: [
     {
@@ -170,103 +194,22 @@ Output: feat(auth): add token-based login</code></pre>
     }
   ]
 }</code></pre>
-<ol>
-<li><strong>Aggregate</strong> into a benchmark summary: pass rate, time, and resource use for each configuration, with average, spread, and the difference between with-skill and baseline. List each with-skill result next to its baseline.</li>
-</ol>
-<ol>
-<li><strong>Analyze</strong> what the totals hide:</li>
-</ol>
-<ul>
-<li>Checks that pass equally with and without the skill do not show what the skill adds.</li>
-<li>High variation across repeats may mean a flaky test or unclear instructions.</li>
-<li>A quality gain may not justify a large time or cost increase.</li>
-<li>Several failures may share one root cause.</li>
-</ul>
-<ol>
-<li><strong>Present results to the user before you start fixing things yourself.</strong> Get outputs in front of the person as early as possible. Use an existing review tool if one is available rather than building a custom one. A good review view has two parts:</li>
-</ol>
-<ul>
-<li><strong>Outputs:</strong> one test at a time, showing the prompt, the produced output (rendered where possible), the previous iteration&#39;s output, formal grades, a feedback box, and earlier feedback.</li>
-<li><strong>Benchmark:</strong> pass rates, timing, and resource use per configuration, with per-test breakdowns and analysis notes.</li>
-</ul>
-<p>Tell the user something like: &quot;The results are ready. One view lets you click through each test and leave feedback; the other shows the numbers. Let me know when you&#39;re done.&quot;</p>
-<h4>Step 5: Read the feedback</h4>
-<p>Collect feedback per run, in whatever form the review produced:</p>
-<pre><code>{
-  &quot;reviews&quot;: [
-    {&quot;run_id&quot;: &quot;chart-request-with-skill&quot;, &quot;feedback&quot;: &quot;the chart is missing axis labels&quot;},
-    {&quot;run_id&quot;: &quot;summary-request-with-skill&quot;, &quot;feedback&quot;: &quot;&quot;}
-  ]
-}</code></pre>
-<p>Empty feedback usually means the output was fine, though it is not proof the skill is complete. Focus on tests with specific complaints. Shut down anything you started for the review.</p>
-<h3>8. Improve the skill</h3>
-<p>This is the heart of the loop. Take your time. Draft a revision, then reread it fresh and improve it.</p>
-<ol>
-<li><strong>Generalize from feedback.</strong> The skill will be used many times on many different requests. You are iterating on a few examples only because it is fast. A skill that works only for those examples is useless. Avoid narrow, overfitted fixes and oppressive rules. If a problem persists, try a different framing, metaphor, or working pattern; experiments are cheap.</li>
-<li><strong>Keep it lean.</strong> Remove what is not earning its place. Read the run transcripts, not just the final outputs. If the skill is making the AI waste effort, remove the part causing it and see what happens.</li>
-<li><strong>Explain the why.</strong> Even if feedback is terse or frustrated, work out what the user actually needs and put that understanding into the instructions.</li>
-<li><strong>Bundle repeated work.</strong> If several test runs independently wrote similar helper scripts or followed the same multi-step routine, write it once, add it to the skill&#39;s scripts, and tell the skill to use it.</li>
-<li><strong>Preserve what works.</strong> Do not break behavior the user already liked while fixing something else.</li>
-</ol>
-<h4>The iteration loop</h4>
-<ol>
-<li>Apply the changes.</li>
-<li>Rerun all tests into a new iteration folder, including baselines. For a new skill, the baseline stays &quot;no skill&quot;. For an existing skill, choose either the original version or the previous iteration and say which.</li>
-<li>Show the new results, with previous outputs and feedback alongside.</li>
-<li>Wait for the user to finish reviewing.</li>
-<li>Read feedback, improve, repeat.</li>
-</ol>
-<p>Stop when the user is happy, feedback is consistently empty across meaningful tests, or you are no longer making meaningful progress.</p>
-<h3>9. Optional: blind comparison</h3>
-<p>When the user asks &quot;is the new version actually better?&quot; and wants rigor, give two outputs to an independent evaluator without saying which version produced which. Have it judge against a shared rubric: correctness, completeness, clarity, constraint adherence, and usability. Then analyze why the winner won. This needs an independent evaluator and is usually unnecessary; human review is normally enough.</p>
-<h3>10. Optional: tune the description for activation</h3>
-<p>Do this after the skill itself works and the user agrees it is in good shape.</p>
-<h4>Step 1: Write activation test queries</h4>
-<p>Write about 20 queries, a roughly even mix of should-activate and should-not-activate.</p>
+<p>Aggregate into a benchmark: pass rate, time, and resource use per configuration, with average, spread, and the with-skill versus baseline difference, each with-skill result next to its baseline. Then analyze what totals hide: checks that pass either way, high variation that suggests flaky tests or unclear instructions, quality gains that cost too much time, and failures that share one root cause.</p>
+<p>A good review view, using an existing tool rather than a custom build, has an Outputs view (prompt, rendered output, previous output, grades, feedback box, earlier feedback) and a Benchmark view (numbers with per-test breakdowns and notes). Without a display, write a standalone file the user can open.</p>
+<h4>Blind comparison</h4>
+<p>When the user asks &quot;is the new version actually better?&quot; and wants rigor, give two outputs to an independent evaluator without saying which version produced which. Judge against a shared rubric: correctness, completeness, clarity, constraint adherence, and usability. Then analyze why the winner won. Human review is usually enough.</p>
+<h4>Tune the description for activation</h4>
+<p>Do this after the skill works and the user agrees it is in good shape. Write about 20 queries, a roughly even mix of should-activate and should-not-activate:</p>
 <pre><code>[
   {&quot;query&quot;: &quot;[realistic user prompt]&quot;, &quot;should_trigger&quot;: true},
   {&quot;query&quot;: &quot;[near-miss prompt]&quot;, &quot;should_trigger&quot;: false}
 ]</code></pre>
-<p>Make them realistic and detailed: file names, a bit of job context, column names, casual phrasing, abbreviations, occasional typos, varied lengths. Focus on edge cases rather than obvious ones.</p>
+<p>Make them realistic and detailed, with varied lengths, casual phrasing, and occasional typos.</p>
 <ul>
-<li>Weak: &quot;Format this data&quot;, &quot;Create a chart&quot;.</li>
-<li>Strong: &quot;ok so my manager sent me a spreadsheet (it&#39;s in my downloads, called something like &#39;Q4 sales final v2&#39;) and wants a column showing profit margin as a percent. revenue is column C and costs are D i think&quot;.</li>
+<li>Weak: &quot;Format this data&quot;, &quot;Make a chart&quot;.</li>
+<li>Strong: &quot;ok so my team lead dropped a csv in the shared drive (something like &#39;march orders cleaned v3&#39;) and wants a column with the discount as a percent of list price. list price is column B and paid amount is E i think&quot;.</li>
 </ul>
-<p>Should-activate queries: vary phrasing and formality, include requests that never name the skill or file type but clearly need it, include unusual valid uses, and include cases where this skill competes with another and should win.</p>
-<p>Should-not-activate queries: use near-misses that share keywords or concepts but need something different, such as adjacent domains or ambiguous wording that a keyword match would catch. Avoid obviously irrelevant negatives; &quot;write a sorting function&quot; tests nothing for a document skill.</p>
-<p>An AI usually consults skills for tasks it cannot easily do alone. Simple one-step requests may not activate any skill, however good the description. Use substantive queries where the skill would genuinely help.</p>
-<h4>Step 2: Review the set with the user</h4>
-<p>Let the user edit queries, flip labels, and add or remove entries, using an editable review page if available or directly in conversation. Bad test queries produce bad descriptions, so this step matters.</p>
-<h4>Step 3: Run the optimization loop</h4>
-<p>If the environment supports automated activation testing, tell the user it will take a while, run it in the background, and give progress updates. A sound loop:</p>
-<ul>
-<li>Splits queries into about 60 percent for improving and 40 percent held out.</li>
-<li>Tests the current description, running each query several times to get a reliable activation rate.</li>
-<li>Proposes improved descriptions based on failures.</li>
-<li>Re-tests each candidate on both sets for a few rounds.</li>
-<li>Picks the best description by held-out score, not training score, to avoid overfitting.</li>
-</ul>
-<p>Test with the same AI model the user actually works with, so results match real behavior. Without automated testing, walk through the query set manually and judge whether the description would route each one correctly.</p>
-<h4>Step 4: Apply the result</h4>
-<p>Update the description, show the user the before and after, and report the scores.</p>
-<h3>11. Adapt to your environment</h3>
-<div class="table-wrap" tabindex="0" aria-label="Scrollable table"><table><thead><tr><th>Capability missing</th><th>Adaptation</th></tr></thead><tbody><tr><td>Independent helper agents</td><td>Run each test yourself by following the skill, one at a time. Skip baselines, numerical benchmarking, and blind comparison. Call this a sanity check, not a rigorous comparison; human review compensates.</td></tr><tr><td>A display or browser</td><td>Write review material to a standalone file the user can open, or show prompts and outputs directly in the conversation. Save files the user must inspect and say where they are. Ask &quot;How does this look? Anything you&#39;d change?&quot;</td></tr><tr><td>Automated activation testing</td><td>Skip optimization or review the query set manually against the description.</td></tr><tr><td>Parallel runs keep failing or timing out</td><td>Run tests in sequence instead.</td></tr><tr><td>Write access to the installed skill</td><td>Copy it to a writable location, edit there, and package from the copy.</td></tr></tbody></table></div>
-<p>When updating an installed skill, keep the original name and folder name. Do not create a &quot;v2&quot; copy unless the user asks.</p>
-<h3>12. Package and hand off</h3>
-<p>If a packaging tool is available, package the skill in the user&#39;s chosen format and tell them where the result is so they can install it. Include only the resources needed for normal use.</p>
-<p>Pre-delivery audit:</p>
-<ul>
-<li>[ ] Name is stable and appropriate.</li>
-<li>[ ] Description states what the skill does and when to use it, within the platform&#39;s limits.</li>
-<li>[ ] Instructions do not depend on undeclared tools, private conventions, or personal access.</li>
-<li>[ ] Every bundled resource is referenced, clearly named, and explained.</li>
-<li>[ ] No credentials, private identifiers, confidential records, or sensitive examples are included.</li>
-<li>[ ] Any people-related behavior uses only authorized, minimal, relevant information.</li>
-<li>[ ] Any retained tests are safe to distribute.</li>
-<li>[ ] If the skill will be shared in a collection, the decision to include or exclude it is recorded, it has passed privacy and quality review, and any public identifier stays stable (keep old identifiers as aliases if renamed).</li>
-</ul>
-<p>Give a short handoff note: what the skill does, required capabilities, known limits, and a quick way to test it.</p>
-<h3>Readiness gate</h3>
-<p>A skill is ready when it has a clear job, a description that routes the right requests to it, instructions that handle normal variation, explicit boundaries for uncertainty and authorization, and evidence from realistic tests that it improves outcomes. A long file is not the same as a reliable skill.</p>
-<h3>Common failure modes</h3>
-<div class="table-wrap" tabindex="0" aria-label="Scrollable table"><table><thead><tr><th>Failure</th><th>Fix</th></tr></thead><tbody><tr><td>Revising before the user has seen any outputs</td><td>Present results for human review first</td></tr><tr><td>Fixes tailored to the test examples</td><td>Find the general cause and fix that</td></tr><tr><td>Many capitalized absolute rules</td><td>Replace with explained reasoning, except for true hard boundaries</td></tr><tr><td>Vague or timid description, so the skill is rarely used</td><td>Lead with trigger phrases and name implied use cases</td></tr><tr><td>Checks that pass with or without the skill</td><td>Replace with checks that show the skill&#39;s added value</td></tr><tr><td>Lost timing or resource data</td><td>Record it as each run completes</td></tr><tr><td>Easy, obviously irrelevant negative queries</td><td>Use near-miss queries that share keywords</td></tr><tr><td>Calling a self-run sanity check a rigorous comparison</td><td>Label it honestly</td></tr><tr><td>Assuming one person&#39;s tools, limits, or conventions</td><td>Ask the user for their platform&#39;s rules and use those</td></tr></tbody></table></div></article><footer><a href="/skills/LICENSE.txt">CC0</a></footer></main><script>document.querySelector('[data-copy]').addEventListener('click',async function(){try{const text=await fetch(this.dataset.copy).then(r=>{if(!r.ok)throw new Error();return r.text()});await navigator.clipboard.writeText(text);this.textContent='Copied'}catch{this.textContent='Open raw Markdown'}})</script></body></html>
+<p>Should-activate queries should vary phrasing, include requests that never name the skill but clearly need it, and include cases where this skill competes with another and should win. Should-not-activate queries should be near-misses that share keywords but need something different; obviously irrelevant negatives test nothing. AIs usually consult skills only for tasks they cannot easily do alone, so use substantive queries.</p>
+<p>Have the user review and edit the set; bad queries produce bad descriptions. If automated activation testing exists, run it in the background with progress updates. A sound loop holds out about 40 percent of queries, runs each query several times, proposes improvements from failures, re-tests for a few rounds, and picks the winner by held-out score. Test with the model the user actually works with. Otherwise, walk through the set manually. Show the before and after and report the scores.</p>
+<h4>Adapt to your environment</h4>
+<div class="table-wrap" tabindex="0" aria-label="Scrollable table"><table><thead><tr><th>Capability missing</th><th>Adaptation</th></tr></thead><tbody><tr><td>Independent helper agents</td><td>Run tests yourself one at a time; skip baselines, benchmarks, and blind comparison</td></tr><tr><td>Automated activation testing</td><td>Review the query set manually against the description</td></tr><tr><td>Parallel runs keep failing or timing out</td><td>Run tests in sequence</td></tr><tr><td>Write access to the installed skill</td><td>Copy it to a writable location, edit there, and package from the copy</td></tr></tbody></table></div></article><footer><a href="/skills/LICENSE.txt">CC0</a></footer></main><script>document.querySelector('[data-copy]').addEventListener('click',async function(){try{const text=await fetch(this.dataset.copy).then(r=>{if(!r.ok)throw new Error();return r.text()});await navigator.clipboard.writeText(text);this.textContent='Copied'}catch{this.textContent='Open raw Markdown'}})</script></body></html>

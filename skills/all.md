@@ -1914,12 +1914,12 @@ Distinguish explicit user feedback from your own aesthetic judgment. Do not reta
 
 ---
 name: plan-your-day
-description: Chooses one most important outcome for the day, protects time for it, and plans around real commitments. Use when someone says 'plan my day', 'plan tomorrow', or asks what to focus on.
+description: Chooses one outcome for the day, protects time for it, and plans around real commitments. Use when someone says 'plan my day', 'plan tomorrow', or asks what to focus on.
 ---
 
 # Plan your day
 
-Use this to turn a crowded or unclear day into one named outcome, a protected block of time to deliver it, and a short list of what you will not do. It works for planning today in the morning or tomorrow in the evening.
+Use this to turn a crowded or unclear day into one named outcome, a protected block of time to deliver it, and a short list of what you will not do. It works for planning today in the morning or tomorrow in the evening, and it targets the usual failures: not knowing what to focus on, distraction, overwhelm, too many directions, and no clear outcome.
 
 ## Quick version
 
@@ -1932,19 +1932,19 @@ Use this to turn a crowded or unclear day into one named outcome, a protected bl
 
 ## 1. Choose the day and read the situation
 
-Check the local date and time first. Default: before late morning, plan today; in the evening, plan tomorrow; in between, ask. Change these cutoffs to fit your rhythm. If an evening session runs past midnight, keep the date already agreed. State the target day and time zone in one line before going further.
+Check the local date and time first; don't ask for the time zone if the device can tell you. Default: before late morning, plan today; in the evening, plan tomorrow; in between, ask. An explicit date from the user always wins. Change these cutoffs to fit your rhythm. If an evening session runs past midnight, keep the date already agreed. State the target day and time zone in one line before going further.
 
-Then gather what exists:
+Then gather what exists, in one pass:
 
-- the day's calendar, including personal commitments that shape the real free time;
+- the day's calendar, including personal commitments that shape the real free time (read them; never move them);
 - this week's goals and any plan already made for this day;
 - tasks that are overdue or due on the target day;
 - how the previous day went against its plan;
 - the user's recent day ratings or notes on energy, if they keep them.
 
-If the user keeps private notes or a journal they have marked off limits, do not read them. Use only what they share and any fields they have set aside for planning. If a source fails to load, say which one and plan from what the user tells you.
+If the user keeps a journal or private notes they have marked off limits, do not read them, even for context. Use only what they share and the fields they set aside for planning. If a source fails to load, say which one and plan from what the user tells you. If the plan depends on an unfamiliar name or project, do one quick lookup or ask.
 
-If the weekly plan looks empty, check once more and look for informal week goals written elsewhere before calling the week unplanned. Then ask: "Plan the week first, or proceed without weekly goals?"
+If the weekly plan looks empty, check once more for informal week goals written elsewhere. Then ask: "Plan the week first, or proceed without weekly goals?" If you proceed, tie the MIT to a longer-range goal and flag the gap. Never invent goals.
 
 ## 2. Check the previous day before choosing
 
@@ -1958,71 +1958,77 @@ Then classify the day in one line (more than one can apply):
 
 - **Clean ship:** MIT and supporting items done.
 - **Supporting dropped:** list what dropped.
-- **Overflow:** one topic ate blocks meant for other work. Say plainly which work didn't happen.
+- **Overflow:** one topic ate blocks meant for other work. Say plainly which work didn't happen. This is the most common failure, so look for it.
 - **MIT slipped:** ask whether the remaining scope is known or still open.
 
-In an evening run, blocks still to come are pending, not dropped. If the user already reviewed the previous day in this session, cite that review in one line and skip the table. If no plan or review exists, say so and work from the calendar and task list.
+In an evening run, blocks still to come are pending, not dropped; ask whether each will run as planned. If the user already reviewed the day in this session, cite that review in one line and skip the table. If no plan or review exists, say so and work from the calendar and task list.
 
 Every dropped item gets one decision now: carry, push to a later date, retire, or delegate. When an MIT slipped and one topic overflowed, assume the topic is bigger than estimated. Default for the next day: the same topic with a sharper outcome, zero or one supporting item, a time cap ("if not done by mid-afternoon, what happens?"), and dropped items explicitly retired or delegated rather than silently carried. Keep this step to a couple of minutes.
 
 ## 3. Read the signals and set the load
 
-Give the user a short brief, no more than about eight bullets: target day, weekly goals, whether the day is already mapped by the weekly plan, meeting load and the biggest open window, overdue and due counts, and anything from recent days worth knowing. Ask one quick question about energy and wait for the answer.
+Give the user a short brief, no more than about eight bullets: target day, weekly goals, whether the day is already mapped by the weekly plan, meeting load (count timed events, not labels like "focus day") and the biggest open window, overdue and due counts, and anything from recent days worth knowing. Ask one quick question about energy and wait for the answer.
 
-**Lighter plan after rough days.** If recent days were rated low, or the user reports exhaustion or overwhelm, propose a lighter plan up front: one MIT, nothing else, and an earlier stop. Do not just flag it; change the proposal. Default trigger: most of the last few days rated low; adjust to your own scale. A good mood does not cancel a poor night's sleep.
+**Lighter plan after rough days.** If recent days were rated low, focus hours were thin, or the user reports exhaustion or overwhelm, change the proposal rather than just flagging it: "Given the last few days, I'm proposing one MIT, nothing else, and an earlier stop. Ok?" Pick your own trigger; a good mood does not cancel a short night's sleep.
 
 **Check inherited rules against reality.** If the weekly plan contains a rule that clashes with the user's stable habits, ask which stands rather than declaring a conflict.
 
-**Recovery days are allowed.** If the user is ill or clearly needs rest, drop the MIT structure and write a provisional rest plan: full rest as the default, a morning check (sick, borderline, well) and what each triggers, what to cancel or move, the one or two things that truly can't wait, and a NOT today list that includes "don't try to catch up on yesterday". The main risk is half-rest: drifting back into messages mid-morning.
-
 ## 4. Choose the MIT
 
-**Confirm before you invent.** If the weekly plan already named this day's main work, or focus blocks are already booked, the MIT is mostly decided. Phrase it as an outcome and ask: "MIT: X, serves weekly goal Y, block already set. Ok, or reshape?" If the user's own message names the MIT, selection is done; only ask what "done" means.
+**What the user already decided wins.** If their message names the MIT, if they built blocks or a slot-by-slot shape, or if a tired user picks a bare topic, take it. Bind only what is missing, usually one question: "What does done mean?" Never re-ask or re-slot. If the weekly plan already named this day's main work, phrase it as an outcome and ask: "MIT: X, serves weekly goal Y, block already set. Ok, or reshape?"
 
-**Re-open when the ground moved.** A weekly pre-map is valid only as of when it was made. Re-derive if the user mentions news that changes scope, a decision that freed later blocks, or a pivot. If the user has already moved blocks themselves, trust their moves over the old plan.
+**Re-open when the ground moved.** A weekly pre-map is valid only as of when it was made. Re-derive if news changed scope, a decision freed blocks, or the user pivoted. Give freed blocks a default owner (usually the most urgent displaced item) and trust the user's own calendar moves over the old plan.
 
-**Otherwise, ask two or three shaping questions before proposing structure.** Good ones: how many hours of focused work do you want, what shape should the day take, and what failure do you expect? Ask them together, then wait. A proposal bundled with questions still anchors the answer. For a single missing fact, such as a meeting time, just ask in plain prose.
+**Otherwise, ask before proposing.** For an open or pivoted day, ask two or three shaping questions together (how many focused hours, what shape, what failure you expect), then wait; a proposal bundled with questions still anchors the answer. With no plan at all, ask at most two ("What one outcome makes today a win?"). If the user is thinking aloud, confirm what works, flag gaps, and cut side quests rather than counter-proposing. For a single missing fact, just ask.
 
-Then propose one MIT and test it:
+Then test the MIT:
 
 - **Named and binary.** "Work on X" fails. "X done and sent" passes.
 - **Serves a weekly goal,** or the weekly plan set this day aside for it. Name the link.
-- **Fits the day.** Five meetings and low energy means a smaller MIT or a meeting cut.
+- **Fits the day.** Many meetings and low energy means a smaller MIT or a meeting cut. Add an energy fallback ("if energy flags, drop to X") unless the user wants to push through.
 
 If the user names two MITs, push back: merge them, demote one to supporting, or defer it. Four principles cover most variations:
 
-- **Crown what gets displaced.** Booked meetings happen anyway; the unslotted, generative, or aversive item is the one that gets eaten, so it is usually the MIT. "Do the inbox first" sets order, not priority: cap the inbox. The exception is a first task that supplies evidence the MIT needs; keep it inside the MIT's sequence, capped.
-- **Bound open-ended work.** Where more is always possible, use a time-bound outcome plus a handoff, such as "three focused hours, then a status note to the stakeholder". If the work depends on input from others, send the request before the block. For a nearly finished artifact, done means closing the named gaps and sharing, not reopening scope.
-- **Match the day's shape.** On a meeting-heavy day, the MIT can be one key meeting plus the artifact it produces; label short gaps as prep, not deep work. A hard, slipping task (a difficult conversation, an admin chore with a fixed date) makes a good MIT, with an outcome like "script written and conversation booked".
-- **Planning can be the MIT.** After time away, if the user says the main job tomorrow is planning their week, make that session the MIT. Put it in the first open block after meetings and size it to the user's own estimate. Don't add longer-range planning or a bulk push of overdue tasks unless asked; the backlog can be triaged inside the weekly session.
+- **Crown what gets displaced.** Booked meetings happen anyway; the unslotted, generative, or avoided item is the one that gets eaten, so it is usually the MIT. "Do the inbox first" sets order, not priority: cap the inbox. A decision can be the MIT (set a time to write it down after the last meeting that feeds it), and so can a hard conversation, with an outcome like "script written and conversation booked".
+- **Bound open-ended work.** Use a time-bound outcome plus a handoff: "three focused hours, then a status note: what's in, what's outstanding, what's next." Never "as long as it takes". If the work needs input from others, send the request before the block. For a nearly finished artifact, done means closing the named gaps and sharing.
+- **Boring beats shiny near hard deadlines.** When a fixed external date looms, protect a window for the dull, irreversible task and ask which item is truly time-locked.
+- **Match the day's shape.** Most days get an MIT. Valid exceptions:
 
-**Valid days without an MIT:** recovery, attending someone else's event, and exhausted back-to-back days where the user says "I just need to get through the meetings". Write a presence-style intention, keep one small task at most, and stop.
+| Shape | What to write |
+|---|---|
+| Recovery (ill or depleted) | Full rest as default; a morning check (sick, borderline, well) and what each triggers; what to cancel; one or two things that truly can't wait; "don't catch up on yesterday" under NOT today. Main risk: half-rest, drifting back into messages. |
+| Meeting-heavy or "just get through it" | One key meeting plus the artifact it produces, or one tiny deliverable; deep work moves to the next open day. |
+| Attending someone else's event | Offer one artifact once; if declined, "be present and work the conversations". |
+| Inbox or triage day | A short cap per item (about 15 minutes, adjustable); bigger items get a reply with a date and a new task. |
+| Week not yet planned | The weekly planning session is the MIT, early, sized to the user's estimate. |
+
+Then agree up to two **supporting** outcomes.
 
 ## 5. Triage overdue tasks
 
-Only look at tasks overdue or due on the target day. For each, decide: **do today, done, punt, delegate, or delete.** Record each decision as it is made. If there are only one or two, handle them in a line each. If a long list is wearing the user down, offer one yes/no bulk move for low-importance items. Skip this step if a weekly planning session later that day will cover the backlog.
+Only look at tasks overdue or due on the target day, sorted by importance then due date. For each, decide: **do today, done, punt, delegate, or delete.** Record each decision as it is made, and note who and when for a delegation. With only one or two, handle them in a line each. If a long list is wearing the user down, offer one yes/no bulk move for low-importance items.
 
-Flag chronic slips. Default: a task pushed several times (you pick the number) gets a direct question: "Is this still real, or should we reshape, delegate, or drop it?" If something is partly done already, ask before treating it as urgent.
+Flag chronic slips. A task pushed several times (you pick the number) gets a direct question: "Is this still real, or should we reshape, delegate, or drop it?" If something is partly done, ask before treating it as urgent.
 
 ## 6. Cut meetings
 
-Walk through the day's meetings: **keep, cut, shorten, or reschedule?** For each cut or move, draft a short, warm message for the user to send. Never send it yourself. Skip this step if the weekly plan already decided "no cuts this week". If the weekly plan said meetings were cut but they're still on the calendar, ask whether to cut now or keep. Count actual timed events; an all-day "focus day" label is a wish, not a fact.
+Walk through the day's meetings: **keep, cut, shorten, or reschedule?** Propose cuts for anything booked against a rule in the weekly plan. For each cut or move, draft a short, warm message for the user to send; never send it yourself. Skip this step if the weekly plan already chose "no cuts this week" (say so).
 
 ## 7. Protect the time
 
-Propose specific slots: the best window for the MIT, ideally two to three contiguous hours, at the time the user focuses best. Break long blocks into chunks with short breaks; hours that land in chunks still count.
+Propose specific slots: the best window for the MIT, ideally two to three contiguous hours, at the time the user focuses best. Title blocks by outcome, such as "MIT: launch copy sent". Short gaps between meetings become prep blocks, not deep work.
 
-Once the user approves a concrete proposal, re-read the calendar just before writing, then update or create the blocks without asking again. If the user hands you the full slot structure, that is the approval. Reuse an existing focus block and retitle it to the agreed outcome rather than adding a duplicate. Ask before deleting anything, naming each event. Never schedule work over personal commitments.
+Once the user approves a concrete proposal, or hands you their own slot structure, re-read the calendar and write the blocks without asking again. Ask only about new or changed times, never twice. Reuse and retitle existing focus blocks rather than adding duplicates. Ask before deleting anything, naming each event. If notes and calendar disagree on a time, suspect a time zone mix-up first.
 
-**Shared surfaces get the neutral version.** If others can see the calendar or a team update, write "Focus: hiring decisions" there and keep names, numbers, and sensitive reasoning in the private plan.
+**Shared surfaces get the neutral version.** If others can see the calendar or a team update, write "Focus: hiring decisions" there and keep names and sensitive reasoning in the private plan.
 
 ## 8. NOT today and the pre-mortem
 
 Ask: "What are you explicitly not pushing on today? What can you ignore or communicate a slip on?" Capture two to five items. If someone should hear about a slip, draft the heads-up for the user to send.
 
-Then ask: "If today fails, what's the most likely reason?" Add one concrete counter. If the weekly plan already has a pre-mortem, inherit the parts relevant today.
+Then ask: "If today fails, what's the most likely reason?" Add one concrete counter, such as "notifications off during the MIT block". Inherit any still-relevant pre-mortem from the weekly plan. If the MIT block isn't booked, the counter is "book it first thing".
 
-**Probe displacement work.** When the MIT is writing, aversive, or open-ended, also ask what productive-feeling work is most likely to replace it. Name the specific shape, such as "another polish round with no new feedback", and write a counter: "If I'm half an hour into reformatting, stop and ask whether it moves the MIT." On triage days the trap flips: doing the project an email describes. Default counter: a short cap per item (around 15 minutes, adjustable), then reply with a date and create a task.
+**Probe displacement work.** When the MIT is writing, avoided, or open-ended, ask what productive-feeling work is most likely to replace it. Name the specific shape, such as "another polish round with no new feedback", and write a counter: "If I'm half an hour into reformatting, stop and ask whether it moves the MIT." On triage days the trap flips: doing the project an email describes.
 
 ## 9. Write the plan
 
@@ -2060,19 +2066,20 @@ If the user declines calendar and task updates, still write the plan; it is the 
 The run is not done until each item is true or explicitly waived:
 
 - [ ] Target day and time zone stated.
-- [ ] Previous day classified; every dropped item has a decision.
-- [ ] One MIT with a binary outcome and its link to a weekly goal, or a stated no-MIT mode.
-- [ ] Calendar blocks updated or created for agreed slots, or the user opted out. Don't claim new blocks if existing ones were reused.
+- [ ] Previous day classified; every dropped item and pending evening block has a decision.
+- [ ] One MIT with a binary outcome and its link to a weekly goal, or a stated no-MIT shape.
+- [ ] Overdue and due-today tasks decided, or the user opted out.
+- [ ] Calendar blocks written for agreed slots, or the user opted out. Don't claim new blocks if existing ones were reused.
 - [ ] NOT today list and pre-mortem counter written.
-- [ ] Plan saved.
+- [ ] Plan saved, with pending decisions and failed writes listed.
 
 ## 11. Common failure modes
 
 - **Over-asking.** Aim for 10 to 15 minutes. If ten minutes pass with no MIT proposed, propose one and stop asking.
-- **Re-asking.** Partial answers mean proceed: do the safe writes and list the rest as pending. When a tired user names the MIT themselves, take it and write.
+- **Re-asking.** Partial answers mean proceed: do the safe writes and list the rest as pending, but change no task without a yes.
+- **Going soft.** Be direct: "You named this yesterday too. What's different today?" Skip summaries at the end of each step.
 - **Stale snapshot.** If the user edits the calendar mid-session, re-read it before touching anything.
 - **Topic instead of outcome.** Say so directly: "That's a topic, not an outcome."
-- **Feels-productive beats boring-but-urgent.** When a hard external date looms, protect a window for the dull, irreversible task.
 
 ## Worked example
 
@@ -2082,12 +2089,13 @@ The assistant proposes one: "Launch copy final and sent to the designer by early
 
 ## Optional extras
 
-- **Fast mode.** If the user hands over an ordered list and asks for speed, anchor deadlines to real calendar times, write the plan from it, and skip triage, meeting cuts, and new blocks. If several MITs are accepted, use headings ("MIT 1", "MIT 2") rather than a numbered list, which some editors renumber badly.
-- **Bedtime-bound evenings.** Send one proposal (MIT, supporting, NOT today, clashes) with at most three numbered questions, then write.
-- **Autonomous mode.** If the user says "plan tomorrow" on the way to bed, ask nothing: map goals onto blocks they already set, save the plan, and list new invites and open choices as pending decisions.
-- **Floating availability.** If the user wants to spend a window helping teammates, write it as a named window with two to four fallback tasks in case no one asks.
-- **Forward flags.** For a deadline that can't fit tomorrow but must land within a few days, add a short section so the next plan sees it.
-- **Team check-in draft.** If the user posts a daily update, draft it for them to send, keeping done, intended, and pending distinct. Don't overwrite an existing draft or post a duplicate.
+- **Run modes.** Switch from the full flow when the user signals it, and say which steps you skipped.
+  - *Fast mode:* the user hands over an ordered list. Write the plan in their order around existing blocks and real deadlines; skip triage, cuts, and new blocks; keep a two-line pre-mortem. With several MITs, use headings ("MIT 1", "MIT 2") rather than a numbered list, which some editors renumber badly.
+  - *Bedtime-bound:* send one proposal (MIT, supporting, NOT today, clashes) with at most three numbered questions, then write.
+  - *Autonomous or hard close:* the user is going to sleep. Ask nothing more; use the blocks they already set as the shape; save the plan with a self-contained first line describing the day; list open choices as pending.
+- **Forward flags.** For a deadline that can't fit tomorrow but must land within a few days, add a short plan section naming which day's plan must surface it.
+- **Floating availability.** If the user wants a window for helping teammates, write it as a named window with two to four fallback tasks and a default if no one asks by a set time.
+- **Team check-in draft.** If the user posts a daily update, draft it for them and never send it. Two to four lines, matching the team's format, nothing private. Claim only supported progress and keep done, intended, and pending distinct. Don't duplicate a posted update or overwrite an existing draft, and only report a link the tool actually returned.
 
 ```
 Y: <yesterday's actual result, marked done / missed / partial>
@@ -2095,8 +2103,8 @@ T: <today's outcome, plus up to two supporting priorities>
 W: <weekly goal, only on the first day of the week or when it changes>
 ```
 
-- **Inbox signal.** With connected tools, add counts of old unanswered email and saved action items to the brief, and flag anything time-sensitive as a supporting candidate.
-- **Improve the workflow.** After each run, note one change that would have made it faster or more useful.
+- **Inbox, chat, and pipeline signals.** With connected tools, add to the brief: counts of old unanswered email, saved action items (stale ones nobody owns matter most), messages awaiting a reply (sender, channel, and age of the oldest few, no content), and for people who hire, their own upcoming interviews and how long candidates have waited at each stage. Long-waiting items make strong supporting candidates; if a source is down, name it. Because these signals touch other people's messages and records, use them only for the user's own planning with clear authorization, read the minimum needed (counts, names, ages), leave out unrelated or sensitive details, and keep results in the private plan.
+- **Improve the workflow.** After each run, quietly note what went wrong or what the user corrected, and fold the lesson into an existing rule rather than adding a new one.
 
 
 ---
@@ -2231,14 +2239,14 @@ The assistant opens: "The launch email block went to customer replies. Did those
 
 ---
 name: plan-your-week
-description: Reviews last week, commits to a few outcomes with a clear definition of done, cuts low-value work, and protects time. Use when someone says "plan my week" or wants to reset after a messy week.
+description: Reviews last week, commits to one to three goals with checkable outputs, cuts low-value work, and protects time. Use when someone says "plan my week" or wants to reset after a messy week.
 ---
 
 # Plan your week
 
 Use this workflow to review the week that is ending and shape the week ahead in one focused session of about an hour. It works with any goal list, task list, calendar, and notes system, or with nothing but a conversation.
 
-First gather the **constraints** (deadlines, meetings, backlog, energy, capacity). Then run a few interview rounds, each building on the last, to find **what matters**. Only then turn the result into goals, tasks, time blocks, and a short plan. The conversation does the hard work; the final plan should feel simple.
+First gather the **constraints**: deadlines, meetings, backlog, energy, and capacity. Then run a few interview rounds, each building on the last, to find **what matters**. Only then turn the result into goals, tasks, time blocks, and a short plan. The conversation does the hard work. The final plan should feel simple.
 
 ## Quick version
 
@@ -2250,16 +2258,17 @@ First gather the **constraints** (deadlines, meetings, backlog, energy, capacity
 - Ask what they will not do this week, and what is most likely to make the week fail.
 - Write a one-screen plan: goals, what to protect, the shape of each day, what is not happening, and the main risk.
 
-## What the session produces
+## 1. What the session produces
 
 1. **One to three weekly goals**, each linked to a longer-term goal, with 2-4 checkable outputs and a named person waiting on them.
 2. **A short written plan**, plus the review answers saved with the week being reviewed.
 3. **Tasks** of 5 minutes to 3 hours behind each goal, with notes that make starting easy.
 4. **Time blocks** for goal work and protected commitments.
+5. **Any optional outputs** the user asked for, such as task statuses after triage or drafted messages for cut meetings.
 
 If the user declines a step, record that and treat it as done.
 
-## Setup
+## 2. Setup
 
 Ask these once, then reuse the answers until the user changes them.
 
@@ -2274,33 +2283,34 @@ Ask these once, then reuse the answers until the user changes them.
 
 Suggested thresholds, all adjustable: a slipping goal has had its deadline moved 3 or more times; a chronically deferred task more than 4 times; a heavy meeting day has more than 5 meetings; the unplanned buffer is about 20% of working hours after meetings; and a waiting message has gone unanswered for more than a few days.
 
-If no longer-term goals exist, say so. Check the next level down. If nothing exists, ask whether to plan without them or set them first. Do not invent stand-in goals.
+**Access boundary.** Read only sources the user is authorized to use for the legitimate purpose of planning their own week, and only the minimum: counts, dates, and how long people have waited, not message content. Use other people's details only where they bear on the user's time, and leave out unrelated or sensitive personal details. Skip any private notes or journal the user doesn't want read, including copies in chat history, and keep the plan private; drafted messages say only what the recipient needs.
 
-## Access boundary
-
-Read only sources the user has authorized for planning their own week, and only the minimum: counts, dates, and how long people have waited, not message content. Use other people's details only where they bear on the user's time, and never speculate about or label anyone. Skip any private notes or journal the user doesn't want read. Keep the plan private; drafted messages say only what the recipient needs.
-
-## Core principles
+## 3. Core principles
 
 - **Pressure is not importance.** Never recommend a goal just because it is scheduled, overdue, urgent to someone senior, or easy to make concrete.
 - **Sources set constraints; the user sets values.** Records show deadlines, slippage, and capacity. Only the user can say what they want to make true, why now, and what they will give up for it.
-- **Check before you cite.** Notes about temporary states ("paused for two weeks") expire.
+- **Check before you cite.** Notes about temporary states ("paused for two weeks", "handed off until the launch") expire. If the trigger has passed, or the user disputes the note, update it now.
+- **Look it up before guessing.** If an unfamiliar name or project affects goals, the calendar, or a rollover decision, do a quick search or ask. Skip incidental ones.
+- **Read dictated answers by context.** Fix obvious transcription slips silently and skip garbled fragments that carry no decision.
+- **Tiredness changes the format, not the facts.** If the user asks you to decide because they cannot think, decide with stated reasons. If they are only tired, narrow to two or three options. Never use their fatigue to slip back in a guess they already rejected.
 - **Simple output.** Research detail stays out of the final plan unless it changes a decision.
 
-## Hard rules
+## 4. Hard rules
 
-- **At most three weekly goals; one is ideal.** If the user proposes more, push back: merge, demote to an intention, or defer. With three, label one as the stretch goal: planned for, but it can give way if something more important comes up.
-- **Every goal has a definition of done someone else could verify.** For example: "Sent the second draft of the proposal and budget to the reviewer." A direction is not a goal.
-- **Leave a buffer unplanned** (about 20% by default). If goals do not fit, cut a goal. Never shrink estimates to make them fit.
-- **Every goal links to a longer-term goal.** If the link is weak, reject the goal. If the user has set longer-term goals aside on purpose, write "Links to: deferred" and move on.
+- **At most three weekly goals; one is ideal.** If the user proposes more, push back: merge, demote to an intention, or defer. With three, label one as the stretch goal: planned for, but it can give way.
+- **Every goal has a definition of done someone else could verify.** For example: "Sent the second draft of the proposal and budget to the reviewer." A direction is not a goal. A yes/no goal that nobody scoped also fails, because nobody estimated the work.
+- **Leave a buffer unplanned** (about 20% by default). If goals do not fit, cut or shrink a goal. Never shrink estimates to make them fit.
+- **Every goal links to a longer-term goal.** If the link is weak, reject the goal. If the user has set longer-term goals aside on purpose and defers the link, write "Links to: deferred" and move on without re-arguing.
 - **No goal proposals before two real interview rounds**, unless the user asks you to skip questions and decide.
 - **Keep an alignment ledger** and never bring back an assumption the user corrected.
-- **Approve before writing.** Goals, tasks, and time blocks are proposed, approved, then written, one at a time.
-- **Be direct and brief.** Say "this will fail because X" when you believe it. No celebratory step summaries. Be firm when needed: "That's four goals; pick three." "You said this three weeks ago; what's different?"
+- **Approve before writing.** Goals, tasks, and time blocks are proposed, approved, then written, one at a time. Write each decision as it is made, not in a batch at the end.
+- **Reuse existing records.** If this week's plan or goal records already exist, update them in place rather than creating duplicates.
+- **Keep higher plans in sync.** If a decision changes the active quarter or month plan (priorities, projects, dates, owners, or the parked list), edit that plan and add a dated change-log line saying what changed, why, and in which session.
+- **Be direct and brief.** Say "this will fail because X" when you believe it. No celebratory step summaries. "That's four goals; pick three." "You said this three weeks ago; what's different?"
 
-## The alignment ledger
+## 5. The alignment ledger
 
-This is your working model of the week. Show a compact version after the brief and before each interview round.
+This is your working model of the week. Show a compact version after the brief and before each interview round. Omit empty lines.
 
 | Line | Example |
 |---|---|
@@ -2310,52 +2320,56 @@ This is your working model of the week. Show a compact version after the brief a
 | Open (only the user can decide) | Whether to skip the Friday review |
 | Corrected (rejected assumptions) | The newsletter is not a priority |
 
-## Step 1: Review last week
+## 6. Review last week
 
-Keep the first turn short. If you have the data, show active longer-term goals with time left, last week's goals (done, missed, or open), and the four-week hit rate, such as "3 of 7 goals hit". Then ask the four review questions in one block and stop:
+Keep the first turn short and start no background work until the user answers; interruptions eat their thinking space. If you have the data, show active longer-term goals with time left, last week's goals (done, missed, or open), and the four-week hit rate, such as "3 of 7 goals hit". Count a past-deadline open goal as missed unless the user says it shipped. Then ask the four review questions in one block and stop:
 
 1. Did you hit your goals for the week?
 2. What went well?
 3. What didn't go so well?
 4. What will you do differently next week?
 
-The aim is one thing to change, not blame. Save the answers with last week's record. Carry the "do differently" answer into the plan's failure-mode line.
+If the user already answered these elsewhere, such as in team meeting notes, quote their answers back and ask only what changed. The aim is one thing to change, not blame. Save the answers with last week's record. Carry the "do differently" answer into the plan's failure-mode line.
 
-## Step 2: Gather context
+## 7. Gather context
 
-Ask: "What must still ship before the new week starts?" That is this week's work, not a goal for next week. Then read whichever of these the user has authorized:
+After the review, ask: "What must still ship before the new week starts?" That is this week's work, not a goal for next week. Then read whichever of these the user has authorized, ideally in one pass so results come back together:
 
 - **Plans and goals:** this and last week's plans, month or quarter plans, active goals, and how often each goal's deadline has moved.
+- **Plan of record:** a recent written action list or team goal shortlist the user already committed to.
 - **Tasks:** overdue and due next week. For large "someday" lists, read titles and deferral counts only.
 - **Daily signals:** recent ratings, focus hours, or short daily plans, if the user tracks them.
-- **Calendar:** meetings per day, heavy and clear days, and evening or weekend events that limit capacity.
+- **Calendar:** meetings per day, heavy and clear days, weekend events, existing focus placeholders, and personal events that limit capacity.
 - **Messages (counts only):** old unanswered threads and people waiting for replies.
+- **Fixed outside commitments:** events or programs the user runs that start soon.
 
-Data quality: a sync that stopped is a broken pipeline, not behavior, so report its last date. Treat zero as a likely gap and ask before calling it real. Compare like with like; never average across gaps or mix sources. Never invent overdue flags you cannot prove.
+Data quality: a sync that stopped is a broken pipeline, not behavior, so report its last date and name every source that failed. Treat zero as a likely gap and ask before calling it real. Compare like with like; never average across a gap or mix sources. Never invent overdue flags you cannot prove.
 
 If there are no connected tools, ask the user for a two-minute summary of their calendar and open work instead.
 
-## Step 3: The brief
+## 8. The brief
 
-Show only facts that could change a decision, in **at most eight bullets**, tensions and data gaps first. No goal recommendations yet, and no repeating the user's review.
+Show only facts that could change a decision, in **at most eight bullets**, tensions, surprises, and data gaps first. No goal recommendations yet, and no repeating the user's review.
 
 Include each only when it matters:
 
+- **Higher plans:** the quarter theme, or a gap. If the quarter and month plans are both empty, ask whether to continue without them or pause and set them first, in a separate session if they keep getting put off. Never pick a stand-in.
 - **Capacity and energy:** ratings, focus hours, and meeting load, with numbers and days ("three days under target: Mon, Wed, Thu"); heavy and meeting-free days.
 - **Slipped goals:** by name, with how often they moved. At the slip threshold, ask now: "Is this still the right goal, or is the format, scope, or owner wrong?"
 - **Close-out reality:** whether last week's final items shipped. Ask rather than assume.
-- **Backlog and people waiting:** the overdue count, parked tasks that fit likely goals, and who has waited how long.
-- **Outside deadlines** the user owns that may not be on their calendar.
+- **Backlog and people waiting:** the overdue count, one to three parked tasks that now fit, and who has waited how long. A non-empty saved-for-later list is not a failure; flag only stale or ownerless items.
+- **Fixed commitments:** outside deadlines or programs with set dates, which beat self-set goals on timing.
+- **Team signals:** a teammate in sustained overload (ask whether clearing their way is the real priority), or several new joiners (ask whether onboarding is covered).
 
 End with the compact ledger.
 
-## Step 4: Rolled-over goals
+## 9. Rolled-over goals
 
-For each unfinished goal, first check whether it was handed off or already shipped. For each still on the user, ask one at a time: **roll over** (note one line on why it slipped and set a new deadline), **demote** to an intention, or **drop** (mark it missed or archived).
+For each unfinished goal, first check whether it was handed off or already shipped; if shipped, propose marking it done. For each still on the user, ask one at a time: **roll over** (ask why it slipped, note one line, count the move, set a new deadline), **demote** to an intention, or **drop** (missed or archived).
 
-## Step 5: Shape the week through interview rounds
+## 10. Shape the week through interview rounds
 
-First ask whether a written plan for this week already exists, such as a team plan or a recent action list. If so, treat its goals as decided and only check each has a definition of done and fits the week.
+First check for a plan of record. If one exists, treat its goals as decided and only check each has a definition of done and fits the week. If none turned up, ask whether one exists.
 
 ### Question format
 
@@ -2370,68 +2384,69 @@ Ask four to eight numbered questions per round, one decision each. Letter bounde
 
 ### Round 1: brain dump, then desired change
 
-Ask for an unfiltered dump of everything the user might work on, group it by project, and show it back briefly. Then ask:
+Ask for an unfiltered dump of everything the user might work on, group it by project, and show it back briefly, so the goal is not just their first idea. Park small items for tasks. Then ask:
 
 - What outcome would make this week genuinely matter, and why now, beyond a deadline?
 - What has changed since last week?
 - Which area (work, personal, health, relationships) most needs attention?
+- What is emotionally or strategically unresolved?
 - What would you regret neglecting even if the visible work shipped?
 
-Do not answer these from records. Afterwards, show the updated ledger.
+Do not answer these from records. Classify each reply as confirming, rejecting, softening, qualifying, or deferring an item, then show the updated ledger.
 
 ### Round 2: shortlist
 
-Use the prompts that bite this week: What can only you do? What would most move the longer-term goal? What benefits from starting early? What unfinished work will keep stealing attention? Which fires will you let burn? Also settle real capacity, given meetings, energy, and protected commitments. Anything not shortlisted goes to "Not this week".
+Use the prompts that bite this week: What can only you do, and what would someone else do as well? What would most move the longer-term goal? What benefits from lead time? What unfinished work will keep stealing attention? What is the strongest case against this? Which fires will you let burn? Also settle real capacity and dependencies on others. Anything not shortlisted goes to "Not this week".
 
 ### Round 3: only when needed
 
-Run a third round only if a real choice about order, success criteria, ownership, or shape is still open. If the user is tired, offer two or three concrete options.
+Run a third round only if order, success criteria, ownership, or the shape of the week is still open.
 
 ### Readiness gate
 
-Propose goals only when each of these is confirmed or deliberately left open: the one change that would make the week worthwhile, why it matters now, the longer-term goal it serves, a definition of done, the main competing claim on time, what the user is not advancing, realistic energy, and the most likely failure mode.
+Propose goals only when each of these is confirmed or deliberately left open: the one change that would make the week worthwhile, why now, the longer-term goal it serves, a definition of done, the main competing claim on time, what the user is not advancing, the health and energy floor, and the most likely failure mode.
 
 Before proposing each goal, ask yourself: did the user call this important, or am I promoting a visible deadline? If the latter, ask another question instead.
 
 ### Proposing goals
 
-Propose the smallest set of goals that fits. Check each one is:
+Propose the smallest set that fits, usually one or two, a sentence each. Check each one is:
 
 - **Linked:** name the longer-term goal.
-- **Verifiable:** 2-4 concrete outputs.
-- **Scoped:** sketch sub-tasks with rough hours against free time minus the buffer; cut or shrink if it does not fit. Under an hour is a task, not a goal.
-- **Realistic:** a heavy meeting week plus low energy means cut one.
-- **Waited on:** a named person expects a named output by a named day and time. Record it as "Waiting: [person], [output], [day and time]", for example "Waiting: the board treasurer, budget draft, Wed 4 pm." If nobody is waiting yet, create that commitment during the session: draft the message or invite that asks them to expect it, for the user to send. Goals only the user is waiting on tend to slip; work someone else expects tends to ship.
-- **Booked:** the goal's work fits into named focus blocks in the user's chosen focus window, sized against their realistic daily focus capacity, not long late-night pushes.
+- **Verifiable:** 2-4 concrete outputs; narrow a direction into a named set.
+- **Scoped:** sketch sub-tasks with rough hours against free time minus the buffer. Under an hour is a task, not a goal.
+- **Waited on:** "Waiting: [person], [output], [day and time]", for example "Waiting: the board treasurer, budget draft, Wednesday afternoon." If nobody is waiting, draft the message or invite that asks them to expect it, for the user to send. Goals only the user waits on tend to slip.
+- **Booked:** the work fits named focus blocks in the user's focus window, sized to their daily capacity, not late-night pushes.
 
 ### Shaping rules
 
 - **Repeated misses mean less scope.** Default to one goal and ask what has changed before adding more.
-- **Name the kind of week.** If meetings dominate, ask whether it is a people week or whether to cut enough to protect one deep goal on the cleanest day.
-- **Question the stuck goal.** After two or more slipped weeks, ask whether its format, scope, or owner is wrong; often the fix is a smaller piece.
-- **Sequence by outside deadline**, which beats self-imposed pressure.
+- **Name the kind of week.** If meetings, interviews, or a colleague's crisis dominate, ask whether it is a people or recovery week, or whether to cut enough to protect one deep goal on the cleanest day. Never assume deep-work capacity.
+- **Treat burnout signals as a hypothesis.** Several low ratings, burnout words, very low focus hours, or poor sleep: ask what capacity is real and what to protect. If confirmed, plan one goal, more rest, and harder cuts.
+- **Question the stuck goal.** After two or more slipped weeks, ask whether its format, scope, or owner is wrong.
+- **Sequence by outside deadline**, whatever feels heavier or older.
 - **Pending decisions pause detail.** Plan only work that survives every outcome.
-- **Team goals need an announcement.** If a goal needs others to act, agree the goal you give them and where and when you announce it, then draft the announcement.
+- **Team goals need an announcement.** Agree the end-of-week goal for the team and where it is announced. Offer two or three framings (for example coverage, habit, or funnel), recommend one, and draft the announcement.
 - **Soft stop.** If after two or three rounds of pushback the user says "let me just start", accept the plan and record your concern in the failure-mode line.
 
-## Step 6: Pre-mortem and cuts
+## 11. Pre-mortem and cuts
 
 Do this before blocking time, so the answers shape what you protect.
 
 - **Pre-mortem:** "If this week fails, what is the most likely reason?" Record one to three lines, each with a counter.
-- **Cuts:** "What will you delete, delegate, reschedule, or explicitly not push this week?"
+- **Cuts:** "What will you delete, delegate, reschedule, reset expectations on, or explicitly not push this week?"
 
-## Step 7: Break goals into tasks
+## 12. Break goals into tasks
 
-A goal is not something you can start; a task is. Break each goal into one to five tasks of 5 minutes to 3 hours. **Do the work before proposing:** put an outline, a draft message, or the decision options in the task notes, never empty notes.
+A goal is not something you can start; a task is. Break each goal into one to five tasks of 5 minutes to 3 hours; more than five means it is a project, so say so. Add follow-ups for delegations and prep for key meetings. Skip tasks that restate the goal or duplicate protected habits. **Do the work before proposing:** put links, an outline, a draft message, or decision options in the notes.
 
-For four or more tasks, propose them in a compact table:
+For four or more tasks, show a compact table first, then propose and write each one in turn:
 
 | # | Task | Due | Time | Owner |
 |---|---|---|---|---|
 | 1 | Draft budget section of grant application | Tue | 90 min | User |
 
-Check for duplicates, spread due dates across the week, and use realistic estimates.
+Check for duplicates first; if the same work exists, update it in place instead. Spread due dates in order. Adjustable defaults: estimates from a fixed ladder (5, 10, 20, 45, 60, 90, 120, 180 minutes); importance follows the goal's priority, with "critical" reserved for the single blocker; urgency is "this week" if it must land now, "same day" only for outside requests due today, otherwise flexible.
 
 Notes template:
 
@@ -2442,32 +2457,37 @@ Waiting: [person], [output], [day and time].
 Done when: [one-sentence test]
 
 Checklist:
-[] [first concrete action]
-[] [next action]
+[ ] [first concrete action]
+[ ] [next action]
 
 References:
 - [key document or thread]
 - [draft or research already gathered]
 ```
 
-Avoid one task that restates a multi-day goal, more than five tasks per goal, and creating tasks silently in a batch.
+Some tools only turn a checkbox written exactly as `[ ]` (with a space) into a tickable item; check what yours needs.
 
-## Step 8: Time blocks
+## 13. Time blocks
 
-Show the week as short day-by-day paragraphs first, with open questions at the bottom.
+Show the week as short day-by-day paragraphs first, with open questions at the bottom, and ask "What else am I missing?" before creating anything.
 
-Book each goal's work into named focus blocks inside the user's focus window, sized to their daily focus capacity. If proposed blocks exceed working hours after meetings and the buffer, cut or shrink a goal rather than squeezing blocks. Flag any block shorter than its task estimate. Block tasks of 45 minutes or more, hard deadlines, and protected personal commitments, and never schedule work over personal events. Re-read the calendar right before creating anything. Propose each slot ("Grant budget, Tue, 90 minutes, afternoon. OK?").
+- **Capacity:** if blocks exceed about 80% of hours left after meetings, cut or shrink a goal rather than squeezing.
+- **Use existing placeholders:** rename focus blocks the user already made before creating new ones. A long placeholder spanning meals or meetings is not one task; split it or add precise blocks inside.
+- **Fresh read:** re-read the calendar right before writing. Never duplicate or rename blocks the user made during the session, and never schedule work over personal events.
+- **Plain titles:** "Grant budget", not "[Goal] Grant budget".
+- **Propose each slot:** "Grant budget, Tue afternoon (90 min). OK?" Block tasks of 45 minutes or more, hard deadlines, and protected commitments. Flag any block shorter than its estimate and offer longer, split, or smaller.
+- **Catch-up block:** if old threads or people waiting for replies piled up, propose one to two hours for messages.
 
-## Step 9: Write the plan
+## 14. Write the plan
 
-Update existing goals in place rather than duplicating them. Then write the plan. Aim for one screen and omit empty headings.
+Update existing goals in place, adding links rather than replacing them. Then write the plan: one screen, not an audit log. Omit empty headings and keep out rollover, triage, and research detail.
 
 ```
 ## Theme
 [2-5 words]
 
 ## Weekly goals
-[] [Goal 1], links to [longer-term goal]
+[ ] [Goal 1], links to [longer-term goal]
     Done when: [2-4 checkable outputs]
     Waiting: [person], [output], [day and time]
 
@@ -2484,16 +2504,17 @@ Update existing goals in place rather than duplicating them. Then write the plan
 - [most likely failure] → [specific counter]
 ```
 
-## Step 10: Close and improve
+## 15. Close and improve
 
-Give the counts in one sentence (goals, tasks, blocks) and make the plan the last block, with no recap. Then note one precise improvement for next time: a wasted step, a wrong assumption, or something the user corrected.
+Give the counts in one sentence (goals, tasks, blocks, meetings cut, tasks triaged), then the current quarter's success bar if one exists, then the plan as the last block. No recap, no thanks.
 
-## Adapting to timing
+Afterwards, note what went wrong, wasted time, or was corrected. Turn it into a tightened rule for next time by editing or merging an existing instruction, not by adding a dated incident note. Keep your instructions compact.
 
-- **First day of the week:** settle what must ship today, then shape the rest.
-- **Mid-week:** plan only the remaining days and state the real runway.
-- **Time off:** skip work goals; plan rest and logistics only.
-- **Tired user:** offer two or three concrete options, or decide with stated reasons if asked. Treat low capacity as a hypothesis; if confirmed, plan a lighter week with one goal.
+## 16. Adapting to timing
+
+- **First day of the week:** settle what must ship today, build that day around it, and re-check calendar and task status before writing.
+- **Mid-week:** plan only the remaining days, use elapsed days as review context, and state the real runway up front.
+- **Time off:** skip work goals, tasks, and cuts; check recurring meetings were declined; plan rest and logistics only.
 
 ## Optional extras
 
@@ -2501,11 +2522,11 @@ Add these modules when the user wants them. Each is independent.
 
 ### Health and energy check
 
-Opt-in only, and only to judge capacity. Compare the last week or two of whatever the user tracks against their own targets, from the same source, numbers first. If a commitment is faltering, ask until they name a concrete fix with a day, time, and cue: "Walk at lunch Mon, Wed, Fri when the noon reminder goes off," not "I'll move more." If the same fix failed last week, ask what is different. After travel or illness, frame the week as recovery. Honor habits the user has deliberately paused.
+Opt-in only, and only to judge capacity. Compare the last week or two of whatever the user tracks against warning thresholds they choose, from the same source, numbers first, naming which threshold fired. Honor habits the user has deliberately paused, asking at most once if they are back. If a commitment is faltering, ask up to three follow-ups until they name an action with a day, time, and cue: "Walk at lunch Mon, Wed, Fri when the lunchtime reminder goes off," not "I'll move more." Prefer small changes over big shifts. If the same fix failed last week, ask what is different. After travel or illness, frame the week as recovery and add a hard evening stop.
 
 ### Meeting cut pass
 
-If the user wants cuts, list meetings that serve no goal or obligation; they decide keep, cut, shorten, or move. Draft a short, warm message for each change for the user to send.
+First ask whether to cut meetings or keep them all; if keep, write "No cuts this week (chose to keep)" in the plan. Otherwise list meetings that serve no goal or obligation. For outside meetings, gather quick context first: who, why it exists, what was promised, and the cost of cancelling. The user decides keep, cut, shorten, or move. Draft a short, warm message for each change; never send it for them. If someone else runs a recurring meeting, draft a note to the organizer instead of editing it.
 
 ```
 Hi [name], I'm protecting time for [goal] this week, so I'd like to [skip / move / shorten] our [meeting] on [day]. [Alternative, such as a written update by Thursday]. Does that work for you?
@@ -2513,17 +2534,23 @@ Hi [name], I'm protecting time for [goal] this week, so I'd like to [skip / move
 
 ### Task triage
 
-Ask whether the user wants to triage overdue tasks themselves. If not, first offer chronically deferred tasks as one batch to move to "someday". Then go one by one, most important first: do this week, done, defer, delegate, or delete. Always offer "done", since people forget to close things. Write each decision right away.
+Ask whether the user wants to triage overdue tasks themselves. If not, offer chronically deferred tasks as one batch to move to "someday". Then go one by one, most important first: do this week, done (people forget to close things), defer (count the move; important but not urgent gets a dated slot, not "someday"), delegate (check whether the work must stay with the user, then note who and when), or delete. Write each decision right away.
 
-### Messages catch-up and scorecard
+### Scorecard
 
-If people are waiting on replies, propose a one to two hour catch-up block.
+If the active month or quarter plan has a scorecard or non-negotiables, ask whether they still match reality, then score the lookback using its own items and thresholds. If a cut-scope rule fires, raise it during shaping. Never rebuild an expired scorecard.
 
-If the user's monthly or quarterly plan has a scorecard or non-negotiables, score the lookback period using its own items and wording. If a cut-scope rule fires, raise it during shaping. Do not rebuild an expired scorecard.
+### Hiring load
+
+If the user hires, count their interviews and hours for the week and list candidates in late stages. Flag a candidate as waiting too long only when a stage-entry date proves it against the user's chosen response target. With heavy load, raise the cost of delay and ask who owns it; block hiring time only once the user puts it on the week.
 
 ### Recurring-friction review
 
-If the user asks, look across recent sessions for corrections that repeat ("that's wrong again", "I meant"). Group repeats, skip one-offs, and propose one specific fix for each group.
+If the user asks, look across recent sessions for corrections that repeat ("that's wrong again", "I meant"). Skip this if private content cannot be filtered out before it is read. Group repeats, skip one-offs, and propose one specific fix per group.
+
+### Structured stores
+
+If goals and tasks live in a database, refer to fields by stable identifiers rather than display names, which drift. Confirm the exact text format that renders checklists, and batch writes only after decisions are made.
 
 
 ---
@@ -2553,7 +2580,7 @@ Review and planning belong in the same session. The structural cause of last mon
 - A written **Review** for the month ending.
 - A written **Plan** for the month ahead: a memorable theme, no more than three outcomes, explicit cuts, and a pre-mortem.
 
-A plan is not a description of the month plus optimistic targets. **If the plan could be written without the user answering a hard question, it is a description, not a plan.**
+A plan is not a description of the month plus optimistic targets. The job is to work out the most important priorities, then decide how they will actually get done. **If the plan could be written without the user answering a hard question, it is a description, not a plan.**
 
 ## When to run it
 
@@ -2575,7 +2602,7 @@ Use only sources the user has authorized for this review and that serve the purp
 
 1. **Evidence first, discussion second.** Show the evidence picture before asking reflective questions.
 2. **Gather in one pass.** Batch independent reads rather than interrupting the conversation with small lookups.
-3. **Use current targets.** Judge progress against the user's live goals, not old schedules or stale records.
+3. **Use current targets.** Judge progress against the user's live goals, not old schedules or stale records. Keep targets in the user's own goal record or last month's plan, not hardcoded into this workflow, and check for any recent change (a pause, a reset, a new target) before judging.
 4. **Check data quality before a harsh verdict.** Missing syncs and incomplete logs distort conclusions. Ask the user to confirm surprising findings.
 5. **The user chooses.** You calculate, summarize, and ask hard questions. The user picks priorities, cuts, and commitments.
 6. **One decision at a time.** Do not move on until the current question has a real answer.
@@ -2600,9 +2627,11 @@ Use the user's own system: a task manager, project tracker, calendar, spreadshee
 | Goals | Active monthly, quarterly, and yearly goals with status and deadlines |
 | Work delivered | Completed tasks and deliverables, grouped by the user's own areas |
 | Calendar | Time off, travel, fixed deadlines, recurring commitments, heavy weeks |
-| Daily signals (optional) | Ratings, focus hours, or habit counts the user chooses to track |
+| Daily signals (optional) | Ratings, short reasons for ratings, focus hours, or habit counts the user chooses to track |
 
 For large sources, compute statistics and pull a few themes instead of reading raw entries.
+
+**Read only the fields you need.** When a daily log mixes structured fields with private free-form writing, such as a diary or journal, name the fields you want explicitly and leave the private writing out, even if you have access to it. A short field like "why I rated the day this way" usually gives enough texture for themes.
 
 **When a source is unavailable.** If a usual source has moved, been deleted, is mid-migration, or is disconnected, skip it rather than failing or guessing. Ask the user one short question for that area instead (for example, "Roughly how did sleep go this month?"), and note in the review which areas came from recollection rather than records.
 
@@ -2620,7 +2649,7 @@ Summarize completed work in a few areas, not a wall of bullets. The question is 
 
 ### Signals
 
-Include only measures the user tracks, such as average daily rating, focus hours, or low-energy streaks. Flag patterns like several low days in a row, or ratings that look fine while the user describes strain. Averages are not the whole truth; raise a mismatch briefly and ask about it.
+Include only measures the user tracks, such as average daily rating, focus hours, or low-energy streaks. Flag patterns like several low days in a row, or ratings that look fine while the user describes strain. Averages are not the whole truth: if the user records short reasons for their ratings, quote two or three that point the other way, and ask about the mismatch rather than letting a good average close the question.
 
 ### Worked example (fictional)
 
@@ -2628,7 +2657,7 @@ Include only measures the user tracks, such as average daily rating, focus hours
 
 ## Step 3: Reflect on the month
 
-Start with one specific observation from the evidence. Ask one question at a time and follow no more than two or three threads unless the user wants depth.
+Start with one specific observation from the evidence, with no preamble. Ask one question at a time and follow no more than two or three threads unless the user wants depth.
 
 Cover these before closing the review:
 
@@ -2647,11 +2676,11 @@ The minimum useful review, if time is short: goal movement, one structural fix, 
 
 ## Step 4: Plan the new month
 
-A real plan has a defined outcome, an honest baseline, a path, proof of capacity, trade-offs, outside pressure, a pre-mortem, and explicit approval. Each move below should make the user answer something hard.
+A real plan has a defined outcome, an honest baseline, a path, proof of capacity, trade-offs, outside pressure, a pre-mortem, and explicit approval. Each move below should make the user answer something hard. Treat brainstorms, voice-note dumps, and imported task lists as candidate priorities: each must survive Moves 1, 4, and 5 before it counts.
 
 ### Move 1: Define outcomes
 
-For each candidate priority, ask: "What specifically is true on the last day of the month?" Make the answer measurable or plainly checkable. Limit the plan to three outcomes; one or two is usually better. Each should connect to a long-range goal or a chosen responsibility.
+For each candidate priority, ask: "What specifically is true on the last day of the month?" Make the answer measurable or plainly checkable. Limit the plan to three outcomes; one or two is usually better. Each should connect to a long-range goal or a chosen responsibility. If you drafted the statement and the user only nodded, ask them to restate or edit it in their own words.
 
 ### Move 2: Establish the current state
 
@@ -2663,7 +2692,7 @@ For each outcome, list three to six steps working back from the due date. Each s
 
 ### Move 4: Do the capacity math
 
-Estimate: available working days × recently observed focused hours per day. Subtract time off, travel, and heavy meeting weeks. Compare with the effort the paths need. If demand exceeds supply, cut, defer, shrink scope, or get real help now.
+Estimate: available working days × recently observed focused hours per day. Use last month's actual rate, not an aspiration. Subtract time off, travel, and heavy meeting weeks. Compare with the effort the paths need. If demand exceeds supply, cut, defer, shrink scope, or get real help now, before the month starts.
 
 ### Move 5: Make the not-doing list
 
@@ -2671,7 +2700,9 @@ Ask: "What will explicitly not happen this month so these outcomes can?" The use
 
 ### Move 6: Add outside pressure and protection
 
-Fragile outcomes need outside pressure: someone expecting a deliverable on a date, a booked review, or a public commitment. Protect work that needs long, uninterrupted time by giving it the best blocks and batching flexible work around meetings.
+Self-imposed calendar blocks tend to lose to commitments where someone else is waiting. Fragile outcomes need outside pressure: someone expecting a deliverable on a date, a booked review, or a public commitment.
+
+Check the mix of outcomes. Some work survives interruptions (coordination, outreach, review); some dies when fragmented (writing, design, analysis). Give the fragile work the best uninterrupted blocks and batch flexible work around meetings. Do not re-propose time slots the user has already learned get overridden; ask which slots actually hold.
 
 ### Move 7: Run a pre-mortem
 
@@ -2718,7 +2749,7 @@ Example (fictional): a workshop series at Maple Hollow Arts cannot be scheduled 
 - [Explicit cut or deferral.]
 
 ## Structure
-[The behavior or boundary change that counters last month's drain.]
+[The behavior or boundary change that counters last month's drain. Delegated items with owner named.]
 
 ## Pre-mortem
 - Failure mode: [likely cause]. Counter: [specific response.]
@@ -2754,7 +2785,11 @@ Confirm the save in one line and stop.
 
 ## Step 6: Improve the workflow
 
-At the end of each run, make one precise improvement to this workflow or its templates: a noisy read, a wrong assumption, a misleading measure, a source that moved, or a question the user corrected. Write it as a general rule, not a private fact.
+After the run, quietly look back at what went wrong or what the user corrected: a read that wasted effort or came back in the wrong shape, a wrong assumption about the data, a pushback, a measure that turned out to be noise. Do not ask the user how to improve the workflow.
+
+- If a change is warranted, edit or merge an existing rule rather than adding a new paragraph. Write it as a general rule, not a private fact.
+- Keep dated incident notes out of the workflow itself. If you want a history, keep a separate one-line-per-entry lessons log, and do not load it during a normal run.
+- Keep the workflow under a length cap you choose, so it stays readable.
 
 ## Audit checks
 
@@ -2762,8 +2797,9 @@ Before finishing, verify:
 
 - Review and planning ranges are explicit.
 - Evidence came before reflection.
+- Private free-form writing was excluded from reads.
 - Missing sources were replaced with a direct question and labeled.
-- Strong verdicts account for data gaps.
+- Strong verdicts account for data gaps and current targets.
 - The plan has a theme and no more than three outcomes.
 - Each outcome has a test of done, date, path, owner, and outside pressure.
 - Outcomes blocked on unmade decisions are framed as dated decisions.
@@ -2778,6 +2814,7 @@ Before finishing, verify:
 
 - Starting with questions instead of evidence.
 - Judging against stale targets.
+- Reading private journal text because it happened to be available.
 - Silently skipping a missing source, or reporting on it as if it were checked.
 - Confusing a list of events with a plan.
 - Overloading capacity and refusing to cut.
@@ -2785,6 +2822,7 @@ Before finishing, verify:
 - Letting the assistant choose priorities.
 - Saving an unapproved draft.
 - Conflicting with an existing weekly plan.
+- Re-proposing time blocks that have already failed.
 - Applying generic productivity rituals instead of fixing the actual drain.
 - Treating a brainstorm or imported task list as a confirmed commitment.
 
@@ -2792,7 +2830,7 @@ Before finishing, verify:
 
 ### Personal practice
 
-Add this section only if the user tracks a habit or practice they want held to account, such as writing, a language, music, exercise, or meditation. Put it after goals and delivery, not first.
+Add this section only if the user tracks a habit or practice they want held to account, such as writing, a language, music, exercise, or meditation. Put it after goals and delivery, not first. Do not lecture on technique; the user may already follow a program for that.
 
 Compare actual activity with the user's current target using whatever they log: sessions, minutes, words, or pages; average per week; active days; longest gap; and the change from last month. If the log is unavailable this month, ask one question about it instead.
 
@@ -2807,8 +2845,8 @@ If tracking may be incomplete, ask "The record shows this. Does that match reali
 
 ### For assistants with connected tools
 
-- Hand bulky reads, such as a month of daily entries or a full month of calendar events, to a helper task that returns computed numbers and a short list of themes, not raw records.
-- Ask the calendar summary for time off, travel, per-week meeting load, recurring series, and anomalies such as meetings scheduled inside time off. Offer to clear those conflicts now and add them to a pre-time-off checklist in the plan.
+- Hand bulky reads, such as a month of daily entries or a full month of calendar events, to a helper task that returns computed numbers and a short list of themes, not raw records. Give the helper the same explicit field list, so private writing stays excluded there too.
+- Ask the calendar summary for time off, travel, per-week meeting load, recurring series, and anomalies such as meetings scheduled inside time off or events with suspect time zones. Offer to clear those conflicts now and add them to a pre-time-off checklist in the plan.
 - Restrict helper tasks to the read tools they need.
 
 
@@ -3048,7 +3086,7 @@ This interactive evening workflow moves the user from the awake part of the day 
 ## Quick version
 
 - Say "wind down" when you are ready to start.
-- Put your phone or other distracting device out of reach first, ideally in another room or a timed box.
+- Put your phone or other distracting device out of reach first, ideally in another room or a timed box. Set it to come back only when tomorrow morning needs it, based on your first real commitment.
 - Change into sleep clothes, do two or three small tasks for the morning, then a few minutes of a calming practice you already know.
 - If a worry or task comes up, write one line on paper for tomorrow and leave it.
 - Do not plan tomorrow or reflect on today during this ritual.
@@ -3062,27 +3100,30 @@ Target length for the active ritual: about 20 to 30 minutes. Longer rituals tend
 
 It targets late stimulation (scrolling, lying awake), worry about tomorrow (mostly handled by the earlier review and specific planning), an inconsistent routine, and distraction controls that are easy to bypass. Physical barriers usually beat software limits on the same device.
 
-Success signal: the user wakes rested, starts the morning without scrolling, and the device stays out of reach until the chosen access time. Every step must reduce stimulation, add reliability, or prepare the body; remove any step that does none of these. Re-read this purpose every run.
+Success signal: the user wakes rested, starts the morning without scrolling, and the device stays out of reach until the access time set from tomorrow's commitments. Every step must reduce stimulation, add reliability, or prepare the body; remove any step that does none of these. Re-read this purpose every run.
 
-Design anchors, never explained at bedtime: a specific to-do list written earlier has been linked to falling asleep faster; scheduled worry time earlier in the evening reduces bedtime anxiety; dim, warm light helps sleep onset; and consistency matters more than contents.
+Design anchors, never explained at bedtime: a specific to-do list written earlier has been linked to falling asleep faster, which is why planning runs before this workflow rather than inside it; scheduled worry time earlier in the evening reduces bedtime anxiety; dim, warm light helps sleep onset; and consistency matters more than contents.
 
 ## 2. Standalone mode
 
-You do not need daily records, a calendar, or any other workflow to use this. Tell the assistant tonight's bedtime and when you want your phone back, then run Steps 1 to 4 from that alone, and skip Step 0. Use paper as the capture spot.
+You do not need daily records, a calendar, or any other workflow to use this. Tell the assistant tonight's bedtime and your first fixed commitment tomorrow morning, if any, then run Steps 1 to 4 from that alone, and skip Step 0. Use paper as the capture spot.
 
 Chatting with an assistant on a bright screen works against winding down. Use voice if you can, or send one short message per step, with the screen dimmed and warm.
 
 ## 3. Settings the user chooses
 
-Agree on these once. Reuse them every night until the user changes them. Offer the starting points only as suggestions, and do not assume values the user has not chosen.
+Agree on these once. Reuse them every night until the user changes them. Offer the starting points only as adjustable suggestions, and do not assume values the user has not chosen.
 
 | Setting | What to decide | Suggested starting point |
 |---|---|---|
 | Target sleep time | When the user wants to be asleep | Based on their natural sleep window and wake time |
 | Ritual start | When wind-down usually begins | 60 to 90 minutes before target sleep time |
 | Review cutoff | When a missed review is skipped | When a review would push sleep back |
-| Distraction barrier and access time | How the device goes out of reach, and when it comes back | A timed box or another room; back after the first part of the morning |
-| Early-commitment rule | How much earlier access moves for an early commitment | First commitment minus getting-ready and travel time |
+| Distraction barrier | How the device goes out of reach | A timed box or another room |
+| Default access time | When the device comes back if nothing early is booked | After the first part of the morning routine |
+| Commitment cutoff | How early a commitment must be to move access earlier | Shortly after the default access time plus the commitment buffer |
+| Commitment buffer | Time before a commitment to get ready and arrange transport | 45 to 60 minutes |
+| Travel buffer | Time before a travel or commute block, which already marks departure | 15 to 20 minutes |
 | Gate items | The few changes that signal night | A clothing change plus the distraction barrier |
 | Allowed device | The one low-stimulation device, if any, after the gate | None |
 | Physical prep and settling practice | Small morning-setup tasks, then a short familiar practice | Water, teeth, breakfast; a few minutes of slow breathing |
@@ -3100,8 +3141,7 @@ If the user names an earlier bedtime for tonight, work backwards from it. Protec
 - **Gate first.** Do not continue past Step 1 until the user confirms it.
 - **Keep the gate minimal.** Include only the gate items the user chose. If the user removes an item, do not add it back later.
 - **No distracting-device step after Step 1.** Everything afterward must work offline or with the one allowed device.
-- **Never ask about tomorrow.** No outcomes, intentions, wins, or backup one-line plan. If planning was skipped, note it silently and continue. Planning questions raise alertness at the moment the goal is to lower it.
-- **Do not reopen reflection or planning.** Do not open a second writing session. Any journal writing belongs to the review, before its questions.
+- **Never ask about tomorrow, and do not reopen reflection or planning.** No outcomes, intentions, wins, or backup one-line plan. If planning was skipped, note it silently and continue. Planning questions raise alertness at the moment the goal is to lower it. Do not open a second writing session; any journal writing belongs to the review, before its questions.
 - **Deflect tomorrow-concerns.** Say: "Put a short note in your capture spot. The review will handle it tomorrow. Not tonight."
 - **No summary at the end.** Send the close and stop.
 - **Stay silent after the close.** If the user says good night, reply with nothing or only "Good night." Never send a follow-up, a placeholder, or a simulated user turn. An unexpected message after bedtime can wake someone up.
@@ -3117,13 +3157,13 @@ If this workflow runs on its own, gather the following in one batch:
 1. Current time, today's date, and tomorrow's date.
 2. Whether today's review is complete.
 3. Whether tomorrow's plan exists.
-4. Tomorrow's first fixed commitment before midday, from every calendar the user approved. Include personal as well as work calendars, since social plans and early activities move the access time too.
+4. Tomorrow's morning events (midnight to midday) from every calendar the user approved. Include personal as well as work calendars, since social plans and early activities move the access time too.
 
 | Review complete? | Time | Action |
 |---|---|---|
 | Yes | Any | Say "Day reviewed. Starting wind-down." Go to Step 1. |
-| No | Before review cutoff | Say "The day review didn't run. Do it now (about 10 minutes)?" If yes, run it and return. If no, mark review skipped and go to Step 1. |
-| No | At or after cutoff | Say "Too late to review tonight. We'll pick it up tomorrow." Mark review skipped. Go to Step 1. |
+| No | Before review cutoff | Say "The day review didn't run. Do it now (about 10 minutes)?" If yes, run it and return. If no, go to Step 1. |
+| No | At or after cutoff | Say "Too late to review tonight. We'll pick it up tomorrow." Go to Step 1. |
 
 If tomorrow's plan is missing, do not mention it, offer planning, or ask a fallback question.
 
@@ -3133,23 +3173,25 @@ Use plain bullet lists, not checkboxes. Many interfaces cannot tick boxes, and "
 
 ## 8. Step 1: Environment and distraction gate
 
-Set the access time:
+Set the access time from tomorrow's calendars every night. There is no fixed time; the device comes back only when the morning needs it.
 
-- Default: the user's chosen access time.
-- Find tomorrow's earliest commitment across every approved calendar, personal and work alike. A morning workout or breakfast plan counts as much as a meeting. If the evening sequence already looked up a calendar, use that result instead of checking only one calendar.
-- Convert every event time to the user's local time before comparing. Calendars can return times in another zone or with an offset, and an event that looks late may actually be early.
-- If that first commitment is early enough that the default leaves too little time to get ready and travel, apply the user's early-commitment rule.
-- State the time. If it is earlier than usual, give the reason in a few words. If the barrier has a timer, show the duration from now.
+1. **Use every approved calendar** for tomorrow morning. If the evening's planning already read them, reuse those results as they stood after any blocks planning moved. Never set the time from the work calendar alone. If a source failed, say so once and use what the user has mentioned.
+2. **Convert every event time to local time** from its returned zone or offset before comparing. An event that looks late may actually be early.
+3. **Find the commitments.** A commitment is a timed event that fixes when the user must be somewhere or with someone: meetings and calls with other attendees the user has not declined, in-person plans, appointments, fixed-time exercise, and travel or commute blocks. These do not count: all-day events, declined or canceled events, sleep blocks, routine blocks, solo work and focus blocks, meals, and out-of-office placeholders.
+4. **Take the earliest of:** each commitment's start minus the commitment buffer, and each travel block's start minus the travel buffer.
+5. **If no commitment falls before the commitment cutoff,** use the default access time.
+6. **If the result is before the user's usual wake time,** keep it and flag it as an early start.
+7. **Put the access time, the reason (event and which calendar), and the countdown from now** on the checklist line.
 
 ```
 Before we start:
 - [Clothing change, e.g. day clothes off, sleep clothes on]
-- [Distraction barrier], timer [duration] (access at [time][, reason if earlier, e.g. travel for an early meeting])
+- [Distraction barrier], timer [duration] (access at [time], [reason, e.g. "for the early call (work)", or "nothing before the cutoff"])
 
 Reply "done" when all set.
 ```
 
-If the user delays an item ("I'll do it in a sec"), say once: "Do it now. These are the biggest levers. I'll wait." Then wait.
+If the user delays an item ("I'll do the phone in a sec"), say once: "Do it now. These are the biggest levers. I'll wait." Then wait.
 
 ## 9. Step 2: Physical prep (about 5 minutes)
 
@@ -3165,7 +3207,7 @@ Reply "done" when all set.
 
 If a small task surfaces ("library book is due, return it tomorrow"), do not solve it. Capture one line so it leaves the user's head:
 
-- Append to tomorrow's capture spot. Preserve existing text exactly, never overwrite from an earlier cached value, and never create a partial review record.
+- Append to tomorrow's capture spot. Read only that spot first, preserve existing text exactly, and never overwrite from an earlier cached value. Never write into a private journal or a review record.
 - Then say: "Noted. Captured."
 
 ## 10. Step 3: Settling practice
@@ -3191,13 +3233,20 @@ After the close, review the run without sending anything. Do not ask a tired per
 | User misread a prompt or asked what it meant | Rewrite it in plainer words |
 | User pushed back on a step | Simplify it, make it optional, or cut it |
 | A lookup failed or found the wrong record | Fix the lookup rule |
-| The user corrected the access time | Check which calendar or time conversion was missed and fix that rule |
+| The user corrected the access time | Check which calendar, commitment rule, or time conversion was missed and fix that rule |
 | An item is skipped without comment | Remove it |
 | User stated a preference ("don't ask me X") | Add it as a hard rule |
 | The barrier keeps being bypassed | Choose a stronger physical barrier with the user |
 | The same worry keeps appearing at bedtime | Move its prevention into the earlier review or planning |
 
-If the run was clean, change nothing. Do not invent improvements. If the user re-engages because they cannot sleep, go to Step 6.
+How to edit:
+
+- Edit or merge an existing rule rather than adding a new paragraph. The routine should stay short enough to run quickly.
+- Write rules as general principles. Do not add dated incident stories to the routine itself.
+- If you want a history, keep a separate one-line-per-entry log of what happened and why a rule changed. Do not load that log during a normal run.
+- If the run was clean, change nothing. Do not invent improvements.
+
+If the user re-engages because they cannot sleep, go to Step 6.
 
 ## 13. Step 6: Can't-sleep fallback (stimulus control)
 
@@ -3209,9 +3258,9 @@ This keeps the bed linked with sleep rather than with lying awake. Do not extend
 
 ## 14. Worked example (invented)
 
-Alex says "wind down" with no records connected. Bedtime is an hour away and Alex wants the phone back after breakfast.
+Alex says "wind down" with no records connected. Bedtime is an hour away and nothing is booked early tomorrow, so the phone comes back at Alex's default time after breakfast.
 
-- Assistant: "Before we start: sleep clothes on, phone in the kitchen drawer until after breakfast. Reply 'done' when all set."
+- Assistant: "Before we start: sleep clothes on, phone in the kitchen drawer until after breakfast (nothing early tomorrow). Reply 'done' when all set."
 - Alex: "done"
 - Assistant: "Fill a water glass, brush teeth, keys by the door. Reply 'done' when all set."
 - Alex: "done. oh, need to call the dentist"
@@ -3237,18 +3286,25 @@ The best wind-down is quiet, repeatable, and boring enough to become an automati
 
 ### Connected records and calendars
 
-If the workflow connects to a journal, day records, or calendars, use only sources the user has authorized, and only to confirm status and set the access time. Check a completion signal, such as a rating or a done marker. Never read, quote, or write into private journal text. A saved free-form entry without the completion signal does not mean the review finished. When capturing a note, read only the field you append to. Treat calendars as read-only, and keep what you see inside the session.
+If the workflow connects to a journal, day records, or calendars, use only sources the user has authorized, and only to confirm status and set the access time. Treat calendars as read-only, and keep what you see inside the session.
 
 Lookup principles:
 
+- **Request only the fields you need.** Use an explicit list of fields on every record read, and leave private journal text off that list. Never read, quote, reconstruct, or write into it.
+- **Confirm the review from a completion signal.** Use the review's own save confirmation from this session, or a dedicated rating or done marker. A saved free-form entry without that signal does not mean the review finished.
 - **Test presence, not truthiness.** A zero rating is a valid, completed rating.
-- **Match dates loosely** and expect more than one record per day. Check each matching record instead of assuming a single one.
-- **Normalize time zones.** Convert every calendar time to local time before finding the earliest commitment.
+- **Match dates loosely** and expect more than one record per day. Exact-match date filters can miss records that exist. Check each matching record instead of assuming a single one.
+- **Query calendars in local time.** Give the morning window an explicit local offset, then still convert each returned event to local time before comparing.
 - **Degrade quietly.** If a source fails, say so once, compute from what you have plus anything the user mentioned, and leave repair for daytime.
 
 ### Invented access-time example
 
-Jordan's default access time is mid-morning, and the early-commitment rule is "first commitment minus one hour." The work calendar shows a walk late in the morning. The personal calendar lists a gym class whose time comes back with a different zone offset, so at first glance it looks like a late-morning slot. Converted to local time, it is early morning, well before the default. The earliest commitment is the gym class, so access moves to one hour before it, and the checklist line names the reason: "access an hour before gym."
+Jordan's example settings, all adjustable: commitment buffer 60 minutes, travel buffer 20 minutes. Times below are relative to Jordan's usual wake time.
+
+- Work calendar: a solo focus block starting half an hour before wake time (does not count) and a team call one hour after wake time (commitment, so access at wake time).
+- Personal calendar: "Bus to the climbing gym" returned with a different zone offset, so it first looks like a mid-morning event. Converted to local time, it starts right at wake time. It is a travel block, so access 20 minutes before wake time.
+
+The earliest result is 20 minutes before wake time, which is earlier than usual, so keep it and flag it. The checklist line reads: "Phone in the box, timer [hours until then] (access 20 minutes before your usual wake time, for the gym bus (personal), early start)."
 
 
 ---
@@ -4275,7 +4331,9 @@ Read these in parallel from the user's planning system, requesting only the fiel
 3. **Today:** intention, plan, and MIT.
 4. **Open tasks:** title, status, and due date, so you can spot items that are already tasked.
 
-Use the system's documented date functions. Plain string comparisons on dates often fail silently, so treat an unexpectedly empty result as a possible query error. If a level is missing, say so in one line and continue with what exists. Do not invent goals. Summarize the goals in three to six lines for yourself and use them to judge every item.
+Write queries that survive change. Where the system supports it, refer to fields by stable identifiers rather than display names, in both filters and requested fields; names can differ between tables and break when someone renames them. Use the system's documented date functions, because plain equality or range comparisons against date strings often fail silently. If a query errors on an unknown field, or returns nothing where a record should exist (for example today's daily record), inspect the schema and fix the query before reporting that level as missing.
+
+If a level is genuinely missing, say so in one line and continue with what exists. Do not invent goals. Summarize the goals in three to six lines for yourself and use them to judge every item.
 
 **MIT check.** If today's MIT is not inbox work and the user is inside or near its planned block, ask once, before reading any inbox: "Is this the most important thing right now, or does it just feel productive?" Trust the answer. Skip this when there is no MIT or inbox work is part of the plan.
 
@@ -4289,6 +4347,7 @@ Apply these principles across sources:
 - **Get everything.** If a result hits its page limit, query again for older items. For a notification inbox, process every uncleared item, read or unread; the run is done only when the total is zero. Opening a notification may mark it read without clearing it.
 - **Group to the decision unit.** Group email messages by thread and keep the latest. Treat several comments feeding one document as one decision: has the user already used them? If yes, clear them; if not, offer one task for the document rather than one per comment.
 - **Skim, then open only when needed.** Send obvious newsletters and automated mail straight to no action. Open the full thread when the preview leaves the ask, deadline, owner, or status unclear. A reply deep in a long thread usually needs the full thread.
+- **Open attachments that carry the ask.** When the substance sits in a photo, scan, screenshot, or file, open it before choosing a bucket. Never task an item you have not actually seen: a forwarded letter that looks official may turn out to be marketing or a notice needing nothing.
 - **Judge chats on everything unanswered.** Find reply debt by last sender within the lookback window, then read back to the user's last real reply. Judge the chat on that whole unanswered stretch, never on its last message: a logistics exchange, a confirmation, or a friendly closer can sit on top of an older ask. A chat whose unanswered part contains a question is never no action until the user has answered it.
 - **Rank direct above broadcast.** Direct messages and explicit mentions come before group or channel traffic, unless a group message names the user, asks them something, or has a time-bound consequence.
 - **Respect deliberate saves; mute chosen noise.** Saved-for-later items count, even from muted feeds, because the user chose to keep them. Unreads are attention debt, not priority. Leave muted-feed unreads out of every bucket and count unless a message tags the user.
@@ -4394,10 +4453,11 @@ If many loops remain open, say so plainly.
 - Every in-scope source was read, or its failure is named.
 - Every item is in exactly one bucket.
 - No chat with an unanswered question sits in no action.
+- Every attachment that carried an ask was opened before its item was bucketed.
 - Nothing actionable lives only in an inbox: it is done, delegated, tasked, or explicitly left open.
 - Every delegated clear was verified.
 
-Then audit the run for friction: a pointless question, an item in the wrong bucket, a misbehaving source, or context you had to hunt for. With the user's permission, update the workflow's configuration to fix the cause, keeping changes general rather than tied to one message. Never store message content or credentials in it.
+Then audit the run for friction: a pointless question, an item in the wrong bucket, a misbehaving source or query, or context you had to hunt for. With the user's permission, update the workflow's configuration to fix the cause, keeping changes general rather than tied to one message. Never store message content or credentials in it.
 
 ## Common failure modes
 
@@ -4406,6 +4466,8 @@ Then audit the run for friction: a pointless question, an item in the wrong buck
 - Doing the work a message describes instead of tasking it.
 - Flagging a reply as owed when it was sent elsewhere.
 - Judging a chat by its last message, so a closer or confirmation hides an older question.
+- Tasking or bucketing an item from its preview when the real content sits in an unopened photo or file.
+- Reporting a goal level as missing when the query, not the data, was wrong.
 - Relaying an ask the user cannot place, instead of first finding the event, plan, or person it refers to.
 - Proposing a new meeting when one with the same person is already booked.
 - Showing the same person in every bucket instead of grouping their pile.
@@ -5003,41 +5065,46 @@ Do not change permissions, move pages or edit content without explicit approval.
 
 ---
 name: use-a-browser-safely
-description: Complete browser tasks safely: pick the least invasive route, protect logged-in accounts, check what the page actually shows, and confirm before acting. Use when filling forms or fixing dashboards in a browser.
+description: Completes browser tasks safely: least invasive route, verified account and fields, confirmation before acting. Use when filling forms, fixing dashboards, or working in a signed-in app.
 ---
 
 # Use a browser safely
 
-Use this workflow when a task has to happen in a web browser. Typical tasks include filling a rendered form, changing a setting in a dashboard, collecting information from a page that only renders with scripts, testing a user flow, or working inside a signed-in session the user has authorized.
+Use this workflow when a task has to happen in a web browser: filling a rendered form, changing a setting in a dashboard, collecting information from a page that only renders with scripts, testing a user flow, or working inside a signed-in session the user has authorized. It keeps the work on the least invasive route and proves each change actually landed before anything irreversible happens.
 
-The central rule:
+## Quick version
+
+These steps work even with a plain chat assistant that walks you through the task while you do the clicking.
+
+- **Look for a shortcut first.** Ask whether the service has an export, official integration, API, or simple form you can use instead of clicking through a complex page.
+- **Check where you are.** Before changing anything, open the account or profile page and confirm the signed-in account, the workspace or environment, and the exact item you will change.
+- **List the fields before typing.** Note each field's label, whether it is required, and what kind it is (one line, multi-line, rich text, dropdown, checkbox, date). Make dropdown, checkbox, and date choices first, because they can reset the form.
+- **Read back every field.** After entering text, click somewhere neutral on the page and check the value is still there and complete.
+- **Stop before the final button.** Confirm every required field is filled, the values are right, and whether the action can be undone. Take a screenshot. For payments, sends, deletions, or "cannot be edited" forms, get a clear yes first.
+- **Look for proof afterward.** A confirmation message, reference number, or saved record. If you see an error, check whether the action happened before retrying.
+
+## 1. Follow the central rule
 
 > Inspect the page before you edit anything. Read back every field you change. Do not click the final button until verification passes and the account, target, and authorization are clear.
 
 A successful automation call does not prove the website accepted the change. A fill command usually reports success as long as it did not throw an error. It does not check that the application's internal state updated, that moving focus away committed the value, or that the field kept the content. **The caller verifies. Always.**
 
-## 1. Choose the least invasive route
+## 2. Choose the least invasive route
 
 Use the first route that fits. Do not skip ahead.
 
 1. **Direct interface first.** Look for a documented API, export, integration, or plain form endpoint before opening any browser.
-2. **Isolated headless browser.** This is the default for anything that does not need the user's identity: public forms, extraction from dynamic pages, UI testing, and screenshots. It never opens a visible window and never touches the user's own browser.
-3. **The user's signed-in visible browser.** Use this only when the task truly needs the user's live session, such as an account dashboard or single sign-on state.
+2. **Isolated headless browser.** The default for anything that does not need the user's identity: public forms, extraction from dynamic pages, UI testing, and screenshots. It never opens a visible window and never touches the user's own browser.
+3. **The user's signed-in visible browser.** Only when the task truly needs the user's live session, such as an account dashboard or single sign-on state.
 
 ### Look for a direct interface
 
-Many forms send structured data to an endpoint that can be called directly, which skips the hardest browser problems. To find one:
-
-- Read the service's official documentation for an API.
-- View the page source for a form action or embedded data block.
-- Watch the browser's network requests while using the page normally.
-
-Even an endpoint that takes some study to understand is often faster than fighting a complex form. Fall back to the browser when no suitable programmatic option exists or when the user explicitly wants the UI flow.
+Many forms send structured data to an endpoint that can be called directly, which skips the hardest browser problems. Read the service's official documentation, view the page source for a form action or embedded data block, or watch the browser's network requests while using the page normally. Even an endpoint that takes some study is often faster than fighting a complex form. Fall back to the browser when no suitable programmatic option exists or when the user explicitly wants the UI flow.
 
 Limits:
 
 - Do not use undocumented endpoints to get around access controls, terms of service, rate limits, or anti-abuse systems.
-- In a signed-in session, do not call an application's internal endpoints from page scripts. Requests that skip the headers or tokens the app normally sends can end the user's session or trigger security responses. Drive the UI instead, or use a supported API with proper credentials.
+- In a signed-in session, do not call an application's internal endpoints from page scripts. Requests that skip the headers or tokens the app normally sends can end the user's session or trigger security responses. Drive the UI instead, or use a supported API with proper credentials. Reading state the page already holds in memory, without network calls, is lower risk.
 
 ### Do not use the visible browser for convenience
 
@@ -5045,74 +5112,56 @@ The user's visible browser is their working space. Taking it over interrupts the
 
 ### Blocks and bot checks
 
-If a site blocks headless automation during general research, accept the block and move on. Do not try to evade it. Escalating to the user's signed-in browser is reasonable only when the user explicitly asked for a task on that specific site and the session is genuinely needed. Human-verification checks, security-key prompts, and multi-factor prompts belong to the user: pause, ask them to complete it, then continue. Never simulate, bypass, or weaken these checks.
+If a site blocks headless automation during general research, accept the block and move on. Escalating to the signed-in browser is reasonable only when the user explicitly asked for a task on that specific site and the session is genuinely needed. Human-verification checks, security-key prompts, and multi-factor prompts belong to the user: pause, ask them to complete it, then continue. Never simulate, bypass, or weaken these checks.
 
-## 2. Pick the right automation style
+## 3. Pick the right automation style
 
-Two common styles exist:
+- **Step-by-step tool calls** through an interactive browser tool suit one click, reading one snapshot, or short tasks with roughly ten or fewer actions and little text.
+- **A standalone script** using a browser automation library suits long text (for example over a couple of thousand characters), many fields, heavy single-page applications, or anything that needs repeatable runs.
 
-- **Step-by-step tool calls** through an interactive browser tool. Good for one click, reading one snapshot, or short tasks with roughly ten or fewer actions and little text.
-- **A standalone script** using a browser automation library. Better for long text (for example over a couple of thousand characters), many fields, heavy single-page applications, or anything that needs repeatable runs.
+Interactive tool layers can become unstable with long text, several parallel actions against one page, or heavy rendering. If the session crashes with a message like "page, context, or browser has been closed," switch to a script rather than rescuing the broken session. When in doubt, write a script.
 
-Interactive tool layers can become unstable with long text, several parallel actions against one page, or heavy rendering. If the session crashes with a message like "page, context, or browser has been closed," switch to a script. Do not try to rescue the broken session. When in doubt, write a script.
+Script hygiene: save scripts and artifacts in a temporary folder the user has agreed to, launch standalone automation headless unless a visible session is part of the plan, and pass secrets through environment variables or a secrets store. Never hard-code or log credentials.
 
-Script hygiene:
+## 4. Protect identity, privacy, and the user's browser
 
-- Save scripts and artifacts in a temporary working folder the user has agreed to.
-- Launch standalone automation headless unless a visible session is part of the plan.
-- Pass secrets through environment variables or a secrets store. Never hard-code credentials, and never print them in logs.
-
-## 3. Protect identity, privacy, and the user's browser
-
-When the task touches private messages, records, dashboards, or information about other people, confirm a legitimate purpose and clear authorization. Use only the minimum relevant pages and data. Keep unrelated personal details out of screenshots, logs, and reports. Share results only within the requester's appropriate access boundary.
+When the task touches private messages, records, dashboards, or information about other people, confirm a legitimate purpose and clear authorization. Use only the minimum relevant pages and data, keep unrelated personal details out of screenshots, logs, and reports, and share results only within the requester's appropriate access boundary.
 
 ### Rules for the user's visible browser
 
-- **Announce, then act.** Say briefly what you are taking over and why, for example "Taking over the browser to update the billing contact." Never take control silently. If the user has already authorized visible browser use for this task, do not ask again for the same approval.
+- **Announce, then act.** Say briefly what you are taking over and why, for example "Taking over the browser to update the billing contact." Never take control silently. If the user already authorized visible browser use for this task, do not ask again.
 - **Work in a fresh window, tab, or tab group.** Do not reuse the user's existing tabs unless they point to one.
-- **Classify the context before choosing a profile.** Decide whether the task is personal, work, test, staging, or production. Personal errands (shopping, banking, health, subscriptions, household, government services) are personal even on general-purpose sites. Internal operations, vendors, and colleague-facing work are work. If the user says which, that settles it.
-- **Select the profile directly.** Many tools offer a generic "current browser" selector that picks whichever profile was used most recently. That can silently put a personal task in a work account. Select the specific profile or session that matches the context.
-- **Do not trust display names.** Labels like "Browser 1" can reshuffle after restarts, and nicknames may not propagate. Use a stable identifier where the tool provides one, and record the mapping in a private local note if useful. Even then, verify every time.
-- **A window is not a connection.** Opening a window for a profile puts it on screen. The automation connection may still point elsewhere. Confirm the connection, not only the window.
+- **Classify the context before choosing a profile.** Personal, work, test, staging, or production. Personal errands (shopping, banking, health, subscriptions, household, government services) are personal even on general-purpose sites. Internal operations, vendors, and colleague-facing work are work. If the user says which, that settles it.
+- **Select the profile directly.** A generic "current browser" selector often picks whichever profile was used most recently, which can silently put a personal task in a work account.
+- **Do not trust display names.** Labels like "Browser 1" can reshuffle after restarts. Use a stable identifier where the tool provides one, record the mapping in a private local note if useful, and still verify every time.
+- **A window is not a connection.** Opening a window for a profile puts it on screen; the automation connection may still point elsewhere. If the window is open but the tool never lists a connection for it, and relaunching does not help, the connector or extension in that profile is likely signed out or asleep. Ask the user to open it in that window and sign in if prompted, then list connections again and verify.
 - **Do not restart or force-quit the user's browser** without their explicit OK. It closes everything they have open.
 
 ### Account preflight gate
 
-Before any action that changes data, answer three questions:
+Before any action that changes data, answer:
 
 1. **Which account is this?** Open a fresh tab to a reliable account page and read the signed-in identity.
 2. **Which environment is this?** Production, staging, test, or a specific organization or workspace.
 3. **What exact item will change?** The specific record, form, or setting.
 
-If any answer is unclear, stop and ask. If your environment uses a permission gate or verification marker that unlocks write actions, set it only after the account check has actually passed, and record the evidence. Never set it to get past the gate.
+If any answer is unclear, stop and ask. If your environment uses a permission gate or verification marker that unlocks write actions, set it only after the account check has actually passed, and record the evidence. Never set it just to get past the gate.
 
-## 4. Set the task boundary and authorization
+## 5. Set the task boundary and authorization
 
-Before navigating deeply, identify:
-
-- The target page, record, form, or setting.
-- What will be entered, collected, changed, uploaded, or sent.
-- The minimum information needed.
-- Fields that need the user's judgment.
-- Whether the final action can be undone.
+Before navigating deeply, identify the target page, record, form, or setting; what will be entered, collected, changed, uploaded, or sent; the minimum information needed; fields that need the user's judgment; and whether the final action can be undone.
 
 **Reversible changes** the user asked for, such as toggling a setting or updating a saved card or draft, can proceed after normal verification.
 
 **Irreversible or high-impact actions** need a pre-action record and confirmation unless the user already gave clear authorization for that exact action. These include payments, purchases, sends, invitations, publishing, deletions, plan or billing changes, access or ownership changes, and anything labeled "cannot be undone" or "cannot be edited after submission." Treat such forms as one-way doors.
 
+For deletions, check whether the service keeps a restorable trash or recycle bin and note it in the pre-action record. A restore path lowers the risk but does not remove the need for authorization. Some actions, including delete, sit behind menus that appear only when you hover over an item; reveal the menu on the exact item you verified.
+
 Honor an explicit request to review before submission. If authorization is already given, do not ask again. If it is missing, prepare and verify the full result, show the pre-submit state, and ask only for the final action.
 
-## 5. Inspect the page before editing
+## 6. Inspect the page before editing
 
-Before writing any fill logic, list every relevant control. A few minutes here saves long debugging sessions.
-
-For each control, record:
-
-- Element kind: single-line input, multi-line text area, rich-text editor, dropdown, checkbox, radio group, date picker, upload control, or custom widget.
-- Label, accessible name, or label relationship.
-- Required state and current value or value length.
-- Whether it is the real editor, a wrapper, or a hidden sync field.
-- Whether changing it re-renders the form.
+Before writing any fill logic, list every relevant control and record its kind (single-line input, text area, rich-text editor, dropdown, checkbox, radio, date picker, upload, custom widget), its label or label relationship, its required state, its current value or length, whether it is the real editor or a wrapper or hidden sync field, and whether changing it re-renders the form.
 
 ```text
 // Pseudocode: adapt to the chosen automation library
@@ -5125,48 +5174,37 @@ for each c in controls:
 save record list to 'form-before.json'
 ```
 
-Things to watch for:
+Watch for:
 
-- **Look-alike controls.** Forms often use different control kinds for similar-looking fields. A single-line input silently strips line breaks. A text area usually accepts everything. Rich-text editors keep their own internal model and may ignore direct value changes.
-- **Hidden sync fields.** Some editors pair a visible editable area with a hidden input that looks fillable. Filling the hidden input passes a raw DOM check, but the form then reports the field as empty, because the app reads the visible editor. Always fill the control the app actually reads.
-- **Empty wrappers.** An accessibility locator can return a wrapper with no editable content inside. Find the real editable element through its label relationship (for example the element named by its labelled-by attribute), then tag it with a temporary marker attribute so you can target it reliably.
-- **Unstable order.** Field order can change between loads. Never address fields by position. Use label text or label relationships.
+- **Look-alike controls.** A single-line input silently strips line breaks. A text area usually accepts everything. Rich-text editors keep their own internal model and may ignore direct value changes.
+- **Hidden sync fields.** Some editors pair a visible editable area with a hidden input that looks fillable. Filling the hidden input passes a raw DOM check, but the form reports the field as empty. Always fill the control the app actually reads.
+- **Empty wrappers.** An accessibility locator can return a wrapper with no editable content. Follow the label relationship to the real editable element, then tag it with a temporary marker attribute so you can target it reliably.
+- **Unstable order.** Field order can change between loads. Never address fields by position.
 - **Current state.** Before changing an existing record or setting, read its current value so you do not overwrite the wrong thing.
 
-## 6. Use the right interaction for each control
+## 7. Use the right interaction for each control
 
 | Control | Preferred interaction | Watch for |
 |---|---|---|
 | Single-line input | Normal fill | Line breaks removed silently; length limits. |
 | Multi-line text area | Fill, then move focus to the page body | Some apps commit only on blur. |
-| Rich-text or content-editable editor | Click it, select all, delete, insert text with keyboard-style input, then blur | Direct DOM writes or value setters may be ignored by the app's model. |
-| Dropdown or combobox | Open it, choose by exact visible option text, wait for it to settle | Selection can re-render the whole form. |
+| Rich-text or content-editable editor | Click, select all, delete, insert text with keyboard-style input, then blur | Direct DOM writes or value setters may be ignored. |
+| Dropdown or combobox | Open, choose by exact visible option text, wait to settle | Selection can re-render the whole form. |
 | Checkbox or radio | Read the state first; click only if it needs to change | Clicking toggles an already-correct value. |
 | Date or time picker | Set values, close by clicking neutral page background, check the rendered summary | Close or clear buttons may wipe values; typing while open can rewrite dates. |
 | File upload | Confirm file, destination, and privacy first | Upload may start at once and be hard to undo. |
 
-Robust sequence for framework-driven editors:
+Robust sequence for framework-driven editors: click the real editable element, select all and delete, insert the new text with keyboard-style input, move focus to a neutral element to commit, wait briefly, then read the value back.
 
-1. Click the real editable element.
-2. Select all existing content and delete it.
-3. Insert the new text with keyboard-style text input.
-4. Move focus to a neutral element, such as the page body, to commit.
-5. Wait briefly for state to settle.
-6. Read the value back.
+**Blur after every rich-text field.** Otherwise the next edit can trigger a re-render that rebuilds earlier editors from a model that never received their text, and only the last field survives.
 
-**Blur after every rich-text field.** Without it, the next edit can trigger a re-render that rebuilds earlier editors from a model that never received their text, and only the last field survives.
+**Order matters.** Do dropdowns, checkboxes, tabs, and other re-rendering choices first, then fill text. Re-inspect after each such choice. Set tricky widgets like date pickers early and re-check them after every later edit.
 
-**Order matters.** Do dropdowns, checkboxes, tabs, and other re-rendering choices first, then fill text. Re-inspect after each such choice. For tricky widgets like date pickers, set them early and re-check them after every later edit.
+**Selectors drift.** Before clicking a send or submit control found by selector, read the composed content back to confirm it landed in the right place. Selectors that worked before can stop matching after a site update.
 
-**Clipboard and paste.** Headless browsers often lack clipboard permission, so embed values directly rather than relying on the clipboard. When rich content (such as HTML with links) must be inserted, a synthetic paste event carrying both HTML and plain text works in some editors and is ignored by others. Some editors expose their own documented conversion method instead. Try the supported method for that editor and always verify the result, ideally through the service's API or an export rather than the screen alone.
+## 8. Verify after every fill
 
-**Drag and drop.** Dragging can create layout changes (like columns) or trigger a clickable element by accident. Prefer keyboard-based move commands with short waits, then verify the final structure.
-
-**Send buttons and selectors drift.** Before clicking a send or submit control found by selector, read the composed content back to confirm it landed in the right place. Selectors that worked before can stop matching after a site update.
-
-## 7. Verify after every fill
-
-After each change, read the value back and compare it with what you intended. For sensitive content, compare lengths or a short redacted summary rather than printing full text.
+Read each value back and compare it with what you intended. For sensitive content, compare lengths or a short redacted summary rather than printing full text.
 
 ```text
 result = fillField(field, value)
@@ -5176,22 +5214,20 @@ if result.length != value.length:
   verify again; if still wrong, stop and report
 ```
 
-How to read common mismatches:
+Reading mismatches:
 
 - **Empty after a reported success:** the app ignored a direct value change. Use focus-and-keyboard input, then blur.
-- **Short by a few characters, roughly one per paragraph:** a single-line input dropped line breaks. Rewrite as one paragraph, or find the multi-line field.
-- **Short after collapsing blank lines or repeated spaces:** some editors normalize whitespace. Usually acceptable; if not, simplify the formatting yourself and note it.
+- **Short by about one character per paragraph:** a single-line input dropped line breaks. Rewrite as one paragraph, or find the multi-line field.
+- **Short after blank lines or repeated spaces:** the editor normalized whitespace. Usually acceptable; if not, simplify the formatting and note it.
 - **Earlier field now blank:** a re-render reset uncommitted state. Blur each field and do re-rendering choices first.
 
 If verification still fails after one retry, do not move toward submission. Report the problem and ask how to proceed.
 
-## 8. Two-phase run and pre-submit gate
-
-Run consequential tasks in two phases.
+## 9. Two-phase run and pre-submit gate
 
 **Phase 1: prepare.** Fill everything, verify each field, save a structured after-state record, and capture a full-page screenshot. Do not submit.
 
-**Phase 2: commit.** If the task or a standing instruction already authorizes the final action, continue. Otherwise show the prepared state and get the missing authorization. Then re-fill if needed, re-run the gate below, and click the final control once.
+**Phase 2: commit.** If the task or a standing instruction already authorizes the final action, continue. Otherwise show the prepared state and get the missing authorization. Then re-fill if needed, re-run the gate, and click the final control once.
 
 A script can implement this with a flag such as `--submit` that is off by default.
 
@@ -5210,7 +5246,7 @@ close browser
 
 ### Pre-submit readiness gate
 
-Re-inspect the full page state. Submit only if all are true:
+Re-inspect the full page. Submit only if all are true:
 
 - [ ] Correct account, organization, and environment.
 - [ ] Correct target item.
@@ -5224,17 +5260,17 @@ Re-inspect the full page state. Submit only if all are true:
 
 A confirmation request for an irreversible action should state the target, key values, recipients or audience, any cost, what cannot be undone, and any open questions.
 
-## 9. Confirm completion
+### Worked example (fictional)
+
+An assistant fills a grant application for the fictional Harbor Lane Arts Collective on the fictional Northwind Foundation portal. Inspection finds: Project title (single-line, required), Summary (rich-text editor, required, with a hidden sync input beside it), Category (dropdown that re-renders the form), and Start date (picker). The plan: choose Category first, set the date, fill Summary in the visible editor with keyboard input and blur, then fill the title. Read-back shows Summary at 412 of 415 characters (the editor collapsed double blank lines, acceptable and noted) and Title at 0 of 38. A retry with keyboard input gives 38 of 38. The date is re-checked and still correct. The page says entries cannot be edited after submission, so the assistant saves a screenshot and asks: "Ready to submit the Harbor Lane application to Northwind under Community Arts, starting 1 March. It cannot be edited afterward. Submit?"
+
+## 10. Confirm completion
 
 A click is not proof of success. Look for real evidence: a success message, a confirmation reference, a new record, a setting that persists after a safe reload, or a sent or published item.
 
 - **Errors can be cosmetic.** Some apps show "something went wrong" after the work actually finished. Inspect the result before retrying, because blind retries can create duplicate messages, payments, or records.
-- **Frozen pages.** A blocking pop-up dialog can freeze the tab so clicks and screenshots time out. Ask the user to respond to it, then continue. Where possible, confirm the outcome through an independent channel (for example a public lookup or an API read) instead of the frozen UI.
+- **Frozen pages.** A blocking pop-up dialog can freeze the tab so clicks and screenshots time out. Ask the user to respond to it, then continue. Where possible, confirm the outcome through an independent channel, such as a public lookup or an API read.
 - If you cannot confirm completion, say what you tried, what evidence exists, and what remains uncertain. Never report an attempt as a success.
-
-## 10. Parallel work and background tabs
-
-When many independent items are needed (for example several generated drafts or images), separate tabs or sessions each given the full brief avoid one item biasing the next. Keep concurrency modest, around ten at once; more tends to stall or fail. Background tabs may not render content at full size, so bring an item into view before capturing it and check that nothing is cut off. Clean up any temporary overlays or tabs afterward.
 
 ## 11. General failure patterns
 
@@ -5242,28 +5278,28 @@ When many independent items are needed (for example several generated drafts or 
 |---|---|---|
 | Fill reports success but the field is blank | App model ignored a direct write | Keyboard-style input, blur, read back. |
 | Earlier fields blank out as later ones are filled | Re-render rebuilt editors from stale state | Blur after each fill; do re-rendering choices first. |
-| A choice in a dropdown wipes the form | Selection triggers a full re-render | Make choices before filling text; re-verify. |
+| A dropdown choice wipes the form | Selection triggers a full re-render | Make choices before filling text; re-verify. |
 | Field looks filled but validation says empty | Hidden sync field was edited | Fill the visible editor the app reads. |
 | Locator returns an empty wrapper | Accessible name sits on a different element | Follow the label relationship to the real editor. |
 | Interactive tool crashes on long text or parallel calls | Tool layer is unstable for heavy work | Switch to a standalone script. |
 | Headless page differs from a normal browser | Site varies by browser context | Prefer a direct interface; escalate only for an explicit task, never evade protections. |
 | Wrong account or profile opened | Generic selector picked the last-used profile | Classify context, select the profile directly, verify the account. |
+| Profile window open but no connection appears | Connector in that profile is signed out or asleep | Ask the user to open and sign in to it in that window, re-list, verify. |
 | Session ends after a page-script request | Internal endpoint called without the app's normal headers | Drive the UI or use a supported API. |
 | Automation connection fails an integrity or signature check | Local helper is stale or altered | Stop; repair through an approved path that keeps verification on. Never disable checks. |
 | Security check or 2FA prompt appears | Site needs the user present | Ask the user to complete it, then continue. |
 
 ## 12. Report results
 
-Keep reports short. Summarize the outcome in one or two sentences, point to the screenshot and the after-state record, and offer to open the screenshot for the user. Do not paste every field value as a large inline table; the user can open the record if they want the full text. Store artifacts only where the user can appropriately access them, and delete temporary files that contain sensitive content when they are no longer needed.
+Summarize the outcome in one or two sentences, point to the screenshot and the after-state record, and offer to open the screenshot. Do not paste every field value as a large inline table. Store artifacts only where the user can appropriately access them, and delete temporary files with sensitive content when no longer needed.
 
 ## 13. Keep the procedure current
 
-When a run reveals a reusable lesson, such as a new failure mode, a working pattern, or a missing capability, add it to your local copy of this procedure. Prefer a single table row with symptom, cause, and fix over new prose. Never record credentials, account identifiers, personal details, or private site data. Keep the document bounded: when it grows long, merge older entries into general principles instead of appending incident history. Tool paths, versions, and profile mappings go stale, so update them in place and re-verify them in the current environment.
+When a run reveals a reusable lesson, such as a new failure mode, a working pattern, or a missing capability, add it to your local copy of this procedure. Prefer a single table row with symptom, cause, and fix over new prose. Never record credentials, account identifiers, personal details, or private site data. When the document grows long, merge older entries into general principles instead of appending incident history. Tool paths, versions, and profile mappings go stale, so update them in place and re-verify them.
 
 ## Final audit checklist
 
 - [ ] The least invasive suitable route was used.
-- [ ] Purpose and authorization were clear; only minimum relevant data was accessed.
 - [ ] Visible-browser use was announced and kept to a fresh window or tab.
 - [ ] Account, environment, and target were verified before any write.
 - [ ] Controls were inspected before editing and addressed by label, not position.
@@ -5271,21 +5307,48 @@ When a run reveals a reusable lesson, such as a new failure mode, a working patt
 - [ ] The pre-submit gate passed, with no empty required fields.
 - [ ] Irreversible actions had a pre-action record and authorization.
 - [ ] Success was confirmed with evidence after acting.
-- [ ] The report separates confirmed results from uncertainty and exposes no secrets or unneeded personal data.
+- [ ] The report separates confirmed results from uncertainty and exposes no secrets.
+
+## Optional extras
+
+**Clipboard and paste.** Headless browsers often lack clipboard permission, so embed values directly. When rich content (such as HTML with links) must be inserted, a synthetic paste event carrying both HTML and plain text works in some editors and is ignored by others; some editors expose their own documented conversion method instead. Verify the result, ideally through the service's API or an export rather than the screen alone.
+
+**Drag and drop.** Dragging can create layout changes (like columns) or trigger a clickable element by accident. Prefer keyboard move commands with short waits, then verify the final structure.
+
+**Parallel work and background tabs.** When many independent items are needed (for example several generated drafts or images), separate tabs or sessions each given the full brief avoid one item biasing the next. Keep concurrency modest (a default of about ten, adjustable); more tends to stall. Background tabs may not render at full size, so bring an item into view before capturing it, check nothing is cut off, and clean up temporary overlays or tabs afterward.
+
+**Auditing configuration after a structural change.** When fields, tables, or sources are renamed or deleted and the service has no API for its automations or workflows, audit through the UI:
+
+- Steps that bind to internal IDs usually follow renames; custom script steps that reference names may silently break; steps whose source was deleted often show a "fix configuration" style warning.
+- Open each item in turn, wait for it to load, and check for warning text, script steps, and the status of the latest run in its history.
+- If a page-script loop runs longer than your tool's call time limit, start it without waiting, store results in a page variable, and poll for them in later calls.
+- If the tool rejects returned text containing certain characters (such as URL query symbols), strip or encode them before returning.
+- Report which items need attention, separating confirmed breakage from items that only use name-based references and need a manual check.
 
 
 ---
 name: create-a-skill
-description: Design, test, and improve a reusable AI skill, from a rough idea or a repeated workflow to a tested, well-triggered skill. Use when someone wants to turn a workflow into a skill or improve one.
+description: Designs, tests, and improves a reusable AI skill from a rough idea or repeated workflow. Use when someone says "turn this into a skill," "improve this skill," or "does my skill help?"
 ---
 
 # Create an AI skill
 
 Use this workflow to create a new AI skill, improve an existing one, test whether a skill actually helps, or tune when it activates. A skill is a focused set of instructions, plus optional scripts, reference documents, and templates, that helps an AI do a recurring job well and consistently.
 
+## Quick version
+
+- Tell your assistant what the skill should do, when it should be used, and what a good output looks like. If you already did the job in a conversation, paste it and ask the assistant to extract the steps, corrections, and formats, then confirm the gaps.
+- Before drafting, have it ask only questions that change the design: missing information, edge cases, actions that need your confirmation, and what would make you reject an output.
+- Draft the skill: a short name, a slightly assertive description that leads with trigger phrases, imperative instructions that explain why each step matters, an output template, and what to do when something is missing or unclear.
+- Write two or three realistic test requests. Paste the skill into a fresh chat with each one and read the outputs yourself before changing anything.
+- Revise from the general cause of each problem, not the specific example. Fold each lesson into the rule it refines instead of appending notes about what went wrong.
+- Repeat until you are happy or progress stops, then run the audit checklist in section 10.
+
 The method works with any AI system that supports reusable instructions. Where this guide mentions files, folders, or tools, substitute whatever your platform provides.
 
-## The core loop
+## 1. Work out where the user is
+
+The core loop:
 
 1. Understand what the skill should do and roughly how.
 2. Write or revise a draft.
@@ -5297,23 +5360,7 @@ The method works with any AI system that supports reusable instructions. Where t
 8. Optionally tune the description so the skill activates for the right requests.
 9. Package and hand off the skill.
 
-Your first job is to work out where the user is in this loop and help them take the next step. Someone who says "I want a skill for X" needs discovery, a draft, tests, and review. Someone with an existing draft can go straight to testing and revision. Someone who says "skip the formal evaluation, just work on it with me" should get that. Stay flexible about order and depth.
-
-If you have a task list, add the loop steps to it, including "show test outputs to the user before revising". That step is the one most often skipped.
-
-## Communicating with the user
-
-Users range from experienced developers to people who have never used a command line. Read context cues and adjust.
-
-- Words like "evaluation" and "benchmark" are usually fine.
-- Words like "JSON", "assertion", "baseline", and "schema" need clear signs that the user knows them. Otherwise add a short definition the first time.
-- When in doubt, explain briefly. It costs little.
-
-Ask questions whose answers change the design, not to fill out a form. Keep the user involved at decision points: confirm scope before writing a lot, share test prompts before relying on them, and let human judgment settle subjective questions such as tone, design, and usefulness.
-
-If the skill will touch private communications, records, or information about people, confirm a legitimate purpose and clear authorization. Design the skill to use only the minimum relevant sources, leave out unrelated or sensitive personal details, respect consent and privacy expectations, and keep outputs within an appropriate access boundary.
-
-## 1. Find the starting point
+Your first job is to find the user's place in this loop and help them take the next step. Stay flexible about order and depth: someone who says "skip the formal evaluation, just work on it with me" should get that.
 
 | Situation | What to do first |
 |---|---|
@@ -5324,7 +5371,19 @@ If the skill will touch private communications, records, or information about pe
 
 When extracting from a conversation, pull out the tools and sources used, the sequence of steps, corrections the user made, input and output formats, and conditions that changed the approach. Summarize this, ask the user to fill gaps, and get confirmation before moving on. Do not quietly turn a one-time workaround into a general rule.
 
-## 2. Capture intent
+If you have a task list, add the loop steps to it, including "show test outputs to the user before revising". That step is the one most often skipped.
+
+## 2. Communicate at the right level
+
+Users range from experienced developers to people who have never used a command line. Read context cues and adjust.
+
+- Words like "evaluation" and "benchmark" are usually fine.
+- Words like "JSON", "assertion", "baseline", and "schema" need clear signs that the user knows them. Otherwise add a short definition the first time.
+- When in doubt, explain briefly. It costs little.
+
+Keep the user involved at decision points: confirm scope before writing a lot, share test prompts before relying on them, and let human judgment settle subjective questions such as tone, design, and usefulness.
+
+## 3. Capture intent
 
 Make sure you can answer these questions:
 
@@ -5335,11 +5394,9 @@ Make sure you can answer these questions:
 
 For question 4, suggest a default based on the skill type and let the user decide. Skills with objectively checkable outputs (file conversions, data extraction, code generation, fixed workflow steps) benefit from test cases with checks. Skills with subjective outputs (writing style, visual design) usually need human review more than numerical checks.
 
-## 3. Interview and research
+## 4. Interview and research
 
-Ask about edge cases, input and output formats, example files, success criteria, permissions, and dependencies. Hold off on writing test prompts until these are settled.
-
-Useful question formats:
+Ask about edge cases, input and output formats, example files, success criteria, permissions, and dependencies. Hold off on writing test prompts until these are settled. Useful question formats:
 
 - "If information is missing, should the skill ask, make a labeled assumption, or produce a draft marked incomplete?"
 - "Should it work with any source you give it, or only specific approved sources?"
@@ -5347,9 +5404,9 @@ Useful question formats:
 - "What would make you reject an output?"
 - "Who will use this skill, and what can they already be assumed to know?"
 
-If you have research capabilities, such as documentation search or a way to look up similar skills and good practices, use them before asking the user things you could find yourself. Run research in parallel if you can, otherwise one step at a time. Arrive with context so the user has less to explain. If sources conflict or requirements stay unclear, say so instead of inventing a rule.
+If you can search documentation or look up similar skills and good practices, do that before asking the user things you could find yourself. If sources conflict or requirements stay unclear, say so instead of inventing a rule.
 
-## 4. Choose the structure
+## 5. Choose the structure
 
 A typical skill package looks like this. Use your platform's naming conventions:
 
@@ -5369,37 +5426,32 @@ Most skill systems load content in layers, so design for progressive disclosure:
 | 2. Main instructions | The body of the skill | Whenever the skill activates | Short enough to read in one pass; a few hundred lines at most |
 | 3. Bundled resources | Scripts, references, assets | Only when needed | Can be large; scripts can run without being read |
 
-These are guides. Follow any limits your platform sets. Key patterns:
+Follow any limits your platform sets. If it sets none, choose a size limit for the main file yourself (adjustable) and check against it whenever you edit. Key patterns:
 
-- If the main instructions grow long, add a layer of hierarchy: move detail into reference files and say exactly when to read each one.
-- Point to every reference file from the main instructions, with guidance on when to use it.
+- If the main instructions grow long, move detail into reference files and say exactly when to read each one.
 - Give long reference files a table of contents.
-- When a skill supports several variants (for example, deploying to different hosting providers), keep the shared workflow and variant selection in the main file and put each variant in its own reference file. The AI then reads only the one it needs.
+- When a skill supports several variants (for example, deploying to different hosting providers), keep the shared workflow and variant selection in the main file and put each variant in its own reference file.
+- Split unrelated jobs into separate skills when they have different audiences, permissions, sources of truth, or definitions of done.
 
-Keep a skill focused. Split unrelated jobs into separate skills when they have different audiences, permissions, sources of truth, or definitions of done.
-
-## 5. Write the skill
+## 6. Write the skill
 
 ### Required parts
 
 - **Name:** a short, stable identifier.
-- **Description:** what the skill does and when to use it. This is usually the main thing that decides whether the AI uses the skill, so put all "when to use" information here, not in the body.
+- **Description:** what the skill does and when to use it. This usually decides whether the AI uses the skill, so put all "when to use" information here, not in the body.
 - **Compatibility (optional):** required tools or dependencies, only if they are not obvious.
 - **Instructions:** the body.
 
 ### Writing the description
 
-AI systems often under-use skills, skipping them when they would help. Counter this by making descriptions slightly assertive. Instead of "How to build a simple dashboard for internal data", write "How to build a simple dashboard for internal data. Use this whenever the user mentions dashboards, data visualization, internal metrics, or wants to display company data, even if they don't say 'dashboard'."
-
-Guidelines:
+AI systems often under-use skills. Counter this by making descriptions slightly assertive. Instead of "How to build a quick inventory dashboard", write "How to build a quick inventory dashboard. Use this whenever the user mentions dashboards, stock-level charts, operational metrics, or wants to see warehouse data visually, even if they don't say 'dashboard'."
 
 - Keep it short. Respect your platform's length limit; if there is none, one or two sentences is a good default.
-- Lead with the phrases and situations that should trigger it.
-- Include cases where the user implies the job without naming it.
+- Lead with the phrases and situations that should trigger it, including cases where the user implies the job without naming it.
 - Add scope limits only where false activation would be costly.
 - Do not put the workflow itself in the description.
 
-If the user's platform offers different ways to reach a skill, such as automatic activation, grouping under a routing skill, or manual invocation by name, ask which fits. A sensible default is automatic for general workflows and manual for command-style skills that should run only on request. If many skills share one area, grouping can keep the always-visible list manageable. After adding, renaming, or removing a skill, run whatever registration or validation step the platform provides.
+If the platform offers different ways to reach a skill, such as automatic activation, grouping under a routing skill, or manual invocation by name, ask which fits. A sensible default is automatic for general workflows and manual for command-style skills. If many skills share one area, grouping keeps the always-visible list manageable. After adding, renaming, or removing a skill, run whatever registration or validation step the platform provides.
 
 ### Safety: no surprises
 
@@ -5408,7 +5460,7 @@ A skill must not contain malware, exploit code, or anything that compromises sec
 ### Writing style
 
 - Use the imperative form.
-- Explain why things matter instead of stacking unexplained commands. Capable AI systems follow reasoning better than rigid rules. If you find yourself writing ALWAYS or NEVER in capitals, treat it as a warning sign and explain the reason instead. Keep firm rules for authorization, privacy, safety, data integrity, and irreversible actions.
+- Explain why things matter instead of stacking unexplained commands. If you find yourself writing ALWAYS or NEVER in capitals, treat it as a warning sign and explain the reason instead. Keep firm rules for authorization, privacy, safety, data integrity, and irreversible actions.
 - Write for general use, not for the specific examples you have in mind.
 - Write a draft, then reread it with fresh eyes and improve it.
 
@@ -5430,17 +5482,17 @@ Include examples when they teach something:
 ```markdown
 ## Commit message format
 Example:
-Input: Added user login with token-based sessions
-Output: feat(auth): add token-based login
+Input: Fixed rounding error in invoice totals
+Output: fix(billing): correct invoice total rounding
 ```
 
-Also cover, as needed: required inputs and what to do if they are missing; the normal workflow and its branches; checks to run before finishing; and failure behavior for missing inputs, unavailable tools, ambiguous requests, failed validation, and high-impact actions that need confirmation.
+Also cover, as needed: required inputs and what to do if they are missing; the normal workflow and its branches; checks to run before finishing; and failure behavior for unavailable tools, ambiguous requests, failed validation, and high-impact actions that need confirmation.
 
-## 6. Write test cases
+## 7. Write test cases
 
-After the draft, write two or three realistic test prompts, the kind of thing a real user would type. Share them: "Here are a few test cases I'd like to try. Do these look right, or do you want to add more?" Then run them.
+After the draft, write two or three realistic test prompts, the kind of thing a real user would type. Share them, for example: "Here are three requests I plan to test with. Do they look like what you'd really ask, or should we add one?"
 
-Save tests in a simple structured file. Leave checks empty for now; you will draft them while runs are in progress.
+Cover meaningful variety: a typical request, an incomplete or ambiguous one, a format-sensitive one, and, if relevant, one that should lead to a confirmation or refusal. Give each test a descriptive name. Leave checks empty for now; draft them while runs are in progress.
 
 ```json
 {
@@ -5457,31 +5509,79 @@ Save tests in a simple structured file. Leave checks empty for now; you will dra
 }
 ```
 
-Cover meaningful variety: a typical request, an incomplete or ambiguous one, a format-sensitive one, and, if relevant, one that should lead to a confirmation or refusal. Give each test a descriptive name, not just a number.
+## 8. Run and review the tests
 
-## 7. Run and evaluate the tests
+Treat this as one continuous sequence. Do not stop partway.
 
-Treat this section as one continuous sequence. Do not stop partway.
+1. **Run each test** with the skill available. In a plain chat, paste the skill and one test prompt into a fresh conversation, or follow the skill yourself. Call this a sanity check, not a rigorous comparison, since the author is also the runner. If you can run independent helpers with baselines, see Optional extras.
+2. **Draft checks while you wait.** Good checks are objectively verifiable and have descriptive names that make sense at a glance: required sections are present; the produced file opens; totals match the source; missing inputs are flagged. Do not force checks onto subjective qualities; those need human review. If checks already exist, explain what they verify and adjust if needed.
+3. **Grade each output** against its checks. For checks a script can verify, write and run a script; it is faster, more reliable, and reusable. Record the check text, pass or fail, and evidence.
+4. **Present results to the user before you start fixing things yourself.** For each test, show the prompt and output, save any file the user must inspect and say where it is, and ask: "How does this look? Anything you'd change?"
+5. **Read the feedback.** Empty feedback usually means the output was fine, though it is not proof the skill is complete. Focus on tests with specific complaints.
 
-### Organize the workspace
+## 9. Improve the skill
 
-Keep results in a workspace next to the skill, organized by iteration and test case. Create folders as you go, not all up front.
+This is the heart of the loop. Take your time. Draft a revision, then reread it fresh and improve it.
+
+1. **Generalize from feedback.** The skill will be used many times on many different requests. You iterate on a few examples only because it is fast; a skill that works only for those is useless. Avoid narrow, overfitted fixes and oppressive rules. If a problem persists, try a different framing, metaphor, or working pattern.
+2. **Keep it lean.** Remove what is not earning its place. Read the run transcripts, not just final outputs. If the skill makes the AI waste effort, remove the cause and see what happens.
+3. **Explain the why.** Even if feedback is terse or frustrated, work out what the user actually needs and put that understanding into the instructions.
+4. **Bundle repeated work.** If several runs independently wrote similar helper scripts or followed the same multi-step routine, write it once, add it to the skill, and tell the skill to use it.
+5. **Fold lessons into existing rules.** When a run teaches a lesson, edit or merge the rule it refines instead of adding a new paragraph about the incident. Do not append dated incident notes to the skill. If you want an audit trail, keep it in a separate change log that the skill does not load when it runs.
+6. **Preserve what works.** Do not break behavior the user already liked while fixing something else.
+
+Then rerun all tests as a new iteration, show the new results with previous outputs and feedback alongside, wait for the user to finish reviewing, and repeat. Stop when the user is happy, feedback is consistently empty across meaningful tests, or you are no longer making meaningful progress.
+
+## 10. Package and hand off
+
+If a packaging tool is available, package the skill in the user's chosen format and say where the result is. Include only resources needed for normal use. When updating an installed skill, keep the original name and folder name; do not create a "v2" copy unless the user asks.
+
+Pre-delivery audit:
+
+- [ ] Name is stable and appropriate.
+- [ ] Description states what the skill does and when to use it, within the platform's limits.
+- [ ] Main file is within the size limit, and any validation step passes.
+- [ ] Lessons are merged into rules, with no appended incident notes.
+- [ ] Instructions do not depend on undeclared tools, private conventions, or personal access.
+- [ ] Every bundled resource is referenced, clearly named, and explained.
+- [ ] No credentials, private identifiers, confidential records, or sensitive examples are included.
+- [ ] Any retained tests are safe to distribute.
+- [ ] If the skill will be shared in a collection, the decision to include or exclude it is recorded, it has passed privacy and quality review, and any public identifier stays stable (keep old identifiers as aliases if renamed).
+
+Give a short handoff note: what the skill does, required capabilities, known limits, and a quick way to test it.
+
+**Readiness gate:** a skill is ready when it has a clear job, a description that routes the right requests to it, instructions that handle normal variation, explicit boundaries for uncertainty and authorization, and evidence from realistic tests that it improves outcomes. A long file is not the same as a reliable skill.
+
+## 11. Avoid common failure modes
+
+| Failure | Fix |
+|---|---|
+| Revising before the user has seen any outputs | Present results for human review first |
+| Fixes tailored to the test examples | Find the general cause and fix that |
+| Incident notes piling up at the end of the skill | Merge each lesson into the rule it refines; keep history in a separate log |
+| Many capitalized absolute rules | Replace with explained reasoning, except for true hard boundaries |
+| Vague or timid description, so the skill is rarely used | Lead with trigger phrases and name implied use cases |
+| Checks that pass with or without the skill | Replace with checks that show the skill's added value |
+| Calling a self-run sanity check a rigorous comparison | Label it honestly |
+| Assuming one person's tools, limits, or conventions | Ask the user for their platform's rules and use those |
+
+## Optional extras
+
+### Parallel runs with baselines
+
+If you can run independent helper agents, launch a with-skill run and a baseline run for every test in the same round, so they finish around the same time under similar conditions. For a new skill, the baseline is the same prompt with no skill. When improving a skill, snapshot it before editing and point the baseline at the snapshot. In later iterations, say whether the baseline is the original version or the previous iteration.
 
 ```text
 [skill-name]-workspace/
-├── skill-snapshot/              # only when improving an existing skill
+├── skill-snapshot/
 ├── iteration-1/
 │   ├── [test-name]/
-│   │   ├── with-skill/          # outputs from the skill under test
-│   │   ├── baseline/            # outputs from no skill or the old version
+│   │   ├── with-skill/
+│   │   ├── baseline/
 │   │   └── [test details, run data, grades]
 │   └── [benchmark summary]
 └── iteration-2/
 ```
-
-### Step 1: Launch all runs together
-
-If you can run independent helper agents, launch both a with-skill run and a baseline run for every test case in the same round, so they finish around the same time and run under similar conditions. Do not run the with-skill versions first and the baselines later.
 
 Run instructions template:
 
@@ -5494,26 +5594,7 @@ Execute this task:
 - Outputs to save: [what the user cares about, e.g. "the final spreadsheet"]
 ```
 
-Choose the baseline by situation:
-
-- **New skill:** same prompt, no skill.
-- **Improving a skill:** snapshot the current skill before editing and point the baseline at the snapshot.
-
-If an iteration uses new or changed prompts, write fresh test details for it; do not assume they carry over.
-
-### Step 2: Draft checks while runs are in progress
-
-Use the waiting time. Draft objective checks for each test and explain them to the user. If checks already exist, review them, explain what they verify, and adjust if needed.
-
-Good checks are objectively verifiable and have descriptive names that make sense at a glance. Examples: required sections are present; the produced file opens; totals match the source; missing inputs are flagged. Do not force checks onto subjective qualities; those need human review. Tell the user what they will see when results are ready.
-
-### Step 3: Record run data as each run finishes
-
-If your environment reports elapsed time or resource use when a run completes, save it immediately for that run. Some environments report this only once, so record each result as it arrives instead of batching. A simple record: time taken, resource use (such as tokens or cost), and any errors.
-
-### Step 4: Grade, aggregate, analyze, and present
-
-1. **Grade each run** against its checks, using a separate grader if available. For checks a script can verify, write and run a script; it is faster, more reliable, and reusable across iterations. Save each result with the check text, pass or fail, and evidence. Keep field names consistent so any review tool can read them:
+If the environment reports time or resource use when a run finishes, save it immediately; some environments report it only once. Keep grade field names consistent so any review tool can read them:
 
 ```json
 {
@@ -5527,66 +5608,17 @@ If your environment reports elapsed time or resource use when a run completes, s
 }
 ```
 
-2. **Aggregate** into a benchmark summary: pass rate, time, and resource use for each configuration, with average, spread, and the difference between with-skill and baseline. List each with-skill result next to its baseline.
+Aggregate into a benchmark: pass rate, time, and resource use per configuration, with average, spread, and the with-skill versus baseline difference, each with-skill result next to its baseline. Then analyze what totals hide: checks that pass either way, high variation that suggests flaky tests or unclear instructions, quality gains that cost too much time, and failures that share one root cause.
 
-3. **Analyze** what the totals hide:
-   - Checks that pass equally with and without the skill do not show what the skill adds.
-   - High variation across repeats may mean a flaky test or unclear instructions.
-   - A quality gain may not justify a large time or cost increase.
-   - Several failures may share one root cause.
+A good review view, using an existing tool rather than a custom build, has an Outputs view (prompt, rendered output, previous output, grades, feedback box, earlier feedback) and a Benchmark view (numbers with per-test breakdowns and notes). Without a display, write a standalone file the user can open.
 
-4. **Present results to the user before you start fixing things yourself.** Get outputs in front of the person as early as possible. Use an existing review tool if one is available rather than building a custom one. A good review view has two parts:
-   - **Outputs:** one test at a time, showing the prompt, the produced output (rendered where possible), the previous iteration's output, formal grades, a feedback box, and earlier feedback.
-   - **Benchmark:** pass rates, timing, and resource use per configuration, with per-test breakdowns and analysis notes.
+### Blind comparison
 
-   Tell the user something like: "The results are ready. One view lets you click through each test and leave feedback; the other shows the numbers. Let me know when you're done."
+When the user asks "is the new version actually better?" and wants rigor, give two outputs to an independent evaluator without saying which version produced which. Judge against a shared rubric: correctness, completeness, clarity, constraint adherence, and usability. Then analyze why the winner won. Human review is usually enough.
 
-### Step 5: Read the feedback
+### Tune the description for activation
 
-Collect feedback per run, in whatever form the review produced:
-
-```json
-{
-  "reviews": [
-    {"run_id": "chart-request-with-skill", "feedback": "the chart is missing axis labels"},
-    {"run_id": "summary-request-with-skill", "feedback": ""}
-  ]
-}
-```
-
-Empty feedback usually means the output was fine, though it is not proof the skill is complete. Focus on tests with specific complaints. Shut down anything you started for the review.
-
-## 8. Improve the skill
-
-This is the heart of the loop. Take your time. Draft a revision, then reread it fresh and improve it.
-
-1. **Generalize from feedback.** The skill will be used many times on many different requests. You are iterating on a few examples only because it is fast. A skill that works only for those examples is useless. Avoid narrow, overfitted fixes and oppressive rules. If a problem persists, try a different framing, metaphor, or working pattern; experiments are cheap.
-2. **Keep it lean.** Remove what is not earning its place. Read the run transcripts, not just the final outputs. If the skill is making the AI waste effort, remove the part causing it and see what happens.
-3. **Explain the why.** Even if feedback is terse or frustrated, work out what the user actually needs and put that understanding into the instructions.
-4. **Bundle repeated work.** If several test runs independently wrote similar helper scripts or followed the same multi-step routine, write it once, add it to the skill's scripts, and tell the skill to use it.
-5. **Preserve what works.** Do not break behavior the user already liked while fixing something else.
-
-### The iteration loop
-
-1. Apply the changes.
-2. Rerun all tests into a new iteration folder, including baselines. For a new skill, the baseline stays "no skill". For an existing skill, choose either the original version or the previous iteration and say which.
-3. Show the new results, with previous outputs and feedback alongside.
-4. Wait for the user to finish reviewing.
-5. Read feedback, improve, repeat.
-
-Stop when the user is happy, feedback is consistently empty across meaningful tests, or you are no longer making meaningful progress.
-
-## 9. Optional: blind comparison
-
-When the user asks "is the new version actually better?" and wants rigor, give two outputs to an independent evaluator without saying which version produced which. Have it judge against a shared rubric: correctness, completeness, clarity, constraint adherence, and usability. Then analyze why the winner won. This needs an independent evaluator and is usually unnecessary; human review is normally enough.
-
-## 10. Optional: tune the description for activation
-
-Do this after the skill itself works and the user agrees it is in good shape.
-
-### Step 1: Write activation test queries
-
-Write about 20 queries, a roughly even mix of should-activate and should-not-activate.
+Do this after the skill works and the user agrees it is in good shape. Write about 20 queries, a roughly even mix of should-activate and should-not-activate:
 
 ```json
 [
@@ -5595,83 +5627,23 @@ Write about 20 queries, a roughly even mix of should-activate and should-not-act
 ]
 ```
 
-Make them realistic and detailed: file names, a bit of job context, column names, casual phrasing, abbreviations, occasional typos, varied lengths. Focus on edge cases rather than obvious ones.
+Make them realistic and detailed, with varied lengths, casual phrasing, and occasional typos.
 
-- Weak: "Format this data", "Create a chart".
-- Strong: "ok so my manager sent me a spreadsheet (it's in my downloads, called something like 'Q4 sales final v2') and wants a column showing profit margin as a percent. revenue is column C and costs are D i think".
+- Weak: "Format this data", "Make a chart".
+- Strong: "ok so my team lead dropped a csv in the shared drive (something like 'march orders cleaned v3') and wants a column with the discount as a percent of list price. list price is column B and paid amount is E i think".
 
-Should-activate queries: vary phrasing and formality, include requests that never name the skill or file type but clearly need it, include unusual valid uses, and include cases where this skill competes with another and should win.
+Should-activate queries should vary phrasing, include requests that never name the skill but clearly need it, and include cases where this skill competes with another and should win. Should-not-activate queries should be near-misses that share keywords but need something different; obviously irrelevant negatives test nothing. AIs usually consult skills only for tasks they cannot easily do alone, so use substantive queries.
 
-Should-not-activate queries: use near-misses that share keywords or concepts but need something different, such as adjacent domains or ambiguous wording that a keyword match would catch. Avoid obviously irrelevant negatives; "write a sorting function" tests nothing for a document skill.
+Have the user review and edit the set; bad queries produce bad descriptions. If automated activation testing exists, run it in the background with progress updates. A sound loop holds out about 40 percent of queries, runs each query several times, proposes improvements from failures, re-tests for a few rounds, and picks the winner by held-out score. Test with the model the user actually works with. Otherwise, walk through the set manually. Show the before and after and report the scores.
 
-An AI usually consults skills for tasks it cannot easily do alone. Simple one-step requests may not activate any skill, however good the description. Use substantive queries where the skill would genuinely help.
-
-### Step 2: Review the set with the user
-
-Let the user edit queries, flip labels, and add or remove entries, using an editable review page if available or directly in conversation. Bad test queries produce bad descriptions, so this step matters.
-
-### Step 3: Run the optimization loop
-
-If the environment supports automated activation testing, tell the user it will take a while, run it in the background, and give progress updates. A sound loop:
-
-- Splits queries into about 60 percent for improving and 40 percent held out.
-- Tests the current description, running each query several times to get a reliable activation rate.
-- Proposes improved descriptions based on failures.
-- Re-tests each candidate on both sets for a few rounds.
-- Picks the best description by held-out score, not training score, to avoid overfitting.
-
-Test with the same AI model the user actually works with, so results match real behavior. Without automated testing, walk through the query set manually and judge whether the description would route each one correctly.
-
-### Step 4: Apply the result
-
-Update the description, show the user the before and after, and report the scores.
-
-## 11. Adapt to your environment
+### Adapt to your environment
 
 | Capability missing | Adaptation |
 |---|---|
-| Independent helper agents | Run each test yourself by following the skill, one at a time. Skip baselines, numerical benchmarking, and blind comparison. Call this a sanity check, not a rigorous comparison; human review compensates. |
-| A display or browser | Write review material to a standalone file the user can open, or show prompts and outputs directly in the conversation. Save files the user must inspect and say where they are. Ask "How does this look? Anything you'd change?" |
-| Automated activation testing | Skip optimization or review the query set manually against the description. |
-| Parallel runs keep failing or timing out | Run tests in sequence instead. |
-| Write access to the installed skill | Copy it to a writable location, edit there, and package from the copy. |
-
-When updating an installed skill, keep the original name and folder name. Do not create a "v2" copy unless the user asks.
-
-## 12. Package and hand off
-
-If a packaging tool is available, package the skill in the user's chosen format and tell them where the result is so they can install it. Include only the resources needed for normal use.
-
-Pre-delivery audit:
-
-- [ ] Name is stable and appropriate.
-- [ ] Description states what the skill does and when to use it, within the platform's limits.
-- [ ] Instructions do not depend on undeclared tools, private conventions, or personal access.
-- [ ] Every bundled resource is referenced, clearly named, and explained.
-- [ ] No credentials, private identifiers, confidential records, or sensitive examples are included.
-- [ ] Any people-related behavior uses only authorized, minimal, relevant information.
-- [ ] Any retained tests are safe to distribute.
-- [ ] If the skill will be shared in a collection, the decision to include or exclude it is recorded, it has passed privacy and quality review, and any public identifier stays stable (keep old identifiers as aliases if renamed).
-
-Give a short handoff note: what the skill does, required capabilities, known limits, and a quick way to test it.
-
-## Readiness gate
-
-A skill is ready when it has a clear job, a description that routes the right requests to it, instructions that handle normal variation, explicit boundaries for uncertainty and authorization, and evidence from realistic tests that it improves outcomes. A long file is not the same as a reliable skill.
-
-## Common failure modes
-
-| Failure | Fix |
-|---|---|
-| Revising before the user has seen any outputs | Present results for human review first |
-| Fixes tailored to the test examples | Find the general cause and fix that |
-| Many capitalized absolute rules | Replace with explained reasoning, except for true hard boundaries |
-| Vague or timid description, so the skill is rarely used | Lead with trigger phrases and name implied use cases |
-| Checks that pass with or without the skill | Replace with checks that show the skill's added value |
-| Lost timing or resource data | Record it as each run completes |
-| Easy, obviously irrelevant negative queries | Use near-miss queries that share keywords |
-| Calling a self-run sanity check a rigorous comparison | Label it honestly |
-| Assuming one person's tools, limits, or conventions | Ask the user for their platform's rules and use those |
+| Independent helper agents | Run tests yourself one at a time; skip baselines, benchmarks, and blind comparison |
+| Automated activation testing | Review the query set manually against the description |
+| Parallel runs keep failing or timing out | Run tests in sequence |
+| Write access to the installed skill | Copy it to a writable location, edit there, and package from the copy |
 
 
 ---

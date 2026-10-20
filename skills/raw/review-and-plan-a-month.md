@@ -25,7 +25,7 @@ Review and planning belong in the same session. The structural cause of last mon
 - A written **Review** for the month ending.
 - A written **Plan** for the month ahead: a memorable theme, no more than three outcomes, explicit cuts, and a pre-mortem.
 
-A plan is not a description of the month plus optimistic targets. **If the plan could be written without the user answering a hard question, it is a description, not a plan.**
+A plan is not a description of the month plus optimistic targets. The job is to work out the most important priorities, then decide how they will actually get done. **If the plan could be written without the user answering a hard question, it is a description, not a plan.**
 
 ## When to run it
 
@@ -47,7 +47,7 @@ Use only sources the user has authorized for this review and that serve the purp
 
 1. **Evidence first, discussion second.** Show the evidence picture before asking reflective questions.
 2. **Gather in one pass.** Batch independent reads rather than interrupting the conversation with small lookups.
-3. **Use current targets.** Judge progress against the user's live goals, not old schedules or stale records.
+3. **Use current targets.** Judge progress against the user's live goals, not old schedules or stale records. Keep targets in the user's own goal record or last month's plan, not hardcoded into this workflow, and check for any recent change (a pause, a reset, a new target) before judging.
 4. **Check data quality before a harsh verdict.** Missing syncs and incomplete logs distort conclusions. Ask the user to confirm surprising findings.
 5. **The user chooses.** You calculate, summarize, and ask hard questions. The user picks priorities, cuts, and commitments.
 6. **One decision at a time.** Do not move on until the current question has a real answer.
@@ -72,9 +72,11 @@ Use the user's own system: a task manager, project tracker, calendar, spreadshee
 | Goals | Active monthly, quarterly, and yearly goals with status and deadlines |
 | Work delivered | Completed tasks and deliverables, grouped by the user's own areas |
 | Calendar | Time off, travel, fixed deadlines, recurring commitments, heavy weeks |
-| Daily signals (optional) | Ratings, focus hours, or habit counts the user chooses to track |
+| Daily signals (optional) | Ratings, short reasons for ratings, focus hours, or habit counts the user chooses to track |
 
 For large sources, compute statistics and pull a few themes instead of reading raw entries.
+
+**Read only the fields you need.** When a daily log mixes structured fields with private free-form writing, such as a diary or journal, name the fields you want explicitly and leave the private writing out, even if you have access to it. A short field like "why I rated the day this way" usually gives enough texture for themes.
 
 **When a source is unavailable.** If a usual source has moved, been deleted, is mid-migration, or is disconnected, skip it rather than failing or guessing. Ask the user one short question for that area instead (for example, "Roughly how did sleep go this month?"), and note in the review which areas came from recollection rather than records.
 
@@ -92,7 +94,7 @@ Summarize completed work in a few areas, not a wall of bullets. The question is 
 
 ### Signals
 
-Include only measures the user tracks, such as average daily rating, focus hours, or low-energy streaks. Flag patterns like several low days in a row, or ratings that look fine while the user describes strain. Averages are not the whole truth; raise a mismatch briefly and ask about it.
+Include only measures the user tracks, such as average daily rating, focus hours, or low-energy streaks. Flag patterns like several low days in a row, or ratings that look fine while the user describes strain. Averages are not the whole truth: if the user records short reasons for their ratings, quote two or three that point the other way, and ask about the mismatch rather than letting a good average close the question.
 
 ### Worked example (fictional)
 
@@ -100,7 +102,7 @@ Include only measures the user tracks, such as average daily rating, focus hours
 
 ## Step 3: Reflect on the month
 
-Start with one specific observation from the evidence. Ask one question at a time and follow no more than two or three threads unless the user wants depth.
+Start with one specific observation from the evidence, with no preamble. Ask one question at a time and follow no more than two or three threads unless the user wants depth.
 
 Cover these before closing the review:
 
@@ -119,11 +121,11 @@ The minimum useful review, if time is short: goal movement, one structural fix, 
 
 ## Step 4: Plan the new month
 
-A real plan has a defined outcome, an honest baseline, a path, proof of capacity, trade-offs, outside pressure, a pre-mortem, and explicit approval. Each move below should make the user answer something hard.
+A real plan has a defined outcome, an honest baseline, a path, proof of capacity, trade-offs, outside pressure, a pre-mortem, and explicit approval. Each move below should make the user answer something hard. Treat brainstorms, voice-note dumps, and imported task lists as candidate priorities: each must survive Moves 1, 4, and 5 before it counts.
 
 ### Move 1: Define outcomes
 
-For each candidate priority, ask: "What specifically is true on the last day of the month?" Make the answer measurable or plainly checkable. Limit the plan to three outcomes; one or two is usually better. Each should connect to a long-range goal or a chosen responsibility.
+For each candidate priority, ask: "What specifically is true on the last day of the month?" Make the answer measurable or plainly checkable. Limit the plan to three outcomes; one or two is usually better. Each should connect to a long-range goal or a chosen responsibility. If you drafted the statement and the user only nodded, ask them to restate or edit it in their own words.
 
 ### Move 2: Establish the current state
 
@@ -135,7 +137,7 @@ For each outcome, list three to six steps working back from the due date. Each s
 
 ### Move 4: Do the capacity math
 
-Estimate: available working days × recently observed focused hours per day. Subtract time off, travel, and heavy meeting weeks. Compare with the effort the paths need. If demand exceeds supply, cut, defer, shrink scope, or get real help now.
+Estimate: available working days × recently observed focused hours per day. Use last month's actual rate, not an aspiration. Subtract time off, travel, and heavy meeting weeks. Compare with the effort the paths need. If demand exceeds supply, cut, defer, shrink scope, or get real help now, before the month starts.
 
 ### Move 5: Make the not-doing list
 
@@ -143,7 +145,9 @@ Ask: "What will explicitly not happen this month so these outcomes can?" The use
 
 ### Move 6: Add outside pressure and protection
 
-Fragile outcomes need outside pressure: someone expecting a deliverable on a date, a booked review, or a public commitment. Protect work that needs long, uninterrupted time by giving it the best blocks and batching flexible work around meetings.
+Self-imposed calendar blocks tend to lose to commitments where someone else is waiting. Fragile outcomes need outside pressure: someone expecting a deliverable on a date, a booked review, or a public commitment.
+
+Check the mix of outcomes. Some work survives interruptions (coordination, outreach, review); some dies when fragmented (writing, design, analysis). Give the fragile work the best uninterrupted blocks and batch flexible work around meetings. Do not re-propose time slots the user has already learned get overridden; ask which slots actually hold.
 
 ### Move 7: Run a pre-mortem
 
@@ -190,7 +194,7 @@ Example (fictional): a workshop series at Maple Hollow Arts cannot be scheduled 
 - [Explicit cut or deferral.]
 
 ## Structure
-[The behavior or boundary change that counters last month's drain.]
+[The behavior or boundary change that counters last month's drain. Delegated items with owner named.]
 
 ## Pre-mortem
 - Failure mode: [likely cause]. Counter: [specific response.]
@@ -226,7 +230,11 @@ Confirm the save in one line and stop.
 
 ## Step 6: Improve the workflow
 
-At the end of each run, make one precise improvement to this workflow or its templates: a noisy read, a wrong assumption, a misleading measure, a source that moved, or a question the user corrected. Write it as a general rule, not a private fact.
+After the run, quietly look back at what went wrong or what the user corrected: a read that wasted effort or came back in the wrong shape, a wrong assumption about the data, a pushback, a measure that turned out to be noise. Do not ask the user how to improve the workflow.
+
+- If a change is warranted, edit or merge an existing rule rather than adding a new paragraph. Write it as a general rule, not a private fact.
+- Keep dated incident notes out of the workflow itself. If you want a history, keep a separate one-line-per-entry lessons log, and do not load it during a normal run.
+- Keep the workflow under a length cap you choose, so it stays readable.
 
 ## Audit checks
 
@@ -234,8 +242,9 @@ Before finishing, verify:
 
 - Review and planning ranges are explicit.
 - Evidence came before reflection.
+- Private free-form writing was excluded from reads.
 - Missing sources were replaced with a direct question and labeled.
-- Strong verdicts account for data gaps.
+- Strong verdicts account for data gaps and current targets.
 - The plan has a theme and no more than three outcomes.
 - Each outcome has a test of done, date, path, owner, and outside pressure.
 - Outcomes blocked on unmade decisions are framed as dated decisions.
@@ -250,6 +259,7 @@ Before finishing, verify:
 
 - Starting with questions instead of evidence.
 - Judging against stale targets.
+- Reading private journal text because it happened to be available.
 - Silently skipping a missing source, or reporting on it as if it were checked.
 - Confusing a list of events with a plan.
 - Overloading capacity and refusing to cut.
@@ -257,6 +267,7 @@ Before finishing, verify:
 - Letting the assistant choose priorities.
 - Saving an unapproved draft.
 - Conflicting with an existing weekly plan.
+- Re-proposing time blocks that have already failed.
 - Applying generic productivity rituals instead of fixing the actual drain.
 - Treating a brainstorm or imported task list as a confirmed commitment.
 
@@ -264,7 +275,7 @@ Before finishing, verify:
 
 ### Personal practice
 
-Add this section only if the user tracks a habit or practice they want held to account, such as writing, a language, music, exercise, or meditation. Put it after goals and delivery, not first.
+Add this section only if the user tracks a habit or practice they want held to account, such as writing, a language, music, exercise, or meditation. Put it after goals and delivery, not first. Do not lecture on technique; the user may already follow a program for that.
 
 Compare actual activity with the user's current target using whatever they log: sessions, minutes, words, or pages; average per week; active days; longest gap; and the change from last month. If the log is unavailable this month, ask one question about it instead.
 
@@ -279,6 +290,6 @@ If tracking may be incomplete, ask "The record shows this. Does that match reali
 
 ### For assistants with connected tools
 
-- Hand bulky reads, such as a month of daily entries or a full month of calendar events, to a helper task that returns computed numbers and a short list of themes, not raw records.
-- Ask the calendar summary for time off, travel, per-week meeting load, recurring series, and anomalies such as meetings scheduled inside time off. Offer to clear those conflicts now and add them to a pre-time-off checklist in the plan.
+- Hand bulky reads, such as a month of daily entries or a full month of calendar events, to a helper task that returns computed numbers and a short list of themes, not raw records. Give the helper the same explicit field list, so private writing stays excluded there too.
+- Ask the calendar summary for time off, travel, per-week meeting load, recurring series, and anomalies such as meetings scheduled inside time off or events with suspect time zones. Offer to clear those conflicts now and add them to a pre-time-off checklist in the plan.
 - Restrict helper tasks to the read tools they need.
