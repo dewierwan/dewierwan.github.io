@@ -87,21 +87,21 @@
     },
     {
       "title": "Review your day",
-      "description": "Run a short end-of-day reflection on what got done against the plan, what mattered, and what to carry forward. Use when someone wants to review their day, rate it, or offload worries before bed.",
+      "description": "Runs a short end-of-day reflection on plan vs reality, a win, a drain, and tomorrow's worries. Use when someone says 'review my day', wants to rate their day, or needs to offload before bed.",
       "category": "Plan and reflect",
       "page": "https://dewierwan.com/skills/review-your-day/",
       "markdown": "https://dewierwan.com/skills/raw/review-your-day.md"
     },
     {
       "title": "Plan your week",
-      "description": "Review last week, commit to a few outcomes with a clear definition of done, cut low-value work, and protect time. Use when someone wants to plan the coming week or reset after a messy one.",
+      "description": "Reviews last week, commits to a few outcomes with a clear definition of done, cuts low-value work, and protects time. Use when someone says \"plan my week\" or wants to reset after a messy week.",
       "category": "Plan and reflect",
       "page": "https://dewierwan.com/skills/plan-your-week/",
       "markdown": "https://dewierwan.com/skills/raw/plan-your-week.md"
     },
     {
       "title": "Review and plan a month",
-      "description": "Close one month honestly, then plan the next with a capacity check, a NOT list, and concrete commitments. Use when a month is ending, or when someone wants a monthly review or plan.",
+      "description": "Closes one month honestly, then plans the next with a capacity check, a NOT list, and concrete commitments. Use when a month is ending or someone asks for a monthly review or month plan.",
       "category": "Plan and reflect",
       "page": "https://dewierwan.com/skills/plan-your-month/",
       "markdown": "https://dewierwan.com/skills/raw/plan-your-month.md"
@@ -143,7 +143,7 @@
     },
     {
       "title": "Turn a message into a task",
-      "description": "Turn a message thread into researched, partly completed work, and create a task only when tracking will help. Use when someone shares a message and says make this a task, track this, or deal with it.",
+      "description": "Turns a message thread into researched, partly completed work and creates a task only when tracking helps. Use when someone says make this a task, track this, or deal with this message.",
       "category": "Meetings and tasks",
       "page": "https://dewierwan.com/skills/message-to-task/",
       "markdown": "https://dewierwan.com/skills/raw/message-to-task.md"

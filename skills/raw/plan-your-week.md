@@ -1,6 +1,6 @@
 ---
 name: plan-your-week
-description: Review last week, commit to a few outcomes with a clear definition of done, cut low-value work, and protect time. Use when someone wants to plan the coming week or reset after a messy one.
+description: Reviews last week, commits to a few outcomes with a clear definition of done, cuts low-value work, and protects time. Use when someone says "plan my week" or wants to reset after a messy week.
 ---
 
 # Plan your week
@@ -14,13 +14,14 @@ First gather the **constraints** (deadlines, meetings, backlog, energy, capacity
 - Ask four review questions: Did you hit last week's goals? What went well? What didn't? What will you do differently?
 - Ask the user to list everything they might work on next week, then ask which one outcome would make the week matter, and why now.
 - Agree one to three goals, each with two to four outputs someone else could check.
+- For each goal, name who is waiting on the output and by when. If nobody is, draft a message that asks someone to expect it.
 - Add up the hours each goal needs and compare them with free time after meetings, leaving about a fifth of the week unplanned.
 - Ask what they will not do this week, and what is most likely to make the week fail.
 - Write a one-screen plan: goals, what to protect, the shape of each day, what is not happening, and the main risk.
 
 ## What the session produces
 
-1. **One to three weekly goals**, each linked to a longer-term goal, with 2-4 checkable outputs.
+1. **One to three weekly goals**, each linked to a longer-term goal, with 2-4 checkable outputs and a named person waiting on them.
 2. **A short written plan**, plus the review answers saved with the week being reviewed.
 3. **Tasks** of 5 minutes to 3 hours behind each goal, with notes that make starting easy.
 4. **Time blocks** for goal work and protected commitments.
@@ -38,6 +39,7 @@ Ask these once, then reuse the answers until the user changes them.
 | Calendars and time zone | Write to one calendar only; use the user's current time zone |
 | Longer-term goals | The longest active level, plus the current quarter or month |
 | Working hours | Ask; count only hours the user actually works |
+| Focus window and daily focus capacity | Ask which part of the day suits deep work and how many focused hours a day are realistic; if unsure, start with a few hours |
 
 Suggested thresholds, all adjustable: a slipping goal has had its deadline moved 3 or more times; a chronically deferred task more than 4 times; a heavy meeting day has more than 5 meetings; the unplanned buffer is about 20% of working hours after meetings; and a waiting message has gone unanswered for more than a few days.
 
@@ -56,7 +58,7 @@ Read only sources the user has authorized for planning their own week, and only 
 
 ## Hard rules
 
-- **At most three weekly goals; one is ideal.** If the user proposes more, push back: merge, demote to an intention, or defer. With three, label one as the stretch goal.
+- **At most three weekly goals; one is ideal.** If the user proposes more, push back: merge, demote to an intention, or defer. With three, label one as the stretch goal: planned for, but it can give way if something more important comes up.
 - **Every goal has a definition of done someone else could verify.** For example: "Sent the second draft of the proposal and budget to the reviewer." A direction is not a goal.
 - **Leave a buffer unplanned** (about 20% by default). If goals do not fit, cut a goal. Never shrink estimates to make them fit.
 - **Every goal links to a longer-term goal.** If the link is weak, reject the goal. If the user has set longer-term goals aside on purpose, write "Links to: deferred" and move on.
@@ -162,7 +164,14 @@ Before proposing each goal, ask yourself: did the user call this important, or a
 
 ### Proposing goals
 
-Propose the smallest set of goals that fits. Check each is **linked** (name the longer-term goal), **verifiable** (2-4 concrete outputs), **scoped** (sketch sub-tasks with rough hours against free time minus the buffer; cut or shrink if it does not fit; under an hour is a task, not a goal), and **realistic** (a heavy meeting week plus low energy means cut one).
+Propose the smallest set of goals that fits. Check each one is:
+
+- **Linked:** name the longer-term goal.
+- **Verifiable:** 2-4 concrete outputs.
+- **Scoped:** sketch sub-tasks with rough hours against free time minus the buffer; cut or shrink if it does not fit. Under an hour is a task, not a goal.
+- **Realistic:** a heavy meeting week plus low energy means cut one.
+- **Waited on:** a named person expects a named output by a named day and time. Record it as "Waiting: [person], [output], [day and time]", for example "Waiting: the board treasurer, budget draft, Wed 4 pm." If nobody is waiting yet, create that commitment during the session: draft the message or invite that asks them to expect it, for the user to send. Goals only the user is waiting on tend to slip; work someone else expects tends to ship.
+- **Booked:** the goal's work fits into named focus blocks in the user's chosen focus window, sized against their realistic daily focus capacity, not long late-night pushes.
 
 ### Shaping rules
 
@@ -171,6 +180,7 @@ Propose the smallest set of goals that fits. Check each is **linked** (name the 
 - **Question the stuck goal.** After two or more slipped weeks, ask whether its format, scope, or owner is wrong; often the fix is a smaller piece.
 - **Sequence by outside deadline**, which beats self-imposed pressure.
 - **Pending decisions pause detail.** Plan only work that survives every outcome.
+- **Team goals need an announcement.** If a goal needs others to act, agree the goal you give them and where and when you announce it, then draft the announcement.
 - **Soft stop.** If after two or three rounds of pushback the user says "let me just start", accept the plan and record your concern in the failure-mode line.
 
 ## Step 6: Pre-mortem and cuts
@@ -196,6 +206,7 @@ Notes template:
 
 ```
 Serves weekly goal: [goal]. Links to: [longer-term goal].
+Waiting: [person], [output], [day and time].
 
 Done when: [one-sentence test]
 
@@ -214,7 +225,7 @@ Avoid one task that restates a multi-day goal, more than five tasks per goal, an
 
 Show the week as short day-by-day paragraphs first, with open questions at the bottom.
 
-If proposed blocks exceed working hours after meetings and the buffer, cut or shrink a goal rather than squeezing blocks. Flag any block shorter than its task estimate. Block tasks of 45 minutes or more, hard deadlines, and protected personal commitments, and never schedule work over personal events. Re-read the calendar right before creating anything. Propose each slot ("Grant budget, Tue, 90 minutes, morning. OK?").
+Book each goal's work into named focus blocks inside the user's focus window, sized to their daily focus capacity. If proposed blocks exceed working hours after meetings and the buffer, cut or shrink a goal rather than squeezing blocks. Flag any block shorter than its task estimate. Block tasks of 45 minutes or more, hard deadlines, and protected personal commitments, and never schedule work over personal events. Re-read the calendar right before creating anything. Propose each slot ("Grant budget, Tue, 90 minutes, afternoon. OK?").
 
 ## Step 9: Write the plan
 
@@ -227,6 +238,7 @@ Update existing goals in place rather than duplicating them. Then write the plan
 ## Weekly goals
 [] [Goal 1], links to [longer-term goal]
     Done when: [2-4 checkable outputs]
+    Waiting: [person], [output], [day and time]
 
 ## Protect
 - [commitments with concrete slots]

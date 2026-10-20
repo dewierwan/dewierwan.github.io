@@ -2101,7 +2101,7 @@ W: <weekly goal, only on the first day of the week or when it changes>
 
 ---
 name: review-your-day
-description: Run a short end-of-day reflection on what got done against the plan, what mattered, and what to carry forward. Use when someone wants to review their day, rate it, or offload worries before bed.
+description: Runs a short end-of-day reflection on plan vs reality, a win, a drain, and tomorrow's worries. Use when someone says 'review my day', wants to rate their day, or needs to offload before bed.
 ---
 
 # Review your day
@@ -2110,12 +2110,13 @@ Use this at the end of the day to see honestly what happened, name one win and o
 
 ## Quick version
 
-- Lay out the day neutrally first: what was planned and what actually happened. No judgment yet.
+- Ask the user to paste or list three things: what they planned today, what they actually did (calendar, task list, or a quick narration), and anything still open. A rough list is enough.
+- Play the day back in a few neutral lines: plan vs reality and the biggest drift. No judgment yet. Let the user correct it.
 - Open with one specific observation about the day, then let the user talk.
-- Ask for a rating only after the context is on the table.
-- Always get a win, even on a bad day, plus one thing that drained energy.
+- Ask for a rating only after the context is on the table, plus a one-line reason.
+- Always get a win, even on a bad day, and one thing that drained energy.
 - Ask what's rattling for tomorrow and write it down. This offload matters most.
-- Keep it to about ten exchanges. Don't replan tomorrow and don't play therapist.
+- Finish with a short block the user can paste into their notes. Keep it to about ten exchanges; don't replan tomorrow and don't play therapist.
 
 ## 1. Choose the day and gather context
 
@@ -2130,11 +2131,11 @@ Collect everything in one batch before asking anything, so the conversation is n
 - meeting notes, if the user keeps them;
 - recent day ratings, for the streak check later.
 
-If no plan was written, look for a stand-in: the previous day's plan or offload, a rough list in the user's notes, or a priority list from earlier in the conversation.
+**No connected tools?** Ask for the same material in one message: "Paste or list your plan for today, what you actually did, anything you finished or sent, and any loose ends. A quick narration works too." If the user tracks past ratings, ask for the last two or three. Don't ask for more detail than the overview needs.
 
-**Private notes stay private.** If the user keeps a freeform journal or notes marked private, do not read, quote, or analyze them, and do not mine earlier entries for context. The user can write there freely; the review works from the conversation and the other sources.
+If no plan was written, look for a stand-in: the previous day's plan or offload, a rough list in the user's notes, a goal they stated earlier in the day, or a priority list from earlier in the conversation.
 
-**Data boundary.** Read meeting notes and messages that involve other people only when the user is clearly authorized to access them and the purpose is this personal review. Use the minimum sources needed to build the overview, and leave out unrelated or sensitive personal details. Keep the result in the user's own private notes; don't copy other people's content into memory or shared documents.
+**Data boundary.** Read meeting notes and messages that involve other people only when the user is clearly authorized to access them and the purpose is this personal review. Use the minimum sources needed for the overview, and leave out unrelated or sensitive personal details. Keep the result in the user's own private notes; don't copy other people's content into memory or shared documents.
 
 ## 2. Show the overview first
 
@@ -2144,11 +2145,11 @@ Before any reflective question, show a short overview in plain language, about 1
 - **By source:** meetings with any key decision, focus blocks planned vs used, tasks shipped, and counts of messages sent grouped by person or channel. Drop empty categories.
 - **Open loops:** at most three items likely to rattle tonight.
 
-Present meeting notes neutrally: they record what was said, not the user's verdict. No judgment and no questions yet. Then stop and let the user correct anything. If the user often forgets to finish, save this overview as a draft review right away so something exists.
+In plain chat, the overview is simply the user's own list played back, tidied and compared against the plan. Treat every source as evidence to check, not a verdict: meeting notes record what was said, not how the user judged it, and a sparse log doesn't mean nothing happened. When something is ambiguous, phrase it as a question. No judgment yet. Then stop and let the user correct anything. If the user often forgets to finish, save this overview as a draft review right away so something exists.
 
 ## 3. Optional private freewriting
 
-After the user confirms the overview, offer a few minutes of private freewriting in their own journal or on paper, before any reflective questions. Writing first often makes the conversation shorter and clearer. While they write, wait quietly: no questions, lookups, or progress messages. Never read, quote, or analyze what they wrote; continue once they say they are done. Skip this on terse nights, when the user declines, or when they already wrote today. On late nights, offer it in the same message as the guessed essentials (see Optional extras) and let the user choose.
+After the user confirms the overview, offer a few minutes of private freewriting in their own journal or on paper. Writing first often makes the conversation shorter and clearer. While they write, wait quietly: no questions, lookups, or progress messages. The journal is private: never read, quote, analyze, or mine it, now or in later reviews. Continue once they say they are done. Skip this on terse nights, when the user declines, or when they already wrote today.
 
 ## 4. Open with one specific observation
 
@@ -2163,7 +2164,7 @@ Then let the user talk. Reflect back before asking the next thing: "So the call 
 
 Get these in any order. If the user covers two in one reply, don't ask again.
 
-- **Rating.** Ask once there is context: "So how would you rate today overall?" Use whatever scale the user already tracks. Default: a simple scale from bad to great; change it to fit you.
+- **Rating.** Ask once there is context: "So how would you rate today overall?" Use whatever scale the user already tracks. Default: a simple five-point scale from bad to great; change it to fit you.
 - **One-line reason** for the rating.
 - **A win.** Don't let the user skip this on a bad day.
 - **A drain.** What didn't work or cost energy.
@@ -2171,39 +2172,43 @@ Get these in any order. If the user covers two in one reply, don't ask again.
 
 Use plain words. "What drained you today?" beats asking for "the drain". Optionally add one feelings, gratitude, or open-vent question if the day calls for it. Pick one, not all three.
 
+The rating reflects how the day felt, not an audit of output. A long-awaited outside yes can carry a whole day; a day that swung between very bad and very good may average to neutral. Note that shape in the reason so a later planner doesn't misread it.
+
 ## 6. Diagnose without moralizing
 
 When the MIT didn't ship, find the right explanation before suggesting a fix. Ask, don't assume:
 
-- **Low capacity.** The user was tired, ill, or flat. The miss is a result of the state, not a discipline failure. The fix is rest or a lighter day, not willpower.
-- **Aversion-driven displacement.** The day was busy with easy, productive-feeling work that crowded out the dreaded task. Name it: "the batch of replies took the slot because it felt better to ship." The fix is isolation: one task, no messages.
-- **Necessary backlog.** Clearing an overdue pile was real work that needed doing. Ask: "Was clearing it a real weight, or did it just feel safer than the MIT?" It can be both.
-- **Scope creep inside the MIT.** The user stayed on the right work but added a self-made sub-project that cost the finish line. The fix is "ship rough, improve later", not more focus.
-- **Mis-specified goal.** Higher-value work kept taking the slot, often across several days. The goal was wrong for that kind of day. If a well-defended block still failed, stop suggesting "defend it harder".
+- **Low capacity.** The user was tired, ill, or flat. The miss is a result of the state, not a discipline failure. The fix is rest or a lighter day, not willpower. A tired pivot to easier but still valuable work is capacity too, and can still be a good day.
+- **Aversion-driven displacement.** Easy, productive-feeling work crowded out the dreaded task. Name it: "the batch of replies took the slot because it felt better to ship." The fix is isolation: one task, no messages.
+- **Necessary backlog.** Clearing an overdue pile was real work. Ask: "Was clearing it a real weight, or did it just feel safer than the MIT?" It can be both.
+- **Scope creep inside the MIT.** The user stayed on the right work but added a self-made sub-project that cost the finish line. The fix is "ship rough, improve later".
+- **Mis-specified goal.** Higher-value work kept taking the slot, often across several days, or the goal came from an earlier process the user never really wanted. The goal was wrong for that kind of day. If a well-defended block still failed, stop suggesting "defend it harder".
 
 Other useful checks:
 
-- **Started is not shipped, but can still be the win.** Starting a hard document before an important conversation counts.
-- **The MIT may have shipped outside its block.** Ask before scoring a miss.
+- **Judge by outcome, not spec.** Starting a hard document, handing it off, or sending it for expert review can be the real win. The MIT may also have shipped outside its block; ask before scoring a miss.
 - **A reframed MIT drops its old sub-items.** Don't keep asking about steps from a plan the user already replaced.
-- Ask "What felt productive today but didn't move the MIT?" when hours went into polishing or restructuring with no new input.
+- **Feeling behind is often a planning gap.** If real work shipped and the inbox is under control but the user feels overwhelmed, the lever is a plan or thinking space, not more doing.
+- **Lead with the user's own diagnosis** when their words already contain it.
+- Ask "What felt productive today but didn't move the MIT?" when hours went into polishing with no new input.
 
 If the rating is low and there's time, ask: "What would need to change for tomorrow to feel better?" Log the answer for the planner. Don't plan it now.
 
 ## 7. Write and close
 
-Save the review where the user keeps daily notes:
+Save the review where the user keeps daily notes. In plain chat, give the user this block to paste:
 
 ```
+Title: <short retrospective title, under about eight words>
 Plan vs reality: <one or two sentences>
 Win: <...>
 Drain: <...>
 Offload: <worries and loose ends>
 ```
 
-Put the rating and reason in their own fields if the user's system has them. Keep the user's vivid phrases; paraphrase the rest.
+Add a feelings, gratitude, or vent line only if you asked about it. Put the rating and reason in their own fields if the user's system has them, rather than repeating them in the text. Keep the user's vivid phrases; paraphrase the rest. If the same record also holds the user's private writing, update only the review fields and never overwrite their entry.
 
-**Silent streak flag.** If tonight's rating is low and the previous two nights were too, add a short note for the next planning session. Default: a few low nights in a row; pick the number that fits you. Don't comment on it in the conversation.
+**Silent streak flag.** If tonight's rating is low and the previous nights were too, add a short note for the next planning session. Default: three low nights in a row; pick the number that fits you. Don't comment on it in the conversation.
 
 Confirm in one line: "Review saved." Don't summarize. If the user plans the next day straight after, hand off to that workflow; don't replan here.
 
@@ -2215,18 +2220,18 @@ The assistant opens: "The launch email block went to customer replies. Did those
 
 ## Optional extras
 
-- **Hard rules.** Cap at about ten exchanges. Don't act as a therapist: if something heavy comes up, acknowledge it, log it, and move toward close. If the user says they're containing a feeling for now, log that and don't probe.
-- **Terse-night fast path.** If the user just wants to close out, ask for rating, one-line reason, win, drain, and offload in one message with your guesses filled in. Accept the guesses they don't contest, and log any unanswered item as "not named; likely X (unconfirmed)" rather than asking again.
-- **Late start.** If the overview arrives after the user's usual wind-down time (a time they choose), put the choice in the same message: freewrite now, or answer the guessed essentials. One reply can then close the review, so don't plan a second round. If past reviews are missing for a stretch when the user was away, such as travel or a retreat, it just means none were written; mention it once in the offload.
-- **Hard close.** If the user says they're going to bed, ask nothing more. Use what they already said, note anything inferred, save, and stop. A late "I just want to sleep" overrides an earlier request to review, plan, and wind down.
-- **Rating at hard close.** If the user gives only adjectives, map them to the scale and note it was inferred.
+- **Hard rules.** Cap at about ten exchanges. If something heavy comes up, acknowledge it, log it, and move toward close. If the user says they're containing a feeling for now, log that and don't probe.
+- **Terse or late nights.** Ask for rating, reason, win, drain, and offload in one message with your guesses filled in. Accept the guesses they don't contest, and log any unanswered item as "not named; likely X (unconfirmed)". If bedtime is close, offer freewriting or the guessed essentials in the same message and mention the time cost of writing.
+- **Hard close.** If the user says they're going to bed, or that they're leaving and won't reply, ask nothing more. Use what they said, infer the rest from the day's evidence (map adjectives to the scale), mark anything inferred, save, and stop. A late "I just want to sleep" overrides an earlier request to review, plan, and wind down.
 - **Personal days.** On a non-work day, skip work sources and let the user's own account lead.
+- **Answer real questions.** If the user asks a factual question mid-review, a quick targeted lookup and a real answer is fine. Fold the result into the offload.
+- **When sources fail.** Retry a failed lookup once, then name what's missing in the overview and continue. If a query returns nothing, double-check date filters and field names, since a wrong filter looks like an empty day.
 - **Improve the workflow.** After each run, note one change that would have made it faster or more useful.
 
 
 ---
 name: plan-your-week
-description: Review last week, commit to a few outcomes with a clear definition of done, cut low-value work, and protect time. Use when someone wants to plan the coming week or reset after a messy one.
+description: Reviews last week, commits to a few outcomes with a clear definition of done, cuts low-value work, and protects time. Use when someone says "plan my week" or wants to reset after a messy week.
 ---
 
 # Plan your week
@@ -2240,13 +2245,14 @@ First gather the **constraints** (deadlines, meetings, backlog, energy, capacity
 - Ask four review questions: Did you hit last week's goals? What went well? What didn't? What will you do differently?
 - Ask the user to list everything they might work on next week, then ask which one outcome would make the week matter, and why now.
 - Agree one to three goals, each with two to four outputs someone else could check.
+- For each goal, name who is waiting on the output and by when. If nobody is, draft a message that asks someone to expect it.
 - Add up the hours each goal needs and compare them with free time after meetings, leaving about a fifth of the week unplanned.
 - Ask what they will not do this week, and what is most likely to make the week fail.
 - Write a one-screen plan: goals, what to protect, the shape of each day, what is not happening, and the main risk.
 
 ## What the session produces
 
-1. **One to three weekly goals**, each linked to a longer-term goal, with 2-4 checkable outputs.
+1. **One to three weekly goals**, each linked to a longer-term goal, with 2-4 checkable outputs and a named person waiting on them.
 2. **A short written plan**, plus the review answers saved with the week being reviewed.
 3. **Tasks** of 5 minutes to 3 hours behind each goal, with notes that make starting easy.
 4. **Time blocks** for goal work and protected commitments.
@@ -2264,6 +2270,7 @@ Ask these once, then reuse the answers until the user changes them.
 | Calendars and time zone | Write to one calendar only; use the user's current time zone |
 | Longer-term goals | The longest active level, plus the current quarter or month |
 | Working hours | Ask; count only hours the user actually works |
+| Focus window and daily focus capacity | Ask which part of the day suits deep work and how many focused hours a day are realistic; if unsure, start with a few hours |
 
 Suggested thresholds, all adjustable: a slipping goal has had its deadline moved 3 or more times; a chronically deferred task more than 4 times; a heavy meeting day has more than 5 meetings; the unplanned buffer is about 20% of working hours after meetings; and a waiting message has gone unanswered for more than a few days.
 
@@ -2282,7 +2289,7 @@ Read only sources the user has authorized for planning their own week, and only 
 
 ## Hard rules
 
-- **At most three weekly goals; one is ideal.** If the user proposes more, push back: merge, demote to an intention, or defer. With three, label one as the stretch goal.
+- **At most three weekly goals; one is ideal.** If the user proposes more, push back: merge, demote to an intention, or defer. With three, label one as the stretch goal: planned for, but it can give way if something more important comes up.
 - **Every goal has a definition of done someone else could verify.** For example: "Sent the second draft of the proposal and budget to the reviewer." A direction is not a goal.
 - **Leave a buffer unplanned** (about 20% by default). If goals do not fit, cut a goal. Never shrink estimates to make them fit.
 - **Every goal links to a longer-term goal.** If the link is weak, reject the goal. If the user has set longer-term goals aside on purpose, write "Links to: deferred" and move on.
@@ -2388,7 +2395,14 @@ Before proposing each goal, ask yourself: did the user call this important, or a
 
 ### Proposing goals
 
-Propose the smallest set of goals that fits. Check each is **linked** (name the longer-term goal), **verifiable** (2-4 concrete outputs), **scoped** (sketch sub-tasks with rough hours against free time minus the buffer; cut or shrink if it does not fit; under an hour is a task, not a goal), and **realistic** (a heavy meeting week plus low energy means cut one).
+Propose the smallest set of goals that fits. Check each one is:
+
+- **Linked:** name the longer-term goal.
+- **Verifiable:** 2-4 concrete outputs.
+- **Scoped:** sketch sub-tasks with rough hours against free time minus the buffer; cut or shrink if it does not fit. Under an hour is a task, not a goal.
+- **Realistic:** a heavy meeting week plus low energy means cut one.
+- **Waited on:** a named person expects a named output by a named day and time. Record it as "Waiting: [person], [output], [day and time]", for example "Waiting: the board treasurer, budget draft, Wed 4 pm." If nobody is waiting yet, create that commitment during the session: draft the message or invite that asks them to expect it, for the user to send. Goals only the user is waiting on tend to slip; work someone else expects tends to ship.
+- **Booked:** the goal's work fits into named focus blocks in the user's chosen focus window, sized against their realistic daily focus capacity, not long late-night pushes.
 
 ### Shaping rules
 
@@ -2397,6 +2411,7 @@ Propose the smallest set of goals that fits. Check each is **linked** (name the 
 - **Question the stuck goal.** After two or more slipped weeks, ask whether its format, scope, or owner is wrong; often the fix is a smaller piece.
 - **Sequence by outside deadline**, which beats self-imposed pressure.
 - **Pending decisions pause detail.** Plan only work that survives every outcome.
+- **Team goals need an announcement.** If a goal needs others to act, agree the goal you give them and where and when you announce it, then draft the announcement.
 - **Soft stop.** If after two or three rounds of pushback the user says "let me just start", accept the plan and record your concern in the failure-mode line.
 
 ## Step 6: Pre-mortem and cuts
@@ -2422,6 +2437,7 @@ Notes template:
 
 ```
 Serves weekly goal: [goal]. Links to: [longer-term goal].
+Waiting: [person], [output], [day and time].
 
 Done when: [one-sentence test]
 
@@ -2440,7 +2456,7 @@ Avoid one task that restates a multi-day goal, more than five tasks per goal, an
 
 Show the week as short day-by-day paragraphs first, with open questions at the bottom.
 
-If proposed blocks exceed working hours after meetings and the buffer, cut or shrink a goal rather than squeezing blocks. Flag any block shorter than its task estimate. Block tasks of 45 minutes or more, hard deadlines, and protected personal commitments, and never schedule work over personal events. Re-read the calendar right before creating anything. Propose each slot ("Grant budget, Tue, 90 minutes, morning. OK?").
+Book each goal's work into named focus blocks inside the user's focus window, sized to their daily focus capacity. If proposed blocks exceed working hours after meetings and the buffer, cut or shrink a goal rather than squeezing blocks. Flag any block shorter than its task estimate. Block tasks of 45 minutes or more, hard deadlines, and protected personal commitments, and never schedule work over personal events. Re-read the calendar right before creating anything. Propose each slot ("Grant budget, Tue, 90 minutes, afternoon. OK?").
 
 ## Step 9: Write the plan
 
@@ -2453,6 +2469,7 @@ Update existing goals in place rather than duplicating them. Then write the plan
 ## Weekly goals
 [] [Goal 1], links to [longer-term goal]
     Done when: [2-4 checkable outputs]
+    Waiting: [person], [output], [day and time]
 
 ## Protect
 - [commitments with concrete slots]
@@ -2511,7 +2528,7 @@ If the user asks, look across recent sessions for corrections that repeat ("that
 
 ---
 name: plan-your-month
-description: Close one month honestly, then plan the next with a capacity check, a NOT list, and concrete commitments. Use when a month is ending, or when someone wants a monthly review or plan.
+description: Closes one month honestly, then plans the next with a capacity check, a NOT list, and concrete commitments. Use when a month is ending or someone asks for a monthly review or month plan.
 ---
 
 # Review and plan a month
@@ -2548,11 +2565,11 @@ Default timing (adjustable):
 - Otherwise, review the month to date and plan the next month. Label a partial-month review and state the days remaining.
 - If the user asks only to plan ahead, review first anyway, because evidence should shape the plan. The user may choose to skip it.
 
-State the ranges before proceeding: "Reviewing [month] ([first date] to [last date]). Planning [month]."
+Ask what "the month" means to the user if it is unclear; they may want to include a partial week on either side. State the ranges before proceeding: "Reviewing [month] ([first date] to [last date]). Planning [month] ([first date] to [last date])."
 
 ## Access boundary
 
-Use only sources the user has authorized for this review, and only the minimum relevant information: dates, statuses, counts, and trends rather than message bodies or private notes. If the user keeps private notes or a journal they don't want read, respect that and use only what they share. Never assess other people from private material. Save the review and plan only where the intended readers should see them, and never imply that an unavailable or excluded source was checked.
+Use only sources the user has authorized for this review and that serve the purpose of closing the month and planning the next. Pull the minimum relevant information, such as dates, statuses, counts, and trends, rather than message bodies, private notes, or details about other people the plan does not need, and never assess other people from private material. Save the review and plan only where the intended readers should see them, and never imply that an unavailable or excluded source was checked.
 
 ## Operating rules
 
@@ -2581,13 +2598,15 @@ Use the user's own system: a task manager, project tracker, calendar, spreadshee
 | Last month's plan | Theme, promised outcomes, commitments |
 | Weekly plans and reviews | Repeated blockers, milestones, carried work |
 | Goals | Active monthly, quarterly, and yearly goals with status and deadlines |
-| Work delivered | Completed tasks and deliverables, grouped into a few areas |
+| Work delivered | Completed tasks and deliverables, grouped by the user's own areas |
 | Calendar | Time off, travel, fixed deadlines, recurring commitments, heavy weeks |
 | Daily signals (optional) | Ratings, focus hours, or habit counts the user chooses to track |
 
 For large sources, compute statistics and pull a few themes instead of reading raw entries.
 
-Before planning in detail, re-read any weekly plan that overlaps the start of the new month. Reconcile with it; never duplicate or overwrite it.
+**When a source is unavailable.** If a usual source has moved, been deleted, is mid-migration, or is disconnected, skip it rather than failing or guessing. Ask the user one short question for that area instead (for example, "Roughly how did sleep go this month?"), and note in the review which areas came from recollection rather than records.
+
+Before planning in detail, re-read any weekly plan that overlaps the start of the new month. Reconcile with it; never duplicate or overwrite it. Surface any gap between that week's plan and the month's outcomes.
 
 ## Step 2: Show the evidence picture
 
@@ -2662,6 +2681,17 @@ Ask: "It is the last day of the month and this plan failed. What happened?" The 
 
 Read the plan back in ten lines or fewer. The user should be able to state the theme and outcomes from memory, then approve it. Ask: "Is this the plan?" If the answer is vague, revise. Do not save yet.
 
+### When outcomes depend on unmade decisions
+
+Sometimes the main projects cannot move because a decision about who leads something, or how the work is structured, has not been made. Do not force project end states that cannot be true yet. Instead:
+
+- List each open decision with an owner and a decide-by date, in whatever decision log the user keeps.
+- Make that decision calendar the spine of the plan. An outcome can be "decision made by [date]" rather than "project delivered."
+- Move parked work to an undated proposals list or an ideas list, so it stays visible without pretending to be scheduled.
+- Keep a short set of recurring weekly essentials, the floor that happens regardless, and check them in each weekly review.
+
+Example (fictional): a workshop series at Maple Hollow Arts cannot be scheduled until the board chooses a program lead. The month's outcome becomes "lead chosen by the 12th," the venue search moves to proposals, and the weekly essential is one member update every Friday.
+
 ## Plan template
 
 ```markdown
@@ -2678,6 +2708,9 @@ Read the plan back in ten lines or fewer. The user should be able to state the t
    - Path: [dated milestones, owners, evidence].
    - Outside pressure: [who expects what, when].
 
+## Open decisions (if any)
+- [Decision]: owner [role], decide by [date].
+
 ## Capacity check
 [Available hours] versus [needed hours]; [scope decision].
 
@@ -2693,7 +2726,7 @@ Read the plan back in ten lines or fewer. The user should be able to state the t
 
 ## Step 5: Save the review and plan
 
-After explicit approval, save two records in the user's system: a **Review** for the month ending and a **Plan** for the new month. Before overwriting an existing plan, show it and resolve the difference.
+After explicit approval, save two records in the user's system: a **Review** for the month ending and a **Plan** for the new month. If either record does not exist, create it. Before overwriting an existing plan, show it and resolve the difference.
 
 Review template:
 
@@ -2705,6 +2738,7 @@ Review template:
 
 ## Signals
 - [Chosen measures, or "not tracked"]. Flags: [none or named patterns].
+- Sources missing this month: [none, or areas based on recollection].
 
 ## Win
 [One meaningful result.]
@@ -2720,7 +2754,7 @@ Confirm the save in one line and stop.
 
 ## Step 6: Improve the workflow
 
-At the end of each run, make one precise improvement to this workflow or its templates: a noisy read, a wrong assumption, a misleading measure, or a question the user corrected. Write it as a general rule, not a private fact.
+At the end of each run, make one precise improvement to this workflow or its templates: a noisy read, a wrong assumption, a misleading measure, a source that moved, or a question the user corrected. Write it as a general rule, not a private fact.
 
 ## Audit checks
 
@@ -2728,9 +2762,11 @@ Before finishing, verify:
 
 - Review and planning ranges are explicit.
 - Evidence came before reflection.
+- Missing sources were replaced with a direct question and labeled.
 - Strong verdicts account for data gaps.
 - The plan has a theme and no more than three outcomes.
 - Each outcome has a test of done, date, path, owner, and outside pressure.
+- Outcomes blocked on unmade decisions are framed as dated decisions.
 - Capacity fits, or a scope decision was made.
 - The not-doing list has real cuts.
 - The structural fix responds to a reviewed drain.
@@ -2742,19 +2778,23 @@ Before finishing, verify:
 
 - Starting with questions instead of evidence.
 - Judging against stale targets.
+- Silently skipping a missing source, or reporting on it as if it were checked.
 - Confusing a list of events with a plan.
 - Overloading capacity and refusing to cut.
+- Forcing project deadlines when the real blocker is an unmade decision.
 - Letting the assistant choose priorities.
 - Saving an unapproved draft.
 - Conflicting with an existing weekly plan.
 - Applying generic productivity rituals instead of fixing the actual drain.
 - Treating a brainstorm or imported task list as a confirmed commitment.
 
-## Optional: personal practice
+## Optional extras
+
+### Personal practice
 
 Add this section only if the user tracks a habit or practice they want held to account, such as writing, a language, music, exercise, or meditation. Put it after goals and delivery, not first.
 
-Compare actual activity with the user's current target using whatever they log: sessions, minutes, words, or pages; average per week; active days; longest gap; and the change from last month.
+Compare actual activity with the user's current target using whatever they log: sessions, minutes, words, or pages; average per week; active days; longest gap; and the change from last month. If the log is unavailable this month, ask one question about it instead.
 
 Suggested verdict scale (adjustable):
 
@@ -2764,6 +2804,12 @@ Suggested verdict scale (adjustable):
 - **Paused:** the user chose to stop for now; do not re-argue it.
 
 If tracking may be incomplete, ask "The record shows this. Does that match reality?" before judging. State one concrete commitment for next month, such as "20 minutes of practice on four weekday mornings", and add it to the plan.
+
+### For assistants with connected tools
+
+- Hand bulky reads, such as a month of daily entries or a full month of calendar events, to a helper task that returns computed numbers and a short list of themes, not raw records.
+- Ask the calendar summary for time off, travel, per-week meeting load, recurring series, and anomalies such as meetings scheduled inside time off. Offer to clear those conflicts now and add them to a pre-time-off checklist in the plan.
+- Restrict helper tasks to the read tools they need.
 
 
 ---
@@ -3933,27 +3979,23 @@ Report only the essential outcome: meetings reviewed, tasks created or updated w
 
 ---
 name: message-to-task
-description: Turn a message thread into researched, partly completed work, and create a task only when tracking will help. Use when someone shares a message and says make this a task, track this, or deal with it.
+description: Turns a message thread into researched, partly completed work and creates a task only when tracking helps. Use when someone says make this a task, track this, or deal with this message.
 ---
 
 # Turn a message into a task
 
-Use this workflow when one or more message links, copied conversations, or inbound requests may need follow-up. The goal is not to log a vague to-do. The goal is to complete as much useful work as is safe and authorized, then leave a small, clear human finish.
+Use this workflow when one or more message links, copied conversations, or inbound requests may need follow-up. The goal is not to log a vague to-do but to complete as much useful work as is safe, then leave a small, clear human finish.
 
-This workflow is tool-independent. Use the messaging, document, task, calendar, and research capabilities available in the user’s environment. Do not assume a particular messaging product, task database, file system, or browser.
+## Quick version
 
-## Operating principles
+- Paste the whole conversation, including every later reply and any linked document, and check that the request is still live before doing anything else.
+- Name the task shape: reply owed, artifact owed, decision needed, or follow-up. Then rewrite the request as an outcome with a clear finish line.
+- Draft the actual deliverable (reply, document, decision brief, or chase message) instead of just describing it. Mark unverified facts as `[VERIFY: ...]` and gaps only you can fill as `[FILL IN: ...]`.
+- Ask questions only if a wrong guess would cause real rework. Before asking, restate the full story in a paragraph or two so the choice is answerable.
+- Decide whether you need a task record at all. A ready draft you can send in a few minutes needs none; deferred, multi-step, or deadline-bound work does.
+- Get the output with context first and the deliverable last, so the draft can be copied without cleanup.
 
-- Read the full conversation before deciding what the task is.
-- Prefer a prepared deliverable over an empty task record.
-- Draft external communications; do not send them without explicit authorization.
-- Use the smallest relevant set of sources and the minimum personal information needed.
-- Do not create records for completed, superseded, duplicated, or trivial work.
-- Make uncertainty visible. Verify facts, dates, figures, and links; otherwise use clear placeholders.
-- Keep access and output within the user’s legitimate purpose, authorization, and privacy boundary.
-- Treat the linked message as the reason work arrived, but treat later replies as potentially decisive.
-
-Run the full flow separately for each supplied message reference unless the references clearly concern one shared outcome.
+This workflow is tool-independent. Use whatever messaging, document, task, calendar, and research capabilities you have. Run the full flow separately for each message reference unless several references clearly concern one shared outcome.
 
 ## 1. Open the message and read the complete conversation
 
@@ -3961,32 +4003,32 @@ For every supplied message reference:
 
 1. Open the linked message or locate the quoted message.
 2. If it is a reply in a thread, open the parent and read every reply.
-3. If it is a top-level message, retrieve nearby conversation context. If the message has replies, read the full thread immediately.
+3. If it is a top-level message, retrieve nearby conversation context. If the message has replies, read the full thread immediately, because replies often change or resolve the task.
 4. Check whether replies after the linked message change the request, answer it, reassign it, or make it obsolete.
-5. Open every substantive linked attachment, form, shared document, or cited source that could contain the real request.
+5. Open every substantive attachment, form, shared document, or cited source that could contain the real request.
 
 Identify:
 
-- The requester and all relevant participants, using names or clear roles rather than vague references.
+- The requester and all relevant participants, by name or clear role. Never write a task about "the person."
 - The current ask, previous commitments, promises, deadlines, and dependencies.
 - The current owner of each action.
 - Whether work is already complete, withdrawn, delegated, or blocked.
-- Whether several people have asked the same topic elsewhere and could be served by one consistent answer.
+- Whether several people have asked about the same topic elsewhere and could be served by one consistent answer.
 
-If the work appears already done, do not file dead work. Tell the user what later context suggests and ask before creating a record if status remains ambiguous.
+If the work appears already done, do not file dead work. Tell the user what later context suggests and ask before creating a record if status remains unclear.
 
 ## 2. Classify the real work
 
-State the task shape in working notes before researching. Common shapes are:
+State the task shape in working notes before researching, because the "do the work" step differs for each:
 
 1. **Reply owed:** Someone needs an answer, feedback, a decision, or a confirmation. Deliverable: a drafted reply.
-2. **Artefact owed:** The user owes a document, introduction, analysis, reference, briefing, or data extract. Deliverable: the artefact or a substantial draft.
+2. **Artifact owed:** The user owes a document, introduction, analysis, reference, briefing, or data extract. Deliverable: the artifact or a substantial draft.
 3. **Decision needed:** The conversation ends at a choice only the user can make. Deliverable: a concise decision brief and, where useful, a draft reply for the likely choice.
-4. **Follow-up or delegation:** The user needs to chase someone, schedule something, hand off work, or update a system. Deliverable: a drafted follow-up or safely prepared internal action.
+4. **Follow-up or delegation:** The user needs to chase someone, schedule something, hand off work, or update a system. Deliverable: a drafted follow-up or a prepared internal action.
 
-A message may contain several requests. Keep them in one task when they share an owner, deadline, and context. Split them only when different owners, timelines, or completion criteria make separate tracking genuinely clearer.
+A message may contain several requests. Keep them in one task with sub-parts when they share an owner, deadline, and context. Split them only when different owners, timelines, or completion criteria make separate tracking clearer.
 
-Rewrite the request as an outcome with a clear finish line. For example, replace “Message about an event question” with “Send verified attendance figures and a next-step recommendation.”
+Rewrite the request as an outcome. For example, replace "Message about an event question" with "Send verified attendance figures and a next-step recommendation."
 
 ## 3. Gather targeted context
 
@@ -3994,158 +4036,168 @@ Research only what the task requires. Start with sources closest to the request,
 
 Useful source types include:
 
-- Earlier messages and topic searches for related commitments, decisions, or parallel requests.
-- Prior correspondence, meeting notes, approved plans, and contact records for relevant relationship context.
-- Project pages, event records, operational correspondence, and shared documents for project facts.
-- Approved policies and established precedents for people-process, finance, or policy questions.
-- Authoritative internal records or trusted public sources for quantitative questions.
-- Every substantive attachment or linked document. If a document has sections, tabs, pages, appendices, or embedded requests, review all relevant parts rather than assuming the linked excerpt is complete.
+- Earlier messages and topic searches for related commitments, decisions, or parallel requests. Search the topic, not just the person.
+- Prior correspondence, meeting notes, and the user's own planning or talking-points notes about a relationship. A documented stance often answers questions you would otherwise ask, and it is the substance the draft should be built from.
+- Project pages, event records, and operational correspondence for project facts. For past events, pre-event logistics messages are often the only written record of hard numbers such as counts, schedules, and process.
+- Approved policies and established precedents for people-process, finance, or policy questions. When setting something up for the first time, start from the closest existing policy as the default anchor.
+- Authoritative records or trusted public sources for quantitative questions.
+- Every substantive linked document. Review all tabs, sections, pages, and appendices. The message often surfaces only one of a document's asks; the document is the real task list, and the message is just the knock on the door.
 
-For private communications or records about people, confirm there is a legitimate purpose and clear authorization. Read only the minimum relevant material. Exclude unrelated sensitive details from notes, drafts, and task records. Respect consent, confidentiality, and access rights.
+Because this workflow reads private communications and records about other people, use it only for a legitimate purpose with clear authorization from the user and, where relevant, the organization. Consult only the minimum relevant sources and information. Leave unrelated or sensitive personal details out of notes, drafts, and records, and keep all outputs within an appropriate access boundary.
 
-Use non-interactive research methods when possible. Do not use tools that create visible browser activity or other external side effects unless the user has authorized that method.
+Use non-interactive research methods. Do not use tools that create visible browser activity or other side effects unless the user has authorized that.
 
-Stop gathering when you can either complete the preparation or name the precise missing information. Two strong sources are better than many shallow searches.
+Stop gathering when you can either complete the preparation or name precisely what is missing. Two or three well-chosen sources beat many shallow ones.
 
 ## 4. Pre-complete the work safely
 
 Do as much as is reasonable without taking irreversible external action.
 
-- For a reply, draft the full message in the user’s requested or established voice.
-- For an artefact, create the outline, analysis, reference text, or document draft.
-- For a decision, prepare two or three viable options, key evidence for each, and a recommendation with reasons.
-- For follow-up, draft the chase or handoff message and prepare any authorized internal update.
+- **Reply:** draft the full message in the user's voice.
+- **Artifact:** create the outline, analysis, reference text, or document draft.
+- **Decision:** prepare two or three viable options, the key evidence for each, and a recommendation with reasons. Give a recommendation, not a survey.
+- **Follow-up:** draft the chase or handoff message and prepare any authorized internal update.
 
-If a style guide or approved examples exist, read them before drafting in the user’s voice. Keep drafts concise, direct, and proportionate to the relationship and stakes. Ask one clear question when that is enough; do not turn a simple request into an unnecessary checklist. Include coaching or explanation only when coaching is itself the point of the reply.
+If a style guide or approved examples exist, read them in full before drafting in the user's voice. Drafts usually need to be shorter than first instinct suggests:
 
-Never invent facts, dates, amounts, names, links, or policy positions. Use explicit markers such as:
+- Cut compliment-plus-scaffold openers and lead-in lines such as "Here's where I've landed."
+- Ask one simple question when that is enough, rather than a structured checklist of everything you might need.
+- Hedge future commitments explicitly (for example, "though I can't promise this yet").
+- Include coaching or explanation only when coaching is the point of the reply.
+
+Never invent facts, dates, amounts, names, links, or policy positions. Use explicit markers:
 
 - `[VERIFY: confirm current figure in the reporting record]`
 - `[FILL IN: first-hand observation or personal judgment needed]`
 - `[SEARCH: locate the approved public link]`
 
-A draft with visible, specific gaps is often more useful than a blank page. Put gaps directly where they matter in the draft, and warn the user when the draft cannot be sent as-is.
+Put gaps directly where they matter in the draft rather than dropping the section. A draft with two obvious blanks still saves the framing work, but warn the user that it cannot be sent as-is.
 
-Do not send messages, email, invitations, applications, approvals, or other external communications. You may stage a draft in the user’s messaging system only when authorized. If platform formatting matters, verify that lists, paragraphs, and links will render correctly. When a task record is created, retain the complete staged draft in its notes as well.
+Do not send messages, email, invitations, applications, approvals, or other external communications. Drafts are the ceiling of autonomy. For approvals, payments, policy exceptions, and other governed actions, the draft should route the person through the organization's established process rather than offering an informal yes that bypasses controls.
 
-For approvals, payments, policy exceptions, and other governed actions, route the draft through the organization’s established process rather than offering an informal approval that bypasses controls.
+List what you genuinely cannot do (judgment calls, sensitive relationship reads, anything needing the user's memory) as specific remaining steps, not "review and complete."
 
 ## 5. Ask questions only when truly blocked
 
-Before asking the user, check whether their position is already documented in earlier messages, notes, decisions, or policies. A documented stance should usually guide the draft.
+Before asking, check whether the user's position is already documented in earlier messages, notes, decisions, or policies. A documented stance beats a fresh question.
 
-Ask questions only when a wrong assumption would cause material rework, risk, or an inappropriate commitment. Ask two to four focused questions at most. Before the questions, provide a one- or two-paragraph context recap that restores the full situation:
+Ask only when a wrong assumption would waste more of the user's time than the question itself, or would create risk or an inappropriate commitment. Ask two to four focused questions at most, before creating any record, so the answers land in the draft. Precede them with a one- or two-paragraph context recap that restores the full situation:
 
 - who is involved and what has happened so far;
 - what is now being requested;
 - the real decision, trade-off, or tension;
 - evidence already found; and
-- the recommended default, if there is one.
+- the recommended default, if any.
 
-Allow combined and custom answers when the interface supports them. If no material fork remains, make reasonable drafting and metadata choices, state them in the report, and let the user correct them.
+Options without the story are unanswerable. Allow combined and custom answers, since the user may want two options at once or something else entirely. If no material fork remains, make reasonable choices, state them in the report, and let the user correct them.
 
 ## 6. Decide whether a task record is worthwhile
 
-Skip the record when the remaining work is a short, immediate action with no waiting, deadline, or dependency—for example, reviewing a ready-to-send draft in one brief sitting. In that case, provide the context and deliverable directly.
+Skip the record when the remaining work is one short sitting with nothing to wait on, such as reviewing and sending a ready draft. A record for that would outlive the task. Provide the context and deliverable directly instead.
 
 Create a record when one or more of these apply:
 
 - Work is deferred or cannot be completed now.
 - A deadline, dependency, or wait needs tracking.
 - Several steps remain or work will span days.
-- The user explicitly requested a task record.
+- The user explicitly asked for a record.
 
-When uncertain, prefer chat-only for a simple reply and a task record for longer-lived work.
+When uncertain, prefer chat-only for a simple reply and a record for longer-lived work. Set the "short sitting" threshold to whatever the user finds natural (a default of about 15 minutes is a reasonable starting point).
 
 ## 7. Create a complete task record
 
-Use the user’s chosen task system and verify the record after creation. Use these fields where supported:
+Use the user's chosen task system. Fill these fields where supported:
 
-- **Title:** Specific, action-led, and short enough to scan.
-- **Status:** The user’s equivalent of not started.
-- **Due date:** Only when supported by an explicit or clearly implied deadline.
-- **Priority:** Best judgment based on impact and time pressure; someone waiting generally raises urgency.
-- **Estimate:** Remaining human effort, not research already completed.
-- **Area or project:** The best verified category in the user’s system.
-- **Notes:** A self-contained handoff using this structure:
+- **Title:** specific and action-led, short enough to scan.
+- **Status:** the user's equivalent of not started.
+- **Due date:** only when supported by an explicit or clearly implied deadline.
+- **Priority:** best judgment from impact and time pressure. Someone waiting on the user generally raises urgency.
+- **Estimate:** remaining human effort, not research already done. A pre-drafted reference to review and send is a short task, not a long one.
+- **Area or project:** the best-fit category from the user's current list. Category lists get renamed and restructured over time, so re-check the live list rather than relying on a remembered one, and re-list the options if nothing seems to fit.
+- **Notes:** a self-contained handoff:
 
 ```markdown
 **What:** [One-sentence request and who is waiting.]
 **Source:** [Original message or conversation link.]
 **Context:**
-- [Relevant history, evidence, and links.]
+- [Three to six bullets: who is involved, what led here, key facts with links.]
 
 **Pre-completed:**
-[Draft reply, artefact, decision brief, or prepared action. State where any draft is staged.]
+[Full draft reply, artifact, decision brief, or prepared action. State where any draft is staged.]
 
 **Remaining for the user:**
 - [Specific final action.]
 ```
 
-Do not paste an entire private conversation when a concise context summary will do. Open or retrieve the created record after writing it to confirm the title, notes, links, deadlines, and fields are correct.
+Summarize rather than pasting an entire private conversation. After creating the record, open or retrieve it to confirm the title, notes, links, deadline, and fields are correct.
 
 ## 8. Report back clearly
 
-If a task record was created, report in this order:
+If a record was created, report in this order, with nothing trailing after the last substantive block:
 
 1. What the task is.
 2. What was pre-completed and where any draft is staged.
-3. The chosen metadata, including priority, due date if any, and remaining estimate.
+3. The chosen metadata in one line.
 4. Any `[VERIFY]`, `[FILL IN]`, or other blockers.
 
-If no record was created, use this format. Keep the deliverable as the final block so it can be copied without cleanup:
+If no record was created, separate briefing from deliverable and keep the deliverable last:
 
 ```markdown
 ## Context for the user (not part of the reply)
-- [Ask, requester, key facts, judgment calls, staged-draft location, and verification flags.]
+- [Ask, requester, key facts, judgment calls, staged-draft location, verification flags.]
 
 ## The reply
 [Draft message verbatim.]
 ```
 
-Nothing should appear after the draft reply in the chat-only format.
+Nothing should appear after the draft reply.
 
-## 9. Review staged drafts after an appropriate delay
+**Invented example.** Tomas Reyke, a volunteer coordinator at the fictional Lanternfield Reading Trust, asks in a thread how many people attended last spring's workshop and whether the user would co-host the next one. A later reply shows a colleague already asked the same attendance question in another channel. The workflow classifies this as a reply owed, finds the headcount in the pre-event logistics email, drafts one answer and points the second asker to it, and marks the co-hosting question `[FILL IN: willing to co-host? dates that work]`. Because the user must decide on co-hosting and the next workshop has a date, it files a record. The metadata line reads: "Filed as Important / Time-sensitive, due before the planning call, about 10 minutes remaining."
 
-Whenever a communication draft has been staged, schedule a follow-up review if the environment supports delayed reminders and the user has authorized this workflow. A useful initial delay is about one hour, adjusted for working hours and urgency.
+## 9. Learn from what the user actually sends
 
-The reminder must identify each staged draft and where to find it, including the conversation location and the draft text or session reference. At review time:
+The user's final edits are the best evidence of their real voice and stance. After a draft has been used:
 
-1. Re-read the relevant conversation.
-2. Find any final message sent by the user, if accessible and authorized.
-3. Compare the sent version with the staged draft: note what was removed, reworded, reordered, added, or left unanswered.
-4. Extract only general, reusable lessons, such as preferred brevity, wording, decision framing, formatting, or process routing.
-5. If no final message has been sent, reschedule a limited number of checks at increasing intervals, then stop. The user may have deliberately chosen not to send it.
-
-Do not use this review to retain unnecessary private content or construct personal profiles beyond the authorized drafting purpose.
+1. Re-read the conversation and find the message the user actually sent, or ask them to paste it.
+2. Compare it with the draft: what was removed, reworded, reordered, added, or left unanswered.
+3. Extract only general, reusable lessons, such as preferred brevity, wording, decision framing, formatting, or process routing (for example, "funding approvals go through the formal application").
+4. If nothing has been sent yet, check again a limited number of times, then stop. The user may have deliberately chosen not to send it.
 
 ## 10. Improve the workflow carefully
 
-After completing a run, review what helped and what caused avoidable work. Update reusable workflow guidance only when authorized to maintain it. Keep improvements small, general, and testable.
-
-Examples of useful improvements include:
+After each run, review what helped and what caused avoidable work. Update the workflow only when authorized to maintain it, and keep changes small, general, and testable. Useful improvements include:
 
 - adding a source type that reliably answered a class of requests;
-- recording a generic tool limitation and its workaround;
+- recording a tool limitation and its workaround;
 - adding a genuinely distinct task shape;
-- clarifying an instruction that caused repeated wasted effort; or
-- encoding a correction as a general drafting or process rule.
+- cutting or rewording an instruction that wasted time; or
+- encoding a user correction as a general drafting or process rule.
 
-Do not silently alter user-owned systems, publish changes, store sensitive conversation content merely for future drafting, or turn a single unusual incident into a rigid rule. If nothing generalizable was learned, make no change.
+Encode the lesson, not the specific example. Do not turn one unusual incident into a rigid rule. If nothing generalizable was learned, change nothing; no-op runs are normal once the workflow matures.
 
-## Final audit
+## 11. Final audit
 
 Before finishing, check:
 
 - Did I read later replies and confirm the work is still live?
 - Did I identify the actual deliverable rather than merely log the message?
 - Did I research enough, but not excessively?
-- Did I draft or prepare the useful work where safe?
+- Did I draft or prepare the useful work?
 - Did I avoid sending, approving, or committing externally?
 - Are unsupported facts and links clearly marked rather than guessed?
-- Does the task, if created, contain enough context and a specific remaining action?
-- Did I protect private information and stay within authorized access?
-- If a draft was staged, is any follow-up review authorized, bounded, and documented?
+- If a record exists, does it have full context, verified fields, and specific remaining steps?
+- Is the deliverable the final block of my report?
+
+## Optional extras
+
+These help when your assistant has connected tools.
+
+- **Parsing message links.** Many messaging tools encode the conversation ID and a message timestamp in the link, plus a separate parent identifier when the message is a thread reply. Use the parent identifier to fetch the whole thread. Some tools return nothing for an exact-timestamp lookup, so query a small window around it instead.
+- **Recovering identities.** If sender names come back blank, recover them from mentions in the text or by looking up the user ID.
+- **Building an evidence base.** For references or feedback, searching for messages a person authored can surface concrete examples of their actual work.
+- **Staging drafts.** If authorized, stage the reply as an unsent draft in the right thread so finishing is one click, and keep the same text in the task notes. Check rendering: many tools need a blank line between a paragraph and a list, or the list items show as plain text. Go straight from greeting to the first item rather than using a list lead-in line.
+- **Scheduled review.** If the environment supports delayed reminders, schedule the step 9 check automatically. A default of about one hour is a reasonable start, adjusted for working hours and urgency. The reminder should name each staged draft, its conversation location, and where the draft text is stored, and allow a couple of follow-up checks at growing intervals before stopping.
+- **Versioning the workflow.** If the workflow lives in a file under version control, commit each improvement with a short, dated message so changes are easy to review or revert.
 
 
 ---
