@@ -42,7 +42,7 @@ Ask these once, then reuse the answers until the user changes them.
 | Working hours | Ask; count only hours the user actually works |
 | Focus window and daily focus capacity | Ask which part of the day suits deep work and how many focused hours a day are realistic; if unsure, start with a few hours |
 
-Suggested thresholds, all adjustable: a slipping goal has had its deadline moved 3 or more times; a chronically deferred task more than 4 times; a heavy meeting day has more than 5 meetings; the unplanned buffer is about 20% of working hours after meetings; and a waiting message has gone unanswered for more than a few days.
+Suggested thresholds, all adjustable: a slipping goal has had its deadline moved 3 or more times; a stale task is still open about a month after it was created; a heavy meeting day has more than 5 meetings; the unplanned buffer is about 20% of working hours after meetings; and a waiting message has gone unanswered for more than a few days.
 
 **Access boundary.** Read only sources the user is authorized to use for the legitimate purpose of planning their own week, and only the minimum: counts, dates, and how long people have waited, not message content. Use other people's details only where they bear on the user's time, and leave out unrelated or sensitive personal details. Skip any private notes or journal the user doesn't want read, including copies in chat history, and keep the plan private; drafted messages say only what the recipient needs.
 
@@ -98,7 +98,7 @@ After the review, ask: "What must still ship before the new week starts?" That i
 
 - **Plans and goals:** this and last week's plans, month or quarter plans, active goals, and how often each goal's deadline has moved.
 - **Plan of record:** a recent written action list or team goal shortlist the user already committed to.
-- **Tasks:** overdue and due next week. For large "someday" lists, read titles and deferral counts only.
+- **Tasks:** overdue and due next week, with how long each has been open. For large "someday" lists, read titles and age only.
 - **Daily signals:** recent ratings, focus hours, or short daily plans, if the user tracks them.
 - **Calendar:** meetings per day, heavy and clear days, weekend events, existing focus placeholders, and personal events that limit capacity.
 - **Messages (counts only):** old unanswered threads and people waiting for replies.
@@ -118,7 +118,7 @@ Include each only when it matters:
 - **Capacity and energy:** ratings, focus hours, and meeting load, with numbers and days ("three days under target: Mon, Wed, Thu"); heavy and meeting-free days.
 - **Slipped goals:** by name, with how often they moved. At the slip threshold, ask now: "Is this still the right goal, or is the format, scope, or owner wrong?"
 - **Close-out reality:** whether last week's final items shipped. Ask rather than assume.
-- **Backlog and people waiting:** the overdue count, one to three parked tasks that now fit, and who has waited how long. A non-empty saved-for-later list is not a failure; flag only stale or ownerless items.
+- **Backlog and people waiting:** the overdue count, stale tasks past the age threshold, one to three parked tasks that now fit, and who has waited how long. A non-empty saved-for-later list is not a failure; flag only stale or ownerless items.
 - **Fixed commitments:** outside deadlines or programs with set dates, which beat self-set goals on timing.
 - **Team signals:** a teammate in sustained overload (ask whether clearing their way is the real priority), or several new joiners (ask whether onboarding is covered).
 
@@ -207,7 +207,7 @@ For four or more tasks, show a compact table first, then propose and write each 
 |---|---|---|---|---|
 | 1 | Draft budget section of grant application | Tue | 90 min | User |
 
-Check for duplicates first; if the same work exists, update it in place instead. Spread due dates in order. Adjustable defaults: estimates from a fixed ladder (5, 10, 20, 45, 60, 90, 120, 180 minutes); importance follows the goal's priority, with "critical" reserved for the single blocker; urgency is "this week" if it must land now, "same day" only for outside requests due today, otherwise flexible.
+Check for duplicates first; if the same work exists, update it in place instead, moving a parked task back to active if needed. Spread due dates in order. Adjustable defaults: estimates from a fixed ladder (5, 10, 20, 45, 60, 90, 120, 180 minutes); importance follows the goal's priority, with "critical" reserved for the single blocker; urgency is "this week" if it must land now, "same day" only for outside requests due today, otherwise flexible.
 
 Notes template:
 
@@ -295,7 +295,7 @@ Hi [name], I'm protecting time for [goal] this week, so I'd like to [skip / move
 
 ### Task triage
 
-Ask whether the user wants to triage overdue tasks themselves. If not, offer chronically deferred tasks as one batch to move to "someday". Then go one by one, most important first: do this week, done (people forget to close things), defer (count the move; important but not urgent gets a dated slot, not "someday"), delegate (check whether the work must stay with the user, then note who and when), or delete. Write each decision right away.
+Ask whether the user wants to triage overdue tasks themselves. If not, offer stale open tasks (older than the age threshold since they were created) as one batch to move to "someday"; archive only if the user asks. Then go one by one, most important first: do this week, done (people forget to close things), defer (set a new date; important but not urgent gets a dated slot, not "someday"), delegate (check whether the work must stay with the user, then note who and when), or delete. Write each decision right away.
 
 ### Scorecard
 
@@ -311,4 +311,4 @@ If the user asks, look across recent sessions for corrections that repeat ("that
 
 ### Structured stores
 
-If goals and tasks live in a database, refer to fields by stable identifiers rather than display names, which drift. Confirm the exact text format that renders checklists, and batch writes only after decisions are made.
+If goals and tasks live in a database, refer to fields by stable identifiers rather than display names, which drift. A computed "days since created" field makes a simple slippage signal for tasks. Confirm the exact text format that renders checklists, and batch writes only after decisions are made.

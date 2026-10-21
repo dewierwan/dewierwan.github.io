@@ -94,7 +94,7 @@ Then agree up to two **supporting** outcomes.
 
 Only look at tasks overdue or due on the target day, sorted by importance then due date. For each, decide: **do today, done, punt, delegate, or delete.** Record each decision as it is made, and note who and when for a delegation. With only one or two, handle them in a line each. If a long list is wearing the user down, offer one yes/no bulk move for low-importance items.
 
-Flag chronic slips. A task pushed several times (you pick the number) gets a direct question: "Is this still real, or should we reshape, delegate, or drop it?" If something is partly done, ask before treating it as urgent.
+Flag chronic slips. A task that has stayed open a long time (you pick the threshold in days) gets a direct question: "This has been open N days. Is it still real, or should we reshape, delegate, or drop it?" How long a task has been open since it was created is a more honest slip signal than its due date. If your system rolls open tasks forward automatically, everything looks due today, so weigh age rather than urgency labels alone. If something is partly done, ask before treating it as urgent.
 
 ## 6. Cut meetings
 
@@ -178,16 +178,8 @@ The assistant proposes one: "Launch copy final and sent to the designer by early
 - **Run modes.** Switch from the full flow when the user signals it, and say which steps you skipped.
   - *Fast mode:* the user hands over an ordered list. Write the plan in their order around existing blocks and real deadlines; skip triage, cuts, and new blocks; keep a two-line pre-mortem. With several MITs, use headings ("MIT 1", "MIT 2") rather than a numbered list, which some editors renumber badly.
   - *Bedtime-bound:* send one proposal (MIT, supporting, NOT today, clashes) with at most three numbered questions, then write.
-  - *Autonomous or hard close:* the user is going to sleep. Ask nothing more; use the blocks they already set as the shape; save the plan with a self-contained first line describing the day; list open choices as pending.
-- **Forward flags.** For a deadline that can't fit tomorrow but must land within a few days, add a short plan section naming which day's plan must surface it.
+  - *Autonomous or hard close:* the user is going to sleep. Ask nothing more; use the blocks they already set as the shape; save only the plan and intention, with a self-contained first line describing the day; list open choices as pending.
+- **Forward flags.** For a deadline that can't fit tomorrow but must land within a few days, add a short plan section naming the due date, how long the task has been open, what informs it, and which day's plan must surface it.
 - **Floating availability.** If the user wants a window for helping teammates, write it as a named window with two to four fallback tasks and a default if no one asks by a set time.
-- **Team check-in draft.** If the user posts a daily update, draft it for them and never send it. Two to four lines, matching the team's format, nothing private. Claim only supported progress and keep done, intended, and pending distinct. Don't duplicate a posted update or overwrite an existing draft, and only report a link the tool actually returned.
-
-```
-Y: <yesterday's actual result, marked done / missed / partial>
-T: <today's outcome, plus up to two supporting priorities>
-W: <weekly goal, only on the first day of the week or when it changes>
-```
-
 - **Inbox, chat, and pipeline signals.** With connected tools, add to the brief: counts of old unanswered email, saved action items (stale ones nobody owns matter most), messages awaiting a reply (sender, channel, and age of the oldest few, no content), and for people who hire, their own upcoming interviews and how long candidates have waited at each stage. Long-waiting items make strong supporting candidates; if a source is down, name it. Because these signals touch other people's messages and records, use them only for the user's own planning with clear authorization, read the minimum needed (counts, names, ages), leave out unrelated or sensitive details, and keep results in the private plan.
 - **Improve the workflow.** After each run, quietly note what went wrong or what the user corrected, and fold the lesson into an existing rule rather than adding a new one.

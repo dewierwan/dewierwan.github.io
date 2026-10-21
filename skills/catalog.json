@@ -52,7 +52,7 @@
     },
     {
       "title": "Write in my voice",
-      "description": "Draft or revise email in the user's own voice, built from real samples, with facts and commitments checked before anything is sent. Use when someone asks to write, reply to, or polish an email.",
+      "description": "Drafts or revises email in your own voice from real samples, with facts and commitments checked. Use when you say \"write this email,\" \"reply to this thread,\" or \"polish my draft.\"",
       "category": "Research and write",
       "page": "https://dewierwan.com/skills/write-in-my-voice/",
       "markdown": "https://dewierwan.com/skills/raw/write-in-my-voice.md"
@@ -129,14 +129,14 @@
     },
     {
       "title": "Prepare for a meeting",
-      "description": "Research the people and history behind a meeting, clarify the outcome wanted, and produce a focused brief and agenda. Use when someone says prep my meeting with a person, or before an important call.",
+      "description": "Researches a meeting's people and history, asks what outcome you want, then builds a focused brief and agenda. Use when you say prep my meeting with someone or before an important call.",
       "category": "Meetings and tasks",
       "page": "https://dewierwan.com/skills/meeting-prep/",
       "markdown": "https://dewierwan.com/skills/raw/meeting-prep.md"
     },
     {
       "title": "Capture meeting actions",
-      "description": "Review meeting notes or transcripts, capture real unfinished commitments as clear tasks, and batch only the unclear ones as questions. Use when someone asks what they committed to or wants meeting follow-ups.",
+      "description": "Reviews meeting records, turns real unfinished commitments into clear tasks, and batches unclear ones as questions. Use when asking what you committed to today or for meeting follow-ups.",
       "category": "Meetings and tasks",
       "page": "https://dewierwan.com/skills/meeting-actions/",
       "markdown": "https://dewierwan.com/skills/raw/meeting-actions.md"
@@ -164,7 +164,7 @@
     },
     {
       "title": "Run a reference call",
-      "description": "Prepare a focused reference call for a job candidate, with a briefing page, an opening, and questions that draw out specific evidence. Use when someone has a reference call coming up.",
+      "description": "Prepares a private briefing page for a candidate reference call, with context, an opening, and targeted questions. Use when checking references or prepping a reference call.",
       "category": "Hiring and people",
       "page": "https://dewierwan.com/skills/run-a-reference-call/",
       "markdown": "https://dewierwan.com/skills/raw/run-a-reference-call.md"

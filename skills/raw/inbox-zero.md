@@ -30,7 +30,7 @@ Confirm these once with the user, or use the defaults. All are adjustable. Store
 | Opt-in-only sources | None | Secondary workspaces read only when named |
 | Delegated clearing | None | Named sources where the assistant may clear items after the user confirms |
 | Response-time standard | None | For example a target reply time for candidates or partners |
-| Draft destinations | Copy-ready text | Saved drafts only where the user authorizes it |
+| Draft destinations | Copy-ready text | Saved drafts only where the user authorizes it, using a method verified to keep them in the right thread |
 | Link preference | Open in the native app | Use browser links only if the user prefers them |
 | Person-grouping threshold | 4 items | One person with this many items gets one grouped decision |
 
@@ -217,6 +217,7 @@ Then audit the run for friction: a pointless question, an item in the wrong buck
 - Quietly dropping a failed source or substituting a weaker one.
 - Treating unread, new, or loud as urgent.
 - Inventing links, or clearing a notification by changing the record behind it.
+- Saving a draft through a method that leaves it detached from its thread.
 - Taking an external action, such as sending or archiving, that the user did not delegate.
 
 ## Optional extras
@@ -239,4 +240,4 @@ Afterwards, re-read the saved list to check the right items were cleared.
 
 **Delegated clearing.** A common case is a tool with no quick manual way to empty its notification inbox. Clear an item only after the user says it is handled, done, or not worth acting on, or confirms the no action bucket. Never clear an item that is decided but not yet acted on, such as a reply still to post. Clearing a notification or marking a chat processed must never resolve, edit, or delete the underlying comment, thread, page, or record. Pass item identifiers in a way the tool reliably accepts, retry a transient error once, verify the result, and report it in one line ("Cleared 4, all verified, 29 left"). Name anything unverified as a failure, and know how to undo a mistaken clear. For chats, marking an item processed (so it does not return next run) fits when the user handled it elsewhere, chose to ignore it, or confirmed no action; do not mark chats the user still has to answer, since a sent reply drops off on its own.
 
-**Saved drafts in apps, where authorized.** Save each draft as a reply in its own thread, never at the top level of a channel or conversation. Confirm it attached to the right thread, then open it in the app the user prefers so they can edit and send. In group threads, use the channel's real mention format for the person being answered and anyone the draft asks to act. Do not also paste the draft into the conversation; just say it is saved and opened. If a draft already exists there, say so rather than overwriting it. If you cannot read saved drafts back, never recreate an edited draft from your own version: ask the user to paste their current text, and save the revision only after they remove the old one. For copy-ready drafts, also copy the text to the clipboard if the user wants, and say so.
+**Saved drafts in apps, where authorized.** Save each draft as a reply in its own thread, never at the top level of a channel or conversation. Use whichever method the user has verified keeps drafts attached to the right thread. For email, that may mean writing the reply in the mail app's own reply box (for example through browser automation in the user's chosen profile) rather than through an API draft tool, which can produce drafts that do not sit inside the thread. Leave each draft unsent in its own tab or window, opened in the app the user prefers, so they can edit and send. In group threads, use the channel's real mention format for the person being answered and anyone the draft asks to act. Do not also paste the draft into the conversation; just say it is saved and opened. If a draft already exists there, say so rather than overwriting it. If you cannot read saved drafts back, never recreate an edited draft from your own version: ask the user to paste their current text, and save the revision only after they remove the old one. For copy-ready drafts, also copy the text to the clipboard if the user wants, and say so.
