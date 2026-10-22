@@ -1,6 +1,6 @@
 ---
 name: plan-your-day
-description: Chooses one outcome for the day, protects time for it, and plans around real commitments. Use when someone says 'plan my day', 'plan tomorrow', or asks what to focus on.
+description: Turns a crowded or unclear day into one named outcome, protected time, and a NOT today list. Use when someone says 'plan my day', 'plan tomorrow', or asks what to focus on.
 ---
 
 # Plan your day
@@ -13,112 +13,111 @@ Use this to turn a crowded or unclear day into one named outcome, a protected bl
 - Check that the MIT serves one of this week's goals. If it doesn't, ask why it beats them.
 - Add at most two supporting items. Everything else goes on a written **NOT today** list.
 - Name the work most likely to feel productive while quietly displacing the MIT, and agree one counter for it.
-- Protect one focused block for the MIT, broken into chunks with short breaks (about an hour is a good default; adjust to taste).
+- Pick one protected window for the MIT, ideally a few contiguous hours at the time you focus best.
 - If the last few days were rough, plan less: one MIT and nothing else is a valid plan.
 
-## 1. Choose the day and read the situation
+## 1. Choose the day and gather context
 
-Check the local date and time first; don't ask for the time zone if the device can tell you. Default: before late morning, plan today; in the evening, plan tomorrow; in between, ask. An explicit date from the user always wins. Change these cutoffs to fit your rhythm. If an evening session runs past midnight, keep the date already agreed. State the target day and time zone in one line before going further.
+Check the local date and time first; don't ask for the time zone if the device can tell you. Default: early in the day, plan today; in the evening, plan tomorrow; in between, ask. An explicit date from the user always wins, and an evening session that runs past midnight keeps the date already agreed. Adjust these cutoffs to your rhythm. State the target day and time zone in one line.
 
-Then gather what exists, in one pass:
+Then gather what exists, in one pass (or ask the user to paste it):
 
-- the day's calendar, including personal commitments that shape the real free time (read them; never move them);
+- the day's calendar, including personal commitments that shape real free time (read them; never move them);
 - this week's goals and any plan already made for this day;
-- tasks that are overdue or due on the target day;
+- tasks overdue or due on the target day;
 - how the previous day went against its plan;
-- the user's recent day ratings or notes on energy, if they keep them.
+- recent day ratings or energy notes, if the user keeps them.
 
-If the user keeps a journal or private notes they have marked off limits, do not read them, even for context. Use only what they share and the fields they set aside for planning. If a source fails to load, say which one and plan from what the user tells you. If the plan depends on an unfamiliar name or project, do one quick lookup or ask.
+On a same-day "what now?" run, look at today's tasks in every status, including done. An open-tasks list says nothing about what shipped, so never call an item unfinished just because it is missing.
 
-If the weekly plan looks empty, check once more for informal week goals written elsewhere. Then ask: "Plan the week first, or proceed without weekly goals?" If you proceed, tie the MIT to a longer-range goal and flag the gap. Never invent goals.
+If the user keeps a journal or notes marked off limits, don't read them, even for context. If a source fails, say which one and plan from what the user tells you. If the weekly plan is empty, check once for informal week goals elsewhere, then ask: "Plan the week first, or proceed without weekly goals?" If you proceed, tie the MIT to a longer-range goal and flag the gap. Never invent goals.
 
-## 2. Check the previous day before choosing
+## 2. Check the previous day
 
-Compare what was planned for the previous day with what actually shipped. A calendar block is not proof the work happened, so ask when unsure. A simple table helps:
+Compare what was planned with what shipped. A calendar block is not proof the work happened, so ask when unsure.
 
 | Block | Planned items | Shipped? |
 |---|---|---|
 | [Morning focus block] | [items A, B, C] | [A yes, B yes, C no] |
 
-Then classify the day in one line (more than one can apply):
+Classify in one line (several can apply):
 
 - **Clean ship:** MIT and supporting items done.
 - **Supporting dropped:** list what dropped.
-- **Overflow:** one topic ate blocks meant for other work. Say plainly which work didn't happen. This is the most common failure, so look for it.
+- **Overflow:** one topic ate time meant for other work. This is the most common failure; name the work that didn't happen.
 - **MIT slipped:** ask whether the remaining scope is known or still open.
 
-In an evening run, blocks still to come are pending, not dropped; ask whether each will run as planned. If the user already reviewed the day in this session, cite that review in one line and skip the table. If no plan or review exists, say so and work from the calendar and task list.
+In an evening run, blocks still to come are pending, not dropped; ask whether each will run as planned. If the day was already reviewed this session, cite that in one line and skip the table.
 
-Every dropped item gets one decision now: carry, push to a later date, retire, or delegate. When an MIT slipped and one topic overflowed, assume the topic is bigger than estimated. Default for the next day: the same topic with a sharper outcome, zero or one supporting item, a time cap ("if not done by mid-afternoon, what happens?"), and dropped items explicitly retired or delegated rather than silently carried. Keep this step to a couple of minutes.
+Every dropped item gets a decision now: carry, push, retire, or delegate. When the MIT slipped and a topic overflowed, assume the topic is bigger than estimated: keep the same topic with a sharper outcome, zero or one supporting item, and a time cap ("if not done by mid-afternoon, what happens?"). Keep this step to a couple of minutes.
 
-## 3. Read the signals and set the load
+## 3. Brief and set the load
 
-Give the user a short brief, no more than about eight bullets: target day, weekly goals, whether the day is already mapped by the weekly plan, meeting load (count timed events, not labels like "focus day") and the biggest open window, overdue and due counts, and anything from recent days worth knowing. Ask one quick question about energy and wait for the answer.
+Give a short brief, about eight bullets at most: target day, weekly goals, whether the weekly plan already mapped this day, meeting load (count timed events, not labels like "focus day") and the biggest open window, overdue and due counts, and anything notable from recent days. Ask one question about energy and wait.
 
-**Lighter plan after rough days.** If recent days were rated low, focus hours were thin, or the user reports exhaustion or overwhelm, change the proposal rather than just flagging it: "Given the last few days, I'm proposing one MIT, nothing else, and an earlier stop. Ok?" Pick your own trigger; a good mood does not cancel a short night's sleep.
+**Lighter plan after rough days.** If recent days were low, focus time was thin, or the user reports exhaustion or overwhelm, change the proposal, don't just flag it: "Given the last few days, I'm proposing one MIT, nothing else, and an earlier stop. Ok?" The user picks the trigger. A good mood does not cancel a short night's sleep.
 
-**Check inherited rules against reality.** If the weekly plan contains a rule that clashes with the user's stable habits, ask which stands rather than declaring a conflict.
+If the weekly plan contains a rule that clashes with the user's stable habits, ask which stands.
 
 ## 4. Choose the MIT
 
-**What the user already decided wins.** If their message names the MIT, if they built blocks or a slot-by-slot shape, or if a tired user picks a bare topic, take it. Bind only what is missing, usually one question: "What does done mean?" Never re-ask or re-slot. If the weekly plan already named this day's main work, phrase it as an outcome and ask: "MIT: X, serves weekly goal Y, block already set. Ok, or reshape?"
+**What the user already decided wins.** If they named the MIT, built blocks, or picked a bare topic, take it and bind only what is missing, usually: "What does done mean?" Never re-ask or re-slot. If the weekly plan already named this day's work, phrase it as an outcome and confirm: "MIT: X, serves weekly goal Y, block already set. Ok, or reshape?"
 
-**Re-open when the ground moved.** A weekly pre-map is valid only as of when it was made. Re-derive if news changed scope, a decision freed blocks, or the user pivoted. Give freed blocks a default owner (usually the most urgent displaced item) and trust the user's own calendar moves over the old plan.
+**Re-open when the ground moved.** A weekly pre-map is valid only as of when it was made. If news changed scope, a decision freed time, or the user moved things, re-derive. Give freed time a default owner, usually the most urgent displaced item.
 
-**Otherwise, ask before proposing.** For an open or pivoted day, ask two or three shaping questions together (how many focused hours, what shape, what failure you expect), then wait; a proposal bundled with questions still anchors the answer. With no plan at all, ask at most two ("What one outcome makes today a win?"). If the user is thinking aloud, confirm what works, flag gaps, and cut side quests rather than counter-proposing. For a single missing fact, just ask.
+**Otherwise, ask before proposing.** For an open day, ask two or three shaping questions together (focused hours, day shape, expected failure), then wait; a bundled proposal anchors the answer. With no plan at all, ask at most two ("What one outcome makes today a win?"), then propose. If the user is thinking aloud, confirm what works, flag gaps, and cut side quests rather than counter-proposing.
 
-Then test the MIT:
+Test the MIT:
 
 - **Named and binary.** "Work on X" fails. "X done and sent" passes.
-- **Serves a weekly goal,** or the weekly plan set this day aside for it. Name the link.
-- **Fits the day.** Many meetings and low energy means a smaller MIT or a meeting cut. Add an energy fallback ("if energy flags, drop to X") unless the user wants to push through.
+- **Linked.** It serves a weekly goal, or the weekly plan set this day aside for it.
+- **Realistic.** Many meetings or low energy means a smaller MIT or a cut meeting. Add a fallback ("if energy flags, drop to X") unless the user wants to push through.
 
-If the user names two MITs, push back: merge them, demote one to supporting, or defer it. Four principles cover most variations:
+Two MITs? Merge, demote one to supporting, or defer. Four principles cover most variations:
 
-- **Crown what gets displaced.** Booked meetings happen anyway; the unslotted, generative, or avoided item is the one that gets eaten, so it is usually the MIT. "Do the inbox first" sets order, not priority: cap the inbox. A decision can be the MIT (set a time to write it down after the last meeting that feeds it), and so can a hard conversation, with an outcome like "script written and conversation booked".
-- **Bound open-ended work.** Use a time-bound outcome plus a handoff: "three focused hours, then a status note: what's in, what's outstanding, what's next." Never "as long as it takes". If the work needs input from others, send the request before the block. For a nearly finished artifact, done means closing the named gaps and sharing.
-- **Boring beats shiny near hard deadlines.** When a fixed external date looms, protect a window for the dull, irreversible task and ask which item is truly time-locked.
-- **Match the day's shape.** Most days get an MIT. Valid exceptions:
+- **Crown what gets displaced.** Meetings happen anyway; the unslotted, generative, or avoided item gets eaten, so it is usually the MIT. "Inbox first" sets order, not priority: cap the inbox. A decision can be the MIT (set a time to write it down after the last meeting feeding it), and so can an avoided conversation ("script written and conversation booked").
+- **Bound open-ended work.** Use time plus a handoff: "three focused hours, then a status note: what's in, what's outstanding, what's next." Never "as long as it takes". If the work needs others' input, send the request before the block.
+- **Boring beats shiny near hard deadlines.** When a fixed external date looms, protect a window for the dull, time-locked task.
+- **Match the day's shape.** Most days get an MIT. Common exceptions:
 
 | Shape | What to write |
 |---|---|
-| Recovery (ill or depleted) | Full rest as default; a morning check (sick, borderline, well) and what each triggers; what to cancel; one or two things that truly can't wait; "don't catch up on yesterday" under NOT today. Main risk: half-rest, drifting back into messages. |
-| Meeting-heavy or "just get through it" | One key meeting plus the artifact it produces, or one tiny deliverable; deep work moves to the next open day. |
-| Attending someone else's event | Offer one artifact once; if declined, "be present and work the conversations". |
-| Inbox or triage day | A short cap per item (about 15 minutes, adjustable); bigger items get a reply with a date and a new task. |
-| Week not yet planned | The weekly planning session is the MIT, early, sized to the user's estimate. |
+| Recovery (ill or depleted) | Full rest by default, a morning check (sick, borderline, well), what to cancel, at most two things that can't wait, and "don't catch up on yesterday" under NOT today. |
+| Meeting-heavy or attending an event | One key meeting or conversation plus the artifact it produces, or simply "be present"; deep work moves to the next open day. |
+| Inbox or triage day | A short cap per item; bigger items get a reply with a date and a new task. |
+| Week not yet planned | Weekly planning is the MIT, early. |
 
 Then agree up to two **supporting** outcomes.
 
 ## 5. Triage overdue tasks
 
-Only look at tasks overdue or due on the target day, sorted by importance then due date. For each, decide: **do today, done, punt, delegate, or delete.** Record each decision as it is made, and note who and when for a delegation. With only one or two, handle them in a line each. If a long list is wearing the user down, offer one yes/no bulk move for low-importance items.
+Look only at tasks overdue or due on the target day, sorted by importance then due date. For each: **do today, done, punt, delegate, or delete.** Record each decision as it is made; note who and when for a delegation. If a long list is wearing the user down, offer one bulk move for low-importance items.
 
-Flag chronic slips. A task that has stayed open a long time (you pick the threshold in days) gets a direct question: "This has been open N days. Is it still real, or should we reshape, delegate, or drop it?" How long a task has been open since it was created is a more honest slip signal than its due date. If your system rolls open tasks forward automatically, everything looks due today, so weigh age rather than urgency labels alone. If something is partly done, ask before treating it as urgent.
+Flag chronic slips. A task open longer than the user's chosen threshold gets: "This has been open N days. Still real, or reshape, delegate, or drop?" Age since creation is a more honest slip signal than due date, especially if the system rolls open tasks forward automatically.
 
 ## 6. Cut meetings
 
-Walk through the day's meetings: **keep, cut, shorten, or reschedule?** Propose cuts for anything booked against a rule in the weekly plan. For each cut or move, draft a short, warm message for the user to send; never send it yourself. Skip this step if the weekly plan already chose "no cuts this week" (say so).
+For each meeting: **keep, cut, shorten, or reschedule?** Propose cuts for anything booked against a weekly-plan rule. Draft a short, warm message for each change for the user to send; never send it yourself. Skip this if the weekly plan chose "no cuts" (say so).
 
 ## 7. Protect the time
 
-Propose specific slots: the best window for the MIT, ideally two to three contiguous hours, at the time the user focuses best. Title blocks by outcome, such as "MIT: launch copy sent". Short gaps between meetings become prep blocks, not deep work.
+Propose specific slots: the best window for the MIT, titled by outcome ("MIT: launch copy sent"). Short gaps between meetings become prep blocks, not deep work.
 
-Once the user approves a concrete proposal, or hands you their own slot structure, re-read the calendar and write the blocks without asking again. Ask only about new or changed times, never twice. Reuse and retitle existing focus blocks rather than adding duplicates. Ask before deleting anything, naming each event. If notes and calendar disagree on a time, suspect a time zone mix-up first.
+Once the user approves a concrete proposal or gives their own slots, re-read the calendar and write the blocks without asking again. Ask only about new or changed times. Reuse existing focus blocks rather than adding duplicates, and name each event before deleting it. If notes and calendar disagree on a time, suspect a time zone mix-up first.
 
-**Shared surfaces get the neutral version.** If others can see the calendar or a team update, write "Focus: hiring decisions" there and keep names and sensitive reasoning in the private plan.
+**Shared surfaces get the neutral version.** On a calendar others can see, write "Focus: hiring decisions" and keep names and sensitive reasoning in the private plan.
 
 ## 8. NOT today and the pre-mortem
 
-Ask: "What are you explicitly not pushing on today? What can you ignore or communicate a slip on?" Capture two to five items. If someone should hear about a slip, draft the heads-up for the user to send.
+Ask: "What are you explicitly not pushing on today? What can you ignore or communicate a slip on?" Capture two to five items, and draft any heads-up someone needs for the user to send.
 
-Then ask: "If today fails, what's the most likely reason?" Add one concrete counter, such as "notifications off during the MIT block". Inherit any still-relevant pre-mortem from the weekly plan. If the MIT block isn't booked, the counter is "book it first thing".
+Then ask: "If today fails, what's the most likely reason?" Write one concrete counter, such as "notifications off during the MIT block". If the block isn't booked, the counter is "book it first thing".
 
-**Probe displacement work.** When the MIT is writing, avoided, or open-ended, ask what productive-feeling work is most likely to replace it. Name the specific shape, such as "another polish round with no new feedback", and write a counter: "If I'm half an hour into reformatting, stop and ask whether it moves the MIT." On triage days the trap flips: doing the project an email describes.
+**Probe displacement work.** When the MIT is writing, avoided, or open-ended, ask what productive-feeling work will most likely replace it. Name the specific shape ("another polish round with no new feedback") and its counter: "Half an hour into reformatting? Stop and ask whether it moves the MIT."
 
 ## 9. Write the plan
 
-Write the plan wherever the user keeps daily plans. Save a one-line intention (the MIT outcome) plus the full plan:
+Save a one-line intention (the MIT outcome) and the plan wherever the user keeps daily plans:
 
 ```
 ## MIT
@@ -142,44 +141,39 @@ Block: <day> <time window>
 - Counter: <concrete action>
 
 ## Pending decisions
-- <questions the user hasn't answered yet>
+- <unanswered questions>
 ```
 
-If the user declines calendar and task updates, still write the plan; it is the record the next review needs. Close with one line confirming what was saved, any pending decision, and anything that failed. Don't summarize the session again.
+If the user skips calendar and task updates, still write the plan; the next review needs it. Close with one line: what was saved, pending decisions, anything that failed. No recap.
 
 ## 10. Check before you finish
 
-The run is not done until each item is true or explicitly waived:
-
 - [ ] Target day and time zone stated.
-- [ ] Previous day classified; every dropped item and pending evening block has a decision.
-- [ ] One MIT with a binary outcome and its link to a weekly goal, or a stated no-MIT shape.
-- [ ] Overdue and due-today tasks decided, or the user opted out.
-- [ ] Calendar blocks written for agreed slots, or the user opted out. Don't claim new blocks if existing ones were reused.
+- [ ] Previous day classified; dropped items and pending evening blocks decided.
+- [ ] One binary MIT linked to a weekly goal, or a stated no-MIT shape.
+- [ ] Overdue and due tasks decided, or skipped by choice.
+- [ ] Agreed blocks written, or skipped by choice; reused blocks not claimed as new.
 - [ ] NOT today list and pre-mortem counter written.
-- [ ] Plan saved, with pending decisions and failed writes listed.
+- [ ] Plan saved, with pending decisions and failures listed.
 
 ## 11. Common failure modes
 
-- **Over-asking.** Aim for 10 to 15 minutes. If ten minutes pass with no MIT proposed, propose one and stop asking.
-- **Re-asking.** Partial answers mean proceed: do the safe writes and list the rest as pending, but change no task without a yes.
-- **Going soft.** Be direct: "You named this yesterday too. What's different today?" Skip summaries at the end of each step.
-- **Stale snapshot.** If the user edits the calendar mid-session, re-read it before touching anything.
-- **Topic instead of outcome.** Say so directly: "That's a topic, not an outcome."
+- **Over-asking.** Aim for 10 to 15 minutes. If ten minutes pass with no MIT, propose one.
+- **Stalling on partial answers.** Proceed: do the safe writes, list the rest as pending, and change no task without a yes.
+- **Going soft.** Be direct: "You named this yesterday too. What's different today?" Call a topic a topic, not an outcome.
+- **Stale snapshot.** If the user edits the calendar mid-session, re-read before touching it.
+- **Reading absence as failure.** Check every status, or ask, before calling an item unfinished.
 
 ## Worked example
 
 Sam plans tomorrow in the evening. Most of the last few days felt rough. The weekly goal is "launch page live by Friday". Sam's first instinct is two MITs: finish the launch copy and clear the support queue.
 
-The assistant proposes one: "Launch copy final and sent to the designer by early afternoon." The support queue becomes a capped supporting item. Because of the low days, it suggests no second supporting item and an earlier stop. Sam expects the failure to be "tweaking the hero section for the fifth time". The counter: work only on the list of missing sections, then send. The saved plan lists "refresh pricing table" under NOT today and one pending decision: whether to move a late check-in call.
+The assistant proposes one: "Launch copy final and sent to the designer by early afternoon." The support queue becomes a capped supporting item. Because of the low days, it suggests no second supporting item and an earlier stop. Sam expects the failure to be "tweaking the hero section for the fifth time". The counter: work only on the list of missing sections, then send. The plan lists "refresh pricing table" under NOT today and one pending decision: whether to move a late check-in call.
 
 ## Optional extras
 
-- **Run modes.** Switch from the full flow when the user signals it, and say which steps you skipped.
-  - *Fast mode:* the user hands over an ordered list. Write the plan in their order around existing blocks and real deadlines; skip triage, cuts, and new blocks; keep a two-line pre-mortem. With several MITs, use headings ("MIT 1", "MIT 2") rather than a numbered list, which some editors renumber badly.
-  - *Bedtime-bound:* send one proposal (MIT, supporting, NOT today, clashes) with at most three numbered questions, then write.
-  - *Autonomous or hard close:* the user is going to sleep. Ask nothing more; use the blocks they already set as the shape; save only the plan and intention, with a self-contained first line describing the day; list open choices as pending.
-- **Forward flags.** For a deadline that can't fit tomorrow but must land within a few days, add a short plan section naming the due date, how long the task has been open, what informs it, and which day's plan must surface it.
-- **Floating availability.** If the user wants a window for helping teammates, write it as a named window with two to four fallback tasks and a default if no one asks by a set time.
-- **Inbox, chat, and pipeline signals.** With connected tools, add to the brief: counts of old unanswered email, saved action items (stale ones nobody owns matter most), messages awaiting a reply (sender, channel, and age of the oldest few, no content), and for people who hire, their own upcoming interviews and how long candidates have waited at each stage. Long-waiting items make strong supporting candidates; if a source is down, name it. Because these signals touch other people's messages and records, use them only for the user's own planning with clear authorization, read the minimum needed (counts, names, ages), leave out unrelated or sensitive details, and keep results in the private plan.
-- **Improve the workflow.** After each run, quietly note what went wrong or what the user corrected, and fold the lesson into an existing rule rather than adding a new one.
+- **Run modes.** Switch from the full flow when the user signals it, and say which steps you skipped. *Fast mode:* the user gives an ordered list; write it in their order around fixed commitments and keep a two-line pre-mortem. *Bedtime-bound:* one proposal with at most three numbered questions, then write. *Going to sleep:* ask nothing; use the blocks they already set; save the plan with a self-contained first line and list open choices as pending.
+- **Forward flags.** For a deadline that can't fit tomorrow but must land within a few days, add a plan section naming the due date, how long it has been open, and which day's plan must surface it.
+- **Connected signals.** With connected tools, add to the brief: old unanswered email, stale saved action items, messages awaiting a reply (sender, channel, and age only), and for people who hire, their own upcoming interviews and how long candidates have waited at each stage. Long-waiting items make strong supporting candidates; if a source is down, name it. Because these touch other people's messages and records, use them only for the user's own planning with clear authorization, read the minimum needed, leave out unrelated or sensitive details, and keep results in the private plan.
+- **Tidy idle sessions.** If your setup can list assistant sessions idle for a long time, list them at the NOT today step (idle time and what each was for), recommend closing finished ones, close only those the user names, and confirm in one line. Closing should keep history and stop only running processes. Skip this when the user is going to sleep.
+- **Improve the workflow.** After each run, note what went wrong or what the user corrected, and fold the lesson into an existing rule rather than adding a new one.

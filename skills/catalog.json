@@ -38,7 +38,7 @@
     },
     {
       "title": "Gather context",
-      "description": "Search the sources that matter, at a depth that fits the stakes, and turn the findings into one brief where every claim links to evidence. Use when someone wants to get up to speed on a person, project, or decision.",
+      "description": "Searches the sources that matter at a depth fitting the stakes and builds one brief where every claim links to evidence. Use when someone says 'gather context on X' or 'get me up to speed.'",
       "category": "Research and write",
       "page": "https://dewierwan.com/skills/gather-context/",
       "markdown": "https://dewierwan.com/skills/raw/gather-context.md"
@@ -73,14 +73,14 @@
     },
     {
       "title": "Create editorial cover images",
-      "description": "Create cover images for articles and newsletters through five concepts, a close look at the results, and three improved versions. Use when someone needs a header image or an image-generator prompt for a post.",
+      "description": "Creates editorial cover images for articles: five distinct concepts, a close review of results, then three improved versions. Use when someone needs a post header image or an image prompt.",
       "category": "Research and write",
       "page": "https://dewierwan.com/skills/cover-images/",
       "markdown": "https://dewierwan.com/skills/raw/cover-images.md"
     },
     {
       "title": "Plan your day",
-      "description": "Chooses one outcome for the day, protects time for it, and plans around real commitments. Use when someone says 'plan my day', 'plan tomorrow', or asks what to focus on.",
+      "description": "Turns a crowded or unclear day into one named outcome, protected time, and a NOT today list. Use when someone says 'plan my day', 'plan tomorrow', or asks what to focus on.",
       "category": "Plan and reflect",
       "page": "https://dewierwan.com/skills/plan-your-day/",
       "markdown": "https://dewierwan.com/skills/raw/plan-your-day.md"
