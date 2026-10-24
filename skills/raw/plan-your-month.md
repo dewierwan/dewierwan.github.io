@@ -48,7 +48,7 @@ Use only sources the user has authorized for this review and that serve the purp
 1. **Evidence first, discussion second.** Show the evidence picture before asking reflective questions.
 2. **Gather in one pass.** Batch independent reads rather than interrupting the conversation with small lookups.
 3. **Use current targets.** Judge progress against the user's live goals, not old schedules or stale records. Keep targets in the user's own goal record or last month's plan, not hardcoded into this workflow, and check for any recent change (a pause, a reset, a new target) before judging.
-4. **Check data quality before a harsh verdict.** Missing syncs and incomplete logs distort conclusions. Ask the user to confirm surprising findings.
+4. **Check data quality before a harsh verdict.** Missing syncs, stale feeds, and incomplete logs distort conclusions. Ask the user to confirm surprising findings.
 5. **The user chooses.** You calculate, summarize, and ask hard questions. The user picks priorities, cuts, and commitments.
 6. **One decision at a time.** Do not move on until the current question has a real answer.
 7. **Stay at month level.** Set outcomes, milestones, capacity, and structure. Leave daily task blocks to weekly planning.
@@ -78,7 +78,9 @@ For large sources, compute statistics and pull a few themes instead of reading r
 
 **Read only the fields you need.** When a daily log mixes structured fields with private free-form writing, such as a diary or journal, name the fields you want explicitly and leave the private writing out, even if you have access to it. A short field like "why I rated the day this way" usually gives enough texture for themes.
 
-**When a source is unavailable.** If a usual source has moved, been deleted, is mid-migration, or is disconnected, skip it rather than failing or guessing. Ask the user one short question for that area instead (for example, "Roughly how did sleep go this month?"), and note in the review which areas came from recollection rather than records.
+**When a source is unavailable.** If a usual source has moved, been deleted, is mid-migration, or is disconnected, skip it rather than failing or guessing. Ask the user one short question for that area instead (for example, "Roughly how did sleep go this month?"), and note in the review which areas came from recollection rather than records. When a source moves to a new location, update where the workflow looks for it rather than keeping a standing workaround.
+
+**When a source is fed automatically.** If a log is filled by a sync, import, or automation, check its most recent entry before computing anything. If the newest entry is older than expected, flag a likely broken feed and confirm with the user rather than reporting a quiet month. If the feed changed recently (a new device, a new import path, or older months filled by a one-off backfill), note where the switch happened, and compare months only within the same source or label the comparison as uneven.
 
 Before planning in detail, re-read any weekly plan that overlaps the start of the new month. Reconcile with it; never duplicate or overwrite it. Surface any gap between that week's plan and the month's outcomes.
 
@@ -214,7 +216,7 @@ Review template:
 
 ## Signals
 - [Chosen measures, or "not tracked"]. Flags: [none or named patterns].
-- Sources missing this month: [none, or areas based on recollection].
+- Sources missing or stale this month: [none, or areas based on recollection, or feeds flagged as broken].
 
 ## Win
 [One meaningful result.]
@@ -244,6 +246,7 @@ Before finishing, verify:
 - Evidence came before reflection.
 - Private free-form writing was excluded from reads.
 - Missing sources were replaced with a direct question and labeled.
+- Automated feeds were checked for freshness, and any source switch was noted before comparing months.
 - Strong verdicts account for data gaps and current targets.
 - The plan has a theme and no more than three outcomes.
 - Each outcome has a test of done, date, path, owner, and outside pressure.
@@ -261,6 +264,8 @@ Before finishing, verify:
 - Judging against stale targets.
 - Reading private journal text because it happened to be available.
 - Silently skipping a missing source, or reporting on it as if it were checked.
+- Reading a stale or broken automated feed as a quiet month.
+- Comparing months drawn from different sources as if they were like for like.
 - Confusing a list of events with a plan.
 - Overloading capacity and refusing to cut.
 - Forcing project deadlines when the real blocker is an unmade decision.
@@ -277,7 +282,7 @@ Before finishing, verify:
 
 Add this section only if the user tracks a habit or practice they want held to account, such as writing, a language, music, exercise, or meditation. Put it after goals and delivery, not first. Do not lecture on technique; the user may already follow a program for that.
 
-Compare actual activity with the user's current target using whatever they log: sessions, minutes, words, or pages; average per week; active days; longest gap; and the change from last month. If the log is unavailable this month, ask one question about it instead.
+Compare actual activity with the user's current target using whatever they log: sessions, minutes, words, or pages; average per week; active days; longest gap; and the change from last month. If the log is unavailable this month, ask one question about it instead. If the log is filled automatically, check its newest entry first, as in Step 1.
 
 Suggested verdict scale (adjustable):
 
@@ -292,4 +297,5 @@ If tracking may be incomplete, ask "The record shows this. Does that match reali
 
 - Hand bulky reads, such as a month of daily entries or a full month of calendar events, to a helper task that returns computed numbers and a short list of themes, not raw records. Give the helper the same explicit field list, so private writing stays excluded there too.
 - Ask the calendar summary for time off, travel, per-week meeting load, recurring series, and anomalies such as meetings scheduled inside time off or events with suspect time zones. Offer to clear those conflicts now and add them to a pre-time-off checklist in the plan.
+- For logs fed by an automation, sort by date and read the newest record first to confirm the feed is alive. If the feed writes records with a stable unique ID, use it to spot duplicates left by re-syncs or backfills before counting.
 - Restrict helper tasks to the read tools they need.

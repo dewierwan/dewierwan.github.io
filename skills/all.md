@@ -2409,7 +2409,7 @@ After the review, ask: "What must still ship before the new week starts?" That i
 - **Messages (counts only):** old unanswered threads and people waiting for replies.
 - **Fixed outside commitments:** events or programs the user runs that start soon.
 
-Data quality: a sync that stopped is a broken pipeline, not behavior, so report its last date and name every source that failed. Treat zero as a likely gap and ask before calling it real. Compare like with like; never average across a gap or mix sources. Never invent overdue flags you cannot prove.
+Data quality: check each source's newest entry. A sync that stopped is a broken pipeline, not behavior, so report its last date, name every source that failed, and where you can, check the automation that feeds it. If a source has been removed or is being rebuilt, skip it and ask the user one line instead. When a feed switches to a new source, older and newer entries may carry different fields; do not read the switch date as a change in behavior. Treat zero as a likely gap and ask before calling it real. Compare like with like; never average across a gap or mix sources. Never invent overdue flags you cannot prove.
 
 If there are no connected tools, ask the user for a two-minute summary of their calendar and open work instead.
 
@@ -2588,7 +2588,7 @@ Add these modules when the user wants them. Each is independent.
 
 ### Health and energy check
 
-Opt-in only, and only to judge capacity. Compare the last week or two of whatever the user tracks against warning thresholds they choose, from the same source, numbers first, naming which threshold fired. Honor habits the user has deliberately paused, asking at most once if they are back. If a commitment is faltering, ask up to three follow-ups until they name an action with a day, time, and cue: "Walk at lunch Mon, Wed, Fri when the lunchtime reminder goes off," not "I'll move more." Prefer small changes over big shifts. If the same fix failed last week, ask what is different. After travel or illness, frame the week as recovery and add a hard evening stop.
+Opt-in only, and only to judge capacity. Compare the last week or two of whatever the user tracks against warning thresholds they choose, from the same source, numbers first, naming which threshold fired. For activity, count sessions by type (for example runs versus strength sessions) and duration, not performance details. If a tracker is offline or being rebuilt, ask the user one line about it instead. Honor habits the user has deliberately paused, asking at most once if they are back. If a commitment is faltering, ask up to three follow-ups until they name an action with a day, time, and cue: "Walk at lunch Mon, Wed, Fri when the lunchtime reminder goes off," not "I'll move more." Prefer small changes over big shifts. If the same fix failed last week, ask what is different. After travel or illness, frame the week as recovery and add a hard evening stop.
 
 ### Meeting cut pass
 
@@ -2616,7 +2616,7 @@ If the user asks, look across recent sessions for corrections that repeat ("that
 
 ### Structured stores
 
-If goals and tasks live in a database, refer to fields by stable identifiers rather than display names, which drift. A computed "days since created" field makes a simple slippage signal for tasks. Confirm the exact text format that renders checklists, and batch writes only after decisions are made.
+If goals and tasks live in a database, refer to fields by stable identifiers rather than display names, which drift. A computed "days since created" field makes a simple slippage signal for tasks. Confirm the exact text format that renders checklists, and batch writes only after decisions are made. When tracked data moves to a new store or feed, update where you read it, note which fields only older entries have, and watch the new feed's newest entry so a silent failure shows up quickly.
 
 
 ---
@@ -2669,7 +2669,7 @@ Use only sources the user has authorized for this review and that serve the purp
 1. **Evidence first, discussion second.** Show the evidence picture before asking reflective questions.
 2. **Gather in one pass.** Batch independent reads rather than interrupting the conversation with small lookups.
 3. **Use current targets.** Judge progress against the user's live goals, not old schedules or stale records. Keep targets in the user's own goal record or last month's plan, not hardcoded into this workflow, and check for any recent change (a pause, a reset, a new target) before judging.
-4. **Check data quality before a harsh verdict.** Missing syncs and incomplete logs distort conclusions. Ask the user to confirm surprising findings.
+4. **Check data quality before a harsh verdict.** Missing syncs, stale feeds, and incomplete logs distort conclusions. Ask the user to confirm surprising findings.
 5. **The user chooses.** You calculate, summarize, and ask hard questions. The user picks priorities, cuts, and commitments.
 6. **One decision at a time.** Do not move on until the current question has a real answer.
 7. **Stay at month level.** Set outcomes, milestones, capacity, and structure. Leave daily task blocks to weekly planning.
@@ -2699,7 +2699,9 @@ For large sources, compute statistics and pull a few themes instead of reading r
 
 **Read only the fields you need.** When a daily log mixes structured fields with private free-form writing, such as a diary or journal, name the fields you want explicitly and leave the private writing out, even if you have access to it. A short field like "why I rated the day this way" usually gives enough texture for themes.
 
-**When a source is unavailable.** If a usual source has moved, been deleted, is mid-migration, or is disconnected, skip it rather than failing or guessing. Ask the user one short question for that area instead (for example, "Roughly how did sleep go this month?"), and note in the review which areas came from recollection rather than records.
+**When a source is unavailable.** If a usual source has moved, been deleted, is mid-migration, or is disconnected, skip it rather than failing or guessing. Ask the user one short question for that area instead (for example, "Roughly how did sleep go this month?"), and note in the review which areas came from recollection rather than records. When a source moves to a new location, update where the workflow looks for it rather than keeping a standing workaround.
+
+**When a source is fed automatically.** If a log is filled by a sync, import, or automation, check its most recent entry before computing anything. If the newest entry is older than expected, flag a likely broken feed and confirm with the user rather than reporting a quiet month. If the feed changed recently (a new device, a new import path, or older months filled by a one-off backfill), note where the switch happened, and compare months only within the same source or label the comparison as uneven.
 
 Before planning in detail, re-read any weekly plan that overlaps the start of the new month. Reconcile with it; never duplicate or overwrite it. Surface any gap between that week's plan and the month's outcomes.
 
@@ -2835,7 +2837,7 @@ Review template:
 
 ## Signals
 - [Chosen measures, or "not tracked"]. Flags: [none or named patterns].
-- Sources missing this month: [none, or areas based on recollection].
+- Sources missing or stale this month: [none, or areas based on recollection, or feeds flagged as broken].
 
 ## Win
 [One meaningful result.]
@@ -2865,6 +2867,7 @@ Before finishing, verify:
 - Evidence came before reflection.
 - Private free-form writing was excluded from reads.
 - Missing sources were replaced with a direct question and labeled.
+- Automated feeds were checked for freshness, and any source switch was noted before comparing months.
 - Strong verdicts account for data gaps and current targets.
 - The plan has a theme and no more than three outcomes.
 - Each outcome has a test of done, date, path, owner, and outside pressure.
@@ -2882,6 +2885,8 @@ Before finishing, verify:
 - Judging against stale targets.
 - Reading private journal text because it happened to be available.
 - Silently skipping a missing source, or reporting on it as if it were checked.
+- Reading a stale or broken automated feed as a quiet month.
+- Comparing months drawn from different sources as if they were like for like.
 - Confusing a list of events with a plan.
 - Overloading capacity and refusing to cut.
 - Forcing project deadlines when the real blocker is an unmade decision.
@@ -2898,7 +2903,7 @@ Before finishing, verify:
 
 Add this section only if the user tracks a habit or practice they want held to account, such as writing, a language, music, exercise, or meditation. Put it after goals and delivery, not first. Do not lecture on technique; the user may already follow a program for that.
 
-Compare actual activity with the user's current target using whatever they log: sessions, minutes, words, or pages; average per week; active days; longest gap; and the change from last month. If the log is unavailable this month, ask one question about it instead.
+Compare actual activity with the user's current target using whatever they log: sessions, minutes, words, or pages; average per week; active days; longest gap; and the change from last month. If the log is unavailable this month, ask one question about it instead. If the log is filled automatically, check its newest entry first, as in Step 1.
 
 Suggested verdict scale (adjustable):
 
@@ -2913,6 +2918,7 @@ If tracking may be incomplete, ask "The record shows this. Does that match reali
 
 - Hand bulky reads, such as a month of daily entries or a full month of calendar events, to a helper task that returns computed numbers and a short list of themes, not raw records. Give the helper the same explicit field list, so private writing stays excluded there too.
 - Ask the calendar summary for time off, travel, per-week meeting load, recurring series, and anomalies such as meetings scheduled inside time off or events with suspect time zones. Offer to clear those conflicts now and add them to a pre-time-off checklist in the plan.
+- For logs fed by an automation, sort by date and read the newest record first to confirm the feed is alive. If the feed writes records with a stable unique ID, use it to spot duplicates left by re-syncs or backfills before counting.
 - Restrict helper tasks to the read tools they need.
 
 
@@ -5076,24 +5082,27 @@ Briefing notes the assistant writes:
 
 ---
 name: access-check
-description: Before someone joins a shared chat workspace or knowledge base, find content about them they could read and recommend what to restrict. Use when adding a new hire, advisor, or collaborator.
+description: Finds content about an incoming person in shared chat and knowledge spaces and recommends what to restrict first. Use when adding a new hire or advisor, or checking before you add someone.
 ---
 
 # Check before granting access
 
-Use this workflow before adding a new hire, advisor, contractor or collaborator to a shared chat workspace, a knowledge base, or both. It answers one question: **once they join, could they read anything about themselves that should not be visible to them?** It finds those items and recommends what to restrict, move or redact before access is granted.
+Use this workflow before adding a new hire, advisor, contractor or collaborator to a shared chat workspace, a knowledge base, or both. It answers one question: **once they join, could they read anything about themselves that should not be visible to them?** It then recommends what to restrict, move or redact before you grant access.
 
-Typical requests: "check before I add [person]" or "is there anything about [person] I should hide first?"
+## Quick version
 
-## Purpose and boundaries
+- List every way the person might be written about: full name, surname alone, first name, nicknames, likely misspellings and their chat handle.
+- Write down exactly what they will be able to see: which channels, spaces and shared databases. Everything else is out of scope.
+- Search each visible space yourself for every name variant. Paste the relevant hits (with their location and link) into your assistant. Include whole threads, not just the first message.
+- Ask the assistant to rate each hit: **▲ Hide** (fix before they join), **◆ Consider** (your call), **○ Fine** (checked, harmless). Flag anything they would find hurtful, misleading or awkward, or that reveals plans about them they do not know about.
+- Ask for a short report that leads with the count of ▲ and ◆ items and whether anything blocks access today, with one linked item per finding.
+- Change nothing until you have decided. After fixing, search again to confirm nothing visible remains.
 
-- **Authorization.** Run this only for someone who can manage access to these systems, such as a workspace admin or the person's sponsor. Search only the systems the person is about to join.
-- **Narrow scope.** Look only for content that mentions the incoming person directly. Ignore other sensitive material, however interesting, unless it is about them. Do not collect or summarize unrelated conversations.
-- **Minimum detail.** Quote only the line needed to judge a finding. For health, family or other personal-life details, name the category (for example "mentions a family matter") instead of repeating the detail.
-- **Access boundary.** Send the report only to the requester. Do not post it in shared spaces.
-- **Not a cover-up tool.** Prefer restricting access over deleting. Do not delete or alter records that fall under a retention duty, a legal hold, or the person's legal right to access data about them. If unsure, flag it and let the requester check with the right owner.
+## 1. Set the scope and gather inputs
 
-## Inputs to collect
+Look only for content that mentions the incoming person directly. Ignore other sensitive material, however interesting, unless it is about them.
+
+Run this only if you are authorized to manage access to these systems, such as a workspace admin or the person's sponsor, and search only the systems the person is about to join. Quote only the line needed to judge a finding; for health, family or other personal-life details, name the category (for example "mentions a family matter") instead of repeating it. Send the report only to the requester, never to a shared space.
 
 | Input | Why it matters |
 |---|---|
@@ -5104,28 +5113,29 @@ Typical requests: "check before I add [person]" or "is there anything about [per
 
 If the requester says "standard team-member access", assume every public channel and every open knowledge-base space, with no private channels.
 
-## Step 1: Identify the person
+## 2. Identify the person
 
 1. Look up the person in the user directory of each system.
 2. Many first names are shared. Keep the disambiguator handy and drop namesakes as you go.
 3. List the spelling variants you will search (for example a surname with swapped vowels or a missing letter).
 
-## Step 2: Map what they will and will not see
+## 3. Map what they will and will not see
 
 This decides what counts as exposed. Skip what they cannot see, but say what you skipped.
 
-- **Usually not visible:** direct messages and group messages they are not in; private channels they will not join; the requester's personal or private spaces (if the requester excludes them); pages in another user's private section.
+- **Usually not visible:** direct messages and group messages they are not in; private channels they will not join; the requester's personal or private spaces and databases (if the requester excludes them); pages in another user's private section.
 - **Usually visible:** public channels; private channels they will join; every page in shared spaces and shared databases, including meeting notes, hiring, strategy, projects and archives.
 
 Rules for unclear cases:
 
+- **Keep a list of the requester's private locations.** Ask which databases or folders are private to them, and recognize search hits by the location path shown. Private locations get renamed, so record former names too, and treat a hit under any of them as not visible.
 - **Search tools often cannot see page-level permissions.** A page may be restricted while still sitting in a shared database, and search returns it anyway. Treat every page in a shared space as visible unless the requester confirms it is restricted. Then move it to the skipped list as "restricted, confirmed by requester".
 - **Pages with no parent location** (for example auto-generated meeting notes) are often private to their creator. Treat them as not visible unless they show explicit sharing or the requester says otherwise.
 - **System-generated user profile pages** usually carry no content. Skip them. An access error on them is expected and not worth reporting.
 
-## Step 3: Search the chat workspace
+## 4. Search the chat workspace
 
-Run these searches in parallel, covering every channel you are allowed to search:
+Cover every channel you are allowed to search:
 
 - Full name, surname alone, and each misspelling, newest first. Page through results until they stop being about the person.
 - First name alone, to catch casual mentions. Skim for context and drop namesakes.
@@ -5134,15 +5144,15 @@ Run these searches in parallel, covering every channel you are allowed to search
 
 For each relevant hit, record the channel type and a permanent link. Read the full thread around any hit that has replies. Direct messages are not visible to the person, but list them with links in the skipped section so the requester knows they were seen.
 
-## Step 4: Search the knowledge base
+## 5. Search the knowledge base
 
 1. Search the full name, each misspelling, and the name combined with their main employers or role. Ask for a large page of results.
 2. If the requester's private space is excluded, run the same search limited to that space. Hits that appear only there are out of scope.
-3. Open every remaining hit that mentions the person beyond a passing name-drop. Read the full text and check its location.
+3. Open every remaining hit that mentions the person beyond a passing name-drop. Read the full text and check its location against your visibility map.
 4. Check structured properties as well as body text: hiring status fields, pipeline stages, contact-relationship fields, and similar.
 5. If a page fails to open, report it with its link and ask the requester to check it by hand.
 
-## Step 5: Judge each mention
+## 6. Judge each mention
 
 Flag a mention when the person would plausibly feel hurt, misled or awkward reading it, or when it reveals plans about them that they do not know about.
 
@@ -5168,7 +5178,7 @@ Rate every finding with a word and a symbol, never colour alone:
 | **◆ Consider** | Mild; the requester decides |
 | **○ Fine** | Checked and harmless; listed briefly for completeness |
 
-## Step 6: Report
+## 7. Report
 
 Lead with the answer: the number of ▲ and ◆ items, and whether anything blocks granting access today. Then list one item per finding:
 
@@ -5179,19 +5189,36 @@ Lead with the answer: the number of ▲ and ◆ items, and whether anything bloc
 
 Every item gets its own working link, including **○ Fine** items and skipped direct messages. The requester will check each one, so an item without a link is not useful. Close with failed fetches and the list of what was skipped as not visible.
 
-## Making changes
+**Invented example.** Before adding Jordan Vale, a fictional advisor from the fictional Maple Street Studio:
 
-Do not change permissions, move pages or edit content without explicit approval. Moving or redacting someone else's page is a material change, so confirm with its owner where appropriate. After approval, make the edits, then re-run the searches to confirm nothing visible remains.
+> **1 ▲, 1 ◆. One item blocks access today.**
+>
+> - **▲ Hide** [Hiring pipeline: Jordan Vale](link). Hiring space, visible. Status field "Declined, revisit later"; note: "unsure about follow-through." Fix: restrict the page.
+> - **◆ Consider** [Advisory board planning](link). Strategy space, visible. "Jordan might push for equity; hold firm." Fix: redact the line.
+> - **○ Fine** [#announcements, 4 Oct](link). Welcome post, all positive replies.
+>
+> Skipped as not visible: 2 direct messages ([1](link), [2](link)); 1 page in a private meeting database ([link](link)).
+
+## 8. Make changes
+
+Do not change permissions, move pages or edit content without explicit approval. Moving or redacting someone else's page is a material change, so confirm with its owner where appropriate. Prefer restricting access over deleting, and do not delete or alter records under a retention duty, a legal hold, or the person's legal right to access data about them; if unsure, flag it for the right owner. After approval, make the edits, then re-run the searches to confirm nothing visible remains.
 
 ## Common failure modes
 
 - Searching only the exact name and missing misspellings, nicknames or tagged IDs.
 - Confusing a namesake with the person.
 - Assuming a page is private because search cannot show its permissions.
+- Missing a private location because it was renamed, or reporting it as exposed.
 - Reading only the first message and missing a critical reply in the thread.
 - Missing sensitive content stored in page properties rather than body text.
-- Drifting into unrelated sensitive material outside the scope.
 - Acting on findings before approval.
+
+## Optional extras
+
+- **Parallel searches.** With an agent connected to your chat and knowledge tools, run all name variants at once and ask for detailed results so each hit comes back with a permanent link.
+- **Scoped exclusion search.** If your knowledge tool can limit search to one space, use it to separate hits in the requester's private space from hits in shared spaces, instead of guessing from titles.
+- **Reusable location list.** Keep a short note of private locations (current and former names), shared databases and typical access bundles, so each check starts from an accurate visibility map.
+- **Re-check routine.** After fixes, have the agent re-run the same saved queries and report only items still marked ▲ or ◆.
 
 
 ---

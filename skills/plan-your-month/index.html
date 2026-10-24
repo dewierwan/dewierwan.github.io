@@ -36,7 +36,7 @@
 <li><strong>Evidence first, discussion second.</strong> Show the evidence picture before asking reflective questions.</li>
 <li><strong>Gather in one pass.</strong> Batch independent reads rather than interrupting the conversation with small lookups.</li>
 <li><strong>Use current targets.</strong> Judge progress against the user&#39;s live goals, not old schedules or stale records. Keep targets in the user&#39;s own goal record or last month&#39;s plan, not hardcoded into this workflow, and check for any recent change (a pause, a reset, a new target) before judging.</li>
-<li><strong>Check data quality before a harsh verdict.</strong> Missing syncs and incomplete logs distort conclusions. Ask the user to confirm surprising findings.</li>
+<li><strong>Check data quality before a harsh verdict.</strong> Missing syncs, stale feeds, and incomplete logs distort conclusions. Ask the user to confirm surprising findings.</li>
 <li><strong>The user chooses.</strong> You calculate, summarize, and ask hard questions. The user picks priorities, cuts, and commitments.</li>
 <li><strong>One decision at a time.</strong> Do not move on until the current question has a real answer.</li>
 <li><strong>Stay at month level.</strong> Set outcomes, milestones, capacity, and structure. Leave daily task blocks to weekly planning.</li>
@@ -55,7 +55,8 @@
 <div class="table-wrap" tabindex="0" aria-label="Scrollable table"><table><thead><tr><th>Evidence area</th><th>What to gather</th></tr></thead><tbody><tr><td>Last month&#39;s plan</td><td>Theme, promised outcomes, commitments</td></tr><tr><td>Weekly plans and reviews</td><td>Repeated blockers, milestones, carried work</td></tr><tr><td>Goals</td><td>Active monthly, quarterly, and yearly goals with status and deadlines</td></tr><tr><td>Work delivered</td><td>Completed tasks and deliverables, grouped by the user&#39;s own areas</td></tr><tr><td>Calendar</td><td>Time off, travel, fixed deadlines, recurring commitments, heavy weeks</td></tr><tr><td>Daily signals (optional)</td><td>Ratings, short reasons for ratings, focus hours, or habit counts the user chooses to track</td></tr></tbody></table></div>
 <p>For large sources, compute statistics and pull a few themes instead of reading raw entries.</p>
 <p><strong>Read only the fields you need.</strong> When a daily log mixes structured fields with private free-form writing, such as a diary or journal, name the fields you want explicitly and leave the private writing out, even if you have access to it. A short field like &quot;why I rated the day this way&quot; usually gives enough texture for themes.</p>
-<p><strong>When a source is unavailable.</strong> If a usual source has moved, been deleted, is mid-migration, or is disconnected, skip it rather than failing or guessing. Ask the user one short question for that area instead (for example, &quot;Roughly how did sleep go this month?&quot;), and note in the review which areas came from recollection rather than records.</p>
+<p><strong>When a source is unavailable.</strong> If a usual source has moved, been deleted, is mid-migration, or is disconnected, skip it rather than failing or guessing. Ask the user one short question for that area instead (for example, &quot;Roughly how did sleep go this month?&quot;), and note in the review which areas came from recollection rather than records. When a source moves to a new location, update where the workflow looks for it rather than keeping a standing workaround.</p>
+<p><strong>When a source is fed automatically.</strong> If a log is filled by a sync, import, or automation, check its most recent entry before computing anything. If the newest entry is older than expected, flag a likely broken feed and confirm with the user rather than reporting a quiet month. If the feed changed recently (a new device, a new import path, or older months filled by a one-off backfill), note where the switch happened, and compare months only within the same source or label the comparison as uneven.</p>
 <p>Before planning in detail, re-read any weekly plan that overlaps the start of the new month. Reconcile with it; never duplicate or overwrite it. Surface any gap between that week&#39;s plan and the month&#39;s outcomes.</p>
 <h3>Step 2: Show the evidence picture</h3>
 <p>Present a compact factual picture before asking the user to explain it. Be direct and use numbers where useful.</p>
@@ -148,7 +149,7 @@
 
 ## Signals
 - [Chosen measures, or &quot;not tracked&quot;]. Flags: [none or named patterns].
-- Sources missing this month: [none, or areas based on recollection].
+- Sources missing or stale this month: [none, or areas based on recollection, or feeds flagged as broken].
 
 ## Win
 [One meaningful result.]
@@ -173,6 +174,7 @@
 <li>Evidence came before reflection.</li>
 <li>Private free-form writing was excluded from reads.</li>
 <li>Missing sources were replaced with a direct question and labeled.</li>
+<li>Automated feeds were checked for freshness, and any source switch was noted before comparing months.</li>
 <li>Strong verdicts account for data gaps and current targets.</li>
 <li>The plan has a theme and no more than three outcomes.</li>
 <li>Each outcome has a test of done, date, path, owner, and outside pressure.</li>
@@ -190,6 +192,8 @@
 <li>Judging against stale targets.</li>
 <li>Reading private journal text because it happened to be available.</li>
 <li>Silently skipping a missing source, or reporting on it as if it were checked.</li>
+<li>Reading a stale or broken automated feed as a quiet month.</li>
+<li>Comparing months drawn from different sources as if they were like for like.</li>
 <li>Confusing a list of events with a plan.</li>
 <li>Overloading capacity and refusing to cut.</li>
 <li>Forcing project deadlines when the real blocker is an unmade decision.</li>
@@ -203,7 +207,7 @@
 <h3>Optional extras</h3>
 <h4>Personal practice</h4>
 <p>Add this section only if the user tracks a habit or practice they want held to account, such as writing, a language, music, exercise, or meditation. Put it after goals and delivery, not first. Do not lecture on technique; the user may already follow a program for that.</p>
-<p>Compare actual activity with the user&#39;s current target using whatever they log: sessions, minutes, words, or pages; average per week; active days; longest gap; and the change from last month. If the log is unavailable this month, ask one question about it instead.</p>
+<p>Compare actual activity with the user&#39;s current target using whatever they log: sessions, minutes, words, or pages; average per week; active days; longest gap; and the change from last month. If the log is unavailable this month, ask one question about it instead. If the log is filled automatically, check its newest entry first, as in Step 1.</p>
 <p>Suggested verdict scale (adjustable):</p>
 <ul>
 <li><strong>On track:</strong> key measures at or near target and consistency intact.</li>
@@ -216,5 +220,6 @@
 <ul>
 <li>Hand bulky reads, such as a month of daily entries or a full month of calendar events, to a helper task that returns computed numbers and a short list of themes, not raw records. Give the helper the same explicit field list, so private writing stays excluded there too.</li>
 <li>Ask the calendar summary for time off, travel, per-week meeting load, recurring series, and anomalies such as meetings scheduled inside time off or events with suspect time zones. Offer to clear those conflicts now and add them to a pre-time-off checklist in the plan.</li>
+<li>For logs fed by an automation, sort by date and read the newest record first to confirm the feed is alive. If the feed writes records with a stable unique ID, use it to spot duplicates left by re-syncs or backfills before counting.</li>
 <li>Restrict helper tasks to the read tools they need.</li>
 </ul></article><footer><a href="/skills/LICENSE.txt">CC0</a></footer></main><script>document.querySelector('[data-copy]').addEventListener('click',async function(){try{const text=await fetch(this.dataset.copy).then(r=>{if(!r.ok)throw new Error();return r.text()});await navigator.clipboard.writeText(text);this.textContent='Copied'}catch{this.textContent='Open raw Markdown'}})</script></body></html>
