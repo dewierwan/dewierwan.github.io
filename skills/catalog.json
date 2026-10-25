@@ -199,7 +199,7 @@
     },
     {
       "title": "Run a recurring community event",
-      "description": "Publish the next date of a recurring community event, refresh its image and copy, and invite people who opted in. Use when someone says set up this week's event or post the next one.",
+      "description": "Sets up the next date of a recurring community event: fresh poster, event page, and invites to opted-in past guests. Use when someone says set up this week's event or post the next one.",
       "category": "Build and automate",
       "page": "https://dewierwan.com/skills/recurring-events/",
       "markdown": "https://dewierwan.com/skills/raw/recurring-events.md"
