@@ -221,6 +221,7 @@ A click is not proof of success. Look for real evidence: a success message, a co
 | Wrong account or profile opened | Generic selector picked the last-used profile | Classify context, select the profile directly, verify the account. |
 | Profile window open but no connection appears | Connector in that profile is signed out or asleep | Ask the user to open and sign in to it in that window, re-list, verify. |
 | Session ends after a page-script request | Internal endpoint called without the app's normal headers | Drive the UI or use a supported API. |
+| In-memory state read returns nothing after an app update | Internal state layout moved in a new version | Probe for the current location, fall back to older ones, and verify against the screen. |
 | Automation connection fails an integrity or signature check | Local helper is stale or altered | Stop; repair through an approved path that keeps verification on. Never disable checks. |
 | Security check or 2FA prompt appears | Site needs the user present | Ask the user to complete it, then continue. |
 
@@ -230,7 +231,7 @@ Summarize the outcome in one or two sentences, point to the screenshot and the a
 
 ## 13. Keep the procedure current
 
-When a run reveals a reusable lesson, such as a new failure mode, a working pattern, or a missing capability, add it to your local copy of this procedure. Prefer a single table row with symptom, cause, and fix over new prose. Never record credentials, account identifiers, personal details, or private site data. When the document grows long, merge older entries into general principles instead of appending incident history. Tool paths, versions, and profile mappings go stale, so update them in place and re-verify them.
+When a run reveals a reusable lesson, such as a new failure mode, a working pattern, or a missing capability, add it to your local copy of this procedure. Prefer a single table row with symptom, cause, and fix over new prose. Never record credentials, account identifiers, personal details, or private site data. When the document grows long, merge older entries into general principles instead of appending incident history. Tool paths, versions, profile mappings, and any notes about where an app keeps its internal state go stale, so update them in place and re-verify them.
 
 ## Final audit checklist
 
@@ -251,6 +252,13 @@ When a run reveals a reusable lesson, such as a new failure mode, a working patt
 **Drag and drop.** Dragging can create layout changes (like columns) or trigger a clickable element by accident. Prefer keyboard move commands with short waits, then verify the final structure.
 
 **Parallel work and background tabs.** When many independent items are needed (for example several generated drafts or images), separate tabs or sessions each given the full brief avoid one item biasing the next. Keep concurrency modest (a default of about ten, adjustable); more tends to stall. Background tabs may not render at full size, so bring an item into view before capturing it, check nothing is cut off, and clean up temporary overlays or tabs afterward.
+
+**Editing visual workflow builders without an API.** Some automation or workflow editors offer no bulk-edit screen, and API access may not be available. In that case:
+
+- Read steps, connections, and recent run output from state the page already holds in memory, with no network calls.
+- Internal state layouts are undocumented and change between app versions. Probe for the current location first, fall back to older known locations, and never treat one path as permanent. If a read suddenly returns nothing after an update, assume the layout moved before assuming the data is gone.
+- Add steps through the editor's own paste support where it exists, after closing any open step panel. Replace code inside a step by focusing its code editor, selecting all, and pasting.
+- Connect steps and choose credentials through the UI. Test by running a single read-only step before anything that writes, then save and re-read the workflow to confirm the change persisted.
 
 **Auditing configuration after a structural change.** When fields, tables, or sources are renamed or deleted and the service has no API for its automations or workflows, audit through the UI:
 

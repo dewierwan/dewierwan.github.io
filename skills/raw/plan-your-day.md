@@ -14,7 +14,7 @@ Use this to turn a crowded or unclear day into one named outcome, a protected bl
 - Add at most two supporting items. Everything else goes on a written **NOT today** list.
 - Name the work most likely to feel productive while quietly displacing the MIT, and agree one counter for it.
 - Pick one protected window for the MIT, ideally a few contiguous hours at the time you focus best.
-- If the last few days were rough, plan less: one MIT and nothing else is a valid plan.
+- If the last few days were rough or last night's sleep was short, plan less: one MIT and nothing else is a valid plan.
 
 ## 1. Choose the day and gather context
 
@@ -26,7 +26,8 @@ Then gather what exists, in one pass (or ask the user to paste it):
 - this week's goals and any plan already made for this day;
 - tasks overdue or due on the target day;
 - how the previous day went against its plan;
-- recent day ratings or energy notes, if the user keeps them.
+- recent day ratings or energy notes, if the user keeps them;
+- last night's sleep, if the user tracks it.
 
 On a same-day "what now?" run, look at today's tasks in every status, including done. An open-tasks list says nothing about what shipped, so never call an item unfinished just because it is missing.
 
@@ -55,7 +56,9 @@ Every dropped item gets a decision now: carry, push, retire, or delegate. When t
 
 Give a short brief, about eight bullets at most: target day, weekly goals, whether the weekly plan already mapped this day, meeting load (count timed events, not labels like "focus day") and the biggest open window, overdue and due counts, and anything notable from recent days. Ask one question about energy and wait.
 
-**Lighter plan after rough days.** If recent days were low, focus time was thin, or the user reports exhaustion or overwhelm, change the proposal, don't just flag it: "Given the last few days, I'm proposing one MIT, nothing else, and an earlier stop. Ok?" The user picks the trigger. A good mood does not cancel a short night's sleep.
+**Lighter plan after rough days.** If recent days were low, focus time was thin, or the user reports exhaustion or overwhelm, change the proposal, don't just flag it: "Given the last few days, I'm proposing one MIT, nothing else, and an earlier stop. Ok?" The user picks the trigger.
+
+**Sleep counts even on a good day.** If last night's sleep fell below the user's chosen threshold, flag it even after a strong day, and let it shape both the MIT size and the pre-mortem. A good mood does not cancel a short night. If the sleep record is missing, say so and ask how they slept rather than guessing.
 
 If the weekly plan contains a rule that clashes with the user's stable habits, ask which stands.
 
@@ -174,6 +177,7 @@ The assistant proposes one: "Launch copy final and sent to the designer by early
 
 - **Run modes.** Switch from the full flow when the user signals it, and say which steps you skipped. *Fast mode:* the user gives an ordered list; write it in their order around fixed commitments and keep a two-line pre-mortem. *Bedtime-bound:* one proposal with at most three numbered questions, then write. *Going to sleep:* ask nothing; use the blocks they already set; save the plan with a self-contained first line and list open choices as pending.
 - **Forward flags.** For a deadline that can't fit tomorrow but must land within a few days, add a plan section naming the due date, how long it has been open, and which day's plan must surface it.
+- **Sleep data.** If sleep syncs from a tracker, records are often filed under the bedtime date, so last night usually carries yesterday's date, not today's. When two sources record the same night, use the one the user trusts more (often a dedicated tracker over a general health aggregator). No record usually means the sync is behind: say so and ask.
 - **Connected signals.** With connected tools, add to the brief: old unanswered email, stale saved action items, messages awaiting a reply (sender, channel, and age only), and for people who hire, their own upcoming interviews and how long candidates have waited at each stage. Long-waiting items make strong supporting candidates; if a source is down, name it. Because these touch other people's messages and records, use them only for the user's own planning with clear authorization, read the minimum needed, leave out unrelated or sensitive details, and keep results in the private plan.
 - **Tidy idle sessions.** If your setup can list assistant sessions idle for a long time, list them at the NOT today step (idle time and what each was for), recommend closing finished ones, close only those the user names, and confirm in one line. Closing should keep history and stop only running processes. Skip this when the user is going to sleep.
 - **Improve the workflow.** After each run, note what went wrong or what the user corrected, and fold the lesson into an existing rule rather than adding a new one.

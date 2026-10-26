@@ -89,7 +89,7 @@ These apply whatever tools the user has. Apply them fully on deep searches and l
 1. **Search direct and indirect.** Look for direct contact with the subject, and in deeper passes, for places where others discuss the subject.
 2. **Prefer precise search.** If a default search returns noisy or loosely related results, switch to exact or keyword search.
 3. **Read the whole item.** Documents and records can hide content in tabs, sections, attachments, or threads that a simple read skips. Open what matters in full and note where each finding came from.
-4. **Trust authoritative records.** Go first to the records the user's organization treats as the source of truth. Treat temporary, sandbox, or low-quality data as weak until confirmed, and be wary of fields that may hold placeholder values rather than real ones.
+4. **Trust authoritative records.** Go first to the records the user's organization treats as the source of truth for that kind of subject. If records have been reorganized or renamed, use their current home, not the old one. Treat temporary, sandbox, or low-quality data as weak until confirmed, and be wary of fields that may hold placeholder values rather than real ones.
 5. **Check freshness and attribution.** Web profiles, news, and stored notes reflect what was true when written; cross-check against dated, current sources. Speaker labels and authorship can be imprecise, so do not attribute a statement without reasonable confidence.
 6. **Use conditional sources only when they fit.** Recruiting records for hiring, analytics for usage questions, code history for engineering subjects, and the user's personal task or journal system only for their own work when they choose to include it.
 7. **Cite with real links.** Link to threads, pages, messages, and documents, not raw internal IDs. Use only URLs you have verified or the user supplied; otherwise leave the link out and flag it.
@@ -178,13 +178,14 @@ The assistant classifies the subject as an organization with an existing relatio
 | Missing what was said in a recent meeting | Read the meeting record when one appears |
 | Trusting stale profiles, notes, or memory | Cross-check against dated, current sources |
 | Reading only part of a document or record | Open hidden sections, tabs, and threads |
+| Searching where a record type used to live | Check the current map and go to its present canonical home |
 | Covering a gap with a nearby source | Report the gap explicitly |
 
 ## Optional extras
 
 ### Structured databases
 
-If the user keeps a map of their databases (which tables are canonical, what fields mean, known quirks), read it before crawling so you go straight to the right place. When a field seems to show when something happened, confirm it is a real value and not an automatic default; a record's creation date is often more reliable.
+If the user keeps a map of their databases (which tables are canonical, what fields mean, known quirks), read it before crawling so you go straight to the right place. Route by subject: each kind of record, such as applications, payments, or contacts, usually has one canonical home, and a dedicated, consolidated table for a record type beats older scattered copies. Organizations split, merge, and rename these stores over time, so if the map shows a record type has moved, search its new home, and suggest updating the map when you notice it is out of date. When a field seems to show when something happened, confirm it is a real value and not an automatic default; a record's creation date is often more reliable.
 
 ### Repairing an unavailable connection
 

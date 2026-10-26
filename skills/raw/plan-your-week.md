@@ -103,8 +103,9 @@ After the review, ask: "What must still ship before the new week starts?" That i
 - **Calendar:** meetings per day, heavy and clear days, weekend events, existing focus placeholders, and personal events that limit capacity.
 - **Messages (counts only):** old unanswered threads and people waiting for replies.
 - **Fixed outside commitments:** events or programs the user runs that start soon.
+- **Health and activity (opt-in):** see the health and energy check in Optional extras.
 
-Data quality: check each source's newest entry. A sync that stopped is a broken pipeline, not behavior, so report its last date, name every source that failed, and where you can, check the automation that feeds it. If a source has been removed or is being rebuilt, skip it and ask the user one line instead. When a feed switches to a new source, older and newer entries may carry different fields; do not read the switch date as a change in behavior. Treat zero as a likely gap and ask before calling it real. Compare like with like; never average across a gap or mix sources. Never invent overdue flags you cannot prove.
+Data quality: check each source's newest entry before analyzing it. A sync that stopped is a broken pipeline, not behavior, so say so first, report its last date, name every source that failed, and where you can, check the automation that feeds it. If a source has been removed or is being rebuilt, skip it and ask the user one line instead. When a feed switches to a new source or device, older and newer entries may carry different fields; do not read the switch date as a change in behavior. If a replacement device should be feeding data but nothing has arrived after a couple of days, check that feed. If the same item can arrive from more than one source, pick one preferred source per item and never double count. A schedule of planned activity is not a record of what was done; take completion from the activity record itself. Treat zero as a likely gap, especially when the user says otherwise, and ask before calling it real. Compare like with like; never average across a gap or mix sources. Never invent overdue flags you cannot prove.
 
 If there are no connected tools, ask the user for a two-minute summary of their calendar and open work instead.
 
@@ -283,7 +284,12 @@ Add these modules when the user wants them. Each is independent.
 
 ### Health and energy check
 
-Opt-in only, and only to judge capacity. Compare the last week or two of whatever the user tracks against warning thresholds they choose, from the same source, numbers first, naming which threshold fired. For activity, count sessions by type (for example runs versus strength sessions) and duration, not performance details. If a tracker is offline or being rebuilt, ask the user one line about it instead. Honor habits the user has deliberately paused, asking at most once if they are back. If a commitment is faltering, ask up to three follow-ups until they name an action with a day, time, and cue: "Walk at lunch Mon, Wed, Fri when the lunchtime reminder goes off," not "I'll move more." Prefer small changes over big shifts. If the same fix failed last week, ask what is different. After travel or illness, frame the week as recovery and add a hard evening stop.
+Opt-in only, and only to judge capacity. Check each tracker's newest entry first and report a stale feed before analyzing anything. If a tracker is offline or being rebuilt, ask the user one line about it instead.
+
+- **Sleep:** show each night (time asleep, time in bed, any score or recovery measure, and the source) and the averages against the user's own target. Flag poor sleep only against warning conditions the user chooses, for example any single night far below target, several nights below target, or a recovery measure clearly below the prior week from the same source. Name each condition that fired, with numbers and nights. A multi-day hole after a device change or move is a gap; do not average across it.
+- **Activity:** count sessions done by type (for example runs and strength sessions) and duration from the activity record, not performance details. If the user follows a training plan, compare done sessions with the ones it prescribed, flag a skipped or much-shortened key session, and say "on track" when it is. The plan's calendar shows what was prescribed, not what happened.
+
+Honor habits the user has deliberately paused, asking at most once if they are back. If a commitment is faltering, ask up to three follow-ups until they name an action with a day, time, and cue: "Walk at lunch Mon, Wed, Fri when the lunchtime reminder goes off," not "I'll move more." Prefer small changes over big shifts. If the same fix failed last week, ask what is different. After travel or illness, frame the week as recovery and add a hard evening stop.
 
 ### Meeting cut pass
 
@@ -311,4 +317,4 @@ If the user asks, look across recent sessions for corrections that repeat ("that
 
 ### Structured stores
 
-If goals and tasks live in a database, refer to fields by stable identifiers rather than display names, which drift. A computed "days since created" field makes a simple slippage signal for tasks. Confirm the exact text format that renders checklists, and batch writes only after decisions are made. When tracked data moves to a new store or feed, update where you read it, note which fields only older entries have, and watch the new feed's newest entry so a silent failure shows up quickly.
+If goals and tasks live in a database, refer to fields by stable identifiers rather than display names, which drift. A computed "days since created" field makes a simple slippage signal for tasks. Confirm the exact text format that renders checklists, and batch writes only after decisions are made. When tracked data moves to a new store or feed, update where you read it, note which fields only older entries have or only some sources fill, and watch the new feed's newest entry so a silent failure shows up quickly.

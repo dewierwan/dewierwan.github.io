@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="robots" content="noindex,nofollow,noarchive"><title>Turn a message into a task · AI skills</title><meta name="description" content="Turns a message thread into researched, partly completed work and creates a task only when tracking helps. Use when someone says make this a task, track this, or deal with this message.">
-<link rel="alternate" type="text/markdown" href="/skills/raw/message-to-task.md"><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%23b4552d%22/><text x=%2250%22 y=%2253%22 dominant-baseline=%22central%22 text-anchor=%22middle%22 font-family=%22Georgia, 'Times New Roman', serif%22 font-size=%2246%22 letter-spacing=%221%22 fill=%22%23fdfaf4%22>DE</text></svg>"><link rel="stylesheet" href="/skills/styles.css"></head><body><main><a class="back" href="/skills/">← Skills</a><header class="skill-header"><h1>Turn a message into a task</h1><p class="description">Turns a message thread into researched, partly completed work and creates a task only when tracking helps. Use when someone says make this a task, track this, or deal with this message.</p><div class="skill-actions"><a href="/skills/raw/message-to-task.md">Raw Markdown</a><button class="copy" type="button" data-copy="/skills/raw/message-to-task.md">Copy Markdown</button></div></header><article class="skill-body"><p>Use this workflow when one or more message links, copied conversations, or inbound requests may need follow-up. The goal is not to log a vague to-do but to complete as much useful work as is safe, then leave a small, clear human finish.</p>
+<meta name="robots" content="noindex,nofollow,noarchive"><title>Turn a message into a task · AI skills</title><meta name="description" content="Turns a message thread into researched, partly completed work and files or updates a task only when tracking helps. Use when someone says make this a task, track this, or deal with this message.">
+<link rel="alternate" type="text/markdown" href="/skills/raw/message-to-task.md"><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%23b4552d%22/><text x=%2250%22 y=%2253%22 dominant-baseline=%22central%22 text-anchor=%22middle%22 font-family=%22Georgia, 'Times New Roman', serif%22 font-size=%2246%22 letter-spacing=%221%22 fill=%22%23fdfaf4%22>DE</text></svg>"><link rel="stylesheet" href="/skills/styles.css"></head><body><main><a class="back" href="/skills/">← Skills</a><header class="skill-header"><h1>Turn a message into a task</h1><p class="description">Turns a message thread into researched, partly completed work and files or updates a task only when tracking helps. Use when someone says make this a task, track this, or deal with this message.</p><div class="skill-actions"><a href="/skills/raw/message-to-task.md">Raw Markdown</a><button class="copy" type="button" data-copy="/skills/raw/message-to-task.md">Copy Markdown</button></div></header><article class="skill-body"><p>Use this workflow when one or more message links, copied conversations, or inbound requests may need follow-up. The goal is not to log a vague to-do but to complete as much useful work as is safe, then leave a small, clear human finish.</p>
 <h3>Quick version</h3>
 <ul>
 <li>Paste the whole conversation, including every later reply and any linked document, and check that the request is still live before doing anything else.</li>
 <li>Name the task shape: reply owed, artifact owed, decision needed, or follow-up. Then rewrite the request as an outcome with a clear finish line.</li>
 <li>Draft the actual deliverable (reply, document, decision brief, or chase message) instead of just describing it. Mark unverified facts as <code>[VERIFY: ...]</code> and gaps only you can fill as <code>[FILL IN: ...]</code>.</li>
 <li>Ask questions only if a wrong guess would cause real rework. Before asking, restate the full story in a paragraph or two so the choice is answerable.</li>
-<li>Decide whether you need a task record at all. A ready draft you can send in a few minutes needs none; deferred, multi-step, or deadline-bound work does.</li>
+<li>Decide whether you need a task record at all. A ready draft you can send in a few minutes needs none; deferred, multi-step, or deadline-bound work does. If you do need one, check whether a task for the same ask already exists and update it instead of adding a duplicate.</li>
 <li>Get the output with context first and the deliverable last, so the draft can be copied without cleanup.</li>
 </ul>
 <p>This workflow is tool-independent. Use whatever messaging, document, task, calendar, and research capabilities you have. Run the full flow separately for each message reference unless several references clearly concern one shared outcome.</p>
@@ -99,8 +99,13 @@
 <li>The user explicitly asked for a record.</li>
 </ul>
 <p>When uncertain, prefer chat-only for a simple reply and a record for longer-lived work. Set the &quot;short sitting&quot; threshold to whatever the user finds natural (a default of about 15 minutes is a reasonable starting point).</p>
-<h3>7. Create a complete task record</h3>
-<p>Use the user&#39;s chosen task system. Fill these fields where supported:</p>
+<h3>7. Create or update a complete task record</h3>
+<p>First check for an existing record. Search the user&#39;s task system for a distinctive keyword, such as the requester&#39;s name or organization. If a record already covers the same ask, update it instead of creating a duplicate:</p>
+<ul>
+<li>Rewrite its notes from scratch rather than appending, because older notes go stale (for example, a line saying the thread had no replies when replies have since arrived).</li>
+<li>Move the due date and raise the priority if new deadlines or reminders have come in since it was filed.</li>
+</ul>
+<p>Otherwise, create a new record in the user&#39;s chosen task system. Fill these fields where supported:</p>
 <ul>
 <li><strong>Title:</strong> specific and action-led, short enough to scan.</li>
 <li><strong>Status:</strong> the user&#39;s equivalent of not started.</li>
@@ -120,11 +125,11 @@
 
 **Remaining for the user:**
 - [Specific final action.]</code></pre>
-<p>Summarize rather than pasting an entire private conversation. After creating the record, open or retrieve it to confirm the title, notes, links, deadline, and fields are correct.</p>
+<p>Summarize rather than pasting an entire private conversation. After creating or updating the record, open or retrieve it to confirm the title, notes, links, deadline, and fields are correct.</p>
 <h3>8. Report back clearly</h3>
-<p>If a record was created, report in this order, with nothing trailing after the last substantive block:</p>
+<p>If a record was created or updated, report in this order, with nothing trailing after the last substantive block:</p>
 <ol>
-<li>What the task is.</li>
+<li>What the task is, and whether it is a new record or an update to an existing one.</li>
 <li>What was pre-completed and where any draft is staged.</li>
 <li>The chosen metadata in one line.</li>
 <li>Any <code>[VERIFY]</code>, <code>[FILL IN]</code>, or other blockers.</li>
@@ -136,7 +141,7 @@
 ## The reply
 [Draft message verbatim.]</code></pre>
 <p>Nothing should appear after the draft reply.</p>
-<p><strong>Invented example.</strong> Tomas Reyke, a volunteer coordinator at the fictional Lanternfield Reading Trust, asks in a thread how many people attended last spring&#39;s workshop and whether the user would co-host the next one. A later reply shows a colleague already asked the same attendance question in another channel. The workflow classifies this as a reply owed, finds the headcount in the pre-event logistics email, drafts one answer and points the second asker to it, and marks the co-hosting question <code>[FILL IN: willing to co-host? dates that work]</code>. Because the user must decide on co-hosting and the next workshop has a date, it files a record. The metadata line reads: &quot;Filed as Important / Time-sensitive, due before the planning call, about 10 minutes remaining.&quot;</p>
+<p><strong>Invented example.</strong> Tomas Reyke, a volunteer coordinator at the fictional Lanternfield Reading Trust, asks in a thread how many people attended last spring&#39;s workshop and whether the user would co-host the next one. A later reply shows a colleague already asked the same attendance question in another channel. The workflow classifies this as a reply owed, finds the headcount in the pre-event logistics email, drafts one answer and points the second asker to it, and marks the co-hosting question <code>[FILL IN: willing to co-host? dates that work]</code>. Because the user must decide on co-hosting and the next workshop has a date, a record is needed. A search turns up an older task titled &quot;Reply to Lanternfield about workshop&quot; whose notes say no one has replied yet, so the workflow rewrites those notes, sets the due date to the planning call, and raises the urgency. The metadata line reads: &quot;Updated existing task: Important / Time-sensitive, due before the planning call, about 10 minutes remaining.&quot;</p>
 <h3>9. Learn from what the user actually sends</h3>
 <p>The user&#39;s final edits are the best evidence of their real voice and stance. After a draft has been used:</p>
 <ol>
@@ -164,7 +169,8 @@
 <li>Did I draft or prepare the useful work?</li>
 <li>Did I avoid sending, approving, or committing externally?</li>
 <li>Are unsupported facts and links clearly marked rather than guessed?</li>
-<li>If a record exists, does it have full context, verified fields, and specific remaining steps?</li>
+<li>If a record was needed, did I check for an existing one and update it instead of duplicating?</li>
+<li>If a record exists, does it have fresh notes, full context, verified fields, and specific remaining steps?</li>
 <li>Is the deliverable the final block of my report?</li>
 </ul>
 <h3>Optional extras</h3>
@@ -173,6 +179,7 @@
 <li><strong>Parsing message links.</strong> Many messaging tools encode the conversation ID and a message timestamp in the link, plus a separate parent identifier when the message is a thread reply. Use the parent identifier to fetch the whole thread. Some tools return nothing for an exact-timestamp lookup, so query a small window around it instead.</li>
 <li><strong>Recovering identities.</strong> If sender names come back blank, recover them from mentions in the text or by looking up the user ID.</li>
 <li><strong>Building an evidence base.</strong> For references or feedback, searching for messages a person authored can surface concrete examples of their actual work.</li>
+<li><strong>Finding duplicates.</strong> If your task system supports search, query the title and notes fields for the requester&#39;s name or organization before creating anything. Use the system&#39;s update operation on a match rather than deleting and recreating, so links and history are preserved.</li>
 <li><strong>Staging drafts.</strong> If authorized, stage the reply as an unsent draft in the right thread so finishing is one click, and keep the same text in the task notes. Check rendering: many tools need a blank line between a paragraph and a list, or the list items show as plain text. Go straight from greeting to the first item rather than using a list lead-in line.</li>
 <li><strong>Scheduled review.</strong> If the environment supports delayed reminders, schedule the step 9 check automatically. A default of about one hour is a reasonable start, adjusted for working hours and urgency. The reminder should name each staged draft, its conversation location, and where the draft text is stored, and allow a couple of follow-up checks at growing intervals before stopping.</li>
 <li><strong>Versioning the workflow.</strong> If the workflow lives in a file under version control, commit each improvement with a short, dated message so changes are easy to review or revert.</li>

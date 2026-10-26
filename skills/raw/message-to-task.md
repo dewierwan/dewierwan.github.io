@@ -1,6 +1,6 @@
 ---
 name: message-to-task
-description: Turns a message thread into researched, partly completed work and creates a task only when tracking helps. Use when someone says make this a task, track this, or deal with this message.
+description: Turns a message thread into researched, partly completed work and files or updates a task only when tracking helps. Use when someone says make this a task, track this, or deal with this message.
 ---
 
 # Turn a message into a task
@@ -13,7 +13,7 @@ Use this workflow when one or more message links, copied conversations, or inbou
 - Name the task shape: reply owed, artifact owed, decision needed, or follow-up. Then rewrite the request as an outcome with a clear finish line.
 - Draft the actual deliverable (reply, document, decision brief, or chase message) instead of just describing it. Mark unverified facts as `[VERIFY: ...]` and gaps only you can fill as `[FILL IN: ...]`.
 - Ask questions only if a wrong guess would cause real rework. Before asking, restate the full story in a paragraph or two so the choice is answerable.
-- Decide whether you need a task record at all. A ready draft you can send in a few minutes needs none; deferred, multi-step, or deadline-bound work does.
+- Decide whether you need a task record at all. A ready draft you can send in a few minutes needs none; deferred, multi-step, or deadline-bound work does. If you do need one, check whether a task for the same ask already exists and update it instead of adding a duplicate.
 - Get the output with context first and the deliverable last, so the draft can be copied without cleanup.
 
 This workflow is tool-independent. Use whatever messaging, document, task, calendar, and research capabilities you have. Run the full flow separately for each message reference unless several references clearly concern one shared outcome.
@@ -125,9 +125,14 @@ Create a record when one or more of these apply:
 
 When uncertain, prefer chat-only for a simple reply and a record for longer-lived work. Set the "short sitting" threshold to whatever the user finds natural (a default of about 15 minutes is a reasonable starting point).
 
-## 7. Create a complete task record
+## 7. Create or update a complete task record
 
-Use the user's chosen task system. Fill these fields where supported:
+First check for an existing record. Search the user's task system for a distinctive keyword, such as the requester's name or organization. If a record already covers the same ask, update it instead of creating a duplicate:
+
+- Rewrite its notes from scratch rather than appending, because older notes go stale (for example, a line saying the thread had no replies when replies have since arrived).
+- Move the due date and raise the priority if new deadlines or reminders have come in since it was filed.
+
+Otherwise, create a new record in the user's chosen task system. Fill these fields where supported:
 
 - **Title:** specific and action-led, short enough to scan.
 - **Status:** the user's equivalent of not started.
@@ -150,13 +155,13 @@ Use the user's chosen task system. Fill these fields where supported:
 - [Specific final action.]
 ```
 
-Summarize rather than pasting an entire private conversation. After creating the record, open or retrieve it to confirm the title, notes, links, deadline, and fields are correct.
+Summarize rather than pasting an entire private conversation. After creating or updating the record, open or retrieve it to confirm the title, notes, links, deadline, and fields are correct.
 
 ## 8. Report back clearly
 
-If a record was created, report in this order, with nothing trailing after the last substantive block:
+If a record was created or updated, report in this order, with nothing trailing after the last substantive block:
 
-1. What the task is.
+1. What the task is, and whether it is a new record or an update to an existing one.
 2. What was pre-completed and where any draft is staged.
 3. The chosen metadata in one line.
 4. Any `[VERIFY]`, `[FILL IN]`, or other blockers.
@@ -173,7 +178,7 @@ If no record was created, separate briefing from deliverable and keep the delive
 
 Nothing should appear after the draft reply.
 
-**Invented example.** Tomas Reyke, a volunteer coordinator at the fictional Lanternfield Reading Trust, asks in a thread how many people attended last spring's workshop and whether the user would co-host the next one. A later reply shows a colleague already asked the same attendance question in another channel. The workflow classifies this as a reply owed, finds the headcount in the pre-event logistics email, drafts one answer and points the second asker to it, and marks the co-hosting question `[FILL IN: willing to co-host? dates that work]`. Because the user must decide on co-hosting and the next workshop has a date, it files a record. The metadata line reads: "Filed as Important / Time-sensitive, due before the planning call, about 10 minutes remaining."
+**Invented example.** Tomas Reyke, a volunteer coordinator at the fictional Lanternfield Reading Trust, asks in a thread how many people attended last spring's workshop and whether the user would co-host the next one. A later reply shows a colleague already asked the same attendance question in another channel. The workflow classifies this as a reply owed, finds the headcount in the pre-event logistics email, drafts one answer and points the second asker to it, and marks the co-hosting question `[FILL IN: willing to co-host? dates that work]`. Because the user must decide on co-hosting and the next workshop has a date, a record is needed. A search turns up an older task titled "Reply to Lanternfield about workshop" whose notes say no one has replied yet, so the workflow rewrites those notes, sets the due date to the planning call, and raises the urgency. The metadata line reads: "Updated existing task: Important / Time-sensitive, due before the planning call, about 10 minutes remaining."
 
 ## 9. Learn from what the user actually sends
 
@@ -206,7 +211,8 @@ Before finishing, check:
 - Did I draft or prepare the useful work?
 - Did I avoid sending, approving, or committing externally?
 - Are unsupported facts and links clearly marked rather than guessed?
-- If a record exists, does it have full context, verified fields, and specific remaining steps?
+- If a record was needed, did I check for an existing one and update it instead of duplicating?
+- If a record exists, does it have fresh notes, full context, verified fields, and specific remaining steps?
 - Is the deliverable the final block of my report?
 
 ## Optional extras
@@ -216,6 +222,7 @@ These help when your assistant has connected tools.
 - **Parsing message links.** Many messaging tools encode the conversation ID and a message timestamp in the link, plus a separate parent identifier when the message is a thread reply. Use the parent identifier to fetch the whole thread. Some tools return nothing for an exact-timestamp lookup, so query a small window around it instead.
 - **Recovering identities.** If sender names come back blank, recover them from mentions in the text or by looking up the user ID.
 - **Building an evidence base.** For references or feedback, searching for messages a person authored can surface concrete examples of their actual work.
+- **Finding duplicates.** If your task system supports search, query the title and notes fields for the requester's name or organization before creating anything. Use the system's update operation on a match rather than deleting and recreating, so links and history are preserved.
 - **Staging drafts.** If authorized, stage the reply as an unsent draft in the right thread so finishing is one click, and keep the same text in the task notes. Check rendering: many tools need a blank line between a paragraph and a list, or the list items show as plain text. Go straight from greeting to the first item rather than using a list lead-in line.
 - **Scheduled review.** If the environment supports delayed reminders, schedule the step 9 check automatically. A default of about one hour is a reasonable start, adjusted for working hours and urgency. The reminder should name each staged draft, its conversation location, and where the draft text is stored, and allow a couple of follow-up checks at growing intervals before stopping.
 - **Versioning the workflow.** If the workflow lives in a file under version control, commit each improvement with a short, dated message so changes are easy to review or revert.

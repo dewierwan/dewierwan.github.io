@@ -1,6 +1,6 @@
 ---
 name: plan-your-month
-description: Closes one month honestly, then plans the next with a capacity check, a NOT list, and concrete commitments. Use when a month is ending or someone asks for a monthly review or month plan.
+description: Reviews the month ending with evidence, then plans the next with a theme, capacity math, cuts, and sign-off. Use when a month is ending or someone asks for a "monthly review" or "plan my month".
 ---
 
 # Review and plan a month
@@ -39,22 +39,17 @@ Default timing (adjustable):
 
 Ask what "the month" means to the user if it is unclear; they may want to include a partial week on either side. State the ranges before proceeding: "Reviewing [month] ([first date] to [last date]). Planning [month] ([first date] to [last date])."
 
-## Access boundary
-
-Use only sources the user has authorized for this review and that serve the purpose of closing the month and planning the next. Pull the minimum relevant information, such as dates, statuses, counts, and trends, rather than message bodies, private notes, or details about other people the plan does not need, and never assess other people from private material. Save the review and plan only where the intended readers should see them, and never imply that an unavailable or excluded source was checked.
-
 ## Operating rules
 
 1. **Evidence first, discussion second.** Show the evidence picture before asking reflective questions.
 2. **Gather in one pass.** Batch independent reads rather than interrupting the conversation with small lookups.
-3. **Use current targets.** Judge progress against the user's live goals, not old schedules or stale records. Keep targets in the user's own goal record or last month's plan, not hardcoded into this workflow, and check for any recent change (a pause, a reset, a new target) before judging.
-4. **Check data quality before a harsh verdict.** Missing syncs, stale feeds, and incomplete logs distort conclusions. Ask the user to confirm surprising findings.
+3. **Use current targets.** Judge progress against the user's live goals, kept in their own goal record or last month's plan, not hardcoded into this workflow. Check for any recent pause, reset, or new target before judging.
+4. **Check data quality before a harsh verdict.** Ask the user to confirm surprising findings.
 5. **The user chooses.** You calculate, summarize, and ask hard questions. The user picks priorities, cuts, and commitments.
 6. **One decision at a time.** Do not move on until the current question has a real answer.
 7. **Stay at month level.** Set outcomes, milestones, capacity, and structure. Leave daily task blocks to weekly planning.
 8. **No saved plan without explicit approval.** A plan assembled from notes is a draft, not a decision.
-9. **Keep records useful, not exhaustive.** Save decisions, evidence, and commitments, not a transcript.
-10. **Do not lecture.** Show numbers, a direct conclusion, and the agreed commitment.
+9. **Do not lecture.** Show numbers, a direct conclusion, and the agreed commitment. Save decisions and evidence, not a transcript.
 
 ## Step 1: Gather evidence
 
@@ -72,15 +67,17 @@ Use the user's own system: a task manager, project tracker, calendar, spreadshee
 | Goals | Active monthly, quarterly, and yearly goals with status and deadlines |
 | Work delivered | Completed tasks and deliverables, grouped by the user's own areas |
 | Calendar | Time off, travel, fixed deadlines, recurring commitments, heavy weeks |
-| Daily signals (optional) | Ratings, short reasons for ratings, focus hours, or habit counts the user chooses to track |
+| Daily signals (optional) | Ratings, short reasons for ratings, focus hours, sleep, or habit counts the user chooses to track |
 
 For large sources, compute statistics and pull a few themes instead of reading raw entries.
 
-**Read only the fields you need.** When a daily log mixes structured fields with private free-form writing, such as a diary or journal, name the fields you want explicitly and leave the private writing out, even if you have access to it. A short field like "why I rated the day this way" usually gives enough texture for themes.
+**Read only the fields you need.** When a daily log mixes structured fields with private free-form writing, such as a journal, name the fields you want and leave the private writing out, even if you have access to it. A short field like "why I rated the day this way" usually gives enough texture for themes.
 
-**When a source is unavailable.** If a usual source has moved, been deleted, is mid-migration, or is disconnected, skip it rather than failing or guessing. Ask the user one short question for that area instead (for example, "Roughly how did sleep go this month?"), and note in the review which areas came from recollection rather than records. When a source moves to a new location, update where the workflow looks for it rather than keeping a standing workaround.
+**Check the data before trusting it.** Three principles cover most problems:
 
-**When a source is fed automatically.** If a log is filled by a sync, import, or automation, check its most recent entry before computing anything. If the newest entry is older than expected, flag a likely broken feed and confirm with the user rather than reporting a quiet month. If the feed changed recently (a new device, a new import path, or older months filled by a one-off backfill), note where the switch happened, and compare months only within the same source or label the comparison as uneven.
+- **Missing is not zero.** If a source is unavailable, ask one short question for that area instead ("Roughly how did sleep go this month?") and label it as recollection in the review. If a number looks surprisingly low, ask whether activity was recorded somewhere that did not sync before calling it a quiet month.
+- **Fresh before counted.** For any log filled by an automation or sync, check its newest entry first, feed by feed. An entry older than expected suggests a broken feed; confirm with the user.
+- **Like for like.** If two sources record the same thing, keep one entry per day by a stated preference so nothing is counted twice. If a source changed partway through, compare months only within the same source, or label the comparison as uneven.
 
 Before planning in detail, re-read any weekly plan that overlaps the start of the new month. Reconcile with it; never duplicate or overwrite it. Surface any gap between that week's plan and the month's outcomes.
 
@@ -96,7 +93,7 @@ Summarize completed work in a few areas, not a wall of bullets. The question is 
 
 ### Signals
 
-Include only measures the user tracks, such as average daily rating, focus hours, or low-energy streaks. Flag patterns like several low days in a row, or ratings that look fine while the user describes strain. Averages are not the whole truth: if the user records short reasons for their ratings, quote two or three that point the other way, and ask about the mismatch rather than letting a good average close the question.
+Include only measures the user tracks. Let the user set the flag thresholds (for example, an average below their chosen sleep target, or several low-rated days in a row). Averages are not the whole truth: if the user records short reasons for their ratings, quote two or three that point the other way, and ask about the mismatch rather than letting a good average close the question.
 
 ### Worked example (fictional)
 
@@ -161,12 +158,7 @@ Read the plan back in ten lines or fewer. The user should be able to state the t
 
 ### When outcomes depend on unmade decisions
 
-Sometimes the main projects cannot move because a decision about who leads something, or how the work is structured, has not been made. Do not force project end states that cannot be true yet. Instead:
-
-- List each open decision with an owner and a decide-by date, in whatever decision log the user keeps.
-- Make that decision calendar the spine of the plan. An outcome can be "decision made by [date]" rather than "project delivered."
-- Move parked work to an undated proposals list or an ideas list, so it stays visible without pretending to be scheduled.
-- Keep a short set of recurring weekly essentials, the floor that happens regardless, and check them in each weekly review.
+If the main projects cannot move until someone decides who leads them or how the work is structured, do not force end states that cannot be true yet. List each open decision with an owner and a decide-by date, and make that decision calendar the spine of the plan: an outcome can be "decision made by [date]." Move parked work to an undated proposals or ideas list, and keep a short set of weekly essentials that happen regardless.
 
 Example (fictional): a workshop series at Maple Hollow Arts cannot be scheduled until the board chooses a program lead. The month's outcome becomes "lead chosen by the 12th," the venue search moves to proposals, and the weekly essential is one member update every Friday.
 
@@ -198,6 +190,9 @@ Example (fictional): a workshop series at Maple Hollow Arts cannot be scheduled 
 ## Structure
 [The behavior or boundary change that counters last month's drain. Delegated items with owner named.]
 
+## Personal thread (optional)
+[Practice commitment or other personal priority the user names.]
+
 ## Pre-mortem
 - Failure mode: [likely cause]. Counter: [specific response.]
 ```
@@ -216,7 +211,7 @@ Review template:
 
 ## Signals
 - [Chosen measures, or "not tracked"]. Flags: [none or named patterns].
-- Sources missing or stale this month: [none, or areas based on recollection, or feeds flagged as broken].
+- Data caveats: [none, or areas from recollection, stale feeds, uneven comparisons].
 
 ## Win
 [One meaningful result.]
@@ -235,6 +230,7 @@ Confirm the save in one line and stop.
 After the run, quietly look back at what went wrong or what the user corrected: a read that wasted effort or came back in the wrong shape, a wrong assumption about the data, a pushback, a measure that turned out to be noise. Do not ask the user how to improve the workflow.
 
 - If a change is warranted, edit or merge an existing rule rather than adding a new paragraph. Write it as a general rule, not a private fact.
+- When a source moves or comes back after an outage, update where the workflow looks and drop any temporary workaround.
 - Keep dated incident notes out of the workflow itself. If you want a history, keep a separate one-line-per-entry lessons log, and do not load it during a normal run.
 - Keep the workflow under a length cap you choose, so it stays readable.
 
@@ -244,13 +240,10 @@ Before finishing, verify:
 
 - Review and planning ranges are explicit.
 - Evidence came before reflection.
-- Private free-form writing was excluded from reads.
-- Missing sources were replaced with a direct question and labeled.
-- Automated feeds were checked for freshness, and any source switch was noted before comparing months.
-- Strong verdicts account for data gaps and current targets.
+- Data caveats (missing sources, stale feeds, uneven comparisons) were checked and labeled before any strong verdict.
+- Verdicts used current targets.
 - The plan has a theme and no more than three outcomes.
-- Each outcome has a test of done, date, path, owner, and outside pressure.
-- Outcomes blocked on unmade decisions are framed as dated decisions.
+- Each outcome has a test of done, date, path, owner, and outside pressure, or is framed as a dated decision.
 - Capacity fits, or a scope decision was made.
 - The not-doing list has real cuts.
 - The structural fix responds to a reviewed drain.
@@ -262,19 +255,15 @@ Before finishing, verify:
 
 - Starting with questions instead of evidence.
 - Judging against stale targets.
-- Reading private journal text because it happened to be available.
-- Silently skipping a missing source, or reporting on it as if it were checked.
-- Reading a stale or broken automated feed as a quiet month.
-- Comparing months drawn from different sources as if they were like for like.
+- Treating missing or unsynced data as a quiet month.
 - Confusing a list of events with a plan.
 - Overloading capacity and refusing to cut.
 - Forcing project deadlines when the real blocker is an unmade decision.
-- Letting the assistant choose priorities.
+- Letting the assistant choose priorities, or treating a brainstorm as a commitment.
 - Saving an unapproved draft.
 - Conflicting with an existing weekly plan.
 - Re-proposing time blocks that have already failed.
 - Applying generic productivity rituals instead of fixing the actual drain.
-- Treating a brainstorm or imported task list as a confirmed commitment.
 
 ## Optional extras
 
@@ -282,7 +271,7 @@ Before finishing, verify:
 
 Add this section only if the user tracks a habit or practice they want held to account, such as writing, a language, music, exercise, or meditation. Put it after goals and delivery, not first. Do not lecture on technique; the user may already follow a program for that.
 
-Compare actual activity with the user's current target using whatever they log: sessions, minutes, words, or pages; average per week; active days; longest gap; and the change from last month. If the log is unavailable this month, ask one question about it instead. If the log is filled automatically, check its newest entry first, as in Step 1.
+Compare actual activity with the user's current target using whatever they log: sessions, minutes, words, or pages; average per week; active days; longest gap; and the change from last month. If the user also tracks a supporting practice (for example, drills next to performances, or strength sessions next to endurance training), report its count and change beside the main practice, but keep it out of the verdict unless the user says it is part of the target.
 
 Suggested verdict scale (adjustable):
 
@@ -295,7 +284,6 @@ If tracking may be incomplete, ask "The record shows this. Does that match reali
 
 ### For assistants with connected tools
 
-- Hand bulky reads, such as a month of daily entries or a full month of calendar events, to a helper task that returns computed numbers and a short list of themes, not raw records. Give the helper the same explicit field list, so private writing stays excluded there too.
-- Ask the calendar summary for time off, travel, per-week meeting load, recurring series, and anomalies such as meetings scheduled inside time off or events with suspect time zones. Offer to clear those conflicts now and add them to a pre-time-off checklist in the plan.
-- For logs fed by an automation, sort by date and read the newest record first to confirm the feed is alive. If the feed writes records with a stable unique ID, use it to spot duplicates left by re-syncs or backfills before counting.
-- Restrict helper tasks to the read tools they need.
+- Hand bulky reads, such as a month of daily entries or calendar events, to a helper task that returns computed numbers and a short list of themes, not raw records. Give the helper the same field list from Step 1, and restrict it to the read tools it needs.
+- Ask the calendar summary for time off, travel, per-week meeting load, recurring series, and anomalies such as meetings inside time off or events with suspect time zones. Offer to clear those conflicts now and add them to a pre-time-off checklist in the plan.
+- For automated logs, sort by date and read the newest record first to confirm the feed is alive. If records carry a stable unique ID, use it to spot duplicates left by re-syncs or backfills before counting.
