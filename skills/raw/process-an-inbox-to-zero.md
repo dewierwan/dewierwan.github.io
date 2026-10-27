@@ -1,243 +1,200 @@
 ---
 name: inbox-zero
-description: Works through email, chat, and notification inboxes to zero, turning each item into one clear next step. Use when someone says triage my inbox, clear my messages, or help me prioritize email.
+description: Works email, chat, and notification inboxes to zero, giving each item one clear next step. Use when someone says triage my inbox, clear my messages, or help me prioritize email.
 ---
 
 # Process an inbox to zero
 
-Help someone empty one or more inboxes (email, team chat, document comments, messaging apps) into a single trusted task system, so that every item ends in exactly one bucket. Processing means deciding what each item is and where it goes. It does not mean doing all the work the items describe.
+Help someone empty one or more inboxes (email, team chat, document comments, messaging apps) into one trusted task list. Every item ends in exactly one bucket, and nothing that needs doing lives only in an inbox or an unsent draft. Processing means deciding what each item is and where it goes, not doing the work the items describe.
 
 ## Quick version
 
-- Paste or export the messages you want to process, plus your current goals and today's most important task (MIT). Ask the assistant to put each item in exactly one bucket: **do now** (urgent, important, about 15 minutes or less), **quick win** (about 2 minutes or less), **delegate**, **task**, or **no action**.
+- Paste or export the messages you want to process, any unsent drafts, your current goals, and today's most important task (MIT). Ask the assistant to put each item in exactly one bucket: **do now** (urgent, important, short), **quick win** (a couple of minutes), **delegate**, **task**, or **no action**.
 - Rank by consequence, not noise: hard deadline first, then someone blocked on you, then what serves a goal, then the relationship cost of waiting. New, unread, long, or loud does not make something urgent.
-- For chats, judge everything since your last real reply, not just the last message. A "thanks!" sitting on top of an earlier question still needs an answer.
-- Work one bucket at a time in small batches, and move on only after you have actually acted, not just decided.
-- Anything longer than the cap becomes a task with a name, due date, and first step. Do not start the work during the run.
-- Finish with counts of what was cleared, tasked, delegated, and still open.
+- For chats, judge everything since your last real reply, not just the last message. A "thanks!" on top of an earlier question still needs an answer. A chat you flagged to reply to is never no action unless you say so.
+- Work one bucket at a time in small batches, and move on only after you have acted, not just decided.
+- Anything longer than your work cap becomes a task with a name, due date, and first step. Do not start the work during the run.
+- Finish with counts of what was cleared, tasked, delegated, and still open, including drafts left unsent.
 
 ## 1. Setup choices
 
-Confirm these once with the user, or use the defaults. All are adjustable. Store the answers as configuration, not as message content.
+Confirm these once, or use the defaults. All are adjustable. Store them as configuration, never with message content.
 
-| Choice | Default | Notes |
+| Choice | Default (adjustable) | Notes |
 |---|---|---|
-| Work cap for do-now items | 15 minutes | Anything longer becomes a task |
-| Quick win threshold | 2 minutes | Short reply, yes or no, RSVP, forward, access approval |
-| Batch sizes | Do now 1, quick wins 5, delegate 3, task 3 | Small batches feel less overwhelming; too small feels slow |
-| Chat lookback window | 14 days | Unread views may still show older chats |
-| Muted feeds | None | For example automated status channels; still include messages that tag the user |
-| Opt-in-only sources | None | Secondary workspaces read only when named |
-| Delegated clearing | None | Named sources where the assistant may clear items after the user confirms |
-| Response-time standard | None | For example a target reply time for candidates or partners |
-| Draft destinations | Copy-ready text | Saved drafts only where the user authorizes it, using a method verified to keep them in the right thread |
-| Link preference | Open in the native app | Use browser links only if the user prefers them |
-| Person-grouping threshold | 4 items | One person with this many items gets one grouped decision |
+| Work cap for do now | About 15 minutes | Longer work becomes a task |
+| Quick win threshold | About 2 minutes | Short reply, yes or no, RSVP, forward, access approval |
+| Batch sizes | Do now 1, others 3 to 5 | Big lists overwhelm; tiny batches feel slow |
+| Chat lookback | About two weeks | Unread views may still show older chats |
+| Muted and opt-in sources | None | Muted feeds count only when they tag the user; opt-in sources are read only when named |
+| Delegated actions | None | Named sources where the assistant may clear items after confirmation |
+| Draft destination | Copy-ready text | Saved in-app drafts only where authorized |
+| Link style | Opens in the user's preferred app | Browser links if preferred |
 
 ## 2. Ground rules
 
-1. **The user takes external actions.** Do not send, archive, delete, label, mark read, react, or mark complete unless the user has explicitly delegated that action for a named source. No bulk actions by default, even when a tool allows them. If the user asks you to archive cleared items, archive only items that are finished or handed off. Keep anything still waiting on a reply the user has not sent, and ask about FYIs they may still want to read.
-2. **No drafts unless asked** for a specific item or group.
-3. **One write by default:** when the user says "task it" (or similar) about a specific item, create that one task. Never create tasks in bulk or without a per-item instruction.
-4. **Respect the work cap.** On inbox days the real time sink is doing the work a message describes, not replying to it.
-5. **Evidence, not assumptions.** Say what the messages show. Never state the user's beliefs, commitments, or decisions for them.
+1. **The user takes external actions.** Do not send, archive, delete, label, mark read, react, or mark complete unless the user has delegated that action for a named source. No bulk actions by default. When asked to archive cleared items, archive only items that are finished or handed off; keep anything waiting on an unsent reply, and ask about FYIs they may still want to read.
+2. **No drafts unless asked.** Never send, edit, or delete the user's existing drafts.
+3. **One write by default:** when the user says "task it" about a specific item, create that one task. Never create tasks in bulk.
+4. **Respect the work cap.** The real time sink on inbox days is doing the work a message describes, not replying to it.
+5. **Evidence, not assumptions.** Say what the messages show. Never state the user's beliefs or decisions for them.
 
-This workflow reads other people's messages, so use it only for the legitimate purpose of processing the user's own inbox, in sources they have clearly authorized. Read the minimum sources and information each decision needs. Leave unrelated or sensitive personal details about other people out of the output, and keep output inside the user's own session and task system.
+This workflow reads other people's messages, so use it only to process the user's own inbox, in sources they have clearly authorized. Read the minimum sources and information each decision needs, leave unrelated or sensitive personal details about others out of the output, and keep output inside the user's own session and task system.
 
-## 3. Set scope and time
+## 3. Set scope, time, and goals
 
-1. Get the current date, weekday, and time from a reliable clock in the user's time zone. Never work these out mentally; deadlines and focus blocks depend on them.
-2. Map the user's words to sources. Configure this once for the user's real accounts.
+1. Get the date, weekday, and time from a reliable clock in the user's time zone. Never work them out mentally.
+2. Map the user's words to configured sources: "email", "team chat", "comments", "chats" or a named network, and "all". If scope is unclear, default to all configured sources (except opt-in ones) and say so in one line. Naming a personal account counts as the explicit request to read it, read-only.
+3. Read each source's access rules before reading the source. The task list is where items go, not an inbox; if the user wants to prioritize tasks, route to a planning workflow.
 
-| User says | Source |
-|---|---|
-| email, work email | Authorized work email account |
-| personal email | Authorized personal account, read-only |
-| team chat | Main team workspace: saved items, direct messages, mentions, unreads |
-| comments, mentions | Notification inbox of the user's document or project tool |
-| chats, or a named network | Messaging apps, filtered to the named network if given |
-| all, everything | Every configured source except opt-in-only ones |
+Then read, in parallel, only the fields you need from the user's planning system, never private fields such as journals:
 
-If scope is unclear, default to all and say so in one line rather than asking a separate question. A request that names a personal account, or "all" when one is configured, counts as the explicit request needed to read it.
+- **Longer-term goals** for the current period, with deadlines and priority.
+- **Weekly goals** covering today. If several records match, use the one with content.
+- **Today:** intention, plan, and MIT.
+- **Open tasks:** title, status, due date, so you can spot items already tasked.
 
-The task list is not an inbox here; it is where items go. If the user asks to prioritize tasks, route to a planning workflow.
+Write queries that survive change: use stable field identifiers where the system offers them, and its documented date functions rather than raw string comparisons. If a query errors or returns nothing where a record should exist, inspect the schema and fix the query before reporting a level as missing. If a level really is missing, say so in one line and continue; never invent goals. Summarize the goals in a few lines for yourself and judge every item against them.
 
-Read each source's access rules before reading the source.
+**MIT check.** If today's MIT is not inbox work and the user is inside or near its planned block, ask once, before reading any inbox: "Is this the most important thing right now, or does it just feel productive?" Trust the answer.
 
-## 4. Read goals and open tasks
+## 4. Read the inboxes
 
-Read these in parallel from the user's planning system, requesting only the fields you need and never private fields such as journals:
+Read every source in parallel. For each item collect: source, sender, subject or chat, date and sender of the last message, a one-line gist, and a link.
 
-1. **Longer-term goals:** the active quarter or similar period, with open goals, deadlines, priority, and short notes.
-2. **Weekly goals:** the plan covering today. If several records match, use the one with content. If the longer-term level is empty but weekly goals say what they ladder up to, use that as the higher goal.
-3. **Today:** intention, plan, and MIT.
-4. **Open tasks:** title, status, and due date, so you can spot items that are already tasked.
+- **Use the right view and get everything.** Prefer purpose-built inbox, notification, or reply-debt views over general search, which often misses saved, unread, and last-sender state. If results hit a page limit, query again for older items. A notification inbox is at zero only when every uncleared item, read or unread, is processed.
+- **Group to the decision unit.** Group email by thread. Several comments feeding one document are one decision: already used, or one task for the document.
+- **Open when the preview is not enough.** Skip obvious newsletters, receipts, and automated notices. Open the full thread, and any photo, scan, or file that carries the ask, before choosing a bucket. Never task an item you have not actually seen.
+- **Judge chats on everything unanswered.** Read back to the user's last real reply. A logistics exchange, confirmation, or friendly closer can sit on top of an older question. A chat with an unanswered question is never no action until answered.
+- **Honor the user's own flags.** A chat the user marked unread, or an item they saved for later, is their own signal to act. A marked-unread chat goes in quick wins at least, however much it reads like a closer, and moves to no action only if the user says so. Unreads alone are attention debt, not priority.
+- **Rank direct above broadcast.** Direct messages and mentions come before group traffic unless a group message names the user, asks them something, or carries a deadline.
+- **Default automated items to no action** unless they point to a deadline, a money or security issue, or a record that now needs the user. Permission requests are quick wins. Old items with no open ask are usually stale; group them for one decision.
+- **Never invent links.** Copy links from tool output or build them from a format verified in this setup; otherwise cite sender, subject, and date.
 
-Write queries that survive change. Where the system supports it, refer to fields by stable identifiers rather than display names, in both filters and requested fields; names can differ between tables and break when someone renames them. Use the system's documented date functions, because plain equality or range comparisons against date strings often fail silently. If a query errors on an unknown field, or returns nothing where a record should exist (for example today's daily record), inspect the schema and fix the query before reporting that level as missing.
+*Example (fictional).* A chat with Robin from the Maple Street Rowing Club ends with the user's "Sounds good!" and Robin's "Great, see you there." Two messages earlier, Robin asked whether the user could host the spring meetup, and nobody answered. The chat is a quick win, not no action.
 
-If a level is genuinely missing, say so in one line and continue with what exists. Do not invent goals. Summarize the goals in three to six lines for yourself and use them to judge every item.
+**Unsent drafts.** For every source in scope, also list the user's unsent drafts: email drafts, team chat drafts, and text left in a messaging composer. Each is an item in its own right, whatever its age, and listing them is a read. Link each to its thread, or to the app's drafts view. A scheduled message is not a loose draft unless its send time has passed. Drafts made earlier in this run count too: an item is not done while its reply sits unsent.
 
-**MIT check.** If today's MIT is not inbox work and the user is inside or near its planned block, ask once, before reading any inbox: "Is this the most important thing right now, or does it just feel productive?" Trust the answer. Skip this when there is no MIT or inbox work is part of the plan.
+**Failures.** If a source fails or is disconnected, name it, the exact error, and the missing data. Try the safe repairs in its access rules, continue with the others, and never quietly drop a source or swap in a weaker one. Put failures at the top of the output.
 
-## 5. Read the inboxes
-
-Read every source in parallel. For each item collect: source, sender, subject or chat, date of the last message, who sent the last message, a one-line gist, and a link.
-
-Apply these principles across sources:
-
-- **Use the right view.** Prefer a purpose-built inbox, notification, or reply-debt view over general search, which often misses saved, unread, and last-sender state.
-- **Get everything.** If a result hits its page limit, query again for older items. For a notification inbox, process every uncleared item, read or unread; the run is done only when the total is zero. Opening a notification may mark it read without clearing it.
-- **Group to the decision unit.** Group email messages by thread and keep the latest. Treat several comments feeding one document as one decision: has the user already used them? If yes, clear them; if not, offer one task for the document rather than one per comment.
-- **Skim, then open only when needed.** Send obvious newsletters and automated mail straight to no action. Open the full thread when the preview leaves the ask, deadline, owner, or status unclear. A reply deep in a long thread usually needs the full thread.
-- **Open attachments that carry the ask.** When the substance sits in a photo, scan, screenshot, or file, open it before choosing a bucket. Never task an item you have not actually seen: a forwarded letter that looks official may turn out to be marketing or a notice needing nothing.
-- **Judge chats on everything unanswered.** Find reply debt by last sender within the lookback window, then read back to the user's last real reply. Judge the chat on that whole unanswered stretch, never on its last message: a logistics exchange, a confirmation, or a friendly closer can sit on top of an older ask. A chat whose unanswered part contains a question is never no action until the user has answered it.
-- **Rank direct above broadcast.** Direct messages and explicit mentions come before group or channel traffic, unless a group message names the user, asks them something, or has a time-bound consequence.
-- **Respect deliberate saves; mute chosen noise.** Saved-for-later items count, even from muted feeds, because the user chose to keep them. Unreads are attention debt, not priority. Leave muted-feed unreads out of every bucket and count unless a message tags the user.
-- **Default automated items to no action.** Newsletters, receipts, calendar notices, reactions, automated mentions, pointers to deleted or emptied content, and resolved discussions go to no action, unless they point to a deadline, a money or security issue, or a record that now needs the user (for example a record newly assigned to them with no next step). Permission requests are quick wins. Items over two weeks old with no open ask are usually stale; group them for one decision.
-- **Never invent links.** Prefer links that open the exact item in the app the user uses, when that is their preference. Copy links from tool output, or build them only from a format verified in this setup. Otherwise cite sender, subject, and date and say the link is missing.
-
-*Example (fictional).* A chat with Robin from the Maple Street Rowing Club ends with the user's "Sounds good!" and Robin's "Great, see you there." It looks finished. Reading back further shows that two messages earlier Robin also asked whether the user could host the spring meetup, and nobody answered. The chat goes to quick wins, not no action.
-
-**Failures.** If a source fails or is disconnected, name the source, the exact error, and the missing data. Try the safe repairs in its access rules, such as re-authentication steps, then continue with the other sources. Never drop a source quietly or substitute one that cannot provide the same data. Put failures at the top of the output so the user sees the gap first.
-
-## 6. Sort into buckets
+## 5. Sort and rank
 
 Put every item in exactly one bucket:
 
-1. **Do now:** important and urgent, finishable within the cap. Aim for three to five; extras are probably tasks.
+1. **Do now:** important, urgent, finishable within the cap. Aim for three to five; extras are probably tasks.
 2. **Quick wins:** under the quick win threshold. The user batches these.
-3. **Delegate:** someone else should own it. Name the suggested owner by name or role with brief evidence ("owns operations", "is running this hiring process"). Find owners from the thread, recent discussion in the relevant channel, project records, and notes on team roles. Check notes against current evidence, because roles change. If nothing is credible, say "owner unclear" rather than guessing.
-4. **Task:** real work over the cap, or work that cannot happen yet. Give a suggested name, any implied due date, and why. If an open task already covers it, say so and suggest clearing the inbox copy.
-5. **No action:** FYIs, resolved threads, automated notices, chats that ended naturally with nothing unanswered. The user clears these rather than deleting them, so do not call this bucket "delete". Show counts by type and name only items the user might be surprised to see.
+3. **Delegate:** someone else should own it. Name the suggested owner with brief evidence from the thread, recent discussion, or team records, checked against current evidence because roles change. If nothing is credible, say "owner unclear".
+4. **Task:** work over the cap, or work that cannot happen yet. Suggest a name, any implied due date, and why. If an open task already covers it, say so and suggest clearing the inbox copy.
+5. **No action:** FYIs, resolved threads, automated notices, chats that ended with nothing unanswered. Call it "no action", not "delete"; the user clears these. Show counts by type and name only surprising items.
 
-Rank do-now items, and order every other bucket, by these signals in order:
+Sort drafts the same way: a finished reply is a quick win (send it); one still being written is do now or a task; a stale or superseded one is a quick win to delete. If the user says a draft is deliberate, such as a template, list it as kept, not open.
 
-1. **Hard deadline or time-bound decision:** due today or tomorrow, an expiring offer or event, a meeting that needs a reply first.
-2. **Someone blocked on the user:** a teammate, partner, or candidate cannot move until they answer. Apply any response-time standard the user sets.
-3. **Ladders to a goal:** today's MIT, then weekly, then longer-term. Name the goal.
-4. **Relationship cost of delay:** key contacts, funders, personal relationships that go cold. Age is a supporting signal that differs by channel: an email unanswered for two days or a direct chat unanswered for three usually matters more than an old saved item.
+Rank do now, and order every other bucket, by:
 
-## 7. Open the run
+1. **Hard deadline or time-bound decision:** due today or tomorrow, an expiring offer, a meeting that needs a reply first.
+2. **Someone blocked on the user,** applying any response-time standard they set.
+3. **Ladders to a goal:** MIT, then weekly, then longer-term. Name the goal.
+4. **Relationship cost of delay.** Age supports this, and channels differ: an unanswered email or direct chat a few days old usually matters more than an old saved item.
 
-Do not show the full sorted list; seeing every bucket at once overwhelms. The opening message holds only:
+## 6. Open the run
+
+Do not show the full sorted list. The opening message holds only:
 
 ```markdown
 ## Inbox zero: <date>, <sources>
 
 **Missing data:** <failed or stale sources, or "none">
 **Counts:** <N items: X do now, Y quick wins, Z delegate, T task, A no action>
+**Unsent drafts:** <count by source, or "none">
 ```
 
-Then go straight into the first non-empty bucket (or a person group, below) in the same message. Keep the full sort to yourself and reveal one batch at a time.
+Then go straight into the first non-empty batch in the same message.
 
-## 8. Work the buckets, one batch at a time
+## 7. Work the buckets, one batch at a time
 
-Go in bucket order and stop whenever the user wants. Each message shows one batch, or one do-now item, and asks only about what is on screen. Never ask about a later bucket early. End the turn and wait.
+Go in bucket order and stop whenever the user wants. Each message shows one batch, or one do-now item, and asks only about what is on screen. End the turn and wait. Answering questions is a decision, not completion: move on only when the user says the batch is done, and until then help them finish it.
 
-Answering a batch's questions is a decision, not completion. Move on only when the user says the batch is done. Until then, help them finish it, for example by drafting the replies they chose.
+**Formatting.** Link every item or person you name, including in recaps and question titles, and link any other conversation the user must visit, such as the person they will message for an introduction. Number questions and letter options so the user can reply `1b, 2a`. Never show status by color alone.
 
-**Formatting:**
+**Group by person first.** When one person accounts for several items across buckets, show their pile once, split into "needs you", "discussion", and "reading or FYI", and suggest one way to batch it, such as one task or an existing one-to-one.
 
-- Every time you name an item or person, including status notes, recaps, reminders, and question titles, link the name to its source.
-- Number questions and letter options so the user can reply `1b, 2a`.
-- Use real lists for groups. Never show severity or status by color alone; use words, symbols, and order.
+1. **Do now, one per message.** Read the full thread and check the calendar around any dates it mentions. Gather only the context this decision needs. Before saying the user still owes a reply or introduction, search the other channels they use; it is often done elsewhere. For hiring or assessment items, use the user's chosen guidance and authorized evidence about role-relevant capabilities, role alignment, and whether an assessment distinguishes relevant performance. Write a short paragraph: who, what they want, what happens if it waits, and the recommended action, with evidence linked. Ask one to three questions only the user can answer.
+2. **Quick wins.** Each item gets a link, a line saying what the thing is, and one recommended action. If a message refers to an event, plan, or person you cannot explain, find it first in other messages or the calendar rather than relaying the ask blind. When one item spans a direct message and a group chat, say what each is waiting on. Say how many remain.
+3. **Delegate.** Link, suggested owner, evidence. The user confirms or changes the owner.
+4. **Task.** Link, suggested name, due date. Create each one the user says to task.
+5. **No action.** Counts by type plus surprising items.
 
-**Group by person first.** When one person accounts for several items across buckets (at or above the grouping threshold), show their pile before the buckets in one message, split into "needs you", "discussion", and "reading or FYI", and suggest one way to batch them, such as one task or an already scheduled one-to-one. Clearing a person's pile in one decision beats meeting the same name in every bucket.
+*Example (fictional).* A friend writes "Still in for Lantern Night?" A search shows it is a Friday supper club dinner planned in a group chat, and the calendar shows a clash. The quick win reads: "[Lantern Night](link): Friday supper club dinner from the group chat; clashes with your evening hold. a) confirm and move the hold, b) decline."
 
-**Batches:**
+**Meetings.** When an item asks for a meeting, check for meetings already booked with that person soon; one often covers the ask. When a do-now item is prep for an upcoming meeting, offer a meeting-prep workflow once the user decides.
 
-1. **Do now, one item per message.** Read the full thread and check the calendar around any dates it mentions; the user may already have added holds. Gather only the context this decision needs, such as earlier threads with the sender or a related project record. Before saying the user still owes a reply or introduction, search every channel they might have used; it is often done elsewhere. For hiring or assessment items, use the user's chosen hiring guidance and only authorized evidence about role-relevant capabilities, role alignment, diagnostic evidence, and whether an assessment distinguishes relevant performance. Then write a short paragraph: who this is, what they want, what is at stake if it waits, and the recommended action, with evidence linked. Ask one to three questions only the user can answer. When they say it is done, show the next item.
-2. **Quick wins, a small batch per message.** Each item gets its link, a line of context, and one recommended action, with lettered options when there is a real choice. The context line must say what the thing is. When a message refers to an event, plan, or person you cannot explain from the message itself, find it first (search other messages for the key term, check the group chat it came from, check the calendar for its dates) rather than relaying the ask blind. Say how many remain. Show the next batch when the user says this one is done.
-3. **Delegate, a small batch per message.** Link, suggested owner, evidence. The user confirms or changes the owner.
-4. **Task, a small batch per message.** Link, suggested name, due date. Create each one the user says to task. Flag existing tasks that already cover an item.
-5. **No action.** Counts by type plus surprising items. The user clears them, unless they delegated clearing to you.
+**Catch work done mid-run.** Before each new batch, check recently sent messages, drop anything already answered, and note it in one line.
 
-*Example (fictional).* A friend writes "Still in for Lantern Night?" On its own that means nothing. A search shows Lantern Night is a supper club dinner on Friday, first planned in a group chat, and the calendar shows it clashes with an existing hold. The quick win reads: "[Lantern Night](link): Friday supper club dinner from the group chat; clashes with your 7 pm hold. a) confirm and move the hold, b) decline."
-
-**Meeting-related items.** When an item asks for a meeting, check the calendar for meetings already booked with that person in the next week before suggesting a new slot; an existing one-to-one or session often covers the ask. When a do-now item is preparation for a meeting in the next day or two, such as a document to review before a call, offer a meeting-prep workflow once the user has decided on the item.
-
-**Catch work done mid-run.** Users often reply while the run is going. Before each new batch, check recently sent mail and messages, drop anything already answered, and note each in one line instead of asking again.
-
-**Good questions** resolve real uncertainty: whether a goal is still live, whether the user wants to handle a relationship or hiring thread personally, whether an unfamiliar sender matters, how much time they have. Do not ask what the data already answers. The user can move any item to any bucket; their choice is final.
+**Good questions** resolve real uncertainty: whether a goal is still live, whether the user wants to handle a sensitive thread personally, whether an unfamiliar sender matters, how much time they have. Never ask what the data already answers. The user can move any item to any bucket; their choice is final.
 
 ### Drafts, only when asked
 
-- **Check the request against the thread first.** If a requested point repeats or contradicts what the other person already said, or misreads the ask, say so in one line and draft the version that makes sense. Follow the user's voice and channel conventions.
-- **Default output:** one draft per response as copy-ready plain text in the final block, with the item's link on the line directly above. Finish all tool calls first so nothing pushes the draft out of the final block. Never send.
+Check the request against the thread first: if a requested point repeats or contradicts what the other person said, or misreads the ask, say so in one line and draft the version that makes sense. By default, give one draft per response as copy-ready text in the final block, with the item's link directly above it, after all tool calls. Never send. The item stays open until the reply is sent.
 
 ### Creating a task
 
-Create one record with: a clear action name, open status, due date, importance, urgency, time estimate, and domain or project. Notes:
+Create one record with a clear action name, open status, due date, importance, urgency, time estimate, and project. Notes:
 
 ```markdown
-**What:** one line: the ask and who is waiting.
-**Source:** <link, or "<network>: <role or contact>, <date>">
+**What:** the ask and who is waiting.
+**Source:** <link, or "<network>: <contact>, <date>">
 **Context:**
 - Key fact or constraint, with link.
-- Deadline or related record.
 **Next step:** the first concrete action.
 ```
 
-Do not pre-draft replies in the task unless asked. Afterwards, tell the user the item can now leave its inbox and give the record link if available.
+Do not pre-draft replies in the task unless asked. If an existing task is superseded rather than completed, propose an archived or cancelled status, not done. Then tell the user the item can leave its inbox.
 
-## 9. Close and improve
+## 8. Close and improve
 
-End with a short per-source status:
+Re-run the drafts check before calling any source zero. Then give a per-source status:
 
-| Source | Cleared | Tasked | Delegated | Still open | Unreviewed |
-|---|---|---|---|---|---|
-| [source] | [n] | [n] | [n] | [n] | [n and reason] |
+| Source | Cleared | Tasked | Delegated | Still open | Drafts unsent (kept) | Unreviewed |
+|---|---|---|---|---|---|---|
+| [source] | [n] | [n] | [n] | [n] | [n (n kept)] | [n and reason] |
 
 If many loops remain open, say so plainly.
 
-**Readiness check before calling a run complete:**
+**Readiness check:**
 
 - Every in-scope source was read, or its failure is named.
-- Every item is in exactly one bucket.
-- No chat with an unanswered question sits in no action.
-- Every attachment that carried an ask was opened before its item was bucketed.
-- Nothing actionable lives only in an inbox: it is done, delegated, tasked, or explicitly left open.
-- Every delegated clear was verified.
+- Every item is in exactly one bucket, opened far enough to judge it.
+- No unanswered or user-flagged chat sits in no action without the user's say-so.
+- Every remaining draft is kept on purpose or reported as open.
+- Nothing actionable lives only in an inbox.
+- Every delegated action was verified.
 
-Then audit the run for friction: a pointless question, an item in the wrong bucket, a misbehaving source or query, or context you had to hunt for. With the user's permission, update the workflow's configuration to fix the cause, keeping changes general rather than tied to one message. Never store message content or credentials in it.
+Then audit the run for friction: a pointless question, a misfiled item, a misbehaving source, context you had to hunt for. With permission, update the configuration to fix the cause in general terms, never storing message content or credentials.
 
 ## Common failure modes
 
-- Dumping every bucket at once instead of one batch at a time.
-- Moving on after the user decided but before they acted.
+- Dumping every bucket at once, or moving on before the user acted.
 - Doing the work a message describes instead of tasking it.
+- Judging a chat by its last message, or filing a user-flagged chat as no action.
+- Bucketing from a preview when the ask sits in an unopened file.
+- Forgetting unsent drafts, or calling a source zero without re-checking them.
 - Flagging a reply as owed when it was sent elsewhere.
-- Judging a chat by its last message, so a closer or confirmation hides an older question.
-- Tasking or bucketing an item from its preview when the real content sits in an unopened photo or file.
-- Reporting a goal level as missing when the query, not the data, was wrong.
-- Relaying an ask the user cannot place, instead of first finding the event, plan, or person it refers to.
-- Proposing a new meeting when one with the same person is already booked.
-- Showing the same person in every bucket instead of grouping their pile.
-- Duplicating a task that already exists, or guessing an owner instead of saying "owner unclear".
-- Quietly dropping a failed source or substituting a weaker one.
-- Treating unread, new, or loud as urgent.
-- Inventing links, or clearing a notification by changing the record behind it.
-- Saving a draft through a method that leaves it detached from its thread.
-- Taking an external action, such as sending or archiving, that the user did not delegate.
+- Relaying an ask the user cannot place.
+- Proposing a meeting that already exists, or duplicating a task.
+- Guessing an owner instead of saying "owner unclear".
+- Quietly dropping a failed source, or inventing links.
+- Taking an external action the user did not delegate.
 
 ## Optional extras
 
-**Single-item mode.** Use this when the user, a reminder, or a scheduled prompt hands over one item, such as the oldest unhandled email or saved-for-later message.
+**Single-item mode.** When a reminder or the user hands over one item, such as the oldest unhandled email, skip goals, sorting, and the opening message, and read only that item and the context it needs. Treat it as one do-now item with a recommended bucket and next action. When it is handled, tell the user which inbox action clears it; if a reminder system watches the inbox, let it detect the change rather than requiring a phrase like "done". If you clear it on request, continue straight into any waiting request in the same turn.
 
-1. Skip goals, sorting, the opening message, and closing. Do not read other inbox items. Read only that item, its source's access rules, and the context it needs.
-2. Treat it as one do-now item: who this is, what they want, and what happens if it waits. Recommend one bucket and the concrete next action, with the item's link. Ask only questions the user alone can answer.
-3. Help them finish it under the normal drafting and task rules.
-4. Tell them which inbox action clears it, such as archiving the email or marking the saved item complete. If a reminder system checks the inbox itself, let it detect the change. Never require a special confirmation phrase like "done".
-5. If you clear it on request and the action succeeds, continue straight into any waiting request in the same turn. Never make the user send a filler message to move on.
-
-**Tick lists for items only the user can clear.** When the user must clear several saved items themselves, give them a list that mirrors their app's screen, in the same order the app shows:
+**Tick lists.** When the user must clear several saved items themselves, mirror their app's screen in its order, then re-read the list afterwards to confirm:
 
 | # | Opening words as previewed | Date | Decision |
 |---|---|---|---|
-| [position] | [first words of the message] | [date] | [✓ Clear, or Keep, plus a few words of reason] |
+| [position] | [first words] | [date] | [✓ Clear, or Keep, with a short reason] |
 
-Afterwards, re-read the saved list to check the right items were cleared.
+**Delegated clearing.** Some tools have no quick manual way to empty a notification inbox, so the user may delegate clearing. Clear only items the user says are handled, not worth acting on, or confirmed as no action, never items decided but not yet acted on. Clearing a notification must never resolve, edit, or delete the underlying comment or record. Retry a transient error once, verify, report in one line ("Cleared 4, all verified, 29 left"), and know how to undo a mistake. Marking a chat processed fits only when the user handled it elsewhere or chose to ignore it.
 
-**Delegated clearing.** A common case is a tool with no quick manual way to empty its notification inbox. Clear an item only after the user says it is handled, done, or not worth acting on, or confirms the no action bucket. Never clear an item that is decided but not yet acted on, such as a reply still to post. Clearing a notification or marking a chat processed must never resolve, edit, or delete the underlying comment, thread, page, or record. Pass item identifiers in a way the tool reliably accepts, retry a transient error once, verify the result, and report it in one line ("Cleared 4, all verified, 29 left"). Name anything unverified as a failure, and know how to undo a mistaken clear. For chats, marking an item processed (so it does not return next run) fits when the user handled it elsewhere, chose to ignore it, or confirmed no action; do not mark chats the user still has to answer, since a sent reply drops off on its own.
-
-**Saved drafts in apps, where authorized.** Save each draft as a reply in its own thread, never at the top level of a channel or conversation. Use whichever method the user has verified keeps drafts attached to the right thread. For email, that may mean writing the reply in the mail app's own reply box (for example through browser automation in the user's chosen profile) rather than through an API draft tool, which can produce drafts that do not sit inside the thread. Leave each draft unsent in its own tab or window, opened in the app the user prefers, so they can edit and send. In group threads, use the channel's real mention format for the person being answered and anyone the draft asks to act. Do not also paste the draft into the conversation; just say it is saved and opened. If a draft already exists there, say so rather than overwriting it. If you cannot read saved drafts back, never recreate an edited draft from your own version: ask the user to paste their current text, and save the revision only after they remove the old one. For copy-ready drafts, also copy the text to the clipboard if the user wants, and say so.
+**Saved drafts in apps.** Where authorized, save each draft as a reply inside its own thread, using a method the user has verified keeps it attached there; some draft programming interfaces create detached drafts, so writing in the app's own reply box can be safer. Use real mentions in group threads, open the draft in the user's preferred app, and do not also paste it into the conversation. If a draft already exists, say so rather than overwriting it. If you cannot read saved drafts back, never recreate an edited one from your version; ask the user for their current text first.

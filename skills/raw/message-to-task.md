@@ -66,7 +66,7 @@ Useful source types include:
 
 Because this workflow reads private communications and records about other people, use it only for a legitimate purpose with clear authorization from the user and, where relevant, the organization. Consult only the minimum relevant sources and information. Leave unrelated or sensitive personal details out of notes, drafts, and records, and keep all outputs within an appropriate access boundary.
 
-Use non-interactive research methods. Do not use tools that create visible browser activity or other side effects unless the user has authorized that.
+For web research, follow whatever browsing policy the user has set. If automated browsing is allowed, run it without a visible window, and let any helper agents browse only under the same rules. Avoid tools that create other side effects unless the user has authorized them.
 
 Stop gathering when you can either complete the preparation or name precisely what is missing. Two or three well-chosen sources beat many shallow ones.
 
@@ -207,7 +207,7 @@ Before finishing, check:
 
 - Did I read later replies and confirm the work is still live?
 - Did I identify the actual deliverable rather than merely log the message?
-- Did I research enough, but not excessively?
+- Did I research enough, but not excessively, and within the user's browsing rules?
 - Did I draft or prepare the useful work?
 - Did I avoid sending, approving, or committing externally?
 - Are unsupported facts and links clearly marked rather than guessed?
@@ -222,6 +222,7 @@ These help when your assistant has connected tools.
 - **Parsing message links.** Many messaging tools encode the conversation ID and a message timestamp in the link, plus a separate parent identifier when the message is a thread reply. Use the parent identifier to fetch the whole thread. Some tools return nothing for an exact-timestamp lookup, so query a small window around it instead.
 - **Recovering identities.** If sender names come back blank, recover them from mentions in the text or by looking up the user ID.
 - **Building an evidence base.** For references or feedback, searching for messages a person authored can surface concrete examples of their actual work.
+- **Browsing policy.** If you keep a written browsing policy, point the workflow and any helper agents at it rather than restating rules in each prompt. A common default is to allow automated browsing only in headless mode, so research never takes over the user's screen.
 - **Finding duplicates.** If your task system supports search, query the title and notes fields for the requester's name or organization before creating anything. Use the system's update operation on a match rather than deleting and recreating, so links and history are preserved.
 - **Staging drafts.** If authorized, stage the reply as an unsent draft in the right thread so finishing is one click, and keep the same text in the task notes. Check rendering: many tools need a blank line between a paragraph and a list, or the list items show as plain text. Go straight from greeting to the first item rather than using a list lead-in line.
 - **Scheduled review.** If the environment supports delayed reminders, schedule the step 9 check automatically. A default of about one hour is a reasonable start, adjusted for working hours and urgency. The reminder should name each staged draft, its conversation location, and where the draft text is stored, and allow a couple of follow-up checks at growing intervals before stopping.

@@ -1,6 +1,6 @@
 ---
 name: gather-context
-description: Searches the sources that matter at a depth fitting the stakes and builds one brief where every claim links to evidence. Use when someone says 'gather context on X' or 'get me up to speed.'
+description: Searches the right sources at a depth fitting the stakes and builds one brief where every claim links to evidence. Use when asked to gather context on X or get someone up to speed.
 ---
 
 # Gather context

@@ -38,7 +38,7 @@
     },
     {
       "title": "Gather context",
-      "description": "Searches the sources that matter at a depth fitting the stakes and builds one brief where every claim links to evidence. Use when someone says 'gather context on X' or 'get me up to speed.'",
+      "description": "Searches the right sources at a depth fitting the stakes and builds one brief where every claim links to evidence. Use when asked to gather context on X or get someone up to speed.",
       "category": "Research and write",
       "page": "https://dewierwan.com/skills/gather-context/",
       "markdown": "https://dewierwan.com/skills/raw/gather-context.md"
@@ -150,7 +150,7 @@
     },
     {
       "title": "Process an inbox to zero",
-      "description": "Works through email, chat, and notification inboxes to zero, turning each item into one clear next step. Use when someone says triage my inbox, clear my messages, or help me prioritize email.",
+      "description": "Works email, chat, and notification inboxes to zero, giving each item one clear next step. Use when someone says triage my inbox, clear my messages, or help me prioritize email.",
       "category": "Meetings and tasks",
       "page": "https://dewierwan.com/skills/inbox-zero/",
       "markdown": "https://dewierwan.com/skills/raw/inbox-zero.md"
