@@ -73,7 +73,7 @@
     },
     {
       "title": "Create editorial cover images",
-      "description": "Creates editorial cover images for articles: five distinct concepts, a close review of results, then three improved versions. Use when someone needs a post header image or an image prompt.",
+      "description": "Creates editorial cover images for articles: five distinct concepts, a close review, then three improved versions. Use when someone needs a post header, article cover, or image prompt.",
       "category": "Research and write",
       "page": "https://dewierwan.com/skills/cover-images/",
       "markdown": "https://dewierwan.com/skills/raw/cover-images.md"

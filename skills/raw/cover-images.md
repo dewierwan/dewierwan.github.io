@@ -1,6 +1,6 @@
 ---
 name: cover-images
-description: Creates editorial cover images for articles: five distinct concepts, a close review of results, then three improved versions. Use when someone needs a post header image or an image prompt.
+description: Creates editorial cover images for articles: five distinct concepts, a close review, then three improved versions. Use when someone needs a post header, article cover, or image prompt.
 ---
 
 # Create editorial cover images
@@ -179,6 +179,15 @@ The same concept-review-improve loop works for app or bot icons:
 - Treat generated images as concepts. Redraw the chosen one as vector art, render it to a large square image, and build a comparison sheet showing each option at large, medium, and tiny sizes (for example 240, 64, and 32 pixels; adjust to the platform).
 - Draw each single-color region as one path. Adjacent same-color shapes can leave faint anti-aliasing seams.
 - Upload through the platform's settings, reload to confirm it saved, and store the final file alongside the project.
+
+### Icons that share one brand mark
+
+Workspace, community, or team icons often follow a different rule from app icons: every variant uses the same official mark, and only the setting changes.
+
+- Take the mark from the organization's official source file and keep it exact. Do not redraw, restyle, or generate a new symbol.
+- Make each variant distinct through a background tied to that group or place, such as a texture, material, or landscape that people there will recognize.
+- *Invented example:* the fictional Harbor Lane Collective puts its white mark on a deep teal wave texture for its waterfront studio, and on pale sandstone for its desert field office.
+- Some upload tools can only read files inside the agent's own working area. Copy the final image there first, follow the platform's upload and crop steps, reload to confirm the change, and keep an archive copy in the user's chosen folder.
 
 ### Learn from outcomes
 
