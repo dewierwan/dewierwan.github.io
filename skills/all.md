@@ -2620,7 +2620,9 @@ Hi [name], I'm protecting time for [goal] this week, so I'd like to [skip / move
 
 ### Task triage
 
-Ask whether the user wants to triage overdue tasks themselves. If not, offer stale open tasks (older than the age threshold since they were created) as one batch to move to "someday"; archive only if the user asks. Then go one by one, most important first: do this week, done (people forget to close things), defer (set a new date; important but not urgent gets a dated slot, not "someday"), delegate (check whether the work must stay with the user, then note who and when), or delete. Write each decision right away.
+Ask whether the user wants to triage overdue tasks themselves. If not, start with projects: if the user tracks projects, list the active ones and ask which are actually finished. Record a finish date only for those. A project's end date means it really finished, never a target (goals carry targets), and leaving it blank keeps the project active, so any automatic sorting of new tasks into projects keeps working.
+
+Next, offer stale open tasks (older than the age threshold since they were created) as one batch to move to "someday"; archive only if the user asks. Then go one by one, most important first: do this week, done (people forget to close things), defer (set a new date; important but not urgent gets a dated slot, not "someday"), delegate (check whether the work must stay with the user, then note who and when), or delete. Write each decision right away.
 
 ### Scorecard
 
