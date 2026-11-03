@@ -4339,6 +4339,8 @@ Otherwise, create a new record in the user's chosen task system. Fill these fiel
 - [Specific final action.]
 ```
 
+Check how your task system renders formatted notes. Many systems flatten nested bullets and drop the indentation, so keep notes to a single bullet level and fold any sub-points into the parent line rather than indenting them.
+
 Summarize rather than pasting an entire private conversation. After creating or updating the record, open or retrieve it to confirm the title, notes, links, deadline, and fields are correct.
 
 ## 8. Report back clearly
@@ -4396,7 +4398,7 @@ Before finishing, check:
 - Did I avoid sending, approving, or committing externally?
 - Are unsupported facts and links clearly marked rather than guessed?
 - If a record was needed, did I check for an existing one and update it instead of duplicating?
-- If a record exists, does it have fresh notes, full context, verified fields, and specific remaining steps?
+- If a record exists, does it have fresh notes, full context, verified fields, formatting that renders correctly, and specific remaining steps?
 - Is the deliverable the final block of my report?
 
 ## Optional extras
