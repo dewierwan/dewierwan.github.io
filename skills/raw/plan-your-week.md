@@ -7,8 +7,6 @@ description: Reviews last week, then shapes the next one into one to three check
 
 Use this workflow to review the week that is ending and shape the week ahead in one focused session of about an hour. It works with any goal list, task list, calendar, and notes system, or with nothing but a conversation.
 
-First gather the **constraints**: deadlines, meetings, backlog, energy, and capacity. Then run a few interview rounds, each building on the last, to find **what matters**. Only then turn the result into goals, tasks, time blocks, and a short plan. The conversation does the hard work. The final plan should feel simple.
-
 ## Quick version
 
 - Ask four review questions: Did you hit last week's goals? What went well? What didn't? What will you do differently?
@@ -47,6 +45,8 @@ Suggested thresholds, all adjustable: a slipping goal has had its deadline moved
 **Access boundary.** Read only sources the user is authorized to use for the legitimate purpose of planning their own week, and only the minimum: counts, dates, and how long people have waited, not message content. Use other people's details only where they bear on the user's time, and leave out unrelated or sensitive personal details. Skip any private notes or journal the user doesn't want read, keep the plan private, and make drafted messages say only what the recipient needs.
 
 ## 3. Core principles
+
+First gather the **constraints**: deadlines, meetings, backlog, energy, and capacity. Then run a few interview rounds, each building on the last, to find **what matters**. Only then turn the result into goals, tasks, time blocks, and a short plan. The conversation does the hard work. The final plan should feel simple.
 
 - **Pressure is not importance.** Never recommend a goal just because it is scheduled, overdue, urgent to someone senior, or easy to make concrete.
 - **Sources set constraints; the user sets values.** Records show deadlines, slippage, and capacity. Only the user can say what they want to make true, why now, and what they will give up for it.
@@ -261,6 +261,8 @@ Update existing goals in place, adding links rather than replacing them. Then wr
 ## 15. Close and improve
 
 Give the counts in one sentence (goals, tasks, blocks, meetings cut, tasks triaged), then the current quarter's success bar if one exists, then the plan as the last block. No recap, no thanks.
+
+Then start a review of what the assistant has saved about the user (memories, standing notes, stored preferences) as its own separate session, without asking, so stale or wrong entries get fixed every week without cluttering the plan. If you cannot open that session, say so in one line and tell the user how to start it themselves. In a plain chat assistant, suggest the user look over any saved memories or custom instructions and correct what has gone out of date.
 
 Afterwards, note what went wrong, wasted time, or was corrected, and turn it into a tightened rule by editing or merging an existing instruction, not by adding an incident note.
 
