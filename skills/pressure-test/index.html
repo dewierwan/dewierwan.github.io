@@ -1,7 +1,16 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="robots" content="noindex,nofollow,noarchive"><title>Pressure-test an idea · AI skills</title><meta name="description" content="Find the weak points in a strategic idea before committing to it, through a steelman, assumption tests, a pre-mortem, and a verdict. Use when someone asks to stress-test an idea or wonders if they are wrong.">
-<link rel="alternate" type="text/markdown" href="/skills/raw/pressure-test.md"><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%23b4552d%22/><text x=%2250%22 y=%2253%22 dominant-baseline=%22central%22 text-anchor=%22middle%22 font-family=%22Georgia, 'Times New Roman', serif%22 font-size=%2246%22 letter-spacing=%221%22 fill=%22%23fdfaf4%22>DE</text></svg>"><link rel="stylesheet" href="/skills/styles.css"></head><body><main><a class="back" href="/skills/">← Skills</a><header class="skill-header"><h1>Pressure-test an idea</h1><p class="description">Find the weak points in a strategic idea before committing to it, through a steelman, assumption tests, a pre-mortem, and a verdict. Use when someone asks to stress-test an idea or wonders if they are wrong.</p><div class="skill-actions"><a href="/skills/raw/pressure-test.md">Raw Markdown</a><button class="copy" type="button" data-copy="/skills/raw/pressure-test.md">Copy Markdown</button></div></header><article class="skill-body"><p>Use this workflow when a decision-maker is leaning toward a strategic direction and needs an honest challenge before committing. It tests a leading option; it does not generate a broad option set or create an implementation plan.</p>
+<meta name="robots" content="noindex,nofollow,noarchive"><title>Pressure-test an idea · AI skills</title><meta name="description" content="Finds the weak points in a strategic idea before you commit, through a steelman, assumption tests, a pre-mortem, and a verdict. Use when someone says pressure-test this, stress-test this, or am I wrong.">
+<link rel="alternate" type="text/markdown" href="/skills/raw/pressure-test.md"><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%23b4552d%22/><text x=%2250%22 y=%2253%22 dominant-baseline=%22central%22 text-anchor=%22middle%22 font-family=%22Georgia, 'Times New Roman', serif%22 font-size=%2246%22 letter-spacing=%221%22 fill=%22%23fdfaf4%22>DE</text></svg>"><link rel="stylesheet" href="/skills/styles.css"></head><body><main><a class="back" href="/skills/">← Skills</a><header class="skill-header"><h1>Pressure-test an idea</h1><p class="description">Finds the weak points in a strategic idea before you commit, through a steelman, assumption tests, a pre-mortem, and a verdict. Use when someone says pressure-test this, stress-test this, or am I wrong.</p><div class="skill-actions"><a href="/skills/raw/pressure-test.md">Raw Markdown</a><button class="copy" type="button" data-copy="/skills/raw/pressure-test.md">Copy Markdown</button></div></header><article class="skill-body"><p>Use this workflow when a decision-maker is leaning toward a strategic direction and needs an honest challenge before committing. It tests a leading option; it does not generate a broad option set or create an implementation plan.</p>
+<h3>Quick version</h3>
+<ul>
+<li>Restate the idea in its strongest form, and confirm it still means what was intended.</li>
+<li>List three to five assumptions it depends on, ranked by how much damage each would cause if wrong.</li>
+<li>Ask five to eight hard questions one at a time, and push back on vague answers before moving on.</li>
+<li>Imagine the idea failed and name the three most likely reasons, each with an early warning sign.</li>
+<li>Name who would disagree and what would change the decision-maker&#39;s mind. If nothing would, the test has failed.</li>
+<li>Give a GREEN, AMBER, or RED verdict and one concrete next action with a verb and an owner.</li>
+</ul>
 <h3>Where this fits</h3>
 <p>Use this sequence:</p>
 <ol>
@@ -14,59 +23,70 @@
 <ul>
 <li>If meaningful alternatives have not been considered, pause and generate them first. Testing one idea too early often becomes defending it.</li>
 <li>If the idea was pressure-tested recently and no material evidence, assumptions, or conditions have changed, do not repeat the exercise. Use the existing findings in the decision.</li>
-<li>If using internal messages, records, research, or feedback, have a legitimate purpose and authorization. Review only the minimum relevant material, keep sensitive personal details out of the output, and stay within the intended access boundary.</li>
+<li>Every verdict must name the next step. Do not end without a handoff.</li>
 </ul>
+<p>If the test draws on internal messages, records, research, or feedback about other people, have a legitimate purpose and clear authorization to use them. Review only the minimum relevant material, leave unrelated or sensitive personal details out of the output, and keep the results within the intended access boundary.</p>
 <h3>Rules of engagement</h3>
 <ul>
-<li>Be direct. Confidence is not evidence.</li>
+<li>Be direct. Confidence is not evidence. The goal is to be the colleague who says the idea is weak, not the one who nods.</li>
 <li>Attack the strongest reasonable version of the idea, not a caricature.</li>
-<li>Ask one forcing question at a time. Wait for an answer, assess it, and challenge vague, unsupported, or evasive answers before continuing. Do not present the full question set as a questionnaire.</li>
-<li>Use available evidence: metrics, experiments, research, customer feedback, prior decisions, and relevant stakeholder input. Separate facts, inferences, and forecasts.</li>
-<li>Identify dissenters by relevant role, such as a finance owner, delivery lead, customer representative, domain expert, or skeptical peer. Do not invent their views.</li>
-<li>Skip a section only when genuinely irrelevant, and state why.</li>
+<li>Ask one forcing question at a time. Wait for an answer, assess it, and challenge vague, unsupported, or evasive answers before continuing. Do not present the full question set as a questionnaire, because that invites cherry-picking.</li>
+<li>Use available evidence: metrics, experiments, research, customer feedback, prior decisions, and relevant stakeholder input. If a prior record contradicts the claim, surface it. Separate facts, inferences, and forecasts.</li>
+<li>Identify dissenters by relevant role, such as a finance owner, delivery lead, customer representative, domain expert, or skeptical peer. If the decision-maker knows the actual people, ask them to name who would push back. Do not invent their views.</li>
+<li>Keep it terse. Skip a section only when genuinely irrelevant, and state why: &quot;Skipping: not applicable because [reason].&quot;</li>
+<li>Write dates in one consistent, unambiguous format.</li>
 </ul>
 <h3>1. Steelman the claim</h3>
 <p>Restate the idea in its strongest form. Remove unnecessary hedging while preserving the actual intent. Include the action, expected result, mechanism, timeframe, and conditions required for success.</p>
 <blockquote>We should [take action] because [mechanism] will produce [outcome] for [group] within [timeframe], provided that [key condition] holds.</blockquote>
 <p>If the original framing is already the strongest version, say so and continue. If the stronger restatement changes the intended claim, obtain confirmation before testing it.</p>
 <h3>2. Identify load-bearing assumptions</h3>
-<p>List three to five assumptions that must hold. Rank them by the damage caused if wrong, with the most consequential first. Make assumptions observable where possible.</p>
+<p>List three to five assumptions that must hold. Rank them by the damage caused if wrong, with the most consequential first. These are the targets for the forcing questions. Make assumptions observable where possible.</p>
 <div class="table-wrap" tabindex="0" aria-label="Scrollable table"><table><thead><tr><th>Assumption</th><th>Type: fact, estimate, or belief</th><th>Current support</th><th>Damage if wrong</th><th>Smallest useful test</th></tr></thead><tbody><tr><td>[State the assumption]</td><td>[Choose one]</td><td>[Summarize evidence]</td><td>[Low, medium, or high]</td><td>[Test or disproof method]</td></tr></tbody></table></div>
-<p>Replace broad statements such as “customers will value this” with a defined behavior, segment, threshold, or willingness-to-pay condition.</p>
+<p>Replace broad statements such as &quot;customers will value this&quot; with a defined behavior, segment, threshold, or willingness-to-pay condition.</p>
 <h3>3. Run forcing questions sequentially</h3>
 <p>Ask five to eight questions total, one at a time. Select questions based on the highest-risk assumptions and adapt later questions to the answers.</p>
 <p>Possible question categories:</p>
 <ul>
 <li><strong>Evidence:</strong> What is the strongest evidence for this? What is the strongest evidence against it?</li>
 <li><strong>Falsifiability:</strong> What would need to happen in the next 30 or 90 days to show this is wrong?</li>
-<li><strong>Counterfactual:</strong> What similar attempt failed, and why is this case materially different?</li>
+<li><strong>Counterfactual:</strong> What similar attempt failed, here or elsewhere, and why is this case materially different?</li>
 <li><strong>Opportunity cost:</strong> What valuable work will not happen if resources go here?</li>
 <li><strong>Second-order effects:</strong> If this succeeds, what does the situation look like in 12 months? What could success itself break or constrain?</li>
 <li><strong>Stakeholder dissent:</strong> Which role would object most strongly? What would that role say, and has the objection been heard directly?</li>
-<li><strong>Reversibility:</strong> If this is wrong, what does unwinding require in time, money, commitments, trust, or disruption?</li>
+<li><strong>Reversibility:</strong> If this is wrong, what does unwinding require in time, money, commitments, trust, or disruption? Weeks, quarters, or years?</li>
 <li><strong>Null option:</strong> What happens if no action is taken for the next three months?</li>
 </ul>
-<p>Push for specificity. “I think it will work” is not evidence; ask for observed behavior, data, a comparison, or a credible commitment.</p>
+<p>The time windows above are adjustable defaults; pick ones that fit the decision&#39;s pace. Push for specificity. &quot;I think it will work&quot; is not evidence; ask for observed behavior, data, a comparison, or a credible commitment.</p>
 <h3>4. Run a pre-mortem</h3>
-<p>Assume the initiative failed after a realistic period, often 6 to 12 months. Identify the three most likely failure modes, ordered by likelihood or impact. Cover a wrong premise, execution risks, and external conditions where relevant.</p>
+<p>Assume the initiative failed after a realistic period, often 6 to 12 months. Identify the three most likely failure modes, ordered by likelihood, most likely first. Cover a wrong premise, execution risks, and external conditions where relevant.</p>
 <div class="table-wrap" tabindex="0" aria-label="Scrollable table"><table><thead><tr><th>Failure mode</th><th>Why it could happen</th><th>Earliest warning sign</th><th>Monitoring action or owner</th></tr></thead><tbody><tr><td>[Describe the failure]</td><td>[Name the mechanism]</td><td>[Observable early signal]</td><td>[Check or accountable role]</td></tr></tbody></table></div>
-<p>A warning sign must appear early enough to permit a course correction.</p>
+<p>A warning sign must appear early enough to permit a course correction, and it should be something the decision-maker can watch for now.</p>
 <h3>5. Surface credible dissent</h3>
-<p>Identify two or three relevant roles that could reasonably disagree and state each role’s strongest likely objection. If that perspective has not been sought directly, mark it as an evidence gap. Silence is not agreement.</p>
+<p>Identify two or three relevant roles that could reasonably disagree and state each role&#39;s strongest likely objection. If that perspective has not been sought directly, mark it as an evidence gap. Silence is not agreement.</p>
 <p>Dissent is not an automatic veto. Its purpose is to reveal constraints, incentives, dependencies, and risks that supporters may miss.</p>
 <h3>6. Define what would change the decision</h3>
-<p>Require one sentence naming evidence that would reverse or materially alter the position:</p>
+<p>Require the decision-maker to state, in one sentence, the evidence that would reverse or materially alter the position:</p>
 <blockquote>I would change my mind if [specific observable evidence] occurs by [date or decision point].</blockquote>
 <p>If this cannot be stated, the position is not falsifiable. Mark the pressure-test incomplete or failed rather than approving the idea.</p>
 <h3>7. Give a verdict and handoff</h3>
 <p>Choose one verdict and explicitly state the next step:</p>
 <ul>
-<li><strong>GREEN — proceed to decision.</strong> Core assumptions have credible support, relevant dissent has been addressed, reversal costs are understood, and warning signs have an owner or review mechanism. Create a decision record and commit. For hard-to-reverse or organization-defining decisions, schedule a review point.</li>
-<li><strong>AMBER — test first.</strong> The idea may be sound, but one or two high-impact assumptions or objections remain under-investigated. Name the gap and the cheapest credible test, such as a small interview set, expert review, prototype, or short data-collection period. Run the test, then decide with the result recorded.</li>
-<li><strong>RED — stop, redesign, or reopen options.</strong> A core assumption is weak, downside is unacceptable, or no meaningful falsification criterion can be named. Generate alternatives, redesign the idea, or explicitly defer it until a defined trigger occurs. Do not treat RED as approval with caveats.</li>
+<li><strong>GREEN: proceed to decision.</strong> The steelman survives, core assumptions have credible support, relevant dissent has been addressed, reversal costs are understood, and warning signs have an owner or review mechanism. Create a decision record and commit. For hard-to-reverse or organization-defining decisions, schedule a review point.</li>
+<li><strong>AMBER: test first.</strong> The idea may be sound, but one or two high-impact assumptions or objections remain under-investigated. Name the gap and the cheapest credible test, such as one conversation, one document review, a small interview set, a prototype, or a short data-collection period. Run the test, then decide with the gap and its result recorded in the rationale. Do not skip to the decision while the gap is open.</li>
+<li><strong>RED: stop, redesign, or reopen options.</strong> A core assumption is weak, downside is unacceptable, or no meaningful falsification criterion can be named. Generate alternatives, redesign the idea, or explicitly defer it with a trigger (&quot;re-examine when [event] happens&quot;). Do not treat RED as approval with caveats, and do not move to a decision on a RED verdict.</li>
 </ul>
-<p>End with exactly one concrete next action: a verb, an owner, and a deadline when useful.</p>
+<p>End with exactly one concrete next action on one line: a verb, an owner, and a deadline when useful. &quot;Think about it&quot; does not count.</p>
 <blockquote>Example: <code>Research owner: interview five target users this week and compare findings against the adoption assumption.</code></blockquote>
+<p><strong>Short worked example (fictional).</strong> Maplestone Tutoring, an invented nonprofit, is leaning toward launching a paid premium tier.</p>
+<ul>
+<li>Steelman: &quot;A paid tier with live sessions will fund two new free cohorts within a year, provided at least 5% of current learners convert.&quot;</li>
+<li>Top assumption: learners will pay for live sessions. Type: belief. Support: one enthusiastic survey comment. Damage if wrong: high.</li>
+<li>Forcing question: &quot;What is the strongest evidence against this?&quot; Answer: &quot;Not sure, people seemed keen.&quot; Pushback: &quot;Keen is not paying. Has anyone been asked to commit money?&quot;</li>
+<li>Dissent: the finance lead may object that support costs grow faster than revenue. Not yet consulted, so it is a gap.</li>
+<li>Mind-change criterion: &quot;I would drop this if fewer than 20 learners pre-register with a deposit by the end of next month.&quot;</li>
+<li>Verdict: AMBER. Next action: &quot;Program lead: open a deposit-based pre-registration page by Friday.&quot;</li>
+</ul>
 <h3>Final audit</h3>
 <p>Before closing, verify that the output contains:</p>
 <ul>
@@ -79,4 +99,11 @@
 <li>a GREEN, AMBER, or RED verdict with its next step; and</li>
 <li>one concrete next action.</li>
 </ul>
-<p>Common failures include skipping alternatives, asking every question at once, mistaking confidence for evidence, treating unconsulted stakeholders as aligned, repeating a recent test without new facts, and issuing a favorable verdict without falsifiable criteria or monitoring.</p></article><footer><a href="/skills/LICENSE.txt">CC0</a></footer></main><script>document.querySelector('[data-copy]').addEventListener('click',async function(){try{const text=await fetch(this.dataset.copy).then(r=>{if(!r.ok)throw new Error();return r.text()});await navigator.clipboard.writeText(text);this.textContent='Copied'}catch{this.textContent='Open raw Markdown'}})</script></body></html>
+<p>Common failures include skipping alternatives, asking every question at once, mistaking confidence for evidence, treating unconsulted stakeholders as aligned, repeating a recent test without new facts, and issuing a favorable verdict without falsifiable criteria or monitoring.</p>
+<h3>Optional extras</h3>
+<ul>
+<li><strong>Connected sources.</strong> If your assistant can search your document store, chat history, or notes, have it pull prior decisions, metrics, and past attempts relevant to the claim before Step 2, and cite them when they support or contradict an assumption.</li>
+<li><strong>Scheduled reviews.</strong> For GREEN verdicts on hard-to-reverse decisions, have your calendar or task tool create a review reminder tied to the mind-change criterion&#39;s date.</li>
+<li><strong>Linked workflows.</strong> If you keep separate workflows for generating options, deciding, and building, have each verdict name the exact one to run next so the handoff is automatic.</li>
+<li><strong>Improve the workflow over time.</strong> After each run, review the transcript: note any question category that added nothing, any gap the process missed, or any step that ran too long. Update your own copy of this workflow based on that review rather than on general impressions.</li>
+</ul></article><footer><a href="/skills/LICENSE.txt">CC0</a></footer></main><script>document.querySelector('[data-copy]').addEventListener('click',async function(){try{const text=await fetch(this.dataset.copy).then(r=>{if(!r.ok)throw new Error();return r.text()});await navigator.clipboard.writeText(text);this.textContent='Copied'}catch{this.textContent='Open raw Markdown'}})</script></body></html>

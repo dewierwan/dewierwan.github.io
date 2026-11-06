@@ -24,6 +24,7 @@ Before generating, confirm:
 
 - You have the complete article. Do not create article-specific concepts from a title alone; they come out generic. If only a summary is available, say the images will be based on the summary.
 - The image generator, publication destination, and approved access method are clear. Do not assume a particular service, account, house style, or aspect ratio. If the chosen service is unavailable, report the blocker and ask before moving article material to a different service.
+- The account or plan has enough image capacity for all eight images. Keep every option in one account or workspace so all results open from the same place.
 - The intended placement, crop, and output format are known or can be chosen with the user.
 - Restrictions about people, places, brands, factual depiction, lettering, or sensitive content are known.
 
@@ -118,12 +119,14 @@ Independent jobs can run at the same time when the tool supports it, but keep in
 
 View every image at useful size and at approximate thumbnail size. Judge the pixels, not the prompt or the generator's claims. For each, ask:
 
-- Does it communicate the central idea and tone?
+- Does it communicate the central idea and tone? Does it move you, not just look tidy?
 - Is the focal subject or action immediately clear?
 - Did the medium, palette, shape, and composition survive?
 - Is it too busy, generic, sentimental, static, or literal?
 - Are there anatomy, perspective, object, lettering, or other artifacts?
 - Does it still work when cropped or reduced?
+
+Do not mark a result down only because it is fuller or more atmospheric than a minimal brief suggested. A layered, misty scene can be the strongest cover if it carries the article's feeling and still reads small.
 
 Only after reviewing all five, write prompts six through eight. Do not prewrite them. For each, record the strength to keep, the weakness to fix, and the visible change expected. A useful spread is one refinement of the strongest image, one combination of strengths from different images, and one new direction that fills a gap. Use judgment rather than forcing that pattern.
 
@@ -163,32 +166,21 @@ Preserve the subject, composition, palette, mood, exclusions, and format; change
 
 ### Working through a connected browser or agent
 
-- Open a new conversation or tab per option and do not take over the user's existing conversations.
-- Many chat-based generators handle a single paragraph more reliably. Flatten the finished prompt into one line and start it with an instruction to create one image now.
-- Inspect the live input before typing, read the text back after entering it, and locate the current send control rather than relying on a remembered label. If the prompt was cut off, stop and resend the full brief in the same conversation.
+- Open a new conversation or tab per option in the same account, and do not take over the user's existing conversations.
+- Chat-based generators often handle a single paragraph more reliably. Flatten the finished prompt into one line that starts with an instruction to create one image now.
+- Read the input back after typing and use the current send control rather than a remembered label. If the prompt was cut off, resend the full brief in the same conversation.
 - Record each conversation's observed address; never construct one. Check for loaded image elements, since interface labels change.
-- Scroll with the tool's supported controls rather than scripts that modify the page.
-- If your agent tool closes tabs it created at the end of a turn, mark all eight finished tabs to stay open, and re-mark them on later turns. Keep a separate "needs user input" handoff only for genuinely unfinished pages.
+- If your agent tool closes tabs it created at the end of a turn, mark the eight finished tabs to stay open, and reserve any "needs user input" handoff for genuinely unfinished pages.
 
-### Designing a family of small icons
+### Designing small icons
 
-The same concept-review-improve loop works for app or bot icons:
+The same concept-review-improve loop works for app, bot, or group icons:
 
-- Study existing icons in the family first and keep the shared style: for example flat shapes, a fixed two- or three-color palette on a plain background, no text, outlines, gradients, or shadows. Each new icon should be distinctive and about its own app, not a variation of a sibling.
-- Free or limited generator plans may cap daily images, so budget generations.
-- Treat generated images as concepts. Redraw the chosen one as vector art, render it to a large square image, and build a comparison sheet showing each option at large, medium, and tiny sizes (for example 240, 64, and 32 pixels; adjust to the platform).
-- Draw each single-color region as one path. Adjacent same-color shapes can leave faint anti-aliasing seams.
-- Upload through the platform's settings, reload to confirm it saved, and store the final file alongside the project.
-
-### Icons that share one brand mark
-
-Workspace, community, or team icons often follow a different rule from app icons: every variant uses the same official mark, and only the setting changes.
-
-- Take the mark from the organization's official source file and keep it exact. Do not redraw, restyle, or generate a new symbol.
-- Make each variant distinct through a background tied to that group or place, such as a texture, material, or landscape that people there will recognize.
-- *Invented example:* the fictional Harbor Lane Collective puts its white mark on a deep teal wave texture for its waterfront studio, and on pale sandstone for its desert field office.
-- Some upload tools can only read files inside the agent's own working area. Copy the final image there first, follow the platform's upload and crop steps, reload to confirm the change, and keep an archive copy in the user's chosen folder.
+- Study existing icons in the family first and keep the shared style, for example flat shapes, a fixed small palette on a plain background, and no text, outlines, gradients, or shadows. Each new icon should be distinctive and about its own app.
+- When variants must share an official brand mark, take it from the organization's source file and keep it exact; make each variant distinct through a background tied to that group or place. *Invented example:* the fictional Harbor Lane Collective puts its white mark on a teal wave texture for its waterfront studio and on pale sandstone for its desert office.
+- Treat generated images as concepts. Redraw the chosen one as vector art, draw each single-color region as one path to avoid anti-aliasing seams, and compare options on one sheet at large, medium, and tiny sizes (adjust sizes to the platform).
+- Upload through the platform's settings, reload to confirm it saved, and keep the final file with the project.
 
 ### Learn from outcomes
 
-After the user chooses, accepts a prompt, or stops iterating, capture durable lessons only. Strong signals: they rejected your recommendation (diagnose whether the read, composition, mood, or generation failed), they rewrote part of a prompt (update the template), they asked for color specifics you missed, or an image failed in a way the prompt should have prevented. Separate their feedback from your own taste, keep lessons general rather than tied to one article, and make no change after a clean run.
+After the user chooses, accepts a prompt, or stops iterating, capture durable lessons only. Strong signals: they rejected your recommendation (diagnose whether the read, composition, mood, or generation failed), they rewrote part of a prompt, they asked for color specifics you missed, or an image failed in a way the prompt should have prevented. Separate their feedback from your own taste, keep lessons general rather than tied to one article, and make no change after a clean run.

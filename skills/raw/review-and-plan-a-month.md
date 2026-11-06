@@ -1,13 +1,11 @@
 ---
 name: plan-your-month
-description: Reviews the month ending with evidence, then plans the next with a theme, capacity math, cuts, and sign-off. Use when a month is ending or someone asks for a "monthly review" or "plan my month".
+description: Reviews the month ending with evidence, then plans the next with a theme, capacity math, cuts, and sign-off. Use when a month is ending or someone says "monthly review" or "plan my month".
 ---
 
 # Review and plan a month
 
 Use this workflow at a month boundary to review the month ending and build a plan for the month ahead. A full session usually takes about an hour (adjustable): roughly half for evidence and review, half for planning.
-
-Review and planning belong in the same session. The structural cause of last month's misses should directly shape next month's plan.
 
 ## Quick version
 
@@ -24,6 +22,8 @@ Review and planning belong in the same session. The structural cause of last mon
 - A direct verdict on progress toward active long-range goals.
 - A written **Review** for the month ending.
 - A written **Plan** for the month ahead: a memorable theme, no more than three outcomes, explicit cuts, and a pre-mortem.
+
+Review and planning belong in the same session. The structural cause of last month's misses should directly shape next month's plan.
 
 A plan is not a description of the month plus optimistic targets. The job is to work out the most important priorities, then decide how they will actually get done. **If the plan could be written without the user answering a hard question, it is a description, not a plan.**
 
@@ -49,7 +49,8 @@ Ask what "the month" means to the user if it is unclear; they may want to includ
 6. **One decision at a time.** Do not move on until the current question has a real answer.
 7. **Stay at month level.** Set outcomes, milestones, capacity, and structure. Leave daily task blocks to weekly planning.
 8. **No saved plan without explicit approval.** A plan assembled from notes is a draft, not a decision.
-9. **Do not lecture.** Show numbers, a direct conclusion, and the agreed commitment. Save decisions and evidence, not a transcript.
+9. **Do not lecture.** Show numbers, a direct conclusion, and the agreed commitment. No hedging: "the month was behind" beats "the month was a bit below target." Save decisions and evidence, not a transcript.
+10. **Keep the output plain and consistent.** Skip decoration such as emojis, and use one date format throughout, the one the user prefers (for example, day then short month, with no leading zero: "3 Mar").
 
 ## Step 1: Gather evidence
 
@@ -69,7 +70,7 @@ Use the user's own system: a task manager, project tracker, calendar, spreadshee
 | Calendar | Time off, travel, fixed deadlines, recurring commitments, heavy weeks |
 | Daily signals (optional) | Ratings, short reasons for ratings, focus hours, sleep, or habit counts the user chooses to track |
 
-For large sources, compute statistics and pull a few themes instead of reading raw entries.
+For large sources, compute statistics and pull a few themes instead of reading raw entries. Also gather the prior month's figures for anything you will compare, so month-over-month changes are ready.
 
 **Read only the fields you need.** When a daily log mixes structured fields with private free-form writing, such as a journal, name the fields you want and leave the private writing out, even if you have access to it. A short field like "why I rated the day this way" usually gives enough texture for themes.
 
@@ -87,13 +88,19 @@ Present a compact factual picture before asking the user to explain it. Be direc
 
 ### Goals and delivery
 
-Summarize last month's commitments as completed, missed, deferred, or rolled forward. For each active long-range goal, say whether it **advanced**, **stalled**, or **regressed**, with one short reason. Name goals that got no attention; these are often most at risk.
+Summarize last month's commitments as completed, missed, deferred, or rolled forward, with a hit rate ("5 of 8 commitments, 62%"). For each active long-range goal, say whether it **advanced**, **stalled**, or **regressed**, with one short reason. Name goals that got no attention; these are often most at risk.
 
 Summarize completed work in a few areas, not a wall of bullets. The question is whether effort created the intended progress.
 
 ### Signals
 
-Include only measures the user tracks. Let the user set the flag thresholds (for example, an average below their chosen sleep target, or several low-rated days in a row). Averages are not the whole truth: if the user records short reasons for their ratings, quote two or three that point the other way, and ask about the mismatch rather than letting a good average close the question.
+Include only measures the user tracks: for example, a rating distribution and average, the longest good and bad streaks, average focused hours and the count of low-focus days, average sleep and the count of short nights. Let the user set the flag thresholds. Reasonable starting flags (adjustable): an average below the user's own target, a cluster of days below their own minimum, an average rating at or below neutral, or two or more stretches of three or more low-rated days.
+
+Averages are not the whole truth: if the user records short reasons for their ratings, quote two or three that point the other way, and ask about the mismatch rather than letting a good average close the question.
+
+### Close with a verdict and one correction
+
+End the picture with a one-sentence verdict and the single biggest corrective action for next month. Keep the correction to one concrete sentence; the plan comes later.
 
 ### Worked example (fictional)
 
@@ -113,10 +120,10 @@ Cover these before closing the review:
 Useful prompts:
 
 - "This outcome slipped in several weeks. What made it structurally hard?"
+- "All three misses tie to the same long-range goal. Structural or circumstantial?"
 - "Your ratings were steady, but you keep describing strain. What was happening?"
-- "This goal moved while the others did not. What made that possible?"
 
-The minimum useful review, if time is short: goal movement, one structural fix, and one concrete commitment for next month.
+The minimum useful review, if the user is terse or short on time: goal movement, one structural fix, and one concrete commitment for next month. Drop the rest.
 
 ## Step 4: Plan the new month
 
@@ -124,7 +131,7 @@ A real plan has a defined outcome, an honest baseline, a path, proof of capacity
 
 ### Move 1: Define outcomes
 
-For each candidate priority, ask: "What specifically is true on the last day of the month?" Make the answer measurable or plainly checkable. Limit the plan to three outcomes; one or two is usually better. Each should connect to a long-range goal or a chosen responsibility. If you drafted the statement and the user only nodded, ask them to restate or edit it in their own words.
+For each candidate priority, ask: "What specifically is true on the last day of the month?" Push until the answer is measurable and plainly true or false. Limit the plan to three outcomes; one or two is usually better. Each should connect to a long-range goal or a chosen responsibility. If you drafted the statement and the user only nodded, ask them to restate or edit it in their own words.
 
 ### Move 2: Establish the current state
 
@@ -136,7 +143,9 @@ For each outcome, list three to six steps working back from the due date. Each s
 
 ### Move 4: Do the capacity math
 
-Estimate: available working days × recently observed focused hours per day. Use last month's actual rate, not an aspiration. Subtract time off, travel, and heavy meeting weeks. Compare with the effort the paths need. If demand exceeds supply, cut, defer, shrink scope, or get real help now, before the month starts.
+Estimate: available working days × recently observed focused hours per day. Use last month's actual rate, not an aspiration. Subtract time off, travel, and heavy meeting weeks. Compare with the effort the paths need. If demand exceeds supply, cut, defer, shrink scope, or get real help now, before the month starts. This is where most plans fail honestly.
+
+Example (fictional): a consultant at Birchline Studio has 16 working days, minus 3 days at a conference, so 13 days. Last month's actual focus rate was 3.5 hours a day, giving about 45 hours. The three proposed outcomes need about 62 hours. The gap of 17 hours means one outcome is cut or halved before the month starts.
 
 ### Move 5: Make the not-doing list
 
@@ -144,7 +153,7 @@ Ask: "What will explicitly not happen this month so these outcomes can?" The use
 
 ### Move 6: Add outside pressure and protection
 
-Self-imposed calendar blocks tend to lose to commitments where someone else is waiting. Fragile outcomes need outside pressure: someone expecting a deliverable on a date, a booked review, or a public commitment.
+Self-imposed calendar blocks tend to lose to commitments where someone else is waiting. Fragile outcomes need outside pressure: a named person expecting a named deliverable on a date, a booked review, or a public commitment.
 
 Check the mix of outcomes. Some work survives interruptions (coordination, outreach, review); some dies when fragmented (writing, design, analysis). Give the fragile work the best uninterrupted blocks and batch flexible work around meetings. Do not re-propose time slots the user has already learned get overridden; ask which slots actually hold.
 
@@ -170,7 +179,7 @@ Example (fictional): a workshop series at Maple Hollow Arts cannot be scheduled 
 **Planning range:** [first date] to [last date].
 
 ## Shape of the month
-[Time off, travel, fixed events, heavy weeks, real working weeks.]
+[Time off, travel, fixed events, heavy weeks, real working weeks, what comes right after month-end.]
 
 ## Outcomes
 1. **[Outcome]**: done by [date] when [test of done].
@@ -191,7 +200,7 @@ Example (fictional): a workshop series at Maple Hollow Arts cannot be scheduled 
 [The behavior or boundary change that counters last month's drain. Delegated items with owner named.]
 
 ## Personal thread (optional)
-[Practice commitment or other personal priority the user names.]
+[Practice commitment or other personal priority the user names. First-class, not a footnote.]
 
 ## Pre-mortem
 - Failure mode: [likely cause]. Counter: [specific response.]
@@ -223,7 +232,7 @@ Review template:
 [One named behavior, boundary, or system change.]
 ```
 
-Confirm the save in one line and stop.
+Confirm the save in one line and stop. Do not summarize the session again.
 
 ## Step 6: Improve the workflow
 
@@ -241,7 +250,7 @@ Before finishing, verify:
 - Review and planning ranges are explicit.
 - Evidence came before reflection.
 - Data caveats (missing sources, stale feeds, uneven comparisons) were checked and labeled before any strong verdict.
-- Verdicts used current targets.
+- Verdicts used current targets and named one corrective action.
 - The plan has a theme and no more than three outcomes.
 - Each outcome has a test of done, date, path, owner, and outside pressure, or is framed as a dated decision.
 - Capacity fits, or a scope decision was made.
@@ -249,6 +258,7 @@ Before finishing, verify:
 - The structural fix responds to a reviewed drain.
 - The user answered at least one hard question that shaped the plan.
 - The pre-mortem has counters.
+- Dates use one consistent format throughout.
 - The user explicitly approved the plan before saving.
 
 ## Common failures
@@ -269,21 +279,27 @@ Before finishing, verify:
 
 ### Personal practice
 
-Add this section only if the user tracks a habit or practice they want held to account, such as writing, a language, music, exercise, or meditation. Put it after goals and delivery, not first. Do not lecture on technique; the user may already follow a program for that.
+Add this section only if the user tracks a habit or practice they want held to account, such as writing, a language, music, exercise, or meditation. Put it after goals and delivery, not first. Do not lecture on technique; the user may already follow a program for that. If the user chose this as their accountability thread, always write the verdict and next-month commitment, even when they skip everything else.
 
-Compare actual activity with the user's current target using whatever they log: sessions, minutes, words, or pages; average per week; active days; longest gap; and the change from last month. If the user also tracks a supporting practice (for example, drills next to performances, or strength sessions next to endurance training), report its count and change beside the main practice, but keep it out of the verdict unless the user says it is part of the target.
+Compare actual activity with the user's current target using whatever they log: sessions, minutes, words, or pages; average per week; active days; longest single session; longest gap; share of sessions at the intended intensity or difficulty; and the change from last month. If the user also tracks a supporting practice (for example, drills next to performances, or strength sessions next to endurance training), report its count and change beside the main practice, but keep it out of the verdict unless the user says it is part of the target.
 
-Suggested verdict scale (adjustable):
+Suggested verdict scale (all thresholds adjustable):
 
-- **On track:** key measures at or near target and consistency intact.
-- **Behind:** a key measure clearly short of target, or a noticeable break in consistency.
-- **Off track:** a key measure far below target, or a long gap.
+- **On track:** every key measure at about 90 percent of target or better, and consistency intact.
+- **Behind:** a key measure between about 60 and 90 percent of target, or a break of more than a few days in a row outside a planned rest.
+- **Off track:** a key measure below about 60 percent of target, or a gap longer than about a week.
+- **At risk:** a warning trend regardless of totals, such as volume falling three weeks in a row or signs of strain or injury the user reports.
 - **Paused:** the user chose to stop for now; do not re-argue it.
 
-If tracking may be incomplete, ask "The record shows this. Does that match reality?" before judging. State one concrete commitment for next month, such as "20 minutes of practice on four weekday mornings", and add it to the plan.
+If tracking may be incomplete, ask "The record shows this. Does that match reality?" before judging. State the verdict in one line with numbers and named weeks, then one concrete commitment for next month, and add it to the plan. Make it specific ("four sessions a week by week three, one long session on the second Saturday"), never "try to do more."
+
+Example (fictional): "Language practice: **Behind**. 9 sessions against a target of 16 (56% of sessions, 70% of minutes). Longest gap: 6 days in the third week. Second month of decline. Next month: 20 minutes on four weekday mornings, with a booked conversation class every other Thursday."
+
+If the user says "skip to the practice," do the practice verdict, any signal flags, and the plan with the personal thread filled in. Skip the rest rather than pushing through the full session.
 
 ### For assistants with connected tools
 
 - Hand bulky reads, such as a month of daily entries or calendar events, to a helper task that returns computed numbers and a short list of themes, not raw records. Give the helper the same field list from Step 1, and restrict it to the read tools it needs.
 - Ask the calendar summary for time off, travel, per-week meeting load, recurring series, and anomalies such as meetings inside time off or events with suspect time zones. Offer to clear those conflicts now and add them to a pre-time-off checklist in the plan.
 - For automated logs, sort by date and read the newest record first to confirm the feed is alive. If records carry a stable unique ID, use it to spot duplicates left by re-syncs or backfills before counting.
+- If the review and plan records live in the same table, save both in one write after approval.

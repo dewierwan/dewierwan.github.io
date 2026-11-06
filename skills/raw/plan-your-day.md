@@ -18,7 +18,7 @@ Use this to turn a crowded or unclear day into one named outcome, a protected bl
 
 ## 1. Choose the day and gather context
 
-Check the local date and time first; don't ask for the time zone if the device can tell you. Default: early in the day, plan today; in the evening, plan tomorrow; in between, ask. An explicit date from the user always wins, and an evening session that runs past midnight keeps the date already agreed. Adjust these cutoffs to your rhythm. State the target day and time zone in one line.
+Check the local date and time first; don't ask for the time zone if the device can tell you. Default: early in the day, plan today; in the evening, plan tomorrow; in between, ask. An explicit date from the user always wins, and an evening session that runs past midnight keeps the date already agreed. Adjust these cutoffs to your rhythm. State the target day and time zone in one line, and write dates throughout in one short, consistent format the user prefers (for example, day number plus abbreviated month).
 
 Then gather what exists, in one pass (or ask the user to paste it):
 

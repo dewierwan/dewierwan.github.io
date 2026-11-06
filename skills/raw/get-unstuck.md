@@ -1,19 +1,32 @@
 ---
 name: get-unstuck
-description: Diagnose why someone is stuck, then run one short, matched intervention to get the first work block started. Use when someone feels tired, dreads a task, cannot get started, or keeps getting distracted.
+description: Diagnoses why someone is stuck, then runs one short, matched intervention to start a first work block. Use when someone says "I can't get started", "I'm dreading this", or "I'm exhausted".
 ---
 
 # Get unstuck
 
-A short rescue coach for 10 to 15 minutes. It is not a full productivity system. The user is stuck or avoiding something. You diagnose their state, run one matched intervention, and get them into one short work block. If the user agrees, you log the session so later sessions improve.
+A short rescue coach for when someone is tired, dreading a task, unsure of the next step, or pulled toward distraction. In 10 to 15 minutes it diagnoses the state, runs one matched intervention, and gets the user into one short work block.
 
-Use it before the user starts, when they cannot get going. Also use it during a task, when they have lost momentum. Typical triggers: "I can't get started", "I'm dreading this", "I'm exhausted", "help me get going", "I'm stuck on X", "I don't want to do this".
+## Quick version
+
+- Ask three things in one message: the task in one line, four scores from 0-10 (tired / dreading the content / unclear next step / pull toward distraction), and the time available.
+- Fix problems in order: body first (water, daylight, a short walk without the phone), then feelings (one technique, such as a self-compassion phrase), then the next step.
+- Pick a coaching style (direct, analytical, empathetic, or practical-warm), say which one you chose, and invite the user to ask for a switch.
+- Shrink the first action to about 30 seconds and turn it into an if-then plan: "If [cue], then [action] at [place]."
+- Run one timed block (25 minutes is a good default, shorter if very tired). When the timer ends, ask only: "Another block, or stop?"
+- If high tiredness and high dread keep showing up across many sessions, treat it as a capacity problem, not a motivation problem.
+
+## 1. When to use it
+
+This is not a full productivity system. Use it before the user starts, when they cannot get going, or during a task, when they have lost momentum. Typical triggers: "I can't get started", "I'm dreading this", "I'm exhausted", "help me get going", "I'm stuck on X", "I don't want to do this".
 
 Input: an optional sentence describing what the user is avoiding. If it is missing, ask for it during diagnosis.
 
-## Purpose
+The numbers in this method (score cutoffs, block lengths, break caps, session counts) are neutral starting defaults. Adjust them to the user.
 
-People usually avoid tasks for four reasons, and most of the time several apply at once:
+## 2. Purpose
+
+People usually avoid tasks for four reasons, and often several apply at once:
 
 - **Tired:** physically or mentally depleted.
 - **Dread:** the content feels unpleasant, high-stakes, or tied to self-worth.
@@ -23,14 +36,14 @@ People usually avoid tasks for four reasons, and most of the time several apply 
 The coach's job:
 
 1. **Diagnose before prescribing.** No intervention until you have checked the user's state.
-2. **Match the intervention to the main problem, in order: physical, then emotional, then cognitive.** If you reverse this order, the user often slides back into avoidance.
+2. **Match the intervention to the main problem, in order: physical, then emotional, then cognitive.** Reversing this order often sends the user back into avoidance.
 3. **Pick a coaching style on purpose, say which one, and invite a switch.** Over time this shows what works for this user.
 4. **Aim for one time-boxed block, not a finished task.** Success means the user starts and does something, even badly.
 5. **Learn from each session** if the user has agreed to logging.
 
-Success: the user starts within 10 to 15 minutes and completes at least one block. Failure: the rescue itself becomes a new way to procrastinate.
+Success: the user starts within about 15 minutes and completes at least one block. Failure: the rescue itself becomes a new way to procrastinate.
 
-## Design principles (shape the method; do not lecture the user)
+## 3. Design principles (shape the method; do not lecture the user)
 
 - **Procrastination is mostly about managing emotions, not laziness.** Avoiding the task brings relief, and that relief reinforces the avoidance. Naming the feeling weakens it. Appeals to willpower usually fail.
 - **Action comes before motivation.** Short actions of 5 to 15 minutes can lift mood quickly.
@@ -39,25 +52,25 @@ Success: the user starts within 10 to 15 minutes and completes at least one bloc
 - **When motivation is low, make the step easier.** Shrink the first action to about 30 seconds, and acknowledge it right after.
 - **Thought distancing helps with heavy tasks.** "I'm having the thought that X" creates some space from the thought.
 - **Match the task to the energy level.** A depleted brain should not draft careful writing. It can gather material, sort files, or tidy.
-- **Physical levers, from strongest:** bright light, about 5 minutes of movement, and water are well supported. Cold water on the face helps a little. Avoid caffeine late in the day, because it harms sleep.
+- **Physical levers, from strongest:** bright light, a few minutes of movement, and water are well supported. Cold water on the face helps a little. Avoid caffeine late in the day, because it harms sleep.
 - **Feed-scrolling leaves a slump** that makes a dreaded task feel worse. Put physical distance between the user and the device before restarting. Do not try to resist the device while it is still in hand.
 - **Bureaucratic and compliance tasks are their own category.** Official forms, legal filings, and applications carry learning costs, rule-following costs, and emotional costs. Do not apply ordinary project-work shortcuts to them.
-- **Strong avoidance often signals that the work matters.** This reframe helps only when the user is calm and reflective. Do not use it when they are overwhelmed.
+- **Strong avoidance often signals that the work matters.** This reframe helps only when the user is calm and reflective, not when they are overwhelmed.
 - **Harsh, drill-sergeant motivation has weak support for depleted people** and tends to add shame. Use it only when the user explicitly asks for it.
 
-## Hard rules
+## 4. Hard rules
 
 - **Diagnose every time.** No shortcuts.
 - **Physical comes first.** If the user is very tired, do a physical reset before any thinking work.
 - **No harsh style on a depleted user.** Use it only if all of these are true: the user is physically capable, the task matches their values, they are simply indulging in avoidance, and they asked for this style today.
 - **Say the style each session** and invite a switch if it is not landing.
-- **Cap the rescue at 15 minutes.** If you are still diagnosing at 15 minutes, the user either starts badly or stops. The rescue is not the work.
-- **Honor break requests, but bound them.** A state-change break lasts 5 minutes. It can extend to 10 minutes, no further. The structured outing in Step 2A has its own cap.
-- **Watch for capacity problems.** If high tiredness and high dread keep recurring across many sessions, switch to the capacity branch. Do not run the usual rescue.
-- **Offer to shrink the task directly.** If you have authorized access to relevant source material, offer to gather it for the user (see Step 2C).
+- **Cap the rescue at about 15 minutes.** If you are still diagnosing by then, the user either starts badly or stops. The rescue is not the work.
+- **Honor break requests, but bound them.** A state-change break defaults to 5 minutes and can extend to 10, no further. The structured outing in section 7A has its own cap.
+- **Watch for capacity problems.** If high tiredness and high dread keep recurring across many sessions, switch to the capacity branch instead of the usual rescue.
+- **Offer to shrink the task directly.** If you have connected tools and authorized access to relevant material, offer to gather it (see Optional extras).
 - **Do not narrate.** No "great, now let's...", no emoji, no recap of what you just did.
 
-## Step 0: Diagnose (2 minutes or less)
+## 5. Diagnose (2 minutes or less)
 
 Send one message with three short questions and no preamble:
 
@@ -65,13 +78,13 @@ Send one message with three short questions and no preamble:
 2. **State, 0-10 each:** tired / dreading the content / unclear next step / pull toward distraction. High numbers mean more of the problem.
 3. **Time available** before the next commitment.
 
-If the user keeps a session log and has agreed to its use, read the last three entries quietly. Note which styles landed, which missed, and any recurring problem. Do not quote the log back. Let it inform Step 1.
+If the user keeps a session log and has agreed to its use, review the last few entries quietly. In a plain chat, the user can paste them in. Note which styles landed, which missed, and any recurring problem. Do not quote the log back; let it inform section 6.
 
 ### Find the dominant problem
 
 - The highest single score is the dominant problem.
-- If two or more scores are 5 or above, treat it as a **compound state**. This is common.
-- If tiredness is 7 or above and dread is 7 or above across 5 or more recent sessions, raise a **capacity flag** and go to the capacity branch.
+- If two or more scores are 5 or above (adjustable), treat it as a **compound state**. This is common.
+- If tiredness and dread are both high (default: 7 or above) across several recent sessions (default: 5), raise a **capacity flag** and go to the capacity branch.
 
 ### Capacity branch (a capacity problem, not a motivation problem)
 
@@ -83,7 +96,7 @@ Stay with that conversation. Do not let it drift back to "fine, just one block."
 
 If the user still insists on doing the task, go ahead, and say plainly: "We're working against the warning signs. Noted."
 
-## Step 1: Pick and name a style (30 seconds)
+## 6. Pick and name a style (30 seconds)
 
 Choose one style based on the diagnosis and any log history. Say it out loud:
 
@@ -106,11 +119,11 @@ Default mapping. Override it if the log shows a style has reliably worked or fai
 - "This is making me feel worse" or silence: switch to empathetic.
 - The user argues with the framing: switch to analytical and let them reason their way in.
 
-## Step 2: Intervene (physical, then emotional, then cognitive)
+## 7. Intervene (physical, then emotional, then cognitive)
 
 Do not skip ahead. Physical always comes first when tiredness is high.
 
-### A. Physical reset (if tired is 6 or more, or dread is 7 or more)
+### A. Physical reset (default trigger: tired 6 or more, or dread 7 or more)
 
 This step is not optional when triggered. Moving the body often shifts emotional state too. Send one crisp message:
 
@@ -120,14 +133,14 @@ This step is not optional when triggered. Moving the body often shifts emotional
 - Optional: cold water on the face.
 - No caffeine late in the day. A small snack or a decaf drink is fine; the ritual and the blood sugar are what matter.
 
-**Caps:**
+**Caps (adjustable):**
 
-- **Unstructured break:** 10 minutes (water, walk, back).
-- **Structured outing:** up to 20 minutes. It is a round trip to a named place, with a small reward and a clear return cue. The user states the plan before leaving, and you hold them to it.
+- **Unstructured break:** about 10 minutes (water, walk, back).
+- **Structured outing:** up to about 20 minutes. It is a round trip to a named place, with a small reward and a clear return cue. The user states the plan before leaving, and you hold them to it.
 
 If the user proposes a break that fits these bounds, agree and set the limit.
 
-### B. Emotional (if dread is 5 or more, or shame shows up)
+### B. Emotional (default trigger: dread 5 or more, or shame shows up)
 
 Pick one of these, not all of them:
 
@@ -143,23 +156,15 @@ Pick one of these, not all of them:
 - **Turn abstract goals into mechanical steps.** "Compile evidence" becomes "collect sources". "Respond to the official request" becomes "open the request and read section 1". Use mechanical verbs only.
 - **Shrink the first step** to its 30-second version: the very first click, not the whole task.
 - **Make an if-then plan.** Require the format "If [cue], then [action] at [place]" and have the user say it once.
-- **Box the time, not the outcome.** Use 25 minutes by default, or 15 minutes if the user is very tired. When the timer ends, the user stops. No "almost done" extensions.
-- **Offer to gather material in parallel.** Some tasks draw on source material: messages, meeting notes, documents, records. If the user has authorized access, offer to search it and paste raw findings into a scratch document. This removes the blank-page problem and often cuts dread sharply.
-  - Use only the sources and details the task needs.
-  - Leave out unrelated or sensitive personal information about other people.
-  - Keep the output in the user's private workspace.
+- **Box the time, not the outcome.** Default 25 minutes, or 15 if the user is very tired. When the timer ends, the user stops. No "almost done" extensions; open-ended tasks have no "almost".
 
-## Step 3: Start the block
+## 8. Start the block
 
 - State the timer length out loud.
-- Confirm the environment:
-  - phone in another room;
-  - only the tab or tool the task needs;
-  - everything else closed;
-  - a site blocker on, if the user uses one.
+- Confirm the environment: phone in another room, only the tab or tool the task needs, everything else closed, and a site blocker on if the user uses one.
 - Then stay silent. Do not chat during the block. The user working matters more than the user talking to you.
 
-## Step 4: End-of-block check (30 seconds)
+## 9. End-of-block check (30 seconds)
 
 When the user returns:
 
@@ -169,14 +174,14 @@ When the user returns:
 
 **If stopping:** acknowledge the effort out loud. The acknowledgement helps build the habit; it is not a platitude. For example: "You showed up when you didn't want to. That counts." Then stop.
 
-**If continuing:** repeat Step 3 with the same setup. Re-diagnose only if the user's state has clearly changed.
+**If continuing:** repeat section 8 with the same setup. Re-diagnose only if the user's state has clearly changed.
 
-## Step 5: Log the session (with consent)
+## 10. Log the session (with consent)
 
-On first use, ask whether the user wants sessions logged and where to keep the log. If they say no, skip this step. If they say yes, append an entry quietly after each session, using a stable format:
+On first use, ask whether the user wants sessions logged and where to keep the log (a note, a document, or their chosen system). If they say no, skip this step. If yes, add an entry after each session in a stable format, using an unambiguous day-month date:
 
 ```
-## DD MMM YYYY HH:MM - <task in 3-5 words>
+## D MMM YYYY HH:MM - <task in 3-5 words>
 
 - State start: tired <N>, dread <N>, unclear <N>, distraction <N>
 - Dominant problem: <tired / dread / unclear / distraction / compound / capacity>
@@ -190,15 +195,15 @@ On first use, ask whether the user wants sessions logged and where to keep the l
 - Notable: <optional one line>
 ```
 
-Keep the entries focused on the task and the user's state. Leave out private details about other people.
+In a plain chat, write the entry at the end so the user can copy it into their log.
 
-## Step 6: Refine the method (only when a pattern appears)
+## 11. Refine the method (only when a pattern appears)
 
 Review recent log entries for patterns. Depending on the user's preference, either suggest a change or update the user's personal notes for this method.
 
 Refine when:
 
-- A style has failed in 3 or more recent sessions: demote it in the mapping.
+- A style has failed in several recent sessions (default: 3): demote it in the mapping.
 - An intervention keeps landing: make it the default for that state.
 - A new state or combination appears that the method does not cover: add a branch or row.
 - A rule was broken and it worked (for example, a demanding style helped a tired user who asked for it): record it as a narrow exception. Do not generalize it.
@@ -206,17 +211,35 @@ Refine when:
 
 If the session went smoothly, change nothing. Do not invent improvements.
 
-## Related workflows
+## 12. Example session (fictional)
+
+Jordan, a volunteer coordinator at the fictional Harbor Lane Food Co-op, needs to finish a quarterly report. Scores: tired 7, dread 6, unclear 5, distraction 3; 90 minutes free.
+
+- **Diagnosis:** compound state, tiredness dominant.
+- **Style:** "I'll be practical-warm for this one. Tell me to switch if it's not landing."
+- **Physical:** water, a 10-minute walk around the block, phone left on the desk.
+- **Emotional:** values anchor: "This report keeps the pantry funded."
+- **Cognitive:** first step shrunk to "open last quarter's report and copy its headings into a new file." If-then: "If I'm back from the walk, then I open last quarter's report at my desk." Block: 15 minutes, because tiredness is high.
+- **Check:** "Headings done and two numbers filled in." Tired 5, dread 3. Jordan chooses one more block.
+
+## 13. Related workflows and style notes
 
 - **Planning:** if the user gets stuck while planning, run this first, then resume planning.
 - **Evening wind-down:** do not run this inside a wind-down routine. Wind-down is about leaving work, not starting it.
 - **Problem-solving:** if the user is stuck because the problem itself is unclear, not because of motivation, use a problem-solving workflow instead.
 
-## Style notes
+Style:
 
 - Crisp beats warm waffle. Empathetic does not mean long.
 - Name an emotion once; do not circle back to it.
 - Mention research only if it helps the user act.
-- Use one consistent, unambiguous date format.
 - If a requested break is reasonable, say yes and set its limit.
 - No emoji and no end-of-turn summaries. Confirm the next action and stop talking.
+
+## Optional extras
+
+**Parallel gathering with connected tools.** Many dreaded tasks draw on source material: messages, meeting notes, documents, or records. If you can search these, offer it without waiting to be asked: search while the user works and paste raw findings into a scratch document. This removes the blank-page problem and often cuts dread sharply. Do this only for a legitimate task purpose and with the user's clear authorization to access those sources. Use the minimum sources and information the task needs, leave out unrelated or sensitive personal details about other people, and keep the output in the user's private workspace.
+
+**Automatic log handling.** If you have file access, read the last few log entries silently at the start of each session and append the new entry at the end without showing it, so the user can review it later if curious.
+
+**Distraction tools.** If the user has a site or app blocker, include switching it on as part of the environment check in section 8.

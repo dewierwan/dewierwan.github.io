@@ -202,7 +202,7 @@ If the user is clearly exhausted, they may skip Step 2 or Step 3. Do not skip St
 - No narration ("great, now let's...") and no emojis.
 - No sleep science at runtime.
 - If the user goes off-script with a work problem, deflect to the capture spot and tomorrow's review.
-- Use the user's preferred date and time format.
+- Use the user's preferred date and time format, and keep it consistent across the run.
 
 The best wind-down is quiet, repeatable, and boring enough to become an automatic signal that the day is over.
 

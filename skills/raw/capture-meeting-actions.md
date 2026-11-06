@@ -46,7 +46,7 @@ Accept a date in `YYYY-MM-DD` format, a relative date such as "yesterday," a dat
 
 State the scope once, for example: "Scanning meetings for 23 Apr."
 
-Check every place where the user's meeting records live, not just the main one. Many people keep a shared team meeting space plus a separate private space for sensitive calls, reference calls, or internal one-to-ones. Sources can differ in how they filter: one may already show only meetings the user attended, while another needs a direct query by date. Query each source for the selected scope, merge the results, and remove any meeting that appears in both.
+Check every place where the user's meeting records live, not just the main one. Many people keep a shared team meeting space, a separate private space for sensitive calls or internal one-to-ones, and sometimes a restricted space for a specific function, such as a hiring space that holds reference calls. When a new category of meeting moves to its own space, add that space to the sweep, or those meetings will silently drop out. Sources can differ in how they filter: one may already show only meetings the user attended, while another needs a direct query by date. Query each source for the selected scope, merge the results, and remove any meeting that appears in more than one.
 
 For each meeting, collect:
 
@@ -241,7 +241,7 @@ Wait for answers. Then create or update the remaining tasks, rerunning the dupli
 
 Before finishing, verify that:
 
-- Every meeting source for the scope was checked and merged without duplicates.
+- Every meeting source for the scope, including private or restricted spaces, was checked and merged without duplicates.
 - Every created task has a genuine owner and unfinished outcome.
 - Transcript evidence supports ownership where summaries were unclear.
 - Completed and delegated work was excluded.
@@ -252,7 +252,7 @@ Before finishing, verify that:
 - Drafts are ready to send and match the user's preferences.
 - Every uncertain item was asked or explicitly deferred.
 
-Report tersely: meetings reviewed, tasks created or updated with due dates, skipped items with reasons, open questions, and any guidance changes. Use a consistent short date format and no decoration.
+Report tersely: meetings reviewed, tasks created or updated with due dates, skipped items with reasons, open questions, and any guidance changes. Use one consistent short day-and-month date format, such as "3 May," and no decoration.
 
 ## Optional extras
 
@@ -263,6 +263,7 @@ Report tersely: meetings reviewed, tasks created or updated with due dates, skip
 - Append a short, generalized note when a pattern will affect future triage. Do not rewrite old entries.
 - Change the workflow itself only for cross-cutting principles, new defaults, or a new step, and ask before structural changes such as adding a step or changing the evidence order.
 - Record a new responsibility boundary in the user's responsibility reference if it applies beyond one meeting.
+- Add any newly created meeting space to the list of sources in step 2.
 
 Do not turn one-off facts about a person or meeting into permanent rules. Report any changes in one or two bullets.
 

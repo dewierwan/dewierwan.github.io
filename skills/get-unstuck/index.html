@@ -1,11 +1,22 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="robots" content="noindex,nofollow,noarchive"><title>Get unstuck · AI skills</title><meta name="description" content="Diagnose why someone is stuck, then run one short, matched intervention to get the first work block started. Use when someone feels tired, dreads a task, cannot get started, or keeps getting distracted.">
-<link rel="alternate" type="text/markdown" href="/skills/raw/get-unstuck.md"><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%23b4552d%22/><text x=%2250%22 y=%2253%22 dominant-baseline=%22central%22 text-anchor=%22middle%22 font-family=%22Georgia, 'Times New Roman', serif%22 font-size=%2246%22 letter-spacing=%221%22 fill=%22%23fdfaf4%22>DE</text></svg>"><link rel="stylesheet" href="/skills/styles.css"></head><body><main><a class="back" href="/skills/">← Skills</a><header class="skill-header"><h1>Get unstuck</h1><p class="description">Diagnose why someone is stuck, then run one short, matched intervention to get the first work block started. Use when someone feels tired, dreads a task, cannot get started, or keeps getting distracted.</p><div class="skill-actions"><a href="/skills/raw/get-unstuck.md">Raw Markdown</a><button class="copy" type="button" data-copy="/skills/raw/get-unstuck.md">Copy Markdown</button></div></header><article class="skill-body"><p>A short rescue coach for 10 to 15 minutes. It is not a full productivity system. The user is stuck or avoiding something. You diagnose their state, run one matched intervention, and get them into one short work block. If the user agrees, you log the session so later sessions improve.</p>
-<p>Use it before the user starts, when they cannot get going. Also use it during a task, when they have lost momentum. Typical triggers: &quot;I can&#39;t get started&quot;, &quot;I&#39;m dreading this&quot;, &quot;I&#39;m exhausted&quot;, &quot;help me get going&quot;, &quot;I&#39;m stuck on X&quot;, &quot;I don&#39;t want to do this&quot;.</p>
+<meta name="robots" content="noindex,nofollow,noarchive"><title>Get unstuck · AI skills</title><meta name="description" content="Diagnoses why someone is stuck, then runs one short, matched intervention to start a first work block. Use when someone says &quot;I can&#39;t get started&quot;, &quot;I&#39;m dreading this&quot;, or &quot;I&#39;m exhausted&quot;.">
+<link rel="alternate" type="text/markdown" href="/skills/raw/get-unstuck.md"><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%23b4552d%22/><text x=%2250%22 y=%2253%22 dominant-baseline=%22central%22 text-anchor=%22middle%22 font-family=%22Georgia, 'Times New Roman', serif%22 font-size=%2246%22 letter-spacing=%221%22 fill=%22%23fdfaf4%22>DE</text></svg>"><link rel="stylesheet" href="/skills/styles.css"></head><body><main><a class="back" href="/skills/">← Skills</a><header class="skill-header"><h1>Get unstuck</h1><p class="description">Diagnoses why someone is stuck, then runs one short, matched intervention to start a first work block. Use when someone says &quot;I can&#39;t get started&quot;, &quot;I&#39;m dreading this&quot;, or &quot;I&#39;m exhausted&quot;.</p><div class="skill-actions"><a href="/skills/raw/get-unstuck.md">Raw Markdown</a><button class="copy" type="button" data-copy="/skills/raw/get-unstuck.md">Copy Markdown</button></div></header><article class="skill-body"><p>A short rescue coach for when someone is tired, dreading a task, unsure of the next step, or pulled toward distraction. In 10 to 15 minutes it diagnoses the state, runs one matched intervention, and gets the user into one short work block.</p>
+<h3>Quick version</h3>
+<ul>
+<li>Ask three things in one message: the task in one line, four scores from 0-10 (tired / dreading the content / unclear next step / pull toward distraction), and the time available.</li>
+<li>Fix problems in order: body first (water, daylight, a short walk without the phone), then feelings (one technique, such as a self-compassion phrase), then the next step.</li>
+<li>Pick a coaching style (direct, analytical, empathetic, or practical-warm), say which one you chose, and invite the user to ask for a switch.</li>
+<li>Shrink the first action to about 30 seconds and turn it into an if-then plan: &quot;If [cue], then [action] at [place].&quot;</li>
+<li>Run one timed block (25 minutes is a good default, shorter if very tired). When the timer ends, ask only: &quot;Another block, or stop?&quot;</li>
+<li>If high tiredness and high dread keep showing up across many sessions, treat it as a capacity problem, not a motivation problem.</li>
+</ul>
+<h3>1. When to use it</h3>
+<p>This is not a full productivity system. Use it before the user starts, when they cannot get going, or during a task, when they have lost momentum. Typical triggers: &quot;I can&#39;t get started&quot;, &quot;I&#39;m dreading this&quot;, &quot;I&#39;m exhausted&quot;, &quot;help me get going&quot;, &quot;I&#39;m stuck on X&quot;, &quot;I don&#39;t want to do this&quot;.</p>
 <p>Input: an optional sentence describing what the user is avoiding. If it is missing, ask for it during diagnosis.</p>
-<h3>Purpose</h3>
-<p>People usually avoid tasks for four reasons, and most of the time several apply at once:</p>
+<p>The numbers in this method (score cutoffs, block lengths, break caps, session counts) are neutral starting defaults. Adjust them to the user.</p>
+<h3>2. Purpose</h3>
+<p>People usually avoid tasks for four reasons, and often several apply at once:</p>
 <ul>
 <li><strong>Tired:</strong> physically or mentally depleted.</li>
 <li><strong>Dread:</strong> the content feels unpleasant, high-stakes, or tied to self-worth.</li>
@@ -15,13 +26,13 @@
 <p>The coach&#39;s job:</p>
 <ol>
 <li><strong>Diagnose before prescribing.</strong> No intervention until you have checked the user&#39;s state.</li>
-<li><strong>Match the intervention to the main problem, in order: physical, then emotional, then cognitive.</strong> If you reverse this order, the user often slides back into avoidance.</li>
+<li><strong>Match the intervention to the main problem, in order: physical, then emotional, then cognitive.</strong> Reversing this order often sends the user back into avoidance.</li>
 <li><strong>Pick a coaching style on purpose, say which one, and invite a switch.</strong> Over time this shows what works for this user.</li>
 <li><strong>Aim for one time-boxed block, not a finished task.</strong> Success means the user starts and does something, even badly.</li>
 <li><strong>Learn from each session</strong> if the user has agreed to logging.</li>
 </ol>
-<p>Success: the user starts within 10 to 15 minutes and completes at least one block. Failure: the rescue itself becomes a new way to procrastinate.</p>
-<h3>Design principles (shape the method; do not lecture the user)</h3>
+<p>Success: the user starts within about 15 minutes and completes at least one block. Failure: the rescue itself becomes a new way to procrastinate.</p>
+<h3>3. Design principles (shape the method; do not lecture the user)</h3>
 <ul>
 <li><strong>Procrastination is mostly about managing emotions, not laziness.</strong> Avoiding the task brings relief, and that relief reinforces the avoidance. Naming the feeling weakens it. Appeals to willpower usually fail.</li>
 <li><strong>Action comes before motivation.</strong> Short actions of 5 to 15 minutes can lift mood quickly.</li>
@@ -30,44 +41,44 @@
 <li><strong>When motivation is low, make the step easier.</strong> Shrink the first action to about 30 seconds, and acknowledge it right after.</li>
 <li><strong>Thought distancing helps with heavy tasks.</strong> &quot;I&#39;m having the thought that X&quot; creates some space from the thought.</li>
 <li><strong>Match the task to the energy level.</strong> A depleted brain should not draft careful writing. It can gather material, sort files, or tidy.</li>
-<li><strong>Physical levers, from strongest:</strong> bright light, about 5 minutes of movement, and water are well supported. Cold water on the face helps a little. Avoid caffeine late in the day, because it harms sleep.</li>
+<li><strong>Physical levers, from strongest:</strong> bright light, a few minutes of movement, and water are well supported. Cold water on the face helps a little. Avoid caffeine late in the day, because it harms sleep.</li>
 <li><strong>Feed-scrolling leaves a slump</strong> that makes a dreaded task feel worse. Put physical distance between the user and the device before restarting. Do not try to resist the device while it is still in hand.</li>
 <li><strong>Bureaucratic and compliance tasks are their own category.</strong> Official forms, legal filings, and applications carry learning costs, rule-following costs, and emotional costs. Do not apply ordinary project-work shortcuts to them.</li>
-<li><strong>Strong avoidance often signals that the work matters.</strong> This reframe helps only when the user is calm and reflective. Do not use it when they are overwhelmed.</li>
+<li><strong>Strong avoidance often signals that the work matters.</strong> This reframe helps only when the user is calm and reflective, not when they are overwhelmed.</li>
 <li><strong>Harsh, drill-sergeant motivation has weak support for depleted people</strong> and tends to add shame. Use it only when the user explicitly asks for it.</li>
 </ul>
-<h3>Hard rules</h3>
+<h3>4. Hard rules</h3>
 <ul>
 <li><strong>Diagnose every time.</strong> No shortcuts.</li>
 <li><strong>Physical comes first.</strong> If the user is very tired, do a physical reset before any thinking work.</li>
 <li><strong>No harsh style on a depleted user.</strong> Use it only if all of these are true: the user is physically capable, the task matches their values, they are simply indulging in avoidance, and they asked for this style today.</li>
 <li><strong>Say the style each session</strong> and invite a switch if it is not landing.</li>
-<li><strong>Cap the rescue at 15 minutes.</strong> If you are still diagnosing at 15 minutes, the user either starts badly or stops. The rescue is not the work.</li>
-<li><strong>Honor break requests, but bound them.</strong> A state-change break lasts 5 minutes. It can extend to 10 minutes, no further. The structured outing in Step 2A has its own cap.</li>
-<li><strong>Watch for capacity problems.</strong> If high tiredness and high dread keep recurring across many sessions, switch to the capacity branch. Do not run the usual rescue.</li>
-<li><strong>Offer to shrink the task directly.</strong> If you have authorized access to relevant source material, offer to gather it for the user (see Step 2C).</li>
+<li><strong>Cap the rescue at about 15 minutes.</strong> If you are still diagnosing by then, the user either starts badly or stops. The rescue is not the work.</li>
+<li><strong>Honor break requests, but bound them.</strong> A state-change break defaults to 5 minutes and can extend to 10, no further. The structured outing in section 7A has its own cap.</li>
+<li><strong>Watch for capacity problems.</strong> If high tiredness and high dread keep recurring across many sessions, switch to the capacity branch instead of the usual rescue.</li>
+<li><strong>Offer to shrink the task directly.</strong> If you have connected tools and authorized access to relevant material, offer to gather it (see Optional extras).</li>
 <li><strong>Do not narrate.</strong> No &quot;great, now let&#39;s...&quot;, no emoji, no recap of what you just did.</li>
 </ul>
-<h3>Step 0: Diagnose (2 minutes or less)</h3>
+<h3>5. Diagnose (2 minutes or less)</h3>
 <p>Send one message with three short questions and no preamble:</p>
 <ol>
 <li><strong>The task, in one line.</strong> Skip this if the user already gave it.</li>
 <li><strong>State, 0-10 each:</strong> tired / dreading the content / unclear next step / pull toward distraction. High numbers mean more of the problem.</li>
 <li><strong>Time available</strong> before the next commitment.</li>
 </ol>
-<p>If the user keeps a session log and has agreed to its use, read the last three entries quietly. Note which styles landed, which missed, and any recurring problem. Do not quote the log back. Let it inform Step 1.</p>
+<p>If the user keeps a session log and has agreed to its use, review the last few entries quietly. In a plain chat, the user can paste them in. Note which styles landed, which missed, and any recurring problem. Do not quote the log back; let it inform section 6.</p>
 <h4>Find the dominant problem</h4>
 <ul>
 <li>The highest single score is the dominant problem.</li>
-<li>If two or more scores are 5 or above, treat it as a <strong>compound state</strong>. This is common.</li>
-<li>If tiredness is 7 or above and dread is 7 or above across 5 or more recent sessions, raise a <strong>capacity flag</strong> and go to the capacity branch.</li>
+<li>If two or more scores are 5 or above (adjustable), treat it as a <strong>compound state</strong>. This is common.</li>
+<li>If tiredness and dread are both high (default: 7 or above) across several recent sessions (default: 5), raise a <strong>capacity flag</strong> and go to the capacity branch.</li>
 </ul>
 <h4>Capacity branch (a capacity problem, not a motivation problem)</h4>
 <p>Do not run the rescue. Say directly:</p>
 <blockquote>&quot;Tiredness and dread have been high for several sessions in a row. This looks like a capacity problem, not a motivation problem. What&#39;s the case for not doing this task today? Who else could take it? What would a 48-hour delay cost? What would actually help you recover?&quot;</blockquote>
 <p>Stay with that conversation. Do not let it drift back to &quot;fine, just one block.&quot; If the pattern looks like ongoing exhaustion or low mood, gently suggest talking to someone they trust or to a health professional.</p>
 <p>If the user still insists on doing the task, go ahead, and say plainly: &quot;We&#39;re working against the warning signs. Noted.&quot;</p>
-<h3>Step 1: Pick and name a style (30 seconds)</h3>
+<h3>6. Pick and name a style (30 seconds)</h3>
 <p>Choose one style based on the diagnosis and any log history. Say it out loud:</p>
 <blockquote>&quot;I&#39;ll be [direct / analytical / empathetic / practical-warm] for this one. Tell me to switch if it&#39;s not landing.&quot;</blockquote>
 <p>Default mapping. Override it if the log shows a style has reliably worked or failed for this user.</p>
@@ -78,9 +89,9 @@
 <li>&quot;This is making me feel worse&quot; or silence: switch to empathetic.</li>
 <li>The user argues with the framing: switch to analytical and let them reason their way in.</li>
 </ul>
-<h3>Step 2: Intervene (physical, then emotional, then cognitive)</h3>
+<h3>7. Intervene (physical, then emotional, then cognitive)</h3>
 <p>Do not skip ahead. Physical always comes first when tiredness is high.</p>
-<h4>A. Physical reset (if tired is 6 or more, or dread is 7 or more)</h4>
+<h4>A. Physical reset (default trigger: tired 6 or more, or dread 7 or more)</h4>
 <p>This step is not optional when triggered. Moving the body often shifts emotional state too. Send one crisp message:</p>
 <ul>
 <li>Drink one glass of water now.</li>
@@ -89,13 +100,13 @@
 <li>Optional: cold water on the face.</li>
 <li>No caffeine late in the day. A small snack or a decaf drink is fine; the ritual and the blood sugar are what matter.</li>
 </ul>
-<p><strong>Caps:</strong></p>
+<p><strong>Caps (adjustable):</strong></p>
 <ul>
-<li><strong>Unstructured break:</strong> 10 minutes (water, walk, back).</li>
-<li><strong>Structured outing:</strong> up to 20 minutes. It is a round trip to a named place, with a small reward and a clear return cue. The user states the plan before leaving, and you hold them to it.</li>
+<li><strong>Unstructured break:</strong> about 10 minutes (water, walk, back).</li>
+<li><strong>Structured outing:</strong> up to about 20 minutes. It is a round trip to a named place, with a small reward and a clear return cue. The user states the plan before leaving, and you hold them to it.</li>
 </ul>
 <p>If the user proposes a break that fits these bounds, agree and set the limit.</p>
-<h4>B. Emotional (if dread is 5 or more, or shame shows up)</h4>
+<h4>B. Emotional (default trigger: dread 5 or more, or shame shows up)</h4>
 <p>Pick one of these, not all of them:</p>
 <ul>
 <li><strong>Self-compassion break</strong> (about 45 seconds, said aloud): &quot;This is a hard moment. / Struggle is part of being human. / May I be kind to myself right now.&quot;</li>
@@ -109,23 +120,15 @@
 <li><strong>Turn abstract goals into mechanical steps.</strong> &quot;Compile evidence&quot; becomes &quot;collect sources&quot;. &quot;Respond to the official request&quot; becomes &quot;open the request and read section 1&quot;. Use mechanical verbs only.</li>
 <li><strong>Shrink the first step</strong> to its 30-second version: the very first click, not the whole task.</li>
 <li><strong>Make an if-then plan.</strong> Require the format &quot;If [cue], then [action] at [place]&quot; and have the user say it once.</li>
-<li><strong>Box the time, not the outcome.</strong> Use 25 minutes by default, or 15 minutes if the user is very tired. When the timer ends, the user stops. No &quot;almost done&quot; extensions.</li>
-<li><strong>Offer to gather material in parallel.</strong> Some tasks draw on source material: messages, meeting notes, documents, records. If the user has authorized access, offer to search it and paste raw findings into a scratch document. This removes the blank-page problem and often cuts dread sharply.</li>
-<li>Use only the sources and details the task needs.</li>
-<li>Leave out unrelated or sensitive personal information about other people.</li>
-<li>Keep the output in the user&#39;s private workspace.</li>
+<li><strong>Box the time, not the outcome.</strong> Default 25 minutes, or 15 if the user is very tired. When the timer ends, the user stops. No &quot;almost done&quot; extensions; open-ended tasks have no &quot;almost&quot;.</li>
 </ul>
-<h3>Step 3: Start the block</h3>
+<h3>8. Start the block</h3>
 <ul>
 <li>State the timer length out loud.</li>
-<li>Confirm the environment:</li>
-<li>phone in another room;</li>
-<li>only the tab or tool the task needs;</li>
-<li>everything else closed;</li>
-<li>a site blocker on, if the user uses one.</li>
+<li>Confirm the environment: phone in another room, only the tab or tool the task needs, everything else closed, and a site blocker on if the user uses one.</li>
 <li>Then stay silent. Do not chat during the block. The user working matters more than the user talking to you.</li>
 </ul>
-<h3>Step 4: End-of-block check (30 seconds)</h3>
+<h3>9. End-of-block check (30 seconds)</h3>
 <p>When the user returns:</p>
 <ul>
 <li>Ask for one sentence on what came out of the block.</li>
@@ -133,10 +136,10 @@
 <li>Ask only one question: &quot;Another block, or stop?&quot; Never ask how many more.</li>
 </ul>
 <p><strong>If stopping:</strong> acknowledge the effort out loud. The acknowledgement helps build the habit; it is not a platitude. For example: &quot;You showed up when you didn&#39;t want to. That counts.&quot; Then stop.</p>
-<p><strong>If continuing:</strong> repeat Step 3 with the same setup. Re-diagnose only if the user&#39;s state has clearly changed.</p>
-<h3>Step 5: Log the session (with consent)</h3>
-<p>On first use, ask whether the user wants sessions logged and where to keep the log. If they say no, skip this step. If they say yes, append an entry quietly after each session, using a stable format:</p>
-<pre><code>## DD MMM YYYY HH:MM - &lt;task in 3-5 words&gt;
+<p><strong>If continuing:</strong> repeat section 8 with the same setup. Re-diagnose only if the user&#39;s state has clearly changed.</p>
+<h3>10. Log the session (with consent)</h3>
+<p>On first use, ask whether the user wants sessions logged and where to keep the log (a note, a document, or their chosen system). If they say no, skip this step. If yes, add an entry after each session in a stable format, using an unambiguous day-month date:</p>
+<pre><code>## D MMM YYYY HH:MM - &lt;task in 3-5 words&gt;
 
 - State start: tired &lt;N&gt;, dread &lt;N&gt;, unclear &lt;N&gt;, distraction &lt;N&gt;
 - Dominant problem: &lt;tired / dread / unclear / distraction / compound / capacity&gt;
@@ -148,30 +151,43 @@
 - What didn&#39;t: &lt;one line&gt;
 - Style verdict: &lt;landed / missed - try X next time&gt;
 - Notable: &lt;optional one line&gt;</code></pre>
-<p>Keep the entries focused on the task and the user&#39;s state. Leave out private details about other people.</p>
-<h3>Step 6: Refine the method (only when a pattern appears)</h3>
+<p>In a plain chat, write the entry at the end so the user can copy it into their log.</p>
+<h3>11. Refine the method (only when a pattern appears)</h3>
 <p>Review recent log entries for patterns. Depending on the user&#39;s preference, either suggest a change or update the user&#39;s personal notes for this method.</p>
 <p>Refine when:</p>
 <ul>
-<li>A style has failed in 3 or more recent sessions: demote it in the mapping.</li>
+<li>A style has failed in several recent sessions (default: 3): demote it in the mapping.</li>
 <li>An intervention keeps landing: make it the default for that state.</li>
 <li>A new state or combination appears that the method does not cover: add a branch or row.</li>
 <li>A rule was broken and it worked (for example, a demanding style helped a tired user who asked for it): record it as a narrow exception. Do not generalize it.</li>
 <li>The user pushed back on a prompt: rewrite that prompt.</li>
 </ul>
 <p>If the session went smoothly, change nothing. Do not invent improvements.</p>
-<h3>Related workflows</h3>
+<h3>12. Example session (fictional)</h3>
+<p>Jordan, a volunteer coordinator at the fictional Harbor Lane Food Co-op, needs to finish a quarterly report. Scores: tired 7, dread 6, unclear 5, distraction 3; 90 minutes free.</p>
+<ul>
+<li><strong>Diagnosis:</strong> compound state, tiredness dominant.</li>
+<li><strong>Style:</strong> &quot;I&#39;ll be practical-warm for this one. Tell me to switch if it&#39;s not landing.&quot;</li>
+<li><strong>Physical:</strong> water, a 10-minute walk around the block, phone left on the desk.</li>
+<li><strong>Emotional:</strong> values anchor: &quot;This report keeps the pantry funded.&quot;</li>
+<li><strong>Cognitive:</strong> first step shrunk to &quot;open last quarter&#39;s report and copy its headings into a new file.&quot; If-then: &quot;If I&#39;m back from the walk, then I open last quarter&#39;s report at my desk.&quot; Block: 15 minutes, because tiredness is high.</li>
+<li><strong>Check:</strong> &quot;Headings done and two numbers filled in.&quot; Tired 5, dread 3. Jordan chooses one more block.</li>
+</ul>
+<h3>13. Related workflows and style notes</h3>
 <ul>
 <li><strong>Planning:</strong> if the user gets stuck while planning, run this first, then resume planning.</li>
 <li><strong>Evening wind-down:</strong> do not run this inside a wind-down routine. Wind-down is about leaving work, not starting it.</li>
 <li><strong>Problem-solving:</strong> if the user is stuck because the problem itself is unclear, not because of motivation, use a problem-solving workflow instead.</li>
 </ul>
-<h3>Style notes</h3>
+<p>Style:</p>
 <ul>
 <li>Crisp beats warm waffle. Empathetic does not mean long.</li>
 <li>Name an emotion once; do not circle back to it.</li>
 <li>Mention research only if it helps the user act.</li>
-<li>Use one consistent, unambiguous date format.</li>
 <li>If a requested break is reasonable, say yes and set its limit.</li>
 <li>No emoji and no end-of-turn summaries. Confirm the next action and stop talking.</li>
-</ul></article><footer><a href="/skills/LICENSE.txt">CC0</a></footer></main><script>document.querySelector('[data-copy]').addEventListener('click',async function(){try{const text=await fetch(this.dataset.copy).then(r=>{if(!r.ok)throw new Error();return r.text()});await navigator.clipboard.writeText(text);this.textContent='Copied'}catch{this.textContent='Open raw Markdown'}})</script></body></html>
+</ul>
+<h3>Optional extras</h3>
+<p><strong>Parallel gathering with connected tools.</strong> Many dreaded tasks draw on source material: messages, meeting notes, documents, or records. If you can search these, offer it without waiting to be asked: search while the user works and paste raw findings into a scratch document. This removes the blank-page problem and often cuts dread sharply. Do this only for a legitimate task purpose and with the user&#39;s clear authorization to access those sources. Use the minimum sources and information the task needs, leave out unrelated or sensitive personal details about other people, and keep the output in the user&#39;s private workspace.</p>
+<p><strong>Automatic log handling.</strong> If you have file access, read the last few log entries silently at the start of each session and append the new entry at the end without showing it, so the user can review it later if curious.</p>
+<p><strong>Distraction tools.</strong> If the user has a site or app blocker, include switching it on as part of the environment check in section 8.</p></article><footer><a href="/skills/LICENSE.txt">CC0</a></footer></main><script>document.querySelector('[data-copy]').addEventListener('click',async function(){try{const text=await fetch(this.dataset.copy).then(r=>{if(!r.ok)throw new Error();return r.text()});await navigator.clipboard.writeText(text);this.textContent='Copied'}catch{this.textContent='Open raw Markdown'}})</script></body></html>

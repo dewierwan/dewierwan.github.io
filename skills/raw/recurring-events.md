@@ -55,7 +55,7 @@ Practical rules for the image tool:
 
 - **Write the prompt as one paragraph.** In many chat tools Enter sends the message, so a multi-line prompt gets cut off. If that happens, stop and send the rest as a follow-up.
 - **Check before retrying.** Image tools sometimes show an error even though the image finished.
-- **Mind your image limit.** Limited plans may allow only a few images per day. When you need several posters, make each prompt strong enough to keep on the first try and send them together in separate fresh chats, so a batch does not use up your retries.
+- **Use the account with enough image capacity.** Free or limited plans can run out after a few images, leaving no room to regenerate. If you have access to a workspace or plan with higher limits, pick it in the account menu before you start. When you need several posters, send every prompt at once in separate fresh chats.
 
 ## 3. Build the event page
 
@@ -104,7 +104,7 @@ Keep only reusable lessons, such as platform quirks or a changed template, and u
 
 For assistants that drive a browser or other connected tools:
 
-- **Right account for each site:** the image tool and the event platform may be logged in under different browser profiles or accounts. Route each site to the right one and verify the active account before acting.
+- **Right account for each site:** the image tool and the event platform may be logged in under different browser profiles or accounts, and one account may have several workspaces with different limits. Route each site to the right profile and workspace, and verify the active account before acting.
 - **File handling:** avoid buttons that open a native file dialog the tool cannot control; use the page's file input or the tool's file-chooser support, from a folder the tool can read. If a browser silently blocks a second download, capture the image another way, such as a full-size screenshot of just the image.
 - **Verify after every change on screen:** pages shift when extra controls appear, windows resize, or a page is still loading. Take a fresh screenshot before each click after any shift, confirm nothing changed by accident (a style, a date, a selection), and close pickers by clicking empty background rather than trusting close icons or Escape.
 - **One thing at a time:** finish and verify an upload before opening another panel. If you script the invite loop, handle one past event per call to stay under time limits, normalize unusual spaces in labels before matching text, wait for each list to load, and read the invite count after each pass.

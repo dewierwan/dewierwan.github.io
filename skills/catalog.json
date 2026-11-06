@@ -10,21 +10,21 @@
     },
     {
       "title": "Pressure-test an idea",
-      "description": "Find the weak points in a strategic idea before committing to it, through a steelman, assumption tests, a pre-mortem, and a verdict. Use when someone asks to stress-test an idea or wonders if they are wrong.",
+      "description": "Finds the weak points in a strategic idea before you commit, through a steelman, assumption tests, a pre-mortem, and a verdict. Use when someone says pressure-test this, stress-test this, or am I wrong.",
       "category": "Think and decide",
       "page": "https://dewierwan.com/skills/pressure-test/",
       "markdown": "https://dewierwan.com/skills/raw/pressure-test.md"
     },
     {
       "title": "Make a decision",
-      "description": "Match decision rigor to stakes and reversibility, make a clear call, record it with a prediction, and review it later. Use when someone asks for help deciding, weighing X against Y, or reviewing a past decision.",
+      "description": "Matches decision rigor to stakes and reversibility, records the call with a testable prediction, and reviews it later. Use when asked to help decide, weigh X against Y, or review a past decision.",
       "category": "Think and decide",
       "page": "https://dewierwan.com/skills/decide/",
       "markdown": "https://dewierwan.com/skills/raw/decide.md"
     },
     {
       "title": "Solve a problem",
-      "description": "Take a non-trivial build or process problem from diagnosis through options, recommendation, implementation, and verification. Use when someone wants a problem solved end to end, or analysis only before building.",
+      "description": "Takes a non-trivial build or process problem from diagnosis to options, recommendation, and implementation. Use when someone says \"build X\" or \"think it through, don't build yet\".",
       "category": "Think and decide",
       "page": "https://dewierwan.com/skills/solve-a-problem/",
       "markdown": "https://dewierwan.com/skills/raw/solve-a-problem.md"
@@ -94,21 +94,21 @@
     },
     {
       "title": "Plan your week",
-      "description": "Reviews last week, commits to one to three goals with checkable outputs, cuts low-value work, and protects time. Use when someone says \"plan my week\" or wants to reset after a messy week.",
+      "description": "Reviews last week, then shapes the next one into one to three checkable goals, tasks, time blocks, and a one-screen plan. Use when someone says \"plan my week\" or wants to reset after a messy week.",
       "category": "Plan and reflect",
       "page": "https://dewierwan.com/skills/plan-your-week/",
       "markdown": "https://dewierwan.com/skills/raw/plan-your-week.md"
     },
     {
       "title": "Review and plan a month",
-      "description": "Reviews the month ending with evidence, then plans the next with a theme, capacity math, cuts, and sign-off. Use when a month is ending or someone asks for a \"monthly review\" or \"plan my month\".",
+      "description": "Reviews the month ending with evidence, then plans the next with a theme, capacity math, cuts, and sign-off. Use when a month is ending or someone says \"monthly review\" or \"plan my month\".",
       "category": "Plan and reflect",
       "page": "https://dewierwan.com/skills/plan-your-month/",
       "markdown": "https://dewierwan.com/skills/raw/plan-your-month.md"
     },
     {
       "title": "Get unstuck",
-      "description": "Diagnose why someone is stuck, then run one short, matched intervention to get the first work block started. Use when someone feels tired, dreads a task, cannot get started, or keeps getting distracted.",
+      "description": "Diagnoses why someone is stuck, then runs one short, matched intervention to start a first work block. Use when someone says \"I can't get started\", \"I'm dreading this\", or \"I'm exhausted\".",
       "category": "Plan and reflect",
       "page": "https://dewierwan.com/skills/get-unstuck/",
       "markdown": "https://dewierwan.com/skills/raw/get-unstuck.md"
@@ -129,7 +129,7 @@
     },
     {
       "title": "Prepare for a meeting",
-      "description": "Researches a meeting's people and history, asks what outcome you want, then builds a focused brief and agenda. Use when you say prep my meeting with someone or before an important call.",
+      "description": "Researches a meeting's context, asks what outcome you want, then builds a focused brief and agenda page. Use when you say prep my meeting with someone or before an important call.",
       "category": "Meetings and tasks",
       "page": "https://dewierwan.com/skills/meeting-prep/",
       "markdown": "https://dewierwan.com/skills/raw/meeting-prep.md"
@@ -150,21 +150,21 @@
     },
     {
       "title": "Process an inbox to zero",
-      "description": "Works email, chat, and notification inboxes to zero, giving each item one clear next step. Use when someone says triage my inbox, clear my messages, or help me prioritize email.",
+      "description": "Works email, chat, and notification inboxes to zero, giving each item one bucket and a next step. Use when someone says triage my inbox, clear my messages, or help me prioritize email.",
       "category": "Meetings and tasks",
       "page": "https://dewierwan.com/skills/inbox-zero/",
       "markdown": "https://dewierwan.com/skills/raw/inbox-zero.md"
     },
     {
       "title": "Design a work sample",
-      "description": "Design a short, paid, take-home work sample that produces job-relevant evidence and is tested with simulated submissions. Use when someone is hiring and needs a work test or wants to improve one.",
+      "description": "Designs a short, paid take-home work sample and tests it with simulated candidate submissions. Use when someone says \"design a work test\", \"make a take-home\", or \"tighten our work test\".",
       "category": "Hiring and people",
       "page": "https://dewierwan.com/skills/design-a-work-sample/",
       "markdown": "https://dewierwan.com/skills/raw/design-a-work-sample.md"
     },
     {
       "title": "Run a reference call",
-      "description": "Prepares a private briefing page for a candidate reference call, with context, an opening, and targeted questions. Use when checking references or prepping a reference call.",
+      "description": "Prepares a briefing page for a candidate reference call, with context, a tailored opening, and targeted questions. Use when checking references or asked to prep a reference call.",
       "category": "Hiring and people",
       "page": "https://dewierwan.com/skills/run-a-reference-call/",
       "markdown": "https://dewierwan.com/skills/raw/run-a-reference-call.md"

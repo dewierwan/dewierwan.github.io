@@ -1,10 +1,21 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="robots" content="noindex,nofollow,noarchive"><title>Solve a problem · AI skills</title><meta name="description" content="Take a non-trivial build or process problem from diagnosis through options, recommendation, implementation, and verification. Use when someone wants a problem solved end to end, or analysis only before building.">
-<link rel="alternate" type="text/markdown" href="/skills/raw/solve-a-problem.md"><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%23b4552d%22/><text x=%2250%22 y=%2253%22 dominant-baseline=%22central%22 text-anchor=%22middle%22 font-family=%22Georgia, 'Times New Roman', serif%22 font-size=%2246%22 letter-spacing=%221%22 fill=%22%23fdfaf4%22>DE</text></svg>"><link rel="stylesheet" href="/skills/styles.css"></head><body><main><a class="back" href="/skills/">← Skills</a><header class="skill-header"><h1>Solve a problem</h1><p class="description">Take a non-trivial build or process problem from diagnosis through options, recommendation, implementation, and verification. Use when someone wants a problem solved end to end, or analysis only before building.</p><div class="skill-actions"><a href="/skills/raw/solve-a-problem.md">Raw Markdown</a><button class="copy" type="button" data-copy="/skills/raw/solve-a-problem.md">Copy Markdown</button></div></header><article class="skill-body"><p>Use this workflow for a non-trivial build, integration, automation, process, or operational problem when the solution is not already obvious. Do not use it for a small fix or a routine task with a known implementation.</p>
-<p>By default, work from understanding through implementation. If the user requests analysis only, stop after the recommendation and wait for a decision.</p>
+<meta name="robots" content="noindex,nofollow,noarchive"><title>Solve a problem · AI skills</title><meta name="description" content="Takes a non-trivial build or process problem from diagnosis to options, recommendation, and implementation. Use when someone says &quot;build X&quot; or &quot;think it through, don&#39;t build yet&quot;.">
+<link rel="alternate" type="text/markdown" href="/skills/raw/solve-a-problem.md"><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%23b4552d%22/><text x=%2250%22 y=%2253%22 dominant-baseline=%22central%22 text-anchor=%22middle%22 font-family=%22Georgia, 'Times New Roman', serif%22 font-size=%2246%22 letter-spacing=%221%22 fill=%22%23fdfaf4%22>DE</text></svg>"><link rel="stylesheet" href="/skills/styles.css"></head><body><main><a class="back" href="/skills/">← Skills</a><header class="skill-header"><h1>Solve a problem</h1><p class="description">Takes a non-trivial build or process problem from diagnosis to options, recommendation, and implementation. Use when someone says &quot;build X&quot; or &quot;think it through, don&#39;t build yet&quot;.</p><div class="skill-actions"><a href="/skills/raw/solve-a-problem.md">Raw Markdown</a><button class="copy" type="button" data-copy="/skills/raw/solve-a-problem.md">Copy Markdown</button></div></header><article class="skill-body"><p>Use this workflow to take a non-trivial build, integration, automation, process, or operational problem from understanding through options, a clear recommendation, implementation, and verification. It is meant for problems where the shape of the solution is not obvious, not for small fixes or routine tasks with a known implementation.</p>
+<h3>Quick version</h3>
+<ul>
+<li>Restate the underlying problem in your own words before discussing solutions: who is affected, what they are trying to do, what happens today, and how much it hurts. If the requested solution does not fit the problem, say so.</li>
+<li>Decide whether it is worth solving now, and flag any hard-to-reverse choices (data changes, public interfaces, long-lived settings, vendor commitments) for an explicit decision first.</li>
+<li>Write three to five lightweight evaluation criteria before generating ideas.</li>
+<li>Generate genuinely different options, always including &quot;do nothing or defer&quot; and a non-code option, plus small and larger technical versions.</li>
+<li>Compare options against the criteria in a short table and make one clear recommendation with reasons.</li>
+<li>If the user asked for analysis only, stop there. Otherwise plan, implement, verify, and report what was tested and what was not.</li>
+</ul>
+<h3>When to use it</h3>
+<p>By default, work from understanding all the way through implementation. If the user says something like &quot;just think this through, don&#39;t build yet,&quot; stop after the recommendation in Step 6 and wait for a decision.</p>
+<p>Enter this workflow when the direction is already committed. If the user is still exploring what to do at all, first generate ideas, stress-test them, and make the decision, then come back here.</p>
 <h3>1. Understand the problem</h3>
-<p>Start with the underlying problem, not the user’s proposed solution. If they ask to build something, work backward:</p>
+<p>Start with the underlying problem, not the user&#39;s proposed solution. If they ask to build something, work backward:</p>
 <ul>
 <li>Who is affected, and what are they trying to accomplish?</li>
 <li>What happens today, including workarounds?</li>
@@ -12,14 +23,14 @@
 <li>What outcome would make the situation meaningfully better?</li>
 <li>What constraints, dependencies, deadlines, or access boundaries apply?</li>
 </ul>
-<p>Write a concise problem statement and descriptive requirements. Describe the desired outcome and constraints rather than assuming an implementation. If the proposed solution does not fit the problem, say so directly.</p>
-<p>Ask only for information that cannot be found in authorized project context, documentation, code, or records. When reviewing private communications or records about people, ensure there is a legitimate purpose and clear authorization; use the minimum relevant sources and details, omit unrelated sensitive information, and keep findings within the appropriate access boundary.</p>
+<p>Write a concise problem statement and descriptive requirements. Describe the desired outcome and constraints rather than assuming an implementation. If the proposed solution does not fit the problem, say so directly at this stage rather than building it and hoping.</p>
+<p>Ask only for information that cannot be found in available project context, documentation, code, or records.</p>
 <h3>2. Assess whether to solve it now</h3>
-<p>Assess severity, frequency, affected users, opportunity cost, available alternatives, and maintenance burden. Include “do nothing,” “deprioritize,” or “improve the current workaround” as real options when appropriate.</p>
+<p>Assess severity, frequency, affected users, opportunity cost, available alternatives, and maintenance burden. Include &quot;do nothing,&quot; &quot;deprioritize,&quot; or &quot;improve the current workaround&quot; as real options when appropriate.</p>
 <p>Separate decisions by reversibility:</p>
 <ul>
-<li><strong>Reversible decisions:</strong> Small choices that are easy to change. Use reasonable judgment, choose, and move forward.</li>
-<li><strong>Hard-to-reverse decisions:</strong> Persistent data changes, public interfaces, long-lived configuration, security boundaries, migrations, external contracts, or vendor commitments. Pause for an explicit decision before implementation. Record the decision and rationale when the consequence warrants it.</li>
+<li><strong>Reversible decisions:</strong> Small choices that are easy to change. Use reasonable judgment, choose, and move forward without agonizing.</li>
+<li><strong>Hard-to-reverse decisions:</strong> Persistent data changes, public interfaces, long-lived configuration, security boundaries, migrations, external contracts, or vendor commitments. Pause for an explicit decision before implementation. Record the decision and rationale when the consequence warrants it. Do not quietly build a hard-to-reverse commitment inside an implementation task.</li>
 </ul>
 <p>If priority or direction is unclear, present the tradeoff and ask the responsible decision-maker to choose before substantial design or implementation work.</p>
 <h3>3. Research the current context</h3>
@@ -29,7 +40,7 @@
 <p>Define explicit, lightweight criteria before generating options. For example:</p>
 <ul>
 <li>Must preserve existing authentication, privacy, and data behavior.</li>
-<li>Must fit available time, skills, and maintenance capacity.</li>
+<li>Must fit available time, skills, and maintenance capacity (set the time budget that fits your situation).</li>
 <li>Should avoid new dependencies, persistent settings, and public surface area.</li>
 <li>Must have a clear verification method.</li>
 <li>Should be removable or reversible if it fails.</li>
@@ -39,24 +50,35 @@
 <p>Generate genuinely different approaches, not small variations of the same design. Consider:</p>
 <ol>
 <li>Do nothing, defer, or improve the current workaround.</li>
-<li>A non-code solution, such as clearer instructions, a process adjustment, a template, or an existing platform capability.</li>
+<li>A non-code solution, such as clearer instructions, a process adjustment, a template, a better-organized view in an existing tool, a no-code automation, or an existing platform capability.</li>
 <li>A small targeted technical change.</li>
 <li>A larger integrated solution.</li>
 <li>Building, buying, or integrating an existing service.</li>
 </ol>
-<p>For ambiguous problems, generate a wider set of candidates before narrowing. Keep each option short: what it is, what it solves, major costs, and key risks.</p>
+<p>For ambiguous or complex problems, generate a wider set of candidates before narrowing. Keep each option short: one or two brief paragraphs covering what it is, what it solves, major costs, and key risks.</p>
 <h4>Design principles for technical options</h4>
 <ul>
-<li>Prefer one understandable code path over runtime-dependent special cases.</li>
-<li>Validate inputs and fail clearly for invalid states. Do not hide programming errors by silently producing plausible but incorrect output.</li>
-<li>Prefer established conventions over new abstractions, and new abstractions over long-lived configuration.</li>
-<li>Treat new fields, settings, and public interfaces as ongoing maintenance commitments.</li>
-<li>Prefer well-bounded changes that can be removed cleanly.</li>
-<li>Use familiar, proven technology and existing infrastructure where possible.</li>
-<li>Design for deterministic, isolated testing.</li>
-<li>Prioritize correctness over performance unless performance is a stated requirement.</li>
-<li>Make clean changes at the appropriate design boundary; avoid expedient patches that create future debt.</li>
+<li><strong>One code path over special cases.</strong> A single path is easier to reason about, test, and debug, even if slightly less efficient.</li>
+<li><strong>Fail clearly on invalid states.</strong> Validate inputs and use strict types. Do not hide programming errors by silently producing plausible but incorrect output.</li>
+<li><strong>Convention over composability over configuration.</strong> Prefer established patterns, then flexible abstractions, and only then config-driven behavior.</li>
+<li><strong>Avoid permanent commitments.</strong> New fields, settings, and public interfaces must be maintained indefinitely; treat them as hard-to-reverse decisions.</li>
+<li><strong>Make changes easy to delete.</strong> Prefer loosely coupled, well-bounded changes that can be removed cleanly.</li>
+<li><strong>Use boring technology.</strong> Prefer familiar, proven tools and existing infrastructure over clever or novel approaches.</li>
+<li><strong>Design for testing.</strong> Favor determinism, and factor logic so it can be tested in isolation. Thinking through how you would test it often improves the design even if you do not write the tests yet.</li>
+<li><strong>Correct before fast.</strong> Prioritize correctness over performance unless performance is a stated requirement.</li>
+<li><strong>Change things properly.</strong> Make clean changes at the appropriate design boundary; avoid expedient patches that create future debt.</li>
 </ul>
+<p>An invented illustration of the first principle, as a code comment:</p>
+<pre><code># Every reminder goes through the job queue, even when the recipient
+# is on the same server. A direct shortcut for local recipients would
+# create two delivery paths, and bugs would only appear depending on
+# where a request happened to land. One path is easier to test.</code></pre>
+<p>An invented illustration of what to avoid under the second principle:</p>
+<pre><code>try:
+    total = calculate_order_total(order)
+except (ValueError, TypeError, KeyError, AttributeError):
+    total = 0.0  # hides real bugs as a believable but wrong number</code></pre>
+<p>If <code>calculate_order_total</code> raises <code>AttributeError</code>, that is a bug. It should fail loudly, not quietly report a zero total.</p>
 <h3>6. Evaluate and recommend</h3>
 <p>Compare viable options against the criteria from Step 4. Present a concise proposal containing:</p>
 <ul>
@@ -66,12 +88,15 @@
 <li>One clear recommendation and why it is preferred.</li>
 <li>Important risks, irreversible consequences, assumptions, and open decisions.</li>
 </ul>
-<p>Keep the proposal direct. Store it in the user’s chosen shared documentation system when durable review or collaboration is needed; otherwise provide it in the current workspace. Use a clear, date-prefixed title such as <code>11 Oct 2026: Solve — topic</code>.</p>
+<p>A compact comparison table often helps. An invented example for Fernwood Garden Club, which wants members to stop missing volunteer shifts:</p>
+<div class="table-wrap" tabindex="0" aria-label="Scrollable table"><table><thead><tr><th>Option</th><th>Fits criteria?</th><th>Main cost</th><th>Main risk</th></tr></thead><tbody><tr><td>Do nothing</td><td>Yes, but problem persists</td><td>None</td><td>Shifts keep going unfilled</td></tr><tr><td>Shared calendar plus weekly reminder email</td><td>Yes</td><td>An hour of setup</td><td>Reminders get ignored</td></tr><tr><td>Custom sign-up program with text alerts</td><td>Partly; adds a new dependency</td><td>Days of work, ongoing upkeep</td><td>Hard to remove once members rely on it</td></tr></tbody></table></div>
+<p>Recommendation: the shared calendar with reminders, because it solves the main problem with existing tools and is easy to undo. Revisit a custom program only if missed shifts continue.</p>
+<p>Keep the proposal direct. Expect the decision-maker to ask questions or iterate before choosing; they may pick a different option. Give the proposal a clear, date-prefixed title, using one unambiguous date format consistently (spelling out the month, as in <code>9 Oct 2026: Solve - topic</code>, avoids day/month confusion).</p>
 <p>If this is analysis-only work, stop here.</p>
 <h3>7. Plan, implement, and verify</h3>
-<p>For larger work, create an implementation plan before changing the system. Include scope, ordered steps, affected components, migration and rollback strategy, test strategy, deployment steps, and follow-up ownership. Place the plan where appropriate reviewers can edit and approve it.</p>
+<p>For larger work, create an implementation plan before changing the system. Include scope, ordered steps, affected components, migration and rollback strategy, test strategy, deployment steps, and follow-up ownership. Put the plan somewhere reviewers can easily read, comment on, and edit.</p>
 <p>Implement the approved solution using project conventions. Run relevant automated tests, static checks, and focused manual verification. Confirm the result against the evaluation criteria, including compatibility, privacy, security, and failure behavior.</p>
-<p>Do not claim success based only on implementation. State what was tested, the results, and what remains unverified. Commit, publish, or deploy changes only according to the user’s repository and release practices.</p>
+<p>Do not claim success based only on implementation. State what was tested, the results, and what remains unverified. Commit, publish, or deploy changes according to the user&#39;s repository and release practices.</p>
 <h3>8. Hand off</h3>
 <p>Report:</p>
 <ul>
@@ -81,4 +106,22 @@
 <li>Required user actions, rollout steps, or monitoring.</li>
 <li>References to the proposal, plan, and change set when applicable.</li>
 </ul>
-<p>Keep the handoff focused on outcomes and operationally useful detail. Avoid burying the reader in temporary implementation notes.</p></article><footer><a href="/skills/LICENSE.txt">CC0</a></footer></main><script>document.querySelector('[data-copy]').addEventListener('click',async function(){try{const text=await fetch(this.dataset.copy).then(r=>{if(!r.ok)throw new Error();return r.text()});await navigator.clipboard.writeText(text);this.textContent='Copied'}catch{this.textContent='Open raw Markdown'}})</script></body></html>
+<p>Keep the handoff focused on outcomes and operationally useful detail. Avoid burying the reader in temporary implementation notes.</p>
+<h3>Common failure modes</h3>
+<ul>
+<li>Building exactly what was asked when the request does not solve the real problem.</li>
+<li>Skipping criteria, so the first plausible idea wins.</li>
+<li>Offering only technical options, or only variations of one design.</li>
+<li>Leaving out &quot;do nothing&quot; when the priority is weak.</li>
+<li>Presenting several options without a recommendation.</li>
+<li>Slipping a hard-to-reverse commitment into implementation without an explicit decision.</li>
+<li>Writing long proposals that bury the recommendation.</li>
+<li>Reporting &quot;done&quot; without saying what was verified.</li>
+</ul>
+<h3>Optional extras</h3>
+<ul>
+<li><strong>Shared documents.</strong> If you use a shared documentation system, save the proposal and any implementation plan there with the date-prefixed title, and end your reply with a link. Editable documents are usually easier for reviewers than plans kept inside an assistant&#39;s private planning mode. Plans for pure code changes tied to a single branch can stay with the code if the user prefers.</li>
+<li><strong>Repository conventions.</strong> If the user&#39;s practice is to commit and push after completing work, follow it, including any commit message prefixes (for example, feature, fix, or maintenance tags). Otherwise ask before publishing.</li>
+<li><strong>Wide idea generation.</strong> For problems that need many candidates, run a separate brainstorm aiming for a large list (for example, ten or more ideas, adjustable) before narrowing to the few worth comparing.</li>
+<li><strong>Decision records.</strong> For hard-to-reverse choices, keep a short record of the options considered, the choice, the rationale, and what would cause you to revisit it.</li>
+</ul></article><footer><a href="/skills/LICENSE.txt">CC0</a></footer></main><script>document.querySelector('[data-copy]').addEventListener('click',async function(){try{const text=await fetch(this.dataset.copy).then(r=>{if(!r.ok)throw new Error();return r.text()});await navigator.clipboard.writeText(text);this.textContent='Copied'}catch{this.textContent='Open raw Markdown'}})</script></body></html>

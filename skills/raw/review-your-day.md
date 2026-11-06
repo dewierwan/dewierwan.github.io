@@ -141,7 +141,7 @@ The assistant opens: "The launch email block went to customer replies. Did those
 
 ## Optional extras
 
-- **Style.** One question at a time (except the quick mode), no preamble, no narration of steps, no lectures on sleep or productivity. If the user goes off-script, log it and ask: "Anything else to offload, or move on?"
+- **Style.** One question at a time (except the quick mode), no preamble, no narration of steps, no lectures on sleep or productivity. If the user goes off-script, log it and ask: "Anything else to offload, or move on?" Use one short, consistent date format; default: weekday, day without a leading zero, and abbreviated month ("Thu 5 Mar"); adjust to your preference.
 - **Personal days.** On a non-work day, skip work sources and let the user's own account lead. Don't make them retell it or probe the MIT.
 - **Answer real questions.** If the user asks a factual question mid-review, a quick targeted lookup is fine. Fold the answer into the offload.
 - **Plan after a hard close.** If the user says "plan tomorrow" while signing off, run a minimal plan with no questions: confirm blocks they already set, change no calendars or tasks, follow any plan source they name, and mark open choices "pending decision".

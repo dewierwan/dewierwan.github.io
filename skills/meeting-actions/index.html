@@ -35,7 +35,7 @@
 <li>Otherwise, process the current day.</li>
 </ul>
 <p>State the scope once, for example: &quot;Scanning meetings for 23 Apr.&quot;</p>
-<p>Check every place where the user&#39;s meeting records live, not just the main one. Many people keep a shared team meeting space plus a separate private space for sensitive calls, reference calls, or internal one-to-ones. Sources can differ in how they filter: one may already show only meetings the user attended, while another needs a direct query by date. Query each source for the selected scope, merge the results, and remove any meeting that appears in both.</p>
+<p>Check every place where the user&#39;s meeting records live, not just the main one. Many people keep a shared team meeting space, a separate private space for sensitive calls or internal one-to-ones, and sometimes a restricted space for a specific function, such as a hiring space that holds reference calls. When a new category of meeting moves to its own space, add that space to the sweep, or those meetings will silently drop out. Sources can differ in how they filter: one may already show only meetings the user attended, while another needs a direct query by date. Query each source for the selected scope, merge the results, and remove any meeting that appears in more than one.</p>
 <p>For each meeting, collect:</p>
 <ul>
 <li>Title, date, and time.</li>
@@ -184,7 +184,7 @@ Option B: [Skip or alternate task shape]</code></pre>
 <h3>10. Audit and report</h3>
 <p>Before finishing, verify that:</p>
 <ul>
-<li>Every meeting source for the scope was checked and merged without duplicates.</li>
+<li>Every meeting source for the scope, including private or restricted spaces, was checked and merged without duplicates.</li>
 <li>Every created task has a genuine owner and unfinished outcome.</li>
 <li>Transcript evidence supports ownership where summaries were unclear.</li>
 <li>Completed and delegated work was excluded.</li>
@@ -195,7 +195,7 @@ Option B: [Skip or alternate task shape]</code></pre>
 <li>Drafts are ready to send and match the user&#39;s preferences.</li>
 <li>Every uncertain item was asked or explicitly deferred.</li>
 </ul>
-<p>Report tersely: meetings reviewed, tasks created or updated with due dates, skipped items with reasons, open questions, and any guidance changes. Use a consistent short date format and no decoration.</p>
+<p>Report tersely: meetings reviewed, tasks created or updated with due dates, skipped items with reasons, open questions, and any guidance changes. Use one consistent short day-and-month date format, such as &quot;3 May,&quot; and no decoration.</p>
 <h3>Optional extras</h3>
 <p><strong>Long-transcript helper.</strong> If transcripts often exceed what the assistant can read at once, keep a small program that slices a saved record by section (such as the action items), scans for commitment phrases attributed to the user, searches by pattern, or returns the next window of text. Scanning for commitments directly beats trusting the summary&#39;s action list.</p>
 <p><strong>Pattern guide.</strong> Keep a user-maintained guide of recurring patterns organized by meeting type: common misattributions, reliable signs of live completion, type exceptions. After each run:</p>
@@ -203,6 +203,7 @@ Option B: [Skip or alternate task shape]</code></pre>
 <li>Append a short, generalized note when a pattern will affect future triage. Do not rewrite old entries.</li>
 <li>Change the workflow itself only for cross-cutting principles, new defaults, or a new step, and ask before structural changes such as adding a step or changing the evidence order.</li>
 <li>Record a new responsibility boundary in the user&#39;s responsibility reference if it applies beyond one meeting.</li>
+<li>Add any newly created meeting space to the list of sources in step 2.</li>
 </ul>
 <p>Do not turn one-off facts about a person or meeting into permanent rules. Report any changes in one or two bullets.</p>
 <p><strong>Scheduling.</strong> Run the sweep once a day at a time the user chooses. The work typically scales with meeting count, so a heavy day takes longer.</p></article><footer><a href="/skills/LICENSE.txt">CC0</a></footer></main><script>document.querySelector('[data-copy]').addEventListener('click',async function(){try{const text=await fetch(this.dataset.copy).then(r=>{if(!r.ok)throw new Error();return r.text()});await navigator.clipboard.writeText(text);this.textContent='Copied'}catch{this.textContent='Open raw Markdown'}})</script></body></html>

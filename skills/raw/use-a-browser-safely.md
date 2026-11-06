@@ -92,6 +92,8 @@ Before navigating deeply, identify the target page, record, form, or setting; wh
 
 For deletions, check whether the service keeps a restorable trash or recycle bin and note it in the pre-action record. A restore path lowers the risk but does not remove the need for authorization. Some actions, including delete, sit behind menus that appear only when you hover over an item; reveal the menu on the exact item you verified.
 
+**Credentials stay with the user.** Entering API keys, tokens, passwords, or recovery codes into any form is the user's step. Set up everything around the credential (open the right page, fill the other fields, reach the input box), then hand the user exact steps to enter it themselves. Never move secrets by copy and paste through automation: a site's copy button can appear to work while the system clipboard still holds older, unrelated text, so the wrong value lands in the wrong place.
+
 Honor an explicit request to review before submission. If authorization is already given, do not ask again. If it is missing, prepare and verify the full result, show the pre-submit state, and ask only for the final action.
 
 ## 6. Inspect the page before editing
@@ -222,6 +224,7 @@ A click is not proof of success. Look for real evidence: a success message, a co
 | Profile window open but no connection appears | Connector in that profile is signed out or asleep | Ask the user to open and sign in to it in that window, re-list, verify. |
 | Session ends after a page-script request | Internal endpoint called without the app's normal headers | Drive the UI or use a supported API. |
 | In-memory state read returns nothing after an app update | Internal state layout moved in a new version | Probe for the current location, fall back to older ones, and verify against the screen. |
+| A site's copy button seems to work, but pasting elsewhere gives old, unrelated text | Copies made through the automation layer did not reach the system clipboard | Do not move secrets by copy and paste; prepare everything around the credential and give the user exact steps to enter it. |
 | Automation connection fails an integrity or signature check | Local helper is stale or altered | Stop; repair through an approved path that keeps verification on. Never disable checks. |
 | Security check or 2FA prompt appears | Site needs the user present | Ask the user to complete it, then continue. |
 
@@ -242,12 +245,13 @@ When a run reveals a reusable lesson, such as a new failure mode, a working patt
 - [ ] Every meaningful change was read back.
 - [ ] The pre-submit gate passed, with no empty required fields.
 - [ ] Irreversible actions had a pre-action record and authorization.
+- [ ] Credentials were entered by the user, not moved through automation.
 - [ ] Success was confirmed with evidence after acting.
 - [ ] The report separates confirmed results from uncertainty and exposes no secrets.
 
 ## Optional extras
 
-**Clipboard and paste.** Headless browsers often lack clipboard permission, so embed values directly. When rich content (such as HTML with links) must be inserted, a synthetic paste event carrying both HTML and plain text works in some editors and is ignored by others; some editors expose their own documented conversion method instead. Verify the result, ideally through the service's API or an export rather than the screen alone.
+**Clipboard and paste.** Headless browsers often lack clipboard permission, so embed values directly. Copies triggered through an automation connector may not reach the system clipboard at all, so never rely on a copy and paste round trip without checking what actually arrived. When rich content (such as HTML with links) must be inserted, a synthetic paste event carrying both HTML and plain text works in some editors and is ignored by others; some editors expose their own documented conversion method instead. Verify the result, ideally through the service's API or an export rather than the screen alone.
 
 **Drag and drop.** Dragging can create layout changes (like columns) or trigger a clickable element by accident. Prefer keyboard move commands with short waits, then verify the final structure.
 

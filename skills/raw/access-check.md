@@ -29,7 +29,7 @@ Run this only if you are authorized to manage access to these systems, such as a
 | A disambiguator, such as current or past employers | Rules out people with the same name |
 | Which private channels and restricted spaces they will join | Defines what they can actually see |
 
-If the requester says "standard team-member access", assume every public channel and every open knowledge-base space, with no private channels.
+If the requester says "standard team-member access", assume every public channel and every open knowledge-base space, with no private channels or restricted spaces.
 
 ## 2. Identify the person
 
@@ -41,8 +41,8 @@ If the requester says "standard team-member access", assume every public channel
 
 This decides what counts as exposed. Skip what they cannot see, but say what you skipped.
 
-- **Usually not visible:** direct messages and group messages they are not in; private channels they will not join; the requester's personal or private spaces and databases (if the requester excludes them); pages in another user's private section.
-- **Usually visible:** public channels; private channels they will join; every page in shared spaces and shared databases, including meeting notes, hiring, strategy, projects and archives.
+- **Usually not visible:** direct messages and group messages they are not in; private channels they will not join; closed or restricted spaces they will not join, such as a hiring space holding reference notes, unless they are joining that team; the requester's personal or private spaces and databases (if the requester excludes them); pages in another user's private section.
+- **Usually visible:** public channels; private channels they will join; every page in shared spaces and shared databases, including meeting notes, strategy, projects and archives. Hiring pages left in an open space count as visible even when a separate closed hiring space exists.
 
 Rules for unclear cases:
 
@@ -65,7 +65,7 @@ For each relevant hit, record the channel type and a permanent link. Read the fu
 ## 5. Search the knowledge base
 
 1. Search the full name, each misspelling, and the name combined with their main employers or role. Ask for a large page of results.
-2. If the requester's private space is excluded, run the same search limited to that space. Hits that appear only there are out of scope.
+2. If the requester's private space is excluded, run the same searches (including the employer and role combinations) limited to that space. Every hit the limited search returns lives in the private space and is out of scope, even though the unfiltered search will also show it. Judge by this limited search, not by the location path: pages under generic-looking paths such as an archive or task list can still sit inside the private space.
 3. Open every remaining hit that mentions the person beyond a passing name-drop. Read the full text and check its location against your visibility map.
 4. Check structured properties as well as body text: hiring status fields, pipeline stages, contact-relationship fields, and similar.
 5. If a page fails to open, report it with its link and ask the requester to check it by hand.
@@ -111,11 +111,11 @@ Every item gets its own working link, including **○ Fine** items and skipped d
 
 > **1 ▲, 1 ◆. One item blocks access today.**
 >
-> - **▲ Hide** [Hiring pipeline: Jordan Vale](link). Hiring space, visible. Status field "Declined, revisit later"; note: "unsure about follow-through." Fix: restrict the page.
+> - **▲ Hide** [Hiring pipeline: Jordan Vale](link). Open projects space, visible. Status field "Declined, revisit later"; note: "unsure about follow-through." Fix: restrict the page or move it to the closed hiring space.
 > - **◆ Consider** [Advisory board planning](link). Strategy space, visible. "Jordan might push for equity; hold firm." Fix: redact the line.
 > - **○ Fine** [#announcements, 4 Oct](link). Welcome post, all positive replies.
 >
-> Skipped as not visible: 2 direct messages ([1](link), [2](link)); 1 page in a private meeting database ([link](link)).
+> Skipped as not visible: 2 direct messages ([1](link), [2](link)); 1 page in a private meeting database ([link](link)); 1 reference-call note in the closed hiring space ([link](link)).
 
 ## 8. Make changes
 
@@ -126,7 +126,9 @@ Do not change permissions, move pages or edit content without explicit approval.
 - Searching only the exact name and missing misspellings, nicknames or tagged IDs.
 - Confusing a namesake with the person.
 - Assuming a page is private because search cannot show its permissions.
+- Treating a closed space as visible when the person is not joining that team, or missing sensitive pages left in an open space.
 - Missing a private location because it was renamed, or reporting it as exposed.
+- Deciding whether a hit is in the private space from its path instead of from the limited search.
 - Reading only the first message and missing a critical reply in the thread.
 - Missing sensitive content stored in page properties rather than body text.
 - Acting on findings before approval.
@@ -134,6 +136,6 @@ Do not change permissions, move pages or edit content without explicit approval.
 ## Optional extras
 
 - **Parallel searches.** With an agent connected to your chat and knowledge tools, run all name variants at once and ask for detailed results so each hit comes back with a permanent link.
-- **Scoped exclusion search.** If your knowledge tool can limit search to one space, use it to separate hits in the requester's private space from hits in shared spaces, instead of guessing from titles.
-- **Reusable location list.** Keep a short note of private locations (current and former names), shared databases and typical access bundles, so each check starts from an accurate visibility map.
+- **Scoped exclusion search.** If your knowledge tool can limit search to one space, run every name and employer query limited to the requester's private space and exclude everything it returns, instead of guessing from titles or paths.
+- **Reusable location list.** Keep a short note of private locations (current and former names), closed team spaces, shared databases and typical access bundles, so each check starts from an accurate visibility map.
 - **Re-check routine.** After fixes, have the agent re-run the same saved queries and report only items still marked ▲ or ◆.

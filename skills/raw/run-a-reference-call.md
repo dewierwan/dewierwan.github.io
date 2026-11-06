@@ -1,11 +1,11 @@
 ---
 name: run-a-reference-call
-description: Prepares a private briefing page for a candidate reference call, with context, an opening, and targeted questions. Use when checking references or prepping a reference call.
+description: Prepares a briefing page for a candidate reference call, with context, a tailored opening, and targeted questions. Use when checking references or asked to prep a reference call.
 ---
 
 # Run a reference call
 
-Use this workflow when a hiring manager is checking references on a candidate for a role at their own organization. The output is a ready-to-use call page, saved in a private place, that holds context, a tailored opening, briefing notes, and a question list.
+Use this workflow when a hiring manager is checking references on a candidate for a role at their own organization. The output is a ready-to-use call page with context, a tailored opening, briefing notes, and a question list.
 
 ## Quick version
 
@@ -15,7 +15,7 @@ Light path: paste the candidate's CV (or a short summary of it), the role, and t
 - It drafts a tailored opening you can read out in under a minute.
 - It writes briefing notes: what this referee can uniquely confirm, and any themes from earlier references to test.
 - It gives one list of core questions plus three or four probes for the role.
-- Save the result somewhere only you (or the hiring panel) can see, not a shared team space.
+- Save the page with your other reference pages for this candidate so later calls can build on it.
 - After the call, paste your rough notes back and ask it to separate what the referee saw from what they concluded.
 
 ## 1. Scope, deliverable, and inputs
@@ -24,7 +24,7 @@ Light path: paste the candidate's CV (or a short summary of it), the role, and t
 
 **The page is the deliverable.** Do not stop after research or reply with a chat summary. The hiring manager will read the page, not the conversation. Everything useful must be on the page.
 
-**Privacy and authorization.** Reference checks involve personal information about two people: the candidate and the referee. Research only for a legitimate hiring purpose, when the candidate has supplied or agreed to this referee and the user has authorized the sources you search. Use the minimum relevant information (role, organization, working relationship, and job-relevant work history) and leave out personal life, health, family, protected characteristics, and anything unrelated to performance. Keep the page in a private, access-restricted location limited to the hiring team, and record or transcribe the call only if your policy allows it and the referee agrees at the start.
+**Privacy and authorization.** Research the candidate and referee only for a legitimate hiring purpose, when the candidate has supplied or agreed to this referee and the user has authorized the sources you search. Use the minimum relevant information (role, organization, working relationship, job-relevant work history) and leave out personal life, health, family, protected characteristics, and anything unrelated to performance. Keep the page within an access boundary limited to the hiring team, as set out in section 4.
 
 | Input | Source if not provided | Notes |
 |---|---|---|
@@ -33,7 +33,7 @@ Light path: paste the candidate's CV (or a short summary of it), the role, and t
 | Role | Hiring emails, notes, or applicant tracking system | Needed for role-specific probes |
 | Call date | Calendar event; otherwise today | Date only is fine |
 | Hiring manager name and organization | User profile or user's choice | Used in the opening and page attendees |
-| Private storage location | User's choice | Where reference pages are saved |
+| Hiring space | User's choice | The one place all reference pages are saved |
 
 When tools are connected, run every section below in order. Otherwise, use the Quick version with what the user pastes in.
 
@@ -52,7 +52,7 @@ When tools are connected, run every section below in order. Otherwise, use the Q
 - How the referee was introduced. The candidate's reference list message is usually the key source.
 - The referee's relationship to the candidate (manager, client, peer, direct report, teacher).
 
-**3b. Research the referee.** Run these searches in parallel, within authorized sources:
+**3b. Research the referee.** Run these searches in parallel:
 
 1. Email: direct correspondence with the referee's address.
 2. Email: the referee's full name, to catch introductions and reference threads.
@@ -65,7 +65,7 @@ From each email search, read only the few recent messages that concern the candi
 
 **3c. Candidate links.** Collect links the hiring manager will want during the call: the applicant tracking profile, a professional profile, and any portfolio, code repository, or personal site the candidate shared in their application.
 
-**3d. Completed references.** Search every place reference pages might live for other pages on the same candidate (for example, "{Candidate Name} reference"). Check the private location and any shared or older locations, since earlier pages may have been saved before the current storage rule. Read them and pull out themes, strengths, concerns, and development areas. These become specific angles to confirm or challenge in this call.
+**3d. Completed references.** Search the hiring space for other pages on the same candidate (for example, "{Candidate Name} reference"). When every reference page lives there, one search is enough; if some older pages have not been moved yet, check those locations too. Read them and pull out themes, strengths, concerns, and development areas. These become specific angles to confirm or challenge in this call.
 
 **3e. Compile findings.** Organize what you found into:
 
@@ -78,7 +78,9 @@ From each email search, read only the few recent messages that concern the candi
 
 ## 4. Create the call page
 
-**Where to save it.** Create the page in the user's private meetings database or a restricted folder in their chosen notes tool. Never put it in a shared team meetings space. Referees speak candidly about people the team may later work alongside, so these pages need tighter access than ordinary meeting notes.
+**Where to save it.** Create the page in one dedicated hiring space in the user's chosen notes tool, whose membership is limited to the hiring team. Not a shared team meetings space, and not scattered personal folders. Referees speak candidly about people the team may later work alongside, and one location keeps earlier references easy to find.
+
+**Let access come from the space.** The page should inherit its permissions. Do not change its individual sharing settings or connect extra integrations to it. Restricting a single page after the fact may not remove access that people or integrations already had, so a page locked down on its own can be less private than it looks. If the space is not restricted enough, fix the space, not the page.
 
 Create properties and content together:
 
@@ -86,7 +88,7 @@ Create properties and content together:
 - **Date:** call date, date only.
 - **Attendees:** the hiring manager, plus any other interviewer joining.
 
-**Verify before reporting done.** Read the page back from the system. Confirm it is in the private location, the title and date display correctly (not as escaped code or raw markup), and the content is complete. Fix anything that did not render as intended.
+**Verify before reporting done.** Read the page back from the system. Confirm it sits in the hiring space, the title and date display correctly (not as escaped code or raw markup), and the content is complete. Fix anything that did not render as intended.
 
 Use this template and tailor every placeholder:
 
@@ -99,7 +101,7 @@ Use this template and tailor every placeholder:
 - {Candidate}'s other references: {list}.
 
 ## Opening
-> Hi {Referee}, thanks so much for making the time. I'm {Hiring Manager}, {their role} at {Organization}. {One sentence on what the organization does.} {Candidate} has applied for our {Role} role, and we're excited about their background. We're doing reference checks now so we can decide quickly. What you share stays within our hiring team. {If recording: Is it OK if I record so I can take accurate notes?}
+> Hi {Referee}, thanks so much for making the time. I'm {Hiring Manager}, {their role} at {Organization}. {One sentence on what the organization does.} {Candidate} has applied for our {Role} role, and we're excited about their background. We're doing reference checks now so we can decide quickly. What you share stays within our hiring team. {If your policy allows recording: Is it OK if I record so I can take accurate notes?}
 
 ## Briefing notes
 - **Themes from completed references:** {who said what, and what to test now}
@@ -156,7 +158,7 @@ Briefing notes the assistant writes:
 
 - Follow vague praise with "What did that look like?" or "Can you give an example?"
 - Weight evidence by how directly the referee observed the work, not by their title or confidence.
-- Afterward, record notes on the same private page. Separate what the referee observed, how the referee interpreted it, and your own inference. Note confidence and limits on what they could know.
+- Afterward, record notes on the same page. Separate what the referee observed, how the referee interpreted it, and your own inference. Note confidence and limits on what they could know.
 - Treat one reference as one input. Compare across references and other hiring evidence before deciding.
 
 ## 9. Style and quality checks
@@ -166,11 +168,11 @@ Briefing notes the assistant writes:
 - Questions sit in one bulleted list, not numbered, with no separate agendas.
 - Candidate links and other references are on the page.
 - Probes match the real role, not a generic list.
-- Earlier references were searched in every location they might be stored.
-- The page exists in the private location, and you have read it back to confirm the title, date, and content before reporting the task complete.
+- Earlier references were searched, including any locations not yet consolidated.
+- You read the page back and confirmed its location, title, date, and content before reporting the task complete.
 
 ## Optional extras
 
-- **Meeting-notes or transcription block.** If your notes tool offers an in-meeting transcription or AI notes block and your policy allows recording, add it at the top of the page. Put only the meeting title inside it and let the tool fill in the summary and transcript during or after the call.
+- **Meeting-notes or transcription block.** If your notes tool offers an in-meeting transcription or AI notes block and recording is allowed, add it at the top of the page. Put only the meeting title inside it and let the tool fill in the summary and transcript during or after the call.
 - **Date fields and inline date tokens.** Some notes tools support a live date token in titles, but the syntax can differ between the tool's own editor and its programmatic interface, and the wrong form may be saved as literal text. Use the form your tool documents for programmatic page creation, set the date property as date only (no time), and confirm the result when you read the page back.
-- **Consolidating old pages.** If earlier reference pages sit in a shared space, consider moving them to the private location so future searches and access controls stay consistent.
+- **Setting up the hiring space.** If you do not have one yet, create a closed space whose members are only the people on hiring panels, then move all existing reference pages into it in one pass. Afterward, check which integrations can reach the workspace as a whole, since page-level settings may not override them.
