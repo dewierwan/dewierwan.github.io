@@ -83,7 +83,7 @@ Extract the ask, key assumptions and evidence, decisions requested, risks, deadl
 
 Some meetings need their own process, such as hiring reference calls, formal interviews, performance or compliance meetings, and incident reviews. A reference call is signaled when the attendee is introduced as someone who can speak to a candidate's work, the title says reference, or the attendee is a former manager or colleague of a current candidate.
 
-If a specialized process exists, switch to it, carry forward the relevant research, and do not produce a generic page. A reference process typically confirms consent, uses a standard question list with role-specific probes, cross-checks themes from earlier referees, separates direct observation from hearsay, and stores its page in its own restricted location rather than the general meeting area.
+If a specialized process exists, switch to it, carry forward the relevant research, and do not produce a generic page. A reference process typically confirms consent, uses a standard question list with role-specific probes, cross-checks themes from earlier referees, and separates direct observation from hearsay.
 
 ## Step 6: Post a situation brief
 

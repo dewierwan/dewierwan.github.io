@@ -70,7 +70,7 @@ Read every source in parallel. For each item collect: source, sender, subject or
 
 *Example (fictional).* A chat with Robin from the Maple Street Rowing Club ends with the user's "Sounds good!" and Robin's "Great, see you there." Two messages earlier, Robin asked whether the user could host the spring meetup, and nobody answered. The chat is a quick win, not no action.
 
-**Unsent drafts.** For every source in scope, also list unsent drafts, including text left in a messaging composer and drafts made earlier in this run. Each is an item in its own right, whatever its age. A draft listing is not always an open loop: stored templates, scheduled messages not yet due, and leftovers the app no longer shows are not loose replies. Mention these once as what they are, and if the user cannot find one, close it and do not ask again.
+**Unsent drafts.** For every source in scope, also list unsent drafts, including text left in a messaging composer and drafts made earlier in this run. Each is an item in its own right, whatever its age. A draft listing is not always an open loop: stored templates, scheduled messages not yet due, and leftovers the app no longer shows are not loose replies. A template with no recipients may also keep appearing in a listing after the user deletes it. Mention these once as what they are, and if the user cannot find one, close it and do not ask again.
 
 **Failures.** If a source fails or is disconnected, name it, the error, and the missing data. Try the safe repairs in its access rules, continue with the others, and never quietly drop a source or swap in a weaker one. Put failures at the top of the output.
 
@@ -172,7 +172,7 @@ Then audit the run for friction: a pointless question, a misfiled item, a misbeh
 - Dumping every bucket at once, or moving on before the user acted.
 - Doing the work a message describes instead of tasking it.
 - Judging a chat by its last message, or bucketing from a preview when the ask sits in an unopened file.
-- Forgetting unsent drafts, or counting things that are not real loops as open.
+- Forgetting unsent drafts, or counting templates and other non-loops as open.
 - Flagging a reply as owed when it was sent in a thread or another channel.
 - Relaying an ask the user cannot place, or proposing a meeting that already exists.
 - Guessing an owner instead of saying "owner unclear".

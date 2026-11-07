@@ -8,7 +8,7 @@
 <li>Decide whether it is worth solving now, and flag any hard-to-reverse choices (data changes, public interfaces, long-lived settings, vendor commitments) for an explicit decision first.</li>
 <li>Write three to five lightweight evaluation criteria before generating ideas.</li>
 <li>Generate genuinely different options, always including &quot;do nothing or defer&quot; and a non-code option, plus small and larger technical versions.</li>
-<li>Compare options against the criteria in a short table and make one clear recommendation with reasons.</li>
+<li>Compare options against the criteria in a short table and make one clear recommendation with reasons. Give it directly in the reply.</li>
 <li>If the user asked for analysis only, stop there. Otherwise plan, implement, verify, and report what was tested and what was not.</li>
 </ul>
 <h3>When to use it</h3>
@@ -91,7 +91,8 @@ except (ValueError, TypeError, KeyError, AttributeError):
 <p>A compact comparison table often helps. An invented example for Fernwood Garden Club, which wants members to stop missing volunteer shifts:</p>
 <div class="table-wrap" tabindex="0" aria-label="Scrollable table"><table><thead><tr><th>Option</th><th>Fits criteria?</th><th>Main cost</th><th>Main risk</th></tr></thead><tbody><tr><td>Do nothing</td><td>Yes, but problem persists</td><td>None</td><td>Shifts keep going unfilled</td></tr><tr><td>Shared calendar plus weekly reminder email</td><td>Yes</td><td>An hour of setup</td><td>Reminders get ignored</td></tr><tr><td>Custom sign-up program with text alerts</td><td>Partly; adds a new dependency</td><td>Days of work, ongoing upkeep</td><td>Hard to remove once members rely on it</td></tr></tbody></table></div>
 <p>Recommendation: the shared calendar with reminders, because it solves the main problem with existing tools and is easy to undo. Revisit a custom program only if missed shifts continue.</p>
-<p>Keep the proposal direct. Expect the decision-maker to ask questions or iterate before choosing; they may pick a different option. Give the proposal a clear, date-prefixed title, using one unambiguous date format consistently (spelling out the month, as in <code>9 Oct 2026: Solve - topic</code>, avoids day/month confusion).</p>
+<p>Keep the proposal direct. Expect the decision-maker to ask questions or iterate before choosing; they may pick a different option.</p>
+<p>By default, give the proposal directly in your reply. Only move it into a separate shared document when the user asks for one, and then follow their usual documentation practice. Do not park proposals in loose local files the reader has to go find and open. If you do create a document, give it a clear, date-prefixed title, using one unambiguous date format consistently (spelling out the month, as in <code>9 Oct 2026: Solve - topic</code>, avoids day/month confusion).</p>
 <p>If this is analysis-only work, stop here.</p>
 <h3>7. Plan, implement, and verify</h3>
 <p>For larger work, create an implementation plan before changing the system. Include scope, ordered steps, affected components, migration and rollback strategy, test strategy, deployment steps, and follow-up ownership. Put the plan somewhere reviewers can easily read, comment on, and edit.</p>
@@ -116,11 +117,12 @@ except (ValueError, TypeError, KeyError, AttributeError):
 <li>Presenting several options without a recommendation.</li>
 <li>Slipping a hard-to-reverse commitment into implementation without an explicit decision.</li>
 <li>Writing long proposals that bury the recommendation.</li>
+<li>Sending the reader off to a separate file or document they did not ask for instead of answering in the reply.</li>
 <li>Reporting &quot;done&quot; without saying what was verified.</li>
 </ul>
 <h3>Optional extras</h3>
 <ul>
-<li><strong>Shared documents.</strong> If you use a shared documentation system, save the proposal and any implementation plan there with the date-prefixed title, and end your reply with a link. Editable documents are usually easier for reviewers than plans kept inside an assistant&#39;s private planning mode. Plans for pure code changes tied to a single branch can stay with the code if the user prefers.</li>
+<li><strong>Shared documents.</strong> If the user asks for the proposal as a shared document, create it in their chosen documentation system with the date-prefixed title, following their usual conventions for location and sharing, and end your reply with a link. For larger implementation plans, editable shared documents are usually easier for reviewers than plans kept inside an assistant&#39;s private planning mode. Plans for pure code changes tied to a single branch can stay with the code if the user prefers.</li>
 <li><strong>Repository conventions.</strong> If the user&#39;s practice is to commit and push after completing work, follow it, including any commit message prefixes (for example, feature, fix, or maintenance tags). Otherwise ask before publishing.</li>
 <li><strong>Wide idea generation.</strong> For problems that need many candidates, run a separate brainstorm aiming for a large list (for example, ten or more ideas, adjustable) before narrowing to the few worth comparing.</li>
 <li><strong>Decision records.</strong> For hard-to-reverse choices, keep a short record of the options considered, the choice, the rationale, and what would cause you to revisit it.</li>

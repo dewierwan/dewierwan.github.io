@@ -65,7 +65,7 @@ For each relevant hit, record the channel type and a permanent link. Read the fu
 ## 5. Search the knowledge base
 
 1. Search the full name, each misspelling, and the name combined with their main employers or role. Ask for a large page of results.
-2. If the requester's private space is excluded, run the same searches (including the employer and role combinations) limited to that space. Every hit the limited search returns lives in the private space and is out of scope, even though the unfiltered search will also show it. Judge by this limited search, not by the location path: pages under generic-looking paths such as an archive or task list can still sit inside the private space.
+2. If the requester's private space is excluded, run the same searches (including the employer and role combinations) limited to that space. Exclude every hit the limited search returns, even when the unfiltered search also shows it. Judge by this limited search, not by the location path: pages under generic-looking paths such as an archive or task list can still sit inside the private space.
 3. Open every remaining hit that mentions the person beyond a passing name-drop. Read the full text and check its location against your visibility map.
 4. Check structured properties as well as body text: hiring status fields, pipeline stages, contact-relationship fields, and similar.
 5. If a page fails to open, report it with its link and ask the requester to check it by hand.

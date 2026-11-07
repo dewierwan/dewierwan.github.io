@@ -13,7 +13,7 @@ Use this workflow to take a non-trivial build, integration, automation, process,
 - Decide whether it is worth solving now, and flag any hard-to-reverse choices (data changes, public interfaces, long-lived settings, vendor commitments) for an explicit decision first.
 - Write three to five lightweight evaluation criteria before generating ideas.
 - Generate genuinely different options, always including "do nothing or defer" and a non-code option, plus small and larger technical versions.
-- Compare options against the criteria in a short table and make one clear recommendation with reasons.
+- Compare options against the criteria in a short table and make one clear recommendation with reasons. Give it directly in the reply.
 - If the user asked for analysis only, stop there. Otherwise plan, implement, verify, and report what was tested and what was not.
 
 ## When to use it
@@ -129,7 +129,9 @@ A compact comparison table often helps. An invented example for Fernwood Garden 
 
 Recommendation: the shared calendar with reminders, because it solves the main problem with existing tools and is easy to undo. Revisit a custom program only if missed shifts continue.
 
-Keep the proposal direct. Expect the decision-maker to ask questions or iterate before choosing; they may pick a different option. Give the proposal a clear, date-prefixed title, using one unambiguous date format consistently (spelling out the month, as in `9 Oct 2026: Solve - topic`, avoids day/month confusion).
+Keep the proposal direct. Expect the decision-maker to ask questions or iterate before choosing; they may pick a different option.
+
+By default, give the proposal directly in your reply. Only move it into a separate shared document when the user asks for one, and then follow their usual documentation practice. Do not park proposals in loose local files the reader has to go find and open. If you do create a document, give it a clear, date-prefixed title, using one unambiguous date format consistently (spelling out the month, as in `9 Oct 2026: Solve - topic`, avoids day/month confusion).
 
 If this is analysis-only work, stop here.
 
@@ -162,11 +164,12 @@ Keep the handoff focused on outcomes and operationally useful detail. Avoid bury
 - Presenting several options without a recommendation.
 - Slipping a hard-to-reverse commitment into implementation without an explicit decision.
 - Writing long proposals that bury the recommendation.
+- Sending the reader off to a separate file or document they did not ask for instead of answering in the reply.
 - Reporting "done" without saying what was verified.
 
 ## Optional extras
 
-- **Shared documents.** If you use a shared documentation system, save the proposal and any implementation plan there with the date-prefixed title, and end your reply with a link. Editable documents are usually easier for reviewers than plans kept inside an assistant's private planning mode. Plans for pure code changes tied to a single branch can stay with the code if the user prefers.
+- **Shared documents.** If the user asks for the proposal as a shared document, create it in their chosen documentation system with the date-prefixed title, following their usual conventions for location and sharing, and end your reply with a link. For larger implementation plans, editable shared documents are usually easier for reviewers than plans kept inside an assistant's private planning mode. Plans for pure code changes tied to a single branch can stay with the code if the user prefers.
 - **Repository conventions.** If the user's practice is to commit and push after completing work, follow it, including any commit message prefixes (for example, feature, fix, or maintenance tags). Otherwise ask before publishing.
 - **Wide idea generation.** For problems that need many candidates, run a separate brainstorm aiming for a large list (for example, ten or more ideas, adjustable) before narrowing to the few worth comparing.
 - **Decision records.** For hard-to-reverse choices, keep a short record of the options considered, the choice, the rationale, and what would cause you to revisit it.

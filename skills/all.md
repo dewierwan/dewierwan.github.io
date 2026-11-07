@@ -516,7 +516,7 @@ Use this workflow to take a non-trivial build, integration, automation, process,
 - Decide whether it is worth solving now, and flag any hard-to-reverse choices (data changes, public interfaces, long-lived settings, vendor commitments) for an explicit decision first.
 - Write three to five lightweight evaluation criteria before generating ideas.
 - Generate genuinely different options, always including "do nothing or defer" and a non-code option, plus small and larger technical versions.
-- Compare options against the criteria in a short table and make one clear recommendation with reasons.
+- Compare options against the criteria in a short table and make one clear recommendation with reasons. Give it directly in the reply.
 - If the user asked for analysis only, stop there. Otherwise plan, implement, verify, and report what was tested and what was not.
 
 ## When to use it
@@ -632,7 +632,9 @@ A compact comparison table often helps. An invented example for Fernwood Garden 
 
 Recommendation: the shared calendar with reminders, because it solves the main problem with existing tools and is easy to undo. Revisit a custom program only if missed shifts continue.
 
-Keep the proposal direct. Expect the decision-maker to ask questions or iterate before choosing; they may pick a different option. Give the proposal a clear, date-prefixed title, using one unambiguous date format consistently (spelling out the month, as in `9 Oct 2026: Solve - topic`, avoids day/month confusion).
+Keep the proposal direct. Expect the decision-maker to ask questions or iterate before choosing; they may pick a different option.
+
+By default, give the proposal directly in your reply. Only move it into a separate shared document when the user asks for one, and then follow their usual documentation practice. Do not park proposals in loose local files the reader has to go find and open. If you do create a document, give it a clear, date-prefixed title, using one unambiguous date format consistently (spelling out the month, as in `9 Oct 2026: Solve - topic`, avoids day/month confusion).
 
 If this is analysis-only work, stop here.
 
@@ -665,11 +667,12 @@ Keep the handoff focused on outcomes and operationally useful detail. Avoid bury
 - Presenting several options without a recommendation.
 - Slipping a hard-to-reverse commitment into implementation without an explicit decision.
 - Writing long proposals that bury the recommendation.
+- Sending the reader off to a separate file or document they did not ask for instead of answering in the reply.
 - Reporting "done" without saying what was verified.
 
 ## Optional extras
 
-- **Shared documents.** If you use a shared documentation system, save the proposal and any implementation plan there with the date-prefixed title, and end your reply with a link. Editable documents are usually easier for reviewers than plans kept inside an assistant's private planning mode. Plans for pure code changes tied to a single branch can stay with the code if the user prefers.
+- **Shared documents.** If the user asks for the proposal as a shared document, create it in their chosen documentation system with the date-prefixed title, following their usual conventions for location and sharing, and end your reply with a link. For larger implementation plans, editable shared documents are usually easier for reviewers than plans kept inside an assistant's private planning mode. Plans for pure code changes tied to a single branch can stay with the code if the user prefers.
 - **Repository conventions.** If the user's practice is to commit and push after completing work, follow it, including any commit message prefixes (for example, feature, fix, or maintenance tags). Otherwise ask before publishing.
 - **Wide idea generation.** For problems that need many candidates, run a separate brainstorm aiming for a large list (for example, ten or more ideas, adjustable) before narrowing to the few worth comparing.
 - **Decision records.** For hard-to-reverse choices, keep a short record of the options considered, the choice, the rationale, and what would cause you to revisit it.
@@ -1006,9 +1009,9 @@ These apply whatever tools the user has. Apply them fully on deep searches and l
 1. **Search direct and indirect.** Look for direct contact with the subject, and in deeper passes, for places where others discuss the subject.
 2. **Prefer precise search.** If a default search returns noisy or loosely related results, switch to exact or keyword search.
 3. **Read the whole item.** Documents and records can hide content in tabs, sections, attachments, or threads that a simple read skips. Open what matters in full and note where each finding came from.
-4. **Trust authoritative records.** Go first to the records the user's organization treats as the source of truth for that kind of subject. If records have been reorganized or renamed, use their current home, not the old one. Treat temporary, sandbox, or low-quality data as weak until confirmed, and be wary of fields that may hold placeholder values rather than real ones.
+4. **Trust authoritative records.** Go first to the records the user's organization treats as the source of truth for that kind of subject, in their current home if they have moved. Treat temporary, sandbox, or low-quality data as weak until confirmed.
 5. **Check freshness and attribution.** Web profiles, news, and stored notes reflect what was true when written; cross-check against dated, current sources. Speaker labels and authorship can be imprecise, so do not attribute a statement without reasonable confidence.
-6. **Use conditional sources only when they fit.** Recruiting records for hiring, analytics for usage questions, code history for engineering subjects, and the user's personal task or journal system only for their own work when they choose to include it.
+6. **Use conditional sources only when they fit.** Recruiting records for hiring, analytics for usage questions, code history for engineering subjects, and the user's personal task and planning records only for their own work when they choose to include it. In personal systems, request only the fields you need, such as tasks, priorities, and plans, and leave private journal entries and health data out even when they sit alongside.
 7. **Cite with real links.** Link to threads, pages, messages, and documents, not raw internal IDs. Use only URLs you have verified or the user supplied; otherwise leave the link out and flag it.
 
 ### Gaps and unavailable sources
@@ -1095,14 +1098,13 @@ The assistant classifies the subject as an organization with an existing relatio
 | Missing what was said in a recent meeting | Read the meeting record when one appears |
 | Trusting stale profiles, notes, or memory | Cross-check against dated, current sources |
 | Reading only part of a document or record | Open hidden sections, tabs, and threads |
-| Searching where a record type used to live | Check the current map and go to its present canonical home |
 | Covering a gap with a nearby source | Report the gap explicitly |
 
 ## Optional extras
 
 ### Structured databases
 
-If the user keeps a map of their databases (which tables are canonical, what fields mean, known quirks), read it before crawling so you go straight to the right place. Route by subject: each kind of record, such as applications, payments, or contacts, usually has one canonical home, and a dedicated, consolidated table for a record type beats older scattered copies. Organizations split, merge, and rename these stores over time, so if the map shows a record type has moved, search its new home, and suggest updating the map when you notice it is out of date. When a field seems to show when something happened, confirm it is a real value and not an automatic default; a record's creation date is often more reliable.
+If the user keeps a map of their databases (which tables are canonical, what fields mean, known quirks), read it before crawling so you go straight to the right place. Route by subject: each kind of record, such as applications, payments, or contacts, usually has one canonical home, and a consolidated table beats older scattered copies. Personal and organizational data may live in separate stores with separate access, so use the one that fits the question. If the map is out of date, suggest updating it. When a field seems to show when something happened, confirm it is a real value and not an automatic default; a record's creation date is often more reliable.
 
 ### Repairing an unavailable connection
 
@@ -1384,96 +1386,96 @@ Keep the voice profile and fact bank in one place the user controls. When the us
 
 ---
 name: professional-posts
-description: Draft, revise, and audit professional social posts that lead with concrete value and stay accurate and easy to scan. Use when someone wants to write a post, promote their work, or improve a draft.
+description: Drafts, revises, and audits professional social posts that lead with concrete, accurate value. Use when someone says "make this into a post," wants hook options, or needs to promote an article.
 ---
 
 # Write a professional social post
 
-Use this workflow to draft, revise, or critique a professional social post from notes, a rough draft, an article, transcript, podcast, research finding, announcement, interview, or simple topic.
+Use this workflow to draft, revise, or critique a professional social post from notes, a rough draft, an article, a transcript, a research finding, an announcement, or a simple topic. The goal is a specific, honest post that makes the right reader stop, understand a useful point, and have a reason to respond, save, share, or act.
 
-The goal is not to make an author or organization sound enthusiastic. The goal is to make the right reader stop, understand a useful point, and have a reason to think, respond, save, share, or act. A good post is specific, honest, and useful even when the reader never opens a link or views an accompanying visual.
+## Quick version
 
-This workflow is platform-independent. Before drafting, confirm the following choices when they are not already clear:
+- Paste your source and say who the post is for, what it should achieve, and which platform it is for. Ask the assistant to find two to four possible angles, usually a buried specific rather than the headline, and pick one yourself.
+- Ask for five to ten hooks, then a shortlist of three to five with a one-line note on what each does. Reject any hook that would still work if you swapped in an unrelated topic.
+- Draft as hook, tension, payoff, and one focused close. Keep it short by default, for example under 300 words, with one- or two-sentence paragraphs.
+- Put real value in the post itself. Never invent facts, figures, names, or quotes. Mark gaps instead.
+- Run an editing pass that cuts corporate verbs, filler intensifiers, hedges, restating transitions, and engagement bait.
+- When you give feedback, ask for targeted edits to the flagged lines, not a full rewrite.
+
+## 1. Set up the brief
+
+This workflow is platform-independent. Before drafting, confirm these choices when they are not already clear:
 
 - **Platform and format:** text post, image caption, document or carousel caption, thread, article promotion, or announcement.
 - **Audience:** for example, practitioners, founders, researchers, policy professionals, customers, prospective applicants, or a specialist community.
 - **Purpose:** share an insight, explain a concept, announce a meaningful change, promote a longer piece, start a substantive discussion, or support a campaign.
-- **Voice:** first-person or organizational voice; formal or conversational; preferred and forbidden words; length; and punctuation or formatting preferences.
-- **Distribution:** whether there is an external link, the chosen placement for that platform, and whether visual material accompanies the post.
+- **Voice:** first-person or organizational voice; formal or conversational; preferred and forbidden words; length; and punctuation, emoji, hashtag, or formatting preferences.
+- **Distribution:** whether there is an external link, where it goes on that platform, and whether visual material accompanies the post.
 - **Evidence and permissions:** what supports the claims, and what names, quotes, outcomes, or personal details may be shared.
+- **Delivery:** by default, return the draft directly in the reply. If the user asks for a separate document, follow their chosen location and naming convention (for example, date plus topic).
 
-If the user provides approved posts, a writing guide, audience research, or brand guidance, treat these as the primary voice reference. Do not assume an individual writing style, a particular organization’s practices, or access to private systems.
+If the user provides approved posts, a writing guide, audience research, or brand guidance, treat these as the primary voice reference. Do not assume an individual writing style, a particular organization's practices, or access to private systems.
 
-## Scope and routing
+## 2. Identify the genre
 
-Identify the genre before writing. Different genres need different evidence, structures, and privacy checks.
+Different genres need different evidence, structures, and privacy checks.
 
-- **Career or participant case study:** A person’s before-and-after story, often involving training, a program, or a new role. Use a case-study structure: starting point, turning point, concrete outcome, evidence, and lesson. Obtain clear authorization before publishing personal, career, or performance details.
-- **Research or evidence post:** A claim based on a report, model, survey, experiment, or analysis. Prioritize methodology, scope, uncertainty, and a conclusion the author can defend.
-- **Organizational or product announcement:** Lead with the concrete change and reader relevance, not internal excitement.
-- **Article, report, or podcast promotion:** Lead with the strongest insight, finding, or disagreement in the longer piece, not with “new article” or “new episode.”
-- **Carousel or document caption:** Give one or two meaningful findings and explain what the visual material adds. Do not repeat every slide.
-- **Framework or checklist post:** Present a reusable model, explain its boundaries, and give enough detail for readers to apply it.
+- **Career or participant case study:** a person's before-and-after story, often involving training, a program, or a new role. Use a case-study structure: starting point, turning point, concrete outcome, evidence, and lesson. If the user has a dedicated case-study process, use that instead of improvising one here.
+- **Research or evidence post:** a claim based on a report, model, survey, experiment, or analysis. Prioritize methodology, scope, uncertainty, and a conclusion the author can defend.
+- **Organizational or product announcement:** lead with the concrete change and reader relevance, not internal excitement. Use this genre only when the news is interesting in itself.
+- **Article, report, or podcast promotion:** lead with the strongest insight, finding, or disagreement in the longer piece, not with "new article" or "new episode." For an episode featuring a guest, lead with the most striking detail of their story.
+- **Carousel or document caption:** give one or two meaningful findings and explain what the visual material adds.
+- **Framework or checklist post:** present a reusable model, explain its boundaries, and give enough detail for readers to apply it.
 
-When working with private communications, records, or stories about identifiable people, confirm there is a legitimate purpose and clear authorization. Use only the minimum relevant information. Omit unrelated sensitive details, respect consent and reasonable privacy expectations, and keep the output within the intended publication boundary.
+When working with private communications, records, or stories about identifiable people, confirm there is a legitimate purpose and clear authorization. Use only the minimum relevant information, omit unrelated sensitive details, and keep the output within the intended publication boundary.
 
 If the genre is unclear, ask one routing question before drafting:
 
 > Is this primarily an evidence post, a concrete announcement, a case study, a framework, or promotion for a longer piece?
 
-## Accuracy and trust rules
+## 3. Follow accuracy and trust rules
 
 1. **Never invent facts.** Do not fabricate statistics, names, organizations, quotes, testimonials, titles, dates, roles, outcomes, or sources.
-2. **Separate evidence from interpretation.** State what the source establishes, then make the recommendation, inference, or personal judgment clear.
-3. **Keep meaningful uncertainty.** If evidence has large ranges, assumptions, weak data, limited scope, or correlation rather than causation, say so in plain language.
-4. **Use exact details only when supported.** Specific figures and outcomes are stronger than vague claims, but do not convert a rough estimate into false precision.
-5. **Request missing evidence early.** If the post depends on an unsupported claim, ask for a source, narrow the claim, qualify it, or remove it.
-6. **Avoid manufactured urgency.** A concrete risk plus a realistic response is more credible than broad catastrophe language.
-7. **Respect attribution and consent.** Quote, name, or credit people only when authorized and accurately represented.
-8. **Do not overstate a promotion.** A longer article, event, service, course, or product may be relevant, but it should not substitute for actual value in the post.
+2. **Separate evidence from interpretation.** State what the source establishes, then make the inference or personal judgment clear.
+3. **Keep meaningful uncertainty.** If evidence has large ranges, assumptions, weak data, or limited scope, say so in plain language.
+4. **Use exact details only when supported.** Exact figures beat vague claims, but do not convert a rough estimate into false precision.
+5. **Request missing evidence early.** Ask for a source, narrow the claim, qualify it, or remove it.
+6. **Avoid manufactured urgency.** A concrete risk plus a realistic response is more credible than catastrophe language.
+7. **Stay even-handed on contested topics.** Avoid partisan framing and cheap shots unless the user explicitly wants an advocacy post.
+8. **Respect attribution and consent.** Quote, name, or credit people only when authorized and accurately represented. Credit collaborators, such as whoever designed the visuals, when appropriate.
+9. **Do not overstate a promotion.** A longer piece, event, service, course, or product may be relevant, but it must not substitute for actual value in the post.
 
-## Audience and voice
+## 4. Audience and voice
 
-Write for the reader most likely to act on the post, not for every possible reader. Specificity is useful because it helps the relevant audience recognize that the post is for them. Broad, polished language often attracts no one in particular.
+Write for the reader most likely to act on the post, not for every possible reader. A post that a small, relevant group finds unmissable usually beats one that everyone finds mildly interesting. Specificity and concrete claims attract that group; smooth, broad language repels it.
 
-Use this default voice unless the user specifies otherwise:
+Default voice unless the user specifies otherwise:
 
-- Direct, clear, and conversational.
-- Short sentences and concrete nouns.
-- Active voice where it improves clarity.
-- One principal claim per sentence.
+- Direct, clear, and conversational, with contractions.
+- Short sentences and concrete nouns. A useful working range is roughly 10 to 20 words per sentence.
+- Active voice and one principal claim per sentence.
+- Takes a position rather than balancing "on one hand" against "on the other."
 - Sober about problems and practical about responses.
 - Confident only where evidence supports confidence.
-- Specific rather than promotional.
-
-Avoid these common failure modes:
 
 | Failure mode | What it sounds like | Better approach |
 |---|---|---|
-| Corporate | “We are thrilled to announce an exciting initiative.” | State what changed, who it affects, and why that matters. |
+| Corporate | "We are thrilled to announce an exciting initiative." | State what changed, who it affects, and why that matters. |
 | Academic | Long, hedged sentences with unexplained technical terms. | State the claim plainly, then explain necessary terms in ordinary language. |
 | Alarmist | Sweeping danger claims with no mechanism or response. | Name the specific risk, evidence, uncertainty, and practical intervention. |
 
-## Core workflow
+## 5. Find the thread before choosing a template
 
-### 1. Inspect the source before choosing a template
+Read the source first. The strongest social angle is frequently a buried detail, not the source's title or thesis. Look for:
 
-Read the notes or source material first. Find the strongest thread, which is often not the formal headline.
-
-Look for:
-
-- A surprising fact or contrast.
-- A specific number that creates tension.
+- A surprising fact, contrast, or number that creates tension.
 - A counterintuitive conclusion that can be defended.
 - A concrete before-and-after outcome.
 - A meaningful strategic trade-off.
 - A disagreement between credible views.
 - A framework, checklist, or model readers may save.
-- A sentence that changes how readers see the problem.
 
-The strongest social angle is frequently a buried detail, not the source’s title or opening paragraph. For example, an article about a broad operational challenge may contain a more compelling post angle in one unexpected finding, a practical constraint, or a decision that changed the outcome.
-
-If several threads are viable, do not quietly choose one. Present two to four options and ask the user to select one.
+If several threads are viable, do not quietly choose one. Present options and let the user pick:
 
 > I see several viable angles. Which should lead?
 >
@@ -1481,426 +1483,407 @@ If several threads are viable, do not quietly choose one. Present two to four op
 > 2. **[Angle]**: foregrounds [story, outcome, or disagreement]. Best for [audience intent].
 > 3. **[Angle]**: foregrounds [framework or implication]. Best for [audience intent].
 
-Choose one main thread. A social post should not try to summarize every section of a report, conversation, or article.
+Choose one main thread. A post should not summarize every section of its source.
 
-### 2. Generate hooks before drafting the body
+## 6. Generate hooks before drafting the body
 
-The opening decides whether readers continue. Generate five to ten possibilities, then present a shortlist of three to five when user choice is useful. Each hook must make an honest promise that the body fulfills.
+The opening decides whether readers continue, and many platforms show only the first line or two before truncating. Generate five to ten possibilities, because most hooks are weak and volume finds the good one. Then present a shortlist of three to five. Each hook must make an honest promise the body fulfills.
 
-Useful hook patterns include:
+Useful patterns:
 
-- **Changed mind:** “I changed my mind about [specific issue].”
-- **Concrete investment:** “I reviewed [specific body of evidence] to answer one question.”
-- **Specific number with tension:** “[Number] of [group] report [surprising result].”
-- **Named outcome:** “[Person or role] moved from [starting point] to [specific outcome] in [timeframe].” Use only with evidence and permission.
-- **Counterintuitive claim:** “[Common assumption] misses the more important problem.” Only use this if the post supports it.
-- **Short thesis:** “[Concept] is best understood as [concrete analogy].”
-- **Focused question:** “Why do two credible groups reach such different conclusions about [specific issue]?”
-- **Deliberate trade-off:** “We chose not to optimize for [widely desired outcome].” Use this when the post can explain the rationale and consequence.
-
-Present shortlisted hooks with a strategic explanation:
+- **Changed mind:** "I changed my mind about [specific issue]."
+- **Concrete investment:** "I reviewed [specific body of evidence] to answer one question."
+- **Specific number with tension:** "[Number] of [group] report [surprising result]." Put the magnitude first, not after a setup.
+- **Named outcome:** "[Person or role] moved from [starting point] to [specific outcome] in [timeframe]." Use only with evidence and permission.
+- **Counterintuitive claim:** "[Common assumption] misses the more important problem." Only if the post supports it.
+- **Short thesis:** "[Concept] is best understood as [concrete analogy]."
+- **Focused question:** one sharp question, never several in a row.
+- **Deliberate trade-off:** "We chose not to optimize for [widely desired outcome]."
 
 | Hook | Strategic purpose |
 |---|---|
-| “[Specific result or claim].” | Leads with a concrete fact that creates immediate curiosity. |
-| “[Assumption] misses [specific mechanism].” | Challenges a familiar view and promises an explanation. |
-| “I changed my mind about [topic].” | Uses personal stakes to introduce an evidence-based update. |
+| "[Specific result or claim]." | Leads with a concrete fact that creates immediate curiosity. |
+| "[Assumption] misses [specific mechanism]." | Challenges a familiar view and promises an explanation. |
+| "I changed my mind about [topic]." | Uses personal stakes to introduce an evidence-based update. |
 
-Apply the swap test: if the main topic could be replaced with an unrelated industry and the hook still works, it is too generic. Add the real mechanism, outcome, number, decision, or tension.
+Apply the swap test: if the main topic could be replaced with an unrelated field and the hook still works, it is too generic. Avoid announcement openings, throat-clearing about "today's fast-moving landscape," "Here's what I learned" without saying what, and clickbait the post cannot back up.
 
-Avoid generic announcement openings, throat-clearing, empty cliffhangers, several rhetorical questions in a row, broad motivational claims, and clickbait that the post cannot substantiate.
+## 7. Choose one structure
 
-### 3. Choose one structure
-
-Use the structure that fits the material. Do not combine several structures without a clear reason.
+Use the structure that fits the material. Do not combine more than two.
 
 1. **Counterintuitive claim → evidence → implication** for research, data, and argument.
 2. **Changed mind → trigger → updated view → takeaway** for thoughtful first-person posts.
-3. **Problem → why it matters → practical response** for explainers and operational content.
+3. **Problem → why it is worse than it looks → practical response** for explainers.
 4. **Result → how it happened → reusable lesson** for verified outcomes and authorized case studies.
-5. **Framework → examples → application** for posts intended to be saved and revisited.
+5. **Framework → examples → application** for posts meant to be saved.
 6. **Specific announcement → reader relevance → next step** for meaningful launches or changes.
-7. **Strategic trade-off → rationale → consequence** for explaining deliberate constraints or anti-goals, meaning what an author or organization intentionally chooses not to optimize for.
+7. **Strategic trade-off → rationale → consequence** for explaining anti-goals, meaning what an author or organization deliberately chooses not to optimize for.
 
-A post can contain a list, but a list is not automatically a structure. Use list formatting only where the content is genuinely a set of distinct findings, options, actions, or criteria.
+A list is not automatically a structure. A list post works only when its framing is interesting in itself.
 
-### 4. Draft: hook, tension, payoff
+## 8. Draft: hook, tension, payoff
 
-Use this default shape:
+- **Hook:** the strongest claim, result, or tension.
+- **Tension or setup (two or three lines):** why the point matters or which assumption it challenges.
+- **Payoff:** the evidence, story, framework, or insight. Deliver real value here, not a teaser.
+- **Soft close:** exactly one focused question, takeaway, or pointer.
 
-- **Hook:** The strongest claim, result, or tension.
-- **Tension or setup:** Why the point matters or which assumption it challenges.
-- **Payoff:** The evidence, story, framework, or practical insight. Deliver real value here.
-- **Soft close:** Exactly one focused question, takeaway, or pointer to further material.
+A useful default is under 300 words (adjustable). Longer posts need a reason for every paragraph. Use one- or two-sentence paragraphs; white space helps mobile readers. Use bullets only for genuinely list-shaped content. Emoji, if the user's style allows them, work best as category markers on bullets, not as decoration in prose.
 
-A useful default is under 300 words, subject to platform norms and substance. Longer posts need a clear reason for every paragraph. A post that explains a complex framework may need more space; a simple announcement may need far less.
+For carousel or document captions, establish the central idea, share one or two strong specifics, and say what the visual adds. Do not write a content-free teaser and do not duplicate the whole asset.
 
-Use one- or two-sentence paragraphs for mobile scanning. White space helps readers find the argument. Use bullets only when the content is genuinely list-shaped, such as findings, choices, or steps.
+For promotions, put the most useful finding in the post. The longer piece provides depth, methods, and sources, not the only valuable idea.
 
-For captions accompanying a carousel or document:
+## 9. Close and links
 
-- Establish the central idea.
-- Share one or two strong specifics.
-- State what the visual material adds.
-- Do not create a content-free teaser.
-- Do not duplicate the entire visual asset in text.
+Use one close. Strong closes invite a real, bounded response:
 
-For article, report, or podcast promotion, put the most useful finding in the post. The longer piece should provide depth, context, methods, examples, or sources, not the only valuable idea.
+- "Which constraint matters most in your work?"
+- "What evidence would change your view?"
+- "If you've run this system, where does this model fail?"
 
-## Calls to action and links
+Avoid vague prompts such as "Thoughts?" and engagement bait that asks people to comment a word, tag someone, or repost to boost reach. Do not add a reflective summary sentence after the close.
 
-Use one close only. Strong closes invite a real and bounded response:
+Follow the user's chosen link strategy. If the platform tends to favor links in a first comment, end with a short pointer and supply the first-comment text separately.
 
-- “Which constraint matters most in your work?”
-- “What evidence would change your view?”
-- “If you have operated this system, where does this model fail?”
-- “The full analysis includes the assumptions and source material.”
+## 10. Editing pass: remove templated language
 
-Avoid vague prompts such as “Thoughts?” and avoid engagement bait that asks people to react, comment, tag, or repost solely to improve reach.
+Run a separate pass after drafting. Replace or remove:
 
-Follow the user’s chosen platform strategy for external links. If the platform or audience commonly prefers links in a comment, use a brief first-comment line that provides context and the destination. If links belong in the post body, integrate them without making the link the main value proposition. Do not present placement tactics, timing tactics, or engagement metrics as guaranteed ranking advantages. Platform behavior changes, so treat distribution choices as testable hypotheses and compare results across several posts.
+- Corporate verbs such as "leverage," "unlock," "harness," "navigate," "dive into," and "empower."
+- Filler intensifiers such as "truly," "deeply," "incredibly," and "remarkably."
+- Hedges such as "it is worth noting" and "arguably," unless uncertainty is genuinely necessary.
+- Softeners such as "just," "simply," "essentially," and "ultimately."
+- Abstract nouns such as "journey," "transformation," and "paradigm" when a concrete event can be named.
+- Transition sentences that restate what came before.
+- Slow date-first openers. Start with the claim or the person, not the timeline.
+- Dramatic colon frames such as "The truth is:" or "Here's the reality:".
+- Heavy dash use, especially dash-bracketed asides. Favor periods, commas, and line breaks.
+- Unexplained jargon and formatting the platform will not render.
 
-## Editing pass: remove templated language
+Read the post aloud. If it sounds like generic thought leadership rather than a person typing a specific, informed point, rewrite it.
 
-Run a separate editing pass after drafting. Cut phrases that sound polished but add no meaning.
+## 11. Readiness gate
 
-Replace or remove:
+Do not present a draft as final until it passes:
 
-- Corporate verbs such as “leverage,” “unlock,” “harness,” “navigate,” and “empower.”
-- Filler intensifiers such as “truly,” “deeply,” “incredibly,” and “remarkably.”
-- Hedging frames such as “it is worth noting” and “one might say,” unless uncertainty is genuinely necessary.
-- Softeners such as “just,” “simply,” “essentially,” and “ultimately.”
-- Abstract nouns such as “journey,” “transformation,” and “paradigm” when a concrete event can be named.
-- Transition sentences that merely restate the paragraph before them.
-- Dramatic frames such as “The truth is” or “Here is the reality.” State the claim directly.
-- Decorative punctuation or formatting that the platform will not render correctly.
-
-Favor periods, commas, and line breaks unless the user requests another style. Use emphasis sparingly, and verify that the platform supports the chosen formatting. Read the post aloud. If it sounds like generic thought leadership rather than a person making a specific, informed point, rewrite it.
-
-## Revision protocol
-
-When the user gives feedback, revise the requested line and its nearby logic first. Do not rewrite the entire post unless asked.
-
-- If the hook is weak, offer several replacement hooks before rebuilding the body.
-- If a claim is overstated, strengthen the evidence, narrow it, or soften that claim only.
-- If a paragraph is slow, cut setup before adding explanation.
-- If the user prefers an earlier sentence, preserve it unless there is a clear reason not to.
-- If a source gap emerges, state it plainly and offer a concrete alternative.
-- If the user rejects a tone or phrase, identify the pattern behind the rejection and apply the correction consistently in the next revision.
-
-Multiple small options are often more useful than one large rewrite, especially for hooks, closers, and uncertain claims. Be candid about weak material. For example:
-
-> The second paragraph relies on a broad claim that the available source does not yet support. We can add evidence, narrow the claim, or replace it with this concrete example: [example].
-
-## Readiness gate and audit
-
-Do not present a draft as final until it passes this checklist:
-
-- Does the first line earn attention when read alone?
-- Does the post make one clear point rather than competing points?
-- Is there a concrete outcome, example, number, mechanism, or detail where appropriate?
-- Could the author defend the main claim if a knowledgeable reader challenged it?
-- Does the post provide value without requiring a click, swipe, or purchase?
-- Is uncertainty stated where it materially affects the conclusion?
-- Is the language specific to this topic rather than reusable for any industry?
-- Is there one focused close?
+- Does the first line earn attention when read alone on a phone?
+- Does the post make one clear point?
+- Is there a concrete number, name, mechanism, or outcome? If not, can one be added?
+- Could the author defend every claim if a knowledgeable skeptic pushed back?
+- Does the post provide value without a click, swipe, or purchase?
+- Is uncertainty stated where it affects the conclusion?
+- Does it pass the swap test?
+- Is there exactly one focused close?
 - Are all names, quotes, figures, and claims supported and authorized?
-- Does formatting work on the intended platform?
-- Is the tone professional, respectful, and appropriate for the audience?
-- Are private details minimized and within the agreed publication boundary?
-- Does any promotional mention have a direct, earned connection to the content?
+- Does formatting work on the intended platform, and does it follow the user's dash, hashtag, and emoji preferences?
+- Is the tone professional and appropriate for the audience?
+- Does any promotional mention have a direct, earned connection to the content? If not, drop it or make it a separate post.
 
-If any answer is no, revise before handoff.
+If any answer is no, revise, or flag the soft spot honestly instead of presenting it as polished.
 
-## Handoff format
+## 12. Revise without rewriting
 
-Provide only what helps the user decide and publish:
+When the user gives feedback, change the flagged line and its nearby logic. Do not rebuild the post unless asked.
+
+- If the hook is weak, offer several replacements before touching the body.
+- If a claim is overstated, add evidence, narrow it, or soften that claim only.
+- If a paragraph is slow, cut setup before adding explanation.
+- Preserve the strongest lines across rounds. Do not soften a sharp sentence on a later pass unless asked.
+- If the user rejects a phrase or tone, find the pattern and apply it consistently.
+
+Several small options often beat one large rewrite. Be candid:
+
+> Line four carries the argument, but I'm not sure it lands. Alternative: [line].
+
+## 13. Handoff
+
+Provide:
 
 1. The recommended hook and one or two alternatives, each with a short strategic note.
-2. The completed draft in the user’s chosen delivery format.
-3. Any unsupported claim, missing input, or uncertain line.
-4. Suggested link or first-comment text, when relevant to the chosen platform strategy.
-5. One concise publishing reminder, such as responding promptly and substantively to genuine early comments.
+2. The completed draft, in the reply by default, or a link to the separate document if the user asked for one.
+3. Any unsupported claim, missing input, or soft spot, with an alternative.
+4. First-comment or link text, when relevant.
+5. One publishing reminder, such as replying promptly and substantively to genuine early comments.
 
-## Common failure patterns
+## 14. Worked example (invented)
 
-- **Announcement disguised as content:** It reports internal excitement but not reader value. Lead with the actual change or lesson.
-- **Pure teaser:** It asks readers to click without teaching them anything. Share the core insight first.
-- **Unsupported precision:** It uses a striking number without source, scope, or caveat. Verify, qualify, or remove it.
-- **Generic inspiration:** It sounds positive but names no mechanism, choice, or action. Add a concrete decision or example.
-- **Overpacked summary:** It covers every part of a source. Select one thread and save the rest for later posts or the original material.
-- **Bolted-on promotion:** It ends with an unrelated product, course, service, or event pitch. Remove the pitch, make a separate post, or establish an immediate and concrete connection.
-- **Forced engagement:** It demands reactions or comments. Ask one genuine question or end with a useful conclusion.
-- **Unapproved personal story:** It includes a career outcome, quote, or identifying detail without clear permission. Obtain authorization, anonymize the example, or remove it.
-- **Formatting mismatch:** It relies on markup, symbols, or layout the platform does not support. Convert it to supported plain text and preview it before publishing.
+**Source notes:** A program lead at the fictional Corvale Water Lab ran a pilot of leak alerts across 300 sites. The report's headline is "Pilot meets targets." Buried on page six: of 41 missed alerts, 9 came from sensor faults and 27 from configuration errors. The remaining 5 were unexplained.
 
-The final standard is simple: the post should sound like someone with evidence, judgment, and a real point to make. It should not sound like a press release, an academic abstract, or a generic social-media template.
+**Thread chosen:** the buried contrast, not the headline.
+
+**Draft:**
+
+> I assumed sensor failures were our biggest problem. They weren't.
+>
+> Our leak-alert pilot ran across 300 sites for a year. It missed 41 alerts.
+>
+> Sensor faults caused 9.
+> Configuration errors caused 27.
+> We still can't explain 5.
+>
+> We'd budgeted most of next year for hardware upgrades. We're now moving part of that to setup checklists and a second review for every new site.
+>
+> One pilot, one region, so treat this as a signal, not a law.
+>
+> If you run monitoring systems, where do your misses come from?
+
+**Why it works:** the hook states a changed mind, the numbers are exact and sourced, the uncertainty is stated, the author commits to a decision, and the close is one bounded question.
+
+## 15. Common failure patterns
+
+- **Announcement disguised as content:** internal excitement, no reader value. Lead with the actual change.
+- **Pure teaser:** asks for a click without teaching anything. Share the core insight first.
+- **Unsupported precision:** a striking number with no source or caveat. Verify, qualify, or remove.
+- **Generic inspiration:** positive but names no mechanism or action. Add a concrete decision or example.
+- **Overpacked summary:** covers every part of a source. Pick one thread.
+- **Bolted-on promotion:** ends with an unrelated pitch. Remove it or make the connection immediate and concrete.
+- **Forced engagement:** demands reactions. Ask one genuine question.
+- **Unapproved personal story:** shares details without permission. Get authorization, anonymize, or cut.
+- **Formatting mismatch:** relies on markup the platform does not render. Convert to plain text and preview.
+
+## Optional extras
+
+- **Emphasis on platforms without bold or italics.** Some platforms do not render Markdown, so asterisks appear literally. Special Unicode letter styles can simulate bold or italics, but screen readers may read them poorly and search may not index them. If used, limit to one or two short phrases.
+- **Distribution hypotheses to test.** Commonly reported patterns include: saves and thoughtful comments counting more than likes, reference-style posts (frameworks, checklists) being saved more, document or carousel formats performing well for structured material, outbound links in the body reducing reach, engagement bait being penalized, the first hour of replies mattering, and consistent topic focus helping reach. Platforms change often. Treat these as hypotheses, compare results across several posts, and suggest a carousel when content is structured enough to suit one.
+- **Hashtags.** Many professional audiences now read heavy hashtag use as influencer style. Let the user decide; a neutral default is none or very few.
+- **Learning from feedback.** If your assistant can keep notes, maintain a short style file of patterns the user consistently changes: rejected hooks and why, cut words, structural edits, missing inputs that should be asked for upfront, and hooks that performed well. Update it only when a session reveals a real pattern, show the user what changed, and make no change after a clean run.
+- **Separate document delivery.** If the user wants drafts saved outside the chat, agree on a folder and title format once (for example, "[date]: Post: [topic]"), keep hook shortlists in the conversation, and end the handoff with the document link.
 
 
 ---
 name: case-study-post
-description: Turn a real person's career or learning story into an evidence-based case study post, with hooks, quote cards, and an approval checklist. Use when someone wants to feature a person's journey publicly.
+description: Turns interview notes about a person's career change into a verified case study post with hooks and quote cards. Use when asked for an alumni story, success post, or participant feature.
 ---
 
 # Write a case study post
 
-Use this workflow to turn authorized source material about a person’s career, learning, professional change, or project outcome into a concise public case study. It works especially well for professional social posts, and can be adapted for newsletters, community updates, recruitment pages, alumni stories, or program pages.
+Use this workflow to turn authorized source material about a person's career, learning, or project outcome into a short, specific public case study, such as a professional social post, newsletter item, or program page story. The goal is to show a credible change: where they started, what concretely helped, what they do now, and what the reader can do next.
 
-The goal is not to make someone sound impressive through vague praise. The goal is to show a credible, specific change: where they started, what they were considering, what they did, what concretely helped, what they do now, and what a reader can do next.
+## Quick version
 
-A strong case study helps the intended reader recognize their own situation in the subject’s before-state. It names the intervention clearly, explains the mechanism without overstating causation, and respects the subject’s privacy and approval rights.
+- Paste the raw material (interview notes, application answers, profile excerpts, a prior draft) and name the target reader and the next action you want them to take. Ask for any missing dates, roles, or outcomes before drafting. Never guess.
+- Pull out the beats: before-state, trigger, one or two concrete mechanisms, now-state, timeline, any cost, and three to five verbatim quote candidates.
+- Write three two-sentence hooks (Discovery, Identity collision, Stakes-led) and recommend one. Default to Discovery when the reader shares the subject's old blocker.
+- Draft about 160 to 220 words: hook, before-state, named program, mechanism and outcome, current work, optional cost, CTA in full second person.
+- Strip machine-sounding phrasing: filler intensifiers, corporate verbs, empty transitions, unsupported praise, more than one em dash.
+- List everything that needs the subject's approval (figures, quotes, unreleased work, harsh claims) and anything still missing.
 
-## Authorization and access boundary
+## 1. Authorization and inputs
 
-Use this workflow only for a legitimate publishing purpose and with clear authorization to access and use the source material. This is especially important when materials include interview transcripts, applications, internal messages, personnel records, or private communications.
+This workflow reads interviews, applications, and messages about another person, so use it only for a legitimate publishing purpose with clear authorization to use that material. Use the minimum relevant sources, leave out unrelated or sensitive personal details, and keep drafts and notes within the people who need to review them.
 
-Use the minimum relevant sources and information. Do not surface unrelated personal details merely because they are available. Respect the subject’s consent, privacy expectations, confidentiality obligations, and the access boundary of the intended publication.
-
-Before using a detail publicly, ask:
-
-- Is this relevant to the story?
-- Is it verified well enough to publish?
-- Is it within the publisher’s authorized access and the subject’s reasonable expectations?
-- Does it need specific approval from the subject?
-- Could the same point be made with less sensitive information?
-
-Do not include private contact details, account information, internal links, confidential documents, personal history unrelated to the story, or sensitive facts that do not directly support the case study.
-
-## Inputs
-
-Ask for all available, authorized source material. Useful inputs include:
+Useful inputs:
 
 - An interview transcript and meeting notes
 - An application, intake form, or participant survey
 - A current professional profile or approved biography
-- Official public work samples, projects, papers, products, or announcements
-- A relevant internal message reporting a result, if its use is authorized
+- Public work samples, papers, products, or announcements
+- An authorized internal message reporting the result
 - A prior draft, outline, or subject notes
-- The target audience, platform, publication owner, and desired call to action
-- The organization’s editorial or brand voice guidance
-- The subject’s preferred public name, pronouns, and approval status
+- The target audience, platform, and desired call to action
+- The publisher's voice or brand guidance
+- The subject's preferred public name, pronouns, and approval status
 
-Before drafting, determine whether the following fields are sufficiently supported.
+Before drafting, check that each field is supported.
 
 | Field | What to capture |
 |---|---|
-| Subject | Full name for verification, preferred public name, pronouns, and consent status |
+| Subject | Name for verification, preferred public name, pronouns, consent status |
 | Before-state | Previous role, field, goal, uncertainty, or constraint |
-| Trigger | Why they joined, applied, changed direction, or took action |
-| Intervention | Program, community, resource, event, mentor, or service involved |
-| Mechanism | Concrete help, such as a realization, job post, introduction, feedback session, or practical resource |
-| Now-state | Current role, organization, team, project, output, or result |
-| Timeline | Dates or time spans from the starting point to the outcome |
+| Alternative | What they were considering instead, if it mirrors the reader's life |
+| Trigger | Why they joined or acted at that moment |
+| Intervention | The program, community, resource, or event involved |
+| Mechanism | Concrete help: a realization, job post, introduction, feedback, or resource |
+| Now-state | Current role, organization, team, and what the work actually is |
+| Timeline | Dates from start of the intervention to the outcome and to today |
 | Evidence | Verified roles, figures, dates, artifacts, and direct quotes |
-| Cost or risk | Pay change, move, uncertainty, career risk, or tradeoff, if relevant and approved |
-| CTA | The action the intended reader should take next |
+| Cost or risk | Pay change, move, career risk, if relevant and approved |
+| CTA | The one action the reader should take next |
 
-If critical facts are missing, ask focused questions before drafting. Do not guess at organization names, job titles, paper titles, dates, figures, timelines, motivations, or outcomes.
+If critical facts are missing, ask focused questions first:
 
-Useful questions include:
+1. What was the subject doing before, and what were they considering instead?
+2. Why did they take part at that point?
+3. What one or two concrete things helped them move forward?
+4. What happened next, and when?
+5. What do they do now, in plain terms, and on which team?
+6. Is there one named output, placement, or result worth mentioning?
+7. Did they accept a cost they are comfortable sharing?
+8. Which names, figures, and quotes are approved?
+9. Who should this post persuade?
 
-1. What was the subject doing before this experience?
-2. What were they considering instead?
-3. Why did they choose to take part or make a change at that point?
-4. What were the one or two concrete things that helped them move forward?
-5. What happened next, and when?
-6. What do they do now in practical terms?
-7. Is there a specific public output, project, placement, publication, product, or result that can be named?
-8. Did they take on a meaningful cost or risk that they are comfortable sharing publicly?
-9. Which names, figures, quotes, and claims have been approved for publication?
-10. Who should this post help or persuade?
+## 2. Verify the evidence
 
-## Evidence and verification rules
+Never invent facts or upgrade claims for punch. If the source says "co-author," do not write "lead author." If they explored an opportunity, do not say they got it. Do not name a paper, project, or figure you cannot cite.
 
-Never invent facts or upgrade claims for dramatic effect. If a source says someone contributed to a project, do not call them the lead. If they explored an opportunity, do not say they received it. If a role began after the program, do not imply the program caused the hiring decision unless the evidence supports that claim.
+Treat automated transcripts and summaries as fallible. They often mishear organization names, acronyms, titles, and numbers, sometimes turning one acronym into a different real-sounding name. Cross-check every organization name and figure from a transcript against a more reliable source before using it.
 
-Treat automated transcripts and summaries as useful but fallible. They can mishear names, organizations, technical terms, numbers, titles, and quotations. Cross-check important details against a more reliable source, such as direct confirmation from the subject, an official announcement, published work, or a current professional profile.
+When sources disagree, use this default order (adjustable):
 
-When sources disagree, use this default reliability order:
-
-1. The subject’s direct, recent confirmation
-2. Official public records, published work, or an organization’s approved announcement
+1. The subject's direct, recent confirmation
+2. Official announcements or published work
 3. A current professional profile
-4. An original written application or statement from the subject
-5. Interview transcript notes or automated summaries
+4. The subject's original written application
+5. Transcript notes or automated summaries
 6. Informal third-party messages
 
-Separate these three statement types in private working notes:
+In private notes, separate verified facts, the subject's own interpretation, and your editorial inferences. Use causal language that matches the evidence: "they found the opportunity through the community" rather than "the program got them hired."
 
-- **Verified fact:** A role, date, artifact, figure, or quote supported by a reliable source.
-- **Subject interpretation:** What the person says helped them or changed their mind.
-- **Editorial inference:** A conclusion drawn from the story. Use only when evidence supports it, and phrase it modestly.
+Write from current reality. If the work is published, say "published." Only say "will publish" when it is genuinely forthcoming, and flag it.
 
-Prefer precise causal language: “the program helped them see the field differently,” “they found the opportunity through the community,” or “feedback strengthened their application.” Avoid claiming that one intervention created the entire outcome.
+## 3. Flag sensitive content
 
-## Sensitive-content gate
+Flag these for explicit subject approval before publishing:
 
-Flag these items for explicit subject approval before publication:
+- Pay cuts, salary, or compensation comparisons
+- Strong or harsh language about a past employer or decision
+- Unreleased work or unpublished titles
+- Direct named quotes
+- Health, family, legal, or other personal circumstances
+- Claims about why an employer selected them
 
-- Salary, pay cuts, financial hardship, or compensation comparisons
-- Health, family, immigration, legal, or personal circumstances
-- Harsh claims about a past employer, role, or career decision
-- Unreleased work, confidential projects, or unpublished titles
-- Direct quotations, especially strong opinions or criticism
-- Claims about why an employer selected the person
-- Claims of impact or causation that cannot be independently verified
-- Precise timelines that could expose private circumstances
+For each flagged line, prepare an honest fallback in advance, such as "they took a lower-paying role" instead of an exact figure. If the subject declines, swap in the fallback or cut the line. Never weaken the hook to protect a single body line.
 
-If approval is unavailable, use an honest approved fallback or remove the point. For example, replace an exact compensation figure with “they accepted a lower-paying role” only if that broader wording is approved and still useful. Do not conceal uncertainty by making the story more dramatic.
+## 4. Build the story beats
 
-## Step 1: Build the story beats
+Make a private working outline. Show it only if asked.
 
-Create a private working outline before writing. Do not show it unless the user asks.
+- **Before-state:** role, organization, background, and what they were considering instead. That alternative is often the reader's current life, so naming it makes the change relatable. Keep only details that drive the story. Cut reading lists and minor credentials; keep the detail that shows the road they nearly took.
+- **Trigger:** why they applied and what headspace they were in.
+- **Mechanism:** the two most concrete shifts. Ideally (a) a realization about the field and (b) a practical pipeline such as a job posted in the community, an introduction, or one specific conversation.
+- **Now-state:** exact role, team, and concrete outputs. Exact team names and dates beat general descriptions.
+- **Cost:** any tradeoff, flagged for approval.
+- **Timeline:** compute the compression, such as "five months from course end to new role." Pick the tightest truthful number.
+- **Quotes:** three to five verbatim lines. Prefer lines that speak to the reader's identity, not only the subject's achievement.
 
-### Before-state
+## 5. Generate three hooks
 
-Capture the subject’s previous role, background, and reader-relevant uncertainty. Include what they were considering instead when that alternative mirrors the audience’s present situation.
+Feeds truncate after the first line or two, so the hook carries most of the weight. Write three distinct hooks, each two short sentences and about 140 characters or fewer.
 
-Keep only details that move the story. Long lists of credentials, books read, or earlier roles usually weaken the post. Keep a detail when it makes the change real or explains the decision.
+**Hook A, Discovery.** Formula: [Subject] didn't [assumption the reader also holds]. [Timeline], they [specific outcome]. [Surprising mechanism]. The first sentence works as a mirror; readers click because it is about them.
 
-### Trigger
+**Hook B, Identity collision.** Formula: [Timeframe] ago, [Subject] was [specific old identity]. Today they [specific new outcome].
 
-Identify why the subject acted at that moment. They may have wanted to test whether a career path existed, learn a new field, find collaborators, solve a practical problem, or make a values-led change.
+**Hook C, Stakes-led.** Formula: [Subject] [accepted a specific cost] to [do the thing]. [Timeline], they [concrete current action].
 
-### Mechanism
+Recommendation rules:
 
-Find one or two observable things that changed the trajectory. Good mechanisms include:
+- Choose **A** by default, whenever the reader shares the subject's former blocker.
+- Choose **B** when the before-and-after is unusually vivid and the audience is broader than the subject's peer group.
+- Choose **C** only when the cost is approved and the audience is mission-driven enough to read sacrifice as conviction. It can signal "this requires giving things up" to the exact reader you want.
 
-- Realizing that a field or role was open to someone with their background
-- Finding a relevant opportunity through a community
-- Having a conversation that clarified next steps
-- Receiving feedback that improved an application or project
-- Getting a relevant introduction, workshop, or practical resource
+Commit to one recommendation and give one sentence each on why the other two are weaker here.
 
-Do not say an experience was “transformative.” Say what happened.
+Avoid slow, date-led openers such as "In spring of last year, she..." Start with the identity or the claim.
 
-### Now-state
+## 6. Draft the post
 
-Record the current role, organization or team if approved, and what the subject actually does. Translate technical language enough for the intended reader to understand the work.
+Aim for about 160 to 220 words (adjustable). Shorter usually wins. Not every beat is mandatory.
 
-Use named outputs only when they add proof or interest. One meaningful project, publication, placement, product, or grant is usually stronger than a long credential list.
+1. **Hook:** the recommended option.
+2. **Before-state:** two or three sentences with the organization, specifics, and the alternative path. Do not repeat the hook.
+3. **Name the program:** one short sentence saying they joined it and why. Never leave the touchpoint implicit; the reader needs to see it as the mechanism.
+4. **Mechanism and outcome:** one merged paragraph. Use the "two things" construction when there really were two. If the hook mentioned the community or channel, mention it again; repetition reinforces. End with a short outcome clause like "They applied and got in." A three-beat staccato is available when pace helps, not required.
+5. **Current work:** concrete role, team, and what the work is, translated for a non-specialist. Skip credential pileups such as publication counts or internal promotions unless one named artifact is the only proof of competence.
+6. **Honest cost (optional):** one sentence, exact figure, approved.
+7. **Pull quote (optional):** include only if it adds a truth the body has not already landed. If the hook already states the subject's own realization, a quote repeating it is redundant.
+8. **CTA:** full second person, pointing to one action. Template: "If you're a [reader role] who suspects [field] might matter a lot, but you don't know where to start, that's what our programs are for." Then a short line pointing to the link. Broad framing ("our programs") often beats "the course."
 
-### Timeline and compression
+## 7. Style and final pass
 
-Map the sequence from the start of the intervention to the current result. Use a short, truthful timeframe when it sharpens the story, such as “five months later” or “the following year.” Do not force a compressed timeline where the facts do not support one.
+Adapt to the publisher's voice guide. Defaults:
 
-### Quotes
+- Full name in the hook, then first name or pronoun only, if the tone is casual and the subject agrees.
+- Short paragraphs, lots of whitespace.
+- Direct declarative sentences. Pick a side.
+- Simple past over past perfect ("she found the job," not "she'd found the job"), unless the time order really matters.
+- Specific over generic: a named organization and team beat "a large firm."
+- Exact figures, no approximations or tildes.
+- Refer to a shared space as a community, not just a tool.
+- No emojis unless the brand uses them.
+- Let named organizations and outputs carry the admiration. Avoid "incredible" or "brilliant." Casual, punchy verbs in the publisher's natural voice are welcome.
+- Contractions are fine. Use whatever casual intensifier the voice naturally uses.
+- No process language such as "next steps," "learn more," or "reach out."
 
-Pull three to five verbatim quote candidates. Prefer quotes that speak to the reader’s identity or uncertainty, not only to the subject’s achievement. Light trimming is allowed only when it preserves meaning and grammar. Never rewrite a quote into something the person did not say.
+On every pass, strip these machine-sounding patterns:
 
-## Step 2: Generate three hooks
+- Em dashes as default punctuation; allow at most one per post, only where it reads best. Rewrite "X, aside, Z" style dash parentheticals as two sentences.
+- Transition sentences that restate the previous point ("That's when everything changed.").
+- Corporate verbs: leverage, navigate, unlock, harness, empower, dive into.
+- Filler intensifiers: truly, deeply, incredibly, genuinely.
+- Abstract nouns doing the work: journey, transformation, shift, paradigm.
+- Hedges and softeners: arguably, it's worth noting, just, essentially, ultimately.
+- Balanced "on one hand, on the other" constructions.
+- Dramatic colon frames such as "Here's the truth: ..."
+- A reflective summary after the CTA. The CTA is the closer.
 
-For feed-based platforms, the first two lines determine whether people continue reading. Write three distinct hooks before drafting the body. Keep each to two short sentences and, where useful for the platform, roughly 140 characters or fewer.
+Read it aloud. If it sounds like a thought-leadership template, cut and replace abstractions with facts. If it sounds like the publisher typing quickly to a colleague, it is close.
 
-### Hook A: Discovery
+## 8. Quote-card options
 
-Use when the audience shares the subject’s former blocker.
+If a visual will accompany the post, propose three quotes, each under 15 words, self-contained, and verbatim (light trimming only).
 
-**Formula:** The subject did not know or believe a relevant possibility. Soon afterward, they reached a specific outcome through a concrete mechanism.
-
-This is the default recommendation when the opening can mirror the reader’s own uncertainty.
-
-### Hook B: Identity collision
-
-Use when the before-and-after contrast is vivid and understandable.
-
-**Formula:** A short time ago, the subject was doing a specific thing. Today, they are doing a sharply different specific thing.
-
-Use it when the contrast itself is compelling, particularly for a broad audience.
-
-### Hook C: Stakes-led
-
-Use only when a meaningful cost or risk is approved and the intended audience will read it as honest conviction rather than a warning.
-
-**Formula:** The subject accepted a specific cost to do something. Now they are taking a concrete action or doing meaningful work.
-
-Do not use a sacrifice hook if it suggests that participation requires hardship or distracts from a more accessible message.
-
-Choose one recommendation. Give a one-sentence reason it suits the audience, plus a brief reason each alternate is less suitable.
-
-## Step 3: Draft the post
-
-Aim for roughly 160 to 220 words unless the platform or audience needs another length. Shorter is usually stronger.
-
-Use this sequence:
-
-1. **Hook:** Use the recommended hook.
-2. **Before-state:** One short paragraph with the previous situation and a relevant alternative path.
-3. **Name the intervention:** Clearly state that they joined the program, used the resource, or participated in the community. Do not leave it implicit.
-4. **Mechanism and outcome:** Explain the concrete turning points, then land the immediate result in plain language. Repeat a key mechanism, such as a community opportunity, if it appeared in the hook and repetition adds clarity.
-5. **Current work:** Describe what they do now and why it matters in understandable language.
-6. **Optional honest cost:** Include only if approved and genuinely useful.
-7. **Optional pull quote:** Include only if it contributes a distinct truth not already expressed by the hook or body.
-8. **CTA:** Address the reader directly and give one clear next action.
-
-A short outcome sequence can work well: “They applied. They got in.” Use it when it adds pace; do not force it.
-
-For platforms where external links may reduce distribution, put the link in a comment, profile page, or designated destination rather than the body. Treat this as a platform-specific publishing choice, not a universal rule.
-
-## Style rules
-
-Adapt to the chosen voice guide. If none exists, use these defaults:
-
-- Use short paragraphs and generous whitespace.
-- Write direct declarative sentences.
-- Prefer simple past tense when possible.
-- Use concrete names, roles, dates, and figures only when verified and approved.
-- After the first introduction, use the subject’s first name only if it fits the publication’s tone and the subject is comfortable with it.
-- Prefer plain verbs over corporate language.
-- Let evidence create admiration. Avoid unsupported praise such as “exceptional,” “inspiring,” or “brilliant.”
-- Use contractions when the voice is conversational.
-- Keep the CTA in full second person: “If you are…” and “you can…”
-- Avoid emojis unless they are an explicit brand choice.
-- Default to periods, commas, and line breaks rather than em dashes.
-
-On the final pass, remove machine-like phrasing. Cut empty transitions, slow date-led openers, dramatic frames, filler intensifiers, hedging, abstract nouns that replace evidence, balanced “on one hand/on the other hand” constructions, and reflective summaries after the CTA.
-
-Avoid corporate or generic phrases such as “leverage,” “unlock,” “harness,” “navigate,” “deep dive,” “journey,” “transformation,” and “paradigm” unless required in an approved direct quote.
-
-Read the post aloud. If it sounds like a generic thought-leadership template, shorten it and replace abstractions with facts.
-
-## Step 4: Quote-card options
-
-Provide three approved, self-contained visual quote options, each under 15 words when possible. Use verbatim source language with only meaning-preserving trimming.
-
-| Category | What the quote should express |
+| Category | What it expresses |
 |---|---|
-| Discovery | “I did not know this path was open to someone like me.” |
-| Mechanism | “I found the opportunity through the community.” |
-| Conviction | “I would make the same choice again.” |
+| Discovery | "I didn't know this path was open to someone like me." |
+| Mechanism | "I found the role through the community." |
+| Conviction | "I'd make the same choice again." |
 
-Recommend one option. Discovery quotes are often strongest because they work without context and mirror the reader’s uncertainty. Choose a mechanism or conviction quote instead only when it is clearer and more memorable on its own.
+Recommend one. Discovery usually wins on a static image because it needs no context and mirrors the reader. Mechanism quotes need context; conviction quotes narrow the audience.
 
-## Step 5: Readiness audit and delivery
+## 9. Readiness audit and delivery
 
-Before sending a draft for review, check:
+Before sending, check:
 
-- Is every name, role, date, figure, title, and quote verified?
-- Were important transcript-derived details cross-checked?
-- Does the post show a concrete mechanism rather than only a result?
-- Does it avoid overstating causation?
-- Is the intervention named clearly?
-- Does the opening mirror a real audience concern?
-- Is the current work understandable to a non-specialist reader?
-- Are sensitive claims and direct quotes flagged for approval?
-- Is the CTA clear and addressed to the intended reader?
-- Are there no em dashes, unsupported superlatives, corporate phrases, or generic filler?
+- Every name, role, date, figure, and quote is verified, and transcript-derived names were cross-checked.
+- The program is named and a concrete mechanism is shown, without overstated causation.
+- The hook mirrors a real reader concern.
+- Current work is understandable to a non-specialist.
+- Sensitive lines are flagged with fallbacks ready.
+- The CTA stays in second person and asks for one action.
+- At most one em dash; no unsupported superlatives or filler.
 
-Create the draft in the user’s chosen document system when one is available. Use a clear title, such as:
+By default, put the full draft directly in the reply. If the user asks for a document instead, create it in their chosen document system with a clear dated title, such as `YYYY-MM-DD: Case study post, [first name]`, and link it.
 
-`YYYY-MM-DD: Case study post, [Subject first name]`
+Alongside the draft, give:
 
-In the accompanying message, provide only:
+- The recommended hook and the two alternates, one line each
+- The three quote-card options with a recommendation
+- Items needing subject approval
+- Missing information that would strengthen the post
 
-- The recommended hook and the two alternatives
-- The three quote-card options and recommendation
-- A list of items needing subject approval
-- A list of missing information that would strengthen the post
-- The document location or link, if applicable
+## 10. Iterate
 
-Do not treat the first draft as final. If feedback says “make the hook better,” generate new hooks rather than making small edits. If asked to make it shorter, cut secondary biography first while protecting the mechanism and outcome. If the subject rejects a sensitive line, use the approved fallback or remove it without weakening unrelated parts of the post.
+- **"Make the hook better."** Do not tweak. Regenerate three new hooks and commit to a new recommendation.
+- **"Rewrite in my voice."** Reread the voice guide, cut adjectives, shorten sentences, swap abstract verbs for concrete ones.
+- **"Make it shorter."** Cut the before-state first, since the hook implies it. Protect the outcome beat.
+- **"The subject didn't approve X."** Use the prepared fallback or cut the line.
 
-After final acceptance, review feedback for reusable lessons. Update the workflow only when a recurring pattern is clear, such as a missing intake question, a consistent voice preference, or a repeated verification issue. Do not invent process changes from a clean review cycle.
+## 11. Worked example (fictional)
+
+Inputs: Jonah Pell, a route planner at the fictional Halverson Freight, considered a supply chain master's degree. He joined the fictional Openfield Institute's climate data program, saw that climate teams needed people who model logistics, and found a posting from the fictional Tidewater Grid Lab in the program's community forum. Seven months later he started there.
+
+> Jonah Pell didn't think a logistics background counted in climate work. Seven months later, he was at Tidewater Grid Lab. He found the role in our community forum.
+>
+> He planned delivery routes at Halverson Freight and was weighing a supply chain master's degree. Climate work wasn't on his list.
+>
+> He joined our climate data program to see what the field looked like. Two things changed his mind. He learned that grid teams need people who can model moving parts at scale, and Tidewater posted an analyst role in our community forum. He applied and got in.
+>
+> He now forecasts where battery storage should go so the grid holds up on the hottest days.
+>
+> If you're an analyst who suspects climate work might matter more than your current job, but you don't know where to start, that's what our programs are for.
+>
+> Link in the comments!
+
+What this shows: a Discovery hook, the alternative path named, the program named, the forum repeated, a short outcome clause, a translated role, no redundant quote, and no credential list.
+
+## Optional extras
+
+- **Link placement.** Some feeds appear to reduce reach for posts with external links in the body. If that matters on your platform, end with a line pointing to the comments and post the link as the first comment.
+- **Transcript tooling.** If your notes tool produces summaries, compare the summary against the raw transcript and the subject's profile; summaries compound mishearings.
+- **Improving the workflow.** After a final draft is accepted, review the edits. If the user rejected a hook, diagnose why (wrong formula, too slow to the specific, blocker not surfaced). Codify repeated voice corrections, structural moves, new specificity patterns, inputs you had to ask for mid-draft, and new kinds of transcript errors. If the review was clean with only cosmetic edits, change nothing.
 
 
 ---
@@ -3833,7 +3816,7 @@ Extract the ask, key assumptions and evidence, decisions requested, risks, deadl
 
 Some meetings need their own process, such as hiring reference calls, formal interviews, performance or compliance meetings, and incident reviews. A reference call is signaled when the attendee is introduced as someone who can speak to a candidate's work, the title says reference, or the attendee is a former manager or colleague of a current candidate.
 
-If a specialized process exists, switch to it, carry forward the relevant research, and do not produce a generic page. A reference process typically confirms consent, uses a standard question list with role-specific probes, cross-checks themes from earlier referees, separates direct observation from hearsay, and stores its page in its own restricted location rather than the general meeting area.
+If a specialized process exists, switch to it, carry forward the relevant research, and do not produce a generic page. A reference process typically confirms consent, uses a standard question list with role-specific probes, cross-checks themes from earlier referees, and separates direct observation from hearsay.
 
 ## Step 6: Post a situation brief
 
@@ -4052,7 +4035,9 @@ Use this evidence order when sources conflict:
 
 Automated summaries often assign actions to the wrong attendee, especially in recurring one-to-ones, brainstorms, and meetings where others list their own to-dos. Never create a task only because a summary calls it an action item.
 
-Track unfinished outcomes, not conversation. An idea, a statement of interest, or an open question is not a task unless someone accepted responsibility for a concrete outcome. Apply responsibility boundaries supplied by the user or team: attending a meeting does not make the user responsible for every topic discussed. If an area has been handed to another person, follow-ups in that area usually need no task for the user.
+Track unfinished outcomes, not conversation. An idea, a statement of interest, or an open question is not a task unless someone accepted responsibility for a concrete outcome.
+
+Apply responsibility boundaries supplied by the user or team, and always use the most recent version, because boundaries shift over time. Attending a meeting does not make the user responsible for every topic discussed. Skip a follow-up as someone else's only when it falls within work explicitly handed to them. Handing off one piece of an area (such as one stage of a process) does not hand off the whole area, so other follow-ups in that area may still belong to the user. When unsure whether an older boundary still applies, ask rather than skip.
 
 This workflow reads records about other people, so use it only for a legitimate purpose with clear authorization to access those records. Use the minimum relevant sources and details, leave unrelated or sensitive personal information out of tasks and reusable guidance, and keep outputs within the access boundary of the chosen task system and its audience.
 
@@ -4107,12 +4092,12 @@ For every meeting, identify:
 - Relationship context: why the meeting happened, how many times you have met, who made the introduction.
 - Candidate actions owned by the user.
 - Work completed during the meeting.
-- Work delegated to another named owner.
+- Work delegated to another named owner, checked against the current responsibility boundaries.
 - Explicit future commitments and their timing.
 - Enough neutral context for a task to stand alone weeks later.
 - Source and related links the task audience may access.
 
-Create no task when work was completed live, another person owns it, the meeting was purely informational and its synthesis is recorded, an active task covers it, or the statement was not a commitment. Users often pre-create tasks during a meeting, so expect some coverage already.
+Create no task when work was completed live, another person explicitly owns it, the meeting was purely informational and its synthesis is recorded, an active task covers it, or the statement was not a commitment. Users often pre-create tasks during a meeting, so expect some coverage already.
 
 A test for live completion: if someone promised to send, create, paste, or share something and the artifact was actually delivered during the meeting, it is done. The initial promise in the transcript is not enough to create a task.
 
@@ -4233,18 +4218,19 @@ A duplicate covers the same outcome, not just similar wording. Skip the new task
 
 Create high-confidence tasks in a batch when possible. Print one line per task with its due date. If the system can open created records directly, open them there rather than filling the update with links.
 
-For every skipped meeting, give a one-sentence reason:
+For every skipped meeting, give a one-sentence reason that names the actual cause:
 
 - "No out-of-meeting commitment."
 - "Completed during the call."
-- "Owned by another role."
+- "Reference call, synthesis already in the notes."
+- "Explicitly handed to another role."
 - "Already covered by an active task."
 
 ## 9. Batch uncertain questions
 
 Skip this step when every decision is confident. Do not interrupt per ambiguity. Create confident tasks first, then ask all remaining questions together.
 
-Typical uncertainties: unclear ownership in the transcript, overlap with an area handed to someone else, dependence on something only the user knows ("did you already send this?"), an unusual commitment in an information-gathering call, or a person with several active tasks where it is unclear whether to append or create.
+Typical uncertainties: unclear ownership in the transcript, overlap with an area that may or may not have been handed to someone else, dependence on something only the user knows ("did you already send this?"), an unusual commitment in an information-gathering call, or a person with several active tasks where it is unclear whether to append or create.
 
 ```markdown
 **[Meeting title]**
@@ -4263,7 +4249,7 @@ Before finishing, verify that:
 - Every meeting source for the scope, including private or restricted spaces, was checked and merged without duplicates.
 - Every created task has a genuine owner and unfinished outcome.
 - Transcript evidence supports ownership where summaries were unclear.
-- Completed and delegated work was excluded.
+- Completed work was excluded, and delegation skips match current, explicitly named handoffs.
 - Active duplicates were not recreated.
 - Titles are action-oriented and notes stand alone.
 - Dates, priority, and estimates are plausible.
@@ -4271,7 +4257,7 @@ Before finishing, verify that:
 - Drafts are ready to send and match the user's preferences.
 - Every uncertain item was asked or explicitly deferred.
 
-Report tersely: meetings reviewed, tasks created or updated with due dates, skipped items with reasons, open questions, and any guidance changes. Use one consistent short day-and-month date format, such as "3 May," and no decoration.
+Report tersely: meetings reviewed, tasks created or updated with due dates, skipped items with reasons, open questions, and any guidance changes. Keep it plain, with no decoration such as emojis.
 
 ## Optional extras
 
@@ -4281,7 +4267,7 @@ Report tersely: meetings reviewed, tasks created or updated with due dates, skip
 
 - Append a short, generalized note when a pattern will affect future triage. Do not rewrite old entries.
 - Change the workflow itself only for cross-cutting principles, new defaults, or a new step, and ask before structural changes such as adding a step or changing the evidence order.
-- Record a new responsibility boundary in the user's responsibility reference if it applies beyond one meeting.
+- Record a new responsibility boundary in the user's responsibility reference if it applies beyond one meeting. When a boundary changes, replace the outdated version and remove any examples or skip reasons that relied on it, so old handoffs do not keep suppressing tasks.
 - Add any newly created meeting space to the list of sources in step 2.
 
 Do not turn one-off facts about a person or meeting into permanent rules. Report any changes in one or two bullets.
@@ -4594,7 +4580,7 @@ Read every source in parallel. For each item collect: source, sender, subject or
 
 *Example (fictional).* A chat with Robin from the Maple Street Rowing Club ends with the user's "Sounds good!" and Robin's "Great, see you there." Two messages earlier, Robin asked whether the user could host the spring meetup, and nobody answered. The chat is a quick win, not no action.
 
-**Unsent drafts.** For every source in scope, also list unsent drafts, including text left in a messaging composer and drafts made earlier in this run. Each is an item in its own right, whatever its age. A draft listing is not always an open loop: stored templates, scheduled messages not yet due, and leftovers the app no longer shows are not loose replies. Mention these once as what they are, and if the user cannot find one, close it and do not ask again.
+**Unsent drafts.** For every source in scope, also list unsent drafts, including text left in a messaging composer and drafts made earlier in this run. Each is an item in its own right, whatever its age. A draft listing is not always an open loop: stored templates, scheduled messages not yet due, and leftovers the app no longer shows are not loose replies. A template with no recipients may also keep appearing in a listing after the user deletes it. Mention these once as what they are, and if the user cannot find one, close it and do not ask again.
 
 **Failures.** If a source fails or is disconnected, name it, the error, and the missing data. Try the safe repairs in its access rules, continue with the others, and never quietly drop a source or swap in a weaker one. Put failures at the top of the output.
 
@@ -4696,7 +4682,7 @@ Then audit the run for friction: a pointless question, a misfiled item, a misbeh
 - Dumping every bucket at once, or moving on before the user acted.
 - Doing the work a message describes instead of tasking it.
 - Judging a chat by its last message, or bucketing from a preview when the ask sits in an unopened file.
-- Forgetting unsent drafts, or counting things that are not real loops as open.
+- Forgetting unsent drafts, or counting templates and other non-loops as open.
 - Flagging a reply as owed when it was sent in a thread or another channel.
 - Relaying an ask the user cannot place, or proposing a meeting that already exists.
 - Guessing an owner instead of saying "owner unclear".
@@ -4996,7 +4982,7 @@ A finished work sample should feel like a small, fair version of the job: bounde
 
 **Capture lessons.** Before closing, record anything learned in your own reference for this workflow: new format problems, shapes that worked, failure modes the simulation exposed, payment changes, better template wording, memo refinements. Record lessons as general principles, without details about individual candidates. Summarize the changes in one or two bullets. Make small wording fixes freely; ask before structural changes such as adding a step or dropping the simulation.
 
-**Working style with the owner.** Keep status updates to one line, use one consistent date format in messages to the owner, and keep drafts the owner will edit in your chosen shared document system, with a dated title, while drafts meant only for reading can stay inline.
+**Working style with the owner.** Keep status updates to one line and use one consistent date format in messages to the owner. Put drafts directly in your reply by default. If the owner asks for a shared document instead, follow the folder and naming conventions they have chosen for such documents. Candidate-facing text still follows the destination system's paste and formatting rules from section 8, wherever the draft lives.
 
 
 ---
@@ -5246,7 +5232,7 @@ For each relevant hit, record the channel type and a permanent link. Read the fu
 ## 5. Search the knowledge base
 
 1. Search the full name, each misspelling, and the name combined with their main employers or role. Ask for a large page of results.
-2. If the requester's private space is excluded, run the same searches (including the employer and role combinations) limited to that space. Every hit the limited search returns lives in the private space and is out of scope, even though the unfiltered search will also show it. Judge by this limited search, not by the location path: pages under generic-looking paths such as an archive or task list can still sit inside the private space.
+2. If the requester's private space is excluded, run the same searches (including the employer and role combinations) limited to that space. Exclude every hit the limited search returns, even when the unfiltered search also shows it. Judge by this limited search, not by the location path: pages under generic-looking paths such as an archive or task list can still sit inside the private space.
 3. Open every remaining hit that mentions the person beyond a passing name-drop. Read the full text and check its location against your visibility map.
 4. Check structured properties as well as body text: hiring status fields, pipeline stages, contact-relationship fields, and similar.
 5. If a page fails to open, report it with its link and ask the requester to check it by hand.

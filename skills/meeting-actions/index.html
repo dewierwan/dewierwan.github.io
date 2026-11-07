@@ -26,7 +26,8 @@
 <li><strong>Pre-meeting agenda:</strong> describes intended discussion, not a commitment.</li>
 </ol>
 <p>Automated summaries often assign actions to the wrong attendee, especially in recurring one-to-ones, brainstorms, and meetings where others list their own to-dos. Never create a task only because a summary calls it an action item.</p>
-<p>Track unfinished outcomes, not conversation. An idea, a statement of interest, or an open question is not a task unless someone accepted responsibility for a concrete outcome. Apply responsibility boundaries supplied by the user or team: attending a meeting does not make the user responsible for every topic discussed. If an area has been handed to another person, follow-ups in that area usually need no task for the user.</p>
+<p>Track unfinished outcomes, not conversation. An idea, a statement of interest, or an open question is not a task unless someone accepted responsibility for a concrete outcome.</p>
+<p>Apply responsibility boundaries supplied by the user or team, and always use the most recent version, because boundaries shift over time. Attending a meeting does not make the user responsible for every topic discussed. Skip a follow-up as someone else&#39;s only when it falls within work explicitly handed to them. Handing off one piece of an area (such as one stage of a process) does not hand off the whole area, so other follow-ups in that area may still belong to the user. When unsure whether an older boundary still applies, ask rather than skip.</p>
 <p>This workflow reads records about other people, so use it only for a legitimate purpose with clear authorization to access those records. Use the minimum relevant sources and details, leave unrelated or sensitive personal information out of tasks and reusable guidance, and keep outputs within the access boundary of the chosen task system and its audience.</p>
 <h3>2. Select the meetings</h3>
 <p>Accept a date in <code>YYYY-MM-DD</code> format, a relative date such as &quot;yesterday,&quot; a date range, or a supplied meeting list. If no input is given, use this adjustable default:</p>
@@ -62,12 +63,12 @@
 <li>Relationship context: why the meeting happened, how many times you have met, who made the introduction.</li>
 <li>Candidate actions owned by the user.</li>
 <li>Work completed during the meeting.</li>
-<li>Work delegated to another named owner.</li>
+<li>Work delegated to another named owner, checked against the current responsibility boundaries.</li>
 <li>Explicit future commitments and their timing.</li>
 <li>Enough neutral context for a task to stand alone weeks later.</li>
 <li>Source and related links the task audience may access.</li>
 </ul>
-<p>Create no task when work was completed live, another person owns it, the meeting was purely informational and its synthesis is recorded, an active task covers it, or the statement was not a commitment. Users often pre-create tasks during a meeting, so expect some coverage already.</p>
+<p>Create no task when work was completed live, another person explicitly owns it, the meeting was purely informational and its synthesis is recorded, an active task covers it, or the statement was not a commitment. Users often pre-create tasks during a meeting, so expect some coverage already.</p>
 <p>A test for live completion: if someone promised to send, create, paste, or share something and the artifact was actually delivered during the meeting, it is done. The initial promise in the transcript is not enough to create a task.</p>
 <h3>5. Decide the task shape</h3>
 <p>Combine actions into one task when they share recipient, time horizon, and outcome. Sending promised material, answering related questions, and offering meeting times can form one follow-up.</p>
@@ -165,16 +166,17 @@ Best,
 <p>A duplicate covers the same outcome, not just similar wording. Skip the new task, or update the existing one if the meeting adds a meaningful action, deadline, or context. Record each duplicate decision for the report.</p>
 <h3>8. Create confident tasks</h3>
 <p>Create high-confidence tasks in a batch when possible. Print one line per task with its due date. If the system can open created records directly, open them there rather than filling the update with links.</p>
-<p>For every skipped meeting, give a one-sentence reason:</p>
+<p>For every skipped meeting, give a one-sentence reason that names the actual cause:</p>
 <ul>
 <li>&quot;No out-of-meeting commitment.&quot;</li>
 <li>&quot;Completed during the call.&quot;</li>
-<li>&quot;Owned by another role.&quot;</li>
+<li>&quot;Reference call, synthesis already in the notes.&quot;</li>
+<li>&quot;Explicitly handed to another role.&quot;</li>
 <li>&quot;Already covered by an active task.&quot;</li>
 </ul>
 <h3>9. Batch uncertain questions</h3>
 <p>Skip this step when every decision is confident. Do not interrupt per ambiguity. Create confident tasks first, then ask all remaining questions together.</p>
-<p>Typical uncertainties: unclear ownership in the transcript, overlap with an area handed to someone else, dependence on something only the user knows (&quot;did you already send this?&quot;), an unusual commitment in an information-gathering call, or a person with several active tasks where it is unclear whether to append or create.</p>
+<p>Typical uncertainties: unclear ownership in the transcript, overlap with an area that may or may not have been handed to someone else, dependence on something only the user knows (&quot;did you already send this?&quot;), an unusual commitment in an information-gathering call, or a person with several active tasks where it is unclear whether to append or create.</p>
 <pre><code>**[Meeting title]**
 Question: [One specific question]
 Context: [One sentence grounded in the record]
@@ -187,7 +189,7 @@ Option B: [Skip or alternate task shape]</code></pre>
 <li>Every meeting source for the scope, including private or restricted spaces, was checked and merged without duplicates.</li>
 <li>Every created task has a genuine owner and unfinished outcome.</li>
 <li>Transcript evidence supports ownership where summaries were unclear.</li>
-<li>Completed and delegated work was excluded.</li>
+<li>Completed work was excluded, and delegation skips match current, explicitly named handoffs.</li>
 <li>Active duplicates were not recreated.</li>
 <li>Titles are action-oriented and notes stand alone.</li>
 <li>Dates, priority, and estimates are plausible.</li>
@@ -195,14 +197,14 @@ Option B: [Skip or alternate task shape]</code></pre>
 <li>Drafts are ready to send and match the user&#39;s preferences.</li>
 <li>Every uncertain item was asked or explicitly deferred.</li>
 </ul>
-<p>Report tersely: meetings reviewed, tasks created or updated with due dates, skipped items with reasons, open questions, and any guidance changes. Use one consistent short day-and-month date format, such as &quot;3 May,&quot; and no decoration.</p>
+<p>Report tersely: meetings reviewed, tasks created or updated with due dates, skipped items with reasons, open questions, and any guidance changes. Keep it plain, with no decoration such as emojis.</p>
 <h3>Optional extras</h3>
 <p><strong>Long-transcript helper.</strong> If transcripts often exceed what the assistant can read at once, keep a small program that slices a saved record by section (such as the action items), scans for commitment phrases attributed to the user, searches by pattern, or returns the next window of text. Scanning for commitments directly beats trusting the summary&#39;s action list.</p>
 <p><strong>Pattern guide.</strong> Keep a user-maintained guide of recurring patterns organized by meeting type: common misattributions, reliable signs of live completion, type exceptions. After each run:</p>
 <ul>
 <li>Append a short, generalized note when a pattern will affect future triage. Do not rewrite old entries.</li>
 <li>Change the workflow itself only for cross-cutting principles, new defaults, or a new step, and ask before structural changes such as adding a step or changing the evidence order.</li>
-<li>Record a new responsibility boundary in the user&#39;s responsibility reference if it applies beyond one meeting.</li>
+<li>Record a new responsibility boundary in the user&#39;s responsibility reference if it applies beyond one meeting. When a boundary changes, replace the outdated version and remove any examples or skip reasons that relied on it, so old handoffs do not keep suppressing tasks.</li>
 <li>Add any newly created meeting space to the list of sources in step 2.</li>
 </ul>
 <p>Do not turn one-off facts about a person or meeting into permanent rules. Report any changes in one or two bullets.</p>
