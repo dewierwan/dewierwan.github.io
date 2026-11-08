@@ -190,7 +190,7 @@ Do not present a draft as final until it passes:
 - Is uncertainty stated where it affects the conclusion?
 - Does it pass the swap test?
 - Is there exactly one focused close?
-- Are all names, quotes, figures, and claims supported and authorized?
+- Are all names, quotes, figures, and claims supported and accurately attributed?
 - Does formatting work on the intended platform, and does it follow the user's dash, hashtag, and emoji preferences?
 - Is the tone professional and appropriate for the audience?
 - Does any promotional mention have a direct, earned connection to the content? If not, drop it or make it a separate post.
@@ -254,7 +254,6 @@ Provide:
 - **Overpacked summary:** covers every part of a source. Pick one thread.
 - **Bolted-on promotion:** ends with an unrelated pitch. Remove it or make the connection immediate and concrete.
 - **Forced engagement:** demands reactions. Ask one genuine question.
-- **Unapproved personal story:** shares details without permission. Get authorization, anonymize, or cut.
 - **Formatting mismatch:** relies on markup the platform does not render. Convert to plain text and preview.
 
 ## Optional extras

@@ -112,7 +112,7 @@ Once the user approves a concrete proposal or gives their own slots, re-read the
 
 ## 8. NOT today and the pre-mortem
 
-Ask: "What are you explicitly not pushing on today? What can you ignore or communicate a slip on?" Capture two to five items, and draft any heads-up someone needs for the user to send.
+Ask: "What are you explicitly not pushing on today? What can you ignore, deprioritize, or communicate a slip on?" Capture two to five items, and draft any heads-up someone needs for the user to send.
 
 Then ask: "If today fails, what's the most likely reason?" Write one concrete counter, such as "notifications off during the MIT block". If the block isn't booked, the counter is "book it first thing".
 
@@ -137,7 +137,8 @@ Block: <day> <time window>
 - Do today / done / punted / delegated: <items>
 
 ## NOT today
-- <items>
+- <what you're explicitly not touching>
+- <what you're deprioritizing>
 
 ## Pre-mortem
 - Likely failure: <reason>

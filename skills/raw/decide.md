@@ -14,7 +14,7 @@ Use this workflow to apply the right amount of rigor to a decision. Small choice
 - For trivial choices, pick a sensible default with a one-sentence reason. For reversible choices, compare two or three options with one strength, one weakness, and rough effort each.
 - For hard-to-reverse or direction-setting choices, pressure-test the leading option and check who disagrees before committing.
 - Never claim the user leans toward or decided something they did not say. Keep the assistant's recommendation clearly labeled as the assistant's.
-- When the user commits, write down a testable prediction, their confidence in it, the next action, and a review date. At review, judge the prediction and the process separately.
+- When the user commits, write down a testable prediction, their confidence in it, the next action, and a review date set for when real results will exist. At review, judge the prediction and the process separately.
 
 ## 1. Ground rules
 
@@ -154,6 +154,10 @@ For an **open** decision, record context, options, and new inputs, but leave com
 
 Suggested default review timing, adjustable: about one month for reversible decisions, three months for hard-to-reverse decisions, and six months for direction-setting decisions. Prefer a meaningful event or trigger if the user names one.
 
+**Check that results will exist by the review date.** Before proposing a date, ask what will actually be observable by then. If the thing being decided will not yet have launched or produced outcomes, move the review to when early outcomes become visible, and frame it as a checkpoint on leading signals rather than a chance to re-decide.
+
+*Fictional example:* Harrowgate Learning commits to starting a mentorship program next term. A default three-month review would land before the first cohort has met more than twice. The review moves to when early retention and participant feedback exist, and its question becomes "Are the early signals on track?" rather than "Should we have launched?"
+
 For hard-to-reverse and direction-setting commitments, make sure a review reminder exists. In a plain chat, give the user a reminder-ready line to add to their own calendar or task list. Use one consistent, unambiguous date format throughout the record.
 
 ```markdown
@@ -204,7 +208,7 @@ At the review point, assess:
 3. **Was the decision process sound?** Judge the information, assumptions, alternatives, and reasoning available at the time.
 4. **What is the reusable lesson?** State a principle for future decisions.
 
-Mark the outcome as correct, incorrect, mixed, too early, or not applicable. Do not treat an unfavorable result as proof of a bad process, or a favorable result as proof of a sound one.
+Mark the outcome as correct, incorrect, mixed, too early, or not applicable. If the review is a leading-signal checkpoint, compare those signals with expectations and keep the outcome as too early until real results exist. Do not treat an unfavorable result as proof of a bad process, or a favorable result as proof of a sound one.
 
 ## 9. Completion message
 
@@ -237,4 +241,4 @@ Use direct language. If the user is about to make a weak call, say so with evide
 - **Searching a connected register.** If your assistant can query a database or document store, check for overlapping decisions before creating a new one, and use any record template it provides so dates and sections fill consistently.
 - **Automatic review reminders.** If a calendar or task tool is connected and authorized, create a reminder titled with the decision on the review date, linking to the record and alerting in advance (for example, one day before). For reversible decisions, a review-date field is usually enough.
 - **Chaining with other workflows.** Pair this with an option-generation step before it and a pressure-test step for hard choices. If someone arrives with no options and an open-ended question, route them to option generation first.
-- **Tuning the workflow.** After a few uses, note where classification, rigor, mode selection, or the record format misfired, and adjust your own version of these rules with the user's agreement.
+- **Tuning the workflow.** After a few uses, note where classification, rigor, mode selection, review timing, or the record format misfired, and adjust your own version of these rules with the user's agreement.

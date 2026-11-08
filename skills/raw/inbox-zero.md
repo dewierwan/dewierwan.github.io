@@ -38,7 +38,7 @@ Confirm these once, or use the defaults. All are adjustable. Store them as confi
 4. **Respect the work cap.** The real time sink on inbox days is doing the work a message describes, not replying to it.
 5. **Evidence, not assumptions.** Say what the messages show. Never state the user's beliefs or decisions for them.
 
-This workflow reads other people's messages, so use it only to process the user's own inbox, in sources they have clearly authorized. Read the minimum sources and information each decision needs, leave unrelated or sensitive personal details about others out of the output, and keep output inside the user's own session and task system.
+This workflow reads other people's messages, so use it only for a legitimate purpose: processing the user's own inbox, in sources they have clearly authorized. Read the minimum sources and information each decision needs, leave unrelated or sensitive personal details about others out of the output, and keep output inside the user's own session and task system.
 
 ## 3. Set scope, time, and goals
 

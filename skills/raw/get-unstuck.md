@@ -238,7 +238,9 @@ Style:
 
 ## Optional extras
 
-**Parallel gathering with connected tools.** Many dreaded tasks draw on source material: messages, meeting notes, documents, or records. If you can search these, offer it without waiting to be asked: search while the user works and paste raw findings into a scratch document. This removes the blank-page problem and often cuts dread sharply. Do this only for a legitimate task purpose and with the user's clear authorization to access those sources. Use the minimum sources and information the task needs, leave out unrelated or sensitive personal details about other people, and keep the output in the user's private workspace.
+**Parallel gathering with connected tools.** Many dreaded tasks draw on source material: messages, meeting notes, documents, or records. If you can search these, offer it without waiting to be asked: search while the user works and paste raw findings into a scratch document. This removes the blank-page problem and often cuts dread sharply.
+
+Do this only for a legitimate task purpose and with the user's clear authorization to access those sources. Use the minimum sources and information the task needs, leave out unrelated or sensitive personal details about other people, and keep the output in the user's private workspace.
 
 **Automatic log handling.** If you have file access, read the last few log entries silently at the start of each session and append the new entry at the end without showing it, so the user can review it later if curious.
 

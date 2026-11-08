@@ -1,17 +1,24 @@
 ---
 name: shape-and-draft
-description: Shape a high-stakes document through evidence review and rounds of questions until the thinking is settled, then draft and audit it. Use when writing a strategy doc, proposal, or decision memo that must land.
+description: Shapes a high-stakes document through evidence review and rounds of questions, then drafts and audits it. Use when writing a strategy doc, proposal, or decision memo that must land.
 ---
 
 # Shape and draft a document
 
-Develop an important document by shaping the thinking behind it before writing. Earn the draft. First work out what the document must achieve. Then gather the relevant evidence and resolve the material choices with the person who has authority to make them. Draft only when the remaining uncertainty will not materially change the result.
+Develop an important document by shaping the thinking behind it before writing: gather the evidence, resolve the material choices with the person who has authority to make them, and draft only when the remaining uncertainty will not materially change the result.
+
+## Quick version
+
+- Before any drafting, tell your assistant who will read the document and what they should understand, decide, or do afterward. Ask it to recommend a form (narrative, strategy, operating agreement, decision memo, scorecard, or hybrid) and explain the tradeoff.
+- Paste in the relevant source material and ask for a short situation brief that separates what the sources establish from what the assistant only infers.
+- Ask for questions in rounds of four to eight, numbered, one decision per question, with three or four lettered options and the recommended option first, so you can reply in shorthand like `1a, 2c, 3b`.
+- After each round, have it show an updated ledger of what is confirmed, sourced, inferred, open, and corrected, then build the next round from the consequences of your answers. Do at least two rounds for consequential documents.
+- Before drafting, have it check every major planned claim: did you confirm it, does a reliable source establish it, or is it only inferred? For persuasive documents, also ask for the strongest objection from the real audience and confirm the response.
+- Then ask for the smallest document that does the job, in plain, complete sentences, and have it audit the draft against the ledger before handing it over.
+
+## 1. Classify the request
 
 Use this workflow for strategies, narratives, operating agreements, proposals, scorecards, decision memos, and hybrids when the argument, commitments, boundaries, operating model, or document form is not yet settled. Use a lighter process for simple edits, formatting work, or documents whose decisions and content are already clear.
-
-If you review private communications, internal records, or information about people, do so only for a legitimate purpose and with clear authorization. Use the minimum relevant sources and information. Leave out unrelated or sensitive personal details, respect consent and privacy expectations, and keep the draft within the access boundary that fits its audience.
-
-## Classify the request
 
 A request may name a proposed document, a desired outcome, an audience, source material, or some combination. Treat any proposed document type as a hypothesis until its purpose is clear.
 
@@ -19,7 +26,9 @@ Use the **full shaping process** when the document is consequential and its argu
 
 A substantive round resolves a distinct layer of choices and uses the answers to decide the next layer. Restating the situation, asking for general approval, or repeating answered questions does not count as a round.
 
-## 1. Work backwards from the outcome
+If you review private communications, internal records, or information about people, do so only for a legitimate purpose and with clear authorization. Use the minimum relevant sources and information, leave out unrelated or sensitive personal details, and keep the draft within the access boundary that fits its audience.
+
+## 2. Work backwards from the outcome
 
 Start with the change the document needs to produce. Establish:
 
@@ -30,7 +39,7 @@ Start with the change the document needs to produce. Establish:
 
 Do not accept 'write a narrative' or 'make a strategy page' as the goal. Identify the job the document must do.
 
-## 2. Choose the artifact
+## 3. Choose the artifact
 
 Recommend the form that best serves the goal:
 
@@ -43,9 +52,9 @@ Recommend the form that best serves the goal:
 
 Explain the tradeoff and recommend one form. If the choice of form is load-bearing, because it would change the argument, structure, or decisions required, ask the decision-maker to confirm it before going deeper.
 
-## 3. Gather and classify the evidence
+## 4. Gather and classify the evidence
 
-Read supplied material first. Follow any stated rules for source selection, authority, and citation. Scale the research to the stakes. For a consequential internal document, search the authorized sources most likely to hold prior decisions, current definitions, relevant evidence, dissent, constraints, and ownership context.
+Read supplied material first. Follow any stated rules for source selection, authority, and citation. Scale the research to the stakes. For a consequential internal document, look at the authorized sources most likely to hold prior decisions, current definitions, relevant evidence, dissent, constraints, and ownership context.
 
 Apply these rules:
 
@@ -71,7 +80,7 @@ Before the first interview round, give a short situation brief covering:
 - The artifact you recommend.
 - The important uncertainties that only the decision-maker can resolve.
 
-## 4. Interview in answer-dependent rounds
+## 5. Interview in answer-dependent rounds
 
 For a full shaping process, complete at least two substantive, answer-dependent rounds before drafting. Count relevant rounds that already happened in the current conversation, and do not repeat them. Do not draft right after the first answer round just because one apparent core tension seems resolved. The second round should test the implications, boundaries, counterarguments, or execution details the first round revealed.
 
@@ -79,7 +88,7 @@ Ask four to eight focused questions per round. If fewer than four material quest
 
 Each numbered question should normally contain one decision. Do not bundle independent choices, such as ownership, coordination, handoffs, and success measures, into one yes-or-no question. A broad answer to a bundle creates false alignment.
 
-**Deliver each round once, on one answer surface.** Put the situation brief or updated synthesis and the questions in the same message, at the end of your turn, so the respondent can read them together and reply in shorthand. Do not also send the same questions through a separate form or question tool, because two answer surfaces can produce conflicting or stale answers. If a form is required, show the questions there once with the context needed to answer them. Progress depends on what has actually been answered, not on what an interface shows as pending.
+**Deliver each round once, on one answer surface.** Put the situation brief or updated synthesis and the questions in the same message, at the end of your turn, so the respondent can read them together and reply in shorthand.
 
 Format questions for fast, unambiguous replies:
 
@@ -127,7 +136,7 @@ After every answer round, do all four steps before deciding whether to draft:
 
 Adapt the content of the rounds to the task, but keep the answer-dependent loop. Continue while an open issue could materially change the draft. Stop interviewing once only low-impact uncertainty remains and the readiness gate is met. If the requester asks to skip further questions and draft now, briefly name the material consequence and follow the instruction.
 
-## 5. Maintain an alignment ledger
+## 6. Maintain an alignment ledger
 
 Keep a compact working record throughout the conversation:
 
@@ -143,7 +152,7 @@ Update the ledger after every answer round, before asking more questions. Never 
 
 For a full shaping process, do not keep the ledger implicit. Show a concise version before each later round so the decision-maker can catch mistaken assumptions. Every major claim planned for the draft must be confirmed, a source fact, or deliberately presented as a proposal or open question.
 
-## 6. Apply the readiness gate
+## 7. Apply the readiness gate
 
 Draft only when no unresolved issue is likely to change the document's substance. Before drafting, explicitly run the gate and give a short pre-draft synthesis: the intended job, the audience, the central position, the important boundaries, and any deliberate open questions.
 
@@ -171,18 +180,13 @@ Resolving one central tension is not enough if the draft still depends on unconf
 
 Close alignment is not a literal probability. It means the remaining uncertainty is low impact, or the document openly presents it as unresolved. If the requester asks for the draft before the gate is met, name the one or two consequences of the uncertainty and follow the instruction.
 
-## 7. Draft in the requested voice
+## 8. Draft in the requested voice
 
 Apply any voice profile, style guide, or delivery rules the user has supplied. If none exist, write in clear, direct language that suits the audience and sounds like the document's owner rather than an outside consultant.
 
 Write the smallest document that can do the job. Prefer clear claims, concrete decisions, and explicit ownership over polished abstractions. Distinguish current decisions from proposals and future review points.
 
-Keep the structure readable:
-
-- Do not let a section become a long, flat inventory. For action or onboarding documents, keep each section to seven top-level bullets at most, and prefer five or fewer for the main outcome section.
-- If more points seem necessary, cut them, combine them under a clear lead phrase, or move detail to a linked reference.
-- Make sure a heading after a list is truly separate from it. It should not inherit bullet or numbering formatting, and there should be no stray empty paragraph between them. Format conversions often cause both problems.
-- Inspect the rendered output, not just the underlying structure. Fix uneven indentation, bullets that render as numbers, orphaned bullets, and awkward page breaks.
+Keep the structure readable. Do not let a section become a long, flat inventory. For action or onboarding documents, set a cap on top-level bullets per section (seven is a sensible adjustable default, with fewer in the main outcome section). If more points seem necessary, cut them, combine them under a clear lead phrase, or move detail to a linked reference.
 
 Make the draft as simple as the substance allows. The hard thinking should produce a document that is easy to read, not one that displays how complex the thinking was.
 
@@ -191,15 +195,16 @@ Make the draft as simple as the substance allows. The hard thinking should produ
 - Let sentence length follow the thought. A longer sentence is fine when it makes a connected argument easier to follow.
 - State the point first. Cut warm-up text, repeated context, process narration, and throat-clearing.
 - Turn abstract ideas into concrete claims, actions, examples, owners, dates, or tests.
+- Explain a complex idea as a clear sequence of full sentences rather than hiding it behind jargon.
 - Cut qualifiers and side points that do not change a decision or action.
 - Use focused paragraphs. Use bullets only for real lists, and write each bullet as a full sentence unless it is a compact label.
 - Prefer the more concise version when it keeps the meaning. Concise means removing unneeded ideas and words, not shortening every sentence.
 
 Do not flatten the substance. Keep a hard idea when it matters, and explain it in the simplest language possible.
 
-Honor the requested destination in the user's chosen system. If text was requested in the conversation, do not edit the source document. If a document must be created or edited, do so with the appropriate tool and verify the result.
+Honor the requested destination. If text was requested in the conversation, give it there and do not edit any source document.
 
-## 8. Audit before delivery
+## 9. Audit before delivery
 
 Compare the draft with the alignment ledger and the source hierarchy:
 
@@ -210,10 +215,10 @@ Compare the draft with the alignment ledger and the source hierarchy:
 - Are uncertain claims marked as such?
 - Are factual claims and links supported by sources?
 - Is anything presented as settled that was only inferred?
-- Does it match the requested voice, audience, access boundary, and privacy expectations?
+- Does it match the requested voice and audience?
 - Can each sentence be understood on first read?
 - Are prose and bullets written as full, natural sentences rather than clipped fragments?
-- Can any fancy word, abstract phrase, or repeated point be simplified or cut?
+- Can any fancy word, abstract phrase, or repeated point be simplified or cut? Keep a long sentence when it carries one connected thought clearly.
 
 Fix any mismatch before delivering. Put the deliverable last, with no trailing summary or offer that gets in the way of copying it.
 
@@ -234,5 +239,10 @@ Fix any mismatch before delivering. Put the deliverable last, with no trailing s
 - Hiding a contradiction behind vague language.
 - Continuing the interview after only low-impact uncertainty remains.
 - Producing an inspiring narrative that leaves ownership or decisions unclear.
-- Including personal or sensitive details beyond the audience's legitimate need.
 - Mistaking concise writing for choppy writing through fragments, noun-only bullets, or forcing every sentence to be short.
+
+## Optional extras
+
+**Question forms and tools.** If your assistant can show questions through a separate form or question tool, use only one surface per round. Do not mirror the chat block into a form, because two answer surfaces can produce conflicting or stale answers. If a form is required, show the questions there once with the context needed to answer them, and respect that tool's limits. If a reply arrives in chat while the form still looks pending, treat the chat reply as the answer. Progress depends on what has actually been answered, not on what an interface shows as pending.
+
+**Writing into a document system.** If the draft must be created or edited in your chosen document system, use the appropriate tool and verify the result. Format conversions, such as Markdown into a word processor, often cause two problems: a stray empty paragraph between a list and the next heading, or a heading that inherits the list's bullet or numbering. Make sure each heading after a list is truly separate from it and that every intended bullet renders as a bullet, not a number. Inspect the rendered output or an export, not just the underlying structure, and fix uneven indentation across sections, orphaned bullets, and awkward page breaks rather than accepting output that is structurally valid but visually poor.

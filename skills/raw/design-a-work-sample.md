@@ -190,7 +190,7 @@ Sweep these on every pass. Many are signs of unedited AI output; others are rend
 - **No tables** if the destination system does not render them. Use bullets with bold leads.
 - **No punchy contrast slogans** such as "the bar is X, not Y" or "it's not just X, it's Y".
 - **No stacked repetition,** such as three sentences in a row starting the same way, or several sentences each ending in a list of three.
-- **One consistent locale** for spelling, chosen by the owner.
+- **One spelling convention everywhere.** Pick one locale (for example US spelling: organization, program, prioritize) and use it consistently across candidate-facing text and all your other writing for the role. The owner chooses which.
 - **Sign-offs on two lines** ("Best," then the name on the next line) in fictional messages.
 - **Clearly fictional contact details.** Use obviously placeholder addresses on a domain reserved for documentation examples. Never use realistic-looking personal addresses, because candidates may try to contact them. Do not wrap addresses in angle brackets, which can trigger autolinks.
 - **Soft line breaks for metadata blocks.** Some paste flows merge consecutive lines (From, To, Subject) into one paragraph. Use the destination's soft-break method, such as an explicit line-break tag at the end of each metadata line. Avoid blank lines between header fields; they look wrong. Bullet lists are usually safe.

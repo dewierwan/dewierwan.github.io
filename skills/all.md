@@ -113,7 +113,7 @@ Before sending the response, verify that:
 
 ---
 name: pressure-test
-description: Finds the weak points in a strategic idea before you commit, through a steelman, assumption tests, a pre-mortem, and a verdict. Use when someone says pressure-test this, stress-test this, or am I wrong.
+description: Finds the weak points in a strategic idea before you commit, through a steelman, assumption tests, a pre-mortem, and a verdict. Use when you say pressure-test this, stress-test this, or am I wrong.
 ---
 
 # Pressure-test an idea
@@ -275,7 +275,7 @@ Use this workflow to apply the right amount of rigor to a decision. Small choice
 - For trivial choices, pick a sensible default with a one-sentence reason. For reversible choices, compare two or three options with one strength, one weakness, and rough effort each.
 - For hard-to-reverse or direction-setting choices, pressure-test the leading option and check who disagrees before committing.
 - Never claim the user leans toward or decided something they did not say. Keep the assistant's recommendation clearly labeled as the assistant's.
-- When the user commits, write down a testable prediction, their confidence in it, the next action, and a review date. At review, judge the prediction and the process separately.
+- When the user commits, write down a testable prediction, their confidence in it, the next action, and a review date set for when real results will exist. At review, judge the prediction and the process separately.
 
 ## 1. Ground rules
 
@@ -415,6 +415,10 @@ For an **open** decision, record context, options, and new inputs, but leave com
 
 Suggested default review timing, adjustable: about one month for reversible decisions, three months for hard-to-reverse decisions, and six months for direction-setting decisions. Prefer a meaningful event or trigger if the user names one.
 
+**Check that results will exist by the review date.** Before proposing a date, ask what will actually be observable by then. If the thing being decided will not yet have launched or produced outcomes, move the review to when early outcomes become visible, and frame it as a checkpoint on leading signals rather than a chance to re-decide.
+
+*Fictional example:* Harrowgate Learning commits to starting a mentorship program next term. A default three-month review would land before the first cohort has met more than twice. The review moves to when early retention and participant feedback exist, and its question becomes "Are the early signals on track?" rather than "Should we have launched?"
+
 For hard-to-reverse and direction-setting commitments, make sure a review reminder exists. In a plain chat, give the user a reminder-ready line to add to their own calendar or task list. Use one consistent, unambiguous date format throughout the record.
 
 ```markdown
@@ -465,7 +469,7 @@ At the review point, assess:
 3. **Was the decision process sound?** Judge the information, assumptions, alternatives, and reasoning available at the time.
 4. **What is the reusable lesson?** State a principle for future decisions.
 
-Mark the outcome as correct, incorrect, mixed, too early, or not applicable. Do not treat an unfavorable result as proof of a bad process, or a favorable result as proof of a sound one.
+Mark the outcome as correct, incorrect, mixed, too early, or not applicable. If the review is a leading-signal checkpoint, compare those signals with expectations and keep the outcome as too early until real results exist. Do not treat an unfavorable result as proof of a bad process, or a favorable result as proof of a sound one.
 
 ## 9. Completion message
 
@@ -498,7 +502,7 @@ Use direct language. If the user is about to make a weak call, say so with evide
 - **Searching a connected register.** If your assistant can query a database or document store, check for overlapping decisions before creating a new one, and use any record template it provides so dates and sections fill consistently.
 - **Automatic review reminders.** If a calendar or task tool is connected and authorized, create a reminder titled with the decision on the review date, linking to the record and alerting in advance (for example, one day before). For reversible decisions, a review-date field is usually enough.
 - **Chaining with other workflows.** Pair this with an option-generation step before it and a pressure-test step for hard choices. If someone arrives with no options and an open-ended question, route them to option generation first.
-- **Tuning the workflow.** After a few uses, note where classification, rigor, mode selection, or the record format misfired, and adjust your own version of these rules with the user's agreement.
+- **Tuning the workflow.** After a few uses, note where classification, rigor, mode selection, review timing, or the record format misfired, and adjust your own version of these rules with the user's agreement.
 
 
 ---
@@ -680,18 +684,25 @@ Keep the handoff focused on outcomes and operationally useful detail. Avoid bury
 
 ---
 name: shape-and-draft
-description: Shape a high-stakes document through evidence review and rounds of questions until the thinking is settled, then draft and audit it. Use when writing a strategy doc, proposal, or decision memo that must land.
+description: Shapes a high-stakes document through evidence review and rounds of questions, then drafts and audits it. Use when writing a strategy doc, proposal, or decision memo that must land.
 ---
 
 # Shape and draft a document
 
-Develop an important document by shaping the thinking behind it before writing. Earn the draft. First work out what the document must achieve. Then gather the relevant evidence and resolve the material choices with the person who has authority to make them. Draft only when the remaining uncertainty will not materially change the result.
+Develop an important document by shaping the thinking behind it before writing: gather the evidence, resolve the material choices with the person who has authority to make them, and draft only when the remaining uncertainty will not materially change the result.
+
+## Quick version
+
+- Before any drafting, tell your assistant who will read the document and what they should understand, decide, or do afterward. Ask it to recommend a form (narrative, strategy, operating agreement, decision memo, scorecard, or hybrid) and explain the tradeoff.
+- Paste in the relevant source material and ask for a short situation brief that separates what the sources establish from what the assistant only infers.
+- Ask for questions in rounds of four to eight, numbered, one decision per question, with three or four lettered options and the recommended option first, so you can reply in shorthand like `1a, 2c, 3b`.
+- After each round, have it show an updated ledger of what is confirmed, sourced, inferred, open, and corrected, then build the next round from the consequences of your answers. Do at least two rounds for consequential documents.
+- Before drafting, have it check every major planned claim: did you confirm it, does a reliable source establish it, or is it only inferred? For persuasive documents, also ask for the strongest objection from the real audience and confirm the response.
+- Then ask for the smallest document that does the job, in plain, complete sentences, and have it audit the draft against the ledger before handing it over.
+
+## 1. Classify the request
 
 Use this workflow for strategies, narratives, operating agreements, proposals, scorecards, decision memos, and hybrids when the argument, commitments, boundaries, operating model, or document form is not yet settled. Use a lighter process for simple edits, formatting work, or documents whose decisions and content are already clear.
-
-If you review private communications, internal records, or information about people, do so only for a legitimate purpose and with clear authorization. Use the minimum relevant sources and information. Leave out unrelated or sensitive personal details, respect consent and privacy expectations, and keep the draft within the access boundary that fits its audience.
-
-## Classify the request
 
 A request may name a proposed document, a desired outcome, an audience, source material, or some combination. Treat any proposed document type as a hypothesis until its purpose is clear.
 
@@ -699,7 +710,9 @@ Use the **full shaping process** when the document is consequential and its argu
 
 A substantive round resolves a distinct layer of choices and uses the answers to decide the next layer. Restating the situation, asking for general approval, or repeating answered questions does not count as a round.
 
-## 1. Work backwards from the outcome
+If you review private communications, internal records, or information about people, do so only for a legitimate purpose and with clear authorization. Use the minimum relevant sources and information, leave out unrelated or sensitive personal details, and keep the draft within the access boundary that fits its audience.
+
+## 2. Work backwards from the outcome
 
 Start with the change the document needs to produce. Establish:
 
@@ -710,7 +723,7 @@ Start with the change the document needs to produce. Establish:
 
 Do not accept 'write a narrative' or 'make a strategy page' as the goal. Identify the job the document must do.
 
-## 2. Choose the artifact
+## 3. Choose the artifact
 
 Recommend the form that best serves the goal:
 
@@ -723,9 +736,9 @@ Recommend the form that best serves the goal:
 
 Explain the tradeoff and recommend one form. If the choice of form is load-bearing, because it would change the argument, structure, or decisions required, ask the decision-maker to confirm it before going deeper.
 
-## 3. Gather and classify the evidence
+## 4. Gather and classify the evidence
 
-Read supplied material first. Follow any stated rules for source selection, authority, and citation. Scale the research to the stakes. For a consequential internal document, search the authorized sources most likely to hold prior decisions, current definitions, relevant evidence, dissent, constraints, and ownership context.
+Read supplied material first. Follow any stated rules for source selection, authority, and citation. Scale the research to the stakes. For a consequential internal document, look at the authorized sources most likely to hold prior decisions, current definitions, relevant evidence, dissent, constraints, and ownership context.
 
 Apply these rules:
 
@@ -751,7 +764,7 @@ Before the first interview round, give a short situation brief covering:
 - The artifact you recommend.
 - The important uncertainties that only the decision-maker can resolve.
 
-## 4. Interview in answer-dependent rounds
+## 5. Interview in answer-dependent rounds
 
 For a full shaping process, complete at least two substantive, answer-dependent rounds before drafting. Count relevant rounds that already happened in the current conversation, and do not repeat them. Do not draft right after the first answer round just because one apparent core tension seems resolved. The second round should test the implications, boundaries, counterarguments, or execution details the first round revealed.
 
@@ -759,7 +772,7 @@ Ask four to eight focused questions per round. If fewer than four material quest
 
 Each numbered question should normally contain one decision. Do not bundle independent choices, such as ownership, coordination, handoffs, and success measures, into one yes-or-no question. A broad answer to a bundle creates false alignment.
 
-**Deliver each round once, on one answer surface.** Put the situation brief or updated synthesis and the questions in the same message, at the end of your turn, so the respondent can read them together and reply in shorthand. Do not also send the same questions through a separate form or question tool, because two answer surfaces can produce conflicting or stale answers. If a form is required, show the questions there once with the context needed to answer them. Progress depends on what has actually been answered, not on what an interface shows as pending.
+**Deliver each round once, on one answer surface.** Put the situation brief or updated synthesis and the questions in the same message, at the end of your turn, so the respondent can read them together and reply in shorthand.
 
 Format questions for fast, unambiguous replies:
 
@@ -807,7 +820,7 @@ After every answer round, do all four steps before deciding whether to draft:
 
 Adapt the content of the rounds to the task, but keep the answer-dependent loop. Continue while an open issue could materially change the draft. Stop interviewing once only low-impact uncertainty remains and the readiness gate is met. If the requester asks to skip further questions and draft now, briefly name the material consequence and follow the instruction.
 
-## 5. Maintain an alignment ledger
+## 6. Maintain an alignment ledger
 
 Keep a compact working record throughout the conversation:
 
@@ -823,7 +836,7 @@ Update the ledger after every answer round, before asking more questions. Never 
 
 For a full shaping process, do not keep the ledger implicit. Show a concise version before each later round so the decision-maker can catch mistaken assumptions. Every major claim planned for the draft must be confirmed, a source fact, or deliberately presented as a proposal or open question.
 
-## 6. Apply the readiness gate
+## 7. Apply the readiness gate
 
 Draft only when no unresolved issue is likely to change the document's substance. Before drafting, explicitly run the gate and give a short pre-draft synthesis: the intended job, the audience, the central position, the important boundaries, and any deliberate open questions.
 
@@ -851,18 +864,13 @@ Resolving one central tension is not enough if the draft still depends on unconf
 
 Close alignment is not a literal probability. It means the remaining uncertainty is low impact, or the document openly presents it as unresolved. If the requester asks for the draft before the gate is met, name the one or two consequences of the uncertainty and follow the instruction.
 
-## 7. Draft in the requested voice
+## 8. Draft in the requested voice
 
 Apply any voice profile, style guide, or delivery rules the user has supplied. If none exist, write in clear, direct language that suits the audience and sounds like the document's owner rather than an outside consultant.
 
 Write the smallest document that can do the job. Prefer clear claims, concrete decisions, and explicit ownership over polished abstractions. Distinguish current decisions from proposals and future review points.
 
-Keep the structure readable:
-
-- Do not let a section become a long, flat inventory. For action or onboarding documents, keep each section to seven top-level bullets at most, and prefer five or fewer for the main outcome section.
-- If more points seem necessary, cut them, combine them under a clear lead phrase, or move detail to a linked reference.
-- Make sure a heading after a list is truly separate from it. It should not inherit bullet or numbering formatting, and there should be no stray empty paragraph between them. Format conversions often cause both problems.
-- Inspect the rendered output, not just the underlying structure. Fix uneven indentation, bullets that render as numbers, orphaned bullets, and awkward page breaks.
+Keep the structure readable. Do not let a section become a long, flat inventory. For action or onboarding documents, set a cap on top-level bullets per section (seven is a sensible adjustable default, with fewer in the main outcome section). If more points seem necessary, cut them, combine them under a clear lead phrase, or move detail to a linked reference.
 
 Make the draft as simple as the substance allows. The hard thinking should produce a document that is easy to read, not one that displays how complex the thinking was.
 
@@ -871,15 +879,16 @@ Make the draft as simple as the substance allows. The hard thinking should produ
 - Let sentence length follow the thought. A longer sentence is fine when it makes a connected argument easier to follow.
 - State the point first. Cut warm-up text, repeated context, process narration, and throat-clearing.
 - Turn abstract ideas into concrete claims, actions, examples, owners, dates, or tests.
+- Explain a complex idea as a clear sequence of full sentences rather than hiding it behind jargon.
 - Cut qualifiers and side points that do not change a decision or action.
 - Use focused paragraphs. Use bullets only for real lists, and write each bullet as a full sentence unless it is a compact label.
 - Prefer the more concise version when it keeps the meaning. Concise means removing unneeded ideas and words, not shortening every sentence.
 
 Do not flatten the substance. Keep a hard idea when it matters, and explain it in the simplest language possible.
 
-Honor the requested destination in the user's chosen system. If text was requested in the conversation, do not edit the source document. If a document must be created or edited, do so with the appropriate tool and verify the result.
+Honor the requested destination. If text was requested in the conversation, give it there and do not edit any source document.
 
-## 8. Audit before delivery
+## 9. Audit before delivery
 
 Compare the draft with the alignment ledger and the source hierarchy:
 
@@ -890,10 +899,10 @@ Compare the draft with the alignment ledger and the source hierarchy:
 - Are uncertain claims marked as such?
 - Are factual claims and links supported by sources?
 - Is anything presented as settled that was only inferred?
-- Does it match the requested voice, audience, access boundary, and privacy expectations?
+- Does it match the requested voice and audience?
 - Can each sentence be understood on first read?
 - Are prose and bullets written as full, natural sentences rather than clipped fragments?
-- Can any fancy word, abstract phrase, or repeated point be simplified or cut?
+- Can any fancy word, abstract phrase, or repeated point be simplified or cut? Keep a long sentence when it carries one connected thought clearly.
 
 Fix any mismatch before delivering. Put the deliverable last, with no trailing summary or offer that gets in the way of copying it.
 
@@ -914,8 +923,13 @@ Fix any mismatch before delivering. Put the deliverable last, with no trailing s
 - Hiding a contradiction behind vague language.
 - Continuing the interview after only low-impact uncertainty remains.
 - Producing an inspiring narrative that leaves ownership or decisions unclear.
-- Including personal or sensitive details beyond the audience's legitimate need.
 - Mistaking concise writing for choppy writing through fragments, noun-only bullets, or forcing every sentence to be short.
+
+## Optional extras
+
+**Question forms and tools.** If your assistant can show questions through a separate form or question tool, use only one surface per round. Do not mirror the chat block into a form, because two answer surfaces can produce conflicting or stale answers. If a form is required, show the questions there once with the context needed to answer them, and respect that tool's limits. If a reply arrives in chat while the form still looks pending, treat the chat reply as the answer. Progress depends on what has actually been answered, not on what an interface shows as pending.
+
+**Writing into a document system.** If the draft must be created or edited in your chosen document system, use the appropriate tool and verify the result. Format conversions, such as Markdown into a word processor, often cause two problems: a stray empty paragraph between a list and the next heading, or a heading that inherits the list's bullet or numbering. Make sure each heading after a list is truly separate from it and that every intended bullet renders as a bullet, not a number. Inspect the rendered output or an export, not just the underlying structure, and fix uneven indentation across sections, orphaned bullets, and awkward page breaks rather than accepting output that is structurally valid but visually poor.
 
 
 ---
@@ -1117,14 +1131,22 @@ If you insert the brief into an existing formatted document, new text can inheri
 
 ---
 name: learning-tutor
-description: Teach a paper, article, or topic through Socratic questions and retrieval practice instead of passive summary. Use when someone says teach me this, help me understand it, or quiz me on it.
+description: Teaches a paper, article, or topic through Socratic questions and retrieval practice instead of passive summary. Use when someone says teach me this, help me understand it, or quiz me on it.
 ---
 
 # Learn with a tutor
 
-Help a learner understand, retain, and use a paper, article, post, lesson, or topic through an active dialogue. Favor retrieval, explanation, and application over passive review. The learner should do most of the thinking; the tutor should guide, diagnose, and increase challenge without turning the exchange into a test.
+Help a learner understand, retain, and use a paper, article, post, lesson, or topic through an active dialogue that favors retrieval, explanation, and application over passive review. The learner should do most of the thinking; the tutor should guide, diagnose, and increase challenge without turning the exchange into a test.
 
-## Core learning principles
+## Quick version
+
+- Share or name the material and tell your assistant: “Act as a Socratic tutor. Do not summarize. First ask what I already know, then have me explain the main claim from memory.”
+- Ask it to focus on two or three of the most important ideas and probe each one for mechanism, evidence, a self-generated example, and the strongest objection.
+- Ask for one or two questions per turn, no yes-or-no questions, and specific feedback instead of generic praise.
+- When you get something wrong, have it ask a follow-up that exposes the gap, and explain directly only after one or two genuine attempts.
+- Ask for short checkpoints on what you have shown you understand and what is still shaky, and end with “What would I actually do differently now?” plus one question to revisit later.
+
+## 1. Core learning principles
 
 - **Retrieve before reviewing.** Do not give an unrequested summary. Ask the learner to reconstruct ideas in their own words.
 - **Require explanation.** Ask why, how, under what conditions, and based on what evidence an idea holds.
@@ -1133,7 +1155,7 @@ Help a learner understand, retain, and use a paper, article, post, lesson, or to
 - **Practice transfer.** Ask how an idea applies in an unfamiliar setting, relates to existing knowledge, or changes a decision.
 - **Reveal gaps through inquiry.** When reasoning is incomplete or inconsistent, use focused questions to expose the tension. Explain directly only after the learner has had one or two fair attempts.
 
-## Readiness and scope
+## 2. Readiness and scope
 
 Start by establishing both the learner’s starting point and their goal. Ask one or two open questions, such as:
 
@@ -1143,9 +1165,7 @@ Start by establishing both the learner’s starting point and their goal. Ask on
 
 If the learner has not encountered the source, ask for an initial prediction or working model. Then direct them to inspect a relevant portion before beginning retrieval practice. Do not replace their first engagement with a full explanation.
 
-## Conversation workflow
-
-### 1. Elicit the central idea
+## 3. Elicit the central idea
 
 Ask the learner to state the main claim, finding, or problem in their own words. Do not invite quotation as a substitute for understanding.
 
@@ -1156,7 +1176,7 @@ Useful prompts:
 - “What problem is this idea trying to solve?”
 - “How would you explain it to a thoughtful friend in 30 seconds?”
 
-### 2. Choose a few high-value ideas
+## 4. Choose a few high-value ideas
 
 Select two or three ideas that are central, difficult, consequential, or likely to be misunderstood. Do not attempt to cover everything superficially.
 
@@ -1170,7 +1190,7 @@ For each idea, use this cycle:
 
 Keep each turn short. Usually ask only one or two questions at a time.
 
-## Question toolkit
+## 5. Question toolkit
 
 Choose questions that require reasoning rather than recognition.
 
@@ -1187,9 +1207,9 @@ Choose questions that require reasoning rather than recognition.
 
 Avoid yes-or-no questions unless they immediately require an explanation or defense.
 
-## Response rules
+## 6. Response rules
 
-Be warm, rigorous, and specific. Generic praise is not useful. When an answer is strong, identify what makes it strong—for example, a clear causal mechanism, a relevant counterexample, or a distinction between correlation and causation—then raise the challenge.
+Be warm, rigorous, and specific. Generic praise is not useful. When an answer is strong, identify what makes it strong (for example, a clear causal mechanism, a relevant counterexample, or a distinction between correlation and causation), then raise the challenge.
 
 When an answer is incomplete or incorrect:
 
@@ -1203,7 +1223,7 @@ If the learner says, “I don’t know,” invite an informed guess first: “Ba
 
 If jargon appears, ask the learner to define it before defining it yourself. Clarify only as needed for accurate reasoning.
 
-## Calibration and pacing
+## 7. Calibration and pacing
 
 Increase difficulty when answers are easy or fluent. Ask for a counterexample, competing explanation, prediction, analogy, or application in a different domain.
 
@@ -1217,7 +1237,7 @@ Reduce difficulty when the learner is lost. Narrow the question, isolate one ass
 
 Match the learner’s energy while maintaining intellectual standards. A demanding dialogue should feel collaborative, not punitive.
 
-## Progress checks and audit
+## 8. Progress checks and audit
 
 Periodically provide a brief, evidence-based checkpoint. State:
 
@@ -1234,7 +1254,7 @@ Before moving on, check whether the learner can:
 - Identify at least one assumption, limitation, or objection.
 - Apply it to a concrete situation.
 
-## Closing gate
+## 9. Closing gate
 
 Before ending, ask the learner to turn understanding into action:
 
@@ -1242,7 +1262,7 @@ Before ending, ask the learner to turn understanding into action:
 
 Then ask for a final concise explanation, a self-generated example, or a future retrieval prompt. End by naming the most useful concept or question to revisit later.
 
-## Guardrails
+## 10. Guardrails
 
 - Do not summarize unless the learner explicitly asks; even then, invite their own summary first.
 - Do not lecture when a well-chosen question can prompt retrieval or inference.
@@ -1250,6 +1270,24 @@ Then ask for a final concise explanation, a self-generated example, or a future 
 - Do not cover an entire source at shallow depth when a few important ideas can be understood deeply.
 - Do not use a fixed question list as a substitute for responding to the learner’s actual reasoning.
 - Keep the interaction primarily question-driven, with brief explanations used to unblock learning or correct persistent misunderstandings.
+
+## Optional extras
+
+**Short sample exchange (invented).** A learner is studying a fictional article from the Bramblewood Institute claiming that spaced practice beats cramming.
+
+> Tutor: In your own words, what is the article’s main claim, and why should anyone believe it?
+>
+> Learner: Spreading study sessions out helps you remember more.
+>
+> Tutor: That is the conclusion. What mechanism would make spacing work better than the same hours in one block?
+>
+> Learner: Maybe because you forget a bit, and recalling it again is harder?
+>
+> Tutor: Good: you linked spacing to effortful recall rather than just time. Now, where might this fail? Think of a situation where cramming could be the better choice.
+
+Notice the pattern: no summary, a push from conclusion to mechanism, specific feedback, then a boundary case.
+
+**If your assistant can save notes or remember across sessions.** At the end of a session, have it record the learner’s goal, the ideas covered, the gaps named at the last checkpoint, and two or three retrieval prompts. Open the next session by asking those prompts before introducing anything new. The review interval is the learner’s choice; a few days for the first review is a reasonable adjustable default.
 
 
 ---
@@ -1576,7 +1614,7 @@ Do not present a draft as final until it passes:
 - Is uncertainty stated where it affects the conclusion?
 - Does it pass the swap test?
 - Is there exactly one focused close?
-- Are all names, quotes, figures, and claims supported and authorized?
+- Are all names, quotes, figures, and claims supported and accurately attributed?
 - Does formatting work on the intended platform, and does it follow the user's dash, hashtag, and emoji preferences?
 - Is the tone professional and appropriate for the audience?
 - Does any promotional mention have a direct, earned connection to the content? If not, drop it or make it a separate post.
@@ -1640,7 +1678,6 @@ Provide:
 - **Overpacked summary:** covers every part of a source. Pick one thread.
 - **Bolted-on promotion:** ends with an unrelated pitch. Remove it or make the connection immediate and concrete.
 - **Forced engagement:** demands reactions. Ask one genuine question.
-- **Unapproved personal story:** shares details without permission. Get authorization, anonymize, or cut.
 - **Formatting mismatch:** relies on markup the platform does not render. Convert to plain text and preview.
 
 ## Optional extras
@@ -2188,7 +2225,7 @@ Once the user approves a concrete proposal or gives their own slots, re-read the
 
 ## 8. NOT today and the pre-mortem
 
-Ask: "What are you explicitly not pushing on today? What can you ignore or communicate a slip on?" Capture two to five items, and draft any heads-up someone needs for the user to send.
+Ask: "What are you explicitly not pushing on today? What can you ignore, deprioritize, or communicate a slip on?" Capture two to five items, and draft any heads-up someone needs for the user to send.
 
 Then ask: "If today fails, what's the most likely reason?" Write one concrete counter, such as "notifications off during the MIT block". If the block isn't booked, the counter is "book it first thing".
 
@@ -2213,7 +2250,8 @@ Block: <day> <time window>
 - Do today / done / punted / delegated: <items>
 
 ## NOT today
-- <items>
+- <what you're explicitly not touching>
+- <what you're deprioritizing>
 
 ## Pre-mortem
 - Likely failure: <reason>
@@ -2695,7 +2733,7 @@ Opt-in only, and only to judge capacity. Summarize sleep and activity against th
 
 ### Meeting cut pass
 
-Ask whether to cut meetings or keep them all; if keep, write "No cuts this week (chose to keep)" in the plan. Otherwise list meetings that serve no goal or obligation, with quick context for outside ones: who, why it exists, what was promised, and the cost of cancelling. The user decides keep, cut, shorten, or move. Draft a short, warm message for each change and never send it for them. If someone else runs a recurring meeting, draft a note to the organizer instead of editing it.
+Ask whether to cut meetings or keep them all; if keep, write "No cuts this week (chose to keep)" in the plan. Otherwise list meetings that serve no goal or obligation, with quick context for outside ones: who, why it exists, what was promised, and the cost of canceling. The user decides keep, cut, shorten, or move. Draft a short, warm message for each change and never send it for them. If someone else runs a recurring meeting, draft a note to the organizer instead of editing it.
 
 ```
 Hi [name], I'm protecting time for [goal] this week, so I'd like to [skip / move / shorten] our [meeting] on [day]. [Alternative, such as a written update by Thursday]. Does that work for you?
@@ -3269,7 +3307,9 @@ Style:
 
 ## Optional extras
 
-**Parallel gathering with connected tools.** Many dreaded tasks draw on source material: messages, meeting notes, documents, or records. If you can search these, offer it without waiting to be asked: search while the user works and paste raw findings into a scratch document. This removes the blank-page problem and often cuts dread sharply. Do this only for a legitimate task purpose and with the user's clear authorization to access those sources. Use the minimum sources and information the task needs, leave out unrelated or sensitive personal details about other people, and keep the output in the user's private workspace.
+**Parallel gathering with connected tools.** Many dreaded tasks draw on source material: messages, meeting notes, documents, or records. If you can search these, offer it without waiting to be asked: search while the user works and paste raw findings into a scratch document. This removes the blank-page problem and often cuts dread sharply.
+
+Do this only for a legitimate task purpose and with the user's clear authorization to access those sources. Use the minimum sources and information the task needs, leave out unrelated or sensitive personal details about other people, and keep the output in the user's private workspace.
 
 **Automatic log handling.** If you have file access, read the last few log entries silently at the start of each session and append the new entry at the end without showing it, so the user can review it later if curious.
 
@@ -3511,14 +3551,12 @@ The earliest result is 20 minutes before wake time, which is earlier than usual,
 
 ---
 name: plan-and-book-a-trip
-description: Plan a trip around its purpose, compare complete journeys against the traveler's preferences, and book within clear limits. Use when someone needs flights, trains, or transfers found or booked.
+description: Plans a trip around its purpose, compares complete door-to-door journeys, and books within clear limits. Use when someone says "find me flights", "plan my trip", or "book the train".
 ---
 
 # Plan and book a trip
 
-Understand the trip before you optimize its transport. First learn what the traveler wants from the trip. Then turn the agreed brief into a small, priced set of practical options, and carry the chosen option through booking preparation or an authorized purchase.
-
-The traveler's current instructions always win. Old receipts, past trips, and saved preferences are context, not permanent rules. Never turn one trip's dates, fares, or event plans into a lasting default.
+Understand what a trip is for before optimizing its transport. Then turn an agreed brief into a small set of priced, door-to-door options, and carry the chosen one through booking preparation or an authorized purchase.
 
 ## Quick version
 
@@ -3530,6 +3568,7 @@ The traveler's current instructions always win. Old receipts, past trips, and sa
 
 ## Core principles
 
+- **Current instructions win.** Old receipts, past trips, and saved preferences are context, not permanent rules. Never turn one trip's dates, fares, or event plans into a lasting default.
 - **Trip first, tickets second.** Saved preferences do not replace a conversation about what this trip is for.
 - **You do the research and checking.** Gather facts yourself from authorized sources. Ask the traveler only about intentions, priorities, trade-offs, a missing fact, a login step, or an approval.
 - **Compare complete journeys.** A cheap fare can hide an extra hotel night, a hard transfer, a lost day, or fees.
@@ -3559,18 +3598,11 @@ For a new trip, start with discovery. Do not search fares until the first trip q
 
 ### Gather relevant context
 
-Read the conversation, the saved profile, and any invitations, agendas, or itineraries the traveler supplied. If the traveler has connected tools and clearly authorized it, you may also read their calendar, email, messages, and shared documents for this trip.
+Read the conversation, the saved profile, and any invitations, agendas, or itineraries the traveler supplied. If the traveler has connected tools and has clearly authorized it, you may also read their calendar, email, messages, and shared documents for this trip, read-only unless they authorize more.
 
-Rules for this step:
+These sources often mention other people, such as companions, hosts, and organizers. Read them only for the legitimate purpose of planning this trip and with the traveler's clear authorization, searching narrowly by event, destination, organizer, and dates. Use the minimum relevant information, leave unrelated or sensitive details about anyone out of your notes and outputs, and keep findings within the traveler's private planning space; do not contact anyone without authorization.
 
-- Have a legitimate purpose: planning this specific trip.
-- Use read-only access unless the traveler authorizes more.
-- Search narrowly by event, destination, organizer, and dates. Use only the minimum relevant sources and information.
-- Do not sweep unrelated messages or look into companions or other people. Respect their privacy.
-- Leave unrelated or sensitive personal details out of your notes and outputs.
-- Keep findings private to the traveler. Do not contact anyone without authorization.
-- Keep addresses and identity details out of shareable summaries. Never store loyalty numbers, passport or identity numbers, payment details, or document copies in the profile; booking references go only in a private trip record.
-- Saving lessons or preferences never adds permission to purchase, message others, or access accounts.
+Keep the traveler's addresses and identity details out of shareable summaries. Never store loyalty numbers, passport or identity numbers, payment details, or document copies in the profile; booking references go only in a private trip record. Saving lessons or preferences never adds permission to purchase, message others, or access accounts.
 
 Look for why the trip is happening, event dates and venues, existing bookings, and nearby commitments. If a source is unavailable, say so; never imply you checked it.
 
@@ -3657,9 +3689,9 @@ A traveler is going from Riverton to Lakeport for a four-day conference, wants a
 
 | Option | Route and times | Cabin and fare | Complete cost | Main benefit | Main drawback |
 |---|---|---|---|---|---|
-| A (recommended) | RVT to LKP direct, depart Tue 11.05, arrive 14.20 | Economy, standard fare | 412 (fare 340, bag 45, aisle seat 27) | Arrives in time for the opening dinner; free changes | 74 more than B |
-| B | RVT to LKP via Hillford, depart Tue 06.40, arrive 13.55 | Economy, basic fare | 338 (fare 255, bag 55, seat 28) | Cheapest | Very early start; 50-minute connection; no changes |
-| C | Train to Lakeport, depart Mon 15.00, arrive 21.30 | Standard class, flexible ticket | 298 (ticket 168, extra hotel night 130) | Calm journey, can work on board | Adds a night away and a hotel |
+| A (recommended) | RVT to LKP direct, depart Tue late morning, arrive mid-afternoon | Economy, standard fare | 412 (fare 340, bag 45, aisle seat 27) | Arrives in time for the opening dinner; free changes | 74 more than B |
+| B | RVT to LKP via Hillford, depart Tue early morning, arrive early afternoon | Economy, basic fare | 338 (fare 255, bag 55, seat 28) | Cheapest | Very early start; tight connection; no changes |
+| C | Train to Lakeport, depart Mon afternoon, arrive late evening | Standard class, flexible ticket | 298 (ticket 168, extra hotel night 130) | Calm journey, can work on board | Adds a night away and a hotel |
 
 Recommendation: A. The extra 74 over B buys a sensible start time, no tight connection, and a changeable ticket. Prices for A and B are live; the hotel cost in C is an estimate.
 
@@ -4548,7 +4580,7 @@ Confirm these once, or use the defaults. All are adjustable. Store them as confi
 4. **Respect the work cap.** The real time sink on inbox days is doing the work a message describes, not replying to it.
 5. **Evidence, not assumptions.** Say what the messages show. Never state the user's beliefs or decisions for them.
 
-This workflow reads other people's messages, so use it only to process the user's own inbox, in sources they have clearly authorized. Read the minimum sources and information each decision needs, leave unrelated or sensitive personal details about others out of the output, and keep output inside the user's own session and task system.
+This workflow reads other people's messages, so use it only for a legitimate purpose: processing the user's own inbox, in sources they have clearly authorized. Read the minimum sources and information each decision needs, leave unrelated or sensitive personal details about others out of the output, and keep output inside the user's own session and task system.
 
 ## 3. Set scope, time, and goals
 
@@ -4897,7 +4929,7 @@ Sweep these on every pass. Many are signs of unedited AI output; others are rend
 - **No tables** if the destination system does not render them. Use bullets with bold leads.
 - **No punchy contrast slogans** such as "the bar is X, not Y" or "it's not just X, it's Y".
 - **No stacked repetition,** such as three sentences in a row starting the same way, or several sentences each ending in a list of three.
-- **One consistent locale** for spelling, chosen by the owner.
+- **One spelling convention everywhere.** Pick one locale (for example US spelling: organization, program, prioritize) and use it consistently across candidate-facing text and all your other writing for the role. The owner chooses which.
 - **Sign-offs on two lines** ("Best," then the name on the next line) in fictional messages.
 - **Clearly fictional contact details.** Use obviously placeholder addresses on a domain reserved for documentation examples. Never use realistic-looking personal addresses, because candidates may try to contact them. Do not wrap addresses in angle brackets, which can trigger autolinks.
 - **Soft line breaks for metadata blocks.** Some paste flows merge consecutive lines (From, To, Subject) into one paragraph. Use the destination's soft-break method, such as an explicit line-break tag at the end of each metadata line. Avoid blank lines between header fields; they look wrong. Bullet lists are usually safe.
@@ -5344,7 +5376,7 @@ Use the first route that fits. Do not skip ahead.
 
 ### Look for a direct interface
 
-Many forms send structured data to an endpoint that can be called directly, which skips the hardest browser problems. Read the service's official documentation, view the page source for a form action or embedded data block, or watch the browser's network requests while using the page normally. Even an endpoint that takes some study is often faster than fighting a complex form. Fall back to the browser when no suitable programmatic option exists or when the user explicitly wants the UI flow.
+Many forms send structured data to an endpoint that can be called directly, which skips the hardest browser problems. Read the service's official documentation, view the page source for a form action or embedded data block, or watch the browser's network requests while using the page normally. Booking and availability widgets are a common case: the results often come from a plain search or availability request that is easier to call than the widget is to drive. Fall back to the browser when no suitable programmatic option exists or when the user explicitly wants the UI flow.
 
 Limits:
 
@@ -5357,12 +5389,12 @@ The user's visible browser is their working space. Taking it over interrupts the
 
 ### Blocks and bot checks
 
-If a site blocks headless automation during general research, accept the block and move on. Escalating to the signed-in browser is reasonable only when the user explicitly asked for a task on that specific site and the session is genuinely needed. Human-verification checks, security-key prompts, and multi-factor prompts belong to the user: pause, ask them to complete it, then continue. Never simulate, bypass, or weaken these checks.
+If a site blocks headless automation during general research, accept the block and move on. Escalating to the signed-in browser is reasonable only when the user explicitly asked for a task on that specific site and the session is genuinely needed. Human-verification checks, security-key prompts, and multi-factor prompts belong to the user: pause, ask them to complete it, then continue. Never simulate, bypass, or weaken these checks, and never disable integrity or signature checks on local tools to make a connection work.
 
 ## 3. Pick the right automation style
 
-- **Step-by-step tool calls** through an interactive browser tool suit one click, reading one snapshot, or short tasks with roughly ten or fewer actions and little text.
-- **A standalone script** using a browser automation library suits long text (for example over a couple of thousand characters), many fields, heavy single-page applications, or anything that needs repeatable runs.
+- **Step-by-step tool calls** through an interactive browser tool suit one click, reading one snapshot, or short tasks with few actions and little text.
+- **A standalone script** using a browser automation library suits long text, many fields, heavy single-page applications, or anything that needs repeatable runs.
 
 Interactive tool layers can become unstable with long text, several parallel actions against one page, or heavy rendering. If the session crashes with a message like "page, context, or browser has been closed," switch to a script rather than rescuing the broken session. When in doubt, write a script.
 
@@ -5377,9 +5409,8 @@ When the task touches private messages, records, dashboards, or information abou
 - **Announce, then act.** Say briefly what you are taking over and why, for example "Taking over the browser to update the billing contact." Never take control silently. If the user already authorized visible browser use for this task, do not ask again.
 - **Work in a fresh window, tab, or tab group.** Do not reuse the user's existing tabs unless they point to one.
 - **Classify the context before choosing a profile.** Personal, work, test, staging, or production. Personal errands (shopping, banking, health, subscriptions, household, government services) are personal even on general-purpose sites. Internal operations, vendors, and colleague-facing work are work. If the user says which, that settles it.
-- **Select the profile directly.** A generic "current browser" selector often picks whichever profile was used most recently, which can silently put a personal task in a work account.
-- **Do not trust display names.** Labels like "Browser 1" can reshuffle after restarts. Use a stable identifier where the tool provides one, record the mapping in a private local note if useful, and still verify every time.
-- **A window is not a connection.** Opening a window for a profile puts it on screen; the automation connection may still point elsewhere. If the window is open but the tool never lists a connection for it, and relaunching does not help, the connector or extension in that profile is likely signed out or asleep. Ask the user to open it in that window and sign in if prompted, then list connections again and verify.
+- **Select the profile directly and do not trust display names.** A generic "current browser" selector often picks whichever profile was used most recently, and labels like "Browser 1" can reshuffle after restarts. Use a stable identifier where the tool provides one, and still verify every time.
+- **A window is not a connection.** Opening a window for a profile puts it on screen; the automation connection may still point elsewhere. If a window is open but no connection ever appears for it, the connector in that profile is likely signed out or asleep. Ask the user to open and sign in to it in that window, then list connections again and verify.
 - **Do not restart or force-quit the user's browser** without their explicit OK. It closes everything they have open.
 
 ### Account preflight gate
@@ -5398,11 +5429,9 @@ Before navigating deeply, identify the target page, record, form, or setting; wh
 
 **Reversible changes** the user asked for, such as toggling a setting or updating a saved card or draft, can proceed after normal verification.
 
-**Irreversible or high-impact actions** need a pre-action record and confirmation unless the user already gave clear authorization for that exact action. These include payments, purchases, sends, invitations, publishing, deletions, plan or billing changes, access or ownership changes, and anything labeled "cannot be undone" or "cannot be edited after submission." Treat such forms as one-way doors.
+**Irreversible or high-impact actions** need a pre-action record and confirmation unless the user already gave clear authorization for that exact action. These include payments, purchases, sends, invitations, publishing, deletions, plan or billing changes, access or ownership changes, and anything labeled "cannot be undone" or "cannot be edited after submission." Treat such forms as one-way doors. For deletions, note in the pre-action record whether the service keeps a restorable trash; a restore path lowers the risk but does not remove the need for authorization.
 
-For deletions, check whether the service keeps a restorable trash or recycle bin and note it in the pre-action record. A restore path lowers the risk but does not remove the need for authorization. Some actions, including delete, sit behind menus that appear only when you hover over an item; reveal the menu on the exact item you verified.
-
-**Credentials stay with the user.** Entering API keys, tokens, passwords, or recovery codes into any form is the user's step. Set up everything around the credential (open the right page, fill the other fields, reach the input box), then hand the user exact steps to enter it themselves. Never move secrets by copy and paste through automation: a site's copy button can appear to work while the system clipboard still holds older, unrelated text, so the wrong value lands in the wrong place.
+**Credentials stay with the user.** Entering API keys, tokens, passwords, or recovery codes into any form is the user's step. Set up everything around the credential (open the right page, fill the other fields, reach the input box), then hand the user exact steps to enter it themselves. Never move secrets by copy and paste through automation: a site's copy button can appear to work while the system clipboard still holds older, unrelated text.
 
 Honor an explicit request to review before submission. If authorization is already given, do not ask again. If it is missing, prepare and verify the full result, show the pre-submit state, and ask only for the final action.
 
@@ -5531,12 +5560,8 @@ A click is not proof of success. Look for real evidence: a success message, a co
 | Interactive tool crashes on long text or parallel calls | Tool layer is unstable for heavy work | Switch to a standalone script. |
 | Headless page differs from a normal browser | Site varies by browser context | Prefer a direct interface; escalate only for an explicit task, never evade protections. |
 | Wrong account or profile opened | Generic selector picked the last-used profile | Classify context, select the profile directly, verify the account. |
-| Profile window open but no connection appears | Connector in that profile is signed out or asleep | Ask the user to open and sign in to it in that window, re-list, verify. |
 | Session ends after a page-script request | Internal endpoint called without the app's normal headers | Drive the UI or use a supported API. |
-| In-memory state read returns nothing after an app update | Internal state layout moved in a new version | Probe for the current location, fall back to older ones, and verify against the screen. |
-| A site's copy button seems to work, but pasting elsewhere gives old, unrelated text | Copies made through the automation layer did not reach the system clipboard | Do not move secrets by copy and paste; prepare everything around the credential and give the user exact steps to enter it. |
-| Automation connection fails an integrity or signature check | Local helper is stale or altered | Stop; repair through an approved path that keeps verification on. Never disable checks. |
-| Security check or 2FA prompt appears | Site needs the user present | Ask the user to complete it, then continue. |
+| A warning or security page appears that the tool cannot read or click | The page sits outside the automation's reach or needs a person | Ask the user to handle it, then continue and re-verify. |
 
 ## 12. Report results
 
@@ -5544,7 +5569,7 @@ Summarize the outcome in one or two sentences, point to the screenshot and the a
 
 ## 13. Keep the procedure current
 
-When a run reveals a reusable lesson, such as a new failure mode, a working pattern, or a missing capability, add it to your local copy of this procedure. Prefer a single table row with symptom, cause, and fix over new prose. Never record credentials, account identifiers, personal details, or private site data. When the document grows long, merge older entries into general principles instead of appending incident history. Tool paths, versions, profile mappings, and any notes about where an app keeps its internal state go stale, so update them in place and re-verify them.
+When a run reveals a reusable lesson, such as a new failure mode, a working pattern, or a missing capability, add it to your local copy of this procedure. Prefer a single table row with symptom, cause, and fix over new prose. Never record credentials, account identifiers, personal details, or private site data. When the document grows long, merge older entries into general principles instead of appending incident history. Tool paths, versions, profile mappings, and notes about how a particular app behaves go stale, so update them in place and re-verify them.
 
 ## Final audit checklist
 
@@ -5561,26 +5586,20 @@ When a run reveals a reusable lesson, such as a new failure mode, a working patt
 
 ## Optional extras
 
-**Clipboard and paste.** Headless browsers often lack clipboard permission, so embed values directly. Copies triggered through an automation connector may not reach the system clipboard at all, so never rely on a copy and paste round trip without checking what actually arrived. When rich content (such as HTML with links) must be inserted, a synthetic paste event carrying both HTML and plain text works in some editors and is ignored by others; some editors expose their own documented conversion method instead. Verify the result, ideally through the service's API or an export rather than the screen alone.
+**Clipboard and rich paste.** Headless browsers often lack clipboard permission, so embed values directly instead. When rich content (such as text with links) must be inserted, a synthetic paste event carrying both rich and plain text works in some editors and is ignored by others, which may offer their own conversion method. Verify the result, ideally through the service's API or an export rather than the screen alone.
 
-**Drag and drop.** Dragging can create layout changes (like columns) or trigger a clickable element by accident. Prefer keyboard move commands with short waits, then verify the final structure.
+**Drag and drop.** Dragging can create unwanted layout changes or trigger a clickable element by accident. Prefer keyboard move commands with short waits, then verify the final structure.
 
-**Parallel work and background tabs.** When many independent items are needed (for example several generated drafts or images), separate tabs or sessions each given the full brief avoid one item biasing the next. Keep concurrency modest (a default of about ten, adjustable); more tends to stall. Background tabs may not render at full size, so bring an item into view before capturing it, check nothing is cut off, and clean up temporary overlays or tabs afterward.
+**Parallel work.** When many independent items are needed, separate tabs or sessions each given the full brief keep one item from biasing the next. Keep concurrency to a small number you choose, since too many tends to stall. Background tabs may not render at full size, so bring an item into view before capturing it and clean up temporary tabs afterward.
 
-**Editing visual workflow builders without an API.** Some automation or workflow editors offer no bulk-edit screen, and API access may not be available. In that case:
+**Devices on the user's own network.** Local devices often serve unencrypted pages, and a browser set to prefer secure connections may show a warning first that automation cannot handle. Continue past it only for devices the user owns and asked you to work on, through the browser's own proceed option or by asking the user, and never for public sites. Use the same address the user normally signs in at, since sign-in sessions are tied to it, and check the device's own settings for an authenticated route to companion services before asking for extra tokens.
 
-- Read steps, connections, and recent run output from state the page already holds in memory, with no network calls.
-- Internal state layouts are undocumented and change between app versions. Probe for the current location first, fall back to older known locations, and never treat one path as permanent. If a read suddenly returns nothing after an update, assume the layout moved before assuming the data is gone.
-- Add steps through the editor's own paste support where it exists, after closing any open step panel. Replace code inside a step by focusing its code editor, selecting all, and pasting.
-- Connect steps and choose credentials through the UI. Test by running a single read-only step before anything that writes, then save and re-read the workflow to confirm the change persisted.
+**Apps without an API.** When a workflow builder or automation editor has no bulk-edit screen or API:
 
-**Auditing configuration after a structural change.** When fields, tables, or sources are renamed or deleted and the service has no API for its automations or workflows, audit through the UI:
-
-- Steps that bind to internal IDs usually follow renames; custom script steps that reference names may silently break; steps whose source was deleted often show a "fix configuration" style warning.
-- Open each item in turn, wait for it to load, and check for warning text, script steps, and the status of the latest run in its history.
-- If a page-script loop runs longer than your tool's call time limit, start it without waiting, store results in a page variable, and poll for them in later calls.
-- If the tool rejects returned text containing certain characters (such as URL query symbols), strip or encode them before returning.
-- Report which items need attention, separating confirmed breakage from items that only use name-based references and need a manual check.
+- Read configuration from state the page already holds in memory, with no network calls. These internal layouts are undocumented and change between versions, so probe for the current location, and if a read suddenly returns nothing, assume the layout moved before assuming the data is gone.
+- Make changes through the editor's own UI or paste support, test with a read-only step before anything that writes, then save and re-read to confirm the change persisted.
+- After renaming or deleting fields or sources, open each automation in turn and check for configuration warnings, script steps that reference names rather than internal IDs, and the latest run status. Report confirmed breakage separately from items that need a manual check.
+- If a page-script loop outlasts your tool's time limit, start it without waiting, store results in a page variable, and poll for them in later calls.
 
 
 ---

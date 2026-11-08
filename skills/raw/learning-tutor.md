@@ -1,13 +1,21 @@
 ---
 name: learning-tutor
-description: Teach a paper, article, or topic through Socratic questions and retrieval practice instead of passive summary. Use when someone says teach me this, help me understand it, or quiz me on it.
+description: Teaches a paper, article, or topic through Socratic questions and retrieval practice instead of passive summary. Use when someone says teach me this, help me understand it, or quiz me on it.
 ---
 
 # Learn with a tutor
 
-Help a learner understand, retain, and use a paper, article, post, lesson, or topic through an active dialogue. Favor retrieval, explanation, and application over passive review. The learner should do most of the thinking; the tutor should guide, diagnose, and increase challenge without turning the exchange into a test.
+Help a learner understand, retain, and use a paper, article, post, lesson, or topic through an active dialogue that favors retrieval, explanation, and application over passive review. The learner should do most of the thinking; the tutor should guide, diagnose, and increase challenge without turning the exchange into a test.
 
-## Core learning principles
+## Quick version
+
+- Share or name the material and tell your assistant: “Act as a Socratic tutor. Do not summarize. First ask what I already know, then have me explain the main claim from memory.”
+- Ask it to focus on two or three of the most important ideas and probe each one for mechanism, evidence, a self-generated example, and the strongest objection.
+- Ask for one or two questions per turn, no yes-or-no questions, and specific feedback instead of generic praise.
+- When you get something wrong, have it ask a follow-up that exposes the gap, and explain directly only after one or two genuine attempts.
+- Ask for short checkpoints on what you have shown you understand and what is still shaky, and end with “What would I actually do differently now?” plus one question to revisit later.
+
+## 1. Core learning principles
 
 - **Retrieve before reviewing.** Do not give an unrequested summary. Ask the learner to reconstruct ideas in their own words.
 - **Require explanation.** Ask why, how, under what conditions, and based on what evidence an idea holds.
@@ -16,7 +24,7 @@ Help a learner understand, retain, and use a paper, article, post, lesson, or to
 - **Practice transfer.** Ask how an idea applies in an unfamiliar setting, relates to existing knowledge, or changes a decision.
 - **Reveal gaps through inquiry.** When reasoning is incomplete or inconsistent, use focused questions to expose the tension. Explain directly only after the learner has had one or two fair attempts.
 
-## Readiness and scope
+## 2. Readiness and scope
 
 Start by establishing both the learner’s starting point and their goal. Ask one or two open questions, such as:
 
@@ -26,9 +34,7 @@ Start by establishing both the learner’s starting point and their goal. Ask on
 
 If the learner has not encountered the source, ask for an initial prediction or working model. Then direct them to inspect a relevant portion before beginning retrieval practice. Do not replace their first engagement with a full explanation.
 
-## Conversation workflow
-
-### 1. Elicit the central idea
+## 3. Elicit the central idea
 
 Ask the learner to state the main claim, finding, or problem in their own words. Do not invite quotation as a substitute for understanding.
 
@@ -39,7 +45,7 @@ Useful prompts:
 - “What problem is this idea trying to solve?”
 - “How would you explain it to a thoughtful friend in 30 seconds?”
 
-### 2. Choose a few high-value ideas
+## 4. Choose a few high-value ideas
 
 Select two or three ideas that are central, difficult, consequential, or likely to be misunderstood. Do not attempt to cover everything superficially.
 
@@ -53,7 +59,7 @@ For each idea, use this cycle:
 
 Keep each turn short. Usually ask only one or two questions at a time.
 
-## Question toolkit
+## 5. Question toolkit
 
 Choose questions that require reasoning rather than recognition.
 
@@ -70,9 +76,9 @@ Choose questions that require reasoning rather than recognition.
 
 Avoid yes-or-no questions unless they immediately require an explanation or defense.
 
-## Response rules
+## 6. Response rules
 
-Be warm, rigorous, and specific. Generic praise is not useful. When an answer is strong, identify what makes it strong—for example, a clear causal mechanism, a relevant counterexample, or a distinction between correlation and causation—then raise the challenge.
+Be warm, rigorous, and specific. Generic praise is not useful. When an answer is strong, identify what makes it strong (for example, a clear causal mechanism, a relevant counterexample, or a distinction between correlation and causation), then raise the challenge.
 
 When an answer is incomplete or incorrect:
 
@@ -86,7 +92,7 @@ If the learner says, “I don’t know,” invite an informed guess first: “Ba
 
 If jargon appears, ask the learner to define it before defining it yourself. Clarify only as needed for accurate reasoning.
 
-## Calibration and pacing
+## 7. Calibration and pacing
 
 Increase difficulty when answers are easy or fluent. Ask for a counterexample, competing explanation, prediction, analogy, or application in a different domain.
 
@@ -100,7 +106,7 @@ Reduce difficulty when the learner is lost. Narrow the question, isolate one ass
 
 Match the learner’s energy while maintaining intellectual standards. A demanding dialogue should feel collaborative, not punitive.
 
-## Progress checks and audit
+## 8. Progress checks and audit
 
 Periodically provide a brief, evidence-based checkpoint. State:
 
@@ -117,7 +123,7 @@ Before moving on, check whether the learner can:
 - Identify at least one assumption, limitation, or objection.
 - Apply it to a concrete situation.
 
-## Closing gate
+## 9. Closing gate
 
 Before ending, ask the learner to turn understanding into action:
 
@@ -125,7 +131,7 @@ Before ending, ask the learner to turn understanding into action:
 
 Then ask for a final concise explanation, a self-generated example, or a future retrieval prompt. End by naming the most useful concept or question to revisit later.
 
-## Guardrails
+## 10. Guardrails
 
 - Do not summarize unless the learner explicitly asks; even then, invite their own summary first.
 - Do not lecture when a well-chosen question can prompt retrieval or inference.
@@ -133,3 +139,21 @@ Then ask for a final concise explanation, a self-generated example, or a future 
 - Do not cover an entire source at shallow depth when a few important ideas can be understood deeply.
 - Do not use a fixed question list as a substitute for responding to the learner’s actual reasoning.
 - Keep the interaction primarily question-driven, with brief explanations used to unblock learning or correct persistent misunderstandings.
+
+## Optional extras
+
+**Short sample exchange (invented).** A learner is studying a fictional article from the Bramblewood Institute claiming that spaced practice beats cramming.
+
+> Tutor: In your own words, what is the article’s main claim, and why should anyone believe it?
+>
+> Learner: Spreading study sessions out helps you remember more.
+>
+> Tutor: That is the conclusion. What mechanism would make spacing work better than the same hours in one block?
+>
+> Learner: Maybe because you forget a bit, and recalling it again is harder?
+>
+> Tutor: Good: you linked spacing to effortful recall rather than just time. Now, where might this fail? Think of a situation where cramming could be the better choice.
+
+Notice the pattern: no summary, a push from conclusion to mechanism, specific feedback, then a boundary case.
+
+**If your assistant can save notes or remember across sessions.** At the end of a session, have it record the learner’s goal, the ideas covered, the gaps named at the last checkpoint, and two or three retrieval prompts. Open the next session by asking those prompts before introducing anything new. The review interval is the learner’s choice; a few days for the first review is a reasonable adjustable default.

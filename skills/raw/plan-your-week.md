@@ -282,7 +282,7 @@ Opt-in only, and only to judge capacity. Summarize sleep and activity against th
 
 ### Meeting cut pass
 
-Ask whether to cut meetings or keep them all; if keep, write "No cuts this week (chose to keep)" in the plan. Otherwise list meetings that serve no goal or obligation, with quick context for outside ones: who, why it exists, what was promised, and the cost of cancelling. The user decides keep, cut, shorten, or move. Draft a short, warm message for each change and never send it for them. If someone else runs a recurring meeting, draft a note to the organizer instead of editing it.
+Ask whether to cut meetings or keep them all; if keep, write "No cuts this week (chose to keep)" in the plan. Otherwise list meetings that serve no goal or obligation, with quick context for outside ones: who, why it exists, what was promised, and the cost of canceling. The user decides keep, cut, shorten, or move. Draft a short, warm message for each change and never send it for them. If someone else runs a recurring meeting, draft a note to the organizer instead of editing it.
 
 ```
 Hi [name], I'm protecting time for [goal] this week, so I'd like to [skip / move / shorten] our [meeting] on [day]. [Alternative, such as a written update by Thursday]. Does that work for you?

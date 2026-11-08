@@ -1,13 +1,11 @@
 ---
 name: plan-and-book-a-trip
-description: Plan a trip around its purpose, compare complete journeys against the traveler's preferences, and book within clear limits. Use when someone needs flights, trains, or transfers found or booked.
+description: Plans a trip around its purpose, compares complete door-to-door journeys, and books within clear limits. Use when someone says "find me flights", "plan my trip", or "book the train".
 ---
 
 # Plan and book a trip
 
-Understand the trip before you optimize its transport. First learn what the traveler wants from the trip. Then turn the agreed brief into a small, priced set of practical options, and carry the chosen option through booking preparation or an authorized purchase.
-
-The traveler's current instructions always win. Old receipts, past trips, and saved preferences are context, not permanent rules. Never turn one trip's dates, fares, or event plans into a lasting default.
+Understand what a trip is for before optimizing its transport. Then turn an agreed brief into a small set of priced, door-to-door options, and carry the chosen one through booking preparation or an authorized purchase.
 
 ## Quick version
 
@@ -19,6 +17,7 @@ The traveler's current instructions always win. Old receipts, past trips, and sa
 
 ## Core principles
 
+- **Current instructions win.** Old receipts, past trips, and saved preferences are context, not permanent rules. Never turn one trip's dates, fares, or event plans into a lasting default.
 - **Trip first, tickets second.** Saved preferences do not replace a conversation about what this trip is for.
 - **You do the research and checking.** Gather facts yourself from authorized sources. Ask the traveler only about intentions, priorities, trade-offs, a missing fact, a login step, or an approval.
 - **Compare complete journeys.** A cheap fare can hide an extra hotel night, a hard transfer, a lost day, or fees.
@@ -48,18 +47,11 @@ For a new trip, start with discovery. Do not search fares until the first trip q
 
 ### Gather relevant context
 
-Read the conversation, the saved profile, and any invitations, agendas, or itineraries the traveler supplied. If the traveler has connected tools and clearly authorized it, you may also read their calendar, email, messages, and shared documents for this trip.
+Read the conversation, the saved profile, and any invitations, agendas, or itineraries the traveler supplied. If the traveler has connected tools and has clearly authorized it, you may also read their calendar, email, messages, and shared documents for this trip, read-only unless they authorize more.
 
-Rules for this step:
+These sources often mention other people, such as companions, hosts, and organizers. Read them only for the legitimate purpose of planning this trip and with the traveler's clear authorization, searching narrowly by event, destination, organizer, and dates. Use the minimum relevant information, leave unrelated or sensitive details about anyone out of your notes and outputs, and keep findings within the traveler's private planning space; do not contact anyone without authorization.
 
-- Have a legitimate purpose: planning this specific trip.
-- Use read-only access unless the traveler authorizes more.
-- Search narrowly by event, destination, organizer, and dates. Use only the minimum relevant sources and information.
-- Do not sweep unrelated messages or look into companions or other people. Respect their privacy.
-- Leave unrelated or sensitive personal details out of your notes and outputs.
-- Keep findings private to the traveler. Do not contact anyone without authorization.
-- Keep addresses and identity details out of shareable summaries. Never store loyalty numbers, passport or identity numbers, payment details, or document copies in the profile; booking references go only in a private trip record.
-- Saving lessons or preferences never adds permission to purchase, message others, or access accounts.
+Keep the traveler's addresses and identity details out of shareable summaries. Never store loyalty numbers, passport or identity numbers, payment details, or document copies in the profile; booking references go only in a private trip record. Saving lessons or preferences never adds permission to purchase, message others, or access accounts.
 
 Look for why the trip is happening, event dates and venues, existing bookings, and nearby commitments. If a source is unavailable, say so; never imply you checked it.
 
@@ -146,9 +138,9 @@ A traveler is going from Riverton to Lakeport for a four-day conference, wants a
 
 | Option | Route and times | Cabin and fare | Complete cost | Main benefit | Main drawback |
 |---|---|---|---|---|---|
-| A (recommended) | RVT to LKP direct, depart Tue 11.05, arrive 14.20 | Economy, standard fare | 412 (fare 340, bag 45, aisle seat 27) | Arrives in time for the opening dinner; free changes | 74 more than B |
-| B | RVT to LKP via Hillford, depart Tue 06.40, arrive 13.55 | Economy, basic fare | 338 (fare 255, bag 55, seat 28) | Cheapest | Very early start; 50-minute connection; no changes |
-| C | Train to Lakeport, depart Mon 15.00, arrive 21.30 | Standard class, flexible ticket | 298 (ticket 168, extra hotel night 130) | Calm journey, can work on board | Adds a night away and a hotel |
+| A (recommended) | RVT to LKP direct, depart Tue late morning, arrive mid-afternoon | Economy, standard fare | 412 (fare 340, bag 45, aisle seat 27) | Arrives in time for the opening dinner; free changes | 74 more than B |
+| B | RVT to LKP via Hillford, depart Tue early morning, arrive early afternoon | Economy, basic fare | 338 (fare 255, bag 55, seat 28) | Cheapest | Very early start; tight connection; no changes |
+| C | Train to Lakeport, depart Mon afternoon, arrive late evening | Standard class, flexible ticket | 298 (ticket 168, extra hotel night 130) | Calm journey, can work on board | Adds a night away and a hotel |
 
 Recommendation: A. The extra 74 over B buys a sensible start time, no tight connection, and a changeable ticket. Prices for A and B are live; the hotel cost in C is an estimate.
 

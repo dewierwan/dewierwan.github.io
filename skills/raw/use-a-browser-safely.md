@@ -34,7 +34,7 @@ Use the first route that fits. Do not skip ahead.
 
 ### Look for a direct interface
 
-Many forms send structured data to an endpoint that can be called directly, which skips the hardest browser problems. Read the service's official documentation, view the page source for a form action or embedded data block, or watch the browser's network requests while using the page normally. Even an endpoint that takes some study is often faster than fighting a complex form. Fall back to the browser when no suitable programmatic option exists or when the user explicitly wants the UI flow.
+Many forms send structured data to an endpoint that can be called directly, which skips the hardest browser problems. Read the service's official documentation, view the page source for a form action or embedded data block, or watch the browser's network requests while using the page normally. Booking and availability widgets are a common case: the results often come from a plain search or availability request that is easier to call than the widget is to drive. Fall back to the browser when no suitable programmatic option exists or when the user explicitly wants the UI flow.
 
 Limits:
 
@@ -47,12 +47,12 @@ The user's visible browser is their working space. Taking it over interrupts the
 
 ### Blocks and bot checks
 
-If a site blocks headless automation during general research, accept the block and move on. Escalating to the signed-in browser is reasonable only when the user explicitly asked for a task on that specific site and the session is genuinely needed. Human-verification checks, security-key prompts, and multi-factor prompts belong to the user: pause, ask them to complete it, then continue. Never simulate, bypass, or weaken these checks.
+If a site blocks headless automation during general research, accept the block and move on. Escalating to the signed-in browser is reasonable only when the user explicitly asked for a task on that specific site and the session is genuinely needed. Human-verification checks, security-key prompts, and multi-factor prompts belong to the user: pause, ask them to complete it, then continue. Never simulate, bypass, or weaken these checks, and never disable integrity or signature checks on local tools to make a connection work.
 
 ## 3. Pick the right automation style
 
-- **Step-by-step tool calls** through an interactive browser tool suit one click, reading one snapshot, or short tasks with roughly ten or fewer actions and little text.
-- **A standalone script** using a browser automation library suits long text (for example over a couple of thousand characters), many fields, heavy single-page applications, or anything that needs repeatable runs.
+- **Step-by-step tool calls** through an interactive browser tool suit one click, reading one snapshot, or short tasks with few actions and little text.
+- **A standalone script** using a browser automation library suits long text, many fields, heavy single-page applications, or anything that needs repeatable runs.
 
 Interactive tool layers can become unstable with long text, several parallel actions against one page, or heavy rendering. If the session crashes with a message like "page, context, or browser has been closed," switch to a script rather than rescuing the broken session. When in doubt, write a script.
 
@@ -67,9 +67,8 @@ When the task touches private messages, records, dashboards, or information abou
 - **Announce, then act.** Say briefly what you are taking over and why, for example "Taking over the browser to update the billing contact." Never take control silently. If the user already authorized visible browser use for this task, do not ask again.
 - **Work in a fresh window, tab, or tab group.** Do not reuse the user's existing tabs unless they point to one.
 - **Classify the context before choosing a profile.** Personal, work, test, staging, or production. Personal errands (shopping, banking, health, subscriptions, household, government services) are personal even on general-purpose sites. Internal operations, vendors, and colleague-facing work are work. If the user says which, that settles it.
-- **Select the profile directly.** A generic "current browser" selector often picks whichever profile was used most recently, which can silently put a personal task in a work account.
-- **Do not trust display names.** Labels like "Browser 1" can reshuffle after restarts. Use a stable identifier where the tool provides one, record the mapping in a private local note if useful, and still verify every time.
-- **A window is not a connection.** Opening a window for a profile puts it on screen; the automation connection may still point elsewhere. If the window is open but the tool never lists a connection for it, and relaunching does not help, the connector or extension in that profile is likely signed out or asleep. Ask the user to open it in that window and sign in if prompted, then list connections again and verify.
+- **Select the profile directly and do not trust display names.** A generic "current browser" selector often picks whichever profile was used most recently, and labels like "Browser 1" can reshuffle after restarts. Use a stable identifier where the tool provides one, and still verify every time.
+- **A window is not a connection.** Opening a window for a profile puts it on screen; the automation connection may still point elsewhere. If a window is open but no connection ever appears for it, the connector in that profile is likely signed out or asleep. Ask the user to open and sign in to it in that window, then list connections again and verify.
 - **Do not restart or force-quit the user's browser** without their explicit OK. It closes everything they have open.
 
 ### Account preflight gate
@@ -88,11 +87,9 @@ Before navigating deeply, identify the target page, record, form, or setting; wh
 
 **Reversible changes** the user asked for, such as toggling a setting or updating a saved card or draft, can proceed after normal verification.
 
-**Irreversible or high-impact actions** need a pre-action record and confirmation unless the user already gave clear authorization for that exact action. These include payments, purchases, sends, invitations, publishing, deletions, plan or billing changes, access or ownership changes, and anything labeled "cannot be undone" or "cannot be edited after submission." Treat such forms as one-way doors.
+**Irreversible or high-impact actions** need a pre-action record and confirmation unless the user already gave clear authorization for that exact action. These include payments, purchases, sends, invitations, publishing, deletions, plan or billing changes, access or ownership changes, and anything labeled "cannot be undone" or "cannot be edited after submission." Treat such forms as one-way doors. For deletions, note in the pre-action record whether the service keeps a restorable trash; a restore path lowers the risk but does not remove the need for authorization.
 
-For deletions, check whether the service keeps a restorable trash or recycle bin and note it in the pre-action record. A restore path lowers the risk but does not remove the need for authorization. Some actions, including delete, sit behind menus that appear only when you hover over an item; reveal the menu on the exact item you verified.
-
-**Credentials stay with the user.** Entering API keys, tokens, passwords, or recovery codes into any form is the user's step. Set up everything around the credential (open the right page, fill the other fields, reach the input box), then hand the user exact steps to enter it themselves. Never move secrets by copy and paste through automation: a site's copy button can appear to work while the system clipboard still holds older, unrelated text, so the wrong value lands in the wrong place.
+**Credentials stay with the user.** Entering API keys, tokens, passwords, or recovery codes into any form is the user's step. Set up everything around the credential (open the right page, fill the other fields, reach the input box), then hand the user exact steps to enter it themselves. Never move secrets by copy and paste through automation: a site's copy button can appear to work while the system clipboard still holds older, unrelated text.
 
 Honor an explicit request to review before submission. If authorization is already given, do not ask again. If it is missing, prepare and verify the full result, show the pre-submit state, and ask only for the final action.
 
@@ -221,12 +218,8 @@ A click is not proof of success. Look for real evidence: a success message, a co
 | Interactive tool crashes on long text or parallel calls | Tool layer is unstable for heavy work | Switch to a standalone script. |
 | Headless page differs from a normal browser | Site varies by browser context | Prefer a direct interface; escalate only for an explicit task, never evade protections. |
 | Wrong account or profile opened | Generic selector picked the last-used profile | Classify context, select the profile directly, verify the account. |
-| Profile window open but no connection appears | Connector in that profile is signed out or asleep | Ask the user to open and sign in to it in that window, re-list, verify. |
 | Session ends after a page-script request | Internal endpoint called without the app's normal headers | Drive the UI or use a supported API. |
-| In-memory state read returns nothing after an app update | Internal state layout moved in a new version | Probe for the current location, fall back to older ones, and verify against the screen. |
-| A site's copy button seems to work, but pasting elsewhere gives old, unrelated text | Copies made through the automation layer did not reach the system clipboard | Do not move secrets by copy and paste; prepare everything around the credential and give the user exact steps to enter it. |
-| Automation connection fails an integrity or signature check | Local helper is stale or altered | Stop; repair through an approved path that keeps verification on. Never disable checks. |
-| Security check or 2FA prompt appears | Site needs the user present | Ask the user to complete it, then continue. |
+| A warning or security page appears that the tool cannot read or click | The page sits outside the automation's reach or needs a person | Ask the user to handle it, then continue and re-verify. |
 
 ## 12. Report results
 
@@ -234,7 +227,7 @@ Summarize the outcome in one or two sentences, point to the screenshot and the a
 
 ## 13. Keep the procedure current
 
-When a run reveals a reusable lesson, such as a new failure mode, a working pattern, or a missing capability, add it to your local copy of this procedure. Prefer a single table row with symptom, cause, and fix over new prose. Never record credentials, account identifiers, personal details, or private site data. When the document grows long, merge older entries into general principles instead of appending incident history. Tool paths, versions, profile mappings, and any notes about where an app keeps its internal state go stale, so update them in place and re-verify them.
+When a run reveals a reusable lesson, such as a new failure mode, a working pattern, or a missing capability, add it to your local copy of this procedure. Prefer a single table row with symptom, cause, and fix over new prose. Never record credentials, account identifiers, personal details, or private site data. When the document grows long, merge older entries into general principles instead of appending incident history. Tool paths, versions, profile mappings, and notes about how a particular app behaves go stale, so update them in place and re-verify them.
 
 ## Final audit checklist
 
@@ -251,23 +244,17 @@ When a run reveals a reusable lesson, such as a new failure mode, a working patt
 
 ## Optional extras
 
-**Clipboard and paste.** Headless browsers often lack clipboard permission, so embed values directly. Copies triggered through an automation connector may not reach the system clipboard at all, so never rely on a copy and paste round trip without checking what actually arrived. When rich content (such as HTML with links) must be inserted, a synthetic paste event carrying both HTML and plain text works in some editors and is ignored by others; some editors expose their own documented conversion method instead. Verify the result, ideally through the service's API or an export rather than the screen alone.
+**Clipboard and rich paste.** Headless browsers often lack clipboard permission, so embed values directly instead. When rich content (such as text with links) must be inserted, a synthetic paste event carrying both rich and plain text works in some editors and is ignored by others, which may offer their own conversion method. Verify the result, ideally through the service's API or an export rather than the screen alone.
 
-**Drag and drop.** Dragging can create layout changes (like columns) or trigger a clickable element by accident. Prefer keyboard move commands with short waits, then verify the final structure.
+**Drag and drop.** Dragging can create unwanted layout changes or trigger a clickable element by accident. Prefer keyboard move commands with short waits, then verify the final structure.
 
-**Parallel work and background tabs.** When many independent items are needed (for example several generated drafts or images), separate tabs or sessions each given the full brief avoid one item biasing the next. Keep concurrency modest (a default of about ten, adjustable); more tends to stall. Background tabs may not render at full size, so bring an item into view before capturing it, check nothing is cut off, and clean up temporary overlays or tabs afterward.
+**Parallel work.** When many independent items are needed, separate tabs or sessions each given the full brief keep one item from biasing the next. Keep concurrency to a small number you choose, since too many tends to stall. Background tabs may not render at full size, so bring an item into view before capturing it and clean up temporary tabs afterward.
 
-**Editing visual workflow builders without an API.** Some automation or workflow editors offer no bulk-edit screen, and API access may not be available. In that case:
+**Devices on the user's own network.** Local devices often serve unencrypted pages, and a browser set to prefer secure connections may show a warning first that automation cannot handle. Continue past it only for devices the user owns and asked you to work on, through the browser's own proceed option or by asking the user, and never for public sites. Use the same address the user normally signs in at, since sign-in sessions are tied to it, and check the device's own settings for an authenticated route to companion services before asking for extra tokens.
 
-- Read steps, connections, and recent run output from state the page already holds in memory, with no network calls.
-- Internal state layouts are undocumented and change between app versions. Probe for the current location first, fall back to older known locations, and never treat one path as permanent. If a read suddenly returns nothing after an update, assume the layout moved before assuming the data is gone.
-- Add steps through the editor's own paste support where it exists, after closing any open step panel. Replace code inside a step by focusing its code editor, selecting all, and pasting.
-- Connect steps and choose credentials through the UI. Test by running a single read-only step before anything that writes, then save and re-read the workflow to confirm the change persisted.
+**Apps without an API.** When a workflow builder or automation editor has no bulk-edit screen or API:
 
-**Auditing configuration after a structural change.** When fields, tables, or sources are renamed or deleted and the service has no API for its automations or workflows, audit through the UI:
-
-- Steps that bind to internal IDs usually follow renames; custom script steps that reference names may silently break; steps whose source was deleted often show a "fix configuration" style warning.
-- Open each item in turn, wait for it to load, and check for warning text, script steps, and the status of the latest run in its history.
-- If a page-script loop runs longer than your tool's call time limit, start it without waiting, store results in a page variable, and poll for them in later calls.
-- If the tool rejects returned text containing certain characters (such as URL query symbols), strip or encode them before returning.
-- Report which items need attention, separating confirmed breakage from items that only use name-based references and need a manual check.
+- Read configuration from state the page already holds in memory, with no network calls. These internal layouts are undocumented and change between versions, so probe for the current location, and if a read suddenly returns nothing, assume the layout moved before assuming the data is gone.
+- Make changes through the editor's own UI or paste support, test with a read-only step before anything that writes, then save and re-read to confirm the change persisted.
+- After renaming or deleting fields or sources, open each automation in turn and check for configuration warnings, script steps that reference names rather than internal IDs, and the latest run status. Report confirmed breakage separately from items that need a manual check.
+- If a page-script loop outlasts your tool's time limit, start it without waiting, store results in a page variable, and poll for them in later calls.

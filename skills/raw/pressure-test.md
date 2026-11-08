@@ -1,6 +1,6 @@
 ---
 name: pressure-test
-description: Finds the weak points in a strategic idea before you commit, through a steelman, assumption tests, a pre-mortem, and a verdict. Use when someone says pressure-test this, stress-test this, or am I wrong.
+description: Finds the weak points in a strategic idea before you commit, through a steelman, assumption tests, a pre-mortem, and a verdict. Use when you say pressure-test this, stress-test this, or am I wrong.
 ---
 
 # Pressure-test an idea
