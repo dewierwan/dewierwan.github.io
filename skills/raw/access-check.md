@@ -88,7 +88,7 @@ Flag a mention when the person would plausibly feel hurt, misled or awkward read
 - Praise and accurate bios.
 - Their own advice recorded in meeting notes. **Exception:** if those notes include their candid remarks about third parties, mention this once. They may not expect those remarks to sit in a team-wide space.
 
-Rate every finding with a word and a symbol, never colour alone:
+Rate every finding with a word and a symbol, never color alone:
 
 | Rating | Meaning |
 |---|---|

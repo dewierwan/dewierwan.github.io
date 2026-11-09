@@ -5287,7 +5287,7 @@ Flag a mention when the person would plausibly feel hurt, misled or awkward read
 - Praise and accurate bios.
 - Their own advice recorded in meeting notes. **Exception:** if those notes include their candid remarks about third parties, mention this once. They may not expect those remarks to sit in a team-wide space.
 
-Rate every finding with a word and a symbol, never colour alone:
+Rate every finding with a word and a symbol, never color alone:
 
 | Rating | Meaning |
 |---|---|
@@ -5992,12 +5992,12 @@ If a viewport, state, or check was not run, state that clearly and do not repres
 
 ---
 name: recurring-events
-description: Sets up the next date of a recurring community event: fresh poster, event page, and invites to opted-in past guests. Use when someone says set up this week's event or post the next one.
+description: Sets up the next date of a recurring community event: date, poster, event page, invites, and site listing. Use when someone says set up this week's event or post the next few.
 ---
 
 # Run a recurring community event
 
-Use this when you host a regular event, such as a monthly book swap or game night, and want the assistant to set up the next one: date, fresh poster, event page, and invites, with as few questions as possible.
+Use this when you host a regular event, such as a monthly book swap or game night, and want the assistant to set up the next one: date, fresh poster, event page, invites, and any website listing, with as few questions as possible.
 
 ## Quick version
 
@@ -6007,10 +6007,13 @@ Use this when you host a regular event, such as a monthly book swap or game nigh
 - Ask for one fresh poster idea that is clearly different from the last few, written as a single-paragraph image prompt.
 - Paste the finished text into your event page yourself, check it as a guest would, and mark yourself as going if that is your habit.
 - Invite the usual people, then check the invite count before and after sending.
+- If the series has a website or shared calendar, add the new link there too, and note whether that worked.
 
 ## Authorization: confirm once, then act
 
 For your own series, standing authorization is the natural default. Confirm it once, in writing, with the series, the usual hosts, who gets invited, and what the assistant may publish and send. After that, each new occurrence should need zero questions. Stop and ask only when something real changes: a new venue, a price, a bigger or different audience, a public listing, or a safety issue.
+
+Standing authorization does not override the assistant's own safety controls. If a tool blocks a send step even though you approved it, do not look for a workaround. Finish creating every event in the batch first, then ask the host once to approve all the sends together, and send each batch after they say yes.
 
 The invite step reads past guest lists, so use them only to invite people to this series, and only people who agreed to hear about future events, such as past guests who have not opted out. Read only the lists you need, leave out unrelated personal details, keep any names and counts inside the host team, and make opting out easy.
 
@@ -6023,7 +6026,7 @@ The invite step reads past guest lists, so use them only to invite people to thi
 
 ## 2. Make a fresh poster
 
-Look at the last two or three posters first so you do not repeat them. Keep the series identity steady (the name in the same hand-lettered style, the core activity, a warm and simple look) and change the big idea each time.
+Look at the last two or three posters first so you do not repeat them. Keep the series identity steady (the name in the same hand-lettered style, the core activity, a warm and simple look) and change the big idea each time, rather than "same style, new scene."
 
 Levers worth pulling:
 
@@ -6067,15 +6070,24 @@ If the host wants it (a choice you set once), RSVP as the host: mark yourself as
 
 ## 4. Invite the approved audience
 
-Invite past guests of the series, one past event at a time, including any early unnumbered events. Before pressing "Select all," check whether people are already selected, because pressing it again can clear them. Watch the invite count rise after each group. If it stays flat or drops, stop and look. Send, then confirm the sent state and final count.
+Invite past guests of the series, one past event at a time, including any early unnumbered events. Before pressing "Select all," check whether people are already selected, because some platforms pre-select guests and pressing it again can clear them. Watch the invite count rise after each group by roughly that group's size. If it stays flat or drops, stop and look. Send, then confirm the sent state and final count. If the send is blocked, follow the rule under Authorization.
 
-## 5. Report
+## 5. Update the series website or listing
 
-Keep it short: what was created, date and venue, the invite count, any clash from step 1, and the live link as the last line.
+If the series has its own website, newsletter page, or shared calendar, check how it learns about new events. Many sites show only the events listed explicitly, because event links are random and cannot be guessed. Skip this step and the new events never appear, and any "next event" link stops at the last one listed.
+
+- Wait until every event in the batch is live, then add all the new links in one update.
+- If others also edit the site, start from the latest version.
+- If the site pulls dates, images, and upcoming or past status from the event platform, add only the links; nothing else needs editing.
+- If the update fails, say so in the report. The events still exist, so this is a follow-up, not a reason to undo anything.
+
+## 6. Report
+
+Keep it short: what was created, date and venue, the invite count, any clash from step 1, whether the website or listing was updated, and the live link as the last line with nothing after it, so it is easy to copy.
 
 ## Worked example (invented)
 
-Series: "Second Saturday Board Games," monthly, at a neighborhood café, hosts Priya and Tom, invite list is past guests who have not opted out. The host has asked to be marked as going on each new event.
+Series: "Second Saturday Board Games," monthly, at a neighborhood café, hosts Priya and Tom, invite list is past guests who have not opted out. The host has asked to be marked as going on each new event, and a small website lists each event link.
 
 - Last event was #11 in March. A calendar check gives Saturday 12 April, so this is #12. The hosting list shows no event on that date yet.
 - The café closes early that day. Under the standing policy the assistant keeps the usual slot and flags the clash.
@@ -6083,10 +6095,11 @@ Series: "Second Saturday Board Games," monthly, at a neighborhood café, hosts P
 - Description carries over unchanged except the date and a new line: "Bring a game you have not played in a year."
 - After publishing, the assistant RSVPs as Priya and the page shows "1 going."
 - Invites: 11 past sessions, count rises from 0 to 46 with no drops. Sent.
+- The new link goes on the website, which now shows #12 as the next event.
 
-Report: "Board Games #12 is live for Sat 12 April at the café. 46 people invited. Note: the café may close early that day, so you may want to confirm the time with them." Link on the final line.
+Report: "Board Games #12 is live for Sat 12 April at the café. 46 people invited, and the website lists it. Note: the café may close early that day, so you may want to confirm the time with them." Link on the final line.
 
-If Priya later asks for "three more" and #13 already exists for May, the new ones become #14, #15, and #16 on the June, July, and August dates.
+If Priya later asks for "three more" and #13 already exists for May, the new ones become #14, #15, and #16 on the June, July, and August dates, added to the website in a single update.
 
 ## After each run
 
@@ -6098,6 +6111,7 @@ For assistants that drive a browser or other connected tools:
 
 - **Right account for each site:** the image tool and the event platform may be logged in under different browser profiles or accounts, and one account may have several workspaces with different limits. Route each site to the right profile and workspace, and verify the active account before acting.
 - **File handling:** avoid buttons that open a native file dialog the tool cannot control; use the page's file input or the tool's file-chooser support, from a folder the tool can read. If a browser silently blocks a second download, capture the image another way, such as a full-size screenshot of just the image.
-- **Verify after every change on screen:** pages shift when extra controls appear, windows resize, or a page is still loading. Take a fresh screenshot before each click after any shift, confirm nothing changed by accident (a style, a date, a selection), and close pickers by clicking empty background rather than trusting close icons or Escape.
+- **Verify after every change on screen:** pages shift when extra controls appear, windows resize, or a page is still loading. Take a fresh screenshot before each click after any shift, confirm nothing changed by accident (a style, a date, a selection), and close pickers by clicking empty background rather than trusting close icons or Escape. If typing right after a page loads is lost, retype.
 - **One thing at a time:** finish and verify an upload before opening another panel. If you script the invite loop, handle one past event per call to stay under time limits, normalize unusual spaces in labels before matching text, wait for each list to load, and read the invite count after each pass.
+- **Website built from a code repository:** keep a small script that adds one or more event links to the site's event list. For each batch, pull the latest version, run the script once with all the new links, commit with a message naming the event numbers, and publish so the site rebuilds. Confirm the events appear afterward.
 - **Shared notes:** keep series-specific quirks with this workflow and move general browser lessons into a shared notes file.
