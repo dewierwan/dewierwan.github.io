@@ -49,11 +49,11 @@ Reuse preferences already given in the conversation. Ask only for missing choice
 1. **Mood:** three or four legitimate readings of this article, each naming the beat it leads with.
 2. **Subject:** for example an anonymous figure seen from behind, landscape only, a single symbolic object, or an abstract composition. Anonymous figures read as universal, but a landscape or one object is often more elegant.
 3. **Palette:** three or four palettes with named colors, value range, and contrast. Do not rely on telling two colors apart (such as red versus green) as the only difference between options.
-4. **Orientation:** wide header, square preview, portrait, or a custom ratio. Verify the destination's requirements rather than carrying dimensions over from another publication, and mark the destination's native shape as recommended.
+4. **Orientation:** wide header, square preview, portrait, or a custom ratio. Verify the destination's requirements rather than carrying dimensions over from another publication, and mark the destination's native shape as recommended. If the destination crops further than the generator's available shapes (for example, a page header that shows only a thin strip), plan a crop-safe zone now; see Optional extras.
 
 If the medium is still open, choose it for the article and audience. A reasonable adjustable default is loose, hand-made editorial illustration (watercolor or ink) with plenty of empty space and no text, borders, or watermarks. If the user signals another style, such as a photograph, follow it.
 
-Keep a compact working brief: central move, mood, subject constraints, palette, medium, orientation, generator, and exclusions. Carry it through both rounds without asking again.
+Keep a compact working brief: central move, mood, subject constraints, palette, medium, orientation, crop-safe zone if any, generator, and exclusions. Carry it through both rounds without asking again.
 
 ## 3. Develop five distinct concepts
 
@@ -90,7 +90,7 @@ Technique: [physical properties of the medium, texture, edge treatment, level of
 
 Mood: [the feeling, anchored to the article's central move.]
 
-Composition: [focal point, eye path, horizon placement, crop, negative space, aspect ratio.]
+Composition: [focal point, eye path, horizon placement, crop, crop-safe zone if any, negative space, aspect ratio.]
 
 Avoid: [artifacts, conventions, or content that conflict with the brief.]
 ```
@@ -124,7 +124,7 @@ View every image at useful size and at approximate thumbnail size. Judge the pix
 - Did the medium, palette, shape, and composition survive?
 - Is it too busy, generic, sentimental, static, or literal?
 - Are there anatomy, perspective, object, lettering, or other artifacts?
-- Does it still work when cropped or reduced?
+- Does it still work when cropped or reduced, with key elements inside any crop-safe zone?
 
 Do not mark a result down only because it is fuller or more atmospheric than a minimal brief suggested. A layered, misty scene can be the strongest cover if it carries the article's feeling and still reads small.
 
@@ -136,7 +136,7 @@ Fix causes, not symptoms:
 - Looks like a photo with a painted filter: ask for fewer large shapes, selective edges, real negative space, and the medium's actual marks. Piling on concrete detail can overpower requests to simplify.
 - Feels like generic stock, travel, or office imagery: rethink the metaphor or viewpoint instead of adding props.
 
-Give the user a short progress note on what the images revealed and what the next three will improve, then continue without asking for a selection.
+Give the user a short progress note on what the images revealed and what the next three will improve, then continue without asking for a selection. Adjustable exception: when the user tends to choose quickly or will place the image themselves (common for internal pages), ask after round one whether they already have a favorite before spending effort on round two.
 
 ## 7. Generate options six through eight and hand off
 
@@ -172,15 +172,26 @@ Preserve the subject, composition, palette, mood, exclusions, and format; change
 - Record each conversation's observed address; never construct one. Check for loaded image elements, since interface labels change.
 - If your agent tool closes tabs it created at the end of a turn, mark the eight finished tabs to stay open, and reserve any "needs user input" handoff for genuinely unfinished pages.
 
+### Covers for document or workspace pages
+
+The same workflow works for page covers in note-taking or wiki tools, with two adjustments:
+
+- **Plan for heavy cropping.** These covers often have no fixed size, and the page header may show only a thin central strip of a much wider canvas. Check the tool's minimum width and typical display ratio. If your generator offers only a few shapes, ask for the widest landscape available and keep every key element inside a central horizontal band (for example, the middle third of the height; adjust to the actual crop). Check each result by cropping it to that band.
+- **Check for an early favorite.** Atmospheric, wide scenes tend to work well here. Because the user often sets the cover themselves, ask after round one whether one already works before generating round two.
+
+*Invented example:* for the fictional Meadowbrook Choir's retreat planning page, the strongest round-one option was singers around a small fire under a wide starry sky in deep indigo and amber, with the fire and figures sitting in the middle band so the header strip kept them.
+
 ### Designing small icons
 
-The same concept-review-improve loop works for app, bot, or group icons:
+The same concept-review-improve loop works for app, bot, page, or group icons:
 
-- Study existing icons in the family first and keep the shared style, for example flat shapes, a fixed small palette on a plain background, and no text, outlines, gradients, or shadows. Each new icon should be distinctive and about its own app.
+- Icons often display at tiny sizes, so avoid loose painted media like watercolor. Use flat shapes, ideally in the palette of any matching cover so the pair feels related.
+- Study existing icons in the family first and keep the shared style, for example flat shapes, a fixed small palette on a plain background, and no text, outlines, gradients, or shadows. A simple recurring brand motif drawn as basic shapes can tie the family together. Each new icon should be distinctive and about its own app.
 - When variants must share an official brand mark, take it from the organization's source file and keep it exact; make each variant distinct through a background tied to that group or place. *Invented example:* the fictional Harbor Lane Collective puts its white mark on a teal wave texture for its waterfront studio and on pale sandstone for its desert office.
-- Treat generated images as concepts. Redraw the chosen one as vector art, draw each single-color region as one path to avoid anti-aliasing seams, and compare options on one sheet at large, medium, and tiny sizes (adjust sizes to the platform).
+- Treat generated images as concepts. Redraw the chosen one as vector art, draw each single-color region as one path to avoid anti-aliasing seams, and clip any rounded-square or circle background to its shape. Export with a transparent background when the platform supports it.
+- Compare options on one sheet at large, medium, and tiny sizes, including the smallest size the platform actually shows (adjust sizes to the platform).
 - Upload through the platform's settings, reload to confirm it saved, and keep the final file with the project.
 
 ### Learn from outcomes
 
-After the user chooses, accepts a prompt, or stops iterating, capture durable lessons only. Strong signals: they rejected your recommendation (diagnose whether the read, composition, mood, or generation failed), they rewrote part of a prompt, they asked for color specifics you missed, or an image failed in a way the prompt should have prevented. Separate their feedback from your own taste, keep lessons general rather than tied to one article, and make no change after a clean run.
+After the user chooses, accepts a prompt, or stops iterating, capture durable lessons only. Strong signals: they rejected your recommendation (diagnose whether the read, composition, mood, or generation failed), they rewrote part of a prompt, they asked for color specifics you missed, they reused the workflow for a new destination with different size or crop rules, or an image failed in a way the prompt should have prevented. Separate their feedback from your own taste, keep lessons general rather than tied to one article, and make no change after a clean run.

@@ -126,7 +126,7 @@ Watch for:
 | Dropdown or combobox | Open, choose by exact visible option text, wait to settle | Selection can re-render the whole form. |
 | Checkbox or radio | Read the state first; click only if it needs to change | Clicking toggles an already-correct value. |
 | Date or time picker | Set values, close by clicking neutral page background, check the rendered summary | Close or clear buttons may wipe values; typing while open can rewrite dates. |
-| File upload | Confirm file, destination, and privacy first | Upload may start at once and be hard to undo. |
+| File upload | Confirm file, destination, and privacy first | Upload may start at once and be hard to undo; some buttons open a native file picker automation cannot drive (see Optional extras). |
 
 Robust sequence for framework-driven editors: click the real editable element, select all and delete, insert the new text with keyboard-style input, move focus to a neutral element to commit, wait briefly, then read the value back.
 
@@ -220,6 +220,7 @@ A click is not proof of success. Look for real evidence: a success message, a co
 | Wrong account or profile opened | Generic selector picked the last-used profile | Classify context, select the profile directly, verify the account. |
 | Session ends after a page-script request | Internal endpoint called without the app's normal headers | Drive the UI or use a supported API. |
 | A warning or security page appears that the tool cannot read or click | The page sits outside the automation's reach or needs a person | Ask the user to handle it, then continue and re-verify. |
+| An upload button opens a native file picker and no file input exists beforehand | The site creates the input only on click | Make the new input reachable, then set the file directly (see Optional extras). |
 
 ## 12. Report results
 
@@ -245,6 +246,8 @@ When a run reveals a reusable lesson, such as a new failure mode, a working patt
 ## Optional extras
 
 **Clipboard and rich paste.** Headless browsers often lack clipboard permission, so embed values directly instead. When rich content (such as text with links) must be inserted, a synthetic paste event carrying both rich and plain text works in some editors and is ignored by others, which may offer their own conversion method. Verify the result, ideally through the service's API or an export rather than the screen alone.
+
+**Uploads that open a native file picker.** Some upload buttons create a file input only when clicked and immediately open the operating system's file picker, which browser automation cannot drive. If your tool can attach a file to a file input directly, make the input reachable first: before clicking, add a small page-script override so a newly created file input is attached to the page instead of opening the picker. Then click the upload button, locate the new input, and give it a file from a temporary folder the user agreed to. Confirm the file and destination before uploading. Some sites then show a preview that needs an explicit save; dismissing it with Escape or a close button can discard the upload, so use the save control and verify the result.
 
 **Drag and drop.** Dragging can create unwanted layout changes or trigger a clickable element by accident. Prefer keyboard move commands with short waits, then verify the final structure.
 

@@ -9,7 +9,7 @@ Use this workflow to prepare one consequential meeting, such as a client, partne
 
 ## Quick version
 
-- Paste in the invitation, recent relevant emails or notes, and any document the meeting is about. Say who else will be able to read the finished page.
+- Paste in the invitation, recent relevant emails, chat threads or notes, and any document the meeting is about. Say who else will be able to read the finished page.
 - Ask for a short situation brief: who they are professionally, where things stand, why the meeting is happening now, and the live tensions. No goal or agenda yet.
 - Have the assistant ask you a few multiple-choice questions about your goal, the failure mode to avoid, and any specific ask, plus a final anything-else question. Every option gets a label such as 1a or 2b so you can answer quickly.
 - Only after you answer, have it draft the page: context, goal, a time-boxed agenda, and a short ranked list of the most important questions. Script spoken lines only if no other attendee will read the page; otherwise write a neutral shared agenda.
@@ -38,7 +38,7 @@ Confirm anything missing. The defaults are suggestions the user can change.
 | Meeting | Title, date, time zone, duration, attendees, format | The meeting the user names |
 | Purpose | Invitation wording or best-supported reason the meeting exists | From the invitation |
 | Destination and audience | Where the page goes and who can read it there | Ask; assume shared when in doubt |
-| Sources | Which messages, notes, records, and public sources are authorized | Ask |
+| Sources | Which messages, chats, notes, records, and public sources are authorized | Ask |
 | Page style | Title format, length, number of ranked questions, whether to script | The defaults in Step 8 |
 
 If several events match, confirm which one. In group meetings, research only decision-makers and people central to the topic. To prepare several meetings, run the workflow once per meeting.
@@ -61,9 +61,12 @@ A routine check-in may need only the invitation and last meeting's notes. A firs
 **Sources, roughly in order of value:**
 
 - **Correspondence.** Direct exchanges with the attendee first, for commitments, tone, and recent context. If the reason for the meeting is still unclear, look for threads that mention them; these often reveal the introduction or process that triggered the meeting. Read the most recent relevant items in full.
+- **Team chat.** If the person has an account in your chat system, including as an outside guest, look it up and search by that account as well as by name. Many chat tools store mentions as account references, so a plain-text name search misses them, and a missed comment can change the meeting's goal. Search both messages with them and messages from them, and read every thread you find in full rather than relying on the matching line.
 - **Earlier meetings and notes.** Past meeting pages, project notes, and calendar history with the same people, to build the relationship arc. If meeting pages live in more than one place, such as general, private, and restricted hiring areas, check every place you are authorized to read.
 - **Your organization's own records.** If the meeting concerns something the person submitted, such as an application, proposal, or request, read it. Search by both email and full name, since people often used a different address earlier. State in the brief what you found, or that you checked and found nothing.
 - **Public professional information.** Current role, what their organization does, a few professional links, and recent work-related news that bears on the topic.
+
+When searching any internal source, also search each organization the person is linked to, not just their current employer. Past employers, partner groups, and student or volunteer organizations sometimes surface the thread that explains the meeting.
 
 Three principles apply to everything you find:
 
@@ -250,7 +253,7 @@ The user reads the brief and page cold, so everything you found is new to them. 
 | Questions | The brief was posted and the user's answers shaped the goal and agenda |
 | Meeting | Date, time zone, attendees, duration, and destination are correct |
 | Evidence | Claims are supported, labeled, or removed; identities confirmed |
-| Coverage | Earlier meetings, relevant records, and the artifact were checked, or gaps are stated |
+| Coverage | Correspondence, chat (by account as well as name), earlier meetings, relevant records, and the artifact were checked, or gaps are stated |
 | Audience | Page sits where only the intended readers see it; shared pages have no script, tactics, or sensitive figures |
 | Agenda | Times add up, questions are specific, and the close names a date, deliverable, or owner |
 
