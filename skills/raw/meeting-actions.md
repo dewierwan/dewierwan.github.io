@@ -35,7 +35,12 @@ Automated summaries often assign actions to the wrong attendee, especially in re
 
 Track unfinished outcomes, not conversation. An idea, a statement of interest, or an open question is not a task unless someone accepted responsibility for a concrete outcome.
 
-Apply responsibility boundaries supplied by the user or team, and always use the most recent version, because boundaries shift over time. Attending a meeting does not make the user responsible for every topic discussed. Skip a follow-up as someone else's only when it falls within work explicitly handed to them. Handing off one piece of an area (such as one stage of a process) does not hand off the whole area, so other follow-ups in that area may still belong to the user. When unsure whether an older boundary still applies, ask rather than skip.
+Apply responsibility boundaries supplied by the user or team, and always use the most recent version, because boundaries shift over time and can even reverse. Attending a meeting does not make the user responsible for every topic discussed. Handoffs come in two forms:
+
+- **A whole area handed to someone else:** treat follow-ups in that area as theirs by default. Create a task for the user only when the user is the named owner or personally committed to the follow-up in the meeting.
+- **Only specific pieces handed off** (such as one stage of a process): the user still owns the rest of the area, so skip only follow-ups that fall within those named pieces.
+
+When unsure whether an older boundary still applies, ask rather than guess.
 
 This workflow reads records about other people, so use it only for a legitimate purpose with clear authorization to access those records. Use the minimum relevant sources and details, leave unrelated or sensitive personal information out of tasks and reusable guidance, and keep outputs within the access boundary of the chosen task system and its audience.
 
@@ -90,12 +95,12 @@ For every meeting, identify:
 - Relationship context: why the meeting happened, how many times you have met, who made the introduction.
 - Candidate actions owned by the user.
 - Work completed during the meeting.
-- Work delegated to another named owner, checked against the current responsibility boundaries.
+- Work belonging to another named owner, checked against the current responsibility boundaries.
 - Explicit future commitments and their timing.
 - Enough neutral context for a task to stand alone weeks later.
 - Source and related links the task audience may access.
 
-Create no task when work was completed live, another person explicitly owns it, the meeting was purely informational and its synthesis is recorded, an active task covers it, or the statement was not a commitment. Users often pre-create tasks during a meeting, so expect some coverage already.
+Create no task when work was completed live, another person owns it under current boundaries, the meeting was purely informational and its synthesis is recorded, an active task covers it, or the statement was not a commitment. Users often pre-create tasks during a meeting, so expect some coverage already.
 
 A test for live completion: if someone promised to send, create, paste, or share something and the artifact was actually delivered during the meeting, it is done. The initial promise in the transcript is not enough to create a task.
 
@@ -221,7 +226,7 @@ For every skipped meeting, give a one-sentence reason that names the actual caus
 - "No out-of-meeting commitment."
 - "Completed during the call."
 - "Reference call, synthesis already in the notes."
-- "Explicitly handed to another role."
+- "In an area handed to another role, and the user made no personal commitment."
 - "Already covered by an active task."
 
 ## 9. Batch uncertain questions
@@ -247,7 +252,8 @@ Before finishing, verify that:
 - Every meeting source for the scope, including private or restricted spaces, was checked and merged without duplicates.
 - Every created task has a genuine owner and unfinished outcome.
 - Transcript evidence supports ownership where summaries were unclear.
-- Completed work was excluded, and delegation skips match current, explicitly named handoffs.
+- Completed work was excluded.
+- Ownership decisions match the current responsibility boundaries: tasks in a handed-off area exist only where the user was named or personally committed, and partial handoffs skip only the named pieces.
 - Active duplicates were not recreated.
 - Titles are action-oriented and notes stand alone.
 - Dates, priority, and estimates are plausible.
@@ -265,7 +271,7 @@ Report tersely: meetings reviewed, tasks created or updated with due dates, skip
 
 - Append a short, generalized note when a pattern will affect future triage. Do not rewrite old entries.
 - Change the workflow itself only for cross-cutting principles, new defaults, or a new step, and ask before structural changes such as adding a step or changing the evidence order.
-- Record a new responsibility boundary in the user's responsibility reference if it applies beyond one meeting. When a boundary changes, replace the outdated version and remove any examples or skip reasons that relied on it, so old handoffs do not keep suppressing tasks.
+- Record a new responsibility boundary in the user's responsibility reference if it applies beyond one meeting, with the date it took effect. When a boundary changes or reverses, replace the outdated version and remove any examples or skip reasons that relied on it, so old handoffs neither suppress tasks that are now the user's nor create tasks that now belong to someone else.
 - Add any newly created meeting space to the list of sources in step 2.
 
 Do not turn one-off facts about a person or meeting into permanent rules. Report any changes in one or two bullets.
