@@ -19,7 +19,7 @@ Use this workflow to apply the right amount of rigor to a decision. Small choice
 ## 1. Ground rules
 
 1. **Match rigor to stakes and reversibility.** Most decisions deserve minutes, not days.
-2. **The user owns their position.** Never state, record, or imply that the user prefers, believes, or decided something they did not actually say.
+2. **The user owns their position.** Never state, record, or imply that the user prefers, believes, or decided something they did not actually say. A fabricated lean puts a position the user never held on their own record.
 3. **Separate advice from attribution.** Keep the assistant's recommendation distinct from the user's stated view. Include assistant analysis in a record only on request, and label it clearly.
 4. **Record only with permission.** "Should we do X?" asks for analysis, not for a record. Create or update a decision record only when the user asks to log, track, open, resume, or commit it, or explicitly agrees.
 5. **Do not mistake execution for a decision.** If there is no meaningful alternative, say so and move to planning or doing the work.
@@ -27,7 +27,7 @@ Use this workflow to apply the right amount of rigor to a decision. Small choice
 
 Before searching a shared decision register or reading communications, personnel records, or customer information about other people, confirm a legitimate purpose and clear authorization. Use only the minimum relevant sources and details, leave out unrelated or sensitive personal information, and keep outputs within an appropriate access boundary.
 
-Before writing to a shared register, confirm its audience is appropriate. For sensitive matters, such as health, relationships, compensation, or confidential personnel issues, keep the discussion in chat or offer a private record.
+Be accurate about who can see the record. Rely on what the user has told you or what you can verify, not on assumptions or outdated notes. Do not tell the user a record is shared or private unless you know it, and if they correct you, update your understanding and stop repeating the old claim.
 
 ## 2. Select the mode
 
@@ -241,4 +241,4 @@ Use direct language. If the user is about to make a weak call, say so with evide
 - **Searching a connected register.** If your assistant can query a database or document store, check for overlapping decisions before creating a new one, and use any record template it provides so dates and sections fill consistently.
 - **Automatic review reminders.** If a calendar or task tool is connected and authorized, create a reminder titled with the decision on the review date, linking to the record and alerting in advance (for example, one day before). For reversible decisions, a review-date field is usually enough.
 - **Chaining with other workflows.** Pair this with an option-generation step before it and a pressure-test step for hard choices. If someone arrives with no options and an open-ended question, route them to option generation first.
-- **Tuning the workflow.** After a few uses, note where classification, rigor, mode selection, review timing, or the record format misfired, and adjust your own version of these rules with the user's agreement.
+- **Tuning the workflow.** After a few uses, note where classification, rigor, mode selection, review timing, or the record format misfired, and adjust your own version of these rules with the user's agreement. Correct any stored facts about the setup, such as who can see the record, as soon as the user updates them.
