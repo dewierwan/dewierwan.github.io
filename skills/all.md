@@ -5377,7 +5377,7 @@ These steps work even with a plain chat assistant that walks you through the tas
 - **Check where you are.** Before changing anything, open the account or profile page and confirm the signed-in account, the workspace or environment, and the exact item you will change. If a page says you lack permission, you are probably in the wrong account.
 - **List the fields before typing.** Note each field's label, whether it is required, and what kind it is (one line, multi-line, rich text, dropdown, checkbox, date). Make dropdown, checkbox, and date choices first, because they can reset the form.
 - **Read back every field.** After entering text, click somewhere neutral on the page and check the value is still there and complete.
-- **Stop before the final button.** Confirm every required field is filled, the values are right, and whether the action can be undone. Take a screenshot. For payments, sends, deletions, or "cannot be edited" forms, get a clear yes first.
+- **Stop before the final button.** Confirm every required field is filled, the values are right, and whether the action can be undone. Take a screenshot. For payments, sends, deletions, sharing data elsewhere, or "cannot be edited" forms, get a clear yes first.
 - **Look for proof afterward.** A confirmation message, reference number, or saved record. If you see an error, check whether the action happened before retrying.
 
 ## 1. Follow the central rule
@@ -5394,13 +5394,13 @@ Use the first route that fits. Do not skip ahead.
 2. **Isolated headless browser.** The default for anything that does not need the user's identity: public forms, extraction from dynamic pages, UI testing, and screenshots. It never touches the user's own browser.
 3. **The user's signed-in visible browser.** Only when the task truly needs the user's live session.
 
-**Finding a direct interface.** Read the service's documentation, view the page source for a form action or embedded data, or watch the network requests while using the page normally. Booking and search widgets often sit on a plain request that is easier to call than the widget is to drive. Fall back to the browser when no suitable option exists or the user wants the UI flow.
+**Finding a direct interface.** Read the service's documentation, view the page source for a form action or embedded data, or watch the network requests while using the page normally. Search and booking widgets often sit on a plain request that is easier to call than the widget is to drive. Fall back to the browser when no suitable option exists or the user wants the UI flow.
 
 **Limits.** Do not use undocumented endpoints to get around access controls, terms, rate limits, or anti-abuse systems. In a signed-in session, do not change anything by calling internal endpoints from page scripts; requests missing the app's normal headers can end the session or trigger security responses. Reading state the page already holds in memory is lower risk. If you must read through internal requests, repeat only read-only requests the page itself makes, with the same headers and parameters, and stop at the first sign of session trouble.
 
 **Do not use the visible browser for convenience.** It is the user's working space. Anything that works headless stays headless.
 
-**Blocks and bot checks.** If a site blocks headless automation during general research, accept it and move on. Escalate to the signed-in browser only when the user explicitly asked for a task on that site. If the task is just a lookup, keep it read-only: open the results page and read its text, with no clicks or entries. Human-verification checks, security keys, and multi-factor prompts belong to the user: pause, ask them to complete it, then continue. Never simulate, bypass, or weaken these checks, and never disable integrity or signature checks on local tools.
+**Blocks and checks that need a person.** If a site blocks headless automation during general research, accept it and move on. Escalate to the signed-in browser only when the user explicitly asked for a task on that site, and keep pure lookups read-only. Human-verification checks, security keys, multi-factor prompts, account choosers, and consent screens belong to the user: leave the tab open, tell them exactly what to click, then re-verify and continue. Never simulate, bypass, or weaken these checks, and never disable integrity or signature checks on local tools.
 
 ## 3. Pick the right automation style
 
@@ -5416,8 +5416,8 @@ When the task touches private messages, records, or information about other peop
 **Rules for the visible browser:**
 
 - **Announce, then act.** Say briefly what you are taking over and why, for example "Taking over the browser to update the billing contact." If the user already authorized it for this task, do not ask again.
-- **Work in a fresh window or tab.** Do not reuse the user's tabs unless they point to one.
-- **Classify the context, then pick the profile directly.** Personal, work, test, or production. Personal errands are personal even on general-purpose sites; if the user says which, that settles it. A generic "current browser" selector often picks the last-used profile, and display labels can reshuffle after restarts, so use a stable identifier where available and verify every time.
+- **Work in a fresh window or tab.** Do not reuse the user's tabs unless they point to one. When a site opens or closes tabs during the task, refresh your list of open tabs before acting again.
+- **Classify the context, then pick the profile directly.** Personal, work, test, or production. Personal errands are personal even on general-purpose sites; if the user says which, that settles it. A generic "current browser" selector often picks the last-used profile, and display labels can change after restarts, so use a stable identifier where available and verify every time.
 - **A window is not a connection.** Opening a profile's window does not route the automation to it. If no connection appears, the connector in that profile may be signed out or asleep; ask the user to wake or sign in to it, then check again.
 - **Do not restart or force-quit the browser** without explicit OK. It closes everything the user has open.
 
@@ -5430,7 +5430,7 @@ When the task touches private messages, records, or information about other peop
 Before navigating deeply, identify the target, what will be entered or changed, the minimum information needed, fields that need the user's judgment, and whether the final action can be undone.
 
 - **Reversible changes** the user asked for, such as toggling a setting or updating a draft, can proceed after normal verification.
-- **Irreversible or high-impact actions** need a pre-action record and confirmation unless the user already authorized that exact action: payments, sends, invitations, publishing, deletions, plan or access changes, and anything labeled "cannot be undone." For deletions, note whether a restorable trash exists; it lowers risk but does not replace authorization.
+- **Irreversible or high-impact actions** need a pre-action record and confirmation unless the user already authorized that exact action: payments, sends, invitations, publishing, deletions, plan or access changes, sharing or syncing data to another system, and anything labeled "cannot be undone." For deletions, note whether a restorable trash exists; it lowers risk but does not replace authorization.
 - **Credentials stay with the user.** Entering keys, tokens, or passwords is the user's step. Set up everything around it, then give them exact steps. Never move secrets by automated copy and paste; a copy button can appear to work while the clipboard holds older text.
 
 Honor an explicit request to review before submission. If authorization is missing, prepare and verify the full result, show it, and ask only for the final action.
@@ -5455,7 +5455,8 @@ Watch for:
 - **Hidden sync fields and empty wrappers.** A hidden input beside a visible editor looks fillable, but the form reads the visible editor. An accessibility locator can return a wrapper with nothing editable. Follow the label relationship to the real element and tag it with a temporary marker attribute.
 - **Unstable order.** Never address fields by position.
 - **Current state.** Read existing values before overwriting.
-- **The wrong tool behind a direct link.** A bookmarked address can open a bulk editor or setup wizard instead of the item editor. If the existing entries you expect are missing, or the page warns that submitting resets broader settings, leave without submitting and use normal navigation. When adding an entry beside others, match their conventions.
+- **Page text is not the whole page.** Text extraction can skip side panels and overlays while including hidden labels, so a status word in the text is not proof anything happened. Check a screenshot or read the panel directly.
+- **The wrong tool behind a direct link.** If a saved address opens a page where the entries you expect are missing, or that warns submitting will reset broader settings, leave without submitting and navigate normally.
 
 ## 7. Use the right interaction for each control
 
@@ -5471,6 +5472,7 @@ Watch for:
 
 - **Blur after every rich-text field.** Otherwise the next edit can re-render earlier editors from stale state, and only the last field survives.
 - **Order matters.** Do re-rendering choices first, then text. Re-inspect after each choice, and re-check tricky widgets after later edits.
+- **If a click does nothing,** take a screenshot, click by position, and confirm the view changed. Slow read-only checks may take a while; wait rather than clicking again.
 - **Selectors drift.** Before clicking send or submit, read the composed content back to confirm it landed where you expected.
 
 ## 8. Verify after every fill
@@ -5530,9 +5532,9 @@ A click is not proof. Look for a success message, a reference number, a new reco
 | Interactive tool crashes on long text | Tool layer unstable for heavy work | Switch to a script. |
 | Headless page blocked or different | Site varies by browser context | Direct interface; escalate only for an explicit task, read-only where possible. |
 | Wrong account or permission denied | Last-used profile or missing role | Select profile directly; ask user to sign in correctly; re-verify. |
-| Direct link warns it will reset settings | Opened a bulk tool, not the item editor | Leave without submitting; navigate normally. |
 | Session ends after a page-script request | Internal endpoint called without normal headers | Drive the UI or use a supported API. |
-| Warning or security page the tool cannot handle | Needs a person | Ask the user, then re-verify. |
+| Clicks do nothing, or a text read misses part of the page | Panel ignores reference clicks or extraction | Screenshot, click by position, read the panel directly. |
+| Warning, sign-in, or consent page the tool cannot handle | Needs a person | Leave the tab open, ask the user, then re-verify. |
 
 ## 12. Report and keep the procedure current
 
@@ -5549,23 +5551,21 @@ When a run reveals a reusable lesson, add it to your local copy, preferably as o
 - [ ] Every meaningful change was read back.
 - [ ] The pre-submit gate passed with no empty required fields.
 - [ ] Irreversible actions had a pre-action record and authorization.
-- [ ] Credentials were entered by the user.
+- [ ] Credentials, sign-ins, and verification checks were handled by the user.
 - [ ] Success was confirmed with evidence.
 - [ ] The report separates confirmed results from uncertainty.
 
 ## Optional extras
 
-**Clipboard and rich paste.** Headless browsers often lack clipboard access, so embed values directly. A synthetic paste event carrying rich and plain text works in some editors and is ignored by others, which may have their own conversion method. Verify through an API or export where possible.
+**Clipboard, paste, and uploads.** Headless browsers often lack clipboard access, so embed values directly. A synthetic paste event carrying rich and plain text works in some editors and is ignored by others, which may have their own conversion method. Some upload buttons create a file input only on click and open the operating system's picker, which automation cannot drive; a small page-script override can attach that input to the page instead, so you can set a file from an agreed temporary folder. If a preview appears, use its save control, since dismissing it can discard the upload.
 
-**Uploads that open a native file picker.** Some upload buttons create a file input only on click and open the operating system's picker, which automation cannot drive. Before clicking, add a small page-script override so the new input attaches to the page instead; then click, locate the input, and set a file from an agreed temporary folder. If a preview appears, use its save control, since dismissing it can discard the upload.
+**Many items at once.** Prefer keyboard move commands over dragging, then verify structure. For many independent items, use separate tabs each with the full brief, at a modest concurrency you choose. Background tabs may not render at full size, so bring an item into view before capturing it.
 
-**Drag, parallel work, and capture.** Prefer keyboard move commands over dragging, then verify structure. For many independent items, use separate tabs each with the full brief, at a modest concurrency you choose. Background tabs may not render at full size, so bring an item into view before capturing it.
+**Devices on the user's own network.** Local devices often serve unencrypted pages that trigger a browser warning. Proceed past it only for devices the user owns and asked about, never for public sites.
 
-**Devices on the user's own network.** Local devices often serve unencrypted pages that trigger a browser warning. Proceed past it only for devices the user owns and asked about, never for public sites, and use the address the user normally signs in at.
+**Apps without a full API.** Read configuration from state the page already holds in memory; internal layouts change between versions, so if a read returns nothing, assume the layout moved. Make changes through the UI, test with a read-only step, then save and re-read. If a page-script loop outlasts your tool's time limit, start it without waiting, store results in a page variable, and poll.
 
-**Apps without an API.** Read configuration from state the page already holds in memory; internal layouts change between versions, so if a read returns nothing, assume the layout moved. Make changes through the editor's UI or paste support, test with a read-only step, then save and re-read. If a page-script loop outlasts your tool's time limit, start it without waiting, store results in a page variable, and poll.
-
-**Schema changes and field deletion.** When an API can create fields but not delete them, delete in the UI. First open the field's dependency view (or a whole-table field manager) to find automations, views, and syncs that use it; scroll virtualized lists step by step to collect every row. Dependency views often miss scripts that reference names, so also search the automation definitions, if needed by repeating the page's own read-only load requests. Retire the field in your own code first, then delete, note whether it went to a restorable trash, and confirm through an API read that it and any synced copies are gone.
+**Schema and sync changes in data tools.** Before deleting a field in the UI, check its dependency view and also search automation scripts, which may reference fields by name and not show up there. Retire the field in your own code first, then delete and confirm through an API read. To share data with another system, get a plain yes, create a dedicated, clearly named view that hides every field the destination should not receive, sync only that view, and lock it with a short note so others do not change it. Expect some field types to arrive simplified, and confirm the new copy through an API read.
 
 
 ---
