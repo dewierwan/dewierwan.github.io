@@ -5396,7 +5396,7 @@ Use the first route that fits. Do not skip ahead.
 
 **Finding a direct interface.** Read the service's documentation, view the page source for a form action or embedded data, or watch the network requests while using the page normally. Search and booking widgets often sit on a plain request that is easier to call than the widget is to drive. Fall back to the browser when no suitable option exists or the user wants the UI flow.
 
-**Limits.** Do not use undocumented endpoints to get around access controls, terms, rate limits, or anti-abuse systems. In a signed-in session, do not change anything by calling internal endpoints from page scripts; requests missing the app's normal headers can end the session or trigger security responses. Reading state the page already holds in memory is lower risk. If you must read through internal requests, repeat only read-only requests the page itself makes, with the same headers and parameters, and stop at the first sign of session trouble.
+**Limits.** Do not use undocumented endpoints to get around access controls, terms, rate limits, or anti-abuse systems. In a signed-in session, do not change anything by calling internal endpoints from page scripts; requests missing the app's normal headers can end the session or trigger security responses. Reading state the page already holds is lower risk. If you must read through internal requests, repeat only read-only requests the page itself makes, and stop at the first sign of session trouble.
 
 **Do not use the visible browser for convenience.** It is the user's working space. Anything that works headless stays headless.
 
@@ -5416,8 +5416,8 @@ When the task touches private messages, records, or information about other peop
 **Rules for the visible browser:**
 
 - **Announce, then act.** Say briefly what you are taking over and why, for example "Taking over the browser to update the billing contact." If the user already authorized it for this task, do not ask again.
-- **Work in a fresh window or tab.** Do not reuse the user's tabs unless they point to one. When a site opens or closes tabs during the task, refresh your list of open tabs before acting again.
-- **Classify the context, then pick the profile directly.** Personal, work, test, or production. Personal errands are personal even on general-purpose sites; if the user says which, that settles it. A generic "current browser" selector often picks the last-used profile, and display labels can change after restarts, so use a stable identifier where available and verify every time.
+- **Work in a fresh window or tab.** Do not reuse the user's tabs unless they point to one. When a site opens or closes tabs, refresh your list of open tabs before acting again.
+- **Classify the context, then pick the profile directly.** Personal, work, test, or production. If the user says which, that settles it. A generic "current browser" selector often picks the last-used profile, and display labels can change after restarts, so use a stable identifier where available and verify every time.
 - **A window is not a connection.** Opening a profile's window does not route the automation to it. If no connection appears, the connector in that profile may be signed out or asleep; ask the user to wake or sign in to it, then check again.
 - **Do not restart or force-quit the browser** without explicit OK. It closes everything the user has open.
 
@@ -5430,7 +5430,7 @@ When the task touches private messages, records, or information about other peop
 Before navigating deeply, identify the target, what will be entered or changed, the minimum information needed, fields that need the user's judgment, and whether the final action can be undone.
 
 - **Reversible changes** the user asked for, such as toggling a setting or updating a draft, can proceed after normal verification.
-- **Irreversible or high-impact actions** need a pre-action record and confirmation unless the user already authorized that exact action: payments, sends, invitations, publishing, deletions, plan or access changes, sharing or syncing data to another system, and anything labeled "cannot be undone." For deletions, note whether a restorable trash exists; it lowers risk but does not replace authorization.
+- **Irreversible or high-impact actions** need a pre-action record and confirmation unless the user already authorized that exact action: payments, sends, invitations, publishing, deletions, plan or access changes, sharing or syncing data to another system, and anything labeled "cannot be undone." A restorable trash lowers risk but does not replace authorization.
 - **Credentials stay with the user.** Entering keys, tokens, or passwords is the user's step. Set up everything around it, then give them exact steps. Never move secrets by automated copy and paste; a copy button can appear to work while the clipboard holds older text.
 
 Honor an explicit request to review before submission. If authorization is missing, prepare and verify the full result, show it, and ask only for the final action.
@@ -5453,10 +5453,9 @@ Watch for:
 
 - **Look-alike controls.** Single-line inputs strip line breaks silently. Rich-text editors keep their own internal model and may ignore direct value changes.
 - **Hidden sync fields and empty wrappers.** A hidden input beside a visible editor looks fillable, but the form reads the visible editor. An accessibility locator can return a wrapper with nothing editable. Follow the label relationship to the real element and tag it with a temporary marker attribute.
-- **Unstable order.** Never address fields by position.
-- **Current state.** Read existing values before overwriting.
+- **Unstable order.** Never address fields by position. Read existing values before overwriting.
 - **Page text is not the whole page.** Text extraction can skip side panels and overlays while including hidden labels, so a status word in the text is not proof anything happened. Check a screenshot or read the panel directly.
-- **The wrong tool behind a direct link.** If a saved address opens a page where the entries you expect are missing, or that warns submitting will reset broader settings, leave without submitting and navigate normally.
+- **The page is not what you expected.** If a saved link opens a view where expected entries are missing, or that warns submitting will reset broader settings, leave without submitting and navigate there normally.
 
 ## 7. Use the right interaction for each control
 
@@ -5468,11 +5467,11 @@ Watch for:
 | Dropdown or combobox | Choose by exact visible option text, wait to settle | Selection can re-render the form. |
 | Checkbox or radio | Read state first; click only if it must change | Clicking toggles a correct value. |
 | Date or time picker | Set values, close by clicking neutral background, check the summary | Close or clear buttons may wipe values. |
-| File upload | Confirm file, destination, and privacy first | Upload may start at once (see Optional extras). |
+| File upload | Confirm file, destination, and privacy first | Upload may start at once. |
 
 - **Blur after every rich-text field.** Otherwise the next edit can re-render earlier editors from stale state, and only the last field survives.
 - **Order matters.** Do re-rendering choices first, then text. Re-inspect after each choice, and re-check tricky widgets after later edits.
-- **If a click does nothing,** take a screenshot, click by position, and confirm the view changed. Slow read-only checks may take a while; wait rather than clicking again.
+- **If a click does nothing,** take a screenshot, click by position, and confirm the view changed. Slow checks may take a while; wait rather than clicking again.
 - **Selectors drift.** Before clicking send or submit, read the composed content back to confirm it landed where you expected.
 
 ## 8. Verify after every fill
@@ -5518,8 +5517,7 @@ A click is not proof. Look for a success message, a reference number, a new reco
 
 - **Errors can be cosmetic.** Some apps show "something went wrong" after the work finished. Check before retrying, since blind retries can duplicate sends, payments, or records.
 - **Frozen pages.** A blocking pop-up can freeze the tab. Ask the user to respond to it, then continue.
-- **Use an independent channel.** Confirm through an API read, a public lookup, or a query to the authoritative source rather than a cached copy.
-- **Probe settings harmlessly.** For allow-lists or access rules, send a request that exercises the setting without signing in or changing anything, and compare with a case that should be rejected.
+- **Use an independent channel.** Confirm through an API read, a public lookup, or the authoritative source rather than a cached copy. For access rules, a harmless request that exercises the setting without signing in or changing anything, compared with a case that should be rejected, is good evidence.
 - If you cannot confirm, say what you tried and what remains uncertain. Never report an attempt as a success.
 
 ## 11. General failure patterns
@@ -5533,7 +5531,7 @@ A click is not proof. Look for a success message, a reference number, a new reco
 | Headless page blocked or different | Site varies by browser context | Direct interface; escalate only for an explicit task, read-only where possible. |
 | Wrong account or permission denied | Last-used profile or missing role | Select profile directly; ask user to sign in correctly; re-verify. |
 | Session ends after a page-script request | Internal endpoint called without normal headers | Drive the UI or use a supported API. |
-| Clicks do nothing, or a text read misses part of the page | Panel ignores reference clicks or extraction | Screenshot, click by position, read the panel directly. |
+| Clicks do nothing, or a read misses part of the page or comes back cut off | Panel ignores clicks or extraction; tool truncates output | Screenshot, click by position, read the panel directly, read long results in slices. |
 | Warning, sign-in, or consent page the tool cannot handle | Needs a person | Leave the tab open, ask the user, then re-verify. |
 
 ## 12. Report and keep the procedure current
@@ -5557,15 +5555,15 @@ When a run reveals a reusable lesson, add it to your local copy, preferably as o
 
 ## Optional extras
 
-**Clipboard, paste, and uploads.** Headless browsers often lack clipboard access, so embed values directly. A synthetic paste event carrying rich and plain text works in some editors and is ignored by others, which may have their own conversion method. Some upload buttons create a file input only on click and open the operating system's picker, which automation cannot drive; a small page-script override can attach that input to the page instead, so you can set a file from an agreed temporary folder. If a preview appears, use its save control, since dismissing it can discard the upload.
+**Clipboard, paste, and uploads.** Headless browsers often lack clipboard access, so embed values directly. A synthetic paste event works in some editors and is ignored by others, which may offer their own conversion method. Some upload buttons create a file input only on click and open the operating system's picker, which automation cannot drive; a small page-script override can attach that input to the page so you can set a file from an agreed temporary folder. If a preview appears, use its save control, since dismissing it can discard the upload.
 
-**Many items at once.** Prefer keyboard move commands over dragging, then verify structure. For many independent items, use separate tabs each with the full brief, at a modest concurrency you choose. Background tabs may not render at full size, so bring an item into view before capturing it.
+**Batches of independent items.** Use separate tabs, each with the full brief, at a modest concurrency you choose. Prefer keyboard commands over dragging when rearranging, then verify structure. Background tabs may not render fully, so bring an item into view before capturing it.
 
-**Devices on the user's own network.** Local devices often serve unencrypted pages that trigger a browser warning. Proceed past it only for devices the user owns and asked about, never for public sites.
+**Apps without a full API.** Read configuration from state the page already holds in memory; internal layouts change between versions, so an empty read usually means the layout moved. Make changes through the UI, test with a read-only step, then save and re-read. If a page-script loop outlasts your tool's time limit, start it without waiting, store results in a page variable, and poll. If returned text gets cut off or filtered, keep the full result in a page variable and read it back in slices under the limit, then reassemble before drawing conclusions.
 
-**Apps without a full API.** Read configuration from state the page already holds in memory; internal layouts change between versions, so if a read returns nothing, assume the layout moved. Make changes through the UI, test with a read-only step, then save and re-read. If a page-script loop outlasts your tool's time limit, start it without waiting, store results in a page variable, and poll.
+**The user's own devices.** Local devices often serve unencrypted pages that trigger a browser warning; proceed past it only for devices the user owns and asked about. When away from that network, diagnose through the app's signed-in remote page, using the read-only logs, history, and event views it already exposes. If a source refuses access, accept that rather than looking for another way in.
 
-**Schema and sync changes in data tools.** Before deleting a field in the UI, check its dependency view and also search automation scripts, which may reference fields by name and not show up there. Retire the field in your own code first, then delete and confirm through an API read. To share data with another system, get a plain yes, create a dedicated, clearly named view that hides every field the destination should not receive, sync only that view, and lock it with a short note so others do not change it. Expect some field types to arrive simplified, and confirm the new copy through an API read.
+**Schema and data-sharing changes.** Before deleting a field, check the tool's dependency view and search automation scripts that may reference it by name, retire it in your own code first, then confirm the result through an API read. To share data with another system, get a plain yes, expose only a dedicated view that hides everything the destination should not receive, lock that view with a short note, and verify the new copy.
 
 
 ---
@@ -5970,53 +5968,44 @@ Use this when you host a regular event, such as a monthly book swap or game nigh
 - Tell the assistant the series name, the rule for when it happens (for example "first Thursday of each month"), the last event number, and any dates that already have an event.
 - Ask it to work out the next open date with a real calendar, not in its head.
 - Have it reuse last time's description and update only what changed.
-- Ask for one fresh poster idea that is clearly different from the last few, written as a single-paragraph image prompt.
+- Describe your last few posters and ask for one fresh idea that is clearly different, written as a single-paragraph image prompt.
 - Paste the finished text into your event page yourself, check it as a guest would, and mark yourself as going if that is your habit.
 - Invite the usual people, then check the invite count before and after sending.
 - If the series has a website or shared calendar, add the new link there too, and note whether that worked.
 
 ## Authorization: confirm once, then act
 
-For your own series, standing authorization is the natural default. Confirm it once, in writing, with the series, the usual hosts, who gets invited, and what the assistant may publish and send. After that, each new occurrence should need zero questions. Stop and ask only when something real changes: a new venue, a price, a bigger or different audience, a public listing, or a safety issue.
+For your own series, standing authorization is the natural default. Confirm it once, in writing: the series, the usual hosts, who gets invited, and what the assistant may publish and send. After that, each new occurrence should need zero questions. Stop and ask only when something real changes: a new venue, a price, a bigger or different audience, a public listing, or a safety issue.
 
-Standing authorization does not override the assistant's own safety controls. If a tool blocks a send step even though you approved it, do not look for a workaround. Finish creating every event in the batch first, then ask the host once to approve all the sends together, and send each batch after they say yes.
+Standing authorization does not override the assistant's own safety controls. Try the send step first. If a tool blocks it anyway, do not look for a workaround: finish creating every event in the batch, then ask the host once to approve all the sends together.
 
-The invite step reads past guest lists, so use them only to invite people to this series, and only people who agreed to hear about future events, such as past guests who have not opted out. Read only the lists you need, leave out unrelated personal details, keep any names and counts inside the host team, and make opting out easy.
+The invite step reads past guest lists, so use them only to invite people to this series, and only people who agreed to hear about future events. Read only the lists you need, leave out unrelated personal details, keep names and counts inside the host team, and make opting out easy.
 
 ## 1. Work out the date and number
 
 - Compute the next date from the recurrence rule with a calendar or date tool. Weekday and date errors are the most common mistake.
-- Check the list of events you already host before picking dates, and skip any date that already has one. A request for "three new ones" means the next three open dates.
-- Find the highest existing event number and add one. For several events, use sequential numbers, each with its own poster.
-- Check for clashes: a holiday, the venue being closed, or the host being away. A clash does not cancel the event by itself. Go ahead under the standing policy and name the clash in the final report so the host can hand off or cancel.
+- Check the events you already host before picking dates, and skip any date that already has one. "Three new ones" means the next three open dates.
+- Take the highest existing event number and add one. For several events, use sequential numbers, each with its own poster.
+- Check for clashes: a holiday, the venue being closed, or the host being away. A clash does not cancel the event by itself. Go ahead and name the clash in the final report so the host can hand off or cancel.
 
 ## 2. Make a fresh poster
 
-Look at the last two or three posters first so you do not repeat them. Keep the series identity steady (the name in the same hand-lettered style, the core activity, a warm and simple look) and change the big idea each time, rather than "same style, new scene."
+Look at the last two or three posters first so you do not repeat them. If the usual place you keep them is gone, use the images on the most recent event pages instead; viewing them side by side makes repetition easy to spot.
 
-Levers worth pulling:
+Keep the series identity steady (the name in the same lettering style, the core activity, a warm and simple look) and change the big idea each time, rather than "same style, new scene." Levers worth pulling:
 
 - **Season, weather, light:** first frost, a rainy window, long summer evening light.
-- **Viewpoint:** looking up past a teacup, a bird's-eye view of the table, a view from inside a bookshelf.
-- **One witty focal object:** a chess knight wearing a party hat, a stack of paperbacks shaped like a lighthouse, a dice cup used as a flowerpot.
+- **Viewpoint:** looking up past a teacup, a bird's-eye view of the table.
+- **One witty focal object:** a chess knight wearing a party hat, paperbacks stacked like a lighthouse.
 - **Local texture:** a familiar street corner, the venue's door, a local landmark.
 
-One clear joke beats a busy scene.
-
-Anti-cliché guardrails to put in the prompt:
-
-- one clear subject and a restrained palette;
-- clean, correctly spelled lettering;
-- no extra fingers, melted objects, or garbled text;
-- no glossy over-rendered finish or generic "epic" lighting.
-
-If the result looks like last time or has obvious generated tells, say so and regenerate once or twice.
+One clear joke beats a busy scene. Put these guardrails in the prompt: one clear subject, a restrained palette, clean and correctly spelled lettering, no extra fingers or garbled text, no glossy over-rendered finish or generic "epic" lighting. If the result looks like last time or has obvious generated tells, say so and regenerate once or twice. If the tool offers two options, keep the stronger one.
 
 Practical rules for the image tool:
 
-- **Write the prompt as one paragraph.** In many chat tools Enter sends the message, so a multi-line prompt gets cut off. If that happens, stop and send the rest as a follow-up.
+- **Write the prompt as one paragraph.** In many chat tools Enter sends the message, so a multi-line prompt gets cut off. If that happens, send the rest as a follow-up.
 - **Check before retrying.** Image tools sometimes show an error even though the image finished.
-- **Use the account with enough image capacity.** Free or limited plans can run out after a few images, leaving no room to regenerate. If you have access to a workspace or plan with higher limits, pick it in the account menu before you start. When you need several posters, send every prompt at once in separate fresh chats.
+- **Use an account with enough image capacity.** Limited plans can run out before you can regenerate. For several posters, send each prompt in its own fresh chat at the same time.
 
 ## 3. Build the event page
 
@@ -6026,25 +6015,30 @@ Reuse the stable parts of the last description and update the rest. Fill fields 
 2. Date, start and end time. Check the shown date before touching anything else.
 3. Location, picking the exact venue, not a similar name.
 4. Description.
-5. Image. Wait for the upload to finish and check it shows.
+5. Image. Wait for the upload to finish and check it shows before editing anything else.
 6. Co-hosts, if any.
-7. Leave visibility, cost, and capacity at the series defaults.
+7. Visibility, cost, and capacity at the series defaults.
 
 Some platforms publish on a button labeled "Save" or "Done," so know what it does before pressing it. Then check the live page as a guest would: title, date, time, location, description, and image.
 
-If the host wants it (a choice you set once), RSVP as the host: mark yourself as going, leave plus-ones and comments empty, close any follow-up prompts, and confirm the page shows one person going.
+If the host wants it (a choice you set once), RSVP as the host: mark going, leave plus-ones and comments empty, close any follow-up prompts, and confirm the page shows one person going.
 
 ## 4. Invite the approved audience
 
-Invite past guests of the series, one past event at a time, including any early unnumbered events. Before pressing "Select all," check whether people are already selected, because some platforms pre-select guests and pressing it again can clear them. Watch the invite count rise after each group by roughly that group's size. If it stays flat or drops, stop and look. Send, then confirm the sent state and final count. If the send is blocked, follow the rule under Authorization.
+Invite past guests of the series one past event at a time, including any early unnumbered events.
+
+- **Pick each past event by its exact name**, not its position in a list. Newly created events join the list and shift the rest.
+- **Check the selection before pressing "Select all."** Some platforms pre-select guests, and pressing it again clears them. Skip past events with nobody to select.
+- **Watch the invite count** rise after each group by roughly that group's size. If it stays flat or drops, stop and look.
+
+Send, then confirm the final count where the platform records it, which may be a guest management view rather than the invite panel. If guests still show as "sending," reload once before judging. New events invited from the same past events should land on the same count; a mismatch suggests a missed group.
 
 ## 5. Update the series website or listing
 
-If the series has its own website, newsletter page, or shared calendar, check how it learns about new events. Many sites show only the events listed explicitly, because event links are random and cannot be guessed. Skip this step and the new events never appear, and any "next event" link stops at the last one listed.
+If the series has its own website, newsletter page, or shared calendar, check how it learns about new events. Many sites show only events listed explicitly, because event links are random and cannot be guessed. Skip this step and new events never appear, and any "next event" link stops at the last one listed.
 
-- Wait until every event in the batch is live, then add all the new links in one update.
-- If others also edit the site, start from the latest version.
-- If the site pulls dates, images, and upcoming or past status from the event platform, add only the links; nothing else needs editing.
+- Wait until every event in the batch is live, then add all the new links in one update, starting from the latest version if others also edit the site.
+- If the site pulls dates, images, and status from the event platform, add only the links.
 - If the update fails, say so in the report. The events still exist, so this is a follow-up, not a reason to undo anything.
 
 ## 6. Report
@@ -6053,31 +6047,32 @@ Keep it short: what was created, date and venue, the invite count, any clash fro
 
 ## Worked example (invented)
 
-Series: "Second Saturday Board Games," monthly, at a neighborhood café, hosts Priya and Tom, invite list is past guests who have not opted out. The host has asked to be marked as going on each new event, and a small website lists each event link.
+Series: "Second Saturday Board Games," monthly, at a neighborhood café, hosts Priya and Tom, invite list is past guests who have not opted out. The host likes to be marked as going, and a small website lists each event link.
 
-- Last event was #11 in March. A calendar check gives Saturday 12 April, so this is #12. The hosting list shows no event on that date yet.
-- The café closes early that day. Under the standing policy the assistant keeps the usual slot and flags the clash.
-- Last two posters were a meeple on a mountain and a rainy window with cards. This time: a bird's-eye view of a game board laid out like a city park, with a single tiny meeple walking a dog. Warm colors, hand-lettered title, nothing else in frame.
-- Description carries over unchanged except the date and a new line: "Bring a game you have not played in a year."
+- Last event was #11 in March. A calendar check gives Saturday 12 April, with no event yet, so this is #12.
+- The café closes early that day. The assistant keeps the usual slot and flags the clash.
+- Last two posters were a meeple on a mountain and a rainy window with cards. This time: a bird's-eye view of a game board laid out like a city park, with one tiny meeple walking a dog. Warm colors, hand-lettered title, nothing else in frame.
+- Description carries over except the date and a new line: "Bring a game you have not played in a year."
 - After publishing, the assistant RSVPs as Priya and the page shows "1 going."
-- Invites: 11 past sessions, count rises from 0 to 46 with no drops. Sent.
-- The new link goes on the website, which now shows #12 as the next event.
+- Invites: 11 past sessions, count rises from 0 to 46 with no drops. Sent, and the guest view shows 46 invited after one reload.
+- The website now shows #12 as the next event.
 
-Report: "Board Games #12 is live for Sat 12 April at the café. 46 people invited, and the website lists it. Note: the café may close early that day, so you may want to confirm the time with them." Link on the final line.
+Report: "Board Games #12 is live for Sat 12 April at the café. 46 people invited, and the website lists it. Note: the café may close early that day, so you may want to confirm the time." Link on the final line.
 
-If Priya later asks for "three more" and #13 already exists for May, the new ones become #14, #15, and #16 on the June, July, and August dates, added to the website in a single update.
+If Priya later asks for "three more" and #13 already exists for May, the new ones become #14, #15, and #16 on the June, July, and August dates, added to the website in one update, and all three should show the same invite count.
 
 ## After each run
 
-Keep only reusable lessons, such as platform quirks or a changed template, and update your notes in the same session.
+Keep only reusable lessons, such as a platform change or an updated template, and update your notes in the same session.
 
 ## Optional extras
 
 For assistants that drive a browser or other connected tools:
 
-- **Right account for each site:** the image tool and the event platform may be logged in under different browser profiles or accounts, and one account may have several workspaces with different limits. Route each site to the right profile and workspace, and verify the active account before acting.
-- **File handling:** avoid buttons that open a native file dialog the tool cannot control; use the page's file input or the tool's file-chooser support, from a folder the tool can read. If a browser silently blocks a second download, capture the image another way, such as a full-size screenshot of just the image.
-- **Verify after every change on screen:** pages shift when extra controls appear, windows resize, or a page is still loading. Take a fresh screenshot before each click after any shift, confirm nothing changed by accident (a style, a date, a selection), and close pickers by clicking empty background rather than trusting close icons or Escape. If typing right after a page loads is lost, retype.
-- **One thing at a time:** finish and verify an upload before opening another panel. If you script the invite loop, handle one past event per call to stay under time limits, normalize unusual spaces in labels before matching text, wait for each list to load, and read the invite count after each pass.
-- **Website built from a code repository:** keep a small script that adds one or more event links to the site's event list. For each batch, pull the latest version, run the script once with all the new links, commit with a message naming the event numbers, and publish so the site rebuilds. Confirm the events appear afterward.
-- **Shared notes:** keep series-specific quirks with this workflow and move general browser lessons into a shared notes file.
+- **Right account for each site:** the image tool and event platform may use different browser profiles, accounts, or workspaces with different limits. Route each site correctly and verify the active account before acting.
+- **Reviewing past posters without a browser:** fetch the last few event pages from your own event list, pull out each poster at a small size, and join them into one strip to review in a single view.
+- **Stale text in input boxes:** scripted sending can leave an old prompt in a chat box. Read it before typing; replace it if it was automated, and save it and tell the host if they wrote it. Clear the box when done.
+- **File handling:** avoid buttons that open a native file dialog the tool cannot control; use the page's file input or the tool's file-chooser support, from a folder the tool can read. If the browser blocks repeat downloads, capture the image another way, such as a full-size screenshot of just the image, with its tab in front.
+- **Verify after every on-screen change:** pages shift when controls appear, windows resize, or content is still loading. Take a fresh screenshot before each click after any shift, confirm nothing changed by accident, close pickers by clicking empty background, and retype if early typing was lost.
+- **Scripted invite loop:** handle one past event per call to stay under time limits, group a handful of calls into a batch, normalize unusual spaces before matching labels, wait for each list to load, and read the count after each pass.
+- **Website built from a code repository:** keep a small script that adds event links to the site's list. Pull the latest version, run it once with all new links, commit with a message naming the event numbers, publish, and confirm the events appear.
