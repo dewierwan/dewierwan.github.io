@@ -1,6 +1,6 @@
 ---
 name: create-a-skill
-description: Designs, tests, and improves a reusable AI skill from a rough idea or repeated workflow. Use when someone says "turn this into a skill," "improve this skill," or "does my skill help?"
+description: Designs, tests, and improves a reusable AI skill from a rough idea or repeated workflow. Use when someone says "turn this into a skill" or "improve this skill," or asks if a skill helps.
 ---
 
 # Create an AI skill
@@ -12,9 +12,9 @@ Use this workflow to create a new AI skill, improve an existing one, test whethe
 - Tell your assistant what the skill should do, when it should be used, and what a good output looks like. If you already did the job in a conversation, paste it and ask the assistant to extract the steps, corrections, and formats, then confirm the gaps.
 - Before drafting, have it ask only questions that change the design: missing information, edge cases, actions that need your confirmation, and what would make you reject an output.
 - Draft the skill: a short name, a slightly assertive description that leads with trigger phrases, imperative instructions that explain why each step matters, an output template, and what to do when something is missing or unclear.
-- Write two or three realistic test requests. Paste the skill into a fresh chat with each one and read the outputs yourself before changing anything.
-- Revise from the general cause of each problem, not the specific example. Fold each lesson into the rule it refines instead of appending notes about what went wrong.
-- Repeat until you are happy or progress stops, then run the audit checklist in section 10.
+- Write two or three realistic test requests and keep them with the skill. Paste the skill into a fresh chat with each one and read the outputs yourself before changing anything.
+- Revise from the general cause of each problem, not the specific example. Decide where each lesson belongs, usually folded into the rule it refines, instead of appending notes about what went wrong.
+- Repeat until you are happy or progress stops, rerun your saved tests after any big cut or reorganization, then run the audit checklist in section 10.
 
 The method works with any AI system that supports reusable instructions. Where this guide mentions files, folders, or tools, substitute whatever your platform provides.
 
@@ -87,7 +87,8 @@ skill-name/
 ├── [main instruction file]   # required: name, description, instructions
 ├── scripts/                  # optional: code for deterministic or repetitive tasks
 ├── references/               # optional: documents loaded only when needed
-└── assets/                   # optional: files used in outputs (templates, icons, fonts)
+├── assets/                   # optional: files used in outputs (templates, icons, fonts)
+└── tests/                    # optional: saved test prompts and checks, not loaded at run time
 ```
 
 Most skill systems load content in layers, so design for progressive disclosure:
@@ -98,7 +99,7 @@ Most skill systems load content in layers, so design for progressive disclosure:
 | 2. Main instructions | The body of the skill | Whenever the skill activates | Short enough to read in one pass; a few hundred lines at most |
 | 3. Bundled resources | Scripts, references, assets | Only when needed | Can be large; scripts can run without being read |
 
-Follow any limits your platform sets. If it sets none, choose a size limit for the main file yourself (adjustable) and check against it whenever you edit. Key patterns:
+Follow any limits your platform sets. If it sets none, choose a size limit for the main file yourself (adjustable) and check against it whenever you edit. It helps to also set an early warning somewhat below the hard limit, so you notice growth and trim calmly instead of being forced to cut when an edit fails validation. Key patterns:
 
 - If the main instructions grow long, move detail into reference files and say exactly when to read each one.
 - Give long reference files a table of contents.
@@ -166,6 +167,8 @@ After the draft, write two or three realistic test prompts, the kind of thing a 
 
 Cover meaningful variety: a typical request, an incomplete or ambiguous one, a format-sensitive one, and, if relevant, one that should lead to a confirmation or refusal. Give each test a descriptive name. Leave checks empty for now; draft them while runs are in progress.
 
+Save the test set alongside the skill, in a place the skill does not load when it runs, so anyone can rerun it later.
+
 ```json
 {
   "skill_name": "[skill name]",
@@ -199,8 +202,8 @@ This is the heart of the loop. Take your time. Draft a revision, then reread it 
 2. **Keep it lean.** Remove what is not earning its place. Read the run transcripts, not just final outputs. If the skill makes the AI waste effort, remove the cause and see what happens.
 3. **Explain the why.** Even if feedback is terse or frustrated, work out what the user actually needs and put that understanding into the instructions.
 4. **Bundle repeated work.** If several runs independently wrote similar helper scripts or followed the same multi-step routine, write it once, add it to the skill, and tell the skill to use it.
-5. **Fold lessons into existing rules.** When a run teaches a lesson, edit or merge the rule it refines instead of adding a new paragraph about the incident. Do not append dated incident notes to the skill. If you want an audit trail, keep it in a separate change log that the skill does not load when it runs.
-6. **Preserve what works.** Do not break behavior the user already liked while fixing something else.
+5. **Decide where each lesson belongs.** If you keep a written policy for handling lessons, read it before editing. Otherwise use this rule of thumb: a lesson that affects most runs goes into the main instructions, merged into the rule it refines; a lesson that matters only in some cases goes into the relevant reference file; a record of what happened and why goes into a separate change log that the skill does not load when it runs. Do not append dated incident notes to the skill itself.
+6. **Preserve what works.** Do not break behavior the user already liked while fixing something else. Before and after any large cut, restructure, or move of content into reference files, rerun the saved tests and compare. Trimming often removes something that was quietly doing work.
 
 Then rerun all tests as a new iteration, show the new results with previous outputs and feedback alongside, wait for the user to finish reviewing, and repeat. Stop when the user is happy, feedback is consistently empty across meaningful tests, or you are no longer making meaningful progress.
 
@@ -213,7 +216,8 @@ Pre-delivery audit:
 - [ ] Name is stable and appropriate.
 - [ ] Description states what the skill does and when to use it, within the platform's limits.
 - [ ] Main file is within the size limit, and any validation step passes.
-- [ ] Lessons are merged into rules, with no appended incident notes.
+- [ ] Lessons are placed where they belong, with no appended incident notes in the skill.
+- [ ] Saved tests were rerun after the last large cut or reorganization.
 - [ ] Instructions do not depend on undeclared tools, private conventions, or personal access.
 - [ ] Every bundled resource is referenced, clearly named, and explained.
 - [ ] No credentials, private identifiers, confidential records, or sensitive examples are included.
@@ -230,7 +234,8 @@ Give a short handoff note: what the skill does, required capabilities, known lim
 |---|---|
 | Revising before the user has seen any outputs | Present results for human review first |
 | Fixes tailored to the test examples | Find the general cause and fix that |
-| Incident notes piling up at the end of the skill | Merge each lesson into the rule it refines; keep history in a separate log |
+| Incident notes piling up at the end of the skill | Put each lesson where it belongs: merged into a rule, in a reference file, or in a separate log |
+| A large trim or reorganization silently breaks behavior | Rerun saved tests before and after the change |
 | Many capitalized absolute rules | Replace with explained reasoning, except for true hard boundaries |
 | Vague or timid description, so the skill is rarely used | Lead with trigger phrases and name implied use cases |
 | Checks that pass with or without the skill | Replace with checks that show the skill's added value |
@@ -314,5 +319,6 @@ Have the user review and edit the set; bad queries produce bad descriptions. If 
 |---|---|
 | Independent helper agents | Run tests yourself one at a time; skip baselines, benchmarks, and blind comparison |
 | Automated activation testing | Review the query set manually against the description |
+| Automated behavior tests | Keep the saved test prompts and rerun them by hand before and after large edits |
 | Parallel runs keep failing or timing out | Run tests in sequence |
 | Write access to the installed skill | Copy it to a writable location, edit there, and package from the copy |

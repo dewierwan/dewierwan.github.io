@@ -113,7 +113,13 @@
 <li>Every remaining draft is kept on purpose, explained as not a real loop, or reported as open.</li>
 <li>Nothing actionable lives only in an inbox.</li>
 </ul>
-<p>Then audit the run for friction: a pointless question, a misfiled item, a misbehaving source, context you had to hunt for. With permission, update the configuration to fix the cause in general terms, never storing message content or credentials.</p>
+<p>Then audit the run for friction: a pointless question, a misfiled item, a misbehaving source, context you had to hunt for. With permission, fix the cause in general terms, never storing message content or credentials. Before changing anything, decide where the lesson belongs:</p>
+<ul>
+<li><strong>The core workflow,</strong> if it changes how every run should work.</li>
+<li><strong>A source or tool reference,</strong> if it is about how one inbox, app, or connection behaves.</li>
+<li><strong>A separate lessons log,</strong> if it is a single observation not yet worth a rule; promote it to the workflow once it recurs.</li>
+</ul>
+<p>Keeping one-off fixes out of the core workflow stops it from bloating into a list of special cases.</p>
 <h3>Common failure modes</h3>
 <ul>
 <li>Dumping every bucket at once, or moving on before the user acted.</li>
@@ -124,6 +130,7 @@
 <li>Relaying an ask the user cannot place, or proposing a meeting that already exists.</li>
 <li>Guessing an owner instead of saying &quot;owner unclear&quot;.</li>
 <li>Quietly dropping a failed source, inventing links, or taking an undelegated action.</li>
+<li>Writing every run&#39;s lesson into the core workflow instead of the place it belongs.</li>
 </ul>
 <h3>Optional extras</h3>
 <p><strong>Single-item mode.</strong> When a reminder or the user hands over one item, such as the oldest unhandled email, skip goals, sorting, and the opening message, and read only that item and the context it needs. Treat it as one do-now item with a recommended bucket and next action. When it is handled, tell the user which inbox action clears it; if a reminder system watches the inbox, let it detect the change rather than requiring a phrase like &quot;done&quot;. If you clear it on request, continue straight into any waiting request in the same turn.</p>

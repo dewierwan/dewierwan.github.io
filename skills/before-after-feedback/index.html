@@ -8,8 +8,9 @@
 <li>Have it check each claim against its cited source for three common slips: who said it, what a number actually measures, and how strong the claim is. If it cannot open a source, it should list the claims for you to check.</li>
 <li>Propose a change only where it fixes a factual error, a misstated argument, a missing step, an unsupported claim, a weak answer to an objection, or a sentence that needs rereading. Skip changes that are only a matter of taste.</li>
 <li>Write one entry per change: <strong>Before</strong> (exact current text), <strong>After</strong> (ready to paste), <strong>Why</strong> (one sentence).</li>
+<li>List the entries in the order their text appears in the draft, top to bottom, never grouped by type or importance.</li>
 <li>Write the After text in the author&#39;s voice, and flag any claim or opinion the assistant added that the author did not already hold.</li>
-<li>Open with a short verdict and an honest list of what was read. Put the entries and any structural notes at the end.</li>
+<li>Open with a short verdict, an honest list of what was read, and any whole-document notes. Put the entries last.</li>
 </ul>
 <h3>1. Set the scope</h3>
 <p>The input is the draft (or access to it), plus usually the topic or the sources to read. If there is no draft, ask for it before doing anything else.</p>
@@ -60,9 +61,17 @@
 <li><strong>Why</strong> is one sentence. When the reason is a fact, name the source. Add a second sentence only to tell the author something they must check.</li>
 <li><strong>An addition</strong> uses <code><strong>Before:</strong> (nothing; add after &quot;...&quot;)</code>, quoting the text it follows.</li>
 <li><strong>A cut</strong> uses <code><strong>After:</strong> (cut)</code>, or <code>(cut, or add a source)</code> when the problem is an unsupported claim.</li>
+<li><strong>A move</strong> uses <code><strong>Before:</strong></code> quoting the opening words of the text to move, and <code><strong>After:</strong> (move to after &quot;...&quot;)</code> naming where it goes.</li>
 <li><strong>Two changes in the same sentence</strong> become a single entry that gives the final sentence and both reasons. Two separate entries would hand the author two conflicting versions of one sentence.</li>
 </ul>
-<p>Number entries continuously in the order the text appears, grouped under the draft&#39;s own section headings.</p>
+<h4>Keep the entries in document order</h4>
+<p>Put every entry in the order its text appears in the draft, from the first line to the last, and number them continuously. The author works through the list from top to bottom with the document open, so an entry out of order makes them scroll back and lose their place.</p>
+<ul>
+<li>Do not group entries by type or by importance. A fact fix, a wording fix, and an addition each sit where they fall in the text.</li>
+<li>An addition sits at the point where the new text would go.</li>
+<li>A move sits where the text is now.</li>
+<li>The draft&#39;s own section headings can divide the list, in the draft&#39;s order.</li>
+</ul>
 <p>Invented example, from a draft essay about shorter work weeks that cites a fictional report by the Halden Work Institute:</p>
 <p><strong>4. Share of firms, not size of gain</strong></p>
 <p><strong>Before:</strong> productivity rose 40% in the Halden pilot</p>
@@ -80,12 +89,13 @@
 <ol>
 <li><strong>Verdict.</strong> One or two sentences: what works, and the two or three changes that matter most, by number.</li>
 <li><strong>What you read.</strong> What you read in full, what you read in part or only as a summary, and what you could not open, with links. Never imply you read everything on a topic.</li>
-<li><strong>The entries.</strong></li>
-<li><strong>Structural changes.</strong> A short list of points that do not fit a before and after shape, such as reordering sections or making two parallel sections follow the same order. Omit this when there are none.</li>
+<li><strong>Whole-document notes.</strong> Only for a point that applies everywhere and cannot be tied to one place, such as a term used inconsistently throughout. It goes before the entries because the author needs it before starting. Write a reordering of sections as move entries instead. Omit this when there is nothing to say.</li>
+<li><strong>The entries,</strong> in document order.</li>
 </ol>
-<p>The entries and structural changes come last so the author can copy them in one block.</p>
+<p>The entries come last so the author can copy them in one block.</p>
 <h3>8. Check before sending</h3>
 <ul>
+<li>Are the entries in the same order as the draft, top to bottom?</li>
 <li>Is every Before an exact match for the draft?</li>
 <li>Does every After read correctly when dropped into the surrounding text, including grammar at both edges?</li>
 <li>Does any After rely on a fact you saw only in a search summary? Check it at the source or flag it in the Why.</li>
@@ -99,6 +109,6 @@
 </ul>
 <div class="table-wrap" tabindex="0" aria-label="Scrollable table"><table><thead><tr><th>Source</th><th>How read</th><th>Used for</th></tr></thead><tbody><tr><td>[Report or article title]</td><td>[Full / partial / summary only / could not open]</td><td>[Entry numbers it supports]</td></tr></tbody></table></div>
 <ul>
-<li><strong>Large drafts.</strong> For very long documents, review one section at a time but keep entry numbering continuous across sections, and run the parallel-section comparison once all sections are done.</li>
+<li><strong>Large drafts.</strong> For very long documents, review one section at a time but keep entry numbering continuous and in document order across sections, and run the parallel-section comparison once all sections are done.</li>
 <li><strong>Adjustable defaults.</strong> The one-sentence Why, the &quot;same length or shorter&quot; rule for After text, and how far back to look for recent evidence are sensible defaults. Change them to suit the author and the field.</li>
 </ul></article><footer><a href="/skills/LICENSE.txt">CC0</a></footer></main><script>document.querySelector('[data-copy]').addEventListener('click',async function(){try{const text=await fetch(this.dataset.copy).then(r=>{if(!r.ok)throw new Error();return r.text()});await navigator.clipboard.writeText(text);this.textContent='Copied'}catch{this.textContent='Open raw Markdown'}})</script></body></html>

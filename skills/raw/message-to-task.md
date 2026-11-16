@@ -1,6 +1,6 @@
 ---
 name: message-to-task
-description: Turns a message thread into researched, partly completed work and files or updates a task only when tracking helps. Use when someone says make this a task, track this, or deal with this message.
+description: Turns a message thread into researched, partly completed work, filing a task only when tracking helps. Use when someone says make this a task, track this, or deal with this message.
 ---
 
 # Turn a message into a task
@@ -193,7 +193,15 @@ The user's final edits are the best evidence of their real voice and stance. Aft
 
 ## 10. Improve the workflow carefully
 
-After each run, review what helped and what caused avoidable work. Update the workflow only when authorized to maintain it, and keep changes small, general, and testable. Useful improvements include:
+After each run, review what helped and what caused avoidable work. Update the workflow only when authorized to maintain it, and keep changes small, general, and testable.
+
+Before editing, decide where each lesson belongs. If you keep a written rule for sorting lessons, read it first. Typical homes are:
+
+- **The main workflow:** rules that apply on most runs and change how the steps are carried out.
+- **A reference file:** stable facts the workflow looks up, such as approval routing, category lists, or tool quirks and their workarounds.
+- **A separate lessons log:** observations that may matter but are not yet proven general enough to become rules.
+
+Useful improvements include:
 
 - adding a source type that reliably answered a class of requests;
 - recording a tool limitation and its workaround;
@@ -228,4 +236,5 @@ These help when your assistant has connected tools.
 - **Finding duplicates.** If your task system supports search, query the title and notes fields for the requester's name or organization before creating anything. Use the system's update operation on a match rather than deleting and recreating, so links and history are preserved.
 - **Staging drafts.** If authorized, stage the reply as an unsent draft in the right thread so finishing is one click, and keep the same text in the task notes. Check rendering: many tools need a blank line between a paragraph and a list, or the list items show as plain text. Go straight from greeting to the first item rather than using a list lead-in line.
 - **Scheduled review.** If the environment supports delayed reminders, schedule the step 9 check automatically. A default of about one hour is a reasonable start, adjusted for working hours and urgency. The reminder should name each staged draft, its conversation location, and where the draft text is stored, and allow a couple of follow-up checks at growing intervals before stopping.
+- **Lesson routing rule.** If you maintain several workflows, keep one short shared rule that says where lessons go (main workflow, reference file, or lessons log) and have each workflow read it before self-editing, so every workflow sorts lessons the same way.
 - **Versioning the workflow.** If the workflow lives in a file under version control, commit each improvement with a short, dated message so changes are easy to review or revert.

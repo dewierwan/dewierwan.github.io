@@ -165,6 +165,7 @@ After the close, review the run without sending anything. Do not ask a tired per
 
 How to edit:
 
+- Before editing, decide where the lesson belongs. If the user keeps general guidance on where lessons go, check it first. A reusable rule goes in the routine itself; detailed lookup or setup specifics go in a separate reference note; a one-off incident goes only in the history log, if there is one.
 - Edit or merge an existing rule rather than adding a new paragraph. The routine should stay short enough to run quickly.
 - Write rules as general principles. Do not add dated incident stories to the routine itself.
 - If you want a history, keep a separate one-line-per-entry log of what happened and why a rule changed. Do not load that log during a normal run.

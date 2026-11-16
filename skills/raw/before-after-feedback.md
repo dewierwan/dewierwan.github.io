@@ -13,8 +13,9 @@ This workflow researches a draft's topic and then returns feedback as a numbered
 - Have it check each claim against its cited source for three common slips: who said it, what a number actually measures, and how strong the claim is. If it cannot open a source, it should list the claims for you to check.
 - Propose a change only where it fixes a factual error, a misstated argument, a missing step, an unsupported claim, a weak answer to an objection, or a sentence that needs rereading. Skip changes that are only a matter of taste.
 - Write one entry per change: **Before** (exact current text), **After** (ready to paste), **Why** (one sentence).
+- List the entries in the order their text appears in the draft, top to bottom, never grouped by type or importance.
 - Write the After text in the author's voice, and flag any claim or opinion the assistant added that the author did not already hold.
-- Open with a short verdict and an honest list of what was read. Put the entries and any structural notes at the end.
+- Open with a short verdict, an honest list of what was read, and any whole-document notes. Put the entries last.
 
 ## 1. Set the scope
 
@@ -82,9 +83,17 @@ Rules for each part:
 - **Why** is one sentence. When the reason is a fact, name the source. Add a second sentence only to tell the author something they must check.
 - **An addition** uses `**Before:** (nothing; add after "...")`, quoting the text it follows.
 - **A cut** uses `**After:** (cut)`, or `(cut, or add a source)` when the problem is an unsupported claim.
+- **A move** uses `**Before:**` quoting the opening words of the text to move, and `**After:** (move to after "...")` naming where it goes.
 - **Two changes in the same sentence** become a single entry that gives the final sentence and both reasons. Two separate entries would hand the author two conflicting versions of one sentence.
 
-Number entries continuously in the order the text appears, grouped under the draft's own section headings.
+### Keep the entries in document order
+
+Put every entry in the order its text appears in the draft, from the first line to the last, and number them continuously. The author works through the list from top to bottom with the document open, so an entry out of order makes them scroll back and lose their place.
+
+- Do not group entries by type or by importance. A fact fix, a wording fix, and an addition each sit where they fall in the text.
+- An addition sits at the point where the new text would go.
+- A move sits where the text is now.
+- The draft's own section headings can divide the list, in the draft's order.
 
 Invented example, from a draft essay about shorter work weeks that cites a fictional report by the Halden Work Institute:
 
@@ -116,13 +125,14 @@ Every link in an After must be one the author supplied or one you actually opene
 
 1. **Verdict.** One or two sentences: what works, and the two or three changes that matter most, by number.
 2. **What you read.** What you read in full, what you read in part or only as a summary, and what you could not open, with links. Never imply you read everything on a topic.
-3. **The entries.**
-4. **Structural changes.** A short list of points that do not fit a before and after shape, such as reordering sections or making two parallel sections follow the same order. Omit this when there are none.
+3. **Whole-document notes.** Only for a point that applies everywhere and cannot be tied to one place, such as a term used inconsistently throughout. It goes before the entries because the author needs it before starting. Write a reordering of sections as move entries instead. Omit this when there is nothing to say.
+4. **The entries,** in document order.
 
-The entries and structural changes come last so the author can copy them in one block.
+The entries come last so the author can copy them in one block.
 
 ## 8. Check before sending
 
+- Are the entries in the same order as the draft, top to bottom?
 - Is every Before an exact match for the draft?
 - Does every After read correctly when dropped into the surrounding text, including grammar at both edges?
 - Does any After rely on a fact you saw only in a search summary? Check it at the source or flag it in the Why.
@@ -138,5 +148,5 @@ The entries and structural changes come last so the author can copy them in one 
 | --- | --- | --- |
 | [Report or article title] | [Full / partial / summary only / could not open] | [Entry numbers it supports] |
 
-- **Large drafts.** For very long documents, review one section at a time but keep entry numbering continuous across sections, and run the parallel-section comparison once all sections are done.
+- **Large drafts.** For very long documents, review one section at a time but keep entry numbering continuous and in document order across sections, and run the parallel-section comparison once all sections are done.
 - **Adjustable defaults.** The one-sentence Why, the "same length or shorter" rule for After text, and how far back to look for recent evidence are sensible defaults. Change them to suit the author and the field.

@@ -195,3 +195,5 @@ The same concept-review-improve loop works for app, bot, page, or group icons:
 ### Learn from outcomes
 
 After the user chooses, accepts a prompt, or stops iterating, capture durable lessons only. Strong signals: they rejected your recommendation (diagnose whether the read, composition, mood, or generation failed), they rewrote part of a prompt, they asked for color specifics you missed, they reused the workflow for a new destination with different size or crop rules, or an image failed in a way the prompt should have prevented. Separate their feedback from your own taste, keep lessons general rather than tied to one article, and make no change after a clean run.
+
+Before recording a lesson, decide where it belongs. Put it in the core workflow only if it should change how every run works; put destination- or tool-specific detail (such as one platform's crop or upload steps) in a separate reference note; and keep narrow or still-tentative observations in a running lessons log until they prove durable. If you keep your own rules for sorting lessons, check them first so the main workflow stays short and general.

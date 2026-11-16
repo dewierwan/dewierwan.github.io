@@ -167,10 +167,10 @@ A click is not proof. Look for a success message, a reference number, a new reco
 
 | Symptom | Likely cause | Safe response |
 |---|---|---|
-| Fill reports success but field is blank | App ignored a direct write | Keyboard-style input, blur, read back. |
-| Earlier fields blank out, or a dropdown wipes the form | Re-render from stale state | Re-rendering choices first; blur after each fill. |
+| Fill reports success but field is blank, or earlier fields blank out as later ones are filled | App ignored a direct write and re-renders other fields from stale state | Keyboard-style input, blur right after each fill, read back. |
+| A dropdown or checkbox wipes the form | Selection triggers a full re-render | Make re-rendering choices first, then fill text. |
 | Field looks filled but validation says empty | Hidden sync field was edited, or widget did not see a keystroke | Fill the visible editor; type and delete one character. |
-| Interactive tool crashes on long text | Tool layer unstable for heavy work | Switch to a script. |
+| Interactive tool crashes on long text, parallel actions, or heavy pages | Tool layer unstable for heavy work | Switch to a script; do not try to rescue the session. |
 | Headless page blocked or different | Site varies by browser context | Direct interface; escalate only for an explicit task, read-only where possible. |
 | Wrong account or site says permission denied | Last-used profile or missing role | Select profile directly; ask user to sign in correctly; re-verify. |
 | Tool reports permission denied right after navigating | Page still loading | Screenshot, wait, retry in a fresh tab if needed. |
@@ -178,12 +178,19 @@ A click is not proof. Look for a success message, a reference number, a new reco
 | Session ends after a page-script request | Internal endpoint called without normal headers | Drive the UI or use a supported API. |
 | Clicks do nothing, or a read misses part of the page or comes back cut off | Panel ignores clicks or extraction; tool truncates output | Screenshot, click by position, read the panel directly, read long results in slices. |
 | Warning, sign-in, or consent page the tool cannot handle | Needs a person | Leave the tab open, ask the user, then re-verify. |
+| A known tricky site comes up again | Site has quirks already worked out | Read that site's reference note before starting. |
 
 ## 12. Report and keep the procedure current
 
 Summarize the outcome in one or two sentences, point to the screenshot and after-state record, and do not paste every field value inline. Store artifacts only where the user can access them, and delete sensitive temporary files when done.
 
-When a run reveals a reusable lesson, add it to your local copy, preferably as one table row with symptom, cause, and fix. Never record credentials or private site data. Merge older entries into general principles as the document grows, and update tool paths, profile mappings, and app-specific notes in place, since they go stale.
+When a run reveals a reusable lesson, such as a new failure mode, a working pattern, or a missing tool, record it in your local copy without waiting to be asked. Prefer one table row with symptom, cause, and fix on the same row over new prose. Decide where each lesson belongs:
+
+- **General patterns** go in the main procedure.
+- **A recipe for one site** that runs longer than a short paragraph goes in a separate reference note, with a one-row pointer in the failure table saying when to read it.
+- **Dated incident notes** go in a separate log that normal runs do not read.
+
+Never record credentials or private site data. Merge older entries into general principles as the document grows, and update tool paths, profile mappings, and app-specific notes in place, since they go stale.
 
 ## Final audit checklist
 

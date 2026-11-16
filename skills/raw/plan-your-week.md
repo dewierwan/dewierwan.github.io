@@ -1,6 +1,6 @@
 ---
 name: plan-your-week
-description: Reviews last week, then shapes the next one into one to three checkable goals, tasks, time blocks, and a one-screen plan. Use when someone says "plan my week" or wants to reset after a messy week.
+description: Reviews last week and shapes the next into one to three checkable goals, tasks, time blocks, and a one-screen plan. Use when someone says "plan my week" or wants to reset after a messy week.
 ---
 
 # Plan your week
@@ -264,7 +264,13 @@ Give the counts in one sentence (goals, tasks, blocks, meetings cut, tasks triag
 
 Then start a review of what the assistant has saved about the user (memories, standing notes, stored preferences) as its own separate session, without asking, so stale or wrong entries get fixed every week without cluttering the plan. If you cannot open that session, say so in one line and tell the user how to start it themselves. In a plain chat assistant, suggest the user look over any saved memories or custom instructions and correct what has gone out of date.
 
-Afterwards, note what went wrong, wasted time, or was corrected, and turn it into a tightened rule by editing or merging an existing instruction, not by adding an incident note.
+Afterwards, quietly note what went wrong, wasted time, or was corrected. Before changing anything, decide where each lesson belongs:
+
+- **The workflow itself,** for a rule every run needs. Tighten or merge an existing instruction rather than adding a paragraph, and never add dated incident notes.
+- **A separate reference note,** for detail only some runs need, such as how one data source behaves.
+- **A short lessons log,** for one-line dated entries that explain why a rule exists. Do not read it during a normal run.
+
+Keep the workflow within a length limit you choose; near the limit, consolidate before adding. Don't ask the user how to improve the workflow.
 
 ## 16. Adapting to timing
 

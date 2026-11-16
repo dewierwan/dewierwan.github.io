@@ -165,7 +165,13 @@ If many loops remain open, say so plainly.
 - Every remaining draft is kept on purpose, explained as not a real loop, or reported as open.
 - Nothing actionable lives only in an inbox.
 
-Then audit the run for friction: a pointless question, a misfiled item, a misbehaving source, context you had to hunt for. With permission, update the configuration to fix the cause in general terms, never storing message content or credentials.
+Then audit the run for friction: a pointless question, a misfiled item, a misbehaving source, context you had to hunt for. With permission, fix the cause in general terms, never storing message content or credentials. Before changing anything, decide where the lesson belongs:
+
+- **The core workflow,** if it changes how every run should work.
+- **A source or tool reference,** if it is about how one inbox, app, or connection behaves.
+- **A separate lessons log,** if it is a single observation not yet worth a rule; promote it to the workflow once it recurs.
+
+Keeping one-off fixes out of the core workflow stops it from bloating into a list of special cases.
 
 ## Common failure modes
 
@@ -177,6 +183,7 @@ Then audit the run for friction: a pointless question, a misfiled item, a misbeh
 - Relaying an ask the user cannot place, or proposing a meeting that already exists.
 - Guessing an owner instead of saying "owner unclear".
 - Quietly dropping a failed source, inventing links, or taking an undelegated action.
+- Writing every run's lesson into the core workflow instead of the place it belongs.
 
 ## Optional extras
 

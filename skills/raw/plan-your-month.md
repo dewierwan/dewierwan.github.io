@@ -238,7 +238,8 @@ Confirm the save in one line and stop. Do not summarize the session again.
 
 After the run, quietly look back at what went wrong or what the user corrected: a read that wasted effort or came back in the wrong shape, a wrong assumption about the data, a pushback, a measure that turned out to be noise. Do not ask the user how to improve the workflow.
 
-- If a change is warranted, edit or merge an existing rule rather than adding a new paragraph. Write it as a general rule, not a private fact.
+- Before editing, decide where the lesson belongs. A change to how the session runs goes in the workflow itself. A detail about where data lives, field names, or how a source behaves goes in a separate reference file. A one-off incident goes in the lessons log, if you keep one. If you keep a written placement rule for lessons, read it first and follow it.
+- If a change to the workflow is warranted, edit or merge an existing rule rather than adding a new paragraph. Write it as a general rule, not a private fact.
 - When a source moves or comes back after an outage, update where the workflow looks and drop any temporary workaround.
 - Keep dated incident notes out of the workflow itself. If you want a history, keep a separate one-line-per-entry lessons log, and do not load it during a normal run.
 - Keep the workflow under a length cap you choose, so it stays readable.
@@ -274,6 +275,7 @@ Before finishing, verify:
 - Conflicting with an existing weekly plan.
 - Re-proposing time blocks that have already failed.
 - Applying generic productivity rituals instead of fixing the actual drain.
+- Filing a lesson in the wrong place, so the workflow fills up with data details or incident notes.
 
 ## Optional extras
 

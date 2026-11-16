@@ -107,7 +107,7 @@ If Priya later asks for "three more" and #13 already exists for May, the new one
 
 ## After each run
 
-Keep only reusable lessons, such as a platform change or an updated template, and update your notes in the same session.
+Keep only reusable lessons, such as a platform change or an updated template, and update your notes in the same session. Before editing, check your own rule for where a lesson belongs: in this workflow, in a shared note on general tool mechanics that applies beyond this series, or in a separate lessons file kept for this workflow.
 
 ## Optional extras
 
@@ -119,4 +119,4 @@ For assistants that drive a browser or other connected tools:
 - **File handling:** avoid buttons that open a native file dialog the tool cannot control; use the page's file input or the tool's file-chooser support, from a folder the tool can read. If the browser blocks repeat downloads, capture the image another way, such as a full-size screenshot of just the image, with its tab in front.
 - **Verify after every on-screen change:** pages shift when controls appear, windows resize, or content is still loading. Take a fresh screenshot before each click after any shift, confirm nothing changed by accident, close pickers by clicking empty background, and retype if early typing was lost.
 - **Scripted invite loop:** handle one past event per call to stay under time limits, group a handful of calls into a batch, normalize unusual spaces before matching labels, wait for each list to load, and read the count after each pass.
-- **Website built from a code repository:** keep a small script that adds event links to the site's list. Pull the latest version, run it once with all new links, commit with a message naming the event numbers, publish, and confirm the events appear.
+- **Website built from a code repository:** keep a small script that adds event links to the site's list. Pull the latest version, run the script once with all new links, calling it by its full path so it works from whatever folder the session happens to be in, commit with a message naming the event numbers, publish, and confirm the events appear.

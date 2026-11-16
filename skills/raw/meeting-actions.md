@@ -269,6 +269,7 @@ Report tersely: meetings reviewed, tasks created or updated with due dates, skip
 
 **Pattern guide.** Keep a user-maintained guide of recurring patterns organized by meeting type: common misattributions, reliable signs of live completion, type exceptions. After each run:
 
+- Before recording anything, check whether you keep a general policy for where lessons belong, such as the workflow itself, a reference guide like this pattern guide, or a separate lessons log for this workflow. Follow that policy so lessons land in one predictable place instead of scattering.
 - Append a short, generalized note when a pattern will affect future triage. Do not rewrite old entries.
 - Change the workflow itself only for cross-cutting principles, new defaults, or a new step, and ask before structural changes such as adding a step or changing the evidence order.
 - Record a new responsibility boundary in the user's responsibility reference if it applies beyond one meeting, with the date it took effect. When a boundary changes or reverses, replace the outdated version and remove any examples or skip reasons that relied on it, so old handoffs neither suppress tasks that are now the user's nor create tasks that now belong to someone else.

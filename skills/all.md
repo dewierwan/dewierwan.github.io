@@ -256,7 +256,7 @@ Common failures include skipping alternatives, asking every question at once, mi
 - **Connected sources.** If your assistant can search your document store, chat history, or notes, have it pull prior decisions, metrics, and past attempts relevant to the claim before Step 2, and cite them when they support or contradict an assumption.
 - **Scheduled reviews.** For GREEN verdicts on hard-to-reverse decisions, have your calendar or task tool create a review reminder tied to the mind-change criterion's date.
 - **Linked workflows.** If you keep separate workflows for generating options, deciding, and building, have each verdict name the exact one to run next so the handoff is automatic.
-- **Improve the workflow over time.** After each run, review the transcript: note any question category that added nothing, any gap the process missed, or any step that ran too long. Update your own copy of this workflow based on that review rather than on general impressions.
+- **Improve the workflow over time.** After each run, review the transcript: note any question category that added nothing, any gap the process missed, or any step that ran too long. Before changing anything, decide where each lesson belongs: in the core steps if it should change how every run works, in a separate reference note if it is detailed background or examples, or in a running lessons log if it is a one-off observation worth watching for repetition. If you keep a written rule for sorting lessons this way, check it first. Then update your own copy based on that review rather than on general impressions.
 
 
 ---
@@ -506,7 +506,7 @@ Use direct language. If the user is about to make a weak call, say so with evide
 - **Searching a connected register.** If your assistant can query a database or document store, check for overlapping decisions before creating a new one, and use any record template it provides so dates and sections fill consistently.
 - **Automatic review reminders.** If a calendar or task tool is connected and authorized, create a reminder titled with the decision on the review date, linking to the record and alerting in advance (for example, one day before). For reversible decisions, a review-date field is usually enough.
 - **Chaining with other workflows.** Pair this with an option-generation step before it and a pressure-test step for hard choices. If someone arrives with no options and an open-ended question, route them to option generation first.
-- **Tuning the workflow.** After a few uses, note where classification, rigor, mode selection, review timing, or the record format misfired, and adjust your own version of these rules with the user's agreement. Correct any stored facts about the setup, such as who can see the record, as soon as the user updates them.
+- **Tuning the workflow.** After a few uses, note where classification, rigor, mode selection, review timing, or the record format misfired, and adjust your own version of these rules with the user's agreement. Before changing anything, decide where the lesson belongs: in the core workflow if it changes how every decision runs, in a separate reference note if it is detail only some runs need, or in a running lessons log if it is a single observation not yet worth a rule. If you keep a general policy for filing lessons, check it first. Correct any stored facts about the setup, such as who can see the record, as soon as the user updates them.
 
 
 ---
@@ -1689,7 +1689,7 @@ Provide:
 - **Emphasis on platforms without bold or italics.** Some platforms do not render Markdown, so asterisks appear literally. Special Unicode letter styles can simulate bold or italics, but screen readers may read them poorly and search may not index them. If used, limit to one or two short phrases.
 - **Distribution hypotheses to test.** Commonly reported patterns include: saves and thoughtful comments counting more than likes, reference-style posts (frameworks, checklists) being saved more, document or carousel formats performing well for structured material, outbound links in the body reducing reach, engagement bait being penalized, the first hour of replies mattering, and consistent topic focus helping reach. Platforms change often. Treat these as hypotheses, compare results across several posts, and suggest a carousel when content is structured enough to suit one.
 - **Hashtags.** Many professional audiences now read heavy hashtag use as influencer style. Let the user decide; a neutral default is none or very few.
-- **Learning from feedback.** If your assistant can keep notes, maintain a short style file of patterns the user consistently changes: rejected hooks and why, cut words, structural edits, missing inputs that should be asked for upfront, and hooks that performed well. Update it only when a session reveals a real pattern, show the user what changed, and make no change after a clean run.
+- **Learning from feedback.** If your assistant can keep notes, maintain a short style record of patterns the user consistently changes: rejected hooks and why, cut words, structural edits, missing inputs that should be asked for upfront, and hooks that performed well. Before recording a lesson, decide where it belongs: in the main workflow if it should shape every post, in a separate reference file if it is detailed material such as examples or platform notes, or in a running lessons log if it is still tentative. If you have set a rule for this placement, follow it. Update only when a session reveals a real pattern, show the user what changed, and make no change after a clean run.
 - **Separate document delivery.** If the user wants drafts saved outside the chat, agree on a folder and title format once (for example, "[date]: Post: [topic]"), keep hook shortlists in the conversation, and end the handoff with the document link.
 
 
@@ -1924,7 +1924,7 @@ What this shows: a Discovery hook, the alternative path named, the program named
 
 - **Link placement.** Some feeds appear to reduce reach for posts with external links in the body. If that matters on your platform, end with a line pointing to the comments and post the link as the first comment.
 - **Transcript tooling.** If your notes tool produces summaries, compare the summary against the raw transcript and the subject's profile; summaries compound mishearings.
-- **Improving the workflow.** After a final draft is accepted, review the edits. If the user rejected a hook, diagnose why (wrong formula, too slow to the specific, blocker not surfaced). Codify repeated voice corrections, structural moves, new specificity patterns, inputs you had to ask for mid-draft, and new kinds of transcript errors. If the review was clean with only cosmetic edits, change nothing.
+- **Improving the workflow.** After a final draft is accepted, or the user has clearly stopped iterating, review the edits. Before changing anything, decide where each lesson belongs: the core workflow (rules that should apply every time), a reference file (longer examples, voice samples, platform notes), or a separate lessons log (observations not yet proven general). If your setup already has a convention for this, follow it. If the user rejected a hook, diagnose why (wrong formula, too slow to the specific, blocker not surfaced). Codify repeated voice corrections, structural moves, new specificity patterns, inputs you had to ask for mid-draft, and new kinds of transcript errors. If the review was clean with only cosmetic edits, change nothing.
 
 
 ---
@@ -2125,6 +2125,8 @@ The same concept-review-improve loop works for app, bot, page, or group icons:
 
 After the user chooses, accepts a prompt, or stops iterating, capture durable lessons only. Strong signals: they rejected your recommendation (diagnose whether the read, composition, mood, or generation failed), they rewrote part of a prompt, they asked for color specifics you missed, they reused the workflow for a new destination with different size or crop rules, or an image failed in a way the prompt should have prevented. Separate their feedback from your own taste, keep lessons general rather than tied to one article, and make no change after a clean run.
 
+Before recording a lesson, decide where it belongs. Put it in the core workflow only if it should change how every run works; put destination- or tool-specific detail (such as one platform's crop or upload steps) in a separate reference note; and keep narrow or still-tentative observations in a running lessons log until they prove durable. If you keep your own rules for sorting lessons, check them first so the main workflow stays short and general.
+
 
 ---
 name: before-after-feedback
@@ -2141,8 +2143,9 @@ This workflow researches a draft's topic and then returns feedback as a numbered
 - Have it check each claim against its cited source for three common slips: who said it, what a number actually measures, and how strong the claim is. If it cannot open a source, it should list the claims for you to check.
 - Propose a change only where it fixes a factual error, a misstated argument, a missing step, an unsupported claim, a weak answer to an objection, or a sentence that needs rereading. Skip changes that are only a matter of taste.
 - Write one entry per change: **Before** (exact current text), **After** (ready to paste), **Why** (one sentence).
+- List the entries in the order their text appears in the draft, top to bottom, never grouped by type or importance.
 - Write the After text in the author's voice, and flag any claim or opinion the assistant added that the author did not already hold.
-- Open with a short verdict and an honest list of what was read. Put the entries and any structural notes at the end.
+- Open with a short verdict, an honest list of what was read, and any whole-document notes. Put the entries last.
 
 ## 1. Set the scope
 
@@ -2210,9 +2213,17 @@ Rules for each part:
 - **Why** is one sentence. When the reason is a fact, name the source. Add a second sentence only to tell the author something they must check.
 - **An addition** uses `**Before:** (nothing; add after "...")`, quoting the text it follows.
 - **A cut** uses `**After:** (cut)`, or `(cut, or add a source)` when the problem is an unsupported claim.
+- **A move** uses `**Before:**` quoting the opening words of the text to move, and `**After:** (move to after "...")` naming where it goes.
 - **Two changes in the same sentence** become a single entry that gives the final sentence and both reasons. Two separate entries would hand the author two conflicting versions of one sentence.
 
-Number entries continuously in the order the text appears, grouped under the draft's own section headings.
+### Keep the entries in document order
+
+Put every entry in the order its text appears in the draft, from the first line to the last, and number them continuously. The author works through the list from top to bottom with the document open, so an entry out of order makes them scroll back and lose their place.
+
+- Do not group entries by type or by importance. A fact fix, a wording fix, and an addition each sit where they fall in the text.
+- An addition sits at the point where the new text would go.
+- A move sits where the text is now.
+- The draft's own section headings can divide the list, in the draft's order.
 
 Invented example, from a draft essay about shorter work weeks that cites a fictional report by the Halden Work Institute:
 
@@ -2244,13 +2255,14 @@ Every link in an After must be one the author supplied or one you actually opene
 
 1. **Verdict.** One or two sentences: what works, and the two or three changes that matter most, by number.
 2. **What you read.** What you read in full, what you read in part or only as a summary, and what you could not open, with links. Never imply you read everything on a topic.
-3. **The entries.**
-4. **Structural changes.** A short list of points that do not fit a before and after shape, such as reordering sections or making two parallel sections follow the same order. Omit this when there are none.
+3. **Whole-document notes.** Only for a point that applies everywhere and cannot be tied to one place, such as a term used inconsistently throughout. It goes before the entries because the author needs it before starting. Write a reordering of sections as move entries instead. Omit this when there is nothing to say.
+4. **The entries,** in document order.
 
-The entries and structural changes come last so the author can copy them in one block.
+The entries come last so the author can copy them in one block.
 
 ## 8. Check before sending
 
+- Are the entries in the same order as the draft, top to bottom?
 - Is every Before an exact match for the draft?
 - Does every After read correctly when dropped into the surrounding text, including grammar at both edges?
 - Does any After rely on a fact you saw only in a search summary? Check it at the source or flag it in the Why.
@@ -2266,7 +2278,7 @@ The entries and structural changes come last so the author can copy them in one 
 | --- | --- | --- |
 | [Report or article title] | [Full / partial / summary only / could not open] | [Entry numbers it supports] |
 
-- **Large drafts.** For very long documents, review one section at a time but keep entry numbering continuous across sections, and run the parallel-section comparison once all sections are done.
+- **Large drafts.** For very long documents, review one section at a time but keep entry numbering continuous and in document order across sections, and run the parallel-section comparison once all sections are done.
 - **Adjustable defaults.** The one-sentence Why, the "same length or shorter" rule for After text, and how far back to look for recent evidence are sensible defaults. Change them to suit the author and the field.
 
 
@@ -2453,7 +2465,7 @@ The assistant proposes one: "Launch copy final and sent to the designer by early
 - **Sleep data.** If sleep syncs from a tracker, records are often filed under the bedtime date, so last night usually carries yesterday's date, not today's. When two sources record the same night, use the one the user trusts more (often a dedicated tracker over a general health aggregator). No record usually means the sync is behind: say so and ask.
 - **Connected signals.** With connected tools, add to the brief: old unanswered email, stale saved action items, messages awaiting a reply (sender, channel, and age only), and for people who hire, their own upcoming interviews and how long candidates have waited at each stage. Long-waiting items make strong supporting candidates; if a source is down, name it. Because these touch other people's messages and records, use them only for the user's own planning with clear authorization, read the minimum needed, leave out unrelated or sensitive details, and keep results in the private plan.
 - **Tidy idle sessions.** If your setup can list assistant sessions idle for a long time, list them at the NOT today step (idle time and what each was for), recommend closing finished ones, close only those the user names, and confirm in one line. Closing should keep history and stop only running processes. Skip this when the user is going to sleep.
-- **Improve the workflow.** After each run, note what went wrong or what the user corrected, and fold the lesson into an existing rule rather than adding a new one.
+- **Improve the workflow.** After each run, quietly note what went wrong or what the user corrected; don't ask the user how to improve the workflow. Before editing anything, decide where the lesson belongs: a general rule goes into this workflow, tool or data details go into a separate reference note, and one-off incidents go into a short dated lessons log rather than the workflow itself. When a rule changes, fold it into an existing rule instead of adding a new paragraph, and consolidate before the workflow grows past a length you choose.
 
 
 ---
@@ -2605,12 +2617,12 @@ The assistant opens: "The launch email block went to customer replies. Did those
 - **Plan after a hard close.** If the user says "plan tomorrow" while signing off, run a minimal plan with no questions: confirm blocks they already set, change no calendars or tasks, follow any plan source they name, and mark open choices "pending decision".
 - **Journal apps.** If you launch a journal program, confirm it actually opened and report the real status if not. Let the program show its own save status rather than announcing it yourself.
 - **When sources fail.** Retry a failed lookup once, then name what's missing in the overview and continue. If a query returns nothing, double-check date filters, time zones, and field names, since a wrong filter looks like an empty day. Fix tool bugs after the review, not during it.
-- **Improve the workflow.** After each run, note what went wrong or what the user corrected, and merge it into an existing rule as a general principle rather than a dated incident. Never put journal content in the instructions.
+- **Improve the workflow.** After each run (never while the user is still writing), note what went wrong or what the user corrected. Before editing anything, decide where the lesson belongs: the core instructions if it changes how every run works, a separate reference note if it's detail such as tool quirks or field names, or a short lessons log if it's only a record worth keeping. Merge it into an existing rule as a general principle rather than a dated incident, and keep the instructions compact. Never put journal content in the instructions, notes, or log.
 
 
 ---
 name: plan-your-week
-description: Reviews last week, then shapes the next one into one to three checkable goals, tasks, time blocks, and a one-screen plan. Use when someone says "plan my week" or wants to reset after a messy week.
+description: Reviews last week and shapes the next into one to three checkable goals, tasks, time blocks, and a one-screen plan. Use when someone says "plan my week" or wants to reset after a messy week.
 ---
 
 # Plan your week
@@ -2874,7 +2886,13 @@ Give the counts in one sentence (goals, tasks, blocks, meetings cut, tasks triag
 
 Then start a review of what the assistant has saved about the user (memories, standing notes, stored preferences) as its own separate session, without asking, so stale or wrong entries get fixed every week without cluttering the plan. If you cannot open that session, say so in one line and tell the user how to start it themselves. In a plain chat assistant, suggest the user look over any saved memories or custom instructions and correct what has gone out of date.
 
-Afterwards, note what went wrong, wasted time, or was corrected, and turn it into a tightened rule by editing or merging an existing instruction, not by adding an incident note.
+Afterwards, quietly note what went wrong, wasted time, or was corrected. Before changing anything, decide where each lesson belongs:
+
+- **The workflow itself,** for a rule every run needs. Tighten or merge an existing instruction rather than adding a paragraph, and never add dated incident notes.
+- **A separate reference note,** for detail only some runs need, such as how one data source behaves.
+- **A short lessons log,** for one-line dated entries that explain why a rule exists. Do not read it during a normal run.
+
+Keep the workflow within a length limit you choose; near the limit, consolidate before adding. Don't ask the user how to improve the workflow.
 
 ## 16. Adapting to timing
 
@@ -3159,7 +3177,8 @@ Confirm the save in one line and stop. Do not summarize the session again.
 
 After the run, quietly look back at what went wrong or what the user corrected: a read that wasted effort or came back in the wrong shape, a wrong assumption about the data, a pushback, a measure that turned out to be noise. Do not ask the user how to improve the workflow.
 
-- If a change is warranted, edit or merge an existing rule rather than adding a new paragraph. Write it as a general rule, not a private fact.
+- Before editing, decide where the lesson belongs. A change to how the session runs goes in the workflow itself. A detail about where data lives, field names, or how a source behaves goes in a separate reference file. A one-off incident goes in the lessons log, if you keep one. If you keep a written placement rule for lessons, read it first and follow it.
+- If a change to the workflow is warranted, edit or merge an existing rule rather than adding a new paragraph. Write it as a general rule, not a private fact.
 - When a source moves or comes back after an outage, update where the workflow looks and drop any temporary workaround.
 - Keep dated incident notes out of the workflow itself. If you want a history, keep a separate one-line-per-entry lessons log, and do not load it during a normal run.
 - Keep the workflow under a length cap you choose, so it stays readable.
@@ -3195,6 +3214,7 @@ Before finishing, verify:
 - Conflicting with an existing weekly plan.
 - Re-proposing time blocks that have already failed.
 - Applying generic productivity rituals instead of fixing the actual drain.
+- Filing a lesson in the wrong place, so the workflow fills up with data details or incident notes.
 
 ## Optional extras
 
@@ -3318,7 +3338,7 @@ If the user keeps a session log and has agreed to its use, review the last few e
 
 Do not run the rescue. Say directly:
 
-> "Tiredness and dread have been high for several sessions in a row. This looks like a capacity problem, not a motivation problem. What's the case for not doing this task today? Who else could take it? What would a 48-hour delay cost? What would actually help you recover?"
+> "Tiredness and dread have been high for several sessions in a row. This looks like a capacity problem, not a motivation problem. What's the case for not doing this task today? Who else could take it? What would a delay of a day or two cost? What would actually help you recover?"
 
 Stay with that conversation. Do not let it drift back to "fine, just one block." If the pattern looks like ongoing exhaustion or low mood, gently suggest talking to someone they trust or to a health professional.
 
@@ -3406,7 +3426,7 @@ When the user returns:
 
 ## 10. Log the session (with consent)
 
-On first use, ask whether the user wants sessions logged and where to keep the log (a note, a document, or their chosen system). If they say no, skip this step. If yes, add an entry after each session in a stable format, using an unambiguous day-month date:
+On first use, ask whether the user wants sessions logged and where to keep the log (a note, a document, or their chosen system). If they say no, skip this step. If yes, add an entry after each session in a stable format, using an unambiguous date:
 
 ```
 ## D MMM YYYY HH:MM - <task in 3-5 words>
@@ -3428,6 +3448,8 @@ In a plain chat, write the entry at the end so the user can copy it into their l
 ## 11. Refine the method (only when a pattern appears)
 
 Review recent log entries for patterns. Depending on the user's preference, either suggest a change or update the user's personal notes for this method.
+
+Before changing anything, decide where the lesson belongs. A lesson that changes how the method runs for everyone belongs in the core steps. Detail that supports a step (such as a new row in the style mapping or a list of prompts that work) can live in a separate reference note. A narrow, user-specific observation belongs in a running lessons list for this method. If the user has their own rule for where lessons go, follow it.
 
 Refine when:
 
@@ -3471,6 +3493,8 @@ Style:
 Do this only for a legitimate task purpose and with the user's clear authorization to access those sources. Use the minimum sources and information the task needs, leave out unrelated or sensitive personal details about other people, and keep the output in the user's private workspace.
 
 **Automatic log handling.** If you have file access, read the last few log entries silently at the start of each session and append the new entry at the end without showing it, so the user can review it later if curious.
+
+**Automatic refinement.** If you can edit the user's notes for this method, apply section 11 yourself after a session: check the user's rule for where lessons belong, make the change in the right place, and say nothing unless asked. The user can review the changes later.
 
 **Distraction tools.** If the user has a site or app blocker, include switching it on as part of the environment check in section 8.
 
@@ -3642,6 +3666,7 @@ After the close, review the run without sending anything. Do not ask a tired per
 
 How to edit:
 
+- Before editing, decide where the lesson belongs. If the user keeps general guidance on where lessons go, check it first. A reusable rule goes in the routine itself; detailed lookup or setup specifics go in a separate reference note; a one-off incident goes only in the history log, if there is one.
 - Edit or merge an existing rule rather than adding a new paragraph. The routine should stay short enough to run quickly.
 - Write rules as general principles. Do not add dated incident stories to the routine itself.
 - If you want a history, keep a separate one-line-per-entry log of what happened and why a rule changed. Do not load that log during a normal run.
@@ -3729,7 +3754,7 @@ Understand what a trip is for before optimizing its transport. Then turn an agre
 
 - **Current instructions win.** Old receipts, past trips, and saved preferences are context, not permanent rules. Never turn one trip's dates, fares, or event plans into a lasting default.
 - **Trip first, tickets second.** Saved preferences do not replace a conversation about what this trip is for.
-- **You do the research and checking.** Gather facts yourself from authorized sources. Ask the traveler only about intentions, priorities, trade-offs, a missing fact, a login step, or an approval.
+- **You do the research and checking.** Gather facts yourself from authorized sources. Ask the traveler only about intentions, priorities, trade-offs, a missing fact, a login step, or an approval. Return a recommendation and the decision needed, not a checklist of routine checks for them to do.
 - **Compare complete journeys.** A cheap fare can hide an extra hotel night, a hard transfer, a lost day, or fees.
 - **Label certainty honestly.** Separate live prices from indications and estimates, and verified facts from guesses.
 - **Searching is not buying.** A request to find or compare travel does not authorize payment.
@@ -3753,7 +3778,7 @@ If your environment can save preferences, keep a short profile. Ask the traveler
 
 ## 1. Understand the trip before searching transport
 
-For a new trip, start with discovery. Do not search fares until the first trip questions are answered. For a continuing trip, reuse the agreed brief and ask what changed. If the traveler asks to skip discovery or wants one narrow check, do that.
+For a new trip, start with discovery. Do not search fares, research upgrades, or prepare bookings until the first trip questions are answered. For a continuing trip, reuse the agreed brief and ask what changed. If the traveler asks to skip discovery or wants one narrow check, do that.
 
 ### Gather relevant context
 
@@ -3763,26 +3788,32 @@ These sources often mention other people, such as companions, hosts, and organiz
 
 Keep the traveler's addresses and identity details out of shareable summaries. Never store loyalty numbers, passport or identity numbers, payment details, or document copies in the profile; booking references go only in a private trip record. Saving lessons or preferences never adds permission to purchase, message others, or access accounts.
 
-Look for why the trip is happening, event dates and venues, existing bookings, and nearby commitments. If a source is unavailable, say so; never imply you checked it.
+Look for why the trip is happening, event dates, venues and start and end times, existing bookings and accommodation, companions, and commitments just before and after the likely travel window. Read whole relevant threads, not just receipts. Then:
 
-Distinguish an explicit goal from your guess, an invitation from confirmed attendance, and a calendar entry from a hard constraint.
+- Retrieve accessible facts yourself instead of asking the traveler to copy them out of their apps.
+- Keep a short note of which sources you checked and what each established.
+- Widen a narrow search when it reveals a relevant person, project, or event.
+- Where sources conflict, resolve them if you can; otherwise show the uncertainty.
+- If a source is unavailable, say so; never imply you checked it.
+
+Distinguish an explicit goal from your guess, an invitation from confirmed attendance, and a calendar entry from a hard constraint. Keep this first pass short so the traveler can shape the trip early. While waiting for answers, keep gathering context, not shopping for fares.
 
 ### Interview the traveler
 
-Briefly say what you know, then ask one numbered block of four to six questions. Ask fewer when much is settled. Ground each question in what you found.
+Briefly say what you know, then ask one numbered block of four to six questions, and wait for answers. Ask fewer when much is settled. Ground each question in what you found: an agenda may fix the event dates, but only the traveler can say what they want from attending or whether they want extra days around it.
 
 1. **Purpose and priorities:** Why go? What would make the trip good?
-2. **People and places:** Who is coming or being visited? Which stops are essential or optional?
+2. **People and places:** Who is coming or being visited? Which stops are essential or optional, and in what order?
 3. **Time in each place:** How many days at each stop? Any extra stopover wanted?
-4. **Dates:** What fixes the earliest departure and latest return? If dates are flexible, what range is useful?
-5. **Pace, work, and recovery:** Holiday, work, or both? Do they need to arrive rested for something?
-6. **Practical context:** Where can they stay? What is already arranged? Any accessibility needs, spending limits, or reimbursement rules?
+4. **Dates:** What fixes the earliest departure, latest return, and any arrival deadline? If dates are "flexible", what range is useful, and what would they trade an extra day away for?
+5. **Pace, work, and recovery:** Holiday, work, or both? Any workdays or quiet days? Do they need to arrive rested for something?
+6. **Practical context:** Where can they stay? What is already arranged? Who can help with local transport? Any accessibility needs, spending limits, or reimbursement rules?
 
-Skip questions the profile already answers. Confirm the requested outcome: research, booking preparation, or an authorized purchase.
+Skip questions the profile already answers. Do not make a numeric budget compulsory or turn this first conversation into an upgrade discussion. Follow up when an answer exposes an important choice. Carry uncertain answers forward as open points rather than inventing preferences. Confirm the requested outcome: research, booking preparation, or an authorized purchase.
 
 ### Agree the brief
 
-Summarize the brief and let the traveler correct it. Clear answers count as agreement.
+Summarize the brief and let the traveler correct it. Clear answers count as agreement; do not ask them to approve something they already confirmed. If an unresolved choice would change the trip's shape, ask about it and wait before searching.
 
 | Brief item | Content |
 |---|---|
@@ -3802,26 +3833,30 @@ Keep provisional dates visibly provisional through every later step.
 
 Keep searches tied to the brief. If transport would force a real change to the trip, go back to the traveler with that choice.
 
-1. **Search current schedules and fares** across the useful date range. Aggregators and date grids are good for discovery. Then verify the chosen itinerary, operating carrier, fare type, and conditions with the carrier where possible. List every suitable departure on each date, not just the cheapest.
+1. **Search current schedules and fares** across the useful date range. When dates are flexible, compare across them; do not assume every trip is flexible. Aggregators and date grids are good for discovery. Then verify the chosen itinerary, operating carrier (not just the marketing carrier on a codeshare), fare type, and conditions with the carrier where possible, and prefer booking direct. List every suitable departure on each date, not just the cheapest. Third-party schedule listings can show the wrong seasonal times, so trust a live search for the actual date.
 2. **Apply routing preferences.** If the preferred routing is not available, check nearby airports and ground links, explain the options, and ask before settling.
 3. **Compare ticket shapes.** Compare a round trip with an open-jaw ticket (arriving in one city, leaving from another) when both fit. Include the ground travel each one needs.
-4. **Check ground transport to the real destination.** Confirm the right station when names are ambiguous. Check timetable release dates, holiday service, and planned works. Do not invent a train or fare before it is published.
-5. **Apply discount cards** to every eligible price. Check validity on the travel dates, time-of-day rules, and eligibility.
-6. **Handle failures openly.** If a tool or provider fails, name it, give the error, say what is missing, and try a safe recovery. Disclose any change of source.
+4. **Check ground transport to the real destination.** Reaching a gateway city is not reaching the final stop. Confirm the right station when names are ambiguous. Check timetable release dates, holiday service, and planned works. Do not invent a train or fare before it is published. Note any new border registration or check-in queues when setting a station or airport arrival target.
+5. **Check resellers carefully.** If you use an alternative seller, confirm the ticket is explicitly the named class or fare you want and report any booking fee. A generic label such as "first class" does not tell you which product it is.
+6. **Apply discount cards** to every eligible price, including split-ticket searches. Check validity on the travel dates, time-of-day rules, and eligibility.
+7. **Use past bookings only narrowly** and when authorized. Reconcile old habits against current instructions.
+8. **Handle failures openly.** If a tool or provider fails, name it, give the error, say what is missing, and try a safe recovery. Disclose any change of source and its verification limit. Never imply a blocked checkout or page was verified.
+
+If a login, multi-factor step, provider block, or missing tool stops a check, try a permitted safe recovery, say exactly what remains unverified, and ask only for the smallest action the traveler must take. Continue all other comparison work meanwhile; do not hand the whole task back.
 
 Label every price as a **live selected itinerary**, a **date-grid indication**, or an **estimate**. A "from" fare is not an available ticket. Record when each price was checked, and share only links you have verified.
 
 ### Compare the actual product
 
-- **Cabins:** confirm the cabin on each segment. Extra-legroom economy seats are not a separate premium cabin. If a route lacks the cabin the traveler wants, say so instead of relabeling another product.
-- **Overnight flights:** when sleep matters, check the actual aircraft's seat type. A cabin name alone does not tell you whether the seat is flat.
+- **Cabins:** confirm the cabin on each segment and show the extra cost of each step up. Extra-legroom economy seats are not a separate premium cabin. If a route lacks the cabin the traveler wants, say so instead of relabeling another product.
+- **Overnight flights:** when sleep matters, check the actual aircraft's seat type. A cabin name alone does not tell you whether the seat is flat. Weight sleep and readiness more heavily when work or an important event follows the flight.
 - **Mixed cabins:** consider a higher cabin on one leg and a lower one on the other.
-- **Seats and bags:** include seat fees. A seat preference does not guarantee an assignment. Check the fare's bag allowance, size, and weight limits. A personal-item-only fare does not cover a carry-on or checked-bag need.
-- **Rail classes:** confirm the named class and its conditions. When the traveler has a rule about stepping up a class, price both classes for each train and show the difference, plus any extra flexibility the higher class gives.
+- **Seats and bags:** include seat fees and check seat availability before booking. A seat preference does not guarantee an assignment. Check the fare's bag allowance, size, and weight limits. A personal-item-only fare does not cover a carry-on or checked-bag need. Included bags alone do not justify a higher cabin.
+- **Rail classes:** confirm the named class and its conditions on the provider's own page before quoting. When the traveler has a rule about stepping up a class, price both classes for each train and show the difference. An adjustable default: recommend the higher class when the gap is small, especially at busy times or when dates are still provisional and its better change or refund terms matter; otherwise the lower. A past choice at one price is evidence, not a ceiling.
 
 ### Rank flight times for jet lag
 
-For long-haul flights across several time zones, rank times by fit with the traveler's body clock, alongside price and cabin. This is general planning guidance, not medical advice.
+For long-haul flights across several time zones, rank times by fit with the traveler's body clock, alongside price and cabin, and say which time you recommend and why. This is general planning guidance, not medical advice.
 
 1. Use the traveler's usual wake time and bedtime in their home time zone.
 2. Estimate the body-clock low point at about two hours before usual wake time.
@@ -3833,14 +3868,14 @@ Example: a traveler flying five time zones west for a family visit might prefer 
 
 ## 3. Compare complete journeys
 
-Show two or three useful options with a recommendation. If only one route fits, say so.
+Show two or three useful options with a recommendation, and explain what any extra cost buys in time, comfort, or flexibility. If only one route fits, say so.
 
-- Show local departure and arrival times, airport or station codes, duration, and next-day arrivals.
+- Show local departure and arrival times, airport or station codes, duration, and next-day arrivals, accounting for time zones.
 - Show total cost, currency, fare type, cabin on each segment, seat fee, bag allowance, and change or refund limits.
-- Compare basic and standard fares; a low headline price can lose once seats and bags are added.
+- Compare basic and standard fares; a low headline price can lose once seats and bags are added. Do not assume a higher cabin is flexible or refundable.
 - Keep currencies separate or label a conversion estimate.
-- Build realistic buffers for security, immigration, bags, and cross-city travel. Use the provider's recommended arrival time.
-- Distinguish a protected connection from separate tickets and say who bears the risk of a delay.
+- Build realistic buffers for security, immigration, bags, and cross-city travel, with more at holidays. Give a practical arrival target from the provider's guidance, not the last possible gate closure.
+- Distinguish a protected connection from separate tickets and say who bears the risk of a delay. Consider an overnight stop, especially where the traveler has a free place to stay.
 
 ### Worked example (fictional)
 
@@ -3858,7 +3893,7 @@ Recommendation: A. The extra 74 over B buys a sensible start time, no tight conn
 
 Lead with the recommended dates and route. Show each cabin the traveler asked to see. Show ground transport separately. Include verified booking links, when prices were checked, anything unverified, and the decision needed.
 
-Prepare a concrete, reviewable booking before asking for any approval that is needed. If the traveler already authorized this purchase, or a clear scope and budget, continue within it.
+Finish the research and prepare a concrete, reviewable booking before asking for any approval that is needed. If the traveler already authorized this purchase, or a clear scope and budget, continue within it; do not ask again just because checkout is next.
 
 Before submitting, check against the agreed option:
 
@@ -3867,25 +3902,38 @@ Before submitting, check against the agreed option:
 - cabin or class and fare type on each segment;
 - seat, luggage, total price, and terms.
 
-Resolve any mismatch first. Never invent identity or payment details.
+Resolve any mismatch or missing required passenger detail first. Never invent identity or payment details.
 
-After purchase, confirm success from the provider's confirmation. Report the booked journey and total, and flag any unassigned seat or remaining transport. A selected fare or unfinished checkout is not a booking.
+After purchase, confirm success from the provider's confirmation. Report the booked journey and total, and flag any unassigned seat or remaining transport. A search result, selected fare, or unfinished checkout is not a booking.
 
 ## 5. Learn from experience
 
-If the traveler wants you to keep improving their profile, save clear lessons at a natural stopping point.
+If the traveler has asked you to keep improving their profile and workflow, treat that as standing permission during active use. Apply corrections to the current work immediately. Before closing a completed phase, review the conversation and any trip feedback, and save clear reusable lessons without a separate "shall I remember this?" question. Batch related edits at a natural stopping point so maintenance does not take over the trip. If nothing useful was learned, change nothing.
 
-- **Lasting preferences:** update the profile entry, keep any qualifications, and replace old entries rather than piling up contradictions.
-- **Workflow lessons:** fix a missed question or wasteful step.
-- **Temporary information:** keep one-off fares, exceptions, and lucky deals in the trip record. Do not turn one cheap choice into a budget. If it is unclear whether a choice is for "this trip" or "from now on", ask.
+Before saving, decide where each lesson belongs. If your setup has its own rule for this, follow it. Otherwise, a simple default:
+
+- **Main profile or workflow:** lasting preferences and steps you will use on every trip.
+- **Separate reference note:** detailed or dated material, such as researched fare or upgrade rules, that needs rechecking before use.
+- **Lessons log:** observations that may matter later but are not yet settled enough to become rules.
+
+Then sort the lesson by type:
+
+- **Lasting preferences:** update the profile entry, keep any qualifications (such as "for overnight work flights"), note the date and source, and replace old entries rather than piling up contradictions.
+- **Workflow lessons:** fix a missed question, unreliable assumption, or wasteful step when there is evidence for a better approach. One transient failure does not prove a provider is permanently unavailable.
+- **Trip outcomes:** learn from comfort, connection timing, missed expectations, or booking friction when feedback arrives. Do not infer satisfaction just because a booking succeeded. Ask a short follow-up only if it resolves an important uncertainty.
+- **Temporary information:** keep one-off fares, exceptions, and lucky deals in the trip record. Do not turn one cheap choice into a budget or one lucky upgrade into a timing rule. If it is unclear whether a choice is for "this trip" or "from now on", ask, and keep the existing default until answered.
+
+When saving, reread the current saved version first and keep any changes made since. Keep one place for preferences rather than duplicates. Afterward, check that the save actually worked and that it kept trip discovery before fare research and every unaffected preference. Briefly tell the traveler what you learned and saved, before the final deliverable. If a save failed, say what is still pending; never claim a change was saved without checking.
 
 ## Readiness gates and common failures
 
 Before moving on, confirm:
 
 - **Before searching:** the brief is agreed, or the traveler skipped discovery.
+- **Before asking the traveler for help:** you have checked everything you can yourself, and the request is the smallest action needed.
 - **Before recommending:** prices are labeled, each cabin is the real product, extras are included, and the full journey is costed.
 - **Before purchase:** authorization covers this booking and every checkout detail matches.
+- **Before closing a phase:** lessons are reviewed, any saves are verified, and the traveler knows what changed.
 
 Common failures:
 
@@ -3894,6 +3942,7 @@ Common failures:
 - ignoring seat, bag, transfer, or hotel costs;
 - reporting a "from" fare or a waitlist as available;
 - treating an old receipt as a current preference or price ceiling;
+- handing routine checks back to the traveler;
 - saying a ticket is booked before seeing a confirmation.
 
 ## Optional extras
@@ -3902,24 +3951,25 @@ Use these only when the traveler asks or the trip clearly calls for them.
 
 ### Upgrades
 
-- Compare three paths: buying the higher cabin outright, changing the ticket into it at the fare difference, and a separate upgrade offer.
+- Compare three paths: buying the higher cabin outright, changing the ticket into it at the fare difference, and a separate upgrade offer. Before booking, compare fare plus upgrade with the outright price; after booking, compare the added cost and conditions. Do not assume an earlier upgrade payment counts toward a later one.
 - Separate a confirmed cabin from a waitlist. An empty seat on a seat map does not prove an upgrade will clear. If a better cabin really matters, recommend securing a confirmed option.
-- Do not claim any moment is reliably cheapest for upgrades. Prices can rise and seats can sell out.
-- Check that the fare type can be upgraded before buying it; basic fares often cannot.
-- Compare cash with points using a stated value per point, and read the upgrade's own refund and change terms.
-- For an existing booking, check personal offers only through an authorized session, and never submit anything outside authorization.
+- Do not claim any moment is reliably cheapest for upgrades. If extra comfort is optional, book a cabin the traveler would accept flying, then compare later offers and fare changes, and recheck at check-in. Prices can rise, seats can sell out, and preferred seats can disappear.
+- Check that the fare type can be upgraded before buying it; basic fares often cannot, and cabin is not the same as fare type.
+- For a points or waitlist request, check confirmed availability first. If waitlisting, request early, since request time can break ties, though cabin, status, and other rules usually matter more. Buy an intermediate cabin to improve priority only if the traveler would be content staying in it. Do not assume status brings free upgrades on long-haul routes.
+- Compare cash with points using a stated value per point, and read the upgrade's own refund, change, and missed-upgrade terms; it may not keep the ticket's flexibility.
+- For an existing booking, check personal offers only through an authorized session, and never submit anything outside authorization. A public fare search does not verify a booking-specific offer, and an unticketed itinerary may have none yet.
 
 ### Fare and upgrade monitoring
 
-Never promise to watch prices between conversations unless a real scheduled mechanism exists. If the traveler chooses a monitoring service:
+Never promise to watch prices between conversations unless a real scheduled mechanism exists. Prefer an established monitoring service over building your own; carrier sites often block automated lookups, and a homemade job runs only while a device is awake. If the traveler chooses a service:
 
 1. Confirm the trip appears in the service.
-2. Set an alert, not an automatic purchase or bid.
-3. Monitor the leg that matters most.
-4. Leave automatic repricing off unless the traveler asks; it may charge fees or change fare rules.
-5. If a trial or subscription starts, set a cancellation reminder before the first charge.
+2. Set an alert, not an automatic purchase or bid; check the default setting, since some default to bidding with a fee. An alert threshold costs nothing because it never buys; a suggested bid is a reasonable upper anchor.
+3. Monitor the leg that matters most, such as an overnight flight where sleep counts.
+4. Leave automatic repricing off unless the traveler asks; it may charge fees or change the fare type and its upgrade eligibility.
+5. If a trial or subscription starts, set a cancellation reminder after the last flight it must cover and before the first charge.
 
-When an alert arrives, the traveler (or you, within explicit authorization) books through the provider after rechecking the details.
+Record the alert cabin and threshold in the private trip record. If a display looks wrong but the flight number and route match, it is probably a display glitch. Suggested deal ranges and other people's bargains are not the traveler's budget; ask for a price ceiling only when an automatic purchase needs one. When an alert arrives, the traveler (or you, within explicit authorization) books through the provider after rechecking the details and seat.
 
 
 ---
@@ -4465,6 +4515,7 @@ Report tersely: meetings reviewed, tasks created or updated with due dates, skip
 
 **Pattern guide.** Keep a user-maintained guide of recurring patterns organized by meeting type: common misattributions, reliable signs of live completion, type exceptions. After each run:
 
+- Before recording anything, check whether you keep a general policy for where lessons belong, such as the workflow itself, a reference guide like this pattern guide, or a separate lessons log for this workflow. Follow that policy so lessons land in one predictable place instead of scattering.
 - Append a short, generalized note when a pattern will affect future triage. Do not rewrite old entries.
 - Change the workflow itself only for cross-cutting principles, new defaults, or a new step, and ask before structural changes such as adding a step or changing the evidence order.
 - Record a new responsibility boundary in the user's responsibility reference if it applies beyond one meeting, with the date it took effect. When a boundary changes or reverses, replace the outdated version and remove any examples or skip reasons that relied on it, so old handoffs neither suppress tasks that are now the user's nor create tasks that now belong to someone else.
@@ -4477,7 +4528,7 @@ Do not turn one-off facts about a person or meeting into permanent rules. Report
 
 ---
 name: message-to-task
-description: Turns a message thread into researched, partly completed work and files or updates a task only when tracking helps. Use when someone says make this a task, track this, or deal with this message.
+description: Turns a message thread into researched, partly completed work, filing a task only when tracking helps. Use when someone says make this a task, track this, or deal with this message.
 ---
 
 # Turn a message into a task
@@ -4670,7 +4721,15 @@ The user's final edits are the best evidence of their real voice and stance. Aft
 
 ## 10. Improve the workflow carefully
 
-After each run, review what helped and what caused avoidable work. Update the workflow only when authorized to maintain it, and keep changes small, general, and testable. Useful improvements include:
+After each run, review what helped and what caused avoidable work. Update the workflow only when authorized to maintain it, and keep changes small, general, and testable.
+
+Before editing, decide where each lesson belongs. If you keep a written rule for sorting lessons, read it first. Typical homes are:
+
+- **The main workflow:** rules that apply on most runs and change how the steps are carried out.
+- **A reference file:** stable facts the workflow looks up, such as approval routing, category lists, or tool quirks and their workarounds.
+- **A separate lessons log:** observations that may matter but are not yet proven general enough to become rules.
+
+Useful improvements include:
 
 - adding a source type that reliably answered a class of requests;
 - recording a tool limitation and its workaround;
@@ -4705,6 +4764,7 @@ These help when your assistant has connected tools.
 - **Finding duplicates.** If your task system supports search, query the title and notes fields for the requester's name or organization before creating anything. Use the system's update operation on a match rather than deleting and recreating, so links and history are preserved.
 - **Staging drafts.** If authorized, stage the reply as an unsent draft in the right thread so finishing is one click, and keep the same text in the task notes. Check rendering: many tools need a blank line between a paragraph and a list, or the list items show as plain text. Go straight from greeting to the first item rather than using a list lead-in line.
 - **Scheduled review.** If the environment supports delayed reminders, schedule the step 9 check automatically. A default of about one hour is a reasonable start, adjusted for working hours and urgency. The reminder should name each staged draft, its conversation location, and where the draft text is stored, and allow a couple of follow-up checks at growing intervals before stopping.
+- **Lesson routing rule.** If you maintain several workflows, keep one short shared rule that says where lessons go (main workflow, reference file, or lessons log) and have each workflow read it before self-editing, so every workflow sorts lessons the same way.
 - **Versioning the workflow.** If the workflow lives in a file under version control, commit each improvement with a short, dated message so changes are easy to review or revert.
 
 
@@ -4875,7 +4935,13 @@ If many loops remain open, say so plainly.
 - Every remaining draft is kept on purpose, explained as not a real loop, or reported as open.
 - Nothing actionable lives only in an inbox.
 
-Then audit the run for friction: a pointless question, a misfiled item, a misbehaving source, context you had to hunt for. With permission, update the configuration to fix the cause in general terms, never storing message content or credentials.
+Then audit the run for friction: a pointless question, a misfiled item, a misbehaving source, context you had to hunt for. With permission, fix the cause in general terms, never storing message content or credentials. Before changing anything, decide where the lesson belongs:
+
+- **The core workflow,** if it changes how every run should work.
+- **A source or tool reference,** if it is about how one inbox, app, or connection behaves.
+- **A separate lessons log,** if it is a single observation not yet worth a rule; promote it to the workflow once it recurs.
+
+Keeping one-off fixes out of the core workflow stops it from bloating into a list of special cases.
 
 ## Common failure modes
 
@@ -4887,6 +4953,7 @@ Then audit the run for friction: a pointless question, a misfiled item, a misbeh
 - Relaying an ask the user cannot place, or proposing a meeting that already exists.
 - Guessing an owner instead of saying "owner unclear".
 - Quietly dropping a failed source, inventing links, or taking an undelegated action.
+- Writing every run's lesson into the core workflow instead of the place it belongs.
 
 ## Optional extras
 
@@ -5180,7 +5247,7 @@ A finished work sample should feel like a small, fair version of the job: bounde
 
 **Prefilled payment links.** If your payment form supports prefilled links, create one link per amount (role name, amount, payment type), and hyperlink each dollar figure itself rather than generic text like "this form." Check every link before finalizing.
 
-**Capture lessons.** Before closing, record anything learned in your own reference for this workflow: new format problems, shapes that worked, failure modes the simulation exposed, payment changes, better template wording, memo refinements. Record lessons as general principles, without details about individual candidates. Summarize the changes in one or two bullets. Make small wording fixes freely; ask before structural changes such as adding a step or dropping the simulation.
+**Capture lessons.** Before closing, record anything learned in your own reference for this workflow: new format problems, shapes that worked, failure modes the simulation exposed, payment changes, better template wording, memo refinements. First decide where each lesson belongs, following whatever convention you keep for maintaining workflows: the main workflow if it should change how every run goes, a separate reference file if it is detailed supporting material such as templates or format lists, or a running lessons log if it is a narrower observation still being tested. Record lessons as general principles, without details about individual candidates. Summarize the changes in one or two bullets. Make small wording fixes freely; ask before structural changes such as adding a step or dropping the simulation.
 
 **Working style with the owner.** Keep status updates to one line and use one consistent date format in messages to the owner. Put drafts directly in your reply by default. If the owner asks for a shared document instead, follow the folder and naming conventions they have chosen for such documents. Candidate-facing text still follows the destination system's paste and formatting rules from section 8, wherever the draft lives.
 
@@ -5677,10 +5744,10 @@ A click is not proof. Look for a success message, a reference number, a new reco
 
 | Symptom | Likely cause | Safe response |
 |---|---|---|
-| Fill reports success but field is blank | App ignored a direct write | Keyboard-style input, blur, read back. |
-| Earlier fields blank out, or a dropdown wipes the form | Re-render from stale state | Re-rendering choices first; blur after each fill. |
+| Fill reports success but field is blank, or earlier fields blank out as later ones are filled | App ignored a direct write and re-renders other fields from stale state | Keyboard-style input, blur right after each fill, read back. |
+| A dropdown or checkbox wipes the form | Selection triggers a full re-render | Make re-rendering choices first, then fill text. |
 | Field looks filled but validation says empty | Hidden sync field was edited, or widget did not see a keystroke | Fill the visible editor; type and delete one character. |
-| Interactive tool crashes on long text | Tool layer unstable for heavy work | Switch to a script. |
+| Interactive tool crashes on long text, parallel actions, or heavy pages | Tool layer unstable for heavy work | Switch to a script; do not try to rescue the session. |
 | Headless page blocked or different | Site varies by browser context | Direct interface; escalate only for an explicit task, read-only where possible. |
 | Wrong account or site says permission denied | Last-used profile or missing role | Select profile directly; ask user to sign in correctly; re-verify. |
 | Tool reports permission denied right after navigating | Page still loading | Screenshot, wait, retry in a fresh tab if needed. |
@@ -5688,12 +5755,19 @@ A click is not proof. Look for a success message, a reference number, a new reco
 | Session ends after a page-script request | Internal endpoint called without normal headers | Drive the UI or use a supported API. |
 | Clicks do nothing, or a read misses part of the page or comes back cut off | Panel ignores clicks or extraction; tool truncates output | Screenshot, click by position, read the panel directly, read long results in slices. |
 | Warning, sign-in, or consent page the tool cannot handle | Needs a person | Leave the tab open, ask the user, then re-verify. |
+| A known tricky site comes up again | Site has quirks already worked out | Read that site's reference note before starting. |
 
 ## 12. Report and keep the procedure current
 
 Summarize the outcome in one or two sentences, point to the screenshot and after-state record, and do not paste every field value inline. Store artifacts only where the user can access them, and delete sensitive temporary files when done.
 
-When a run reveals a reusable lesson, add it to your local copy, preferably as one table row with symptom, cause, and fix. Never record credentials or private site data. Merge older entries into general principles as the document grows, and update tool paths, profile mappings, and app-specific notes in place, since they go stale.
+When a run reveals a reusable lesson, such as a new failure mode, a working pattern, or a missing tool, record it in your local copy without waiting to be asked. Prefer one table row with symptom, cause, and fix on the same row over new prose. Decide where each lesson belongs:
+
+- **General patterns** go in the main procedure.
+- **A recipe for one site** that runs longer than a short paragraph goes in a separate reference note, with a one-row pointer in the failure table saying when to read it.
+- **Dated incident notes** go in a separate log that normal runs do not read.
+
+Never record credentials or private site data. Merge older entries into general principles as the document grows, and update tool paths, profile mappings, and app-specific notes in place, since they go stale.
 
 ## Final audit checklist
 
@@ -5727,7 +5801,7 @@ When a run reveals a reusable lesson, add it to your local copy, preferably as o
 
 ---
 name: create-a-skill
-description: Designs, tests, and improves a reusable AI skill from a rough idea or repeated workflow. Use when someone says "turn this into a skill," "improve this skill," or "does my skill help?"
+description: Designs, tests, and improves a reusable AI skill from a rough idea or repeated workflow. Use when someone says "turn this into a skill" or "improve this skill," or asks if a skill helps.
 ---
 
 # Create an AI skill
@@ -5739,9 +5813,9 @@ Use this workflow to create a new AI skill, improve an existing one, test whethe
 - Tell your assistant what the skill should do, when it should be used, and what a good output looks like. If you already did the job in a conversation, paste it and ask the assistant to extract the steps, corrections, and formats, then confirm the gaps.
 - Before drafting, have it ask only questions that change the design: missing information, edge cases, actions that need your confirmation, and what would make you reject an output.
 - Draft the skill: a short name, a slightly assertive description that leads with trigger phrases, imperative instructions that explain why each step matters, an output template, and what to do when something is missing or unclear.
-- Write two or three realistic test requests. Paste the skill into a fresh chat with each one and read the outputs yourself before changing anything.
-- Revise from the general cause of each problem, not the specific example. Fold each lesson into the rule it refines instead of appending notes about what went wrong.
-- Repeat until you are happy or progress stops, then run the audit checklist in section 10.
+- Write two or three realistic test requests and keep them with the skill. Paste the skill into a fresh chat with each one and read the outputs yourself before changing anything.
+- Revise from the general cause of each problem, not the specific example. Decide where each lesson belongs, usually folded into the rule it refines, instead of appending notes about what went wrong.
+- Repeat until you are happy or progress stops, rerun your saved tests after any big cut or reorganization, then run the audit checklist in section 10.
 
 The method works with any AI system that supports reusable instructions. Where this guide mentions files, folders, or tools, substitute whatever your platform provides.
 
@@ -5814,7 +5888,8 @@ skill-name/
 ├── [main instruction file]   # required: name, description, instructions
 ├── scripts/                  # optional: code for deterministic or repetitive tasks
 ├── references/               # optional: documents loaded only when needed
-└── assets/                   # optional: files used in outputs (templates, icons, fonts)
+├── assets/                   # optional: files used in outputs (templates, icons, fonts)
+└── tests/                    # optional: saved test prompts and checks, not loaded at run time
 ```
 
 Most skill systems load content in layers, so design for progressive disclosure:
@@ -5825,7 +5900,7 @@ Most skill systems load content in layers, so design for progressive disclosure:
 | 2. Main instructions | The body of the skill | Whenever the skill activates | Short enough to read in one pass; a few hundred lines at most |
 | 3. Bundled resources | Scripts, references, assets | Only when needed | Can be large; scripts can run without being read |
 
-Follow any limits your platform sets. If it sets none, choose a size limit for the main file yourself (adjustable) and check against it whenever you edit. Key patterns:
+Follow any limits your platform sets. If it sets none, choose a size limit for the main file yourself (adjustable) and check against it whenever you edit. It helps to also set an early warning somewhat below the hard limit, so you notice growth and trim calmly instead of being forced to cut when an edit fails validation. Key patterns:
 
 - If the main instructions grow long, move detail into reference files and say exactly when to read each one.
 - Give long reference files a table of contents.
@@ -5893,6 +5968,8 @@ After the draft, write two or three realistic test prompts, the kind of thing a 
 
 Cover meaningful variety: a typical request, an incomplete or ambiguous one, a format-sensitive one, and, if relevant, one that should lead to a confirmation or refusal. Give each test a descriptive name. Leave checks empty for now; draft them while runs are in progress.
 
+Save the test set alongside the skill, in a place the skill does not load when it runs, so anyone can rerun it later.
+
 ```json
 {
   "skill_name": "[skill name]",
@@ -5926,8 +6003,8 @@ This is the heart of the loop. Take your time. Draft a revision, then reread it 
 2. **Keep it lean.** Remove what is not earning its place. Read the run transcripts, not just final outputs. If the skill makes the AI waste effort, remove the cause and see what happens.
 3. **Explain the why.** Even if feedback is terse or frustrated, work out what the user actually needs and put that understanding into the instructions.
 4. **Bundle repeated work.** If several runs independently wrote similar helper scripts or followed the same multi-step routine, write it once, add it to the skill, and tell the skill to use it.
-5. **Fold lessons into existing rules.** When a run teaches a lesson, edit or merge the rule it refines instead of adding a new paragraph about the incident. Do not append dated incident notes to the skill. If you want an audit trail, keep it in a separate change log that the skill does not load when it runs.
-6. **Preserve what works.** Do not break behavior the user already liked while fixing something else.
+5. **Decide where each lesson belongs.** If you keep a written policy for handling lessons, read it before editing. Otherwise use this rule of thumb: a lesson that affects most runs goes into the main instructions, merged into the rule it refines; a lesson that matters only in some cases goes into the relevant reference file; a record of what happened and why goes into a separate change log that the skill does not load when it runs. Do not append dated incident notes to the skill itself.
+6. **Preserve what works.** Do not break behavior the user already liked while fixing something else. Before and after any large cut, restructure, or move of content into reference files, rerun the saved tests and compare. Trimming often removes something that was quietly doing work.
 
 Then rerun all tests as a new iteration, show the new results with previous outputs and feedback alongside, wait for the user to finish reviewing, and repeat. Stop when the user is happy, feedback is consistently empty across meaningful tests, or you are no longer making meaningful progress.
 
@@ -5940,7 +6017,8 @@ Pre-delivery audit:
 - [ ] Name is stable and appropriate.
 - [ ] Description states what the skill does and when to use it, within the platform's limits.
 - [ ] Main file is within the size limit, and any validation step passes.
-- [ ] Lessons are merged into rules, with no appended incident notes.
+- [ ] Lessons are placed where they belong, with no appended incident notes in the skill.
+- [ ] Saved tests were rerun after the last large cut or reorganization.
 - [ ] Instructions do not depend on undeclared tools, private conventions, or personal access.
 - [ ] Every bundled resource is referenced, clearly named, and explained.
 - [ ] No credentials, private identifiers, confidential records, or sensitive examples are included.
@@ -5957,7 +6035,8 @@ Give a short handoff note: what the skill does, required capabilities, known lim
 |---|---|
 | Revising before the user has seen any outputs | Present results for human review first |
 | Fixes tailored to the test examples | Find the general cause and fix that |
-| Incident notes piling up at the end of the skill | Merge each lesson into the rule it refines; keep history in a separate log |
+| Incident notes piling up at the end of the skill | Put each lesson where it belongs: merged into a rule, in a reference file, or in a separate log |
+| A large trim or reorganization silently breaks behavior | Rerun saved tests before and after the change |
 | Many capitalized absolute rules | Replace with explained reasoning, except for true hard boundaries |
 | Vague or timid description, so the skill is rarely used | Lead with trigger phrases and name implied use cases |
 | Checks that pass with or without the skill | Replace with checks that show the skill's added value |
@@ -6041,6 +6120,7 @@ Have the user review and edit the set; bad queries produce bad descriptions. If 
 |---|---|
 | Independent helper agents | Run tests yourself one at a time; skip baselines, benchmarks, and blind comparison |
 | Automated activation testing | Review the query set manually against the description |
+| Automated behavior tests | Keep the saved test prompts and rerun them by hand before and after large edits |
 | Parallel runs keep failing or timing out | Run tests in sequence |
 | Write access to the installed skill | Copy it to a writable location, edit there, and package from the copy |
 
@@ -6222,7 +6302,7 @@ If Priya later asks for "three more" and #13 already exists for May, the new one
 
 ## After each run
 
-Keep only reusable lessons, such as a platform change or an updated template, and update your notes in the same session.
+Keep only reusable lessons, such as a platform change or an updated template, and update your notes in the same session. Before editing, check your own rule for where a lesson belongs: in this workflow, in a shared note on general tool mechanics that applies beyond this series, or in a separate lessons file kept for this workflow.
 
 ## Optional extras
 
@@ -6234,4 +6314,4 @@ For assistants that drive a browser or other connected tools:
 - **File handling:** avoid buttons that open a native file dialog the tool cannot control; use the page's file input or the tool's file-chooser support, from a folder the tool can read. If the browser blocks repeat downloads, capture the image another way, such as a full-size screenshot of just the image, with its tab in front.
 - **Verify after every on-screen change:** pages shift when controls appear, windows resize, or content is still loading. Take a fresh screenshot before each click after any shift, confirm nothing changed by accident, close pickers by clicking empty background, and retype if early typing was lost.
 - **Scripted invite loop:** handle one past event per call to stay under time limits, group a handful of calls into a batch, normalize unusual spaces before matching labels, wait for each list to load, and read the count after each pass.
-- **Website built from a code repository:** keep a small script that adds event links to the site's list. Pull the latest version, run it once with all new links, commit with a message naming the event numbers, publish, and confirm the events appear.
+- **Website built from a code repository:** keep a small script that adds event links to the site's list. Pull the latest version, run the script once with all new links, calling it by its full path so it works from whatever folder the session happens to be in, commit with a message naming the event numbers, publish, and confirm the events appear.

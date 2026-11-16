@@ -83,7 +83,7 @@
 <p>Report: &quot;Board Games #12 is live for Sat 12 April at the café. 46 people invited, and the website lists it. Note: the café may close early that day, so you may want to confirm the time.&quot; Link on the final line.</p>
 <p>If Priya later asks for &quot;three more&quot; and #13 already exists for May, the new ones become #14, #15, and #16 on the June, July, and August dates, added to the website in one update, and all three should show the same invite count.</p>
 <h3>After each run</h3>
-<p>Keep only reusable lessons, such as a platform change or an updated template, and update your notes in the same session.</p>
+<p>Keep only reusable lessons, such as a platform change or an updated template, and update your notes in the same session. Before editing, check your own rule for where a lesson belongs: in this workflow, in a shared note on general tool mechanics that applies beyond this series, or in a separate lessons file kept for this workflow.</p>
 <h3>Optional extras</h3>
 <p>For assistants that drive a browser or other connected tools:</p>
 <ul>
@@ -93,5 +93,5 @@
 <li><strong>File handling:</strong> avoid buttons that open a native file dialog the tool cannot control; use the page&#39;s file input or the tool&#39;s file-chooser support, from a folder the tool can read. If the browser blocks repeat downloads, capture the image another way, such as a full-size screenshot of just the image, with its tab in front.</li>
 <li><strong>Verify after every on-screen change:</strong> pages shift when controls appear, windows resize, or content is still loading. Take a fresh screenshot before each click after any shift, confirm nothing changed by accident, close pickers by clicking empty background, and retype if early typing was lost.</li>
 <li><strong>Scripted invite loop:</strong> handle one past event per call to stay under time limits, group a handful of calls into a batch, normalize unusual spaces before matching labels, wait for each list to load, and read the count after each pass.</li>
-<li><strong>Website built from a code repository:</strong> keep a small script that adds event links to the site&#39;s list. Pull the latest version, run it once with all new links, commit with a message naming the event numbers, publish, and confirm the events appear.</li>
+<li><strong>Website built from a code repository:</strong> keep a small script that adds event links to the site&#39;s list. Pull the latest version, run the script once with all new links, calling it by its full path so it works from whatever folder the session happens to be in, commit with a message naming the event numbers, publish, and confirm the events appear.</li>
 </ul></article><footer><a href="/skills/LICENSE.txt">CC0</a></footer></main><script>document.querySelector('[data-copy]').addEventListener('click',async function(){try{const text=await fetch(this.dataset.copy).then(r=>{if(!r.ok)throw new Error();return r.text()});await navigator.clipboard.writeText(text);this.textContent='Copied'}catch{this.textContent='Open raw Markdown'}})</script></body></html>

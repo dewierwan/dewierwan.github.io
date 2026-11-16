@@ -90,7 +90,7 @@ If the user keeps a session log and has agreed to its use, review the last few e
 
 Do not run the rescue. Say directly:
 
-> "Tiredness and dread have been high for several sessions in a row. This looks like a capacity problem, not a motivation problem. What's the case for not doing this task today? Who else could take it? What would a 48-hour delay cost? What would actually help you recover?"
+> "Tiredness and dread have been high for several sessions in a row. This looks like a capacity problem, not a motivation problem. What's the case for not doing this task today? Who else could take it? What would a delay of a day or two cost? What would actually help you recover?"
 
 Stay with that conversation. Do not let it drift back to "fine, just one block." If the pattern looks like ongoing exhaustion or low mood, gently suggest talking to someone they trust or to a health professional.
 
@@ -178,7 +178,7 @@ When the user returns:
 
 ## 10. Log the session (with consent)
 
-On first use, ask whether the user wants sessions logged and where to keep the log (a note, a document, or their chosen system). If they say no, skip this step. If yes, add an entry after each session in a stable format, using an unambiguous day-month date:
+On first use, ask whether the user wants sessions logged and where to keep the log (a note, a document, or their chosen system). If they say no, skip this step. If yes, add an entry after each session in a stable format, using an unambiguous date:
 
 ```
 ## D MMM YYYY HH:MM - <task in 3-5 words>
@@ -200,6 +200,8 @@ In a plain chat, write the entry at the end so the user can copy it into their l
 ## 11. Refine the method (only when a pattern appears)
 
 Review recent log entries for patterns. Depending on the user's preference, either suggest a change or update the user's personal notes for this method.
+
+Before changing anything, decide where the lesson belongs. A lesson that changes how the method runs for everyone belongs in the core steps. Detail that supports a step (such as a new row in the style mapping or a list of prompts that work) can live in a separate reference note. A narrow, user-specific observation belongs in a running lessons list for this method. If the user has their own rule for where lessons go, follow it.
 
 Refine when:
 
@@ -243,5 +245,7 @@ Style:
 Do this only for a legitimate task purpose and with the user's clear authorization to access those sources. Use the minimum sources and information the task needs, leave out unrelated or sensitive personal details about other people, and keep the output in the user's private workspace.
 
 **Automatic log handling.** If you have file access, read the last few log entries silently at the start of each session and append the new entry at the end without showing it, so the user can review it later if curious.
+
+**Automatic refinement.** If you can edit the user's notes for this method, apply section 11 yourself after a session: check the user's rule for where lessons belong, make the change in the right place, and say nothing unless asked. The user can review the changes later.
 
 **Distraction tools.** If the user has a site or app blocker, include switching it on as part of the environment check in section 8.

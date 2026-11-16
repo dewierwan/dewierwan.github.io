@@ -101,7 +101,7 @@
     },
     {
       "title": "Plan your week",
-      "description": "Reviews last week, then shapes the next one into one to three checkable goals, tasks, time blocks, and a one-screen plan. Use when someone says \"plan my week\" or wants to reset after a messy week.",
+      "description": "Reviews last week and shapes the next into one to three checkable goals, tasks, time blocks, and a one-screen plan. Use when someone says \"plan my week\" or wants to reset after a messy week.",
       "category": "Plan and reflect",
       "page": "https://dewierwan.com/skills/plan-your-week/",
       "markdown": "https://dewierwan.com/skills/raw/plan-your-week.md"
@@ -150,7 +150,7 @@
     },
     {
       "title": "Turn a message into a task",
-      "description": "Turns a message thread into researched, partly completed work and files or updates a task only when tracking helps. Use when someone says make this a task, track this, or deal with this message.",
+      "description": "Turns a message thread into researched, partly completed work, filing a task only when tracking helps. Use when someone says make this a task, track this, or deal with this message.",
       "category": "Meetings and tasks",
       "page": "https://dewierwan.com/skills/message-to-task/",
       "markdown": "https://dewierwan.com/skills/raw/message-to-task.md"
@@ -192,7 +192,7 @@
     },
     {
       "title": "Create an AI skill",
-      "description": "Designs, tests, and improves a reusable AI skill from a rough idea or repeated workflow. Use when someone says \"turn this into a skill,\" \"improve this skill,\" or \"does my skill help?\"",
+      "description": "Designs, tests, and improves a reusable AI skill from a rough idea or repeated workflow. Use when someone says \"turn this into a skill\" or \"improve this skill,\" or asks if a skill helps.",
       "category": "Build and automate",
       "page": "https://dewierwan.com/skills/create-a-skill/",
       "markdown": "https://dewierwan.com/skills/raw/create-a-skill.md"
