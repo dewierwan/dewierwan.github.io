@@ -9,14 +9,14 @@ Use this workflow when one or more message links, copied conversations, or inbou
 
 ## Quick version
 
-- Paste the whole conversation, including every later reply and any linked document, and check that the request is still live before doing anything else.
-- Name the task shape: reply owed, artifact owed, decision needed, or follow-up. Then rewrite the request as an outcome with a clear finish line.
-- Draft the actual deliverable (reply, document, decision brief, or chase message) instead of just describing it. Mark unverified facts as `[VERIFY: ...]` and gaps only you can fill as `[FILL IN: ...]`.
-- Ask questions only if a wrong guess would cause real rework. Before asking, restate the full story in a paragraph or two so the choice is answerable.
-- Decide whether you need a task record at all. A ready draft you can send in a few minutes needs none; deferred, multi-step, or deadline-bound work does. If you do need one, check whether a task for the same ask already exists and update it instead of adding a duplicate.
-- Get the output with context first and the deliverable last, so the draft can be copied without cleanup.
+- Paste the whole conversation into your assistant, including every later reply and any linked document, and ask it to check whether the request is still live before doing anything else.
+- Ask it to name the task shape (reply owed, artifact owed, decision needed, or follow-up) and rewrite the request as an outcome with a clear finish line.
+- Have it draft the actual deliverable (reply, document, decision brief, or chase message) instead of describing it. Unverified facts get `[VERIFY: ...]` and gaps only you can fill get `[FILL IN: ...]`.
+- Let it ask questions only if a wrong guess would cause real rework, and only after restating the full story so the choice is answerable.
+- Decide together whether you need a task record at all. A ready draft you can send right away needs none; deferred, multi-step, or deadline-bound work does. If you already have a task for the same ask, paste it in so the assistant rewrites it instead of creating a duplicate.
+- Ask for context first and the deliverable last, so the draft can be copied without cleanup.
 
-This workflow is tool-independent. Use whatever messaging, document, task, calendar, and research capabilities you have. Run the full flow separately for each message reference unless several references clearly concern one shared outcome.
+This workflow is tool-independent. Use whatever messaging, document, task, calendar, and research capabilities you have, or none. Run the full flow separately for each message reference unless several references clearly concern one shared outcome.
 
 ## 1. Open the message and read the complete conversation
 
@@ -24,14 +24,14 @@ For every supplied message reference:
 
 1. Open the linked message or locate the quoted message.
 2. If it is a reply in a thread, open the parent and read every reply.
-3. If it is a top-level message, retrieve nearby conversation context. If the message has replies, read the full thread immediately, because replies often change or resolve the task.
+3. If it is a top-level message, retrieve nearby conversation context. If it has replies, read the full thread immediately, because replies often change or resolve the task.
 4. Check whether replies after the linked message change the request, answer it, reassign it, or make it obsolete.
 5. Open every substantive attachment, form, shared document, or cited source that could contain the real request.
 
 Identify:
 
 - The requester and all relevant participants, by name or clear role. Never write a task about "the person."
-- The current ask, previous commitments, promises, deadlines, and dependencies.
+- The current ask, previous commitments, deadlines, and dependencies.
 - The current owner of each action.
 - Whether work is already complete, withdrawn, delegated, or blocked.
 - Whether several people have asked about the same topic elsewhere and could be served by one consistent answer.
@@ -58,17 +58,17 @@ Research only what the task requires. Start with sources closest to the request,
 Useful source types include:
 
 - Earlier messages and topic searches for related commitments, decisions, or parallel requests. Search the topic, not just the person.
-- Prior correspondence, meeting notes, and the user's own planning or talking-points notes about a relationship. A documented stance often answers questions you would otherwise ask, and it is the substance the draft should be built from.
+- Prior correspondence, meeting notes, and the user's own planning notes about a relationship or situation. A documented stance often answers questions you would otherwise ask, and it is the substance the draft should be built from.
 - Project pages, event records, and operational correspondence for project facts. For past events, pre-event logistics messages are often the only written record of hard numbers such as counts, schedules, and process.
-- Approved policies and established precedents for people-process, finance, or policy questions. When setting something up for the first time, start from the closest existing policy as the default anchor.
+- Approved policies and established precedents for people-process, finance, or policy questions. When something is being set up for the first time, check for the closest existing precedent and ask the user whether it should be the default starting point.
 - Authoritative records or trusted public sources for quantitative questions.
 - Every substantive linked document. Review all tabs, sections, pages, and appendices. The message often surfaces only one of a document's asks; the document is the real task list, and the message is just the knock on the door.
 
-Because this workflow reads private communications and records about other people, use it only for a legitimate purpose with clear authorization from the user and, where relevant, the organization. Consult only the minimum relevant sources and information. Leave unrelated or sensitive personal details out of notes, drafts, and records, and keep all outputs within an appropriate access boundary.
+Because this workflow reads private communications and records about other people, use it only for a legitimate purpose with clear authorization from the user and, where relevant, the organization. Consult only the minimum relevant sources and information, leave unrelated or sensitive personal details out of notes, drafts, and records, and keep all outputs within an appropriate access boundary.
 
-For web research, follow whatever browsing policy the user has set. If automated browsing is allowed, run it without a visible window, and let any helper agents browse only under the same rules. Avoid tools that create other side effects unless the user has authorized them.
+For web research, follow whatever browsing policy the user has set, and apply the same rules to any helper agents. Avoid tools that create side effects unless the user has authorized them.
 
-Stop gathering when you can either complete the preparation or name precisely what is missing. Two or three well-chosen sources beat many shallow ones.
+Stop gathering when you can either complete the preparation or name precisely what is missing. A few well-chosen sources beat many shallow ones.
 
 ## 4. Pre-complete the work safely
 
@@ -76,15 +76,17 @@ Do as much as is reasonable without taking irreversible external action.
 
 - **Reply:** draft the full message in the user's voice.
 - **Artifact:** create the outline, analysis, reference text, or document draft.
-- **Decision:** prepare two or three viable options, the key evidence for each, and a recommendation with reasons. Give a recommendation, not a survey.
+- **Decision:** prepare a few viable options, the key evidence for each, and a recommendation with reasons. Give a recommendation, not a survey.
 - **Follow-up:** draft the chase or handoff message and prepare any authorized internal update.
 
-If a style guide or approved examples exist, read them in full before drafting in the user's voice. Drafts usually need to be shorter than first instinct suggests:
+If the user has a style guide or approved examples, read them in full before drafting in their voice; they override any default here. Without one, start brief, because drafts usually run longer than people want. Common trims to consider:
 
-- Cut compliment-plus-scaffold openers and lead-in lines such as "Here's where I've landed."
-- Ask one simple question when that is enough, rather than a structured checklist of everything you might need.
-- Hedge future commitments explicitly (for example, "though I can't promise this yet").
-- Include coaching or explanation only when coaching is the point of the reply.
+- Drop warm-up openers and lead-in lines that announce what follows.
+- Ask one simple question when that is enough, rather than a checklist of everything you might need.
+- Be explicit about any future commitment that is not certain.
+- Include coaching or explanation only when that is the point of the reply.
+
+Treat these as starting points and adjust them as you learn the user's real edits (step 9).
 
 Never invent facts, dates, amounts, names, links, or policy positions. Use explicit markers:
 
@@ -102,7 +104,7 @@ List what you genuinely cannot do (judgment calls, sensitive relationship reads,
 
 Before asking, check whether the user's position is already documented in earlier messages, notes, decisions, or policies. A documented stance beats a fresh question.
 
-Ask only when a wrong assumption would waste more of the user's time than the question itself, or would create risk or an inappropriate commitment. Ask two to four focused questions at most, before creating any record, so the answers land in the draft. Precede them with a one- or two-paragraph context recap that restores the full situation:
+Ask only when a wrong assumption would waste more of the user's time than the question itself, or would create risk or an inappropriate commitment. Keep it to a handful of focused questions, asked before creating any record so the answers land in the draft. Precede them with a short context recap that restores the full situation:
 
 - who is involved and what has happened so far;
 - what is now being requested;
@@ -123,13 +125,13 @@ Create a record when one or more of these apply:
 - Several steps remain or work will span days.
 - The user explicitly asked for a record.
 
-When uncertain, prefer chat-only for a simple reply and a record for longer-lived work. Set the "short sitting" threshold to whatever the user finds natural (a default of about 15 minutes is a reasonable starting point).
+When uncertain, prefer no record for a simple reply and a record for longer-lived work. The user decides what counts as a "short sitting"; agree on a threshold once and reuse it.
 
 ## 7. Create or update a complete task record
 
 First check for an existing record. Search the user's task system for a distinctive keyword, such as the requester's name or organization. If a record already covers the same ask, update it instead of creating a duplicate:
 
-- Rewrite its notes from scratch rather than appending, because older notes go stale (for example, a line saying the thread had no replies when replies have since arrived).
+- Rewrite its notes from scratch rather than appending, because older notes go stale (for example, a line saying no one has replied when replies have since arrived).
 - Move the due date and raise the priority if new deadlines or reminders have come in since it was filed.
 
 Otherwise, create a new record in the user's chosen task system. Fill these fields where supported:
@@ -137,16 +139,16 @@ Otherwise, create a new record in the user's chosen task system. Fill these fiel
 - **Title:** specific and action-led, short enough to scan.
 - **Status:** the user's equivalent of not started.
 - **Due date:** only when supported by an explicit or clearly implied deadline.
-- **Priority:** best judgment from impact and time pressure. Someone waiting on the user generally raises urgency.
+- **Priority:** best judgment from impact and time pressure, using the user's own scale. Someone waiting on the user generally raises urgency.
 - **Estimate:** remaining human effort, not research already done. A pre-drafted reference to review and send is a short task, not a long one.
-- **Area or project:** the best-fit category from the user's current list. Category lists get renamed and restructured over time, so re-check the live list rather than relying on a remembered one, and re-list the options if nothing seems to fit.
+- **Area or project:** the best-fit category from the user's current list. Category lists change over time, so re-check the live list rather than relying on a remembered one.
 - **Notes:** a self-contained handoff:
 
 ```markdown
 **What:** [One-sentence request and who is waiting.]
 **Source:** [Original message or conversation link.]
 **Context:**
-- [Three to six bullets: who is involved, what led here, key facts with links.]
+- [A few bullets: who is involved, what led here, key facts with links.]
 
 **Pre-completed:**
 [Full draft reply, artifact, decision brief, or prepared action. State where any draft is staged.]
@@ -155,7 +157,7 @@ Otherwise, create a new record in the user's chosen task system. Fill these fiel
 - [Specific final action.]
 ```
 
-Check how your task system renders formatted notes. Many systems flatten nested bullets and drop the indentation, so keep notes to a single bullet level and fold any sub-points into the parent line rather than indenting them.
+Check how your task system renders formatted notes. Many systems flatten nested bullets, so keep notes to a single bullet level and fold sub-points into the parent line.
 
 Summarize rather than pasting an entire private conversation. After creating or updating the record, open or retrieve it to confirm the title, notes, links, deadline, and fields are correct.
 
@@ -180,7 +182,7 @@ If no record was created, separate briefing from deliverable and keep the delive
 
 Nothing should appear after the draft reply.
 
-**Invented example.** Tomas Reyke, a volunteer coordinator at the fictional Lanternfield Reading Trust, asks in a thread how many people attended last spring's workshop and whether the user would co-host the next one. A later reply shows a colleague already asked the same attendance question in another channel. The workflow classifies this as a reply owed, finds the headcount in the pre-event logistics email, drafts one answer and points the second asker to it, and marks the co-hosting question `[FILL IN: willing to co-host? dates that work]`. Because the user must decide on co-hosting and the next workshop has a date, a record is needed. A search turns up an older task titled "Reply to Lanternfield about workshop" whose notes say no one has replied yet, so the workflow rewrites those notes, sets the due date to the planning call, and raises the urgency. The metadata line reads: "Updated existing task: Important / Time-sensitive, due before the planning call, about 10 minutes remaining."
+**Invented example.** Tomas Reyke, a volunteer coordinator at the fictional Lanternfield Reading Trust, asks in a thread how many people attended last spring's workshop and whether the user would co-host the next one. A topic search shows a colleague asked the same attendance question in another channel. The workflow classifies this as a reply owed, finds the headcount in the pre-event logistics email, drafts one answer and points the second asker to it, and marks the co-hosting question `[FILL IN: willing to co-host? dates that work]`. Because the user must decide on co-hosting and the next workshop has a date, a record is needed. A search turns up an older task titled "Reply to Lanternfield about workshop" whose notes say no one has replied yet, so the workflow rewrites those notes, sets the due date to the planning call, and raises the priority. The metadata line reads: "Updated existing task: high priority, due before the planning call, a few minutes of review remaining."
 
 ## 9. Learn from what the user actually sends
 
@@ -188,26 +190,20 @@ The user's final edits are the best evidence of their real voice and stance. Aft
 
 1. Re-read the conversation and find the message the user actually sent, or ask them to paste it.
 2. Compare it with the draft: what was removed, reworded, reordered, added, or left unanswered.
-3. Extract only general, reusable lessons, such as preferred brevity, wording, decision framing, formatting, or process routing (for example, "funding approvals go through the formal application").
+3. Extract only general, reusable lessons, such as preferred length, wording, decision framing, formatting, or how certain requests should be routed through process.
 4. If nothing has been sent yet, check again a limited number of times, then stop. The user may have deliberately chosen not to send it.
 
 ## 10. Improve the workflow carefully
 
 After each run, review what helped and what caused avoidable work. Update the workflow only when authorized to maintain it, and keep changes small, general, and testable.
 
-Before editing, decide where each lesson belongs. If you keep a written rule for sorting lessons, read it first. Typical homes are:
+Decide where each lesson belongs:
 
 - **The main workflow:** rules that apply on most runs and change how the steps are carried out.
-- **A reference file:** stable facts the workflow looks up, such as approval routing, category lists, or tool quirks and their workarounds.
-- **A separate lessons log:** observations that may matter but are not yet proven general enough to become rules.
+- **A reference note:** stable facts the workflow looks up, such as approval routing, category lists, or tool quirks and their workarounds.
+- **A lessons log:** observations that may matter but are not yet proven general enough to become rules.
 
-Useful improvements include:
-
-- adding a source type that reliably answered a class of requests;
-- recording a tool limitation and its workaround;
-- adding a genuinely distinct task shape;
-- cutting or rewording an instruction that wasted time; or
-- encoding a user correction as a general drafting or process rule.
+Useful improvements include adding a source type that reliably answered a class of requests, recording a tool limitation and its workaround, adding a genuinely distinct task shape, cutting an instruction that wasted time, or encoding a user correction as a general rule.
 
 Encode the lesson, not the specific example. Do not turn one unusual incident into a rigid rule. If nothing generalizable was learned, change nothing; no-op runs are normal once the workflow matures.
 
@@ -222,19 +218,18 @@ Before finishing, check:
 - Did I avoid sending, approving, or committing externally?
 - Are unsupported facts and links clearly marked rather than guessed?
 - If a record was needed, did I check for an existing one and update it instead of duplicating?
-- If a record exists, does it have fresh notes, full context, verified fields, formatting that renders correctly, and specific remaining steps?
+- Does any record have fresh notes, full context, verified fields, formatting that renders correctly, and specific remaining steps?
 - Is the deliverable the final block of my report?
 
 ## Optional extras
 
 These help when your assistant has connected tools.
 
-- **Parsing message links.** Many messaging tools encode the conversation ID and a message timestamp in the link, plus a separate parent identifier when the message is a thread reply. Use the parent identifier to fetch the whole thread. Some tools return nothing for an exact-timestamp lookup, so query a small window around it instead.
+- **Parsing message links.** Many messaging tools encode the conversation ID and a message timestamp in the link, plus a separate parent identifier when the message is a thread reply. Use the parent identifier to fetch the whole thread. If an exact-timestamp lookup returns nothing, query a small window around it.
 - **Recovering identities.** If sender names come back blank, recover them from mentions in the text or by looking up the user ID.
 - **Building an evidence base.** For references or feedback, searching for messages a person authored can surface concrete examples of their actual work.
-- **Browsing policy.** If you keep a written browsing policy, point the workflow and any helper agents at it rather than restating rules in each prompt. A common default is to allow automated browsing only in headless mode, so research never takes over the user's screen.
-- **Finding duplicates.** If your task system supports search, query the title and notes fields for the requester's name or organization before creating anything. Use the system's update operation on a match rather than deleting and recreating, so links and history are preserved.
-- **Staging drafts.** If authorized, stage the reply as an unsent draft in the right thread so finishing is one click, and keep the same text in the task notes. Check rendering: many tools need a blank line between a paragraph and a list, or the list items show as plain text. Go straight from greeting to the first item rather than using a list lead-in line.
-- **Scheduled review.** If the environment supports delayed reminders, schedule the step 9 check automatically. A default of about one hour is a reasonable start, adjusted for working hours and urgency. The reminder should name each staged draft, its conversation location, and where the draft text is stored, and allow a couple of follow-up checks at growing intervals before stopping.
-- **Lesson routing rule.** If you maintain several workflows, keep one short shared rule that says where lessons go (main workflow, reference file, or lessons log) and have each workflow read it before self-editing, so every workflow sorts lessons the same way.
-- **Versioning the workflow.** If the workflow lives in a file under version control, commit each improvement with a short, dated message so changes are easy to review or revert.
+- **Finding duplicates.** If your task system supports search, query the title and notes fields for the requester's name or organization before creating anything. Use the update operation on a match rather than deleting and recreating, so links and history are preserved.
+- **Staging drafts.** If authorized, stage the reply as an unsent draft in the right thread so finishing is one click, and keep the same text in the task notes. Check how the tool renders lists; some need a blank line before a list or the items show as plain text.
+- **Scheduled review.** If the environment supports delayed reminders, schedule the step 9 check after a delay you choose, adjusted for working hours and urgency. The reminder should name each staged draft, its conversation location, and where the draft text is stored, and allow a couple of follow-up checks at growing intervals before stopping.
+- **Shared lesson rules.** If you maintain several workflows, keep one short shared note on where lessons go and have each workflow read it before self-editing.
+- **Versioning.** If the workflow lives in a file under version control, commit each improvement with a short, dated message so changes are easy to review or revert.

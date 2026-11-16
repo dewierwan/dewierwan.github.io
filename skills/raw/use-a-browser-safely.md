@@ -45,7 +45,9 @@ Use the first route that fits. Do not skip ahead.
 - **Step-by-step tool calls** suit one click, one snapshot, or short tasks with little text.
 - **A standalone script** suits long text, many fields, heavy single-page apps, or repeatable runs.
 
-Interactive tool layers can crash on long text, parallel actions against one page, or heavy rendering. If you see an error like "page, context, or browser has been closed," switch to a script instead of rescuing the session. Save scripts and artifacts in a temporary folder the user agreed to, run headless unless a visible session is part of the plan, and pass secrets through environment variables or a secrets store. Never hard-code or log credentials.
+Interactive tool layers can crash on long text, parallel actions against one page, or heavy rendering. If you see an error like "page, context, or browser has been closed," switch to a script instead of rescuing the session. Run headless unless a visible session is part of the plan, and pass secrets through environment variables or a secrets store. Never hard-code or log credentials.
+
+**Give each task its own working folder.** Create a fresh, uniquely named folder inside the system's temporary area (or another location the user agreed to) at the start of each task, and keep that task's scripts, field records, and screenshots there. Pass the folder's path to your scripts rather than hard-coding a shared location. A single shared folder lets two sessions running at the same time overwrite each other's records and screenshots, so you might verify or report on the wrong run.
 
 ## 4. Protect identity, privacy, and the user's browser
 
@@ -84,7 +86,7 @@ for each c in controls:
   record { tag, type, role, label: accessibleLabel(c),
            required: c.required or c.ariaRequired,
            length: readValue(c).length }
-save to 'form-before.json'
+save to WORK_FOLDER + '/form-before.json'
 ```
 
 Watch for:
@@ -136,9 +138,9 @@ If verification still fails after one retry, do not move toward submission.
 
 ## 9. Two-phase run and pre-submit gate
 
-**Phase 1: prepare.** Fill, verify each field, save an after-state record and a full-page screenshot. Do not submit.
+**Phase 1: prepare.** Fill, verify each field, and save an after-state record and a full-page screenshot in the task's working folder. Do not submit.
 
-**Phase 2: commit.** If authorization exists, continue; otherwise show the prepared state and ask. Re-run the gate, then click the final control once. A script can use a `--submit` flag that is off by default.
+**Phase 2: commit.** If authorization exists, continue; otherwise show the prepared state and ask. Re-run the gate, then click the final control once, and save an after-submit screenshot in the same folder. A script can use a `--submit` flag that is off by default.
 
 **Pre-submit readiness gate.** Re-inspect the page. Submit only if all are true:
 
@@ -151,7 +153,7 @@ If verification still fails after one retry, do not move toward submission.
 
 **If any required field is empty, do not submit.** A confirmation request for an irreversible action should state the target, key values, audience, any cost, and what cannot be undone.
 
-**Worked example (fictional).** An assistant fills a grant application for the fictional Harbor Lane Arts Collective on the fictional Northwind Foundation portal. Inspection finds a required single-line title, a required rich-text summary with a hidden sync input beside it, a category dropdown that re-renders the form, and a date picker. It picks the category first, sets the date, fills the visible summary editor with keyboard input and blurs, then fills the title. Read-back shows the summary at 412 of 415 characters (collapsed blank lines, noted) and the title at 0 of 38; a keyboard retry gives 38 of 38. The page says entries cannot be edited later, so the assistant saves a screenshot and asks: "Ready to submit the Harbor Lane application under Community Arts, starting 1 March. It cannot be edited afterward. Submit?"
+**Worked example (fictional).** An assistant fills a grant application for the fictional Harbor Lane Arts Collective on the fictional Northwind Foundation portal. Inspection finds a required single-line title, a required rich-text summary with a hidden sync input beside it, a category dropdown that re-renders the form, and a date picker. It picks the category first, sets the date, fills the visible summary editor with keyboard input and blurs, then fills the title. Read-back shows the summary at 412 of 415 characters (collapsed blank lines, noted) and the title at 0 of 38; a keyboard retry gives 38 of 38. The page says entries cannot be edited later, so the assistant saves a screenshot in its working folder for this task and asks: "Ready to submit the Harbor Lane application under Community Arts, starting 1 March. It cannot be edited afterward. Submit?"
 
 ## 10. Confirm completion
 
@@ -171,6 +173,7 @@ A click is not proof. Look for a success message, a reference number, a new reco
 | A dropdown or checkbox wipes the form | Selection triggers a full re-render | Make re-rendering choices first, then fill text. |
 | Field looks filled but validation says empty | Hidden sync field was edited, or widget did not see a keystroke | Fill the visible editor; type and delete one character. |
 | Interactive tool crashes on long text, parallel actions, or heavy pages | Tool layer unstable for heavy work | Switch to a script; do not try to rescue the session. |
+| Screenshot or record does not match what you just did | Another session wrote to a shared folder | Use a unique working folder per task and re-run the check. |
 | Headless page blocked or different | Site varies by browser context | Direct interface; escalate only for an explicit task, read-only where possible. |
 | Wrong account or site says permission denied | Last-used profile or missing role | Select profile directly; ask user to sign in correctly; re-verify. |
 | Tool reports permission denied right after navigating | Page still loading | Screenshot, wait, retry in a fresh tab if needed. |
@@ -178,25 +181,26 @@ A click is not proof. Look for a success message, a reference number, a new reco
 | Session ends after a page-script request | Internal endpoint called without normal headers | Drive the UI or use a supported API. |
 | Clicks do nothing, or a read misses part of the page or comes back cut off | Panel ignores clicks or extraction; tool truncates output | Screenshot, click by position, read the panel directly, read long results in slices. |
 | Warning, sign-in, or consent page the tool cannot handle | Needs a person | Leave the tab open, ask the user, then re-verify. |
-| A known tricky site comes up again | Site has quirks already worked out | Read that site's reference note before starting. |
+| A known tricky site or admin task comes up again | Quirks already worked out | Read that site's or task's reference note before starting. |
 
 ## 12. Report and keep the procedure current
 
-Summarize the outcome in one or two sentences, point to the screenshot and after-state record, and do not paste every field value inline. Store artifacts only where the user can access them, and delete sensitive temporary files when done.
+Summarize the outcome in one or two sentences, point to the screenshot and after-state record in the task's working folder, and do not paste every field value inline. Store artifacts only where the user can access them, and delete sensitive temporary files when done.
 
 When a run reveals a reusable lesson, such as a new failure mode, a working pattern, or a missing tool, record it in your local copy without waiting to be asked. Prefer one table row with symptom, cause, and fix on the same row over new prose. Decide where each lesson belongs:
 
 - **General patterns** go in the main procedure.
-- **A recipe for one site** that runs longer than a short paragraph goes in a separate reference note, with a one-row pointer in the failure table saying when to read it.
+- **A recipe for one site or one admin task** that runs longer than a short paragraph goes in a separate reference note, with a one-row pointer in the failure table saying when to read it. Group related recipes for the same tool into one note rather than many rows.
 - **Dated incident notes** go in a separate log that normal runs do not read.
 
-Never record credentials or private site data. Merge older entries into general principles as the document grows, and update tool paths, profile mappings, and app-specific notes in place, since they go stale.
+Never record credentials or private site data. Merge older entries into general principles as the document grows, and update tool paths, folder conventions, profile mappings, and app-specific notes in place, since they go stale.
 
 ## Final audit checklist
 
 - [ ] The least invasive suitable route was used.
 - [ ] Visible-browser use was announced and kept to a fresh window or tab.
 - [ ] Account, environment, and target were verified before any write.
+- [ ] Scripts and artifacts lived in a unique working folder for this task.
 - [ ] Controls were inspected first and addressed by label, not position.
 - [ ] Every meaningful change was read back.
 - [ ] The pre-submit gate passed with no empty required fields and no unintended options ticked.
@@ -207,7 +211,7 @@ Never record credentials or private site data. Merge older entries into general 
 
 ## Optional extras
 
-**Clipboard, paste, and uploads.** Headless browsers often lack clipboard access, so embed values directly. A synthetic paste event works in some editors and is ignored by others, which may offer their own conversion method. Some upload buttons create a file input only on click and open the operating system's picker, which automation cannot drive; a small page-script override can attach that input to the page so you can set a file from an agreed temporary folder. If a preview appears, use its save control, since dismissing it can discard the upload.
+**Clipboard, paste, and uploads.** Headless browsers often lack clipboard access, so embed values directly. A synthetic paste event works in some editors and is ignored by others, which may offer their own conversion method. Some upload buttons create a file input only on click and open the operating system's picker, which automation cannot drive; a small page-script override can attach that input to the page so you can set a file from the task's working folder. If a preview appears, use its save control, since dismissing it can discard the upload.
 
 **Native confirmation dialogs.** After reloading a frozen tab, override the page's confirm function so it records the message and declines, click once, and read the message. If it is the change you intend, override again to accept only that exact message, then click. Pages often reload after an accepted change, which removes the override, so reapply it each time and never queue further clicks behind it.
 
@@ -219,4 +223,4 @@ Never record credentials or private site data. Merge older entries into general 
 
 **The user's own devices.** Local devices often serve unencrypted pages that trigger a browser warning; proceed past it only for devices the user owns and asked about. When away from that network, diagnose through the app's signed-in remote page, using the read-only logs, history, and event views it already exposes. If a source refuses access, accept that rather than looking for another way in.
 
-**Schema and data-sharing changes.** Before deleting a field, check the tool's dependency view and search automation scripts that may reference it by name, retire it in your own code first, then confirm the result through an API read. To share data with another system, get a plain yes, expose only a dedicated view that hides everything the destination should not receive, lock that view with a short note, and verify the new copy.
+**Schema and data-sharing changes.** Before deleting a field, check the tool's dependency view and search automation scripts that may reference it by name, retire it in your own code first, then confirm the result through an API read. To share data with another system, get a plain yes, expose only a dedicated view that hides everything the destination should not receive, lock that view with a short note, and verify the new copy. Keep the detailed steps for these admin tasks in one reference note for that tool, and read it before starting.

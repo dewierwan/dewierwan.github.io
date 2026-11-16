@@ -131,7 +131,7 @@ A real plan has a defined outcome, an honest baseline, a path, proof of capacity
 
 ### Move 1: Define outcomes
 
-For each candidate priority, ask: "What specifically is true on the last day of the month?" Push until the answer is measurable and plainly true or false. Limit the plan to three outcomes; one or two is usually better. Each should connect to a long-range goal or a chosen responsibility. If you drafted the statement and the user only nodded, ask them to restate or edit it in their own words.
+For each candidate priority, ask: "What specifically is true on the last day of the month?" Push until the answer is measurable and plainly true or false. Limit the plan to three outcomes; one or two is usually better. Each should connect to one of the current year's long-range goals or a chosen responsibility. If you drafted the statement and the user only nodded, ask them to restate or edit it in their own words.
 
 ### Move 2: Establish the current state
 
@@ -248,7 +248,7 @@ After the run, quietly look back at what went wrong or what the user corrected: 
 
 Before finishing, verify:
 
-- Review and planning ranges are explicit.
+- Review and planning ranges are explicit, and every read covered the whole range, first and last day included.
 - Evidence came before reflection.
 - Data caveats (missing sources, stale feeds, uneven comparisons) were checked and labeled before any strong verdict.
 - Verdicts used current targets and named one corrective action.
@@ -267,6 +267,7 @@ Before finishing, verify:
 - Starting with questions instead of evidence.
 - Judging against stale targets.
 - Treating missing or unsynced data as a quiet month.
+- Dropping the last day of the month, or a week that straddles month-end, because of a narrow date filter.
 - Confusing a list of events with a plan.
 - Overloading capacity and refusing to cut.
 - Forcing project deadlines when the real blocker is an unmade decision.
@@ -303,5 +304,7 @@ If the user says "skip to the practice," do the practice verdict, any signal fla
 
 - Hand bulky reads, such as a month of daily entries or calendar events, to a helper task that returns computed numbers and a short list of themes, not raw records. Give the helper the same field list from Step 1, and restrict it to the read tools it needs.
 - Ask the calendar summary for time off, travel, per-week meeting load, recurring series, and anomalies such as meetings inside time off or events with suspect time zones. Offer to clear those conflicts now and add them to a pre-time-off checklist in the plan.
+- Make date-range queries include the final day. Some systems handle "on or before" unreliably for dates, so filter for "before the day after the range ends" instead. For weekly records, extend the window a few days past month-end (adjustable) so a week that starts inside the month but ends after it is not dropped.
+- Refer to goal periods relatively ("this year's goals") rather than by a fixed year, so the workflow keeps working when the year changes.
 - For automated logs, sort by date and read the newest record first to confirm the feed is alive. If records carry a stable unique ID, use it to spot duplicates left by re-syncs or backfills before counting.
 - If the review and plan records live in the same table, save both in one write after approval.

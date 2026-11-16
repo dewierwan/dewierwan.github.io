@@ -91,7 +91,7 @@
 <h3>Step 4: Plan the new month</h3>
 <p>A real plan has a defined outcome, an honest baseline, a path, proof of capacity, trade-offs, outside pressure, a pre-mortem, and explicit approval. Each move below should make the user answer something hard. Treat brainstorms, voice-note dumps, and imported task lists as candidate priorities: each must survive Moves 1, 4, and 5 before it counts.</p>
 <h4>Move 1: Define outcomes</h4>
-<p>For each candidate priority, ask: &quot;What specifically is true on the last day of the month?&quot; Push until the answer is measurable and plainly true or false. Limit the plan to three outcomes; one or two is usually better. Each should connect to a long-range goal or a chosen responsibility. If you drafted the statement and the user only nodded, ask them to restate or edit it in their own words.</p>
+<p>For each candidate priority, ask: &quot;What specifically is true on the last day of the month?&quot; Push until the answer is measurable and plainly true or false. Limit the plan to three outcomes; one or two is usually better. Each should connect to one of the current year&#39;s long-range goals or a chosen responsibility. If you drafted the statement and the user only nodded, ask them to restate or edit it in their own words.</p>
 <h4>Move 2: Establish the current state</h4>
 <p>Size the gap with evidence, not mood. Look at the actual draft, pipeline, backlog, or baseline number. If the gap cannot be described, gather the missing evidence first.</p>
 <h4>Move 3: Work backward to a path</h4>
@@ -175,7 +175,7 @@
 <h3>Audit checks</h3>
 <p>Before finishing, verify:</p>
 <ul>
-<li>Review and planning ranges are explicit.</li>
+<li>Review and planning ranges are explicit, and every read covered the whole range, first and last day included.</li>
 <li>Evidence came before reflection.</li>
 <li>Data caveats (missing sources, stale feeds, uneven comparisons) were checked and labeled before any strong verdict.</li>
 <li>Verdicts used current targets and named one corrective action.</li>
@@ -194,6 +194,7 @@
 <li>Starting with questions instead of evidence.</li>
 <li>Judging against stale targets.</li>
 <li>Treating missing or unsynced data as a quiet month.</li>
+<li>Dropping the last day of the month, or a week that straddles month-end, because of a narrow date filter.</li>
 <li>Confusing a list of events with a plan.</li>
 <li>Overloading capacity and refusing to cut.</li>
 <li>Forcing project deadlines when the real blocker is an unmade decision.</li>
@@ -223,6 +224,8 @@
 <ul>
 <li>Hand bulky reads, such as a month of daily entries or calendar events, to a helper task that returns computed numbers and a short list of themes, not raw records. Give the helper the same field list from Step 1, and restrict it to the read tools it needs.</li>
 <li>Ask the calendar summary for time off, travel, per-week meeting load, recurring series, and anomalies such as meetings inside time off or events with suspect time zones. Offer to clear those conflicts now and add them to a pre-time-off checklist in the plan.</li>
+<li>Make date-range queries include the final day. Some systems handle &quot;on or before&quot; unreliably for dates, so filter for &quot;before the day after the range ends&quot; instead. For weekly records, extend the window a few days past month-end (adjustable) so a week that starts inside the month but ends after it is not dropped.</li>
+<li>Refer to goal periods relatively (&quot;this year&#39;s goals&quot;) rather than by a fixed year, so the workflow keeps working when the year changes.</li>
 <li>For automated logs, sort by date and read the newest record first to confirm the feed is alive. If records carry a stable unique ID, use it to spot duplicates left by re-syncs or backfills before counting.</li>
 <li>If the review and plan records live in the same table, save both in one write after approval.</li>
 </ul></article><footer><a href="/skills/LICENSE.txt">CC0</a></footer></main><script>document.querySelector('[data-copy]').addEventListener('click',async function(){try{const text=await fetch(this.dataset.copy).then(r=>{if(!r.ok)throw new Error();return r.text()});await navigator.clipboard.writeText(text);this.textContent='Copied'}catch{this.textContent='Open raw Markdown'}})</script></body></html>

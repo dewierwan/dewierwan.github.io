@@ -213,13 +213,14 @@ Several small options often beat one large rewrite. Be candid:
 
 ## 13. Handoff
 
-Provide:
+Put the notes first and the full draft last, so the user can copy the final block without picking through commentary. Before the draft, provide only:
 
 1. The recommended hook and one or two alternatives, each with a short strategic note.
-2. The completed draft, in the reply by default, or a link to the separate document if the user asked for one.
-3. Any unsupported claim, missing input, or soft spot, with an alternative.
-4. First-comment or link text, when relevant.
-5. One publishing reminder, such as replying promptly and substantively to genuine early comments.
+2. Any unsupported claim, missing input, or soft spot, with an alternative.
+3. First-comment or link text, when relevant.
+4. One publishing reminder, such as replying promptly and substantively to genuine early comments.
+
+Then end the reply with the complete draft. If the user asked for a separate document, leave the draft out of the chat and end with the document link instead.
 
 ## 14. Worked example (invented)
 
@@ -262,4 +263,4 @@ Provide:
 - **Distribution hypotheses to test.** Commonly reported patterns include: saves and thoughtful comments counting more than likes, reference-style posts (frameworks, checklists) being saved more, document or carousel formats performing well for structured material, outbound links in the body reducing reach, engagement bait being penalized, the first hour of replies mattering, and consistent topic focus helping reach. Platforms change often. Treat these as hypotheses, compare results across several posts, and suggest a carousel when content is structured enough to suit one.
 - **Hashtags.** Many professional audiences now read heavy hashtag use as influencer style. Let the user decide; a neutral default is none or very few.
 - **Learning from feedback.** If your assistant can keep notes, maintain a short style record of patterns the user consistently changes: rejected hooks and why, cut words, structural edits, missing inputs that should be asked for upfront, and hooks that performed well. Before recording a lesson, decide where it belongs: in the main workflow if it should shape every post, in a separate reference file if it is detailed material such as examples or platform notes, or in a running lessons log if it is still tentative. If you have set a rule for this placement, follow it. Update only when a session reveals a real pattern, show the user what changed, and make no change after a clean run.
-- **Separate document delivery.** If the user wants drafts saved outside the chat, agree on a folder and title format once (for example, "[date]: Post: [topic]"), keep hook shortlists in the conversation, and end the handoff with the document link.
+- **Separate document delivery.** If the user wants drafts saved outside the chat, agree on a folder and title format once (for example, "[date]: Post: [topic]"). Keep hook shortlists and handoff notes in the conversation, leave the full draft out of the chat, and end the handoff with the document link.

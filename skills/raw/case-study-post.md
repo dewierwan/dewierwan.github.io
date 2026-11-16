@@ -14,7 +14,7 @@ Use this workflow to turn authorized source material about a person's career, le
 - Write three two-sentence hooks (Discovery, Identity collision, Stakes-led) and recommend one. Default to Discovery when the reader shares the subject's old blocker.
 - Draft about 160 to 220 words: hook, before-state, named program, mechanism and outcome, current work, optional cost, CTA in full second person.
 - Strip machine-sounding phrasing: filler intensifiers, corporate verbs, empty transitions, unsupported praise, more than one em dash.
-- List everything that needs the subject's approval (figures, quotes, unreleased work, harsh claims) and anything still missing.
+- Reply with short notes first (hook choice, items needing the subject's approval, anything still missing) and the full draft last, so the draft is easy to copy.
 
 ## 1. Authorization and inputs
 
@@ -191,9 +191,9 @@ Before sending, check:
 - The CTA stays in second person and asks for one action.
 - At most one em dash; no unsupported superlatives or filler.
 
-By default, put the full draft directly in the reply. If the user asks for a document instead, create it in their chosen document system with a clear dated title, such as `YYYY-MM-DD: Case study post, [first name]`, and link it.
+By default, deliver everything in the reply, with the notes first and the full draft last. Ending on the draft means the user can copy it in one piece, for example with a copy-last-output command, without trimming notes off the end. If the user asks for a document instead, write the draft there, in their chosen document system with a clear dated title such as `YYYY-MM-DD: Case study post, [first name]`, and end the reply with the link.
 
-Alongside the draft, give:
+Before the draft, give only:
 
 - The recommended hook and the two alternates, one line each
 - The three quote-card options with a recommendation

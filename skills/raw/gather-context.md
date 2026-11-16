@@ -134,7 +134,8 @@ Match length to depth and keep prose blocks short. This is a document to scan an
 ## 6. Deliver the brief
 
 - **Short brief (fits on screen):** give it directly in the reply.
-- **Long or reference brief:** save it where the user keeps generated documents, following their naming convention. If none exists, use the date plus a concise, specific, human-readable headline, such as "[YYYY-MM-DD]: Options for next year's partner program", not a filename-style slug or a type suffix. Reply with a compact summary of key findings and the link.
+- **Long or reference brief:** still give it directly in the reply as the final block. Create a separate document only when the user asks for one.
+- **When the user asks for a document:** save it where they keep generated documents, following their naming convention. If none exists, use the date plus a concise, specific, human-readable headline, such as "[YYYY-MM-DD]: Options for next year's partner program", not a filename-style slug or a type suffix. Reply with a compact summary of key findings and the link.
 
 Make the brief (or summary plus link) the final part of the reply, with no closing meta-summary after it. Put any follow-up offer, such as "Want me to draft the outreach email?", before the brief so the deliverable stays easy to copy.
 
@@ -167,7 +168,7 @@ The assistant classifies the subject as an organization with an existing relatio
 | Evidence | Every sourced claim has a verified, clickable link; no invented URLs |
 | Conflicts | Contradictions resolved or clearly flagged |
 | Gaps | Unavailable or empty relevant sources reported; skipped sources not implied as checked |
-| Delivery | Output in the right place; brief is the final block |
+| Delivery | Brief is in the reply as the final block; a separate document only if the user asked for one |
 
 ## 9. Common failure modes
 
@@ -179,6 +180,7 @@ The assistant classifies the subject as an organization with an existing relatio
 | Trusting stale profiles, notes, or memory | Cross-check against dated, current sources |
 | Reading only part of a document or record | Open hidden sections, tabs, and threads |
 | Covering a gap with a nearby source | Report the gap explicitly |
+| Creating a document nobody asked for | Deliver in the reply; create a document only on request |
 
 ## Optional extras
 

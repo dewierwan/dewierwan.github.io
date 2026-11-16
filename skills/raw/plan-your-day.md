@@ -31,6 +31,8 @@ Then gather what exists, in one pass (or ask the user to paste it):
 
 On a same-day "what now?" run, look at today's tasks in every status, including done. An open-tasks list says nothing about what shipped, so never call an item unfinished just because it is missing.
 
+An empty result is also not proof of a clear day. If tasks live in a database or spreadsheet, filter dates with date functions (for "due by the target day", use "due before the day after the target") rather than comparing dates as text; text comparisons can silently return nothing. If a query comes back empty when you expected items, check the filter before reporting "no overdue tasks".
+
 If the user keeps a journal or notes marked off limits, don't read them, even for context. If a source fails, say which one and plan from what the user tells you. If the weekly plan is empty, check once for informal week goals elsewhere, then ask: "Plan the week first, or proceed without weekly goals?" If you proceed, tie the MIT to a longer-range goal and flag the gap. Never invent goals.
 
 ## 2. Check the previous day
@@ -166,7 +168,7 @@ If the user skips calendar and task updates, still write the plan; the next revi
 - **Stalling on partial answers.** Proceed: do the safe writes, list the rest as pending, and change no task without a yes.
 - **Going soft.** Be direct: "You named this yesterday too. What's different today?" Call a topic a topic, not an outcome.
 - **Stale snapshot.** If the user edits the calendar mid-session, re-read before touching it.
-- **Reading absence as failure.** Check every status, or ask, before calling an item unfinished.
+- **Reading absence as failure.** Check every status, or ask, before calling an item unfinished. Likewise, an empty task query may be a broken date filter, not a clear day.
 
 ## Worked example
 
@@ -179,6 +181,7 @@ The assistant proposes one: "Launch copy final and sent to the designer by early
 - **Run modes.** Switch from the full flow when the user signals it, and say which steps you skipped. *Fast mode:* the user gives an ordered list; write it in their order around fixed commitments and keep a two-line pre-mortem. *Bedtime-bound:* one proposal with at most three numbered questions, then write. *Going to sleep:* ask nothing; use the blocks they already set; save the plan with a self-contained first line and list open choices as pending.
 - **Forward flags.** For a deadline that can't fit tomorrow but must land within a few days, add a plan section naming the due date, how long it has been open, and which day's plan must surface it.
 - **Sleep data.** If sleep syncs from a tracker, records are often filed under the bedtime date, so last night usually carries yesterday's date, not today's. When two sources record the same night, use the one the user trusts more (often a dedicated tracker over a general health aggregator). No record usually means the sync is behind: say so and ask.
+- **Date queries in connected databases.** When filtering by date, prefer the tool's date functions (same day, before, after, date difference) over text comparisons, and express "due by day X" as "due before the day after X". Make sure the field you filter on is a date field; comparing a date field with a plain string can return nothing without any error.
 - **Connected signals.** With connected tools, add to the brief: old unanswered email, stale saved action items, messages awaiting a reply (sender, channel, and age only), and for people who hire, their own upcoming interviews and how long candidates have waited at each stage. Long-waiting items make strong supporting candidates; if a source is down, name it. Because these touch other people's messages and records, use them only for the user's own planning with clear authorization, read the minimum needed, leave out unrelated or sensitive details, and keep results in the private plan.
 - **Tidy idle sessions.** If your setup can list assistant sessions idle for a long time, list them at the NOT today step (idle time and what each was for), recommend closing finished ones, close only those the user names, and confirm in one line. Closing should keep history and stop only running processes. Skip this when the user is going to sleep.
 - **Improve the workflow.** After each run, quietly note what went wrong or what the user corrected; don't ask the user how to improve the workflow. Before editing anything, decide where the lesson belongs: a general rule goes into this workflow, tool or data details go into a separate reference note, and one-off incidents go into a short dated lessons log rather than the workflow itself. When a rule changes, fold it into an existing rule instead of adding a new paragraph, and consolidate before the workflow grows past a length you choose.

@@ -36,7 +36,7 @@ Ask these once, then reuse the answers until the user changes them.
 | Planning day | End of the working week |
 | Where goals, tasks, and notes live | Wherever they already live, or the conversation |
 | Calendar and time zone | Write to one calendar only; use the user's current time zone |
-| Longer-term goals | The longest active level, plus the current quarter or month |
+| Longer-term goals | The longest active level for the current year, plus the current quarter or month |
 | Working hours | Count only hours the user actually works |
 | Focus window and daily focus capacity | Ask which part of the day suits deep work and how many focused hours are realistic; if unsure, start with a few hours |
 
@@ -61,7 +61,7 @@ First gather the **constraints**: deadlines, meetings, backlog, energy, and capa
 - **At most three weekly goals; one is ideal.** If the user proposes more, push back: merge, demote to an intention, or defer. With three, label one as the stretch goal.
 - **Every goal has a definition of done someone else could verify.** For example: "Sent the second draft of the proposal and budget to the reviewer." A direction is not a goal. A yes/no goal that nobody scoped also fails, because nobody estimated the work.
 - **Leave a buffer unplanned.** If goals do not fit, cut or shrink a goal. Never shrink estimates to make them fit.
-- **Every goal links to a longer-term goal.** If the link is weak, reject the goal. If the user has set longer-term goals aside on purpose, write "Links to: deferred" and move on.
+- **Every goal links to an active longer-term goal for the current period**, not one that has expired or belongs to last year. If the link is weak, reject the goal. If the user has set longer-term goals aside on purpose, write "Links to: deferred" and move on.
 - **No goal proposals before two real interview rounds**, unless the user asks you to skip questions and decide.
 - **Keep an alignment ledger** and never bring back an assumption the user corrected.
 - **Approve before writing.** Goals, tasks, and time blocks are proposed, approved, then written, one at a time, as each decision is made.
@@ -96,7 +96,7 @@ If the user already answered these elsewhere, quote their answers back and ask o
 
 After the review, ask: "What must still ship before the new week starts?" That is this week's work, not a goal for next week. Then read whichever sources the user has authorized, ideally in one pass:
 
-- **Plans and goals:** recent weekly plans, month or quarter plans, active goals, and how often each goal's deadline has moved.
+- **Plans and goals:** recent weekly plans, month or quarter plans, active longer-term goals for the current year, and how often each weekly goal's deadline has moved.
 - **Plan of record:** a recent action list or team goal shortlist the user already committed to.
 - **Tasks:** overdue and due next week, with how long each has been open. For large "someday" lists, read titles and age only.
 - **Daily signals:** recent ratings, focus hours, or daily plans, if tracked.
@@ -170,7 +170,7 @@ Before proposing each goal, ask yourself: did the user call this important, or a
 
 Propose the smallest set that fits, usually one or two, a sentence each. Check each one is:
 
-- **Linked:** name the longer-term goal.
+- **Linked:** name the active longer-term goal.
 - **Verifiable:** 2-4 concrete outputs; narrow a direction into a named set.
 - **Scoped:** sub-tasks with rough hours against free time minus the buffer. Under an hour is a task, not a goal.
 - **Waited on:** "Waiting: [person], [output], [day and time]", for example "Waiting: the board treasurer, budget draft, Wednesday afternoon." If nobody is waiting, draft the message that asks them to expect it, for the user to send. Goals only the user waits on tend to slip.
@@ -284,7 +284,7 @@ Add these modules when the user wants them. Each is independent.
 
 ### Health and energy check
 
-Opt-in only, and only to judge capacity. Summarize sleep and activity against the user's own targets and warning conditions, naming each condition that fired with numbers and days in plain words. Count completed sessions from the activity record, not the plan. Honor habits the user has deliberately paused, asking at most once if they are back. If a commitment is faltering, ask up to three follow-ups until they name an action with a day, time, and cue: "Walk at lunch Mon, Wed, Fri when the lunchtime reminder goes off," not "I'll move more." Prefer small changes, and if the same fix failed last week, ask what is different.
+Opt-in only, and only to judge capacity. Summarize sleep and activity against the user's own targets and warning conditions, naming each condition that fired with numbers and days in plain words. Count completed sessions from the activity record, not the plan. Drop any tracker or habit the user has stopped or deleted, and honor habits they have deliberately paused, asking at most once if they are back. If a commitment is faltering, ask up to three follow-ups until they name an action with a day, time, and cue: "Walk at lunch Mon, Wed, Fri when the lunchtime reminder goes off," not "I'll move more." Prefer small changes, and if the same fix failed last week, ask what is different.
 
 ### Meeting cut pass
 
@@ -312,4 +312,4 @@ If the user asks, look across recent sessions for corrections that repeat. Skip 
 
 ### Structured stores
 
-If goals and tasks live in a database, refer to fields by stable identifiers rather than display names, which drift. A computed "days since created" field makes a simple slippage signal. Confirm the exact text format that renders checklists in your tool, and batch writes only after decisions are made.
+If goals and tasks live in a database, refer to fields by stable identifiers rather than display names, which drift. Filter longer-term goals by the current year computed from today's date rather than a hard-coded year, so the query does not go stale. A computed "days since created" field makes a simple slippage signal. Confirm the exact text format that renders checklists in your tool, and batch writes only after decisions are made.

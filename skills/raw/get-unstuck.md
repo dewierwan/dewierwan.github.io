@@ -178,10 +178,10 @@ When the user returns:
 
 ## 10. Log the session (with consent)
 
-On first use, ask whether the user wants sessions logged and where to keep the log (a note, a document, or their chosen system). If they say no, skip this step. If yes, add an entry after each session in a stable format, using an unambiguous date:
+On first use, ask whether the user wants sessions logged and where to keep the log (a note, a document, or their chosen system). If they say no, skip this step. If yes, add an entry after each session in a stable format, using a date format that cannot be misread:
 
 ```
-## D MMM YYYY HH:MM - <task in 3-5 words>
+## <date and time> - <task in 3-5 words>
 
 - State start: tired <N>, dread <N>, unclear <N>, distraction <N>
 - Dominant problem: <tired / dread / unclear / distraction / compound / capacity>

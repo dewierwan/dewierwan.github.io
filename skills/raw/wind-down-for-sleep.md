@@ -218,7 +218,7 @@ Lookup principles:
 - **Request only the fields you need.** Use an explicit list of fields on every record read, and leave private journal text off that list. Never read, quote, reconstruct, or write into it.
 - **Confirm the review from a completion signal.** Use the review's own save confirmation from this session, or a dedicated rating or done marker. A saved free-form entry without that signal does not mean the review finished.
 - **Test presence, not truthiness.** A zero rating is a valid, completed rating.
-- **Match dates loosely** and expect more than one record per day. Exact-match date filters can miss records that exist. Check each matching record instead of assuming a single one.
+- **Match dates by calendar day** and expect more than one record per day. Exact-match text filters can miss records that exist, so compare dates with a date-aware check at day granularity rather than as text. Use the same lookup method as your other planning and review workflows so they find the same records. Check each matching record instead of assuming a single one.
 - **Query calendars in local time.** Give the morning window an explicit local offset, then still convert each returned event to local time before comparing.
 - **Degrade quietly.** If a source fails, say so once, compute from what you have plus anything the user mentioned, and leave repair for daytime.
 

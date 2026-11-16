@@ -14,7 +14,7 @@ Use this workflow to take a non-trivial build, integration, automation, process,
 - Write three to five lightweight evaluation criteria before generating ideas.
 - Generate genuinely different options, always including "do nothing or defer" and a non-code option, plus small and larger technical versions.
 - Compare options against the criteria in a short table and make one clear recommendation with reasons. Give it directly in the reply.
-- If the user asked for analysis only, stop there. Otherwise plan, implement, verify, and report what was tested and what was not.
+- If the user asked for analysis only, stop there. Otherwise, for larger work, give a short plan in the reply and get approval, then implement, verify, and report what was tested and what was not.
 
 ## When to use it
 
@@ -137,7 +137,9 @@ If this is analysis-only work, stop here.
 
 ## 7. Plan, implement, and verify
 
-For larger work, create an implementation plan before changing the system. Include scope, ordered steps, affected components, migration and rollback strategy, test strategy, deployment steps, and follow-up ownership. Put the plan somewhere reviewers can easily read, comment on, and edit.
+For larger work, write an implementation plan and get the decision-maker's approval before changing the system. Include scope, ordered steps, affected components, migration and rollback strategy, test strategy, deployment steps, and follow-up ownership.
+
+As with the proposal, give the plan directly in your reply unless the user asks for a shared document; if they do, use the same date-prefixed title with "plan" added (for example, `9 Oct 2026: Solve - topic plan`). Keep the plan visible where the reviewer can read and respond to it, rather than relying on an assistant's built-in planning mode.
 
 Implement the approved solution using project conventions. Run relevant automated tests, static checks, and focused manual verification. Confirm the result against the evaluation criteria, including compatibility, privacy, security, and failure behavior.
 
@@ -163,13 +165,14 @@ Keep the handoff focused on outcomes and operationally useful detail. Avoid bury
 - Leaving out "do nothing" when the priority is weak.
 - Presenting several options without a recommendation.
 - Slipping a hard-to-reverse commitment into implementation without an explicit decision.
+- Starting larger work before the plan has been approved.
 - Writing long proposals that bury the recommendation.
 - Sending the reader off to a separate file or document they did not ask for instead of answering in the reply.
 - Reporting "done" without saying what was verified.
 
 ## Optional extras
 
-- **Shared documents.** If the user asks for the proposal as a shared document, create it in their chosen documentation system with the date-prefixed title, following their usual conventions for location and sharing, and end your reply with a link. For larger implementation plans, editable shared documents are usually easier for reviewers than plans kept inside an assistant's private planning mode. Plans for pure code changes tied to a single branch can stay with the code if the user prefers.
-- **Repository conventions.** If the user's practice is to commit and push after completing work, follow it, including any commit message prefixes (for example, feature, fix, or maintenance tags). Otherwise ask before publishing.
+- **Shared documents.** If the user asks for the proposal or plan as a shared document, create it in their chosen documentation system with the date-prefixed title, following their usual conventions for location and sharing, and end your reply with a link. Plans for pure code changes tied to a single branch can stay with the code if the user prefers.
+- **Repository conventions.** If the user's practice is to commit and push after completing work without asking, follow it, including any commit message prefixes (for example, feature, fix, or maintenance tags). Otherwise ask before publishing.
 - **Wide idea generation.** For problems that need many candidates, run a separate brainstorm aiming for a large list (for example, ten or more ideas, adjustable) before narrowing to the few worth comparing.
 - **Decision records.** For hard-to-reverse choices, keep a short record of the options considered, the choice, the rationale, and what would cause you to revisit it.
