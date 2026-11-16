@@ -296,7 +296,7 @@ Use the user's explicit instruction when they give one. Otherwise, if access is 
 
 - **New:** No matching record exists, or the user asks to start fresh.
 - **Resume:** A matching record is open and the user wants to keep thinking.
-- **Commit:** An open record exists and the user says they are ready to decide.
+- **Commit:** An open record exists and the user says they are ready to decide, or reports that they already committed somewhere else.
 - **Review:** A resolved record has reached its review date and has no completed outcome assessment, or is still marked "too early."
 
 Resolution status means whether the decision was made, not whether the outcome was good. For a non-binary question, mark it resolved once a direction has been chosen.
@@ -412,6 +412,10 @@ Use a testable prediction:
 Use the user's chosen register, document, or private file. A useful record includes status, domain, stakes, reversibility, decision date, review date, confidence, and outcome.
 
 For an **open** decision, record context, options, and new inputs, but leave commitment sections blank. For a **commitment**, mark it resolved, record the actual decision date, set confidence, and fill the commitment sections. Do not infer missing user-owned fields.
+
+**Commitments made elsewhere.** Sometimes the user makes the call outside the conversation, for example by posting an acceptance in a team channel or sending an email. Treat that message as the user's own words for "My choice and why," and link or cite it. In the thinking log, note any terms in that message that differ from where the user last landed in the record. Leave the prediction, confidence, reversal conditions, and worries unfilled, and ask for all of them in one short block. Never infer them from the message.
+
+*Fictional example:* At Fernhollow Analytics, a director's record shows them leaning toward a part-time contract with a vendor. They then post in the team channel, "Accepted the vendor offer, full-time for six months." The record quotes that post as their choice, the thinking log notes the shift from part-time to full-time, and the assistant asks one question: "What do you predict by the six-month mark, how confident are you, what would make you reverse, and what worries you most?"
 
 Suggested default review timing, adjustable: about one month for reversible decisions, three months for hard-to-reverse decisions, and six months for direction-setting decisions. Prefer a meaningful event or trigger if the user names one.
 
@@ -2120,6 +2124,150 @@ The same concept-review-improve loop works for app, bot, page, or group icons:
 ### Learn from outcomes
 
 After the user chooses, accepts a prompt, or stops iterating, capture durable lessons only. Strong signals: they rejected your recommendation (diagnose whether the read, composition, mood, or generation failed), they rewrote part of a prompt, they asked for color specifics you missed, they reused the workflow for a new destination with different size or crop rules, or an image failed in a way the prompt should have prevented. Separate their feedback from your own taste, keep lessons general rather than tied to one article, and make no change after a clean run.
+
+
+---
+name: before-after-feedback
+description: Researches a draft's topic, then gives before, after, and why feedback, one entry per change. Use when asked for before/after feedback or to check a draft against the literature.
+---
+
+# Give before and after feedback
+
+This workflow researches a draft's topic and then returns feedback as a numbered list of separate changes. Each change shows the current text, the replacement, and the reason, so the author can accept or reject each one on its own. Because the research comes first, the feedback catches errors of substance and not only wording.
+
+## Quick version
+
+- Paste the draft and any sources you have. Ask the assistant to read the draft twice: once for the argument, once sentence by sentence.
+- Have it check each claim against its cited source for three common slips: who said it, what a number actually measures, and how strong the claim is. If it cannot open a source, it should list the claims for you to check.
+- Propose a change only where it fixes a factual error, a misstated argument, a missing step, an unsupported claim, a weak answer to an objection, or a sentence that needs rereading. Skip changes that are only a matter of taste.
+- Write one entry per change: **Before** (exact current text), **After** (ready to paste), **Why** (one sentence).
+- Write the After text in the author's voice, and flag any claim or opinion the assistant added that the author did not already hold.
+- Open with a short verdict and an honest list of what was read. Put the entries and any structural notes at the end.
+
+## 1. Set the scope
+
+The input is the draft (or access to it), plus usually the topic or the sources to read. If there is no draft, ask for it before doing anything else.
+
+This is feedback only. Do not edit the author's document unless they ask. This workflow is for improving an existing draft; it is not for writing a document from scratch or for short messages like email, which call for a drafting workflow instead.
+
+## 2. Read the draft and everything it cites
+
+Read the draft twice. The first pass is for the overall argument: what is the author trying to show, and in what order? The second pass is sentence by sentence.
+
+Then open every source the draft links or cites and check that each sentence says what its source says. Three mismatches come up again and again:
+
+- **Attribution.** One person's prediction or opinion presented as an established fact.
+- **What a number measures.** A figure about one group or quantity presented as if it were about another, for example a share of respondents turned into a share of the whole population.
+- **Strength.** A hedged or qualified claim in the source turned into a confident one in the draft, such as "may help" becoming "solves."
+
+For any number or claim with no source, search for one. If you cannot find support, say what you did find instead of silently dropping the question.
+
+## 3. Research the topic
+
+Read enough to judge whether the draft's account is right, complete, and current. Cover three things:
+
+- **The standard accounts.** Find the works the field treats as the origin of each idea the draft uses. A common error is to name a concept correctly and then explain it with a different mechanism from the one its originators described.
+- **The strongest objections,** and how the idea's proponents have answered them.
+- **What changed recently.** Check today's date, then look for recent evidence the draft could use or that contradicts it. Adjust how far back "recent" means to suit the field.
+
+Read the primary page for anything an entry will depend on. Search summaries and snippets are fine for finding leads but not for supporting a correction. Keep track of which sources you read in full, which in part, and which only as summaries, because the reply must say so.
+
+If your assistant has no browsing, work from the sources the author pasted and from general knowledge, say plainly that this knowledge may be dated or incomplete, and mark every correction that depends on unchecked facts.
+
+## 4. Choose the changes
+
+Propose a change only where it fixes one of these:
+
+- a factual error
+- a mechanism or argument that misstates its source
+- a missing step the reader needs to follow the argument
+- a claim with no support
+- an objection answered weakly or not at all
+- a sentence a reader would have to read twice
+
+Leave alone anything that is merely different from how you would write it. The author should be able to trust that every entry is worth their time; padding the list with preferences erodes that trust.
+
+Compare parallel sections. When two sections cover similar ground and one has something the other lacks, such as supporting evidence or a reply to an objection, propose the missing piece as an addition to the weaker section.
+
+## 5. Write one entry per change
+
+Write one entry per change, not one per paragraph, so each can be taken or left independently. Use this template:
+
+```
+**[N]. [Short label for the change]**
+
+**Before:** [exact text in the draft now]
+
+**After:** [text that would replace it]
+
+**Why:** [one sentence]
+```
+
+Rules for each part:
+
+- **Before** is copied character for character, so the author can search for it in their document. Quote the smallest span that contains the change: a clause or a sentence, not the whole paragraph.
+- **After** is ready to paste. Keep the author's links. Keep it the same length or shorter unless the change is an addition.
+- **Why** is one sentence. When the reason is a fact, name the source. Add a second sentence only to tell the author something they must check.
+- **An addition** uses `**Before:** (nothing; add after "...")`, quoting the text it follows.
+- **A cut** uses `**After:** (cut)`, or `(cut, or add a source)` when the problem is an unsupported claim.
+- **Two changes in the same sentence** become a single entry that gives the final sentence and both reasons. Two separate entries would hand the author two conflicting versions of one sentence.
+
+Number entries continuously in the order the text appears, grouped under the draft's own section headings.
+
+Invented example, from a draft essay about shorter work weeks that cites a fictional report by the Halden Work Institute:
+
+**4. Share of firms, not size of gain**
+
+**Before:** productivity rose 40% in the Halden pilot
+
+**After:** 40% of firms in the Halden pilot reported higher productivity
+
+**Why:** The Halden report gives the share of firms reporting any gain, not the size of the gain.
+
+**5. Answer the coverage objection**
+
+**Before:** (nothing; add after "most staff preferred the new schedule.")
+
+**After:** Firms that needed daily customer coverage handled it by staggering days off across teams.
+
+**Why:** The report's own limitations section raises coverage as the main objection, and the draft does not address it. This adds a point you did not make; check you agree.
+
+## 6. Write the After text in the author's voice
+
+The author will publish this under their own name, so the After text must sound like them. If they have a style guide, voice notes, or earlier writing, read it before writing any After text. Otherwise, match the draft's own sentence length, vocabulary, and tone.
+
+Never put a belief or argument in the author's mouth. When an After adds a claim, rebuttal, or judgment that is yours and not already theirs, say so in the Why and ask them to confirm they agree.
+
+Every link in an After must be one the author supplied or one you actually opened during this review. Never construct or recall a link from memory.
+
+## 7. Order the reply
+
+1. **Verdict.** One or two sentences: what works, and the two or three changes that matter most, by number.
+2. **What you read.** What you read in full, what you read in part or only as a summary, and what you could not open, with links. Never imply you read everything on a topic.
+3. **The entries.**
+4. **Structural changes.** A short list of points that do not fit a before and after shape, such as reordering sections or making two parallel sections follow the same order. Omit this when there are none.
+
+The entries and structural changes come last so the author can copy them in one block.
+
+## 8. Check before sending
+
+- Is every Before an exact match for the draft?
+- Does every After read correctly when dropped into the surrounding text, including grammar at both edges?
+- Does any After rely on a fact you saw only in a search summary? Check it at the source or flag it in the Why.
+- Did any entry add an opinion the author did not state, without flagging it?
+- Does every entry fix one of the listed problem types, rather than a style preference?
+
+## Optional extras
+
+- **Connected document tools.** If your assistant can read the author's document directly, use read-only access and still deliver feedback as a list. Leave comments or suggested edits in the document only if the author asks.
+- **Reading log.** For long reviews, keep a simple log while researching so the "What you read" section is accurate:
+
+| Source | How read | Used for |
+| --- | --- | --- |
+| [Report or article title] | [Full / partial / summary only / could not open] | [Entry numbers it supports] |
+
+- **Large drafts.** For very long documents, review one section at a time but keep entry numbering continuous across sections, and run the parallel-section comparison once all sections are done.
+- **Adjustable defaults.** The one-sentence Why, the "same length or shorter" rule for After text, and how far back to look for recent evidence are sensible defaults. Change them to suit the author and the field.
 
 
 ---
@@ -5377,7 +5525,7 @@ These steps work even with a plain chat assistant that walks you through the tas
 - **Check where you are.** Before changing anything, open the account or profile page and confirm the signed-in account, the workspace or environment, and the exact item you will change. If a page says you lack permission, you are probably in the wrong account.
 - **List the fields before typing.** Note each field's label, whether it is required, and what kind it is (one line, multi-line, rich text, dropdown, checkbox, date). Make dropdown, checkbox, and date choices first, because they can reset the form.
 - **Read back every field.** After entering text, click somewhere neutral on the page and check the value is still there and complete.
-- **Stop before the final button.** Confirm every required field is filled, the values are right, and whether the action can be undone. Take a screenshot. For payments, sends, deletions, sharing data elsewhere, or "cannot be edited" forms, get a clear yes first.
+- **Stop before the final button.** Confirm every required field is filled, the values are right, and whether the action can be undone. Check the final dialog for extra options, such as also emailing people. Take a screenshot. For payments, sends, deletions, sharing data elsewhere, or "cannot be edited" forms, get a clear yes first.
 - **Look for proof afterward.** A confirmation message, reference number, or saved record. If you see an error, check whether the action happened before retrying.
 
 ## 1. Follow the central rule
@@ -5423,7 +5571,7 @@ When the task touches private messages, records, or information about other peop
 
 **Account preflight gate.** Before any write, answer: Which account is this (read it from a reliable account page)? Which environment or workspace? What exact item will change? If any answer is unclear, stop and ask. If your setup uses a verification marker that unlocks write actions, set it only after the check has actually passed, and record the evidence.
 
-**Permission denied means wrong account, not a puzzle.** Admin consoles often need a separate administrative account. Do not hunt for workarounds; ask the user to sign in with the right account, reload, and re-run the check.
+**Permission denied means wrong account, not a puzzle.** Admin consoles often need a separate administrative account. Do not hunt for workarounds; ask the user to sign in with the right account, reload, and re-run the check. Separate this from a "permission denied" raised by your automation tool right after a navigation: that is often transient while the page loads. Take a screenshot, wait, and retry, in a fresh tab if needed.
 
 ## 5. Set the task boundary and authorization
 
@@ -5464,6 +5612,7 @@ Watch for:
 | Single-line input | Normal fill | Line breaks removed; length limits. |
 | Multi-line text area | Fill, then move focus to the page body | Some apps commit only on blur. |
 | Rich-text editor | Click, select all, delete, insert text with keyboard-style input, blur | Direct DOM writes may be ignored. |
+| Code editor widget | Set the value through the widget's own interface, then type and delete one character | The form may not register a value it did not see typed. |
 | Dropdown or combobox | Choose by exact visible option text, wait to settle | Selection can re-render the form. |
 | Checkbox or radio | Read state first; click only if it must change | Clicking toggles a correct value. |
 | Date or time picker | Set values, close by clicking neutral background, check the summary | Close or clear buttons may wipe values. |
@@ -5472,6 +5621,8 @@ Watch for:
 - **Blur after every rich-text field.** Otherwise the next edit can re-render earlier editors from stale state, and only the last field survives.
 - **Order matters.** Do re-rendering choices first, then text. Re-inspect after each choice, and re-check tricky widgets after later edits.
 - **If a click does nothing,** take a screenshot, click by position, and confirm the view changed. Slow checks may take a while; wait rather than clicking again.
+- **Native confirmation boxes block automation.** A browser-level confirm dialog can freeze the tab so clicks and screenshots time out. Reload to recover, then read the message before acting (see Optional extras). Dialogs drawn inside the page itself are safe to handle normally.
+- **Check summaries before creating.** When a setup step shows a summary, such as a count of permissions, items, or recipients, confirm it matches intent before continuing.
 - **Selectors drift.** Before clicking send or submit, read the composed content back to confirm it landed where you expected.
 
 ## 8. Verify after every fill
@@ -5506,6 +5657,7 @@ If verification still fails after one retry, do not move toward submission.
 - [ ] Dropdowns, dates, recipients, and attachments are correct.
 - [ ] No validation errors or unsaved-change notices remain.
 - [ ] The button about to be clicked is the expected one, not a similar destructive option.
+- [ ] The final confirmation dialog has no option ticked that widens the action, such as also emailing subscribers, unless that was intended.
 
 **If any required field is empty, do not submit.** A confirmation request for an irreversible action should state the target, key values, audience, any cost, and what cannot be undone.
 
@@ -5516,8 +5668,9 @@ If verification still fails after one retry, do not move toward submission.
 A click is not proof. Look for a success message, a reference number, a new record, or a setting that persists after a safe reload.
 
 - **Errors can be cosmetic.** Some apps show "something went wrong" after the work finished. Check before retrying, since blind retries can duplicate sends, payments, or records.
-- **Frozen pages.** A blocking pop-up can freeze the tab. Ask the user to respond to it, then continue.
-- **Use an independent channel.** Confirm through an API read, a public lookup, or the authoritative source rather than a cached copy. For access rules, a harmless request that exercises the setting without signing in or changing anything, compared with a case that should be rejected, is good evidence.
+- **Frozen pages.** A blocking pop-up can freeze the tab. Reload, or ask the user to respond to it, then continue.
+- **Use an independent channel.** Confirm through an API read, a public lookup, or the authoritative source rather than a cached copy. Public pages may be cached for a short while, so allow for that before concluding a change failed, and avoid test parameters that trigger extra pop-ups. For access rules, a harmless request that exercises the setting without signing in or changing anything, compared with a case that should be rejected, is good evidence.
+- **Know what a record can prove.** Logs and error reports may lack the detail you want, or show an intermediary's value, such as a proxy's address instead of the visitor's. State the limit rather than guessing.
 - If you cannot confirm, say what you tried and what remains uncertain. Never report an attempt as a success.
 
 ## 11. General failure patterns
@@ -5526,10 +5679,12 @@ A click is not proof. Look for a success message, a reference number, a new reco
 |---|---|---|
 | Fill reports success but field is blank | App ignored a direct write | Keyboard-style input, blur, read back. |
 | Earlier fields blank out, or a dropdown wipes the form | Re-render from stale state | Re-rendering choices first; blur after each fill. |
-| Field looks filled but validation says empty | Hidden sync field was edited | Fill the visible editor. |
+| Field looks filled but validation says empty | Hidden sync field was edited, or widget did not see a keystroke | Fill the visible editor; type and delete one character. |
 | Interactive tool crashes on long text | Tool layer unstable for heavy work | Switch to a script. |
 | Headless page blocked or different | Site varies by browser context | Direct interface; escalate only for an explicit task, read-only where possible. |
-| Wrong account or permission denied | Last-used profile or missing role | Select profile directly; ask user to sign in correctly; re-verify. |
+| Wrong account or site says permission denied | Last-used profile or missing role | Select profile directly; ask user to sign in correctly; re-verify. |
+| Tool reports permission denied right after navigating | Page still loading | Screenshot, wait, retry in a fresh tab if needed. |
+| Tab freezes; clicks and screenshots time out | Native confirm dialog or blocking pop-up | Reload; read the message safely or ask the user. |
 | Session ends after a page-script request | Internal endpoint called without normal headers | Drive the UI or use a supported API. |
 | Clicks do nothing, or a read misses part of the page or comes back cut off | Panel ignores clicks or extraction; tool truncates output | Screenshot, click by position, read the panel directly, read long results in slices. |
 | Warning, sign-in, or consent page the tool cannot handle | Needs a person | Leave the tab open, ask the user, then re-verify. |
@@ -5547,7 +5702,7 @@ When a run reveals a reusable lesson, add it to your local copy, preferably as o
 - [ ] Account, environment, and target were verified before any write.
 - [ ] Controls were inspected first and addressed by label, not position.
 - [ ] Every meaningful change was read back.
-- [ ] The pre-submit gate passed with no empty required fields.
+- [ ] The pre-submit gate passed with no empty required fields and no unintended options ticked.
 - [ ] Irreversible actions had a pre-action record and authorization.
 - [ ] Credentials, sign-ins, and verification checks were handled by the user.
 - [ ] Success was confirmed with evidence.
@@ -5557,9 +5712,13 @@ When a run reveals a reusable lesson, add it to your local copy, preferably as o
 
 **Clipboard, paste, and uploads.** Headless browsers often lack clipboard access, so embed values directly. A synthetic paste event works in some editors and is ignored by others, which may offer their own conversion method. Some upload buttons create a file input only on click and open the operating system's picker, which automation cannot drive; a small page-script override can attach that input to the page so you can set a file from an agreed temporary folder. If a preview appears, use its save control, since dismissing it can discard the upload.
 
+**Native confirmation dialogs.** After reloading a frozen tab, override the page's confirm function so it records the message and declines, click once, and read the message. If it is the change you intend, override again to accept only that exact message, then click. Pages often reload after an accepted change, which removes the override, so reapply it each time and never queue further clicks behind it.
+
 **Batches of independent items.** Use separate tabs, each with the full brief, at a modest concurrency you choose. Prefer keyboard commands over dragging when rearranging, then verify structure. Background tabs may not render fully, so bring an item into view before capturing it.
 
-**Apps without a full API.** Read configuration from state the page already holds in memory; internal layouts change between versions, so an empty read usually means the layout moved. Make changes through the UI, test with a read-only step, then save and re-read. If a page-script loop outlasts your tool's time limit, start it without waiting, store results in a page variable, and poll. If returned text gets cut off or filtered, keep the full result in a page variable and read it back in slices under the limit, then reassemble before drawing conclusions.
+**Editing through an editor's document model.** Some rich editors expose their internal editor object to page scripts. Walk the document to find the exact position and insert content through the editor's own commands instead of typing. Validate every planned change first, then apply all changes to one item in a single transaction, because a failure partway through can leave a half-edited draft that autosaves. For many items, keep the edit function somewhere that survives navigation, such as session storage, and work a few items per batch. Wait for the saved indicator, go through the update dialog using the pre-submit gate, then verify through a public read.
+
+**Apps without a full API.** Read configuration from state the page already holds in memory; internal layouts change between versions, so an empty read usually means the layout moved. If a page shows only part of a record, the app's own read-only requests, repeated from a tab on the same site, may return the full detail. Make changes through the UI, test with a read-only step, then save and re-read. If a page-script loop outlasts your tool's time limit, start it without waiting, store results in a page variable, and poll. If the tool blocks certain characters in scripts you send, build them indirectly, for example from character codes. If returned text gets cut off or filtered, keep the full result in a page variable and read it back in slices under the limit, then reassemble before drawing conclusions.
 
 **The user's own devices.** Local devices often serve unencrypted pages that trigger a browser warning; proceed past it only for devices the user owns and asked about. When away from that network, diagnose through the app's signed-in remote page, using the read-only logs, history, and event views it already exposes. If a source refuses access, accept that rather than looking for another way in.
 

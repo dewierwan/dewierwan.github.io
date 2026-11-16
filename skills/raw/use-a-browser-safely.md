@@ -15,7 +15,7 @@ These steps work even with a plain chat assistant that walks you through the tas
 - **Check where you are.** Before changing anything, open the account or profile page and confirm the signed-in account, the workspace or environment, and the exact item you will change. If a page says you lack permission, you are probably in the wrong account.
 - **List the fields before typing.** Note each field's label, whether it is required, and what kind it is (one line, multi-line, rich text, dropdown, checkbox, date). Make dropdown, checkbox, and date choices first, because they can reset the form.
 - **Read back every field.** After entering text, click somewhere neutral on the page and check the value is still there and complete.
-- **Stop before the final button.** Confirm every required field is filled, the values are right, and whether the action can be undone. Take a screenshot. For payments, sends, deletions, sharing data elsewhere, or "cannot be edited" forms, get a clear yes first.
+- **Stop before the final button.** Confirm every required field is filled, the values are right, and whether the action can be undone. Check the final dialog for extra options, such as also emailing people. Take a screenshot. For payments, sends, deletions, sharing data elsewhere, or "cannot be edited" forms, get a clear yes first.
 - **Look for proof afterward.** A confirmation message, reference number, or saved record. If you see an error, check whether the action happened before retrying.
 
 ## 1. Follow the central rule
@@ -61,7 +61,7 @@ When the task touches private messages, records, or information about other peop
 
 **Account preflight gate.** Before any write, answer: Which account is this (read it from a reliable account page)? Which environment or workspace? What exact item will change? If any answer is unclear, stop and ask. If your setup uses a verification marker that unlocks write actions, set it only after the check has actually passed, and record the evidence.
 
-**Permission denied means wrong account, not a puzzle.** Admin consoles often need a separate administrative account. Do not hunt for workarounds; ask the user to sign in with the right account, reload, and re-run the check.
+**Permission denied means wrong account, not a puzzle.** Admin consoles often need a separate administrative account. Do not hunt for workarounds; ask the user to sign in with the right account, reload, and re-run the check. Separate this from a "permission denied" raised by your automation tool right after a navigation: that is often transient while the page loads. Take a screenshot, wait, and retry, in a fresh tab if needed.
 
 ## 5. Set the task boundary and authorization
 
@@ -102,6 +102,7 @@ Watch for:
 | Single-line input | Normal fill | Line breaks removed; length limits. |
 | Multi-line text area | Fill, then move focus to the page body | Some apps commit only on blur. |
 | Rich-text editor | Click, select all, delete, insert text with keyboard-style input, blur | Direct DOM writes may be ignored. |
+| Code editor widget | Set the value through the widget's own interface, then type and delete one character | The form may not register a value it did not see typed. |
 | Dropdown or combobox | Choose by exact visible option text, wait to settle | Selection can re-render the form. |
 | Checkbox or radio | Read state first; click only if it must change | Clicking toggles a correct value. |
 | Date or time picker | Set values, close by clicking neutral background, check the summary | Close or clear buttons may wipe values. |
@@ -110,6 +111,8 @@ Watch for:
 - **Blur after every rich-text field.** Otherwise the next edit can re-render earlier editors from stale state, and only the last field survives.
 - **Order matters.** Do re-rendering choices first, then text. Re-inspect after each choice, and re-check tricky widgets after later edits.
 - **If a click does nothing,** take a screenshot, click by position, and confirm the view changed. Slow checks may take a while; wait rather than clicking again.
+- **Native confirmation boxes block automation.** A browser-level confirm dialog can freeze the tab so clicks and screenshots time out. Reload to recover, then read the message before acting (see Optional extras). Dialogs drawn inside the page itself are safe to handle normally.
+- **Check summaries before creating.** When a setup step shows a summary, such as a count of permissions, items, or recipients, confirm it matches intent before continuing.
 - **Selectors drift.** Before clicking send or submit, read the composed content back to confirm it landed where you expected.
 
 ## 8. Verify after every fill
@@ -144,6 +147,7 @@ If verification still fails after one retry, do not move toward submission.
 - [ ] Dropdowns, dates, recipients, and attachments are correct.
 - [ ] No validation errors or unsaved-change notices remain.
 - [ ] The button about to be clicked is the expected one, not a similar destructive option.
+- [ ] The final confirmation dialog has no option ticked that widens the action, such as also emailing subscribers, unless that was intended.
 
 **If any required field is empty, do not submit.** A confirmation request for an irreversible action should state the target, key values, audience, any cost, and what cannot be undone.
 
@@ -154,8 +158,9 @@ If verification still fails after one retry, do not move toward submission.
 A click is not proof. Look for a success message, a reference number, a new record, or a setting that persists after a safe reload.
 
 - **Errors can be cosmetic.** Some apps show "something went wrong" after the work finished. Check before retrying, since blind retries can duplicate sends, payments, or records.
-- **Frozen pages.** A blocking pop-up can freeze the tab. Ask the user to respond to it, then continue.
-- **Use an independent channel.** Confirm through an API read, a public lookup, or the authoritative source rather than a cached copy. For access rules, a harmless request that exercises the setting without signing in or changing anything, compared with a case that should be rejected, is good evidence.
+- **Frozen pages.** A blocking pop-up can freeze the tab. Reload, or ask the user to respond to it, then continue.
+- **Use an independent channel.** Confirm through an API read, a public lookup, or the authoritative source rather than a cached copy. Public pages may be cached for a short while, so allow for that before concluding a change failed, and avoid test parameters that trigger extra pop-ups. For access rules, a harmless request that exercises the setting without signing in or changing anything, compared with a case that should be rejected, is good evidence.
+- **Know what a record can prove.** Logs and error reports may lack the detail you want, or show an intermediary's value, such as a proxy's address instead of the visitor's. State the limit rather than guessing.
 - If you cannot confirm, say what you tried and what remains uncertain. Never report an attempt as a success.
 
 ## 11. General failure patterns
@@ -164,10 +169,12 @@ A click is not proof. Look for a success message, a reference number, a new reco
 |---|---|---|
 | Fill reports success but field is blank | App ignored a direct write | Keyboard-style input, blur, read back. |
 | Earlier fields blank out, or a dropdown wipes the form | Re-render from stale state | Re-rendering choices first; blur after each fill. |
-| Field looks filled but validation says empty | Hidden sync field was edited | Fill the visible editor. |
+| Field looks filled but validation says empty | Hidden sync field was edited, or widget did not see a keystroke | Fill the visible editor; type and delete one character. |
 | Interactive tool crashes on long text | Tool layer unstable for heavy work | Switch to a script. |
 | Headless page blocked or different | Site varies by browser context | Direct interface; escalate only for an explicit task, read-only where possible. |
-| Wrong account or permission denied | Last-used profile or missing role | Select profile directly; ask user to sign in correctly; re-verify. |
+| Wrong account or site says permission denied | Last-used profile or missing role | Select profile directly; ask user to sign in correctly; re-verify. |
+| Tool reports permission denied right after navigating | Page still loading | Screenshot, wait, retry in a fresh tab if needed. |
+| Tab freezes; clicks and screenshots time out | Native confirm dialog or blocking pop-up | Reload; read the message safely or ask the user. |
 | Session ends after a page-script request | Internal endpoint called without normal headers | Drive the UI or use a supported API. |
 | Clicks do nothing, or a read misses part of the page or comes back cut off | Panel ignores clicks or extraction; tool truncates output | Screenshot, click by position, read the panel directly, read long results in slices. |
 | Warning, sign-in, or consent page the tool cannot handle | Needs a person | Leave the tab open, ask the user, then re-verify. |
@@ -185,7 +192,7 @@ When a run reveals a reusable lesson, add it to your local copy, preferably as o
 - [ ] Account, environment, and target were verified before any write.
 - [ ] Controls were inspected first and addressed by label, not position.
 - [ ] Every meaningful change was read back.
-- [ ] The pre-submit gate passed with no empty required fields.
+- [ ] The pre-submit gate passed with no empty required fields and no unintended options ticked.
 - [ ] Irreversible actions had a pre-action record and authorization.
 - [ ] Credentials, sign-ins, and verification checks were handled by the user.
 - [ ] Success was confirmed with evidence.
@@ -195,9 +202,13 @@ When a run reveals a reusable lesson, add it to your local copy, preferably as o
 
 **Clipboard, paste, and uploads.** Headless browsers often lack clipboard access, so embed values directly. A synthetic paste event works in some editors and is ignored by others, which may offer their own conversion method. Some upload buttons create a file input only on click and open the operating system's picker, which automation cannot drive; a small page-script override can attach that input to the page so you can set a file from an agreed temporary folder. If a preview appears, use its save control, since dismissing it can discard the upload.
 
+**Native confirmation dialogs.** After reloading a frozen tab, override the page's confirm function so it records the message and declines, click once, and read the message. If it is the change you intend, override again to accept only that exact message, then click. Pages often reload after an accepted change, which removes the override, so reapply it each time and never queue further clicks behind it.
+
 **Batches of independent items.** Use separate tabs, each with the full brief, at a modest concurrency you choose. Prefer keyboard commands over dragging when rearranging, then verify structure. Background tabs may not render fully, so bring an item into view before capturing it.
 
-**Apps without a full API.** Read configuration from state the page already holds in memory; internal layouts change between versions, so an empty read usually means the layout moved. Make changes through the UI, test with a read-only step, then save and re-read. If a page-script loop outlasts your tool's time limit, start it without waiting, store results in a page variable, and poll. If returned text gets cut off or filtered, keep the full result in a page variable and read it back in slices under the limit, then reassemble before drawing conclusions.
+**Editing through an editor's document model.** Some rich editors expose their internal editor object to page scripts. Walk the document to find the exact position and insert content through the editor's own commands instead of typing. Validate every planned change first, then apply all changes to one item in a single transaction, because a failure partway through can leave a half-edited draft that autosaves. For many items, keep the edit function somewhere that survives navigation, such as session storage, and work a few items per batch. Wait for the saved indicator, go through the update dialog using the pre-submit gate, then verify through a public read.
+
+**Apps without a full API.** Read configuration from state the page already holds in memory; internal layouts change between versions, so an empty read usually means the layout moved. If a page shows only part of a record, the app's own read-only requests, repeated from a tab on the same site, may return the full detail. Make changes through the UI, test with a read-only step, then save and re-read. If a page-script loop outlasts your tool's time limit, start it without waiting, store results in a page variable, and poll. If the tool blocks certain characters in scripts you send, build them indirectly, for example from character codes. If returned text gets cut off or filtered, keep the full result in a page variable and read it back in slices under the limit, then reassemble before drawing conclusions.
 
 **The user's own devices.** Local devices often serve unencrypted pages that trigger a browser warning; proceed past it only for devices the user owns and asked about. When away from that network, diagnose through the app's signed-in remote page, using the read-only logs, history, and event views it already exposes. If a source refuses access, accept that rather than looking for another way in.
 

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow,noarchive"><title>Give before and after feedback · AI skills</title><meta name="description" content="Researches a draft&#39;s topic, then gives before, after, and why feedback, one entry per change. Use when asked for before/after feedback or to check a draft against the literature.">
+<link rel="alternate" type="text/markdown" href="/skills/raw/before-after-feedback.md"><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%23b4552d%22/><text x=%2250%22 y=%2253%22 dominant-baseline=%22central%22 text-anchor=%22middle%22 font-family=%22Georgia, 'Times New Roman', serif%22 font-size=%2246%22 letter-spacing=%221%22 fill=%22%23fdfaf4%22>DE</text></svg>"><link rel="stylesheet" href="/skills/styles.css"></head><body><main><a class="back" href="/skills/">← Skills</a><header class="skill-header"><h1>Give before and after feedback</h1><p class="description">Researches a draft&#39;s topic, then gives before, after, and why feedback, one entry per change. Use when asked for before/after feedback or to check a draft against the literature.</p><div class="skill-actions"><a href="/skills/raw/before-after-feedback.md">Raw Markdown</a><button class="copy" type="button" data-copy="/skills/raw/before-after-feedback.md">Copy Markdown</button></div></header><article class="skill-body"><p>This workflow researches a draft&#39;s topic and then returns feedback as a numbered list of separate changes. Each change shows the current text, the replacement, and the reason, so the author can accept or reject each one on its own. Because the research comes first, the feedback catches errors of substance and not only wording.</p>
+<h3>Quick version</h3>
+<ul>
+<li>Paste the draft and any sources you have. Ask the assistant to read the draft twice: once for the argument, once sentence by sentence.</li>
+<li>Have it check each claim against its cited source for three common slips: who said it, what a number actually measures, and how strong the claim is. If it cannot open a source, it should list the claims for you to check.</li>
+<li>Propose a change only where it fixes a factual error, a misstated argument, a missing step, an unsupported claim, a weak answer to an objection, or a sentence that needs rereading. Skip changes that are only a matter of taste.</li>
+<li>Write one entry per change: <strong>Before</strong> (exact current text), <strong>After</strong> (ready to paste), <strong>Why</strong> (one sentence).</li>
+<li>Write the After text in the author&#39;s voice, and flag any claim or opinion the assistant added that the author did not already hold.</li>
+<li>Open with a short verdict and an honest list of what was read. Put the entries and any structural notes at the end.</li>
+</ul>
+<h3>1. Set the scope</h3>
+<p>The input is the draft (or access to it), plus usually the topic or the sources to read. If there is no draft, ask for it before doing anything else.</p>
+<p>This is feedback only. Do not edit the author&#39;s document unless they ask. This workflow is for improving an existing draft; it is not for writing a document from scratch or for short messages like email, which call for a drafting workflow instead.</p>
+<h3>2. Read the draft and everything it cites</h3>
+<p>Read the draft twice. The first pass is for the overall argument: what is the author trying to show, and in what order? The second pass is sentence by sentence.</p>
+<p>Then open every source the draft links or cites and check that each sentence says what its source says. Three mismatches come up again and again:</p>
+<ul>
+<li><strong>Attribution.</strong> One person&#39;s prediction or opinion presented as an established fact.</li>
+<li><strong>What a number measures.</strong> A figure about one group or quantity presented as if it were about another, for example a share of respondents turned into a share of the whole population.</li>
+<li><strong>Strength.</strong> A hedged or qualified claim in the source turned into a confident one in the draft, such as &quot;may help&quot; becoming &quot;solves.&quot;</li>
+</ul>
+<p>For any number or claim with no source, search for one. If you cannot find support, say what you did find instead of silently dropping the question.</p>
+<h3>3. Research the topic</h3>
+<p>Read enough to judge whether the draft&#39;s account is right, complete, and current. Cover three things:</p>
+<ul>
+<li><strong>The standard accounts.</strong> Find the works the field treats as the origin of each idea the draft uses. A common error is to name a concept correctly and then explain it with a different mechanism from the one its originators described.</li>
+<li><strong>The strongest objections,</strong> and how the idea&#39;s proponents have answered them.</li>
+<li><strong>What changed recently.</strong> Check today&#39;s date, then look for recent evidence the draft could use or that contradicts it. Adjust how far back &quot;recent&quot; means to suit the field.</li>
+</ul>
+<p>Read the primary page for anything an entry will depend on. Search summaries and snippets are fine for finding leads but not for supporting a correction. Keep track of which sources you read in full, which in part, and which only as summaries, because the reply must say so.</p>
+<p>If your assistant has no browsing, work from the sources the author pasted and from general knowledge, say plainly that this knowledge may be dated or incomplete, and mark every correction that depends on unchecked facts.</p>
+<h3>4. Choose the changes</h3>
+<p>Propose a change only where it fixes one of these:</p>
+<ul>
+<li>a factual error</li>
+<li>a mechanism or argument that misstates its source</li>
+<li>a missing step the reader needs to follow the argument</li>
+<li>a claim with no support</li>
+<li>an objection answered weakly or not at all</li>
+<li>a sentence a reader would have to read twice</li>
+</ul>
+<p>Leave alone anything that is merely different from how you would write it. The author should be able to trust that every entry is worth their time; padding the list with preferences erodes that trust.</p>
+<p>Compare parallel sections. When two sections cover similar ground and one has something the other lacks, such as supporting evidence or a reply to an objection, propose the missing piece as an addition to the weaker section.</p>
+<h3>5. Write one entry per change</h3>
+<p>Write one entry per change, not one per paragraph, so each can be taken or left independently. Use this template:</p>
+<pre><code>**[N]. [Short label for the change]**
+
+**Before:** [exact text in the draft now]
+
+**After:** [text that would replace it]
+
+**Why:** [one sentence]</code></pre>
+<p>Rules for each part:</p>
+<ul>
+<li><strong>Before</strong> is copied character for character, so the author can search for it in their document. Quote the smallest span that contains the change: a clause or a sentence, not the whole paragraph.</li>
+<li><strong>After</strong> is ready to paste. Keep the author&#39;s links. Keep it the same length or shorter unless the change is an addition.</li>
+<li><strong>Why</strong> is one sentence. When the reason is a fact, name the source. Add a second sentence only to tell the author something they must check.</li>
+<li><strong>An addition</strong> uses <code><strong>Before:</strong> (nothing; add after &quot;...&quot;)</code>, quoting the text it follows.</li>
+<li><strong>A cut</strong> uses <code><strong>After:</strong> (cut)</code>, or <code>(cut, or add a source)</code> when the problem is an unsupported claim.</li>
+<li><strong>Two changes in the same sentence</strong> become a single entry that gives the final sentence and both reasons. Two separate entries would hand the author two conflicting versions of one sentence.</li>
+</ul>
+<p>Number entries continuously in the order the text appears, grouped under the draft&#39;s own section headings.</p>
+<p>Invented example, from a draft essay about shorter work weeks that cites a fictional report by the Halden Work Institute:</p>
+<p><strong>4. Share of firms, not size of gain</strong></p>
+<p><strong>Before:</strong> productivity rose 40% in the Halden pilot</p>
+<p><strong>After:</strong> 40% of firms in the Halden pilot reported higher productivity</p>
+<p><strong>Why:</strong> The Halden report gives the share of firms reporting any gain, not the size of the gain.</p>
+<p><strong>5. Answer the coverage objection</strong></p>
+<p><strong>Before:</strong> (nothing; add after &quot;most staff preferred the new schedule.&quot;)</p>
+<p><strong>After:</strong> Firms that needed daily customer coverage handled it by staggering days off across teams.</p>
+<p><strong>Why:</strong> The report&#39;s own limitations section raises coverage as the main objection, and the draft does not address it. This adds a point you did not make; check you agree.</p>
+<h3>6. Write the After text in the author&#39;s voice</h3>
+<p>The author will publish this under their own name, so the After text must sound like them. If they have a style guide, voice notes, or earlier writing, read it before writing any After text. Otherwise, match the draft&#39;s own sentence length, vocabulary, and tone.</p>
+<p>Never put a belief or argument in the author&#39;s mouth. When an After adds a claim, rebuttal, or judgment that is yours and not already theirs, say so in the Why and ask them to confirm they agree.</p>
+<p>Every link in an After must be one the author supplied or one you actually opened during this review. Never construct or recall a link from memory.</p>
+<h3>7. Order the reply</h3>
+<ol>
+<li><strong>Verdict.</strong> One or two sentences: what works, and the two or three changes that matter most, by number.</li>
+<li><strong>What you read.</strong> What you read in full, what you read in part or only as a summary, and what you could not open, with links. Never imply you read everything on a topic.</li>
+<li><strong>The entries.</strong></li>
+<li><strong>Structural changes.</strong> A short list of points that do not fit a before and after shape, such as reordering sections or making two parallel sections follow the same order. Omit this when there are none.</li>
+</ol>
+<p>The entries and structural changes come last so the author can copy them in one block.</p>
+<h3>8. Check before sending</h3>
+<ul>
+<li>Is every Before an exact match for the draft?</li>
+<li>Does every After read correctly when dropped into the surrounding text, including grammar at both edges?</li>
+<li>Does any After rely on a fact you saw only in a search summary? Check it at the source or flag it in the Why.</li>
+<li>Did any entry add an opinion the author did not state, without flagging it?</li>
+<li>Does every entry fix one of the listed problem types, rather than a style preference?</li>
+</ul>
+<h3>Optional extras</h3>
+<ul>
+<li><strong>Connected document tools.</strong> If your assistant can read the author&#39;s document directly, use read-only access and still deliver feedback as a list. Leave comments or suggested edits in the document only if the author asks.</li>
+<li><strong>Reading log.</strong> For long reviews, keep a simple log while researching so the &quot;What you read&quot; section is accurate:</li>
+</ul>
+<div class="table-wrap" tabindex="0" aria-label="Scrollable table"><table><thead><tr><th>Source</th><th>How read</th><th>Used for</th></tr></thead><tbody><tr><td>[Report or article title]</td><td>[Full / partial / summary only / could not open]</td><td>[Entry numbers it supports]</td></tr></tbody></table></div>
+<ul>
+<li><strong>Large drafts.</strong> For very long documents, review one section at a time but keep entry numbering continuous across sections, and run the parallel-section comparison once all sections are done.</li>
+<li><strong>Adjustable defaults.</strong> The one-sentence Why, the &quot;same length or shorter&quot; rule for After text, and how far back to look for recent evidence are sensible defaults. Change them to suit the author and the field.</li>
+</ul></article><footer><a href="/skills/LICENSE.txt">CC0</a></footer></main><script>document.querySelector('[data-copy]').addEventListener('click',async function(){try{const text=await fetch(this.dataset.copy).then(r=>{if(!r.ok)throw new Error();return r.text()});await navigator.clipboard.writeText(text);this.textContent='Copied'}catch{this.textContent='Open raw Markdown'}})</script></body></html>

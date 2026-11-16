@@ -35,7 +35,7 @@ Use the user's explicit instruction when they give one. Otherwise, if access is 
 
 - **New:** No matching record exists, or the user asks to start fresh.
 - **Resume:** A matching record is open and the user wants to keep thinking.
-- **Commit:** An open record exists and the user says they are ready to decide.
+- **Commit:** An open record exists and the user says they are ready to decide, or reports that they already committed somewhere else.
 - **Review:** A resolved record has reached its review date and has no completed outcome assessment, or is still marked "too early."
 
 Resolution status means whether the decision was made, not whether the outcome was good. For a non-binary question, mark it resolved once a direction has been chosen.
@@ -151,6 +151,10 @@ Use a testable prediction:
 Use the user's chosen register, document, or private file. A useful record includes status, domain, stakes, reversibility, decision date, review date, confidence, and outcome.
 
 For an **open** decision, record context, options, and new inputs, but leave commitment sections blank. For a **commitment**, mark it resolved, record the actual decision date, set confidence, and fill the commitment sections. Do not infer missing user-owned fields.
+
+**Commitments made elsewhere.** Sometimes the user makes the call outside the conversation, for example by posting an acceptance in a team channel or sending an email. Treat that message as the user's own words for "My choice and why," and link or cite it. In the thinking log, note any terms in that message that differ from where the user last landed in the record. Leave the prediction, confidence, reversal conditions, and worries unfilled, and ask for all of them in one short block. Never infer them from the message.
+
+*Fictional example:* At Fernhollow Analytics, a director's record shows them leaning toward a part-time contract with a vendor. They then post in the team channel, "Accepted the vendor offer, full-time for six months." The record quotes that post as their choice, the thinking log notes the shift from part-time to full-time, and the assistant asks one question: "What do you predict by the six-month mark, how confident are you, what would make you reverse, and what worries you most?"
 
 Suggested default review timing, adjustable: about one month for reversible decisions, three months for hard-to-reverse decisions, and six months for direction-setting decisions. Prefer a meaningful event or trigger if the user names one.
 
