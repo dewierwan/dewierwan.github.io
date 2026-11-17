@@ -73,7 +73,7 @@
 <li><strong>Messages (counts only):</strong> old unanswered threads and people waiting for replies.</li>
 <li><strong>Fixed outside commitments:</strong> events or programs the user runs that start soon.</li>
 </ul>
-<p><strong>Data quality.</strong> Check each source&#39;s newest entry before analyzing it; a feed that stopped is a gap, not behavior, so say so first and name every source that failed. Treat a surprising zero as a likely gap and ask. A schedule of planned activity is not a record of what was done. Never double count an item that arrives from two places, never average across a gap, and never claim something is late unless a date proves it.</p>
+<p><strong>Data quality.</strong> Check each source&#39;s newest entry before analyzing it; a feed that stopped is a gap, not behavior, so say so first and name every source that failed. Treat a surprising zero as a likely gap and ask. A schedule of planned activity is not a record of what was done. Never double count an item that arrives from two places, never average across a gap, and never claim something is late unless a date proves it. Keep source-specific details (field names, how each feed arrives, known quirks) in a separate reference note, and consult it only when a number looks missing or wrong rather than loading it every run.</p>
 <p>If there are no connected tools, ask the user for a two-minute summary of their calendar and open work instead.</p>
 <h3>8. The brief</h3>
 <p>Show only facts that could change a decision, in <strong>at most eight bullets</strong>, tensions, surprises, and data gaps first. No goal recommendations yet, and no repeating the user&#39;s review.</p>
@@ -192,7 +192,7 @@ References:
 <p>Afterwards, quietly note what went wrong, wasted time, or was corrected. Before changing anything, decide where each lesson belongs:</p>
 <ul>
 <li><strong>The workflow itself,</strong> for a rule every run needs. Tighten or merge an existing instruction rather than adding a paragraph, and never add dated incident notes.</li>
-<li><strong>A separate reference note,</strong> for detail only some runs need, such as how one data source behaves.</li>
+<li><strong>A separate reference note,</strong> for detail only some runs need, such as how one data source behaves or the exact steps of an optional module.</li>
 <li><strong>A short lessons log,</strong> for one-line dated entries that explain why a rule exists. Do not read it during a normal run.</li>
 </ul>
 <p>Keep the workflow within a length limit you choose; near the limit, consolidate before adding. Don&#39;t ask the user how to improve the workflow.</p>
@@ -213,9 +213,7 @@ References:
 <p>Ask whether the user wants to triage overdue tasks themselves. If not, first ask which active projects are actually finished; a project&#39;s end date means it finished, never a target. Offer stale tasks as one batch to move to &quot;someday&quot;. Then go one by one, most important first: do this week, done (people forget to close things), defer (important but not urgent gets a dated slot), delegate (check the work can leave the user, then note who and when), or delete. Write each decision right away.</p>
 <h4>Scorecard</h4>
 <p>If the active month or quarter plan has a scorecard or non-negotiables, ask whether they still match reality, then score the lookback using its own items and thresholds. If a cut-scope rule fires, raise it during shaping. Never rebuild an expired scorecard.</p>
-<h4>Hiring load</h4>
-<p>If the user hires, count their interviews and hours for the week and list candidates in late stages. Flag a candidate as waiting too long only when a stage-entry date proves it against the user&#39;s chosen response target. With heavy load, raise the cost of delay and ask who owns it; block hiring time only once the user puts it on the week.</p>
 <h4>Recurring-friction review</h4>
-<p>If the user asks, look across recent sessions for corrections that repeat. Skip this if private content cannot be filtered out before it is read. Group repeats, skip one-offs, and propose one specific fix per group.</p>
+<p>If the user asks, look across recent sessions for corrections that repeat. Skip this if private content cannot be filtered out before it is read. Keep the exact search steps in a reference note loaded only for this module. Group repeats, skip one-offs, and propose one specific fix per group.</p>
 <h4>Structured stores</h4>
 <p>If goals and tasks live in a database, refer to fields by stable identifiers rather than display names, which drift. Filter longer-term goals by the current year computed from today&#39;s date rather than a hard-coded year, so the query does not go stale. A computed &quot;days since created&quot; field makes a simple slippage signal. Confirm the exact text format that renders checklists in your tool, and batch writes only after decisions are made.</p></article><footer><a href="/skills/LICENSE.txt">CC0</a></footer></main><script>document.querySelector('[data-copy]').addEventListener('click',async function(){try{const text=await fetch(this.dataset.copy).then(r=>{if(!r.ok)throw new Error();return r.text()});await navigator.clipboard.writeText(text);this.textContent='Copied'}catch{this.textContent='Open raw Markdown'}})</script></body></html>

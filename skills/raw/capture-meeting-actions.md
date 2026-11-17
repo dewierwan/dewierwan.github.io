@@ -51,7 +51,7 @@ Accept a date in `YYYY-MM-DD` format, a relative date such as "yesterday," a dat
 - Before an early-morning cutoff in the user's local time, process the previous day.
 - Otherwise, process the current day.
 
-State the scope once, for example: "Scanning meetings for 23 Apr."
+State the scope once, with the full weekday name, for example: "Scanning meetings for Thursday 23 Apr."
 
 Check every place where the user's meeting records live, not just the main one. Many people keep a shared team meeting space, a separate private space for sensitive calls or internal one-to-ones, and sometimes a restricted space for a specific function, such as a hiring space that holds reference calls. When a new category of meeting moves to its own space, add that space to the sweep, or those meetings will silently drop out. Sources can differ in how they filter: one may already show only meetings the user attended, while another needs a direct query by date. Query each source for the selected scope, merge the results, and remove any meeting that appears in more than one.
 

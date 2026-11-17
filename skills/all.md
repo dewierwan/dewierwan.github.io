@@ -2308,7 +2308,7 @@ Use this to turn a crowded or unclear day into one named outcome, a protected bl
 
 ## 1. Choose the day and gather context
 
-Check the local date and time first; don't ask for the time zone if the device can tell you. Default: early in the day, plan today; in the evening, plan tomorrow; in between, ask. An explicit date from the user always wins, and an evening session that runs past midnight keeps the date already agreed. Adjust these cutoffs to your rhythm. State the target day and time zone in one line, and write dates throughout in one short, consistent format the user prefers (for example, day number plus abbreviated month).
+Check the local date and time first; don't ask for the time zone if the device can tell you. Default: early in the day, plan today; in the evening, plan tomorrow; in between, ask. An explicit date from the user always wins, and an evening session that runs past midnight keeps the date already agreed. Adjust these cutoffs to your rhythm. State the target day and time zone in one line, and write dates throughout in one short, consistent format the user prefers (for example, full weekday plus day number and abbreviated month).
 
 Then gather what exists, in one pass (or ask the user to paste it):
 
@@ -2472,9 +2472,9 @@ The assistant proposes one: "Launch copy final and sent to the designer by early
 - **Forward flags.** For a deadline that can't fit tomorrow but must land within a few days, add a plan section naming the due date, how long it has been open, and which day's plan must surface it.
 - **Sleep data.** If sleep syncs from a tracker, records are often filed under the bedtime date, so last night usually carries yesterday's date, not today's. When two sources record the same night, use the one the user trusts more (often a dedicated tracker over a general health aggregator). No record usually means the sync is behind: say so and ask.
 - **Date queries in connected databases.** When filtering by date, prefer the tool's date functions (same day, before, after, date difference) over text comparisons, and express "due by day X" as "due before the day after X". Make sure the field you filter on is a date field; comparing a date field with a plain string can return nothing without any error.
-- **Connected signals.** With connected tools, add to the brief: old unanswered email, stale saved action items, messages awaiting a reply (sender, channel, and age only), and for people who hire, their own upcoming interviews and how long candidates have waited at each stage. Long-waiting items make strong supporting candidates; if a source is down, name it. Because these touch other people's messages and records, use them only for the user's own planning with clear authorization, read the minimum needed, leave out unrelated or sensitive details, and keep results in the private plan.
+- **Connected signals.** With connected tools, add to the brief: old unanswered email, stale saved action items, and messages awaiting a reply (sender, channel, and age only). Long-waiting items make strong supporting candidates; if a source is down, name it. Because these touch other people's messages, use them only for the user's own planning with clear authorization, read the minimum needed, leave out unrelated or sensitive details, and keep results in the private plan.
 - **Tidy idle sessions.** If your setup can list assistant sessions idle for a long time, list them at the NOT today step (idle time and what each was for), recommend closing finished ones, close only those the user names, and confirm in one line. Closing should keep history and stop only running processes. Skip this when the user is going to sleep.
-- **Improve the workflow.** After each run, quietly note what went wrong or what the user corrected; don't ask the user how to improve the workflow. Before editing anything, decide where the lesson belongs: a general rule goes into this workflow, tool or data details go into a separate reference note, and one-off incidents go into a short dated lessons log rather than the workflow itself. When a rule changes, fold it into an existing rule instead of adding a new paragraph, and consolidate before the workflow grows past a length you choose.
+- **Improve the workflow.** After each run, quietly note what went wrong or what the user corrected; don't ask the user how to improve the workflow. Before editing anything, decide where the lesson belongs: a general rule goes into this workflow, tool or data details or detailed day-shape guides (such as a full recovery-day template) go into a separate reference note, and one-off incidents go into a short dated lessons log rather than the workflow itself. When a rule changes, fold it into an existing rule instead of adding a new paragraph, and consolidate before the workflow grows past a length you choose.
 
 
 ---
@@ -2494,11 +2494,11 @@ Use this at the end of the day to see honestly what happened, name one win and o
 - Ask for a rating only after the context is on the table, plus a one-line reason.
 - Always get a win, even on a bad day, and one thing that drained energy.
 - Ask what's rattling for tomorrow and write it down. This offload matters most.
-- Finish with a short block the user can paste into their notes. Keep it to about ten exchanges; don't replan tomorrow or play therapist. If the user is tired, ask everything in one message with your guesses filled in.
+- Finish with a short block the user can paste into their notes. Keep it to about ten exchanges, or close with the minimum once it passes the user's cutoff time; don't replan tomorrow or play therapist. If the user is tired, ask everything in one message with your guesses filled in.
 
 ## 1. Choose the day and gather context
 
-Check the local date, weekday, and time from the system, never from memory. If it is just past midnight, the user almost always means the day that just ended. Default: the early hours of the morning still count as the previous day; set the cutoff that fits you. Say which day you are reviewing in one line, and note which close mode fits tonight (section 8).
+Check the local date, weekday, and time from the system, never from memory. If it is just past midnight, the user almost always means the day that just ended. Default: the early hours of the morning still count as the previous day; set the cutoff that fits you. Say which day you are reviewing in one line, using the full weekday name ("Reviewing Thursday 5 Mar."), and note which close mode fits tonight (section 8).
 
 Collect everything in one batch before asking anything, so the conversation is not interrupted by lookups:
 
@@ -2563,6 +2563,8 @@ Get these in any order. If the user covers two in one reply, don't ask again.
 
 Use plain words. Optionally add one feelings, gratitude, or open-vent question if the day calls for it. Pick one, not all three.
 
+Keep the whole conversation to about ten exchanges. Also set a cutoff time: once it passes, collect only the minimum (rating, reason, offload) and close. Default: about an hour before the user's usual bedtime; adjust to fit you.
+
 The rating reflects how the day felt, not an audit of output. A slipped MIT doesn't cap it when other good work landed, and a long-awaited outside yes can carry a whole day. Many meetings aren't automatically a drain. On mixed days, keep both truths and note the shape in the reason ("swung from bad to great") so a later planner doesn't misread a neutral score.
 
 If something heavy comes up, acknowledge it, log it in the offload, and move toward close. If the user says they're deliberately containing it, log that and don't reopen it.
@@ -2609,7 +2611,7 @@ Confirm in one line: "Review saved." Don't summarize. If the user plans the next
 The latest instruction wins: "I just want to sleep" overrides an earlier "review, then plan".
 
 1. **Normal.** The full flow above.
-2. **Quick.** The user is tired, near bedtime, or just wants to close out. In the overview message, send one numbered message of four questions (rating and reason, win, drain, offload) with your guesses filled in, and offer freewriting only if there's time. A bare rating accepts all the guesses; a partial reply accepts the ones not contested. Never re-ask; log a missing item as "not named; likely X (unconfirmed)".
+2. **Quick.** The user is tired, near bedtime, past the cutoff, or just wants to close out. In the overview message, send one numbered message of four questions (rating and reason, win, drain, offload) with your guesses filled in, and offer freewriting only if there's time. A bare rating accepts all the guesses; a partial reply accepts the ones not contested. Never re-ask; log a missing item as "not named; likely X (unconfirmed)".
 3. **Hard close.** The user says they're going to bed, says "just log it" the next morning, or starts the review and says they won't reply. Ask nothing more. Build the reason, win, and drain from what they said and the day's evidence; fill the offload from open items, marked unconfirmed. With no rating, map their words ("fine" to slightly positive, "meh" to neutral) or infer from evidence, and mark it as inferred. Never leave it blank. Write, stop.
 
 ## Worked example
@@ -2620,7 +2622,7 @@ The assistant opens: "The launch email block went to customer replies. Did those
 
 ## Optional extras
 
-- **Style.** One question at a time (except the quick mode), no preamble, no narration of steps, no lectures on sleep or productivity. If the user goes off-script, log it and ask: "Anything else to offload, or move on?" Use one short, consistent date format; default: weekday, day without a leading zero, and abbreviated month ("Thu 5 Mar"); adjust to your preference.
+- **Style.** One question at a time (except the quick mode), no preamble, no narration of steps, no lectures on sleep or productivity. If the user goes off-script, log it and ask: "Anything else to offload, or move on?" Use one short, consistent date format; default: day without a leading zero and abbreviated month ("5 Mar"), with the full weekday when stating which day you're reviewing ("Thursday 5 Mar"); adjust to your preference.
 - **Personal days.** On a non-work day, skip work sources and let the user's own account lead. Don't make them retell it or probe the MIT.
 - **Answer real questions.** If the user asks a factual question mid-review, a quick targeted lookup is fine. Fold the answer into the offload.
 - **Plan after a hard close.** If the user says "plan tomorrow" while signing off, run a minimal plan with no questions: confirm blocks they already set, change no calendars or tasks, follow any plan source they name, and mark open choices "pending decision".
@@ -2735,7 +2737,7 @@ After the review, ask: "What must still ship before the new week starts?" That i
 - **Messages (counts only):** old unanswered threads and people waiting for replies.
 - **Fixed outside commitments:** events or programs the user runs that start soon.
 
-**Data quality.** Check each source's newest entry before analyzing it; a feed that stopped is a gap, not behavior, so say so first and name every source that failed. Treat a surprising zero as a likely gap and ask. A schedule of planned activity is not a record of what was done. Never double count an item that arrives from two places, never average across a gap, and never claim something is late unless a date proves it.
+**Data quality.** Check each source's newest entry before analyzing it; a feed that stopped is a gap, not behavior, so say so first and name every source that failed. Treat a surprising zero as a likely gap and ask. A schedule of planned activity is not a record of what was done. Never double count an item that arrives from two places, never average across a gap, and never claim something is late unless a date proves it. Keep source-specific details (field names, how each feed arrives, known quirks) in a separate reference note, and consult it only when a number looks missing or wrong rather than loading it every run.
 
 If there are no connected tools, ask the user for a two-minute summary of their calendar and open work instead.
 
@@ -2898,7 +2900,7 @@ Then start a review of what the assistant has saved about the user (memories, st
 Afterwards, quietly note what went wrong, wasted time, or was corrected. Before changing anything, decide where each lesson belongs:
 
 - **The workflow itself,** for a rule every run needs. Tighten or merge an existing instruction rather than adding a paragraph, and never add dated incident notes.
-- **A separate reference note,** for detail only some runs need, such as how one data source behaves.
+- **A separate reference note,** for detail only some runs need, such as how one data source behaves or the exact steps of an optional module.
 - **A short lessons log,** for one-line dated entries that explain why a rule exists. Do not read it during a normal run.
 
 Keep the workflow within a length limit you choose; near the limit, consolidate before adding. Don't ask the user how to improve the workflow.
@@ -2933,13 +2935,9 @@ Ask whether the user wants to triage overdue tasks themselves. If not, first ask
 
 If the active month or quarter plan has a scorecard or non-negotiables, ask whether they still match reality, then score the lookback using its own items and thresholds. If a cut-scope rule fires, raise it during shaping. Never rebuild an expired scorecard.
 
-### Hiring load
-
-If the user hires, count their interviews and hours for the week and list candidates in late stages. Flag a candidate as waiting too long only when a stage-entry date proves it against the user's chosen response target. With heavy load, raise the cost of delay and ask who owns it; block hiring time only once the user puts it on the week.
-
 ### Recurring-friction review
 
-If the user asks, look across recent sessions for corrections that repeat. Skip this if private content cannot be filtered out before it is read. Group repeats, skip one-offs, and propose one specific fix per group.
+If the user asks, look across recent sessions for corrections that repeat. Skip this if private content cannot be filtered out before it is read. Keep the exact search steps in a reference note loaded only for this module. Group repeats, skip one-offs, and propose one specific fix per group.
 
 ### Structured stores
 
@@ -2998,7 +2996,7 @@ Ask what "the month" means to the user if it is unclear; they may want to includ
 7. **Stay at month level.** Set outcomes, milestones, capacity, and structure. Leave daily task blocks to weekly planning.
 8. **No saved plan without explicit approval.** A plan assembled from notes is a draft, not a decision.
 9. **Do not lecture.** Show numbers, a direct conclusion, and the agreed commitment. No hedging: "the month was behind" beats "the month was a bit below target." Save decisions and evidence, not a transcript.
-10. **Keep the output plain and consistent.** Skip decoration such as emojis, and use one date format throughout, the one the user prefers (for example, day then short month, with no leading zero: "3 Mar").
+10. **Keep the output plain and consistent.** Skip decoration such as emojis, and use one date format throughout, the one the user prefers (for example, day then short month, with no leading zero: "3 Mar"). In commitments, spell weekday names in full ("Saturday 16 May", not "Sat 16 May") so the date reads unambiguously.
 
 ## Step 1: Gather evidence
 
@@ -3207,7 +3205,7 @@ Before finishing, verify:
 - The structural fix responds to a reviewed drain.
 - The user answered at least one hard question that shaped the plan.
 - The pre-mortem has counters.
-- Dates use one consistent format throughout.
+- Dates use one consistent format throughout, with weekday names spelled in full.
 - The user explicitly approved the plan before saving.
 
 ## Common failures
@@ -3242,7 +3240,7 @@ Suggested verdict scale (all thresholds adjustable):
 - **At risk:** a warning trend regardless of totals, such as volume falling three weeks in a row or signs of strain or injury the user reports.
 - **Paused:** the user chose to stop for now; do not re-argue it.
 
-If tracking may be incomplete, ask "The record shows this. Does that match reality?" before judging. State the verdict in one line with numbers and named weeks, then one concrete commitment for next month, and add it to the plan. Make it specific ("four sessions a week by week three, one long session on the second Saturday"), never "try to do more."
+If tracking may be incomplete, ask "The record shows this. Does that match reality?" before judging. State the verdict in one line with numbers and named weeks, then one concrete commitment for next month, and add it to the plan. Make it specific ("four sessions a week by week three, one long session on Saturday the 14th"), never "try to do more."
 
 Example (fictional): "Language practice: **Behind**. 9 sessions against a target of 16 (56% of sessions, 70% of minutes). Longest gap: 6 days in the third week. Second month of decline. Next month: 20 minutes on four weekday mornings, with a booked conversation class every other Thursday."
 
@@ -3513,7 +3511,7 @@ Do this only for a legitimate task purpose and with the user's clear authorizati
 
 ---
 name: wind-down-for-sleep
-description: Guides a short evening routine that lowers stimulation, prepares the body and morning, and handles sleepless nights. Use when someone says "wind down", "ready for bed", or "can't sleep".
+description: Guides a short evening routine that lowers stimulation, prepares the body, and handles sleepless nights. Use when someone says "wind down", "ready for bed", or "can't sleep".
 ---
 
 # Wind down for sleep
@@ -3523,29 +3521,29 @@ This interactive evening workflow moves the user from the awake part of the day 
 ## Quick version
 
 - Say "wind down" when you are ready to start.
-- Put your phone or other distracting device out of reach first, ideally in another room or a timed box. Set it to come back only when tomorrow morning needs it, based on your first real commitment.
-- Change into sleep clothes, do two or three small tasks for the morning, then a few minutes of a calming practice you already know.
-- If a worry or task comes up, write one line on paper for tomorrow and leave it.
-- Do not plan tomorrow or reflect on today during this ritual.
+- Do the gate in one go: sleep clothes on, teeth brushed, and your phone or other distracting device out of reach, ideally in another room or a timed box. Set it to come back only when tomorrow morning needs it, based on your first real commitment.
+- Then a few minutes of a calming practice you already know, and the screen goes off. That is the last message of the night.
+- Go to bed when you feel sleepy, not when the clock says so. Until then, read something on paper in dim light somewhere other than the bed.
+- If a worry or task comes up, write one line on paper for tomorrow and leave it. Do not plan tomorrow or reflect on today during this ritual.
 - If you are still awake after what feels like about 20 minutes in bed, get up, do something dull in dim light, and return when sleepy.
 
 ## 1. Purpose and evening order
 
 Recommended evening order: **day review, then next-day planning, then wind-down.** Reflection belongs to the earlier day-review practice and tomorrow belongs to the earlier planning practice. This workflow comes last.
 
-Target length for the active ritual: about 20 to 30 minutes. Longer rituals tend to get skipped.
+Target length for the active ritual: short, about 15 to 20 minutes as an adjustable default. Longer rituals tend to get skipped, and every extra message keeps the user looking at a screen.
 
 It targets late stimulation (scrolling, lying awake), worry about tomorrow (mostly handled by the earlier review and specific planning), an inconsistent routine, and distraction controls that are easy to bypass. Physical barriers usually beat software limits on the same device.
 
 Success signal: the user wakes rested, starts the morning without scrolling, and the device stays out of reach until the access time set from tomorrow's commitments. Every step must reduce stimulation, add reliability, or prepare the body; remove any step that does none of these. Re-read this purpose every run.
 
-Design anchors, never explained at bedtime: a specific to-do list written earlier has been linked to falling asleep faster, which is why planning runs before this workflow rather than inside it; scheduled worry time earlier in the evening reduces bedtime anxiety; dim, warm light helps sleep onset; and consistency matters more than contents.
+Design anchors, never explained at bedtime: a specific to-do list written earlier has been linked to falling asleep faster, which is why planning runs before this workflow rather than inside it; scheduled worry time earlier in the evening reduces bedtime anxiety; dim, warm light helps sleep onset; the bed should stay linked with sleep, so sleepiness rather than the clock is the cue to get in; and consistency matters more than contents.
 
 ## 2. Standalone mode
 
-You do not need daily records, a calendar, or any other workflow to use this. Tell the assistant tonight's bedtime and your first fixed commitment tomorrow morning, if any, then run Steps 1 to 4 from that alone, and skip Step 0. Use paper as the capture spot.
+You do not need daily records, a calendar, or any other workflow to use this. Tell the assistant tonight's bedtime and your first fixed commitment tomorrow morning, if any, then run Steps 1 and 2 from that alone, and skip Step 0. Use paper as the capture spot.
 
-Chatting with an assistant on a bright screen works against winding down. Use voice if you can, or send one short message per step, with the screen dimmed and warm.
+Chatting with an assistant on a bright screen works against winding down. Use voice if you can, keep the screen dimmed and warm, and let the close be the last thing you read.
 
 ## 3. Settings the user chooses
 
@@ -3554,29 +3552,29 @@ Agree on these once. Reuse them every night until the user changes them. Offer t
 | Setting | What to decide | Suggested starting point |
 |---|---|---|
 | Target sleep time | When the user wants to be asleep | Based on their natural sleep window and wake time |
-| Ritual start | When wind-down usually begins | 60 to 90 minutes before target sleep time |
+| Ritual start | When wind-down usually begins | Enough before target sleep time for the ritual plus some reading |
 | Review cutoff | When a missed review is skipped | When a review would push sleep back |
 | Distraction barrier | How the device goes out of reach | A timed box or another room |
 | Default access time | When the device comes back if nothing early is booked | After the first part of the morning routine |
 | Commitment cutoff | How early a commitment must be to move access earlier | Shortly after the default access time plus the commitment buffer |
 | Commitment buffer | Time before a commitment to get ready and arrange transport | 45 to 60 minutes |
 | Travel buffer | Time before a travel or commute block, which already marks departure | 15 to 20 minutes |
-| Gate items | The few changes that signal night | A clothing change plus the distraction barrier |
+| Gate items | The few changes that signal night, including any essential body prep | A clothing change, teeth, and the distraction barrier |
 | Allowed device | The one low-stimulation device, if any, after the gate | None |
-| Physical prep and settling practice | Small morning-setup tasks, then a short familiar practice | Water, teeth, breakfast; a few minutes of slow breathing |
+| Settling practice | A short familiar practice done after the last message | A few minutes of slow breathing |
 | Capture spot | Where stray tasks go for tomorrow | A notes field on tomorrow's record, or paper |
 
-If the user names an earlier bedtime for tonight, work backwards from it. Protect time for physical prep and the settling practice. Do not let planning expand into the remaining window.
+If the user names an earlier bedtime for tonight, work backwards from it. Protect time for the gate and the settling practice. Do not let planning expand into the remaining window.
 
 ## 4. Triggers
 
 - **Full ritual:** "wind down", "ready for bed", "going to bed", "time for bed", "help me get to sleep", or similar.
-- **Can't-sleep fallback only:** "can't sleep", "still up", "still awake", or similar, after the ritual already ran tonight. Skip every other step and go straight to Step 6.
+- **Can't-sleep fallback only:** "can't sleep", "still up", "still awake", or similar, after the ritual already ran tonight. Skip every other step and go straight to Step 4.
 
 ## 5. Hard rules
 
 - **Gate first.** Do not continue past Step 1 until the user confirms it.
-- **Keep the gate minimal.** Include only the gate items the user chose. If the user removes an item, do not add it back later.
+- **Keep the gate minimal.** Include only the gate items the user chose. If the user removes an item or stops a prep task, do not add it back later or move it into a separate step.
 - **No distracting-device step after Step 1.** Everything afterward must work offline or with the one allowed device.
 - **Never ask about tomorrow, and do not reopen reflection or planning.** No outcomes, intentions, wins, or backup one-line plan. If planning was skipped, note it silently and continue. Planning questions raise alertness at the moment the goal is to lower it. Do not open a second writing session; any journal writing belongs to the review, before its questions.
 - **Deflect tomorrow-concerns.** Say: "Put a short note in your capture spot. The review will handle it tomorrow. Not tonight."
@@ -3604,11 +3602,13 @@ If this workflow runs on its own, gather the following in one batch:
 
 If tomorrow's plan is missing, do not mention it, offer planning, or ask a fallback question.
 
-## 7. Checklist format (Steps 1 and 2)
+## 7. Checklist format (Step 1)
 
-Use plain bullet lists, not checkboxes. Many interfaces cannot tick boxes, and "tick each one" wording confuses people. Send the whole list in one message and end with "Reply 'done' when all set." Expect one reply. Do not send items one at a time, because that adds turns at bedtime.
+Use a plain bullet list, not checkboxes. Many interfaces cannot tick boxes, and "tick each one" wording confuses people. Send the whole list in one message and end with "Reply 'done' when all set." Expect one reply. Do not send items one at a time, because that adds turns at bedtime.
 
-## 8. Step 1: Environment and distraction gate
+## 8. Step 1: Body and distraction gate
+
+This is the only checklist. It combines the night signal, essential body prep, and the device barrier.
 
 Set the access time from tomorrow's calendars every night. There is no fixed time; the device comes back only when the morning needs it.
 
@@ -3623,45 +3623,42 @@ Set the access time from tomorrow's calendars every night. There is no fixed tim
 ```
 Before we start:
 - [Clothing change, e.g. day clothes off, sleep clothes on]
+- [Body prep item, e.g. teeth brushed]
 - [Distraction barrier], timer [duration] (access at [time], [reason, e.g. "for the early call (work)", or "nothing before the cutoff"])
 
 Reply "done" when all set.
 ```
 
-If the user delays an item ("I'll do the phone in a sec"), say once: "Do it now. These are the biggest levers. I'll wait." Then wait.
+If the user delays an item ("I'll do the phone in a sec"), say once: "Do it now. These are the biggest levers. I'll wait." Then wait. Once confirmed, go straight to Step 2.
 
-## 9. Step 2: Physical prep (about 5 minutes)
-
-List the user's chosen tasks, grouped by location so they move around less.
-
-```
-- [Kitchen task, e.g. fill water bottle for the morning]
-- [Bathroom task, e.g. brush teeth]
-- [Hallway task, e.g. put keys and bag by the door]
-
-Reply "done" when all set.
-```
+## 9. Small to-dos raised mid-ritual
 
 If a small task surfaces ("library book is due, return it tomorrow"), do not solve it. Capture one line so it leaves the user's head:
 
 - Append to tomorrow's capture spot. Read only that spot first, preserve existing text exactly, and never overwrite from an earlier cached value. Never write into a private journal or a review record.
-- Then say: "Noted. Captured."
+- Then say: "Noted. Captured." If the gate is already confirmed, put this acknowledgment in the same message as the close rather than sending an extra turn.
 
-## 10. Step 3: Settling practice
+## 10. Step 2: Settling practice and close (one message)
 
-One line naming the practice, for example: "Ten slow breaths." Give no instructions if the user already knows the practice. Never introduce something new at bedtime. Wait for "done" or similar. Add, remove, or restore this step whenever the user asks.
+As soon as the user confirms the gate, send one final message that names the settling practice, ends screen time, and gives the bed cue. Because it is the last message, the user has no reason to come back to the screen. Adapt the wording to the user's setup:
 
-## 11. Step 4: Close
-
-Say only, adapted to the user's setup:
-
-> That's everything. Lights off and straight to bed.
+> [Settling practice, e.g. "A few minutes of slow breathing."] Then screen off.
+>
+> Go to bed once you feel sleepy. Until then, read something on paper in low light, away from the bed.
 >
 > Talk tomorrow.
 
-No recap and no "sweet dreams". This is the last message tonight. Move silently to the audit.
+Rules for this message:
 
-## 12. Step 5: Routine audit (silent)
+- Give no instructions if the user already knows the practice, and never introduce something new at bedtime.
+- Do not wait for "done" after the practice. The conversation ends here.
+- The cue to get into bed is sleepiness, not the clock. The target sleep time is a goal, not a command to lie down awake.
+- No recap and no "sweet dreams".
+- If the user asks to drop the practice, cut that line from the close. Restore it whenever they ask.
+
+Then move silently to the audit.
+
+## 11. Step 3: Routine audit (silent)
 
 After the close, review the run without sending anything. Do not ask a tired person to diagnose their own ritual. If the user approved direct edits, update the routine. Otherwise, save proposed changes for daytime review. Do not report what changed.
 
@@ -3671,8 +3668,9 @@ After the close, review the run without sending anything. Do not ask a tired per
 | User pushed back on a step | Simplify it, make it optional, or cut it |
 | A lookup failed or found the wrong record | Fix the lookup rule |
 | The user corrected the access time | Check which calendar, commitment rule, or time conversion was missed and fix that rule |
-| An item is skipped without comment | Remove it |
+| An item is skipped without comment or dropped from the user's evening | Remove it |
 | User stated a preference ("don't ask me X") | Add it as a hard rule |
+| The user came back to the screen after the close | Fold any remaining step into the close so nothing waits on a reply |
 | The barrier keeps being bypassed | Choose a stronger physical barrier with the user |
 | The same worry keeps appearing at bedtime | Move its prevention into the earlier review or planning |
 
@@ -3684,9 +3682,9 @@ How to edit:
 - If you want a history, keep a separate one-line-per-entry log of what happened and why a rule changed. Do not load that log during a normal run.
 - If the run was clean, change nothing. Do not invent improvements.
 
-If the user re-engages because they cannot sleep, go to Step 6.
+If the user re-engages because they cannot sleep, go to Step 4.
 
-## 13. Step 6: Can't-sleep fallback (stimulus control)
+## 12. Step 4: Can't-sleep fallback (stimulus control)
 
 Use only when the user reports being awake after the ritual. Do not rerun the ritual or reopen planning. Say:
 
@@ -3694,23 +3692,21 @@ Use only when the user reports being awake after the ritual. Do not rerun the ri
 
 This keeps the bed linked with sleep rather than with lying awake. Do not extend the reply. If sleep trouble is frequent or severe, suggest professional support at a daytime moment, not at night.
 
-## 14. Worked example (invented)
+## 13. Worked example (invented)
 
 Alex says "wind down" with no records connected. Bedtime is an hour away and nothing is booked early tomorrow, so the phone comes back at Alex's default time after breakfast.
 
-- Assistant: "Before we start: sleep clothes on, phone in the kitchen drawer until after breakfast (nothing early tomorrow). Reply 'done' when all set."
-- Alex: "done"
-- Assistant: "Fill a water glass, brush teeth, keys by the door. Reply 'done' when all set."
+- Assistant: "Before we start: sleep clothes on, teeth brushed, phone in the kitchen drawer until after breakfast (nothing early tomorrow). Reply 'done' when all set."
 - Alex: "done. oh, need to call the dentist"
-- Assistant: "Write it on the paper by your bed. Not tonight." Then: "Ten slow breaths."
-- Alex: "done"
-- Assistant: "That's everything. Lights off and straight to bed. Talk tomorrow."
+- Assistant: "Write it on the paper by your bed. Not tonight. Ten slow breaths, then screen off. Go to bed once you feel sleepy; until then, read on paper in low light somewhere else. Talk tomorrow."
 
-## 15. Exhaustion rule
+The assistant sends nothing more, even if Alex replies "good night" (at most, "Good night.").
 
-If the user is clearly exhausted, they may skip Step 2 or Step 3. Do not skip Step 1, because it is the load-bearing step, unless a health, safety, accessibility, or caregiving need makes it unsuitable.
+## 14. Exhaustion rule
 
-## 16. Style
+If the user is clearly exhausted, they may skip the settling practice. Do not skip Step 1, because it is the load-bearing step, unless a health, safety, accessibility, or caregiving need makes it unsuitable.
+
+## 15. Style
 
 - Quiet and short. One question at a time. No preamble.
 - No narration ("great, now let's...") and no emojis.
@@ -4315,7 +4311,7 @@ Accept a date in `YYYY-MM-DD` format, a relative date such as "yesterday," a dat
 - Before an early-morning cutoff in the user's local time, process the previous day.
 - Otherwise, process the current day.
 
-State the scope once, for example: "Scanning meetings for 23 Apr."
+State the scope once, with the full weekday name, for example: "Scanning meetings for Thursday 23 Apr."
 
 Check every place where the user's meeting records live, not just the main one. Many people keep a shared team meeting space, a separate private space for sensitive calls or internal one-to-ones, and sometimes a restricted space for a specific function, such as a hiring space that holds reference calls. When a new category of meeting moves to its own space, add that space to the sweep, or those meetings will silently drop out. Sources can differ in how they filter: one may already show only meetings the user attended, while another needs a direct query by date. Query each source for the selected scope, merge the results, and remove any meeting that appears in more than one.
 
@@ -4914,6 +4910,8 @@ Go in bucket order and stop whenever the user wants. Each message shows one batc
 
 ### Drafts, only when asked
 
+Keep the detailed drafting rules (where each kind of draft goes per source, the user's voice, and what never to do) in a separate reference, and read it only when a draft is requested. That keeps the core workflow short.
+
 Check the request against the thread first: if a requested point repeats or contradicts what the other person said, or misreads the ask, say so in one line and draft the version that makes sense. By default, give one draft per response as copy-ready text in the final block, with the item's link directly above it, after all tool calls. Never send. The item stays open until the reply is sent.
 
 ### Creating a task
@@ -4951,7 +4949,7 @@ If many loops remain open, say so plainly.
 Then audit the run for friction: a pointless question, a misfiled item, a misbehaving source, context you had to hunt for. With permission, fix the cause in general terms, never storing message content or credentials. Before changing anything, decide where the lesson belongs:
 
 - **The core workflow,** if it changes how every run should work.
-- **A source or tool reference,** if it is about how one inbox, app, or connection behaves.
+- **A source or tool reference,** if it is about how one inbox, app, or connection behaves, or how drafts work there.
 - **A separate lessons log,** if it is a single observation not yet worth a rule; promote it to the workflow once it recurs.
 
 Keeping one-off fixes out of the core workflow stops it from bloating into a list of special cases.
@@ -4982,7 +4980,7 @@ Keeping one-off fixes out of the core workflow stops it from bloating into a lis
 
 **Delegated clearing.** Some tools have no quick manual way to empty a notification inbox, so the user may delegate clearing. Clear only items the user says are handled, not worth acting on, or confirmed as no action, never items decided but not yet acted on. Clearing a notification must never resolve, edit, or delete the underlying comment or record. Retry a transient error once, verify, report in one line ("Cleared 4, all verified, 29 left"), and know how to undo a mistake.
 
-**Saved drafts in apps.** Where authorized, save each draft as a reply inside its own thread, using a method the user has verified keeps it attached there. Use real mentions in group threads, open the draft in the user's preferred app, and do not also paste it into the conversation. If a draft already exists, say so rather than overwriting it. If you cannot read saved drafts back, never recreate an edited one from your version; ask the user for their current text first.
+**Saved drafts in apps.** Where authorized, save each draft as a reply inside its own thread, using a method the user has verified keeps it attached there, and leave it open in the user's preferred app so they can edit and send. Use real mentions in group threads, and do not also paste it into the conversation. If a draft already exists, say so rather than overwriting it. If you cannot read saved drafts back, never recreate an edited one from your version; ask the user for their current text first. For copy-ready text, also copy it to the clipboard when a tool allows, and say so.
 
 
 ---
@@ -5768,6 +5766,7 @@ A click is not proof. Look for a success message, a reference number, a new reco
 | Wrong account or site says permission denied | Last-used profile or missing role | Select profile directly; ask user to sign in correctly; re-verify. |
 | Tool reports permission denied right after navigating | Page still loading | Screenshot, wait, retry in a fresh tab if needed. |
 | Tab freezes; clicks and screenshots time out | Native confirm dialog or blocking pop-up | Reload; read the message safely or ask the user. |
+| A log or data search freezes the tab or is slow to drive | Query builder is heavy; the time range is too wide | Split the range into smaller windows and run read-only queries per window (see Optional extras). |
 | Session ends after a page-script request | Internal endpoint called without normal headers | Drive the UI or use a supported API. |
 | Clicks do nothing, or a read misses part of the page or comes back cut off | Panel ignores clicks or extraction; tool truncates output | Screenshot, click by position, read the panel directly, read long results in slices. |
 | Warning, sign-in, or consent page the tool cannot handle | Needs a person | Leave the tab open, ask the user, then re-verify. |
@@ -5810,6 +5809,8 @@ Never record credentials or private site data. Merge older entries into general 
 **Editing through an editor's document model.** Some rich editors expose their internal editor object to page scripts. Walk the document to find the exact position and insert content through the editor's own commands instead of typing. Validate every planned change first, then apply all changes to one item in a single transaction, because a failure partway through can leave a half-edited draft that autosaves. For many items, keep the edit function somewhere that survives navigation, such as session storage, and work a few items per batch. Wait for the saved indicator, go through the update dialog using the pre-submit gate, then verify through a public read.
 
 **Apps without a full API.** Read configuration from state the page already holds in memory; internal layouts change between versions, so an empty read usually means the layout moved. If a page shows only part of a record, the app's own read-only requests, repeated from a tab on the same site, may return the full detail. Make changes through the UI, test with a read-only step, then save and re-read. If a page-script loop outlasts your tool's time limit, start it without waiting, store results in a page variable, and poll. If the tool blocks certain characters in scripts you send, build them indirectly, for example from character codes. If returned text gets cut off or filtered, keep the full result in a page variable and read it back in slices under the limit, then reassemble before drawing conclusions.
+
+**Searching logs in monitoring dashboards.** Query builders in log and monitoring tools are slow to drive, and one long query over a wide time range can freeze the tab. From a tab already signed in to that tool, repeat the same read-only query request the page itself makes, split the range into smaller windows (one day each is a reasonable starting point; adjust to the volume), count or collect results per window, and add them up. Read a few sample lines first to learn the log format, such as which field holds the path, status, or client, before filtering. Keep the exact query steps for each tool in its reference note.
 
 **The user's own devices.** Local devices often serve unencrypted pages that trigger a browser warning; proceed past it only for devices the user owns and asked about. When away from that network, diagnose through the app's signed-in remote page, using the read-only logs, history, and event views it already exposes. If a source refuses access, accept that rather than looking for another way in.
 

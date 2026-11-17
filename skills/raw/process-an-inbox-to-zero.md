@@ -131,6 +131,8 @@ Go in bucket order and stop whenever the user wants. Each message shows one batc
 
 ### Drafts, only when asked
 
+Keep the detailed drafting rules (where each kind of draft goes per source, the user's voice, and what never to do) in a separate reference, and read it only when a draft is requested. That keeps the core workflow short.
+
 Check the request against the thread first: if a requested point repeats or contradicts what the other person said, or misreads the ask, say so in one line and draft the version that makes sense. By default, give one draft per response as copy-ready text in the final block, with the item's link directly above it, after all tool calls. Never send. The item stays open until the reply is sent.
 
 ### Creating a task
@@ -168,7 +170,7 @@ If many loops remain open, say so plainly.
 Then audit the run for friction: a pointless question, a misfiled item, a misbehaving source, context you had to hunt for. With permission, fix the cause in general terms, never storing message content or credentials. Before changing anything, decide where the lesson belongs:
 
 - **The core workflow,** if it changes how every run should work.
-- **A source or tool reference,** if it is about how one inbox, app, or connection behaves.
+- **A source or tool reference,** if it is about how one inbox, app, or connection behaves, or how drafts work there.
 - **A separate lessons log,** if it is a single observation not yet worth a rule; promote it to the workflow once it recurs.
 
 Keeping one-off fixes out of the core workflow stops it from bloating into a list of special cases.
@@ -199,4 +201,4 @@ Keeping one-off fixes out of the core workflow stops it from bloating into a lis
 
 **Delegated clearing.** Some tools have no quick manual way to empty a notification inbox, so the user may delegate clearing. Clear only items the user says are handled, not worth acting on, or confirmed as no action, never items decided but not yet acted on. Clearing a notification must never resolve, edit, or delete the underlying comment or record. Retry a transient error once, verify, report in one line ("Cleared 4, all verified, 29 left"), and know how to undo a mistake.
 
-**Saved drafts in apps.** Where authorized, save each draft as a reply inside its own thread, using a method the user has verified keeps it attached there. Use real mentions in group threads, open the draft in the user's preferred app, and do not also paste it into the conversation. If a draft already exists, say so rather than overwriting it. If you cannot read saved drafts back, never recreate an edited one from your version; ask the user for their current text first.
+**Saved drafts in apps.** Where authorized, save each draft as a reply inside its own thread, using a method the user has verified keeps it attached there, and leave it open in the user's preferred app so they can edit and send. Use real mentions in group threads, and do not also paste it into the conversation. If a draft already exists, say so rather than overwriting it. If you cannot read saved drafts back, never recreate an edited one from your version; ask the user for their current text first. For copy-ready text, also copy it to the clipboard when a tool allows, and say so.

@@ -50,7 +50,7 @@ Ask what "the month" means to the user if it is unclear; they may want to includ
 7. **Stay at month level.** Set outcomes, milestones, capacity, and structure. Leave daily task blocks to weekly planning.
 8. **No saved plan without explicit approval.** A plan assembled from notes is a draft, not a decision.
 9. **Do not lecture.** Show numbers, a direct conclusion, and the agreed commitment. No hedging: "the month was behind" beats "the month was a bit below target." Save decisions and evidence, not a transcript.
-10. **Keep the output plain and consistent.** Skip decoration such as emojis, and use one date format throughout, the one the user prefers (for example, day then short month, with no leading zero: "3 Mar").
+10. **Keep the output plain and consistent.** Skip decoration such as emojis, and use one date format throughout, the one the user prefers (for example, day then short month, with no leading zero: "3 Mar"). In commitments, spell weekday names in full ("Saturday 16 May", not "Sat 16 May") so the date reads unambiguously.
 
 ## Step 1: Gather evidence
 
@@ -259,7 +259,7 @@ Before finishing, verify:
 - The structural fix responds to a reviewed drain.
 - The user answered at least one hard question that shaped the plan.
 - The pre-mortem has counters.
-- Dates use one consistent format throughout.
+- Dates use one consistent format throughout, with weekday names spelled in full.
 - The user explicitly approved the plan before saving.
 
 ## Common failures
@@ -294,7 +294,7 @@ Suggested verdict scale (all thresholds adjustable):
 - **At risk:** a warning trend regardless of totals, such as volume falling three weeks in a row or signs of strain or injury the user reports.
 - **Paused:** the user chose to stop for now; do not re-argue it.
 
-If tracking may be incomplete, ask "The record shows this. Does that match reality?" before judging. State the verdict in one line with numbers and named weeks, then one concrete commitment for next month, and add it to the plan. Make it specific ("four sessions a week by week three, one long session on the second Saturday"), never "try to do more."
+If tracking may be incomplete, ask "The record shows this. Does that match reality?" before judging. State the verdict in one line with numbers and named weeks, then one concrete commitment for next month, and add it to the plan. Make it specific ("four sessions a week by week three, one long session on Saturday the 14th"), never "try to do more."
 
 Example (fictional): "Language practice: **Behind**. 9 sessions against a target of 16 (56% of sessions, 70% of minutes). Longest gap: 6 days in the third week. Second month of decline. Next month: 20 minutes on four weekday mornings, with a booked conversation class every other Thursday."
 

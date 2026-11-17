@@ -15,11 +15,11 @@ Use this at the end of the day to see honestly what happened, name one win and o
 - Ask for a rating only after the context is on the table, plus a one-line reason.
 - Always get a win, even on a bad day, and one thing that drained energy.
 - Ask what's rattling for tomorrow and write it down. This offload matters most.
-- Finish with a short block the user can paste into their notes. Keep it to about ten exchanges; don't replan tomorrow or play therapist. If the user is tired, ask everything in one message with your guesses filled in.
+- Finish with a short block the user can paste into their notes. Keep it to about ten exchanges, or close with the minimum once it passes the user's cutoff time; don't replan tomorrow or play therapist. If the user is tired, ask everything in one message with your guesses filled in.
 
 ## 1. Choose the day and gather context
 
-Check the local date, weekday, and time from the system, never from memory. If it is just past midnight, the user almost always means the day that just ended. Default: the early hours of the morning still count as the previous day; set the cutoff that fits you. Say which day you are reviewing in one line, and note which close mode fits tonight (section 8).
+Check the local date, weekday, and time from the system, never from memory. If it is just past midnight, the user almost always means the day that just ended. Default: the early hours of the morning still count as the previous day; set the cutoff that fits you. Say which day you are reviewing in one line, using the full weekday name ("Reviewing Thursday 5 Mar."), and note which close mode fits tonight (section 8).
 
 Collect everything in one batch before asking anything, so the conversation is not interrupted by lookups:
 
@@ -84,6 +84,8 @@ Get these in any order. If the user covers two in one reply, don't ask again.
 
 Use plain words. Optionally add one feelings, gratitude, or open-vent question if the day calls for it. Pick one, not all three.
 
+Keep the whole conversation to about ten exchanges. Also set a cutoff time: once it passes, collect only the minimum (rating, reason, offload) and close. Default: about an hour before the user's usual bedtime; adjust to fit you.
+
 The rating reflects how the day felt, not an audit of output. A slipped MIT doesn't cap it when other good work landed, and a long-awaited outside yes can carry a whole day. Many meetings aren't automatically a drain. On mixed days, keep both truths and note the shape in the reason ("swung from bad to great") so a later planner doesn't misread a neutral score.
 
 If something heavy comes up, acknowledge it, log it in the offload, and move toward close. If the user says they're deliberately containing it, log that and don't reopen it.
@@ -130,7 +132,7 @@ Confirm in one line: "Review saved." Don't summarize. If the user plans the next
 The latest instruction wins: "I just want to sleep" overrides an earlier "review, then plan".
 
 1. **Normal.** The full flow above.
-2. **Quick.** The user is tired, near bedtime, or just wants to close out. In the overview message, send one numbered message of four questions (rating and reason, win, drain, offload) with your guesses filled in, and offer freewriting only if there's time. A bare rating accepts all the guesses; a partial reply accepts the ones not contested. Never re-ask; log a missing item as "not named; likely X (unconfirmed)".
+2. **Quick.** The user is tired, near bedtime, past the cutoff, or just wants to close out. In the overview message, send one numbered message of four questions (rating and reason, win, drain, offload) with your guesses filled in, and offer freewriting only if there's time. A bare rating accepts all the guesses; a partial reply accepts the ones not contested. Never re-ask; log a missing item as "not named; likely X (unconfirmed)".
 3. **Hard close.** The user says they're going to bed, says "just log it" the next morning, or starts the review and says they won't reply. Ask nothing more. Build the reason, win, and drain from what they said and the day's evidence; fill the offload from open items, marked unconfirmed. With no rating, map their words ("fine" to slightly positive, "meh" to neutral) or infer from evidence, and mark it as inferred. Never leave it blank. Write, stop.
 
 ## Worked example
@@ -141,7 +143,7 @@ The assistant opens: "The launch email block went to customer replies. Did those
 
 ## Optional extras
 
-- **Style.** One question at a time (except the quick mode), no preamble, no narration of steps, no lectures on sleep or productivity. If the user goes off-script, log it and ask: "Anything else to offload, or move on?" Use one short, consistent date format; default: weekday, day without a leading zero, and abbreviated month ("Thu 5 Mar"); adjust to your preference.
+- **Style.** One question at a time (except the quick mode), no preamble, no narration of steps, no lectures on sleep or productivity. If the user goes off-script, log it and ask: "Anything else to offload, or move on?" Use one short, consistent date format; default: day without a leading zero and abbreviated month ("5 Mar"), with the full weekday when stating which day you're reviewing ("Thursday 5 Mar"); adjust to your preference.
 - **Personal days.** On a non-work day, skip work sources and let the user's own account lead. Don't make them retell it or probe the MIT.
 - **Answer real questions.** If the user asks a factual question mid-review, a quick targeted lookup is fine. Fold the answer into the offload.
 - **Plan after a hard close.** If the user says "plan tomorrow" while signing off, run a minimal plan with no questions: confirm blocks they already set, change no calendars or tasks, follow any plan source they name, and mark open choices "pending decision".

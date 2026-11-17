@@ -104,7 +104,7 @@ After the review, ask: "What must still ship before the new week starts?" That i
 - **Messages (counts only):** old unanswered threads and people waiting for replies.
 - **Fixed outside commitments:** events or programs the user runs that start soon.
 
-**Data quality.** Check each source's newest entry before analyzing it; a feed that stopped is a gap, not behavior, so say so first and name every source that failed. Treat a surprising zero as a likely gap and ask. A schedule of planned activity is not a record of what was done. Never double count an item that arrives from two places, never average across a gap, and never claim something is late unless a date proves it.
+**Data quality.** Check each source's newest entry before analyzing it; a feed that stopped is a gap, not behavior, so say so first and name every source that failed. Treat a surprising zero as a likely gap and ask. A schedule of planned activity is not a record of what was done. Never double count an item that arrives from two places, never average across a gap, and never claim something is late unless a date proves it. Keep source-specific details (field names, how each feed arrives, known quirks) in a separate reference note, and consult it only when a number looks missing or wrong rather than loading it every run.
 
 If there are no connected tools, ask the user for a two-minute summary of their calendar and open work instead.
 
@@ -267,7 +267,7 @@ Then start a review of what the assistant has saved about the user (memories, st
 Afterwards, quietly note what went wrong, wasted time, or was corrected. Before changing anything, decide where each lesson belongs:
 
 - **The workflow itself,** for a rule every run needs. Tighten or merge an existing instruction rather than adding a paragraph, and never add dated incident notes.
-- **A separate reference note,** for detail only some runs need, such as how one data source behaves.
+- **A separate reference note,** for detail only some runs need, such as how one data source behaves or the exact steps of an optional module.
 - **A short lessons log,** for one-line dated entries that explain why a rule exists. Do not read it during a normal run.
 
 Keep the workflow within a length limit you choose; near the limit, consolidate before adding. Don't ask the user how to improve the workflow.
@@ -302,13 +302,9 @@ Ask whether the user wants to triage overdue tasks themselves. If not, first ask
 
 If the active month or quarter plan has a scorecard or non-negotiables, ask whether they still match reality, then score the lookback using its own items and thresholds. If a cut-scope rule fires, raise it during shaping. Never rebuild an expired scorecard.
 
-### Hiring load
-
-If the user hires, count their interviews and hours for the week and list candidates in late stages. Flag a candidate as waiting too long only when a stage-entry date proves it against the user's chosen response target. With heavy load, raise the cost of delay and ask who owns it; block hiring time only once the user puts it on the week.
-
 ### Recurring-friction review
 
-If the user asks, look across recent sessions for corrections that repeat. Skip this if private content cannot be filtered out before it is read. Group repeats, skip one-offs, and propose one specific fix per group.
+If the user asks, look across recent sessions for corrections that repeat. Skip this if private content cannot be filtered out before it is read. Keep the exact search steps in a reference note loaded only for this module. Group repeats, skip one-offs, and propose one specific fix per group.
 
 ### Structured stores
 
