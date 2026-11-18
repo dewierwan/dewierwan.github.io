@@ -1,42 +1,61 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="robots" content="noindex,nofollow,noarchive"><title>Test every screen size · AI skills</title><meta name="description" content="Check every UI or CSS change across narrow, wide, short, and tall screens with screenshots and layout checks before calling it done. Use before shipping any front-end change.">
-<link rel="alternate" type="text/markdown" href="/skills/raw/test-every-screen-size.md"><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%23b4552d%22/><text x=%2250%22 y=%2253%22 dominant-baseline=%22central%22 text-anchor=%22middle%22 font-family=%22Georgia, 'Times New Roman', serif%22 font-size=%2246%22 letter-spacing=%221%22 fill=%22%23fdfaf4%22>DE</text></svg>"><link rel="stylesheet" href="/skills/styles.css"></head><body><main><a class="back" href="/skills/">← Skills</a><header class="skill-header"><h1>Test every screen size</h1><p class="description">Check every UI or CSS change across narrow, wide, short, and tall screens with screenshots and layout checks before calling it done. Use before shipping any front-end change.</p><div class="skill-actions"><a href="/skills/raw/test-every-screen-size.md">Raw Markdown</a><button class="copy" type="button" data-copy="/skills/raw/test-every-screen-size.md">Copy Markdown</button></div></header><article class="skill-body"><p>Run this workflow after any UI, visual, or CSS change and before requesting review, publishing, or calling the work complete. Small edits to spacing, backgrounds, or sizing can create overflow, blank areas, wrapping problems, or collisions at sizes that were not inspected.</p>
+<meta name="robots" content="noindex,nofollow,noarchive"><title>Test every screen size · AI skills</title><meta name="description" content="Checks UI or CSS changes across narrow, wide, short, and tall screens with screenshots and layout checks. Use when shipping a front-end fix or asking &#39;does this work on mobile?&#39;">
+<link rel="alternate" type="text/markdown" href="/skills/raw/test-every-screen-size.md"><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%23b4552d%22/><text x=%2250%22 y=%2253%22 dominant-baseline=%22central%22 text-anchor=%22middle%22 font-family=%22Georgia, 'Times New Roman', serif%22 font-size=%2246%22 letter-spacing=%221%22 fill=%22%23fdfaf4%22>DE</text></svg>"><link rel="stylesheet" href="/skills/styles.css"></head><body><main><a class="back" href="/skills/">← Skills</a><header class="skill-header"><h1>Test every screen size</h1><p class="description">Checks UI or CSS changes across narrow, wide, short, and tall screens with screenshots and layout checks. Use when shipping a front-end fix or asking &#39;does this work on mobile?&#39;</p><div class="skill-actions"><a href="/skills/raw/test-every-screen-size.md">Raw Markdown</a><button class="copy" type="button" data-copy="/skills/raw/test-every-screen-size.md">Copy Markdown</button></div></header><article class="skill-body"><p>Run this workflow after any UI, visual, or CSS change and before requesting review, publishing, or calling the work complete. Small edits to spacing, backgrounds, or sizing can create overflow, blank areas, wrapping problems, or collisions at sizes that were not inspected.</p>
+<h3>Quick version</h3>
+<ul>
+<li>Before calling a UI change done, view it at several widths, from a very narrow phone up to a wide desktop, using your browser&#39;s responsive or device mode. Also try a short and a very tall window height.</li>
+<li>Fill the screen with realistic content first: long text, a full list, typed-in form values, error messages. Empty pages hide bugs.</li>
+<li>At each size, look at all four sides of the changed element, not just the side you edited. Watch for leftover strips of margin or padding.</li>
+<li>Paste screenshots into your AI assistant and ask it to check for overflow, overlap, clipped or hidden controls, blank areas, and overly wide text, compared against your original goal.</li>
+<li>If one size breaks, fix the underlying layout rule and recheck every size. Do not patch only the size that failed.</li>
+<li>Report the exact sizes and checks that passed, not &quot;looks good on mobile and desktop.&quot;</li>
+</ul>
 <p>A layout passes only when <strong>both</strong> screenshots and programmatic checks pass. Measurements can miss visual defects; screenshots can miss off-screen overflow or unusable controls.</p>
 <h3>1. Prepare a representative state</h3>
-<p>Use an authorized test environment and test only the minimum data needed to reproduce normal use. Populate the changed surface with realistic content, such as long text, representative lists or cards, field values, and validation messages. Include loading, empty, or error states when the change affects them.</p>
+<p>Use an authorized test environment and only the minimum data needed to reproduce normal use. Populate the changed surface with realistic content, such as long text, representative lists or cards, field values, and validation messages. Include loading, empty, or error states when the change affects them.</p>
 <p>Do not test only an empty or unusually sparse page. Sparse states often conceal clipping, overlap, and unwanted blank space.</p>
 <h3>2. Select the viewport sweep</h3>
-<p>Use a repeatable browser-testing system. Start with these widths:</p>
-<ul>
-<li>320 px</li>
-<li>480 px</li>
-<li>600 px</li>
-<li>720 px</li>
-<li>1024 px</li>
-<li>1440 px</li>
-</ul>
-<p>Add a wide desktop size, such as 1920 px, when large displays are a supported use case. Include any known target viewport.</p>
-<p>When vertical behavior matters, test both a short and tall height, for example about 700 px and 1400 px or more. Explicitly include a very tall viewport for changes involving viewport-height sizing, flexible page shells, backgrounds, vertical padding, sticky footers, or bottom alignment.</p>
+<p>Use a repeatable browser-testing setup. Choose a set of widths that covers each layout range you support. These starting values are adjustable defaults:</p>
+<div class="table-wrap" tabindex="0" aria-label="Scrollable table"><table><thead><tr><th>Range</th><th>Example width</th></tr></thead><tbody><tr><td>Very narrow phone</td><td>about 320 px</td></tr><tr><td>Large phone</td><td>about 480 px</td></tr><tr><td>Small tablet or split-screen window</td><td>about 600 to 720 px</td></tr><tr><td>Tablet landscape or small laptop</td><td>about 1024 px</td></tr><tr><td>Standard desktop</td><td>about 1440 px</td></tr></tbody></table></div>
+<p>Add a wide desktop size when large displays are a supported use case, for example on landing pages. Include any known target viewport, especially the one the person requesting the change actually uses. A large, high-resolution monitor in a full-screen browser can have a much taller viewport than common test presets, so ask or check.</p>
+<p>When vertical behavior matters, test both a short and a tall height at each width. A tall, narrow browser window exposes different bugs than a short, narrow phone. Explicitly include a very tall viewport, well beyond common presets, for changes involving viewport-height sizing, flexible page shells, backgrounds, vertical padding, sticky footers, or bottom alignment.</p>
 <h3>3. Capture and inspect screenshots</h3>
-<p>Capture screenshots for each relevant viewport and state. Use visible-viewport screenshots for sticky, fixed, and viewport-height behavior; use full-page screenshots when page flow, backgrounds, or total page length matter.</p>
-<p>Inspect the changed surface on all four sides: top, right, bottom, and left. Compare the result with the requested outcome, not merely with the edited CSS.</p>
-<p>Give extra attention to full-bleed or edge-to-edge changes. Removing containment on one edge can reveal leftover wrapper margin or padding as an unintended strip on another edge.</p>
+<p>Capture screenshots for each relevant viewport and state, and actually look at them. Use visible-viewport screenshots for sticky, fixed, and viewport-height behavior; use full-page screenshots when page flow, backgrounds, or total page length matter.</p>
+<p>Inspect the changed surface on all four sides: top, right, bottom, and left. For each side, ask whether it still matches the design intent now that the element&#39;s role may have changed.</p>
+<p>Give extra attention to full-bleed or edge-to-edge changes. Full-bleed usually means flush on every side, not only the one you changed. Removing containment on one edge can reveal leftover wrapper margin or padding as an unintended strip on another edge.</p>
+<p>Then reread the original request in its own words and compare it with the screenshots. Compare the result with the requested outcome, not merely with the edited CSS. Do not trust your own pass without this cross-check.</p>
 <h3>4. Run programmatic layout checks</h3>
 <p>At every relevant viewport, verify that:</p>
 <ul>
 <li>there is no unintended horizontal overflow;</li>
-<li>viewport-fitting screens do not have unintended vertical overflow, allowing a small rendering tolerance;</li>
+<li>viewport-fitting screens do not have unintended vertical overflow, allowing a small rendering tolerance (for example 1 px);</li>
 <li>changed elements do not overlap adjacent content or escape their intended containers;</li>
 <li>buttons, links, fields, cards, and lists remain visible and usable;</li>
 <li>fixed or sticky elements do not hide required content; and</li>
 <li>prose remains readable rather than becoming excessively wide.</li>
 </ul>
-<p>For prose, use an approximate warning threshold of 80 characters per line; reading-focused layouts commonly target about 60–70 characters per line. Check relevant bounding rectangles for overlaps and compare document height with viewport height where fitting the viewport is intended.</p>
+<p>For prose, use an approximate warning threshold of about 80 characters per line; reading-focused layouts commonly target around 60 to 70 characters per line. Adjust these to your design system. Check relevant bounding rectangles for overlaps and compare document height with viewport height where fitting the viewport is intended.</p>
+<p>Numbers alone can mislead: a measurement may say a gap is gone while a screenshot shows the problem simply moved somewhere else. Use both.</p>
 <h3>5. Resolve failures and retest</h3>
-<p>If any viewport or state fails, stop the completion process. Find the underlying layout rule, fix that behavior, and rerun the relevant sweep. Do not add a size-specific patch merely to make one screenshot pass.</p>
+<p>If any viewport or state fails, stop the completion process. Fix it before claiming done; do not ship and let someone else find it. Find the underlying layout rule, fix that behavior, and rerun the relevant sweep. Do not add a size-specific patch merely to make one screenshot pass.</p>
 <p>If a fix improves one size but breaks another, revisit the diagnosis. The layout model or component constraints are incomplete.</p>
 <h3>6. Readiness gate and report</h3>
-<p>Do not report only that the interface works on “mobile and desktop.” State what was tested and what passed. For example:</p>
-<blockquote>Verified at 320, 480, 600, 720, 1024, and 1440 px; tested short and tall heights where relevant; screenshots and layout checks found no unintended overflow or overlap; controls remain usable.</blockquote>
-<p>If a viewport, state, or check was not run, state that clearly and do not represent the UI change as fully verified.</p></article><footer><a href="/skills/LICENSE.txt">CC0</a></footer></main><script>document.querySelector('[data-copy]').addEventListener('click',async function(){try{const text=await fetch(this.dataset.copy).then(r=>{if(!r.ok)throw new Error();return r.text()});await navigator.clipboard.writeText(text);this.textContent='Copied'}catch{this.textContent='Open raw Markdown'}})</script></body></html>
+<p>Do not report only that the interface works on &quot;mobile and desktop.&quot; State what was tested and what passed. For example:</p>
+<blockquote>Verified at five widths from very narrow phone to standard desktop; tested short and tall heights where relevant, including a very tall full-screen height; screenshots and layout checks found no unintended overflow or overlap; controls remain usable.</blockquote>
+<p>If a viewport, state, or check was not run, state that clearly and do not represent the UI change as fully verified.</p>
+<h3>7. Worked example (fictional)</h3>
+<p>A developer at the fictional Juniper Row Books changes a newsletter signup card to stretch edge to edge on phones. They check one phone width, see the card touching the left and right edges, and are ready to ship.</p>
+<p>Running the sweep instead:</p>
+<div class="table-wrap" tabindex="0" aria-label="Scrollable table"><table><thead><tr><th>Viewport</th><th>Screenshot finding</th><th>Programmatic finding</th></tr></thead><tbody><tr><td>Narrow phone, short height</td><td>Card flush left and right; a pale strip below the card</td><td>No horizontal overflow</td></tr><tr><td>Small tablet, tall height</td><td>Same bottom strip, now more visible</td><td>Card bottom ends well above the footer</td></tr><tr><td>Desktop, very tall height</td><td>Large blank area below the page content</td><td>Page shell shorter than viewport</td></tr></tbody></table></div>
+<p>Diagnosis: the wrapper kept a bottom margin meant for a contained card, and the page shell did not fill tall viewports. The fix removes the leftover margin and corrects the shell&#39;s height rule once, rather than adding per-size overrides. The sweep is rerun and reported with the exact sizes.</p>
+<h3>Optional extras</h3>
+<p><strong>Automating the sweep.</strong> With an agent that can run code, use a headless browser-automation tool to loop over a list of width and height pairs, load the page, inject realistic content, save screenshots, and run checks. Use a tool already available in your environment rather than installing one per project, and run it headless.</p>
+<p><strong>Checks to script at each viewport (adapt to your tool):</strong></p>
+<ul>
+<li><em>Fits the viewport:</em> the document&#39;s total scroll height is no more than the window&#39;s inner height plus a small tolerance.</li>
+<li><em>No horizontal scroll:</em> the document&#39;s scroll width is no more than the window&#39;s inner width plus a small tolerance.</li>
+<li><em>Prose width:</em> for each body paragraph, divide its rendered width by roughly half its font size to estimate characters per line, then flag any paragraph above your threshold (about 80 by default). The one-half factor is a rough average character width; adjust it for your typeface.</li>
+</ul>
+<p><strong>Overlap check.</strong> For sibling elements in the changed area, flag any case where one element&#39;s bottom edge is greater than the next element&#39;s top edge, unless overlap is intended.</p>
+<p><strong>Saved sweep config.</strong> Keep your chosen widths, heights, and content fixtures in one file so every change is tested the same way.</p></article><footer><a href="/skills/LICENSE.txt">CC0</a></footer></main><script>document.querySelector('[data-copy]').addEventListener('click',async function(){try{const text=await fetch(this.dataset.copy).then(r=>{if(!r.ok)throw new Error();return r.text()});await navigator.clipboard.writeText(text);this.textContent='Copied'}catch{this.textContent='Open raw Markdown'}})</script></body></html>

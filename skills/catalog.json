@@ -185,7 +185,7 @@
     },
     {
       "title": "Use a browser safely",
-      "description": "Completes browser tasks safely: least invasive route, verified account and fields, confirmation before acting. Use when filling forms, fixing dashboards, or working in a signed-in app.",
+      "description": "Completes browser tasks safely: least invasive route, verified account and fields, confirmation before irreversible steps. Use when filling forms, fixing dashboards, or working in a signed-in app.",
       "category": "Build and automate",
       "page": "https://dewierwan.com/skills/use-a-browser-safely/",
       "markdown": "https://dewierwan.com/skills/raw/use-a-browser-safely.md"
@@ -199,7 +199,7 @@
     },
     {
       "title": "Test every screen size",
-      "description": "Check every UI or CSS change across narrow, wide, short, and tall screens with screenshots and layout checks before calling it done. Use before shipping any front-end change.",
+      "description": "Checks UI or CSS changes across narrow, wide, short, and tall screens with screenshots and layout checks. Use when shipping a front-end fix or asking 'does this work on mobile?'",
       "category": "Build and automate",
       "page": "https://dewierwan.com/skills/test-every-screen-size/",
       "markdown": "https://dewierwan.com/skills/raw/test-every-screen-size.md"
