@@ -5,7 +5,7 @@ description: Drafts or revises email in your own voice from real samples, with f
 
 # Write in my voice
 
-Use this workflow when you want an AI assistant to write, reply to, revise, or polish an email. The goal is a concise, copy-ready message that sounds like you while staying accurate, appropriate, and within your authority.
+Use this workflow when you want an AI assistant to write, reply to, revise, or polish an email. The goal is a concise, ready-to-send message that sounds like you while staying accurate, appropriate, and within your authority.
 
 ## Quick version
 
@@ -108,15 +108,18 @@ If no voice evidence exists, state the assumption briefly only when helpful, the
 
 ## 6. Deliver the draft
 
-By default, provide only the copy-ready email in chat. Do not add explanation after it unless the user asks for options, rationale, or edits.
+Deliver every draft to the destination the user has chosen as their default. Ask once if it is unclear, then record the choice in the profile.
 
-Only create a draft inside an email system when the user explicitly asks for it (see Optional extras). The user remains responsible for reviewing and sending the message unless they explicitly authorize a separate sending action and the system's permissions and policies allow it.
+- **Chat (the default if no choice is made):** provide only the ready-to-send email. Do not add explanation after it unless the user asks for options, rationale, or edits.
+- **Draft in the user's email system:** if the user has a connected email system and prefers drafts there, write every email as an unsent draft in that system rather than in chat (see Optional extras). Fall back to chat only when the approved drafting method is unavailable, and say so in one short sentence so the user knows where the draft is.
+
+Whichever destination applies, the user remains responsible for reviewing and sending the message unless they explicitly authorize a separate sending action and the system's permissions and policies allow it.
 
 ## Optional extras
 
 ### Creating a reviewable draft in an email system
 
-For assistants with connected tools, when the user explicitly asks for a draft in their email system:
+For assistants with connected tools, when the user asks for a draft in their email system or has made that their default delivery:
 
 1. Confirm authorization to use that system and the intended account or workspace when necessary.
 2. Follow the user's applicable email-system policies, including which method is approved. Some setups allow drafting only through the regular web interface (for example, with a browser-control capability) and block direct programmatic draft or send tools. Never work around a blocked method.
@@ -124,7 +127,8 @@ For assistants with connected tools, when the user explicitly asks for a draft i
 4. Before finishing, read back the recipients and body to confirm they match what the user approved and that the draft sits in the intended conversation.
 5. Leave the draft unsent.
 6. Give the user a safe way to open the draft for review and final sending, such as a link to the conversation, without exposing unnecessary account or message data.
+7. If the approved method is unavailable (for example, the browser or connection is down), deliver the draft in chat instead and state that you did so.
 
 ### Maintaining the profile
 
-Keep the voice profile and fact bank in one place the user controls. When the user corrects a draft in a way that reflects a lasting preference, suggest adding it to the profile. Review approved facts and links periodically (an adjustable default is every few months) so stale details are not reused.
+Keep the voice profile, fact bank, and delivery preference in one place the user controls. When the user corrects a draft in a way that reflects a lasting preference, suggest adding it to the profile. Review approved facts and links periodically (an adjustable default is every few months) so stale details are not reused.

@@ -1306,7 +1306,7 @@ description: Drafts or revises email in your own voice from real samples, with f
 
 # Write in my voice
 
-Use this workflow when you want an AI assistant to write, reply to, revise, or polish an email. The goal is a concise, copy-ready message that sounds like you while staying accurate, appropriate, and within your authority.
+Use this workflow when you want an AI assistant to write, reply to, revise, or polish an email. The goal is a concise, ready-to-send message that sounds like you while staying accurate, appropriate, and within your authority.
 
 ## Quick version
 
@@ -1409,15 +1409,18 @@ If no voice evidence exists, state the assumption briefly only when helpful, the
 
 ## 6. Deliver the draft
 
-By default, provide only the copy-ready email in chat. Do not add explanation after it unless the user asks for options, rationale, or edits.
+Deliver every draft to the destination the user has chosen as their default. Ask once if it is unclear, then record the choice in the profile.
 
-Only create a draft inside an email system when the user explicitly asks for it (see Optional extras). The user remains responsible for reviewing and sending the message unless they explicitly authorize a separate sending action and the system's permissions and policies allow it.
+- **Chat (the default if no choice is made):** provide only the ready-to-send email. Do not add explanation after it unless the user asks for options, rationale, or edits.
+- **Draft in the user's email system:** if the user has a connected email system and prefers drafts there, write every email as an unsent draft in that system rather than in chat (see Optional extras). Fall back to chat only when the approved drafting method is unavailable, and say so in one short sentence so the user knows where the draft is.
+
+Whichever destination applies, the user remains responsible for reviewing and sending the message unless they explicitly authorize a separate sending action and the system's permissions and policies allow it.
 
 ## Optional extras
 
 ### Creating a reviewable draft in an email system
 
-For assistants with connected tools, when the user explicitly asks for a draft in their email system:
+For assistants with connected tools, when the user asks for a draft in their email system or has made that their default delivery:
 
 1. Confirm authorization to use that system and the intended account or workspace when necessary.
 2. Follow the user's applicable email-system policies, including which method is approved. Some setups allow drafting only through the regular web interface (for example, with a browser-control capability) and block direct programmatic draft or send tools. Never work around a blocked method.
@@ -1425,10 +1428,11 @@ For assistants with connected tools, when the user explicitly asks for a draft i
 4. Before finishing, read back the recipients and body to confirm they match what the user approved and that the draft sits in the intended conversation.
 5. Leave the draft unsent.
 6. Give the user a safe way to open the draft for review and final sending, such as a link to the conversation, without exposing unnecessary account or message data.
+7. If the approved method is unavailable (for example, the browser or connection is down), deliver the draft in chat instead and state that you did so.
 
 ### Maintaining the profile
 
-Keep the voice profile and fact bank in one place the user controls. When the user corrects a draft in a way that reflects a lasting preference, suggest adding it to the profile. Review approved facts and links periodically (an adjustable default is every few months) so stale details are not reused.
+Keep the voice profile, fact bank, and delivery preference in one place the user controls. When the user corrects a draft in a way that reflects a lasting preference, suggest adding it to the profile. Review approved facts and links periodically (an adjustable default is every few months) so stale details are not reused.
 
 
 ---
@@ -5650,7 +5654,7 @@ Watch for:
 - **Look-alike controls.** Single-line inputs strip line breaks silently. Rich-text editors keep an internal model and may ignore direct value changes.
 - **Hidden sync fields and wrappers.** A hidden input beside a visible editor looks fillable, but the form reads the visible editor. Follow the label relationship to the real element and tag it with a temporary marker.
 - **Unstable order.** Never address fields by position.
-- **Partial page text.** Extraction can skip side panels and include hidden labels, so a status word in the text is not proof. Check a screenshot.
+- **Partial page text.** Extraction can skip side panels, return no text at all on some settings pages, and include hidden labels, so a status word in the text (or its absence) is not proof. Check a screenshot.
 - **Unexpected pages.** If a saved link opens a view that warns it will reset broader settings, leave and navigate there normally.
 
 ## 7. Use the right interaction for each control
@@ -5669,6 +5673,7 @@ Watch for:
 - **Blur after every rich-text field,** or the next edit can re-render earlier fields from stale state.
 - **Do re-rendering choices first,** then text, and re-check tricky widgets after later edits.
 - **If a click does nothing,** screenshot, click by position, and confirm the view changed. Links with no real address are handled by page scripts: find them by visible text and click them.
+- **If the layout shifts while loading,** wait for it to settle, locate the target again by its label, and confirm from a screenshot that the click hit the intended item before continuing.
 - **Native confirmation boxes** can freeze the tab. Reload, then read the message before acting (see Optional extras).
 - **Check setup summaries,** such as a count of permissions or recipients, before continuing.
 
@@ -5729,8 +5734,9 @@ A click is not proof. Look for a success message, a reference number, a new reco
 | Screenshot does not match what you did | Shared folder overwritten by another session | Use a unique working folder; re-run the check. |
 | Wrong account or permission denied | Last-used profile or missing role | Select the profile directly; ask the user to sign in; re-verify. |
 | Tab freezes; clicks and screenshots time out | Native dialog or blocking pop-up | Reload; read the message safely or ask the user. |
-| Clicks do nothing, or reads are partial or cut off | Panel ignores clicks or extraction; output truncated | Screenshot, click by position, read in slices. |
-| Need a file's contents but only metadata is available | Automated tabs often cannot download | Extract in the page if possible; otherwise ask the user (see Optional extras). |
+| Clicks do nothing, or reads are empty, partial, or cut off | Panel ignores clicks or extraction; output truncated | Screenshot, click by position, read in slices. |
+| A click lands on a different item than intended | Page layout shifted while loading | Wait for it to settle, re-locate by label, screenshot, and undo the stray action if it changed anything. |
+| Need a file's contents but only metadata is available | Automated tabs often cannot download | Extract in the page if possible; otherwise route it through the service's save-to-storage option (see Optional extras). |
 | A known tricky site or admin task comes up again | Quirks already worked out | Read that site's reference note first. |
 
 ## 12. Report and keep the procedure current
@@ -5754,7 +5760,7 @@ When a run reveals a reusable lesson, record it in your local copy without waiti
 
 ## Optional extras
 
-**Clipboard, uploads, and files.** Headless browsers often lack clipboard access, so embed values directly. A synthetic paste event works in some editors and not others. Some upload buttons create a file input only on click and open the system picker, which automation cannot drive; a small page-script override can attach that input to the page instead. If a mail or storage connector returns only metadata and downloads are blocked, text-based document formats can sometimes be fetched and extracted inside the signed-in page; formats needing a full reader usually need the user to download them. Read only the files the task needs.
+**Clipboard, uploads, and files.** Headless browsers often lack clipboard access, so embed values directly. A synthetic paste event works in some editors and not others. Some upload buttons create a file input only on click and open the system picker, which automation cannot drive; a small page-script override can attach that input to the page instead. If a mail or storage connector returns only metadata and downloads are blocked, text-based document formats can sometimes be fetched and extracted inside the signed-in page. Formats that need a full reader can often go through the mail service's own option to save the attachment to connected cloud storage, then be downloaded from there; if that fails, ask the user to download them. Read only the files the task needs.
 
 **Native confirmation dialogs.** After reloading a frozen tab, override the page's confirm function to record the message and decline, click once, and read it. If it is the intended change, override again to accept only that exact message. Pages often reload afterward, removing the override, so reapply it each time.
 
@@ -5762,7 +5768,7 @@ When a run reveals a reusable lesson, record it in your local copy without waiti
 
 **Apps without a full API.** Some apps expose their editor or configuration state to page scripts. Read from that state rather than driving slow views, but expect layouts to change between versions. When editing through an editor's own model, validate all changes first and apply them in one transaction so a failure cannot leave a half-edited autosaved draft. If output is truncated or certain characters are blocked, keep results in a page variable, read them in slices, and build blocked characters indirectly. For slow log or monitoring dashboards, repeat the page's own read-only query over small time windows (one day is a reasonable adjustable start) and add up the results.
 
-**Devices and admin changes.** Pass a local device's unencrypted-page warning only for devices the user owns and asked about. Before deleting a field or schema item, check dependencies and automations that reference it. To share data with another system, get a plain yes, expose only a dedicated view with the minimum fields, and verify the copy.
+**Devices and admin changes.** Pass a local device's unencrypted-page warning only for devices the user owns and asked about. Before deleting a field or schema item, check dependencies and automations that reference it. To share data with another system, get a plain yes, expose only a dedicated view with the minimum fields, and verify the copy. On admin consoles where role or permission saves ask for a security key, prepare the change, then hand that step to the user and verify the saved state afterward.
 
 
 ---
