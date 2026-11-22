@@ -23,6 +23,7 @@
     --text: #26201a;
     --muted: #7d7264;
     --accent: #b4552d;
+    --heading: var(--text);
   }
   @media (prefers-color-scheme: dark) {
     :root {
@@ -30,6 +31,7 @@
       --text: #ece5da;
       --muted: #9c9184;
       --accent: #e08d5f;
+      --heading: var(--muted);
     }
   }
   * { box-sizing: border-box; }
@@ -71,7 +73,7 @@
     font-size: 1.125rem;
     font-weight: 600;
     letter-spacing: 0.02em;
-    color: var(--muted);
+    color: var(--heading);
     margin: 2.25rem 0 0.875rem;
   }
   p { margin: 0 0 1.125rem; }
