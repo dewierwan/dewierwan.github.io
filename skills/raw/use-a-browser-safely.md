@@ -91,8 +91,8 @@ Watch for:
 - **Look-alike controls.** Single-line inputs strip line breaks silently. Rich-text editors keep an internal model and may ignore direct value changes.
 - **Hidden sync fields and wrappers.** A hidden input beside a visible editor looks fillable, but the form reads the visible editor. Follow the label relationship to the real element and tag it with a temporary marker.
 - **Unstable order.** Never address fields by position.
-- **Partial page text.** Extraction can skip side panels, return no text at all on some settings pages, and include hidden labels, so a status word in the text (or its absence) is not proof. Check a screenshot.
-- **Unexpected pages.** If a saved link opens a view that warns it will reset broader settings, leave and navigate there normally.
+- **Partial page text.** Extraction can skip side panels, return no text on some settings pages, and include hidden labels, so a status word in the text (or its absence) is not proof. Check a screenshot.
+- **Warnings about wider effects.** If a page warns that its action will reset broader settings, leave and find the narrower path.
 
 ## 7. Use the right interaction for each control
 
@@ -109,8 +109,9 @@ Watch for:
 
 - **Blur after every rich-text field,** or the next edit can re-render earlier fields from stale state.
 - **Do re-rendering choices first,** then text, and re-check tricky widgets after later edits.
-- **If a click does nothing,** screenshot, click by position, and confirm the view changed. Links with no real address are handled by page scripts: find them by visible text and click them.
-- **If the layout shifts while loading,** wait for it to settle, locate the target again by its label, and confirm from a screenshot that the click hit the intended item before continuing.
+- **If a click does nothing or lands wrong,** wait for the layout to settle, locate the target again by its label or visible text, click by position if needed, and confirm from a screenshot that the view changed as intended.
+- **Builders and settings screens without an API** often ignore simple automation. Use real clicks and typing, change one setting at a time, and confirm each in the tool's own preview or a safe test.
+- **Built-in "ask AI" or help boxes** may be the vendor's support chat, not an action in the account. Keep private details out of them and never treat their replies as completed changes.
 - **Native confirmation boxes** can freeze the tab. Reload, then read the message before acting (see Optional extras).
 - **Check setup summaries,** such as a count of permissions or recipients, before continuing.
 
@@ -172,10 +173,8 @@ A click is not proof. Look for a success message, a reference number, a new reco
 | Screenshot does not match what you did | Shared folder overwritten by another session | Use a unique working folder; re-run the check. |
 | Wrong account or permission denied | Last-used profile or missing role | Select the profile directly; ask the user to sign in; re-verify. |
 | Tab freezes; clicks and screenshots time out | Native dialog or blocking pop-up | Reload; read the message safely or ask the user. |
-| Clicks do nothing, or reads are empty, partial, or cut off | Panel ignores clicks or extraction; output truncated | Screenshot, click by position, read in slices. |
-| A click lands on a different item than intended | Page layout shifted while loading | Wait for it to settle, re-locate by label, screenshot, and undo the stray action if it changed anything. |
-| An admin option you need is nowhere in the settings menus | High-impact options are often tucked into an unexpected place, such as the owner's own member entry | Check the account owner's own entry and the service's help pages before concluding it is missing. |
-| Need a file's contents but only metadata is available | Automated tabs often cannot download | Extract in the page if possible; otherwise route it through the service's save-to-storage option (see Optional extras). |
+| Clicks do nothing, land on the wrong item, or reads come back empty or cut off | Panel ignores clicks or extraction; layout shifted; output truncated | Wait to settle, re-locate by label, click by position, read in slices, undo any stray change. |
+| Settings in a builder or admin screen do not stick, or an option seems missing | No API; controls need real input; option tucked somewhere unexpected | Real clicks and typing, one setting at a time, verify in a preview; check the owner's own entry and help pages. |
 | A known tricky site or admin task comes up again | Quirks already worked out | Read that site's reference note first. |
 
 ## 12. Report and keep the procedure current
@@ -199,14 +198,14 @@ When a run reveals a reusable lesson, record it in your local copy without waiti
 
 ## Optional extras
 
-**Clipboard, uploads, and files.** Headless browsers often lack clipboard access, so embed values directly. Some upload buttons create a file input only on click and open the system picker, which automation cannot drive; a small page-script override can attach that input to the page instead. If a mail or storage connector returns only metadata and downloads are blocked, text-based document formats can sometimes be fetched and extracted inside the signed-in page. Formats that need a full reader can often go through the mail service's own option to save the attachment to connected cloud storage, then be downloaded from there; if that fails, ask the user to download them. Read only the files the task needs.
+**Clipboard, uploads, and files.** Headless browsers often lack clipboard access, so embed values directly. Some upload buttons create a file input only on click and open the system picker, which automation cannot drive; a small page-script override can attach that input to the page instead. If a connector returns only file metadata and downloads are blocked, text-based documents can sometimes be extracted inside the signed-in page; others can go through the service's own save-to-cloud-storage option, or the user can download them. Read only the files the task needs.
 
-**Testing how an app handles pasted content.** A simulated paste event skips the browser's own paste handling, which some editors rely on, so it can give a misleading result. The faithful test is a real paste: put the content on the system clipboard in both rich (HTML) and plain-text forms, focus the editor, then press the paste shortcut through your tool's real keyboard input so the page receives a trusted paste event. This overwrites the user's clipboard, so say so before you do it. Some editors choose between the rich and plain versions inside their own paste handler, so calling an editor's internal conversion function directly can mislead; read the result from the editor's own content model or the service's API instead. A simulated paste event is still a quick check for editors already known to accept it.
+**Testing how an app handles pasted content.** A simulated paste event skips the browser's own paste handling, so it can mislead. The faithful test is a real paste: put the content on the system clipboard in both rich (HTML) and plain-text forms, focus the editor, and press the paste shortcut through your tool's real keyboard input. This overwrites the user's clipboard, so say so first. Read the result from the editor's own content model or the service's API, not from an internal conversion function.
 
 **Native confirmation dialogs.** After reloading a frozen tab, override the page's confirm function to record the message and decline, click once, and read it. If it is the intended change, override again to accept only that exact message. Pages often reload afterward, removing the override, so reapply it each time.
 
 **Batches of independent items.** Use separate tabs, each with the full brief, at a modest concurrency you choose. Background tabs may not render fully, so bring an item into view before capturing it.
 
-**Apps without a full API.** Some apps expose their editor or configuration state to page scripts. Read from that state rather than driving slow views, but expect layouts to change between versions. When editing through an editor's own model, validate all changes first and apply them in one transaction so a failure cannot leave a half-edited autosaved draft. If output is truncated or certain characters are blocked, keep results in a page variable, read them in slices, and build blocked characters indirectly. For slow log or monitoring dashboards, repeat the page's own read-only query over small time windows (one day is a reasonable adjustable start) and add up the results.
+**Apps without a full API.** Some apps expose their editor or configuration state to page scripts. Read from that state rather than driving slow views, but expect layouts to change between versions. When editing through an editor's own model, validate all changes first and apply them in one step so a failure cannot leave a half-edited autosaved draft. If output is truncated or certain characters are blocked, keep results in a page variable, read them in slices, and build blocked characters indirectly. For slow log dashboards, repeat the page's own read-only query over small time windows (one day is an adjustable start) and add up the results.
 
-**Devices and admin changes.** Pass a local device's unencrypted-page warning only for devices the user owns and asked about. Before deleting a field or schema item, check dependencies and automations that reference it. To share data with another system, get a plain yes, expose only a dedicated view with the minimum fields, and verify the copy. On admin consoles where role or permission saves ask for a security key, prepare the change, then hand that step to the user and verify the saved state afterward. Transferring ownership of a workspace or deleting it is irreversible and usually asks for the owner's password: find the option, describe exactly what will happen, and leave the password and final confirmation to the user.
+**Admin and schema changes.** Before deleting a field or schema item, check dependencies and automations that reference it. To share data with another system, get a plain yes, expose only a dedicated view with the minimum fields, and verify the copy. When a save asks for a security key or password, as with role changes or transferring or deleting a workspace, prepare the change, describe exactly what will happen, leave that step to the user, and verify the saved state afterward. Pass a local device's unencrypted-page warning only for devices the user owns and asked about.
