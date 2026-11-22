@@ -21,7 +21,7 @@
   :root {
     --bg: #fffdf8;
     --text: #26201a;
-    --muted: #7d7264;
+    --muted: var(--text); /* no grey text in light mode; dark mode still uses a softer shade */
     --accent: #b4552d;
     --heading: var(--text);
   }
