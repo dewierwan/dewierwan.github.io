@@ -13,21 +13,23 @@
 <link rel="icon" href="/favicon.ico" sizes="32x32">
 <link rel="icon" href="/icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="preload" href="fonts/newsreader-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/atkinson-hyperlegible-next-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
 <style>
   @font-face {
-    font-family: 'Newsreader';
+    font-family: 'Atkinson Hyperlegible Next';
     font-style: normal;
-    font-weight: 400 600;
+    font-weight: 400 700;
     font-display: swap;
-    src: url('fonts/newsreader-latin.woff2') format('woff2');
+    src: url('fonts/atkinson-hyperlegible-next-latin.woff2') format('woff2');
   }
   @font-face {
-    font-family: 'Newsreader';
-    font-style: italic;
-    font-weight: 400;
+    font-family: 'Bricolage Grotesque';
+    font-style: normal;
+    font-weight: 400 700;
+    font-stretch: 100%;
     font-display: swap;
-    src: url('fonts/newsreader-italic-latin.woff2') format('woff2');
+    src: url('fonts/bricolage-grotesque-latin.woff2') format('woff2');
   }
 
   :root {
@@ -53,9 +55,9 @@
     margin: 0;
     background: var(--bg);
     color: var(--text);
-    font-family: 'Newsreader', Georgia, serif;
-    font-size: 1.1875rem;
-    line-height: 1.65;
+    font-family: 'Atkinson Hyperlegible Next', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 1.0625rem;
+    line-height: 1.6;
     -webkit-font-smoothing: antialiased;
   }
 
@@ -94,12 +96,17 @@
     object-position: center 20%;
     flex-shrink: 0;
   }
+  h1,
+  h2,
+  footer {
+    font-family: 'Bricolage Grotesque', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
   h1 {
     font-size: 2rem;
     font-weight: 600;
     line-height: 1.15;
     margin: 0;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
   }
   .tagline {
     font-style: normal;
@@ -108,7 +115,7 @@
 
   .tagline {
     color: var(--muted);
-    font-size: 1.0625rem;
+    font-size: 1rem;
     font-weight: 400;
     letter-spacing: 0;
   }
@@ -116,9 +123,9 @@
   h2,
   footer {
     color: var(--soft);
-    font-size: 1.125rem;
+    font-size: 1.0625rem;
     font-weight: 600;
-    letter-spacing: 0.02em;
+    letter-spacing: 0;
   }
 
   h2 {
@@ -144,7 +151,6 @@
     align-items: baseline;
   }
   .year {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     font-size: 0.8125rem;
     color: var(--soft);
     flex-shrink: 0;
@@ -168,7 +174,6 @@
       gap: 1.125rem;
     }
     h1 { font-size: 1.75rem; }
-    body { font-size: 1.125rem; }
   }
 </style>
 </head>
