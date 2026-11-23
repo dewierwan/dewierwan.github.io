@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dark Mode Schedule privacy policy — Dewi Erwan</title>
+<meta name="description" content="What the Dark Mode Schedule Chrome extension does with your data: it collects none.">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/fonts/atkinson-hyperlegible-next-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+  @font-face {
+    font-family: 'Atkinson Hyperlegible Next';
+    font-style: normal;
+    font-weight: 400 700;
+    font-display: swap;
+    src: url('/fonts/atkinson-hyperlegible-next-latin.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Bricolage Grotesque';
+    font-style: normal;
+    font-weight: 400 700;
+    font-stretch: 100%;
+    font-display: swap;
+    src: url('/fonts/bricolage-grotesque-latin.woff2') format('woff2');
+  }
+  :root {
+    --bg: #fffdf8;
+    --text: #26201a;
+    --muted: var(--text); /* no grey text in light mode; dark mode still uses a softer shade */
+    --accent: #b4552d;
+    --heading: var(--text);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #1d1a16;
+      --text: #ece5da;
+      --muted: #9c9184;
+      --accent: #e08d5f;
+      --heading: var(--muted);
+    }
+  }
+  * { box-sizing: border-box; }
+
+  html {
+    font-size: 110%; /* scales the whole page: every size below is in rem */
+    overscroll-behavior: none; /* no elastic bounce into blank space past the top or bottom */
+  }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Atkinson Hyperlegible Next', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  main {
+    max-width: 39rem;
+    margin: 0 auto;
+    padding: 4.5rem 1.375rem 3rem;
+  }
+  a {
+    color: var(--accent);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    text-decoration-color: color-mix(in srgb, var(--accent) 40%, transparent);
+  }
+  a:hover { text-decoration-color: var(--accent); }
+  a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+  h1,
+  h2 {
+    font-family: 'Bricolage Grotesque', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+  h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.15;
+    margin: 0 0 1.5rem;
+    letter-spacing: -0.02em;
+  }
+  h2 {
+    font-size: 1.0625rem;
+    font-weight: 600;
+    letter-spacing: 0;
+    color: var(--heading);
+    margin: 2.25rem 0 0.875rem;
+  }
+  p { margin: 0 0 1.125rem; }
+  ul {
+    list-style: disc;
+    margin: 0;
+    padding: 0 0 0 1.25rem;
+  }
+  li { margin: 0 0 0.625rem; }
+  .updated { margin-top: -1rem; }
+  .note,
+  footer {
+    color: var(--muted);
+  }
+  footer { margin-top: 2.5rem; font-size: 1.0625rem; }
+  @media (max-width: 520px) {
+    main { padding-top: 3rem; }
+    h1 { font-size: 1.75rem; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1>Dark Mode Schedule privacy policy</h1>
+
+  <p class="updated">Last updated 22 Nov 2026</p>
+
+  <p>Dark Mode Schedule is a Chrome extension that turns websites dark at one time of day and light again at another. It collects no data about you. Nothing you browse is sent to me or to anyone else.</p>
+
+  <section aria-labelledby="stores">
+    <h2 id="stores">What it stores</h2>
+    <p>The extension saves your settings in Chrome’s own storage:</p>
+    <ul>
+      <li>the two times you set</li>
+      <li>whether you turned dark mode on or off by hand, until the next switch</li>
+      <li>the names of the sites you told it to leave alone</li>
+    </ul>
+    <p>If you use Chrome sync, Google copies these settings between your own computers, as it does your other Chrome settings. I have no access to them.</p>
+  </section>
+
+  <section aria-labelledby="pages">
+    <h2 id="pages">What it does on the pages you visit</h2>
+    <p>To make a page dark, the extension reads the page’s colors and styles and changes them. This happens inside your browser. It does not record, keep or send what is on the page.</p>
+    <p>Some pages load their stylesheets and images from another site. To recolor those, the extension fetches the same files itself, without your cookies. The sites that serve those files see that request the way they see any page load. No other requests are made.</p>
+  </section>
+
+  <section aria-labelledby="not">
+    <h2 id="not">What it does not do</h2>
+    <ul>
+      <li>It has no analytics, tracking or ads.</li>
+      <li>It has no server and no account.</li>
+      <li>It does not sell or share data, because it has none.</li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="changes">
+    <h2 id="changes">Changes and questions</h2>
+    <p>If this policy changes, the new version will be on this page with a new date. For questions, <a href="https://dewierwan.com/#contact">get in touch</a>.</p>
+  </section>
+</main>
+</body>
+</html>
