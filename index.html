@@ -37,7 +37,7 @@
     --text: #26201a;
     --muted: #7d7264; /* grey: only the tagline uses it in light mode */
     --accent: #b4552d;
-    --soft: var(--text); /* headings, notes, years: body color in light mode, grey in dark mode */
+    --soft: var(--text); /* headings and notes: body color in light mode, grey in dark mode */
   }
   @media (prefers-color-scheme: dark) {
     :root {
@@ -148,18 +148,6 @@
     padding-left: 1.25rem;
   }
 
-  .writing li {
-    display: flex;
-    gap: 1rem;
-    align-items: baseline;
-  }
-  .year {
-    font-size: 0.8125rem;
-    color: var(--soft);
-    flex-shrink: 0;
-    width: 2.75rem;
-    font-variant-numeric: tabular-nums;
-  }
   .note {
     color: var(--soft);
   }
@@ -198,15 +186,15 @@
 
   <section aria-labelledby="writing">
     <h2 id="writing"><a href="https://blog.dewierwan.com">Writing</a></h2>
-    <ul class="writing">
-      <li><span class="year">2026</span><a href="https://blog.bluedot.org/p/owners">What we’re building at BlueDot</a></li>
-      <li><span class="year"></span><a href="https://blog.dewierwan.com/p/on-feeling-behind">On feeling behind</a></li>
-      <li><span class="year">2025</span><a href="https://blog.bluedot.org/p/field-strategy-playbook">A playbook for field strategy</a></li>
-      <li><span class="year"></span><a href="https://blog.dewierwan.com/p/sleep">Dewi's sleep system</a></li>
-      <li><span class="year">2024</span><a href="https://blog.dewierwan.com/p/megaprojects">How big things get done</a></li>
-      <li><span class="year"></span><a href="https://blog.dewierwan.com/p/flying-car">How long would it take to fly from London to north Wales in a flying car?</a></li>
-      <li><span class="year">2023</span><a href="https://blog.dewierwan.com/p/chip-manufacturing">How did the chip in my laptop get made?</a></li>
-      <li><span class="year">2020</span><a href="https://blog.dewierwan.com/p/ideological-journey">My "ideological" journey: from nationalism to altruism</a></li>
+    <ul class="bullets">
+      <li><a href="https://blog.bluedot.org/p/owners">What we’re building at BlueDot</a></li>
+      <li><a href="https://blog.dewierwan.com/p/on-feeling-behind">On feeling behind</a></li>
+      <li><a href="https://blog.bluedot.org/p/field-strategy-playbook">A playbook for field strategy</a></li>
+      <li><a href="https://blog.dewierwan.com/p/sleep">Dewi's sleep system</a></li>
+      <li><a href="https://blog.dewierwan.com/p/megaprojects">How big things get done</a></li>
+      <li><a href="https://blog.dewierwan.com/p/flying-car">How long would it take to fly from London to north Wales in a flying car?</a></li>
+      <li><a href="https://blog.dewierwan.com/p/chip-manufacturing">How did the chip in my laptop get made?</a></li>
+      <li><a href="https://blog.dewierwan.com/p/ideological-journey">My "ideological" journey: from nationalism to altruism</a></li>
     </ul>
   </section>
 
@@ -215,14 +203,14 @@
     <ul class="bullets">
       <li><a href="https://blog.bluedot.org/p/dewi-erwan-on-his-journey-to-altruism">BlueDot podcast</a><span class="note">: a recent conversation about my life growing up, why we founded BlueDot, and why we need more talented people to solve important problems</span></li>
       <li><a href="https://hearthisidea.com/episodes/erwan/">Hear This Idea</a><span class="note">: a podcast conversation back in 2022 about BlueDot and AI safety careers</span></li>
-      <li><a href="https://www.goodreads.com/user/show/62790508-dewi">Goodreads</a><span class="note">: what I'm reading</span></li>
       <li><a href="/apps/" target="_self">Apps</a><span class="note">: the Mac apps and Chrome extensions I use most</span></li>
     </ul>
   </section>
 
   <section aria-labelledby="contact">
     <h2 id="contact">Get in touch</h2>
-    <p>The best way to reach me is <a href="mailto:dewi@bluedot.org">email</a>. I'm also on <a href="https://www.linkedin.com/in/dewierwan/">LinkedIn</a> and <a href="https://x.com/dewierwan_">X</a>.</p>
+    <p>The best way to reach me is <a href="mailto:dewi@bluedot.org">email</a>.<br>
+    I'm also on <a href="https://www.linkedin.com/in/dewierwan/">LinkedIn</a>, <a href="https://x.com/dewierwan_">X</a> and <a href="https://www.goodreads.com/user/show/62790508-dewi">Goodreads</a>.</p>
   </section>
 
   <footer>
