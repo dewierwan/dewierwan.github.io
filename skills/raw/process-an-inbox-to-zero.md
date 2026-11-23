@@ -26,7 +26,7 @@ Confirm these once, or use the defaults. All are adjustable. Store them as confi
 | Quick win threshold | About 2 minutes | Short reply, yes or no, RSVP, forward |
 | Batch sizes | Do now 1, others 3 to 5 | Big lists overwhelm; tiny batches feel slow |
 | Chat lookback | About two weeks | Unread views may still show older chats |
-| Sources | All the user names | Mark any feeds that count only when they mention the user, and any read only on request |
+| Sources | All the user names | Mark feeds to skip entirely (such as large community groups), feeds that count only when they mention the user, and any read only on request |
 | Delegated actions | None | Named sources where the assistant may clear items after confirmation |
 | Draft destination | Copy-ready text | Saved in-app drafts only where authorized |
 
@@ -65,12 +65,12 @@ Read every source in parallel. For each item collect: source, sender, subject or
 2. **Group to the decision unit.** Group email by thread. Several notes about one thing, such as comments on one document, are one decision.
 3. **Open when the preview is not enough.** Skip obvious newsletters, receipts, and automated notices unless they point to a deadline, money or security issue, or a record that now needs the user. Otherwise open the full thread, and any attachment that carries the ask, before choosing a bucket. Never task an item you have not seen.
 4. **Judge chats on everything unanswered, and honor the user's own flags.** Read back to the user's last real reply; a logistics exchange or friendly closer can sit on top of an older question. A chat with an unanswered question, or one the user marked to reply to, is never no action until the user says so. Unreads alone are attention debt, not priority.
-5. **Rank direct above broadcast,** unless a group message names the user, asks them something, or carries a deadline. Old items with no open ask are usually stale; group them for one decision.
+5. **Respect skipped feeds, then rank direct above broadcast.** Feeds the user chose to skip stay out of every bucket and count, even when flagged; that choice overrides the flag rule. Otherwise rank direct messages above group messages, unless a group message names the user, asks them something, or carries a deadline. Old items with no open ask are usually stale; group them for one decision.
 6. **Never invent links.** Copy links from tool output or use a format verified in this setup; otherwise cite sender, subject, and date.
 
 *Example (fictional).* A chat with Robin from the Maple Street Rowing Club ends with the user's "Sounds good!" and Robin's "Great, see you there." Two messages earlier, Robin asked whether the user could host the spring meetup, and nobody answered. The chat is a quick win, not no action.
 
-**Unsent drafts.** For every source in scope, also list unsent drafts, including text left in a messaging composer and drafts made earlier in this run. Each is an item in its own right, whatever its age. A draft listing is not always an open loop: stored templates, scheduled messages not yet due, and leftovers the app no longer shows are not loose replies. A template with no recipients may also keep appearing in a listing after the user deletes it. Mention these once as what they are, and if the user cannot find one, close it and do not ask again.
+**Unsent drafts.** For every source in scope, also list unsent drafts, including text left in a messaging composer and drafts made earlier in this run. Each is an item in its own right, whatever its age. A listing is not always an open loop: stored templates, scheduled messages not yet due, and drafts whose thread no longer exists or the user can no longer open are not loose replies, so check a thread-attached draft's thread before counting it. Leave these out of counts and mention each once as what it is. If the user cannot find a listed draft, close it and do not ask again.
 
 **Failures.** If a source fails or is disconnected, name it, the error, and the missing data. Try the safe repairs in its access rules, continue with the others, and never quietly drop a source or swap in a weaker one. Put failures at the top of the output.
 
@@ -199,6 +199,6 @@ Keeping one-off fixes out of the core workflow stops it from bloating into a lis
 |---|---|---|---|
 | [position] | [first words] | [date] | [✓ Clear, or Keep, with a short reason] |
 
-**Delegated clearing.** Some tools have no quick manual way to empty a notification inbox, so the user may delegate clearing. Clear only items the user says are handled, not worth acting on, or confirmed as no action, never items decided but not yet acted on. Clearing a notification must never resolve, edit, or delete the underlying comment or record. Retry a transient error once, verify, report in one line ("Cleared 4, all verified, 29 left"), and know how to undo a mistake.
+**Delegated clearing.** Some tools have no quick manual way to empty a notification inbox, so the user may delegate clearing. Clear only items the user says are handled, not worth acting on, or confirmed as no action, never items decided but not yet acted on. Clearing a notification must never resolve, edit, or delete the underlying comment or record. Retry a transient error once, verify, report in one line ("Cleared 4, all verified, 29 left"), and know how to undo a mistake. A local "processed" list for chats works the same way, and can also hold skipped feeds so they do not return next run.
 
-**Saved drafts in apps.** Where authorized, save each draft as a reply inside its own thread, using a method the user has verified keeps it attached there, and leave it open in the user's preferred app so they can edit and send. Use real mentions in group threads, and do not also paste it into the conversation. If a draft already exists, say so rather than overwriting it. If you cannot read saved drafts back, never recreate an edited one from your version; ask the user for their current text first. For copy-ready text, also copy it to the clipboard when a tool allows, and say so.
+**Saved drafts in apps.** Where authorized, save each draft as a reply inside its own thread, using a method the user has verified keeps it attached there, and leave it open in the user's preferred app so they can edit and send. If a draft already exists, say so rather than overwriting it. If you cannot read saved drafts back, never recreate an edited one from your version; ask the user for their current text first. For copy-ready text, also copy it to the clipboard when a tool allows, and say so.

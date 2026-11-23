@@ -702,7 +702,7 @@ Develop an important document by shaping the thinking behind it before writing: 
 
 - Before any drafting, tell your assistant who will read the document and what they should understand, decide, or do afterward. Ask it to recommend a form (narrative, strategy, operating agreement, decision memo, scorecard, or hybrid) and explain the tradeoff.
 - Paste in the relevant source material and ask for a short situation brief that separates what the sources establish from what the assistant only infers.
-- Ask for questions in rounds of four to eight, numbered, one decision per question, with three or four lettered options and the recommended option first, so you can reply in shorthand like `1a, 2c, 3b`.
+- Ask for questions in rounds of four to eight, numbered from 1 in every round, one decision per question, with three or four lettered options and the recommended option first, so you can reply in shorthand like `1a, 2c, 3b`.
 - After each round, have it show an updated ledger of what is confirmed, sourced, inferred, open, and corrected, then build the next round from the consequences of your answers. Do at least two rounds for consequential documents.
 - Before drafting, have it check every major planned claim: did you confirm it, does a reliable source establish it, or is it only inferred? For persuasive documents, also ask for the strongest objection from the real audience and confirm the response.
 - Then ask for the smallest document that does the job, in plain, complete sentences, and have it audit the draft against the ledger before handing it over.
@@ -783,12 +783,12 @@ Each numbered question should normally contain one decision. Do not bundle indep
 
 Format questions for fast, unambiguous replies:
 
-1. Number every question (`1.`, `2.`, `3.`). Continue numbering across rounds and keep each number tied to the same question, so compact replies stay clear.
+1. Number every question (`1.`, `2.`, `3.`). Start every round at `1.`, and never carry numbering over from an earlier round, document, or day. When a new round builds on an earlier answer, restate that answer in words rather than citing its old number, so each compact reply clearly refers to the current round.
 2. For bounded choices, default to three or four mutually exclusive, decision-relevant options labeled `a.`, `b.`, `c.`, `d.`. Binary questions hide useful middle positions, so use two options only when the decision truly has two states. Do not invent fake alternatives.
 3. Make the recommended option `a.` unless the conversation makes another order clearer. This allows replies like `1a, 2c, 3b`.
 4. Render the block as a compact, single-spaced list, with each question and option on its own line and no blank lines inside the block.
 
-Example:
+Example of a first round:
 
 1. Which direction should the document recommend?
    a. Focus first on the highest-impact problem; this narrows scope but makes accountability clear.
@@ -799,6 +799,13 @@ Example:
    a. The program lead.
    b. The functional lead.
    c. Shared ownership with one named decision-maker.
+
+Example of the next round, which starts again at 1 and restates the earlier answer in words:
+
+1. You chose to focus first on the highest-impact problem. What should the document explicitly exclude for now?
+   a. All related problems until the first one shows results; clearest, but some teams may feel ignored.
+   b. Everything except one closely linked problem.
+   c. Nothing formally; mention related problems as later candidates.
 
 Each round should:
 
@@ -820,7 +827,7 @@ A typical progression of layers:
 
 After every answer round, do all four steps before deciding whether to draft:
 
-1. Match shorthand and free-text answers to their question numbers, keeping qualifications such as 'mostly c' or 'not sure'. Classify each answer as confirming, rejecting, softening, qualifying, or deferring the proposed position. Mark only genuinely unanswered or unclear material choices as open.
+1. Match shorthand and free-text answers to their question numbers in the current round, keeping qualifications such as 'mostly c' or 'not sure'. Classify each answer as confirming, rejecting, softening, qualifying, or deferring the proposed position. Mark only genuinely unanswered or unclear material choices as open.
 2. Trace downstream implications. A changed audience, softened commitment, new exception, or rejected framing usually creates another question.
 3. Update the alignment ledger and show a concise summary of it.
 4. Build the next round from the remaining material uncertainties and the consequences of the answers.
@@ -926,6 +933,7 @@ Fix any mismatch before delivering. Put the deliverable last, with no trailing s
 - Bundling several independent decisions into one question.
 - Skipping a consequence round after a claim is softened or qualified.
 - Repeating a question that has already been answered.
+- Carrying question numbers over from an earlier round, or citing an old question number instead of restating the earlier answer in words.
 - Running the same round on two answer surfaces, or treating a stale queue as missing answers.
 - Hiding a contradiction behind vague language.
 - Continuing the interview after only low-impact uncertainty remains.
@@ -4089,7 +4097,7 @@ Rules:
 - Give each question a few mutually exclusive options, the most likely first and marked recommended. Offer real alternatives; a less obvious pick often flips the agenda.
 - When two answers can sensibly combine, such as a date and a named deliverable, offer the combination as its own option.
 - Ask only questions that shape the agenda. If you need several rounds, put questions whose answers change other options first, tailor later rounds, and put the catch-all last.
-- Number questions continuously across rounds and label every option with question number plus letter.
+- Label every option with its question number plus a lowercase letter. Start numbering at 1 in every round; never carry numbering on from an earlier round.
 
 ```markdown
 1. What is the primary outcome?
@@ -4109,7 +4117,7 @@ Rules:
 Reply with the labels, e.g. 1b, 2a, 3a.
 ```
 
-Before sending, check that every question is numbered, every option has one unique label in sequence, and the catch-all is present. The only reason to skip this step is a recurring meeting with a fixed, documented purpose and no open decision. When unsure, ask.
+Before sending, check that every question is numbered starting from 1 in this round, every option has one unique label in sequence, and the catch-all is present in the final round. The only reason to skip this step is a recurring meeting with a fixed, documented purpose and no open decision. When unsure, ask.
 
 ## Step 8: Build the page
 
@@ -4780,7 +4788,7 @@ Confirm these once, or use the defaults. All are adjustable. Store them as confi
 | Quick win threshold | About 2 minutes | Short reply, yes or no, RSVP, forward |
 | Batch sizes | Do now 1, others 3 to 5 | Big lists overwhelm; tiny batches feel slow |
 | Chat lookback | About two weeks | Unread views may still show older chats |
-| Sources | All the user names | Mark any feeds that count only when they mention the user, and any read only on request |
+| Sources | All the user names | Mark feeds to skip entirely (such as large community groups), feeds that count only when they mention the user, and any read only on request |
 | Delegated actions | None | Named sources where the assistant may clear items after confirmation |
 | Draft destination | Copy-ready text | Saved in-app drafts only where authorized |
 
@@ -4819,12 +4827,12 @@ Read every source in parallel. For each item collect: source, sender, subject or
 2. **Group to the decision unit.** Group email by thread. Several notes about one thing, such as comments on one document, are one decision.
 3. **Open when the preview is not enough.** Skip obvious newsletters, receipts, and automated notices unless they point to a deadline, money or security issue, or a record that now needs the user. Otherwise open the full thread, and any attachment that carries the ask, before choosing a bucket. Never task an item you have not seen.
 4. **Judge chats on everything unanswered, and honor the user's own flags.** Read back to the user's last real reply; a logistics exchange or friendly closer can sit on top of an older question. A chat with an unanswered question, or one the user marked to reply to, is never no action until the user says so. Unreads alone are attention debt, not priority.
-5. **Rank direct above broadcast,** unless a group message names the user, asks them something, or carries a deadline. Old items with no open ask are usually stale; group them for one decision.
+5. **Respect skipped feeds, then rank direct above broadcast.** Feeds the user chose to skip stay out of every bucket and count, even when flagged; that choice overrides the flag rule. Otherwise rank direct messages above group messages, unless a group message names the user, asks them something, or carries a deadline. Old items with no open ask are usually stale; group them for one decision.
 6. **Never invent links.** Copy links from tool output or use a format verified in this setup; otherwise cite sender, subject, and date.
 
 *Example (fictional).* A chat with Robin from the Maple Street Rowing Club ends with the user's "Sounds good!" and Robin's "Great, see you there." Two messages earlier, Robin asked whether the user could host the spring meetup, and nobody answered. The chat is a quick win, not no action.
 
-**Unsent drafts.** For every source in scope, also list unsent drafts, including text left in a messaging composer and drafts made earlier in this run. Each is an item in its own right, whatever its age. A draft listing is not always an open loop: stored templates, scheduled messages not yet due, and leftovers the app no longer shows are not loose replies. A template with no recipients may also keep appearing in a listing after the user deletes it. Mention these once as what they are, and if the user cannot find one, close it and do not ask again.
+**Unsent drafts.** For every source in scope, also list unsent drafts, including text left in a messaging composer and drafts made earlier in this run. Each is an item in its own right, whatever its age. A listing is not always an open loop: stored templates, scheduled messages not yet due, and drafts whose thread no longer exists or the user can no longer open are not loose replies, so check a thread-attached draft's thread before counting it. Leave these out of counts and mention each once as what it is. If the user cannot find a listed draft, close it and do not ask again.
 
 **Failures.** If a source fails or is disconnected, name it, the error, and the missing data. Try the safe repairs in its access rules, continue with the others, and never quietly drop a source or swap in a weaker one. Put failures at the top of the output.
 
@@ -4953,9 +4961,9 @@ Keeping one-off fixes out of the core workflow stops it from bloating into a lis
 |---|---|---|---|
 | [position] | [first words] | [date] | [✓ Clear, or Keep, with a short reason] |
 
-**Delegated clearing.** Some tools have no quick manual way to empty a notification inbox, so the user may delegate clearing. Clear only items the user says are handled, not worth acting on, or confirmed as no action, never items decided but not yet acted on. Clearing a notification must never resolve, edit, or delete the underlying comment or record. Retry a transient error once, verify, report in one line ("Cleared 4, all verified, 29 left"), and know how to undo a mistake.
+**Delegated clearing.** Some tools have no quick manual way to empty a notification inbox, so the user may delegate clearing. Clear only items the user says are handled, not worth acting on, or confirmed as no action, never items decided but not yet acted on. Clearing a notification must never resolve, edit, or delete the underlying comment or record. Retry a transient error once, verify, report in one line ("Cleared 4, all verified, 29 left"), and know how to undo a mistake. A local "processed" list for chats works the same way, and can also hold skipped feeds so they do not return next run.
 
-**Saved drafts in apps.** Where authorized, save each draft as a reply inside its own thread, using a method the user has verified keeps it attached there, and leave it open in the user's preferred app so they can edit and send. Use real mentions in group threads, and do not also paste it into the conversation. If a draft already exists, say so rather than overwriting it. If you cannot read saved drafts back, never recreate an edited one from your version; ask the user for their current text first. For copy-ready text, also copy it to the clipboard when a tool allows, and say so.
+**Saved drafts in apps.** Where authorized, save each draft as a reply inside its own thread, using a method the user has verified keeps it attached there, and leave it open in the user's preferred app so they can edit and send. If a draft already exists, say so rather than overwriting it. If you cannot read saved drafts back, never recreate an edited one from your version; ask the user for their current text first. For copy-ready text, also copy it to the clipboard when a tool allows, and say so.
 
 
 ---

@@ -124,7 +124,7 @@ Rules:
 - Give each question a few mutually exclusive options, the most likely first and marked recommended. Offer real alternatives; a less obvious pick often flips the agenda.
 - When two answers can sensibly combine, such as a date and a named deliverable, offer the combination as its own option.
 - Ask only questions that shape the agenda. If you need several rounds, put questions whose answers change other options first, tailor later rounds, and put the catch-all last.
-- Number questions continuously across rounds and label every option with question number plus letter.
+- Label every option with its question number plus a lowercase letter. Start numbering at 1 in every round; never carry numbering on from an earlier round.
 
 ```markdown
 1. What is the primary outcome?
@@ -144,7 +144,7 @@ Rules:
 Reply with the labels, e.g. 1b, 2a, 3a.
 ```
 
-Before sending, check that every question is numbered, every option has one unique label in sequence, and the catch-all is present. The only reason to skip this step is a recurring meeting with a fixed, documented purpose and no open decision. When unsure, ask.
+Before sending, check that every question is numbered starting from 1 in this round, every option has one unique label in sequence, and the catch-all is present in the final round. The only reason to skip this step is a recurring meeting with a fixed, documented purpose and no open decision. When unsure, ask.
 
 ## Step 8: Build the page
 

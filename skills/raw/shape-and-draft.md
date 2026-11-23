@@ -11,7 +11,7 @@ Develop an important document by shaping the thinking behind it before writing: 
 
 - Before any drafting, tell your assistant who will read the document and what they should understand, decide, or do afterward. Ask it to recommend a form (narrative, strategy, operating agreement, decision memo, scorecard, or hybrid) and explain the tradeoff.
 - Paste in the relevant source material and ask for a short situation brief that separates what the sources establish from what the assistant only infers.
-- Ask for questions in rounds of four to eight, numbered, one decision per question, with three or four lettered options and the recommended option first, so you can reply in shorthand like `1a, 2c, 3b`.
+- Ask for questions in rounds of four to eight, numbered from 1 in every round, one decision per question, with three or four lettered options and the recommended option first, so you can reply in shorthand like `1a, 2c, 3b`.
 - After each round, have it show an updated ledger of what is confirmed, sourced, inferred, open, and corrected, then build the next round from the consequences of your answers. Do at least two rounds for consequential documents.
 - Before drafting, have it check every major planned claim: did you confirm it, does a reliable source establish it, or is it only inferred? For persuasive documents, also ask for the strongest objection from the real audience and confirm the response.
 - Then ask for the smallest document that does the job, in plain, complete sentences, and have it audit the draft against the ledger before handing it over.
@@ -92,12 +92,12 @@ Each numbered question should normally contain one decision. Do not bundle indep
 
 Format questions for fast, unambiguous replies:
 
-1. Number every question (`1.`, `2.`, `3.`). Continue numbering across rounds and keep each number tied to the same question, so compact replies stay clear.
+1. Number every question (`1.`, `2.`, `3.`). Start every round at `1.`, and never carry numbering over from an earlier round, document, or day. When a new round builds on an earlier answer, restate that answer in words rather than citing its old number, so each compact reply clearly refers to the current round.
 2. For bounded choices, default to three or four mutually exclusive, decision-relevant options labeled `a.`, `b.`, `c.`, `d.`. Binary questions hide useful middle positions, so use two options only when the decision truly has two states. Do not invent fake alternatives.
 3. Make the recommended option `a.` unless the conversation makes another order clearer. This allows replies like `1a, 2c, 3b`.
 4. Render the block as a compact, single-spaced list, with each question and option on its own line and no blank lines inside the block.
 
-Example:
+Example of a first round:
 
 1. Which direction should the document recommend?
    a. Focus first on the highest-impact problem; this narrows scope but makes accountability clear.
@@ -108,6 +108,13 @@ Example:
    a. The program lead.
    b. The functional lead.
    c. Shared ownership with one named decision-maker.
+
+Example of the next round, which starts again at 1 and restates the earlier answer in words:
+
+1. You chose to focus first on the highest-impact problem. What should the document explicitly exclude for now?
+   a. All related problems until the first one shows results; clearest, but some teams may feel ignored.
+   b. Everything except one closely linked problem.
+   c. Nothing formally; mention related problems as later candidates.
 
 Each round should:
 
@@ -129,7 +136,7 @@ A typical progression of layers:
 
 After every answer round, do all four steps before deciding whether to draft:
 
-1. Match shorthand and free-text answers to their question numbers, keeping qualifications such as 'mostly c' or 'not sure'. Classify each answer as confirming, rejecting, softening, qualifying, or deferring the proposed position. Mark only genuinely unanswered or unclear material choices as open.
+1. Match shorthand and free-text answers to their question numbers in the current round, keeping qualifications such as 'mostly c' or 'not sure'. Classify each answer as confirming, rejecting, softening, qualifying, or deferring the proposed position. Mark only genuinely unanswered or unclear material choices as open.
 2. Trace downstream implications. A changed audience, softened commitment, new exception, or rejected framing usually creates another question.
 3. Update the alignment ledger and show a concise summary of it.
 4. Build the next round from the remaining material uncertainties and the consequences of the answers.
@@ -235,6 +242,7 @@ Fix any mismatch before delivering. Put the deliverable last, with no trailing s
 - Bundling several independent decisions into one question.
 - Skipping a consequence round after a claim is softened or qualified.
 - Repeating a question that has already been answered.
+- Carrying question numbers over from an earlier round, or citing an old question number instead of restating the earlier answer in words.
 - Running the same round on two answer surfaces, or treating a stale queue as missing answers.
 - Hiding a contradiction behind vague language.
 - Continuing the interview after only low-impact uncertainty remains.
