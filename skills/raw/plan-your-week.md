@@ -35,7 +35,7 @@ Ask these once, then reuse the answers until the user changes them. Every defaul
 |---|---|
 | Planning day and session length | A day the user picks near the end of the week; about an hour |
 | Where goals, tasks, and notes live | Wherever they already live, or the conversation |
-| Calendars and time zone | Which calendar gets work blocks, which gets personal blocks, and which are read-only; the user's current time zone |
+| Calendars and time zone | Which calendar gets work blocks, which gets personal blocks, and which are read-only; whether the task system schedules tasks onto a calendar by itself; the user's current time zone |
 | Longer-term goals | The longest active level for the current year, plus the current quarter or month |
 | Working hours and focus window | The hours the user actually works, and when deep work suits them |
 | Thresholds | Slipping goal: deadline moved several times. Stale task: open about a month. Heavy day: more meetings than the user finds workable. Buffer: about a fifth of post-meeting hours. Task size: a few minutes to a few hours |
@@ -93,7 +93,7 @@ After the review, ask: "What must still ship before the new week starts?" That i
 
 - **Plans and goals:** recent weekly plans, month or quarter plans, active longer-term goals, and how often each weekly goal's deadline moved.
 - **Plan of record:** an action list or team shortlist the user already committed to.
-- **Tasks:** overdue and due next week, with age. For large "someday" lists, read titles and age only.
+- **Tasks:** overdue and due next week, with age. For large parked lists (ideas, someday items), read titles and age only.
 - **Daily signals:** recent ratings, focus hours, or daily plans, if tracked.
 - **Calendar:** meetings per day, heavy and clear days, weekend events, existing focus placeholders, and personal events that limit capacity.
 - **Messages (counts only):** old unanswered threads and people waiting for replies.
@@ -114,7 +114,7 @@ Include each only when it matters:
 - **Higher plans:** the quarter theme, or a gap. If quarter and month plans are both empty, ask whether to continue without them or pause and set them first. Never pick a stand-in.
 - **Capacity and energy:** ratings, focus hours, meeting load, heavy and clear days.
 - **Slipped goals:** by name and move count. At the slip threshold ask: "Is this still the right goal, or is the format, scope, or owner wrong?"
-- **Backlog and people waiting:** overdue and stale work, one to three parked tasks that now fit, who has waited how long. A non-empty saved-for-later list is not a failure; flag only stale or ownerless items.
+- **Backlog and people waiting:** overdue and stale work, one to three parked ideas that now fit, who has waited how long. A non-empty saved-for-later list is not a failure; flag only stale or ownerless items.
 - **Fixed commitments:** outside dates, which beat self-set goals on timing.
 - **Team signals:** a teammate in sustained overload (is clearing their way the real priority?) or new joiners (is onboarding covered?).
 
@@ -175,7 +175,7 @@ For several tasks, show a compact table first, then propose and write each in tu
 |---|---|---|---|---|
 | 1 | Draft budget section of grant application | Tue | 90 min | User |
 
-Check for duplicates and update existing work in place. Spread due dates in order. Pick estimates from a short fixed ladder of sizes the user chooses. Importance follows the goal's priority, with "critical" reserved for the single blocker; mark urgency "same day" only for outside requests due today.
+Check for duplicates, including parked ideas, and update existing work in place, reactivating a parked item rather than creating a copy. Spread due dates in order. Pick estimates from a short fixed ladder of sizes the user chooses. Importance follows the goal's priority, with "critical" reserved for the single blocker; mark urgency "same day" only for outside requests due today.
 
 ```
 Serves weekly goal: [goal]. Links to: [longer-term goal].
@@ -197,6 +197,7 @@ References:
 Show the week as short day-by-day paragraphs first, with open questions at the bottom, and ask "What else am I missing?" before creating anything.
 
 - **Capacity:** if blocks exceed most of the hours left after meetings (about 80% is a common ceiling), cut or shrink a goal.
+- **Pin task work if the system schedules tasks:** if the user's task system places tasks on a calendar by itself, record an approved slot for a task as a planned start and end on the task and mark it fixed, instead of creating a separate calendar event. The scheduler then draws it and plans other tasks around it. Use calendar events only for blocks that are not tasks, such as protected commitments or shared sessions, so the same work never appears twice.
 - **Reuse placeholders:** rename focus blocks the user already made before creating new ones; split any that span meals or meetings.
 - **Fresh read:** re-read the calendar right before writing. Never duplicate or rename blocks the user made mid-session, and never schedule work over personal events.
 - **Right calendar:** put each approved block where it belongs, using the setup choice. Obviously personal tasks (seeing friends, errands, chores) go on the personal calendar, never the work one.
@@ -259,7 +260,7 @@ Hi [name], I'm protecting time for [goal] this week, so I'd like to [skip / move
 
 ### Task triage
 
-Ask whether the user wants to triage overdue tasks themselves. If not, ask which active projects are actually finished (an end date means finished, never a target). Offer stale tasks as one batch to move to "someday". Then go one by one: do this week, done (people forget to close things), defer (important but not urgent gets a dated slot), delegate (confirm the work can leave the user, note who and when), or delete. Write each decision right away.
+Ask whether the user wants to triage overdue tasks themselves. If not, ask which active projects are actually finished (an end date means finished, never a target). Offer stale tasks as one batch to move to a parked idea status. Then go one by one: do this week, done (people forget to close things), defer (important but not urgent gets a dated slot, not the idea list), delegate (confirm the work can leave the user, note who and when), or delete. Write each decision right away.
 
 ### Scorecard
 
@@ -279,4 +280,4 @@ If asked, look across recent sessions for repeated corrections. Skip it if priva
 
 ### Structured stores
 
-If goals and tasks live in a database, refer to fields by stable identifiers rather than display names, which drift. Compute the current year from today's date instead of hard-coding it. A "days since created" field makes a simple slippage signal. Keep source quirks in a reference note consulted only when a number looks wrong, confirm the text format that renders checklists, and batch writes only after decisions are made.
+If goals and tasks live in a database, refer to fields by stable identifiers rather than display names, which drift; status labels can be renamed too, so confirm the current set before filtering or writing. Compute the current year from today's date instead of hard-coding it. A "days since created" field makes a simple slippage signal. Keep source quirks in a reference note consulted only when a number looks wrong, confirm the text format that renders checklists, and batch writes only after decisions are made. If an automatic scheduler places tasks on a calendar, write planned times and a pinned flag to the task, and leave any fields the scheduler or calendar sync owns untouched.

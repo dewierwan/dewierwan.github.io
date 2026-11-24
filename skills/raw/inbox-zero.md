@@ -137,7 +137,7 @@ Check the request against the thread first: if a requested point repeats or cont
 
 ### Creating a task
 
-Create one record with a clear action name, open status, due date, importance, urgency, time estimate, and project. Notes:
+Create one record with a clear action name, open status, due date, importance, urgency, time estimate, and project or area. Estimate only the user's own part of the work, not the time others will spend. Leave the project or area blank when none clearly fits rather than guessing; a later review or automatic tagging step can fill it. Notes:
 
 ```markdown
 **What:** the ask and who is waiting.
@@ -184,6 +184,7 @@ Keeping one-off fixes out of the core workflow stops it from bloating into a lis
 - Flagging a reply as owed when it was sent in a thread or another channel.
 - Relaying an ask the user cannot place, or proposing a meeting that already exists.
 - Guessing an owner instead of saying "owner unclear".
+- Inflating a task estimate with other people's time, or forcing a project or area that does not fit.
 - Quietly dropping a failed source, inventing links, or taking an undelegated action.
 - Writing every run's lesson into the core workflow instead of the place it belongs.
 

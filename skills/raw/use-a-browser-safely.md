@@ -15,7 +15,7 @@ These steps work even with a plain chat assistant that guides you while you do t
 - **Check where you are.** Before changing anything, confirm the signed-in account, the workspace or environment, and the exact item you will change. A "permission denied" page usually means the wrong account.
 - **List the fields before typing.** Note each field's label, whether it is required, and its kind (one line, multi-line, rich text, dropdown, checkbox, date). Make dropdown, checkbox, and date choices first, because they can reset the form.
 - **Read back every field.** After typing, click somewhere neutral and check the value is still there and complete. If the form saves automatically, reopen it and check the saved values.
-- **Stop before the final button.** Confirm required fields, values, and whether the action can be undone. Check the final dialog for extra options, such as also emailing people. For payments, sends, deletions, sharing data elsewhere, or "cannot be edited" forms, get a clear yes first.
+- **Stop before the final button.** Confirm required fields, values, and whether the action can be undone. Check the final dialog for extra options, such as also emailing people. For payments, sends, bookings, deletions, sharing data elsewhere, or "cannot be edited" forms, get a clear yes first.
 - **Look for proof afterward.** A confirmation message, reference number, or saved record. If you see an error, check whether the action happened before retrying.
 
 ## 1. Follow the central rule
@@ -34,7 +34,7 @@ Use the first route that fits. Do not skip ahead.
 
 **Limits.** Do not use undocumented endpoints to get around access controls, terms, rate limits, or anti-abuse systems. In a signed-in session, do not change anything by calling internal endpoints from page scripts; requests missing the app's normal headers can end the session. Reading state the page already holds is lower risk.
 
-**When a person has to act.** If a site blocks headless automation during general research, accept it and move on; escalate to the signed-in browser only when the user explicitly asked for a task on that site. Human-verification checks, security keys, multi-factor prompts, account choosers, and consent screens belong to the user: leave the tab open, say exactly what to click, then re-verify and continue. If you can foresee several such steps, ask once for all of them. Never simulate, bypass, or weaken these checks.
+**When a person has to act.** If a site blocks headless automation during general research, accept it and move on; escalate to the signed-in browser only when the user explicitly asked for a task on that site. Human-verification checks, security keys, multi-factor prompts, account choosers, sign-in for a final booking or purchase, and consent screens belong to the user: leave the tab open, say exactly what to click, then re-verify and continue. If you can foresee several such steps, ask once for all of them. Never simulate, bypass, or weaken these checks.
 
 Some pages refuse automation entirely, so every read or screenshot fails. Do not fight them. Check whether an API covers the step (some can update an existing item but not create one). Otherwise prepare everything the user needs, such as files, images, and the exact text for each field, hand over numbered steps, and verify the result afterward where you can.
 
@@ -65,7 +65,7 @@ A "permission denied" page usually means the wrong account or a missing role; ad
 Before navigating deeply, identify the target, what will change, the minimum information needed, fields that need the user's judgment, and whether the final action can be undone.
 
 - **Reversible changes** the user asked for can proceed after normal verification.
-- **Irreversible or high-impact actions** need a pre-action record and confirmation unless the user already authorized that exact action: payments, sends, invitations, publishing, deletions, ownership or access changes, syncing data to another system, anything labeled "cannot be undone."
+- **Irreversible or high-impact actions** need a pre-action record and confirmation unless the user already authorized that exact action: payments, bookings, sends, invitations, publishing, deletions, ownership or access changes, syncing data to another system, anything labeled "cannot be undone."
 - **Autosaving forms have no separate submit.** Each edit goes live as you type, so settle the values and any approval before you start.
 - **Credentials stay with the user.** Set up everything around a key or password, then give exact steps to enter it. Never move secrets by automated copy and paste; a copy button can appear to work while the clipboard holds older text.
 
@@ -154,6 +154,7 @@ A click is not proof. Look for a success message, a reference number, a new reco
 | Wrong account or permission denied | Last-used profile or missing role | Select the profile directly; ask the user to sign in; re-verify. |
 | Tab freezes; clicks and screenshots time out | Native dialog or blocking pop-up | Reload; read the message safely or ask the user. |
 | Clicks do nothing or reads come back empty or cut off | Panel ignores input; layout shifted; output truncated | Wait, re-locate, click by position, read in slices, undo stray changes. |
+| A search filter lists providers or slots that turn out not to be free at the requested time | Listing filters are approximate, and a packaged or fixed-price flow may offer narrower availability than the general one | Browse as a guest where allowed; check each candidate's own calendar for the exact date and time; compare flows; leave sign-in and the final booking to the user. |
 
 ## 12. Report and keep the procedure current
 
@@ -180,7 +181,7 @@ When a run reveals a reusable lesson, record it in your local copy without waiti
 
 **Native confirmation dialogs.** After reloading a frozen tab, override the page's confirm function to record the message and decline, click once, and read it. If it is the intended change, override again to accept only that exact message. Reapply after any reload.
 
-**Batches of independent items.** Use separate tabs, each with the full brief, at a modest concurrency you choose. Background tabs may not render fully, so bring an item into view before capturing it.
+**Batches of independent items.** Use separate tabs, each with the full brief, at a modest concurrency you choose. Background tabs may not render fully, so bring an item into view before capturing it. When you must check many candidates (for example, each provider's calendar for one time slot), a script that runs in the background and loops through them, recording each result, is faster than clicking through one by one; keep the request rate polite.
 
 **Apps without a full API.** Some apps expose editor or configuration state to page scripts; reading it is often faster than driving slow views, but expect it to change between versions. Validate edits first and apply them in one step so a failure cannot leave a half-edited autosaved draft. If output is truncated, keep results in a page variable and read them in slices. For slow log dashboards, repeat the page's own read-only query over small time windows (size is adjustable) and add up the results.
 
