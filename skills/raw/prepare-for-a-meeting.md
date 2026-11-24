@@ -63,7 +63,7 @@ A routine check-in may need only the invitation and last meeting's notes. A firs
 - **Correspondence.** Direct exchanges first, for commitments, tone, and recent context. If the reason for the meeting is still unclear, look for threads that mention the person; these often reveal the introduction or process behind it. Read the most recent relevant items in full.
 - **Team chat.** Search by the person's account or handle as well as their name, since many tools store mentions as account references that a name search misses. Read whole threads, not just the matching line.
 - **Earlier meetings and notes.** Past meeting pages, project notes, and calendar history with the same people, in every place you are authorized to read, to build the relationship arc.
-- **Your organization's own records.** If the person submitted something, such as an application, proposal, or request, read it. Search by email and full name. State in the brief what you found, or that you found nothing.
+- **Your organization's own records.** For each external attendee, check every authorized record store that could hold something they submitted, such as applications, requests, registrations, or funding submissions, even when no record seems likely. These often reveal a plan, an alternative, or a concern that changes the agenda. If records have been consolidated or moved, search the current location rather than the old one. Search by full name as well as email, since people often used an older address. Common names can return many results; narrow them by email, organization, or date instead of skimming. If the person submitted something, read it in full. State in the brief what you found, or that you searched and found nothing.
 - **Public professional information.** Current role, what their organization does, a few professional links, and recent work-related news that bears on the topic.
 
 When a person search comes up thin, try the organizations they are linked to, including past ones.
@@ -251,7 +251,7 @@ The user reads the brief and page cold, so everything you found is new to them. 
 | Questions | The brief was posted on its own and the user's answers shaped the goal and agenda |
 | Meeting | Date, time zone, attendees, duration, and destination are correct |
 | Evidence | Claims are supported, labeled, or removed; identities confirmed |
-| Coverage | The relevant sources and the artifact were checked, or gaps are stated |
+| Coverage | The relevant sources, record stores, and the artifact were checked, or gaps are stated |
 | Format | The page uses the private or shared structure that matches its readers |
 | Agenda | Times add up, questions are specific, and the close names a date, deliverable, or owner |
 
@@ -262,6 +262,8 @@ Finish by giving the page link and stating any limitations, such as a missing ar
 **Post-call review.** For persuasive or high-stakes meetings, offer to schedule a review at a delay the user chooses after the meeting ends. Give it the page location and counterparty's name so it can start without other context. It should record commitments, objections, and next steps with owners and dates and, if the user wants coaching, note recurring patterns in their own approach.
 
 **Tool-specific features.** If your notes system has a meeting-notes or transcription feature, add it only with participant consent and open the page where that feature works. If titles support special elements such as date chips, read the saved result back, since some systems store markup as literal text.
+
+**Large record searches.** If a search of your records returns more results than you can read, save them and filter by email, organization, or date with your system's query or filtering capability rather than reading them one by one.
 
 **Interfaces that hide text before a question prompt.** Some agent interfaces intermittently hide text posted just before a structured question in the same turn, which is why the brief ends its own message. If your setup can continue automatically, end the brief with a fixed marker line that triggers the next turn and ask the questions there; otherwise treat the user's next reply as the signal to ask. Retire this only after a real research-heavy run shows both reliably appear together.
 
