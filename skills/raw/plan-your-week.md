@@ -35,7 +35,7 @@ Ask these once, then reuse the answers until the user changes them. Every defaul
 |---|---|
 | Planning day and session length | A day the user picks near the end of the week; about an hour |
 | Where goals, tasks, and notes live | Wherever they already live, or the conversation |
-| Calendars and time zone | Which calendar gets work blocks, which gets personal blocks, and which are read-only; whether the task system schedules tasks onto a calendar by itself; the user's current time zone |
+| Calendars and time zone | Which calendar gets work blocks, which gets personal blocks, and which are read-only; whether the task system schedules tasks onto a calendar by itself, and how far ahead it draws; the user's current time zone |
 | Longer-term goals | The longest active level for the current year, plus the current quarter or month |
 | Working hours and focus window | The hours the user actually works, and when deep work suits them |
 | Thresholds | Slipping goal: deadline moved several times. Stale task: open about a month. Heavy day: more meetings than the user finds workable. Buffer: about a fifth of post-meeting hours. Task size: a few minutes to a few hours |
@@ -96,6 +96,7 @@ After the review, ask: "What must still ship before the new week starts?" That i
 - **Tasks:** overdue and due next week, with age. For large parked lists (ideas, someday items), read titles and age only.
 - **Daily signals:** recent ratings, focus hours, or daily plans, if tracked.
 - **Calendar:** meetings per day, heavy and clear days, weekend events, existing focus placeholders, and personal events that limit capacity.
+- **Scheduled task blocks:** if the task system draws tasks onto its own calendar, read that calendar too, read-only, since the scheduler owns it. It shows which task time is already claimed. It may draw fixed tasks further ahead than flexible ones, so a later day that looks empty is not necessarily free, and a block marked done means that task is finished.
 - **Messages (counts only):** old unanswered threads and people waiting for replies.
 - **Fixed outside commitments:** events or programs the user runs that start soon.
 
@@ -112,7 +113,7 @@ Show only facts that could change a decision, in **at most eight bullets**, tens
 Include each only when it matters:
 
 - **Higher plans:** the quarter theme, or a gap. If quarter and month plans are both empty, ask whether to continue without them or pause and set them first. Never pick a stand-in.
-- **Capacity and energy:** ratings, focus hours, meeting load, heavy and clear days.
+- **Capacity and energy:** ratings, focus hours, meeting load, heavy and clear days, and task time the scheduler has already claimed.
 - **Slipped goals:** by name and move count. At the slip threshold ask: "Is this still the right goal, or is the format, scope, or owner wrong?"
 - **Backlog and people waiting:** overdue and stale work, one to three parked ideas that now fit, who has waited how long. A non-empty saved-for-later list is not a failure; flag only stale or ownerless items.
 - **Fixed commitments:** outside dates, which beat self-set goals on timing.
@@ -199,7 +200,7 @@ Show the week as short day-by-day paragraphs first, with open questions at the b
 - **Capacity:** if blocks exceed most of the hours left after meetings (about 80% is a common ceiling), cut or shrink a goal.
 - **Pin task work if the system schedules tasks:** if the user's task system places tasks on a calendar by itself, record an approved slot for a task as a planned start and end on the task and mark it fixed, instead of creating a separate calendar event. The scheduler then draws it and plans other tasks around it. Use calendar events only for blocks that are not tasks, such as protected commitments or shared sessions, so the same work never appears twice.
 - **Reuse placeholders:** rename focus blocks the user already made before creating new ones; split any that span meals or meetings.
-- **Fresh read:** re-read the calendar right before writing. Never duplicate or rename blocks the user made mid-session, and never schedule work over personal events.
+- **Fresh read:** re-read the calendar, and any scheduler calendar, right before writing. Never duplicate or rename blocks the user made mid-session, and never schedule work over personal events.
 - **Right calendar:** put each approved block where it belongs, using the setup choice. Obviously personal tasks (seeing friends, errands, chores) go on the personal calendar, never the work one.
 - **Propose each slot:** "Grant budget, Tue afternoon (90 min). OK?" Use plain titles. Block longer tasks, hard deadlines, and protected commitments. Flag any block shorter than its estimate and offer longer, split, or smaller.
 - **Catch-up block:** if replies piled up, propose a block for messages.
@@ -280,4 +281,4 @@ If asked, look across recent sessions for repeated corrections. Skip it if priva
 
 ### Structured stores
 
-If goals and tasks live in a database, refer to fields by stable identifiers rather than display names, which drift; status labels can be renamed too, so confirm the current set before filtering or writing. Compute the current year from today's date instead of hard-coding it. A "days since created" field makes a simple slippage signal. Keep source quirks in a reference note consulted only when a number looks wrong, confirm the text format that renders checklists, and batch writes only after decisions are made. If an automatic scheduler places tasks on a calendar, write planned times and a pinned flag to the task, and leave any fields the scheduler or calendar sync owns untouched.
+If goals and tasks live in a database, refer to fields by stable identifiers rather than display names, which drift; status labels can be renamed too, so confirm the current set before filtering or writing. Compute the current year from today's date instead of hard-coding it. A "days since created" field makes a simple slippage signal. Keep source quirks in a reference note consulted only when a number looks wrong, confirm the text format that renders checklists, and batch writes only after decisions are made. If an automatic scheduler places tasks on a calendar, read its calendar but never edit it, write planned times and a pinned flag to the task instead, and leave any fields the scheduler or calendar sync owns untouched.

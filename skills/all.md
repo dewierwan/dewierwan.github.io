@@ -962,7 +962,7 @@ Build a well-sourced context brief on a person, organization, project, topic, or
 - If the subject is truly ambiguous, such as a bare name or a one-word topic, ask one short clarifying question. Otherwise, proceed.
 - Without connected tools, ask the user to paste what matters: recent emails, chat threads, documents, links, and especially notes from any recent meeting with the subject, which are often the richest source.
 - Organize findings by theme, not by source, and lead with what matters most for the user's next action. Resolve contradictions instead of listing both sides blindly.
-- Tie every claim to where it came from (the pasted email, the meeting notes, a link the user gave). Never invent a link or a fact.
+- Tie every claim to where it came from (the pasted email, the meeting notes, a link the user gave), placing any link inline on the words that name the source. Never invent a link or a fact.
 - End with a short "Open questions / gaps" list: what no material answered and where the answer probably lives.
 
 ## 1. When to use this
@@ -1051,7 +1051,7 @@ These apply whatever tools the user has. Apply them fully on deep searches and l
 
 Combine findings into one brief organized by theme, not by tool. Lead with what matters most for the user's next action. Resolve contradictions rather than listing both blindly, for example: "A news profile says they work at Organization A; their dated professional profile says they left in March. The profile is more recent and more likely correct."
 
-**Every sourced claim gets a clickable link** to its primary source. A quote without a link is not finished. The user must be able to click straight through to check.
+**Every sourced claim has a link somewhere in the brief.** A quote without a link is not finished. Write each link inline and in context, as a hyperlink on the words that name the source, for example: "The [program officer's email of 2 May](link) asks for a revised budget." Never paste a bare URL, and do not add a separate sources list at the end. The user should be able to click straight through from the claim to its evidence.
 
 ### Output template
 
@@ -1065,7 +1065,7 @@ Adapt the headings to the subject, but keep this spine:
 Three to five bullets with the most decision-relevant facts.
 
 ## What we know
-Who or what this is, current state, history. By theme, with inline evidence links.
+Who or what this is, current state, history. By theme, with inline hyperlinks to evidence.
 
 ## Relationship / timeline
 (For people and organizations) How the user's organization connects to them; chronology of contact.
@@ -1073,9 +1073,6 @@ Who or what this is, current state, history. By theme, with inline evidence link
 ## Open questions / gaps
 What no source answered, and which source would likely hold it.
 Any relevant source that was unavailable or empty.
-
-## Sources
-Key links, grouped, so the user can dig in.
 ```
 
 Match length to depth and keep prose blocks short. This is a document to scan and act on, not an essay.
@@ -1099,9 +1096,9 @@ The assistant classifies the subject as an organization with an existing relatio
 *Searched: email, team chat, notes, meeting records, web. Window: last 9 months. Effort: standard.*
 
 ## TL;DR
-- Program officer asked for a revised budget by month end ([email thread])
-- Yesterday's call: they favor multi-year grants over one-off awards ([meeting notes])
-- Their public site lists a new grants director; our notes still name the old one ([fund website], [notes page])
+- The [program officer's email of 2 May](link) asks for a revised budget by month end
+- On [yesterday's call](link), they said they favor multi-year grants over one-off awards
+- The [fund's website](link) lists a new grants director; our [partner notes page](link) still names the old one
 
 ## Open questions / gaps
 - Current decision timeline: not in any source; likely in the program officer's next email
@@ -1114,7 +1111,7 @@ The assistant classifies the subject as an organization with an existing relatio
 |---|---|
 | Effort | Tier matches the stakes and is stated in one line |
 | Coverage | Named sources searched; obviously decision-relevant sources, especially recent meeting records, added |
-| Evidence | Every sourced claim has a verified, clickable link; no invented URLs |
+| Evidence | Every sourced claim has a verified link, placed inline on the words naming the source; no bare URLs, no separate sources list, no invented URLs |
 | Conflicts | Contradictions resolved or clearly flagged |
 | Gaps | Unavailable or empty relevant sources reported; skipped sources not implied as checked |
 | Delivery | Brief is in the reply as the final block; a separate document only if the user asked for one |
@@ -1129,6 +1126,7 @@ The assistant classifies the subject as an organization with an existing relatio
 | Trusting stale profiles, notes, or memory | Cross-check against dated, current sources |
 | Reading only part of a document or record | Open hidden sections, tabs, and threads |
 | Covering a gap with a nearby source | Report the gap explicitly |
+| Pasting bare URLs or a sources list at the end | Put each link inline on the words that name the source |
 | Creating a document nobody asked for | Deliver in the reply; create a document only on request |
 
 ## Optional extras
@@ -2477,7 +2475,7 @@ The assistant proposes one: "Launch copy final and sent to the designer by early
 
 - **Run modes.** Switch from the full flow when the user signals it, and say which steps you skipped. *Fast mode:* the user gives an ordered list; write it in their order around fixed commitments and keep a two-line pre-mortem. *Bedtime-bound:* one proposal with at most three numbered questions, then write. *Going to sleep:* ask nothing; use the blocks they already set; save the plan with a self-contained first line and list open choices as pending.
 - **Forward flags.** For a deadline that can't fit tomorrow but must land within a few days, add a plan section naming the due date, how long it has been open, and which day's plan must surface it.
-- **Working with an auto-scheduler.** Some setups use a program that turns tasks into calendar blocks. There, protecting time means pinning the agreed slot on the task (planned start and end, with the time zone offset, plus a "pinned" marker) and letting the scheduler draw the block and fit other tasks around it. Work with no task gets one first: a short name, due on the target day, and a time estimate. Treat the scheduler's calendar as read-only, don't hand-create or rename blocks for task work, and leave fields it or a time tracker fills in alone. Only non-task items, such as meetings or exercise, go on the calendar directly. A block the user dragged into place there already counts as pinned. The scheduler may take a few minutes to redraw, so re-read before confirming. When checking the previous day, its blocks show what was scheduled, and a done marker shows what finished.
+- **Working with an auto-scheduler.** Some setups use a program that turns tasks into calendar blocks. There, protecting time means pinning the agreed slot on the task (planned start and end, with the time zone offset, plus a "pinned" marker) and letting the scheduler draw the block and fit other tasks around it. It places those other tasks only in time that is free on both the work and personal calendars, inside a daily working window the user sets, so keep personal commitments on the calendar the scheduler can see. Work with no task gets one first: a short name, due on the target day, and a time estimate. Treat the scheduler's calendar as read-only, don't hand-create or rename blocks for task work, and leave fields it or a time tracker fills in alone. Only non-task items, such as meetings or exercise, go on the calendar directly. A block the user dragged into place there already counts as pinned. The scheduler may take a few minutes to redraw, so re-read before confirming. When checking the previous day, its blocks show what was scheduled, and a done marker shows what finished.
 - **Date queries in connected databases.** Filter with the tool's date functions (same day, before, after) rather than text comparisons, and express "due by day X" as "due before the day after X". Comparing a date field with a plain string can return nothing without any error.
 - **Sleep data.** Trackers often file a night under the bedtime date, so last night usually carries yesterday's date. When two sources record the same night, use the one the user trusts more. No record usually means the sync is behind.
 - **Connected signals.** With connected tools, add to the brief: old unanswered email, stale saved action items, and messages awaiting a reply (sender, channel, and age only). Long-waiting items make strong supporting candidates; if a source is down, name it. Because these touch other people's messages, use them only for the user's own planning with clear authorization, read the minimum needed, leave out unrelated or sensitive details, and keep results in the private plan.
@@ -2674,7 +2672,7 @@ Ask these once, then reuse the answers until the user changes them. Every defaul
 |---|---|
 | Planning day and session length | A day the user picks near the end of the week; about an hour |
 | Where goals, tasks, and notes live | Wherever they already live, or the conversation |
-| Calendars and time zone | Which calendar gets work blocks, which gets personal blocks, and which are read-only; whether the task system schedules tasks onto a calendar by itself; the user's current time zone |
+| Calendars and time zone | Which calendar gets work blocks, which gets personal blocks, and which are read-only; whether the task system schedules tasks onto a calendar by itself, and how far ahead it draws; the user's current time zone |
 | Longer-term goals | The longest active level for the current year, plus the current quarter or month |
 | Working hours and focus window | The hours the user actually works, and when deep work suits them |
 | Thresholds | Slipping goal: deadline moved several times. Stale task: open about a month. Heavy day: more meetings than the user finds workable. Buffer: about a fifth of post-meeting hours. Task size: a few minutes to a few hours |
@@ -2735,6 +2733,7 @@ After the review, ask: "What must still ship before the new week starts?" That i
 - **Tasks:** overdue and due next week, with age. For large parked lists (ideas, someday items), read titles and age only.
 - **Daily signals:** recent ratings, focus hours, or daily plans, if tracked.
 - **Calendar:** meetings per day, heavy and clear days, weekend events, existing focus placeholders, and personal events that limit capacity.
+- **Scheduled task blocks:** if the task system draws tasks onto its own calendar, read that calendar too, read-only, since the scheduler owns it. It shows which task time is already claimed. It may draw fixed tasks further ahead than flexible ones, so a later day that looks empty is not necessarily free, and a block marked done means that task is finished.
 - **Messages (counts only):** old unanswered threads and people waiting for replies.
 - **Fixed outside commitments:** events or programs the user runs that start soon.
 
@@ -2751,7 +2750,7 @@ Show only facts that could change a decision, in **at most eight bullets**, tens
 Include each only when it matters:
 
 - **Higher plans:** the quarter theme, or a gap. If quarter and month plans are both empty, ask whether to continue without them or pause and set them first. Never pick a stand-in.
-- **Capacity and energy:** ratings, focus hours, meeting load, heavy and clear days.
+- **Capacity and energy:** ratings, focus hours, meeting load, heavy and clear days, and task time the scheduler has already claimed.
 - **Slipped goals:** by name and move count. At the slip threshold ask: "Is this still the right goal, or is the format, scope, or owner wrong?"
 - **Backlog and people waiting:** overdue and stale work, one to three parked ideas that now fit, who has waited how long. A non-empty saved-for-later list is not a failure; flag only stale or ownerless items.
 - **Fixed commitments:** outside dates, which beat self-set goals on timing.
@@ -2838,7 +2837,7 @@ Show the week as short day-by-day paragraphs first, with open questions at the b
 - **Capacity:** if blocks exceed most of the hours left after meetings (about 80% is a common ceiling), cut or shrink a goal.
 - **Pin task work if the system schedules tasks:** if the user's task system places tasks on a calendar by itself, record an approved slot for a task as a planned start and end on the task and mark it fixed, instead of creating a separate calendar event. The scheduler then draws it and plans other tasks around it. Use calendar events only for blocks that are not tasks, such as protected commitments or shared sessions, so the same work never appears twice.
 - **Reuse placeholders:** rename focus blocks the user already made before creating new ones; split any that span meals or meetings.
-- **Fresh read:** re-read the calendar right before writing. Never duplicate or rename blocks the user made mid-session, and never schedule work over personal events.
+- **Fresh read:** re-read the calendar, and any scheduler calendar, right before writing. Never duplicate or rename blocks the user made mid-session, and never schedule work over personal events.
 - **Right calendar:** put each approved block where it belongs, using the setup choice. Obviously personal tasks (seeing friends, errands, chores) go on the personal calendar, never the work one.
 - **Propose each slot:** "Grant budget, Tue afternoon (90 min). OK?" Use plain titles. Block longer tasks, hard deadlines, and protected commitments. Flag any block shorter than its estimate and offer longer, split, or smaller.
 - **Catch-up block:** if replies piled up, propose a block for messages.
@@ -2919,7 +2918,7 @@ If asked, look across recent sessions for repeated corrections. Skip it if priva
 
 ### Structured stores
 
-If goals and tasks live in a database, refer to fields by stable identifiers rather than display names, which drift; status labels can be renamed too, so confirm the current set before filtering or writing. Compute the current year from today's date instead of hard-coding it. A "days since created" field makes a simple slippage signal. Keep source quirks in a reference note consulted only when a number looks wrong, confirm the text format that renders checklists, and batch writes only after decisions are made. If an automatic scheduler places tasks on a calendar, write planned times and a pinned flag to the task, and leave any fields the scheduler or calendar sync owns untouched.
+If goals and tasks live in a database, refer to fields by stable identifiers rather than display names, which drift; status labels can be renamed too, so confirm the current set before filtering or writing. Compute the current year from today's date instead of hard-coding it. A "days since created" field makes a simple slippage signal. Keep source quirks in a reference note consulted only when a number looks wrong, confirm the text format that renders checklists, and batch writes only after decisions are made. If an automatic scheduler places tasks on a calendar, read its calendar but never edit it, write planned times and a pinned flag to the task instead, and leave any fields the scheduler or calendar sync owns untouched.
 
 
 ---
@@ -5601,16 +5600,16 @@ Use the first route that fits. Do not skip ahead.
 2. **Isolated headless browser.** The default for anything that does not need the user's identity: public forms, extraction, UI testing, screenshots. It never touches the user's own browser.
 3. **The user's signed-in visible browser.** Only when the task truly needs the user's live session. Never use it for convenience; anything that works headless stays headless.
 
-**Limits.** Do not use undocumented endpoints to get around access controls, terms, rate limits, or anti-abuse systems. In a signed-in session, do not change anything by calling internal endpoints from page scripts; requests missing the app's normal headers can end the session. Reading state the page already holds is lower risk.
+**Limits.** Do not use undocumented endpoints to get around access controls, terms, rate limits, or anti-abuse systems. In a signed-in session, do not change anything by calling internal endpoints from page scripts; such requests can end the session. Reading state the page already holds is lower risk.
 
-**When a person has to act.** If a site blocks headless automation during general research, accept it and move on; escalate to the signed-in browser only when the user explicitly asked for a task on that site. Human-verification checks, security keys, multi-factor prompts, account choosers, sign-in for a final booking or purchase, and consent screens belong to the user: leave the tab open, say exactly what to click, then re-verify and continue. If you can foresee several such steps, ask once for all of them. Never simulate, bypass, or weaken these checks.
+**When a person has to act.** If a site blocks headless automation during general research, accept it and move on; escalate to the signed-in browser only when the user explicitly asked for a task on that site. Human-verification checks, security keys, multi-factor prompts, account choosers, sign-in, and consent screens belong to the user: leave the tab open, say exactly what to click, then re-verify and continue. If you can foresee several such steps, ask once for all of them. Never simulate, bypass, or weaken these checks.
 
-Some pages refuse automation entirely, so every read or screenshot fails. Do not fight them. Check whether an API covers the step (some can update an existing item but not create one). Otherwise prepare everything the user needs, such as files, images, and the exact text for each field, hand over numbered steps, and verify the result afterward where you can.
+If a page refuses automation entirely, do not fight it. Check whether an API covers the step; otherwise prepare everything the user needs (files, images, the exact text for each field), hand over numbered steps, and verify the result afterward where you can.
 
 ## 3. Pick the automation style and workspace
 
 - **Step-by-step tool calls** suit one click, one snapshot, or short tasks.
-- **A standalone script** suits long text, many fields, heavy single-page apps, or repeatable runs. If an interactive tool crashes or reports that the page or browser closed, switch to a script rather than rescuing the session.
+- **A standalone script** suits long text, many fields, heavy single-page apps, or repeatable runs. If an interactive tool crashes or reports that the page closed, switch to a script rather than rescuing the session.
 
 Give each task its own uniquely named working folder (in the system's temporary area or a place the user chose) for scripts, field records, and screenshots. A shared folder lets parallel sessions overwrite each other, so you might verify the wrong run. Pass secrets through environment variables or a secrets store; never hard-code or log them.
 
@@ -5622,12 +5621,12 @@ When the task touches private messages, records, or information about other peop
 
 - **Announce, then act.** For example, "Taking over the browser to update the billing contact." If the user already authorized it for this task, do not ask again.
 - **Work in a fresh window or tab.** Do not reuse the user's tabs unless they point to one.
-- **Pick the profile directly.** Classify the task as personal, work, test, or production; if the user says which, that settles it. Generic "current browser" selectors often pick the last-used profile, and display labels can change after restarts, so use a stable identifier. Opening a profile's window does not route automation to it; if no connection appears, the connector in that profile may be signed out or asleep, so ask the user to wake it.
+- **Pick the profile directly.** Classify the task (personal, work, test, production); if the user says which, that settles it. Generic "current browser" selectors often pick the last-used profile, and display labels can change, so use a stable identifier.
 - **Do not restart or force-quit the browser** without explicit OK.
 
-**Account preflight gate.** Before any write, answer: Which account (read from a reliable account page)? Which environment? What exact item will change? If any answer is unclear, stop and ask. If your setup uses a marker that unlocks write actions, set it only after the check passes.
+**Account preflight gate.** Before any write, answer: Which account (read from a reliable account page)? Which environment? What exact item will change? If any answer is unclear, stop and ask. If your setup has a marker that unlocks write actions, set it only after the check passes.
 
-A "permission denied" page usually means the wrong account or a missing role; admin consoles often need a separate admin account, so ask the user to sign in with it. A permission error from your automation tool right after navigating is different: it is often transient while the page loads, so wait and retry.
+A "permission denied" page usually means the wrong account or a missing role; admin consoles often need a separate admin account, so ask the user to sign in with it. An error that appears right after navigating may only mean the page is still loading, so wait and retry once.
 
 ## 5. Set the task boundary and authorization
 
@@ -5635,7 +5634,7 @@ Before navigating deeply, identify the target, what will change, the minimum inf
 
 - **Reversible changes** the user asked for can proceed after normal verification.
 - **Irreversible or high-impact actions** need a pre-action record and confirmation unless the user already authorized that exact action: payments, bookings, sends, invitations, publishing, deletions, ownership or access changes, syncing data to another system, anything labeled "cannot be undone."
-- **Autosaving forms have no separate submit.** Each edit goes live as you type, so settle the values and any approval before you start.
+- **Autosaving forms have no separate submit.** Each edit can count as final the moment you make it. Settle the values and any approval before you start, and leave a field empty until you are sure of it.
 - **Credentials stay with the user.** Set up everything around a key or password, then give exact steps to enter it. Never move secrets by automated copy and paste; a copy button can appear to work while the clipboard holds older text.
 
 Honor an explicit request to review first. If authorization is missing, prepare and verify the full result, show it, and ask only for the final action.
@@ -5672,8 +5671,8 @@ Watch for:
 | File upload | Confirm file, destination, and privacy first | Upload may start at once. |
 
 - **Do re-rendering choices first,** then text. Blur after every rich-text field, and re-check tricky widgets after later edits.
-- **If a click does nothing or lands wrong,** wait for the layout to settle, locate the target again, click by position if needed, and confirm from a screenshot.
-- **Screens without an API** (builders, admin settings) often ignore simple automation. Use real clicks and typing, change one setting at a time, and confirm each in a preview.
+- **If a click does nothing or lands wrong,** wait for the layout to settle, locate the target again, and confirm from a screenshot.
+- **Screens without an API** (builders, admin settings) often ignore simple automation. Use real clicks and typing, change one setting at a time, and confirm each.
 
 ## 8. Verify after every fill
 
@@ -5722,14 +5721,14 @@ A click is not proof. Look for a success message, a reference number, a new reco
 | Screenshot does not match what you did | Shared folder overwritten | Use a unique working folder; re-run the check. |
 | Wrong account or permission denied | Last-used profile or missing role | Select the profile directly; ask the user to sign in; re-verify. |
 | Tab freezes; clicks and screenshots time out | Native dialog or blocking pop-up | Reload; read the message safely or ask the user. |
-| Clicks do nothing or reads come back empty or cut off | Panel ignores input; layout shifted; output truncated | Wait, re-locate, click by position, read in slices, undo stray changes. |
-| A search filter lists providers or slots that turn out not to be free at the requested time | Listing filters are approximate, and a packaged or fixed-price flow may offer narrower availability than the general one | Browse as a guest where allowed; check each candidate's own calendar for the exact date and time; compare flows; leave sign-in and the final booking to the user. |
+| Clicks do nothing or reads come back empty or cut off | Panel ignores input; layout shifted; output truncated | Wait, re-locate, read in slices, undo stray changes. |
+| Search results promise something the item's own page does not confirm | Listing filters are approximate | Check each candidate's own detail or calendar before acting. |
 
 ## 12. Report and keep the procedure current
 
 Summarize the outcome in one or two sentences, point to the screenshot and after-state record, and do not paste every field value inline. Delete sensitive temporary files when done.
 
-When a run reveals a reusable lesson, record it in your local copy without waiting to be asked. Prefer one table row (symptom, cause, fix) over new prose. A long recipe for one site goes in a separate reference note with a one-row pointer in the failure table; dated incident notes go in a log that normal runs do not read. Never record credentials or private data, and merge older entries into general principles as the document grows.
+When a run reveals a reusable lesson, record it in your local copy without waiting to be asked. Prefer one table row (symptom, cause, fix) over new prose. Keep long recipes for one site in a separate reference note with a one-row pointer here, and keep dated incident notes in a log that normal runs do not read. Never record credentials or private data, and merge older entries into general principles as the document grows.
 
 ## Final audit checklist
 
@@ -5744,17 +5743,17 @@ When a run reveals a reusable lesson, record it in your local copy without waiti
 
 ## Optional extras
 
-**Clipboard and files.** Headless browsers often lack clipboard access, so embed values directly. Some upload buttons create a file input only on click and open the system picker, which automation cannot drive; a small page-script override can attach that input to the page instead. If downloads are blocked, use the service's own save-to-storage option or ask the user to download. Read only the files the task needs.
+**Clipboard and files.** Headless browsers often lack clipboard access, so embed values directly. Some upload buttons create a file input only on click and open the system picker, which automation cannot drive; a small page-script override can attach that input to the page instead. If downloads are blocked, use the service's own save-to-storage option or ask the user. Read only the files the task needs.
 
-**Testing pasted content.** A simulated paste event skips the browser's own paste handling and can mislead. For a faithful test, put the content on the system clipboard in rich and plain-text forms, focus the editor, and press the paste shortcut through real keyboard input. This overwrites the user's clipboard, so say so first. Read the result from the editor's own content or the service's API.
+**Faithful paste tests.** A simulated paste event can behave differently from a real one. For an accurate test, place the content on the system clipboard, focus the editor, and press the paste shortcut through real keyboard input. Say first that this overwrites the user's clipboard.
 
-**Native confirmation dialogs.** After reloading a frozen tab, override the page's confirm function to record the message and decline, click once, and read it. If it is the intended change, override again to accept only that exact message. Reapply after any reload.
+**Native confirmation dialogs.** If a dialog freezes the tab, reload, override the page's confirm function to record the message and decline, then read it. Accept only the exact intended message, and reapply after any reload.
 
-**Batches of independent items.** Use separate tabs, each with the full brief, at a modest concurrency you choose. Background tabs may not render fully, so bring an item into view before capturing it. When you must check many candidates (for example, each provider's calendar for one time slot), a script that runs in the background and loops through them, recording each result, is faster than clicking through one by one; keep the request rate polite.
+**Batches.** Use separate tabs, each with the full brief, at a modest concurrency you choose. Background tabs may not render fully, so bring an item into view before capturing it. For checking many candidates, a background script that loops and records each result beats clicking one by one; keep the request rate polite.
 
-**Apps without a full API.** Some apps expose editor or configuration state to page scripts; reading it is often faster than driving slow views, but expect it to change between versions. Validate edits first and apply them in one step so a failure cannot leave a half-edited autosaved draft. If output is truncated, keep results in a page variable and read them in slices. For slow log dashboards, repeat the page's own read-only query over small time windows (size is adjustable) and add up the results.
+**Apps without a full API.** Some apps expose editor or configuration state to page scripts; reading it can be faster than driving slow views, but it changes between versions. Validate edits first and apply them in one step so a failure cannot leave a half-edited autosaved draft. For slow log dashboards, repeat the page's own read-only query over small time windows (size is adjustable) and add up the results.
 
-**Admin and schema changes.** Before deleting a field or schema item, check dependencies and automations that use it. To share data with another system, get a plain yes and expose only the minimum fields. When a save needs a security key or password, prepare the change, describe exactly what will happen, leave that step to the user, and verify the saved state afterward.
+**Admin and schema changes.** Before deleting a field or schema item, check what depends on it. When a save needs a security key or password, prepare the change, describe exactly what will happen, leave that step to the user, and verify the saved state afterward.
 
 
 ---

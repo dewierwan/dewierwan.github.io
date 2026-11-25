@@ -13,7 +13,7 @@ Build a well-sourced context brief on a person, organization, project, topic, or
 - If the subject is truly ambiguous, such as a bare name or a one-word topic, ask one short clarifying question. Otherwise, proceed.
 - Without connected tools, ask the user to paste what matters: recent emails, chat threads, documents, links, and especially notes from any recent meeting with the subject, which are often the richest source.
 - Organize findings by theme, not by source, and lead with what matters most for the user's next action. Resolve contradictions instead of listing both sides blindly.
-- Tie every claim to where it came from (the pasted email, the meeting notes, a link the user gave). Never invent a link or a fact.
+- Tie every claim to where it came from (the pasted email, the meeting notes, a link the user gave), placing any link inline on the words that name the source. Never invent a link or a fact.
 - End with a short "Open questions / gaps" list: what no material answered and where the answer probably lives.
 
 ## 1. When to use this
@@ -102,7 +102,7 @@ These apply whatever tools the user has. Apply them fully on deep searches and l
 
 Combine findings into one brief organized by theme, not by tool. Lead with what matters most for the user's next action. Resolve contradictions rather than listing both blindly, for example: "A news profile says they work at Organization A; their dated professional profile says they left in March. The profile is more recent and more likely correct."
 
-**Every sourced claim gets a clickable link** to its primary source. A quote without a link is not finished. The user must be able to click straight through to check.
+**Every sourced claim has a link somewhere in the brief.** A quote without a link is not finished. Write each link inline and in context, as a hyperlink on the words that name the source, for example: "The [program officer's email of 2 May](link) asks for a revised budget." Never paste a bare URL, and do not add a separate sources list at the end. The user should be able to click straight through from the claim to its evidence.
 
 ### Output template
 
@@ -116,7 +116,7 @@ Adapt the headings to the subject, but keep this spine:
 Three to five bullets with the most decision-relevant facts.
 
 ## What we know
-Who or what this is, current state, history. By theme, with inline evidence links.
+Who or what this is, current state, history. By theme, with inline hyperlinks to evidence.
 
 ## Relationship / timeline
 (For people and organizations) How the user's organization connects to them; chronology of contact.
@@ -124,9 +124,6 @@ Who or what this is, current state, history. By theme, with inline evidence link
 ## Open questions / gaps
 What no source answered, and which source would likely hold it.
 Any relevant source that was unavailable or empty.
-
-## Sources
-Key links, grouped, so the user can dig in.
 ```
 
 Match length to depth and keep prose blocks short. This is a document to scan and act on, not an essay.
@@ -150,9 +147,9 @@ The assistant classifies the subject as an organization with an existing relatio
 *Searched: email, team chat, notes, meeting records, web. Window: last 9 months. Effort: standard.*
 
 ## TL;DR
-- Program officer asked for a revised budget by month end ([email thread])
-- Yesterday's call: they favor multi-year grants over one-off awards ([meeting notes])
-- Their public site lists a new grants director; our notes still name the old one ([fund website], [notes page])
+- The [program officer's email of 2 May](link) asks for a revised budget by month end
+- On [yesterday's call](link), they said they favor multi-year grants over one-off awards
+- The [fund's website](link) lists a new grants director; our [partner notes page](link) still names the old one
 
 ## Open questions / gaps
 - Current decision timeline: not in any source; likely in the program officer's next email
@@ -165,7 +162,7 @@ The assistant classifies the subject as an organization with an existing relatio
 |---|---|
 | Effort | Tier matches the stakes and is stated in one line |
 | Coverage | Named sources searched; obviously decision-relevant sources, especially recent meeting records, added |
-| Evidence | Every sourced claim has a verified, clickable link; no invented URLs |
+| Evidence | Every sourced claim has a verified link, placed inline on the words naming the source; no bare URLs, no separate sources list, no invented URLs |
 | Conflicts | Contradictions resolved or clearly flagged |
 | Gaps | Unavailable or empty relevant sources reported; skipped sources not implied as checked |
 | Delivery | Brief is in the reply as the final block; a separate document only if the user asked for one |
@@ -180,6 +177,7 @@ The assistant classifies the subject as an organization with an existing relatio
 | Trusting stale profiles, notes, or memory | Cross-check against dated, current sources |
 | Reading only part of a document or record | Open hidden sections, tabs, and threads |
 | Covering a gap with a nearby source | Report the gap explicitly |
+| Pasting bare URLs or a sources list at the end | Put each link inline on the words that name the source |
 | Creating a document nobody asked for | Deliver in the reply; create a document only on request |
 
 ## Optional extras

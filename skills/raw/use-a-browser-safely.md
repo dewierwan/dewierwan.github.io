@@ -32,16 +32,16 @@ Use the first route that fits. Do not skip ahead.
 2. **Isolated headless browser.** The default for anything that does not need the user's identity: public forms, extraction, UI testing, screenshots. It never touches the user's own browser.
 3. **The user's signed-in visible browser.** Only when the task truly needs the user's live session. Never use it for convenience; anything that works headless stays headless.
 
-**Limits.** Do not use undocumented endpoints to get around access controls, terms, rate limits, or anti-abuse systems. In a signed-in session, do not change anything by calling internal endpoints from page scripts; requests missing the app's normal headers can end the session. Reading state the page already holds is lower risk.
+**Limits.** Do not use undocumented endpoints to get around access controls, terms, rate limits, or anti-abuse systems. In a signed-in session, do not change anything by calling internal endpoints from page scripts; such requests can end the session. Reading state the page already holds is lower risk.
 
-**When a person has to act.** If a site blocks headless automation during general research, accept it and move on; escalate to the signed-in browser only when the user explicitly asked for a task on that site. Human-verification checks, security keys, multi-factor prompts, account choosers, sign-in for a final booking or purchase, and consent screens belong to the user: leave the tab open, say exactly what to click, then re-verify and continue. If you can foresee several such steps, ask once for all of them. Never simulate, bypass, or weaken these checks.
+**When a person has to act.** If a site blocks headless automation during general research, accept it and move on; escalate to the signed-in browser only when the user explicitly asked for a task on that site. Human-verification checks, security keys, multi-factor prompts, account choosers, sign-in, and consent screens belong to the user: leave the tab open, say exactly what to click, then re-verify and continue. If you can foresee several such steps, ask once for all of them. Never simulate, bypass, or weaken these checks.
 
-Some pages refuse automation entirely, so every read or screenshot fails. Do not fight them. Check whether an API covers the step (some can update an existing item but not create one). Otherwise prepare everything the user needs, such as files, images, and the exact text for each field, hand over numbered steps, and verify the result afterward where you can.
+If a page refuses automation entirely, do not fight it. Check whether an API covers the step; otherwise prepare everything the user needs (files, images, the exact text for each field), hand over numbered steps, and verify the result afterward where you can.
 
 ## 3. Pick the automation style and workspace
 
 - **Step-by-step tool calls** suit one click, one snapshot, or short tasks.
-- **A standalone script** suits long text, many fields, heavy single-page apps, or repeatable runs. If an interactive tool crashes or reports that the page or browser closed, switch to a script rather than rescuing the session.
+- **A standalone script** suits long text, many fields, heavy single-page apps, or repeatable runs. If an interactive tool crashes or reports that the page closed, switch to a script rather than rescuing the session.
 
 Give each task its own uniquely named working folder (in the system's temporary area or a place the user chose) for scripts, field records, and screenshots. A shared folder lets parallel sessions overwrite each other, so you might verify the wrong run. Pass secrets through environment variables or a secrets store; never hard-code or log them.
 
@@ -53,12 +53,12 @@ When the task touches private messages, records, or information about other peop
 
 - **Announce, then act.** For example, "Taking over the browser to update the billing contact." If the user already authorized it for this task, do not ask again.
 - **Work in a fresh window or tab.** Do not reuse the user's tabs unless they point to one.
-- **Pick the profile directly.** Classify the task as personal, work, test, or production; if the user says which, that settles it. Generic "current browser" selectors often pick the last-used profile, and display labels can change after restarts, so use a stable identifier. Opening a profile's window does not route automation to it; if no connection appears, the connector in that profile may be signed out or asleep, so ask the user to wake it.
+- **Pick the profile directly.** Classify the task (personal, work, test, production); if the user says which, that settles it. Generic "current browser" selectors often pick the last-used profile, and display labels can change, so use a stable identifier.
 - **Do not restart or force-quit the browser** without explicit OK.
 
-**Account preflight gate.** Before any write, answer: Which account (read from a reliable account page)? Which environment? What exact item will change? If any answer is unclear, stop and ask. If your setup uses a marker that unlocks write actions, set it only after the check passes.
+**Account preflight gate.** Before any write, answer: Which account (read from a reliable account page)? Which environment? What exact item will change? If any answer is unclear, stop and ask. If your setup has a marker that unlocks write actions, set it only after the check passes.
 
-A "permission denied" page usually means the wrong account or a missing role; admin consoles often need a separate admin account, so ask the user to sign in with it. A permission error from your automation tool right after navigating is different: it is often transient while the page loads, so wait and retry.
+A "permission denied" page usually means the wrong account or a missing role; admin consoles often need a separate admin account, so ask the user to sign in with it. An error that appears right after navigating may only mean the page is still loading, so wait and retry once.
 
 ## 5. Set the task boundary and authorization
 
@@ -66,7 +66,7 @@ Before navigating deeply, identify the target, what will change, the minimum inf
 
 - **Reversible changes** the user asked for can proceed after normal verification.
 - **Irreversible or high-impact actions** need a pre-action record and confirmation unless the user already authorized that exact action: payments, bookings, sends, invitations, publishing, deletions, ownership or access changes, syncing data to another system, anything labeled "cannot be undone."
-- **Autosaving forms have no separate submit.** Each edit goes live as you type, so settle the values and any approval before you start.
+- **Autosaving forms have no separate submit.** Each edit can count as final the moment you make it. Settle the values and any approval before you start, and leave a field empty until you are sure of it.
 - **Credentials stay with the user.** Set up everything around a key or password, then give exact steps to enter it. Never move secrets by automated copy and paste; a copy button can appear to work while the clipboard holds older text.
 
 Honor an explicit request to review first. If authorization is missing, prepare and verify the full result, show it, and ask only for the final action.
@@ -103,8 +103,8 @@ Watch for:
 | File upload | Confirm file, destination, and privacy first | Upload may start at once. |
 
 - **Do re-rendering choices first,** then text. Blur after every rich-text field, and re-check tricky widgets after later edits.
-- **If a click does nothing or lands wrong,** wait for the layout to settle, locate the target again, click by position if needed, and confirm from a screenshot.
-- **Screens without an API** (builders, admin settings) often ignore simple automation. Use real clicks and typing, change one setting at a time, and confirm each in a preview.
+- **If a click does nothing or lands wrong,** wait for the layout to settle, locate the target again, and confirm from a screenshot.
+- **Screens without an API** (builders, admin settings) often ignore simple automation. Use real clicks and typing, change one setting at a time, and confirm each.
 
 ## 8. Verify after every fill
 
@@ -153,14 +153,14 @@ A click is not proof. Look for a success message, a reference number, a new reco
 | Screenshot does not match what you did | Shared folder overwritten | Use a unique working folder; re-run the check. |
 | Wrong account or permission denied | Last-used profile or missing role | Select the profile directly; ask the user to sign in; re-verify. |
 | Tab freezes; clicks and screenshots time out | Native dialog or blocking pop-up | Reload; read the message safely or ask the user. |
-| Clicks do nothing or reads come back empty or cut off | Panel ignores input; layout shifted; output truncated | Wait, re-locate, click by position, read in slices, undo stray changes. |
-| A search filter lists providers or slots that turn out not to be free at the requested time | Listing filters are approximate, and a packaged or fixed-price flow may offer narrower availability than the general one | Browse as a guest where allowed; check each candidate's own calendar for the exact date and time; compare flows; leave sign-in and the final booking to the user. |
+| Clicks do nothing or reads come back empty or cut off | Panel ignores input; layout shifted; output truncated | Wait, re-locate, read in slices, undo stray changes. |
+| Search results promise something the item's own page does not confirm | Listing filters are approximate | Check each candidate's own detail or calendar before acting. |
 
 ## 12. Report and keep the procedure current
 
 Summarize the outcome in one or two sentences, point to the screenshot and after-state record, and do not paste every field value inline. Delete sensitive temporary files when done.
 
-When a run reveals a reusable lesson, record it in your local copy without waiting to be asked. Prefer one table row (symptom, cause, fix) over new prose. A long recipe for one site goes in a separate reference note with a one-row pointer in the failure table; dated incident notes go in a log that normal runs do not read. Never record credentials or private data, and merge older entries into general principles as the document grows.
+When a run reveals a reusable lesson, record it in your local copy without waiting to be asked. Prefer one table row (symptom, cause, fix) over new prose. Keep long recipes for one site in a separate reference note with a one-row pointer here, and keep dated incident notes in a log that normal runs do not read. Never record credentials or private data, and merge older entries into general principles as the document grows.
 
 ## Final audit checklist
 
@@ -175,14 +175,14 @@ When a run reveals a reusable lesson, record it in your local copy without waiti
 
 ## Optional extras
 
-**Clipboard and files.** Headless browsers often lack clipboard access, so embed values directly. Some upload buttons create a file input only on click and open the system picker, which automation cannot drive; a small page-script override can attach that input to the page instead. If downloads are blocked, use the service's own save-to-storage option or ask the user to download. Read only the files the task needs.
+**Clipboard and files.** Headless browsers often lack clipboard access, so embed values directly. Some upload buttons create a file input only on click and open the system picker, which automation cannot drive; a small page-script override can attach that input to the page instead. If downloads are blocked, use the service's own save-to-storage option or ask the user. Read only the files the task needs.
 
-**Testing pasted content.** A simulated paste event skips the browser's own paste handling and can mislead. For a faithful test, put the content on the system clipboard in rich and plain-text forms, focus the editor, and press the paste shortcut through real keyboard input. This overwrites the user's clipboard, so say so first. Read the result from the editor's own content or the service's API.
+**Faithful paste tests.** A simulated paste event can behave differently from a real one. For an accurate test, place the content on the system clipboard, focus the editor, and press the paste shortcut through real keyboard input. Say first that this overwrites the user's clipboard.
 
-**Native confirmation dialogs.** After reloading a frozen tab, override the page's confirm function to record the message and decline, click once, and read it. If it is the intended change, override again to accept only that exact message. Reapply after any reload.
+**Native confirmation dialogs.** If a dialog freezes the tab, reload, override the page's confirm function to record the message and decline, then read it. Accept only the exact intended message, and reapply after any reload.
 
-**Batches of independent items.** Use separate tabs, each with the full brief, at a modest concurrency you choose. Background tabs may not render fully, so bring an item into view before capturing it. When you must check many candidates (for example, each provider's calendar for one time slot), a script that runs in the background and loops through them, recording each result, is faster than clicking through one by one; keep the request rate polite.
+**Batches.** Use separate tabs, each with the full brief, at a modest concurrency you choose. Background tabs may not render fully, so bring an item into view before capturing it. For checking many candidates, a background script that loops and records each result beats clicking one by one; keep the request rate polite.
 
-**Apps without a full API.** Some apps expose editor or configuration state to page scripts; reading it is often faster than driving slow views, but expect it to change between versions. Validate edits first and apply them in one step so a failure cannot leave a half-edited autosaved draft. If output is truncated, keep results in a page variable and read them in slices. For slow log dashboards, repeat the page's own read-only query over small time windows (size is adjustable) and add up the results.
+**Apps without a full API.** Some apps expose editor or configuration state to page scripts; reading it can be faster than driving slow views, but it changes between versions. Validate edits first and apply them in one step so a failure cannot leave a half-edited autosaved draft. For slow log dashboards, repeat the page's own read-only query over small time windows (size is adjustable) and add up the results.
 
-**Admin and schema changes.** Before deleting a field or schema item, check dependencies and automations that use it. To share data with another system, get a plain yes and expose only the minimum fields. When a save needs a security key or password, prepare the change, describe exactly what will happen, leave that step to the user, and verify the saved state afterward.
+**Admin and schema changes.** Before deleting a field or schema item, check what depends on it. When a save needs a security key or password, prepare the change, describe exactly what will happen, leave that step to the user, and verify the saved state afterward.
