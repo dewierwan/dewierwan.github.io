@@ -16,7 +16,7 @@
     font-family: 'Atkinson Hyperlegible Next';
     font-style: normal;
     font-weight: 400 700;
-    font-display: swap;
+    font-display: block; /* never show text in a stand-in font: it waits a moment for the real one */
     src: url('/fonts/atkinson-hyperlegible-next-latin.woff2') format('woff2');
   }
   @font-face {
@@ -24,22 +24,42 @@
     font-style: normal;
     font-weight: 400 700;
     font-stretch: 100%;
-    font-display: swap;
+    font-display: block;
     src: url('/fonts/bricolage-grotesque-latin.woff2') format('woff2');
   }
+  /* Stand-ins used only to lay the page out while the real fonts download (the text is hidden until then).
+     They are Arial resized to the same width and height as the real fonts, so nothing moves when those arrive. */
+  @font-face {
+    font-family: 'Atkinson Fallback';
+    src: local('Arial');
+    size-adjust: 99.47%;
+    ascent-override: 98.52%;
+    descent-override: 32.17%;
+    line-gap-override: 0%;
+  }
+  @font-face {
+    font-family: 'Bricolage Fallback';
+    font-weight: 400 700;
+    src: local('Arial Bold'), local('Arial-BoldMT'), local('Arial');
+    size-adjust: 100.47%;
+    ascent-override: 92.57%;
+    descent-override: 26.87%;
+    line-gap-override: 0%;
+  }
+
   :root {
-    --bg: #fffdf8;
-    --text: #26201a;
+    --bg: #ffffff;
+    --text: #111111;
     --muted: var(--text); /* no grey text in light mode; dark mode still uses a softer shade */
-    --accent: #b4552d;
+    --accent: #111111; /* black and white only: links are the text color, marked by their underline */
     --heading: var(--text);
   }
   @media (prefers-color-scheme: dark) {
     :root {
-      --bg: #1d1a16;
-      --text: #ece5da;
-      --muted: #9c9184;
-      --accent: #e08d5f;
+      --bg: #121212;
+      --text: #ededed;
+      --muted: #a3a3a3;
+      --accent: #ededed;
       --heading: var(--muted);
     }
   }
@@ -53,7 +73,7 @@
     margin: 0;
     background: var(--bg);
     color: var(--text);
-    font-family: 'Atkinson Hyperlegible Next', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: 'Atkinson Hyperlegible Next', 'Atkinson Fallback', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     font-size: 1.0625rem;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
@@ -78,7 +98,7 @@
   }
   h1,
   h2 {
-    font-family: 'Bricolage Grotesque', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: 'Bricolage Grotesque', 'Bricolage Fallback', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   }
   h1 {
     font-size: 2rem;
