@@ -125,7 +125,7 @@
   <p>P vs NP is a question about puzzles whose answers are quick to check. It asks: if an answer is quick to check, is it also quick to find?</p>
   <p>Nobody knows. The question <a href="https://www.claymath.org/millennium/p-vs-np/">has been open since 1971</a>, and there is <a href="https://www.claymath.org/millennium-problems/">a million-dollar prize</a> for settling it.</p>
   <p>Think of a Sudoku. Checking a finished grid takes a minute or two: look along each row, each column and each box. Solving one can take an hour.</p>
-  <p>Passwords have the same shape. Checking a guess takes an instant. Finding the right one without knowing it means trying one possibility after another. Online banking, private messages and software updates all rely on that gap between checking and finding.</p>
+  <p>Passwords have the same shape. Checking a guess takes an instant. Finding the correct one without knowing it means trying one possibility after another. Online banking, private messages and software updates all rely on that gap between checking and finding.</p>
   <p>There might be a clever method, not yet discovered, that finds answers almost as fast as checking them.</p>
 
   <!-- ============ 1 ============ -->
@@ -266,7 +266,7 @@
   <p>One possibility is that every one of them has a shortcut waiting to be found. Then every quick-check puzzle is quick-solve, the two names describe exactly the same puzzles, and P = NP.</p>
   <p>The other possibility is that some of them have no shortcut at all. They are quick-check and slow-solve, whatever method you use. Then P ≠ NP, which reads “P is not equal to NP”.</p>
   <div class="fig" id="fig-two">
-    <p class="fig-title">Which picture is right? Nobody knows.</p>
+    <p class="fig-title">Which picture is correct? Nobody knows.</p>
     <div class="two">
       <figure>
         <div class="ring solve" role="img" aria-label="One circle. Quick-check and quick-solve are the same puzzles.">
@@ -326,8 +326,8 @@
   <p>P is the group of puzzles that can be <em>solved</em> in polynomial time. Those are the quick-solve puzzles.</p>
 
   <p><strong>NP stands for “nondeterministic polynomial time”.</strong> It is the precise name for quick-check: the group of puzzles where an answer can be <em>checked</em> in polynomial time. It does not stand for “not P”, although that is a common way to misread it.</p>
-  <p>The word “nondeterministic” comes from how the group was first defined. An ordinary computer is deterministic: it follows its instructions one step at a time and never guesses. Researchers imagined a nondeterministic computer, one that is allowed to guess and always guesses right. Call it the lucky computer.</p>
-  <p>Give the lucky computer a tile puzzle. For each tile it guesses “take it” or “leave it”, and every guess is right. Then it adds up the tiles it took, to confirm that they hit the target. It did no searching, so its only real work was the adding up. That is the same work as checking an answer.</p>
+  <p>The word “nondeterministic” comes from how the group was first defined. An ordinary computer is deterministic: it follows its instructions one step at a time and never guesses. Researchers imagined a nondeterministic computer, one that is allowed to guess and always guesses correctly. Call it the lucky computer.</p>
+  <p>Give the lucky computer a tile puzzle. For each tile it guesses “take it” or “leave it”, and every guess is correct. Then it adds up the tiles it took, to confirm that they hit the target. It did no searching, so its only real work was the adding up. That is the same work as checking an answer.</p>
   <p>So a puzzle that the lucky computer can solve in polynomial time is a puzzle whose answers can be checked in polynomial time, and the other way round.</p>
   <p>Nobody can build a lucky computer. It was a way of defining the group, and it lives on only in the name.</p>
 
@@ -391,7 +391,7 @@
       const b = el('button', { type: 'button', class: 'btn wide', 'aria-pressed': 'false', onclick: () => {
         b.setAttribute('aria-pressed', 'true');
         slot.className = 'verdict ' + (o.right ? 'yes' : 'no'); slot.textContent = o.right ? '✓' : '✕';
-        if (!why.textContent) why.innerHTML = '<strong>' + (o.right ? 'Right.' : 'Not quite.') + '</strong> ' + (typeof o.why === 'function' ? o.why() : o.why);
+        if (!why.textContent) why.innerHTML = '<strong>' + (o.right ? 'Correct.' : 'Not quite.') + '</strong> ' + (typeof o.why === 'function' ? o.why() : o.why);
         if (o.right && onRight) onRight();
       } }, [el('span', null, o.label), slot]);
       return el('div', { class: 'choice' }, [b, why]);
@@ -496,7 +496,7 @@
       if (chosen.has(n)) chosen.delete(n); else chosen.add(n);
       if (chosen.size === KEYS[phase].length) {
         const total = sum(), fits = total === 1400, who = WHO[phase];
-        $('c-out').innerHTML = mark(fits, fmtInt(total) + '.') + ' ' + who + (fits ? ' was right' : ' was wrong') +
+        $('c-out').innerHTML = mark(fits, fmtInt(total) + '.') + ' ' + who + (fits ? ' was correct' : ' was wrong') +
           (phase === 'b' ? '. You checked both without any searching.' : fits ? ': those tiles are an answer.' : ': those tiles are not an answer.');
         phase = phase + '-done';
       }
