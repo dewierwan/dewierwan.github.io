@@ -235,7 +235,7 @@
 
   <!-- ============ 5 ============ -->
   <h2>5. Two names: quick-check and quick-solve</h2>
-  <p>A job is quick if its work grows the way checking did in step 2: steadily with each extra tile, and never doubling.</p>
+  <p>A job is quick if its work grows the way checking did in step 2: steadily with each extra tile, and never multiplying.</p>
   <p>A puzzle is <strong>quick-check</strong> if, when someone hands you an answer, checking it is quick. The name says nothing about how hard the answer was to find. The official name for these puzzles is <strong>NP</strong>.</p>
   <p>A puzzle is <strong>quick-solve</strong> if <em>finding</em> an answer is quick too, because it has a shortcut. The official name for these is <strong>P</strong>. Anything quick-solve is quick-check too, so P sits inside NP.</p>
   <p>Not every puzzle is even quick-check. Take chess, played on a board of any size. Someone tells you “this is the best possible move”. There is nothing to add up. As far as anyone knows, the only way to be sure is to play out every reply.</p>
@@ -325,7 +325,7 @@
 
   <p>P is the group of puzzles that can be <em>solved</em> in polynomial time. Those are the quick-solve puzzles.</p>
 
-  <p><strong>NP stands for “nondeterministic polynomial time”.</strong> It is the precise name for quick-check: the group of puzzles where an answer can be <em>checked</em> in polynomial time. It does not stand for “not P”, although that is the most common way to misread it.</p>
+  <p><strong>NP stands for “nondeterministic polynomial time”.</strong> It is the precise name for quick-check: the group of puzzles where an answer can be <em>checked</em> in polynomial time. It does not stand for “not P”, although that is a common way to misread it.</p>
   <p>The word “nondeterministic” comes from how the group was first defined. An ordinary computer is deterministic: it follows its instructions one step at a time and never guesses. Researchers imagined a nondeterministic computer, one that is allowed to guess and always guesses right. Call it the lucky computer.</p>
   <p>Give the lucky computer a tile puzzle. For each tile it guesses “take it” or “leave it”, and every guess is right. Then it adds up the tiles it took, to confirm that they hit the target. It did no searching, so its only real work was the adding up. That is the same work as checking an answer.</p>
   <p>So a puzzle that the lucky computer can solve in polynomial time is a puzzle whose answers can be checked in polynomial time, and the other way round.</p>
@@ -337,11 +337,11 @@
 
   <h2>What this page left out</h2>
   <ul>
-    <li><strong>A shortcut can still be slow.</strong> “Quick” on this page means that the work never doubles with each extra tile. A method can pass that test and still be far too slow to use. So a proof that P = NP would not automatically break anything. That would depend on how fast the shortcut turned out to be.</li>
+    <li><strong>A shortcut can still be slow.</strong> “Quick” on this page means that an extra tile never multiplies the work. A method can pass that test and still be far too slow to use. So a proof that P = NP would not automatically break anything. That would depend on how fast the shortcut turned out to be.</li>
     <li><strong>Small numbers are easier.</strong> For tiles with any numbers, there is a known quick method when the target is small: it keeps a list of every total you can reach. The hard cases have long numbers on the tiles.</li>
-    <li><strong>The hardest of these puzzles are tied together.</strong> Thousands of quick-check puzzles, tiles with any numbers among them, share a special property: every quick-check puzzle can be turned into any one of them. So if one of them has a shortcut, every quick-check puzzle has one. They are called NP-complete.</li>
+    <li><strong>The hardest of these puzzles are tied together.</strong> Thousands of quick-check puzzles, tiles with any numbers among them, share a special property: every quick-check puzzle can be quickly turned into any one of them. So if one of them has a shortcut, every quick-check puzzle has one. They are called NP-complete.</li>
     <li><strong>How passwords are protected in practice.</strong> The password example is simplified. A website checks your guesses for you, and can lock you out after a few. The puzzle on this page is the one faced by someone who has stolen the site's scrambled copy of the password and can test guesses on their own machine.</li>
-    <li><strong>Quantum computers.</strong> A large enough quantum computer could <a href="https://en.wikipedia.org/wiki/Shor%27s_algorithm">quickly solve the particular puzzles</a> that protect much of today's banking and messaging, whatever the answer to P vs NP.</li>
+    <li><strong>Quantum computers.</strong> A large enough quantum computer could <a href="https://en.wikipedia.org/wiki/Shor%27s_algorithm">quickly solve the particular puzzles</a> that protect much of today's banking and messaging, whatever the answer to P vs NP. By 2025, web browsers had <a href="https://blog.cloudflare.com/pq-2025">started switching to different puzzles</a>, which are believed to be safe from quantum computers.</li>
   </ul>
 
   <footer>
@@ -589,7 +589,7 @@
     const KINDS = ['Quick-check and quick-solve', 'Quick-check, and nobody knows whether it is quick-solve', 'Not known to be quick-check'];
     const ITEMS = [
       { text: 'Put 1,000 names in alphabetical order.', kind: 0, why: 'To check, read down the list and see that each name comes after the one before. To solve, there are well-known quick methods, which is why your phone sorts your contacts in an instant.' },
-      { text: 'Finish a giant Sudoku, 100 squares by 100, that starts with some of its squares filled in.', kind: 1, why: 'Checking a finished grid is quick: look along each row, column and box. For finishing grids this big, nobody has found a shortcut.' },
+      { text: 'Finish a giant Sudoku, 100 squares by 100, that starts with some of its squares filled in.', kind: 1, why: 'Checking a finished grid is quick: look along each row, column and box. For finishing one, nobody has found a shortcut that works at every size.' },
       { text: 'A courier has a long list of parcels to deliver. Find the shortest possible route.', kind: 2, why: 'If someone hands you a route and says no shorter one exists, you can measure their route, but that doesn\'t show there is nothing shorter. Nobody knows a quick way to be sure of that. Ask instead for any route under 300 miles, and the puzzle becomes quick-check: measure the route you are handed.' },
       { text: 'A school has a list of lessons that must all take place this week. Make a timetable where no teacher or class is in two places at once, and every teacher only teaches at times they are free.', kind: 1, why: 'Checking a finished timetable is quick: look for missing lessons, for clashes, and for teachers placed at times they are not free. For making one, nobody has found a shortcut that always works.' },
     ];
@@ -604,7 +604,7 @@
   })();
 
   ask('q5', 'The 1-2-4-8 tiles are quick-solve, so they are in P. Are they in NP as well?', [
-    { label: 'No. NP means “not P”', why: 'This is the most common mix-up. The N stands for “nondeterministic”. NP means quick-check, and an answer to the 1-2-4-8 tiles is quick to check: add up the tiles. So they are in NP as well as in P.' },
+    { label: 'No. NP means “not P”', why: 'This is a common mix-up. The N stands for “nondeterministic”. NP means quick-check, and an answer to the 1-2-4-8 tiles is quick to check: add up the tiles. So they are in NP as well as in P.' },
     { label: 'Yes. Their answers are quick to check, and that is all NP asks', right: true, why: 'NP means quick-check. Every quick-solve puzzle is also quick-check, so everything in P is in NP too.' },
     { label: 'Nobody knows', why: 'This one is known. NP means quick-check, and an answer to the 1-2-4-8 tiles is quick to check: add up the tiles. What nobody knows is whether tiles with any numbers are quick-solve.' },
   ]);
