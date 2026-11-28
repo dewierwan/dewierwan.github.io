@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>P vs NP — Dewi Erwan</title>
+<meta name="description" content="What the P vs NP question asks and why it matters, built up from one small puzzle you can play with.">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/fonts/atkinson-hyperlegible-next-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/explainer.css">
+<style>
+  footer { margin-top: 3rem; }
+  footer a { display: inline-block; padding: 0.7rem 0; }
+  #letters, #names-pointer, #fig-check { scroll-margin-top: 1.25rem; }
+
+  /* ONE RULE FOR THE WHOLE PAGE: anything with a raised bottom edge can be tapped. Nothing else can. */
+  .btn, .chip { box-shadow: 0 4px 0 var(--text); transition: transform 0.05s ease, box-shadow 0.05s ease; margin-bottom: 4px; }
+  .btn:active, .chip:active { transform: translateY(4px); box-shadow: 0 0 0 var(--text); }
+  .btn[aria-pressed="true"], .chip[aria-pressed="true"] { transform: translateY(4px); box-shadow: 0 0 0 var(--text); }   /* pressed in */
+  .btn:disabled, .chip:disabled { box-shadow: none; transform: none; }
+  .chip:disabled { cursor: default; opacity: 1; border: 1.5px solid var(--hairline); color: color-mix(in srgb, var(--text) 45%, var(--bg)); background: var(--bg); }
+  .chip[aria-pressed="true"]:disabled { background: var(--text); color: var(--bg); border-color: var(--text); }
+
+  .out { min-height: 3.3em; margin: 0.875rem 0 0; }
+  /* A message that sits above the controls it answers: its height is kept, so the controls never move. */
+  .out.say { margin: 0.5rem 0 0.25rem; }
+  .out .status, .ask-fb .status { white-space: normal; display: inline; }
+  .out .mark, .ask-fb .mark { vertical-align: -0.2em; margin-right: 0.35em; }
+  .actions { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; margin-top: 0.75rem; }
+
+  /* Tiles you tap */
+  .chips { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.5rem; margin: 0.75rem 0; }
+  .chips.wide { grid-template-columns: repeat(6, 1fr); }
+  .chips.eight { grid-template-columns: repeat(8, 1fr); }
+  .chips.ten { grid-template-columns: repeat(10, 1fr); }
+  .chips .chip { min-width: 0; width: 100%; padding-left: 0; padding-right: 0; }
+  #c-chips .chip, #c-chips .chip:disabled { border-width: 3px; }
+  .chip.hint { border-style: dashed; }
+  .chip.hint[aria-pressed="true"] { border-style: solid; }
+  .task { margin: 0 0 0.25rem; display: grid; }
+  .task > span { grid-area: 1 / 1; }
+  .task > span.off { visibility: hidden; }
+
+  /* The loud running total */
+  .meter { margin: 0.5rem 0 0.25rem; }
+  .meter-nums { display: grid; grid-template-columns: 1fr 1fr; gap: 0.25rem 1rem; }
+  .meter-item { display: grid; }
+  .meter-item .big-num { font-size: 2rem; white-space: nowrap; }
+  .meter-item .big-num small { font-family: var(--font-body); font-size: 1rem; font-weight: 400; }
+  .bar { height: 14px; border: 1.5px solid var(--text); border-radius: 999px; overflow: hidden; margin-top: 0.4rem; }
+  .bar span { display: block; height: 100%; width: 0; background: var(--text); transition: width 0.2s ease; }
+
+  /* The two possibilities, side by side */
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .two figure { margin: 0; }
+  .two svg { width: 100%; max-width: 300px; height: auto; display: block; margin: 0 auto; }
+  .two text { font-family: var(--font-body); font-size: 15px; fill: var(--text); }
+  .two circle { stroke: var(--text); stroke-width: 2.5; }
+  .two .check { fill: var(--bg); }
+  .two .solve { fill: var(--wash-2); }
+  .two figcaption { margin-top: 0.4rem; }
+  /* Combinations drawn as trays of small tiles. They are flat, with no raised edge, because nothing here can be tapped. */
+  .combo-label { margin: 0 0 0.3rem; }
+  .combos { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.4rem; margin: 0 0 1rem; }
+  .combos:last-child { margin-bottom: 0; }
+  .combos + .combos { margin-top: -0.6rem; }
+  .combo { display: flex; align-items: center; justify-content: center; gap: 4px; min-height: 2.75rem; padding: 0.35rem; border-radius: 8px; background: var(--wash-2); font-size: 0.875rem; }
+  .combo i { font-style: normal; display: grid; place-items: center; width: 1.6rem; height: 1.6rem; border: 1.5px solid var(--text); border-radius: 5px; background: var(--bg); font-family: var(--font-head); font-weight: 600; font-size: 0.9375rem; }
+  #ch { width: 100%; height: auto; display: block; margin: 0.25rem 0; }
+  #ch text { font-family: var(--font-body); font-size: 15px; fill: var(--text); }
+  #ch.narrow text { font-size: 13px; }
+  #ch .axis { stroke: var(--text); stroke-width: 1.5; fill: none; }
+  #ch .solve { stroke: var(--text); stroke-width: 3.5; fill: none; stroke-linejoin: round; }
+  #ch .check { stroke: var(--text); stroke-width: 2.5; fill: none; stroke-dasharray: 7 6; }
+
+  /* Questions with choices */
+  .ask-q { font-weight: 600; margin: 0 0 0.6rem; }
+  .ask-fb { margin: 0; }
+  .ask-fb:not(:empty) { margin: 0.6rem 0 0.4rem; }
+  .btn.wide { width: 100%; justify-content: space-between; gap: 0.75rem; text-align: left; border-radius: var(--radius-sm); }
+  /* The tick or cross on a chosen answer. Its space is kept from the start. Shape and fill differ, so it reads without color. */
+  .verdict { flex: none; width: 1.5em; height: 1.5em; display: inline-grid; place-items: center; border-radius: 5px; font-weight: 700; line-height: 1; }
+  .verdict.yes { border: 2px solid var(--bg); color: var(--bg); }
+  .verdict.no { background: var(--bg); color: var(--text); }
+  /* One rule: a box holds a figure (a puzzle, the chart, a picture or a table). A question never sits in a box. */
+  .fig.bare { border: 0; padding: 0; background: none; }
+  .sort-item { margin: 0 0 2rem; }
+  .sort-item:last-child { margin-bottom: 0; }
+  .sort-opts { display: grid; gap: 0.5rem; }
+  .btn { min-height: 48px; }
+  .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+
+  .fig table { width: 100%; border-collapse: collapse; font-size: 0.9375rem; margin-top: 1rem; }
+  .fig th, .fig td { text-align: left; vertical-align: top; padding: 0.5rem 0.6rem 0.5rem 0; border-top: 1.5px solid var(--hairline); }
+  .fig thead th { border-top: 0; font-weight: 700; line-height: 1.25; padding-top: 0; }
+
+  /* Fold-out questions: the whole question line is a comfortable tap target */
+  .recall details { padding: 0.2rem 1rem; border-color: var(--text); box-shadow: 0 4px 0 var(--text); margin-bottom: calc(0.75rem + 4px); }
+  .recall details[open] { box-shadow: none; }
+  .recall details > summary { line-height: 1.4; padding: 0.65rem 0; min-height: 0; }
+  .recall details[open] { padding-bottom: 0.75rem; }
+  .recall details[open] > summary { margin-bottom: 0.1rem; }
+  @media (prefers-reduced-motion: reduce) { .bar span { transition: none; } }
+  @media (max-width: 340px) { .chips { gap: 6px; } .chips .chip { font-size: 1rem; } }
+  @media (max-width: 640px) {
+    .two { grid-template-columns: 1fr; }
+    .combos { grid-template-columns: repeat(2, 1fr); }
+    .out.say { min-height: 4.8em; }
+    .meter-item .big-num { font-size: 1.75rem; }
+    .chips.ten, .chips.eight { grid-template-columns: repeat(5, 1fr); }
+    .chips.wide { grid-template-columns: repeat(4, 1fr); }
+    .fig table { font-size: 0.875rem; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1>P vs NP</h1>
+  <p>P vs NP is a question about puzzles whose answers are quick to check. It asks: if an answer is quick to check, is it also quick to find?</p>
+  <p>Nobody knows. The question <a href="https://www.claymath.org/millennium/p-vs-np/">has been open since 1971</a>, and there is <a href="https://www.claymath.org/millennium-problems/">a million-dollar prize</a> for settling it.</p>
+  <p>Think of a Sudoku. Checking a finished grid takes a minute or two: look along each row, each column and each box. Solving one can take an hour.</p>
+  <p>Passwords have the same shape. Checking a guess takes an instant. Finding the right one without knowing it means trying one possibility after another. Online banking, private messages and software updates all rely on that gap between checking and finding.</p>
+  <p>There might be a clever method, not yet discovered, that finds answers almost as fast as checking them.</p>
+
+  <!-- ============ 1 ============ -->
+  <h2>1. One puzzle, two jobs</h2>
+  <p>You get some <strong>tiles</strong> with numbers on them, and a <strong>target</strong>. An <strong>answer</strong> is a set of tiles that adds up to exactly the target.</p>
+  <p>There are two different jobs you can do with a puzzle like this. <strong>Solving</strong> means working out which tiles to pick. <strong>Checking</strong> means someone hands you some tiles and says “these work”, and you add them up to see.</p>
+  <p>Try solving first. Tap a tile to pick it, and tap it again to put it back. The page keeps the total for you, so there is no arithmetic to do: your only job is choosing. On this page, anything with a raised edge can be tapped.</p>
+
+  <div class="fig" id="fig-solve">
+    <p class="fig-title">Solve it: pick tiles that add up to exactly 200</p>
+    <div id="solve"></div>
+  </div>
+
+  <p>Now try checking. This puzzle is bigger: 12 tiles, and a target of 1,400. Two people each say they have an answer. Either of them could be wrong. Tap their tiles and the page adds them up, exactly as it did while you were solving.</p>
+
+  <div class="fig" id="fig-check">
+    <p class="fig-title">Check it: do these tiles add up to exactly 1,400?</p>
+    <p class="task" id="c-task"></p>
+    <div class="meter"><div class="meter-nums"><div class="meter-item"><span>Total so far</span><span class="big-num" id="c-sum">0</span></div><div class="meter-item"><span>Target</span><span class="big-num">1,400</span></div></div></div>
+    <p class="out say" id="c-out" aria-live="polite"></p>
+    <div class="chips wide" id="c-chips" role="group" aria-label="The 12 tiles"></div>
+    <div class="actions">
+      <button type="button" class="btn" id="c-next" disabled>Now check the second person</button>
+      <button type="button" class="btn" id="c-again">Start again</button>
+    </div>
+  </div>
+
+  <p>Notice the difference between the two jobs. Solving took trial and error. Checking took five taps, and you didn't have to trust anyone.</p>
+
+  <!-- ============ 2 ============ -->
+  <h2>2. A bigger puzzle is much slower to solve and barely slower to check</h2>
+  <p>From here on, a “bigger” puzzle means one with <strong>more tiles to choose from</strong>. The target can be anything.</p>
+  <p>Checking stays easy as the puzzle grows. With 90 tiles, the most you would ever do is add up 90 numbers.</p>
+  <p>Solving by trial and error is different. Call each possible choice of tiles a <strong>combination</strong>. Every tile is either in the combination or out of it. With two tiles, A and B, there are four possible combinations.</p>
+  <p>Add a third tile, C. Each of those four combinations can stay as it is, or have C added. That makes eight.</p>
+
+  <div class="fig" id="fig-combos">
+    <p class="combo-label"><strong>Two tiles:</strong> four combinations</p>
+    <div class="combos" role="img" aria-label="The four combinations of tiles A and B: no tiles, A, B, and A with B.">
+      <span class="combo none">no tiles</span><span class="combo"><i>A</i></span><span class="combo"><i>B</i></span><span class="combo"><i>A</i><i>B</i></span>
+    </div>
+    <p class="combo-label"><strong>Three tiles:</strong> the same four, then the same four with C added</p>
+    <div class="combos" role="img" aria-label="The four combinations again: no tiles, A, B, and A with B.">
+      <span class="combo none">no tiles</span><span class="combo"><i>A</i></span><span class="combo"><i>B</i></span><span class="combo"><i>A</i><i>B</i></span>
+    </div>
+    <div class="combos" role="img" aria-label="The same four with C added: C, A with C, B with C, and A with B with C.">
+      <span class="combo"><i>C</i></span><span class="combo"><i>A</i><i>C</i></span><span class="combo"><i>B</i><i>C</i></span><span class="combo"><i>A</i><i>B</i><i>C</i></span>
+    </div>
+  </div>
+
+  <div class="fig bare" id="fig-g1"><div id="g-q1"></div></div>
+
+  <div class="fig" id="fig-grow">
+      <p class="fig-title">Add tiles, and watch the two jobs grow</p>
+      <svg id="ch" viewBox="0 0 640 300" role="img" aria-label="A chart of the work needed as tiles are added. The line for checking rises by one for each tile. The line for trying every combination doubles with each tile."></svg>
+      <p class="out say" id="ch-read" aria-live="polite"></p>
+      <div class="actions">
+        <button type="button" class="btn" id="ch-less">Remove a tile</button>
+        <button type="button" class="btn" id="ch-more">Add a tile</button>
+        <button type="button" class="btn" id="ch-more5">Add five</button>
+      </div>
+  </div>
+
+  <div class="fig bare" id="fig-g2"><div id="g-q2"></div></div>
+
+  <div class="fig" id="fig-gtable" hidden>
+    <table id="g-table" style="margin-top:0">
+      <thead><tr><th scope="col">Tiles</th><th scope="col">Trying every combination, at a billion a second</th><th scope="col">Checking one answer</th></tr></thead>
+      <tbody>
+        <tr><td>10</td><td>about a thousand combinations: <strong>instant</strong></td><td>10 numbers to add</td></tr>
+        <tr><td>20</td><td>about a million: <strong>a thousandth of a second</strong></td><td>20 numbers to add</td></tr>
+        <tr><td>30</td><td>about a billion: <strong>1 second</strong></td><td>30 numbers to add</td></tr>
+        <tr><td>60</td><td>about a billion billion: <strong>37 years</strong></td><td>60 numbers to add</td></tr>
+        <tr><td>90</td><td>about a billion billion billion: <strong>3 times the age of the universe</strong></td><td>90 numbers to add</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>Checking stays manageable at any size. Trying every combination is hopeless beyond small puzzles, however fast the computer.</p>
+
+  <!-- ============ 3 ============ -->
+  <h2>3. Some versions of the puzzle can be solved without trial and error</h2>
+  <p>Trying every combination is the least clever way to solve the puzzle. Sometimes there is a much better way.</p>
+  <p>The tiles are now 1, 2, 4, 8 and so on: each one is twice the one before. Call them the <strong>1-2-4-8 tiles</strong>. The target is still 200.</p>
+  <p>The method is called <strong>biggest first</strong>. Look for the biggest tile that still fits in what is left to make, and take it. Repeat until nothing is left to make.</p>
+
+  <div class="fig" id="fig-double">
+    <p class="fig-title">Solve it with “biggest first”: tap the biggest tile that fits</p>
+    <div id="double"></div>
+  </div>
+
+  <p>Notice that you went along the row once and never had to put a tile back. It works because each tile is bigger than all the smaller tiles put together: 1 + 2 + 4 + 8 + 16 + 32 + 64 is only 127, which is less than 128. So the biggest tile that fits has to go in, because the smaller ones could never make up the difference.</p>
+
+  <div class="fig bare" id="fig-dq"><div id="d-q"></div></div>
+
+  <!-- ============ 4 ============ -->
+  <h2>4. The same method fails on other tiles</h2>
+  <p>Now go back to the tiles from the first puzzle, lined up from biggest to smallest. Same target, same method: tap the biggest tile that fits, and keep going.</p>
+
+  <div class="fig" id="fig-free">
+    <p class="fig-title">Try “biggest first” again: make 200 from the original tiles</p>
+    <div id="free"></div>
+  </div>
+
+  <p>Notice what went wrong. With these tiles, taking one that fits can be a mistake, and nothing tells you so until later. So you put it back and try something else, again and again. That putting back is what trial and error is, and it is why the work doubles with every extra tile.</p>
+  <p>A <strong>shortcut</strong> is a method like “biggest first” on the 1-2-4-8 tiles: it solves the puzzle without all the putting back, so each extra tile adds only a little work. The 1-2-4-8 tiles have a shortcut. For tiles with any numbers, nobody has found one. Nobody has proved that none exists, either.</p>
+
+  <!-- ============ 5 ============ -->
+  <h2>5. Two names: quick-check and quick-solve</h2>
+  <p>A job is quick if its work grows the way checking did in step 2: steadily with each extra tile, and never doubling.</p>
+  <p>A puzzle is <strong>quick-check</strong> if, when someone hands you an answer, checking it is quick. The name says nothing about how hard the answer was to find. The official name for these puzzles is <strong>NP</strong>.</p>
+  <p>A puzzle is <strong>quick-solve</strong> if <em>finding</em> an answer is quick too, because it has a shortcut. The official name for these is <strong>P</strong>. Anything quick-solve is quick-check too, so P sits inside NP.</p>
+  <p>Not every puzzle is even quick-check. Take chess, played on a board of any size. Someone tells you “this is the best possible move”. There is nothing to add up. As far as anyone knows, the only way to be sure is to play out every reply.</p>
+  <p>That gives three kinds of puzzle:</p>
+
+  <div class="fig" id="fig-kinds">
+    <table style="margin-top:0">
+      <thead><tr><th scope="col">Example</th><th scope="col">Quick-check?</th><th scope="col">Quick-solve?</th></tr></thead>
+      <tbody>
+        <tr><td>The 1-2-4-8 tiles</td><td>yes</td><td>yes</td></tr>
+        <tr><td>Tiles with any numbers</td><td>yes</td><td>nobody knows</td></tr>
+        <tr><td>The best move in chess, on a board of any size</td><td>no quick way known</td><td>no</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>Now try it on four puzzles you haven't seen here. For each one, ask yourself two things. If someone handed me an answer, could I check it quickly? And is there a known way to solve it without trial and error?</p>
+
+  <div class="fig bare" id="fig-sort">
+    <div id="sort-list"></div>
+  </div>
+
+  <p id="names-pointer">P and NP are short for longer names. If you want to know what the letters stand for, <a href="#letters">that is explained at the end of the page</a>.</p>
+
+  <!-- ============ 6 ============ -->
+  <h2>6. P vs NP: is every quick-check puzzle also quick-solve?</h2>
+  <p>Some puzzles are quick-check, and nobody knows whether they are quick-solve: tiles with any numbers, a giant Sudoku, a school timetable. P vs NP is a question about exactly these puzzles. Do they have shortcuts that nobody has found yet, or do they have none?</p>
+  <p>One possibility is that every one of them has a shortcut waiting to be found. Then every quick-check puzzle is quick-solve, the two names describe exactly the same puzzles, and P = NP.</p>
+  <p>The other possibility is that some of them have no shortcut at all. They are quick-check and slow-solve, whatever method you use. Then P ≠ NP, which reads “P is not equal to NP”.</p>
+  <div class="fig" id="fig-two">
+    <p class="fig-title">Which picture is right? Nobody knows.</p>
+    <div class="two">
+      <figure>
+        <svg viewBox="0 0 300 230" role="img" aria-label="One circle. Quick-check and quick-solve are the same puzzles.">
+          <circle class="solve" cx="150" cy="115" r="100"/>
+          <text x="150" y="98" text-anchor="middle">Quick-check (NP) and</text>
+          <text x="150" y="120" text-anchor="middle">quick-solve (P) are</text>
+          <text x="150" y="142" text-anchor="middle">the same puzzles</text>
+        </svg>
+        <figcaption><strong>P = NP.</strong> Every quick-check puzzle has a shortcut.</figcaption>
+      </figure>
+      <figure>
+        <svg viewBox="0 0 300 230" role="img" aria-label="A small circle named quick-solve sits inside a larger circle named quick-check.">
+          <circle class="check" cx="150" cy="115" r="100"/>
+          <circle class="solve" cx="150" cy="150" r="56"/>
+          <text x="150" y="56" text-anchor="middle">Quick-check (NP)</text>
+          <text x="150" y="146" text-anchor="middle">Quick-solve</text>
+          <text x="150" y="167" text-anchor="middle">(P)</text>
+        </svg>
+        <figcaption><strong>P ≠ NP.</strong> Some quick-check puzzles have no shortcut.</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <p>Nobody knows which is true. Most researchers bet on the second: in <a href="https://www.cs.umd.edu/users/gasarch/BLOGPAPERS/pollpaper3.pdf">a poll of computer scientists published in 2019</a>, 88% of those who answered expected that P ≠ NP. But proving it means ruling out every clever method that anyone could ever invent, and nobody has managed that for even one quick-check puzzle.</p>
+
+  <div class="fig bare" id="fig-q6"><div id="q6"></div></div>
+
+  <!-- ============ 7 ============ -->
+  <h2>7. Back to the password</h2>
+  <p>The password from the top of the page is a quick-check puzzle. As far as anyone knows, finding it is slow, in the same way that solving tiles with any numbers is slow.</p>
+  <p>Online banking, private messages and software updates are all protected by puzzles of this kind. That protection rests on a belief that has never been proved: that these puzzles have no shortcut.</p>
+  <p>If P = NP, the belief is wrong. Every quick-check puzzle has a shortcut, and finding a password is one of them. The same goes for many scheduling and planning problems that have no known shortcut today.</p>
+  <p>If P ≠ NP, some quick-check puzzles have no shortcut at all. That would not prove that the puzzles behind passwords are among them, but it is the least that today's protection needs to be true.</p>
+  <p>One puzzle can also fall on its own. Today's protection rests on a handful of particular puzzles. If someone found a shortcut for one of those, that protection would break, and P vs NP would still be open.</p>
+
+  <h2>Explain it back</h2>
+  <p>Say each answer out loud before you open it.</p>
+  <div class="recall">
+    <details><summary>A friend asks what P vs NP is. What do you say?</summary><p>Some puzzles are quick-check: hand me an answer and I can confirm it with a little work. Some are also quick-solve, because they have a shortcut. P vs NP asks whether every quick-check puzzle is also quick-solve. Nobody knows, and most researchers think the answer is no.</p></details>
+    <details><summary>Why does trying every combination stop working as the puzzle grows?</summary><p>Every extra tile doubles the number of possible combinations. By 90 tiles, a computer trying a billion combinations a second would need about three times the age of the universe.</p></details>
+    <details><summary>Why did “biggest first” work on the 1-2-4-8 tiles and fail on the others?</summary><p>With the 1-2-4-8 tiles, the biggest tile that fits has to go in, because the smaller ones can't make up the difference. So every choice is safe and you never put a tile back. With other tiles, taking one that fits can be a mistake you only discover later.</p></details>
+    <details><summary>Would much faster computers settle P vs NP?</summary><p>No. Speed doesn't change which puzzles have a shortcut. When the work doubles with every tile, a computer a million times faster only gets you about 20 tiles further.</p></details>
+  </div>
+
+  <h2 id="letters">What the letters P and NP stand for</h2>
+  <p>If you came here from step 5, you can <a href="#names-pointer">go back to where you were</a>.</p>
+
+  <p><strong>P stands for “polynomial time”.</strong> That is the precise name for what this page calls quick.</p>
+  <p>“Time” means the number of steps a method takes. “Polynomial” is about how that number grows as the puzzle gets bigger. Work is polynomial if it is never more than the size of the puzzle multiplied by itself a fixed number of times. With 20 tiles, that could be 20 steps, or 20 × 20 = 400 steps, or 20 × 20 × 20 = 8,000 steps.</p>
+  <p>What polynomial rules out is the growth from step 2, where the work doubles with every extra tile. Here is how far apart the two kinds of growth end up.</p>
+
+  <div class="fig" id="fig-poly">
+    <table style="margin-top:0">
+      <thead><tr><th scope="col">Tiles</th><th scope="col">Polynomial: tiles × tiles</th><th scope="col">Not polynomial: doubling with every tile</th></tr></thead>
+      <tbody>
+        <tr><td>10</td><td>100 steps</td><td>about a thousand steps</td></tr>
+        <tr><td>30</td><td>900 steps</td><td>about a billion steps</td></tr>
+        <tr><td>90</td><td>8,100 steps</td><td>about a billion billion billion steps</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>P is the group of puzzles that can be <em>solved</em> in polynomial time. Those are the quick-solve puzzles.</p>
+
+  <p><strong>NP stands for “nondeterministic polynomial time”.</strong> It is the precise name for quick-check: the group of puzzles where an answer can be <em>checked</em> in polynomial time. It does not stand for “not P”, although that is the most common way to misread it.</p>
+  <p>The word “nondeterministic” comes from how the group was first defined. An ordinary computer is deterministic: it follows its instructions one step at a time and never guesses. Researchers imagined a nondeterministic computer, one that is allowed to guess and always guesses right. Call it the lucky computer.</p>
+  <p>Give the lucky computer a tile puzzle. For each tile it guesses “take it” or “leave it”, and every guess is right. Then it adds up the tiles it took, to confirm that they hit the target. It did no searching, so its only real work was the adding up. That is the same work as checking an answer.</p>
+  <p>So a puzzle that the lucky computer can solve in polynomial time is a puzzle whose answers can be checked in polynomial time, and the other way round.</p>
+  <p>Nobody can build a lucky computer. It was a way of defining the group, and it lives on only in the name.</p>
+
+  <p><strong>Puzzles that are not even quick-check have no single name.</strong> People say they are “outside NP”. Researchers do have names for several groups of harder puzzles, but none of those names simply means “not quick-check”.</p>
+
+  <div class="fig bare" id="fig-q5"><div id="q5"></div></div>
+
+  <h2>What this page left out</h2>
+  <ul>
+    <li><strong>A shortcut can still be slow.</strong> “Quick” on this page means that the work never doubles with each extra tile. A method can pass that test and still be far too slow to use. So a proof that P = NP would not automatically break anything. That would depend on how fast the shortcut turned out to be.</li>
+    <li><strong>Small numbers are easier.</strong> For tiles with any numbers, there is a known quick method when the target is small: it keeps a list of every total you can reach. The hard cases have long numbers on the tiles.</li>
+    <li><strong>The hardest of these puzzles are tied together.</strong> Thousands of quick-check puzzles, tiles with any numbers among them, share a special property: every quick-check puzzle can be turned into any one of them. So if one of them has a shortcut, every quick-check puzzle has one. They are called NP-complete.</li>
+    <li><strong>How passwords are protected in practice.</strong> The password example is simplified. A website checks your guesses for you, and can lock you out after a few. The puzzle on this page is the one faced by someone who has stolen the site's scrambled copy of the password and can test guesses on their own machine.</li>
+    <li><strong>Quantum computers.</strong> A large enough quantum computer could <a href="https://en.wikipedia.org/wiki/Shor%27s_algorithm">quickly solve the particular puzzles</a> that protect much of today's banking and messaging, whatever the answer to P vs NP.</li>
+  </ul>
+
+  <footer>
+    <p><a href="/">← dewierwan.com</a></p>
+  </footer>
+</main>
+
+<script>
+(function () {
+  'use strict';
+  const $ = (id) => document.getElementById(id);
+  const fmtInt = (n) => Math.round(n).toLocaleString('en-US');
+  /* Tiny DOM helper: el('button', { class: 'btn', onclick: fn }, 'Text' | [children]) */
+  function el(tag, attrs, children) {
+    const node = document.createElement(tag);
+    if (attrs) {
+      for (const k in attrs) {
+        const v = attrs[k];
+        if (v === null || v === undefined || v === false) continue;
+        if (k === 'class') node.className = v;
+        else if (k.slice(0, 2) === 'on' && typeof v === 'function') node.addEventListener(k.slice(2), v);
+        else node.setAttribute(k, v === true ? '' : v);
+      }
+    }
+    if (children !== undefined && children !== null) {
+      for (const c of [].concat(children)) {
+        if (c === null || c === undefined || c === false) continue;
+        node.appendChild(typeof c === 'string' || typeof c === 'number' ? document.createTextNode(String(c)) : c);
+      }
+    }
+    return node;
+  }
+  /* Right or wrong, shown with an icon, a fill and a word: never by color alone. */
+  const mark = (right, text) => '<span class="status ' + (right ? 'ok' : 'broken') + '"><span class="mark" aria-hidden="true"></span>' + text + '</span>';
+
+  const calm = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* A question with choices. Any choice can be tried, and each one opens its own explanation directly under it.
+     A slot at the right of each choice takes a tick or a cross; it is there from the start, so nothing shifts.
+     Explanations stay open once shown, so nothing above the finger ever closes and moves the page. */
+  let asked = 0;
+  function question(root, text, options, onRight) {
+    const qid = 'question-' + (++asked);
+    const rows = options.map((o) => {
+      const slot = el('span', { class: 'verdict', 'aria-hidden': 'true' });
+      const why = el('p', { class: 'ask-fb', 'aria-live': 'polite' });
+      const b = el('button', { type: 'button', class: 'btn wide', 'aria-pressed': 'false', onclick: () => {
+        b.setAttribute('aria-pressed', 'true');
+        slot.className = 'verdict ' + (o.right ? 'yes' : 'no'); slot.textContent = o.right ? '✓' : '✕';
+        if (!why.textContent) why.innerHTML = '<strong>' + (o.right ? 'Right.' : 'Not quite.') + '</strong> ' + (typeof o.why === 'function' ? o.why() : o.why);
+        if (o.right && onRight) onRight();
+      } }, [el('span', null, o.label), slot]);
+      return el('div', { class: 'choice' }, [b, why]);
+    });
+    root.appendChild(el('div', { class: 'ask' }, [el('p', { class: 'ask-q', id: qid }, text), el('div', { class: 'sort-opts', role: 'group', 'aria-labelledby': qid }, rows)]));
+  }
+  const ask = (rootId, text, options, onRight) => question($(rootId), text, options, onRight);
+
+  /* The tile puzzle: tap a tile to take it, tap it again to put it back.
+     mode 'open'   : any tile can be taken (step 1).
+     mode 'double' : "biggest first" is enforced, with a reason when a tap breaks it (step 3).
+     mode 'free'   : only tiles that fit can be taken, and getting stuck is pointed out (step 4).
+     The message sits above the tiles in a space kept for it, so a tap never moves the tiles and its answer is in view. */
+  function tilePuzzle(rootId, tiles, target, mode, answer, cols) {
+    const root = $(rootId);
+    const taken = new Set(); let taps = 0, backs = 0;
+    const row = el('div', { class: 'chips ' + (cols || ''), role: 'group', 'aria-label': 'Tiles you can tap' });
+    const chips = tiles.map((t) => { const b = el('button', { type: 'button', class: 'chip', 'aria-pressed': 'false', onclick: () => tap(t) }, String(t)); row.appendChild(b); return b; });
+    const made = el('span', { class: 'big-num' }, '0'), leftEl = el('span', { class: 'big-num' }, String(target)), bar = el('span');
+    const meter = el('div', { class: 'meter' }, [
+      el('div', { class: 'meter-nums' }, [el('div', { class: 'meter-item' }, [el('span', null, 'Made so far'), made]), el('div', { class: 'meter-item' }, [el('span', null, 'Left to make'), leftEl])]),
+      el('div', { class: 'bar', 'aria-hidden': 'true' }, bar),
+    ]);
+    const msg = el('p', { class: 'out say', 'aria-live': 'polite' });
+    const again = el('button', { type: 'button', class: 'btn', onclick: reset }, 'Start again');
+    const show = el('button', { type: 'button', class: 'btn', onclick: showAnswer }, 'Show me an answer');
+    root.append(meter, msg, row, el('div', { class: 'actions' }, answer ? [again, show] : [again]));
+    const say = (html) => { msg.innerHTML = html; };
+    const sum = () => { let s = 0; taken.forEach((t) => { s += t; }); return s; };
+    const times = (n) => n === 1 ? 'once' : n + ' times';
+    const START = mode === 'open' ? 'Tap a tile to pick it. Exactly one set of tiles works.' : 'Which is the biggest tile that fits in ' + target + '?';
+    function draw() {
+      const s = sum(), left = target - s;
+      chips.forEach((b, i) => b.setAttribute('aria-pressed', String(taken.has(tiles[i]))));
+      made.textContent = fmtInt(s);
+      leftEl.innerHTML = left >= 0 ? fmtInt(left) : fmtInt(-left) + ' <small>over</small>';
+      bar.style.width = Math.max(0, Math.min(100, (s / target) * 100)) + '%';
+      return left;
+    }
+    function tap(t) {
+      if (taken.has(t)) { taken.delete(t); backs++; after('You put ' + t + ' back. '); return; }
+      const left = target - sum();
+      if (mode !== 'open' && t > left) { say(mark(false, 'It doesn\'t fit.') + ' ' + t + ' is more than the ' + left + ' left to make.'); return; }
+      if (mode === 'double') {
+        const bigger = tiles.filter((x) => !taken.has(x) && x > t && x <= left);
+        if (bigger.length) {
+          const big = Math.max.apply(null, bigger);
+          say(mark(false, t + ' fits, but so does ' + big + '.') + ' Leave ' + big + ' out and the smaller tiles only make ' + (big - 1) + '.');
+          return;
+        }
+      }
+      taken.add(t); taps++;
+      after();
+    }
+    function after(prefix) {
+      prefix = prefix || '';
+      const left = draw();
+      const list = tiles.filter((t) => taken.has(t)).join(' + ');
+      if (left === 0) {
+        if (mode === 'open') say(mark(true, 'Solved.') + ' ' + list + ' = ' + target + ', in ' + taps + ' taps' + (backs ? ', putting a tile back ' + times(backs) + '.' : '.'));
+        else if (mode === 'double') say(mark(true, 'Solved.') + ' ' + list + ' = ' + target + (backs ? '.' : ', in one pass, with no tile put back.'));
+        else say(mark(true, 'Solved.') + ' ' + list + ' = ' + target + '. ' + (backs ? 'You put a tile back ' + times(backs) + ' to get there.' : 'You went straight to it.'));
+        return;
+      }
+      if (mode === 'open') { say(left > 0 ? prefix + 'Left to make: ' + left + '.' : mark(false, 'Too much.') + ' Put a tile back.'); return; }
+      const fits = tiles.filter((t) => !taken.has(t) && t <= left);
+      if (!fits.length) { say(mark(false, 'Stuck.') + ' ' + left + ' left to make, and no tile fits. Tap a tile you took to put it back.'); return; }
+      say(prefix + 'Left to make: ' + left + '. Which is the biggest tile that fits now?');
+    }
+    function reset() { taken.clear(); taps = 0; backs = 0; draw(); say(START); }
+    function showAnswer() {
+      taken.clear(); answer.forEach((t) => taken.add(t)); draw();
+      say('One answer: ' + answer.join(' + ') + ' = ' + target + '. ' + (mode === 'free' ? 'It uses neither of the two biggest tiles.' : 'Trial and error can take a thousand tries.'));
+    }
+    reset();
+  }
+
+  /* ---------- 1. Solve, then check ---------- */
+  tilePuzzle('solve', [93, 17, 73, 96, 83, 66, 56, 13, 84, 58], 200, 'open', [73, 56, 13, 58]);
+  (function () {
+    const NUMS = [340, 329, 196, 286, 177, 119, 321, 391, 190, 146, 322, 205];
+    const KEYS = { a: [196, 286, 391, 322, 205], b: [340, 329, 286, 119, 322] };
+    const WHO = { a: 'The first person', b: 'The second person' };
+    const tasks = {};
+    ['a', 'b'].forEach((k) => {
+      tasks[k] = el('span');
+      tasks[k].innerHTML = '<strong>' + WHO[k] + ' says the answer is ' + KEYS[k].join(' + ') + '.</strong> Tap those five tiles to add them up.';
+      $('c-task').appendChild(tasks[k]);
+    });
+    let phase; const chosen = new Set();
+    const chips = NUMS.map((n) => { const b = el('button', { type: 'button', class: 'chip', 'aria-pressed': 'false', onclick: () => tap(n) }, String(n)); $('c-chips').appendChild(b); return b; });
+    const sum = () => { let s = 0; chosen.forEach((n) => { s += n; }); return s; };
+    function draw() {
+      const live = phase === 'a' || phase === 'b', key = KEYS[phase.charAt(0)];
+      chips.forEach((b, i) => { const inKey = key.includes(NUMS[i]); b.disabled = !live || !inKey; b.classList.toggle('hint', live && inKey); b.setAttribute('aria-pressed', String(chosen.has(NUMS[i]))); });
+      $('c-sum').textContent = fmtInt(sum());
+      ['a', 'b'].forEach((k) => { const off = k !== phase.charAt(0); tasks[k].classList.toggle('off', off); tasks[k].setAttribute('aria-hidden', String(off)); });
+      $('c-next').disabled = phase !== 'a-done';
+    }
+    function tap(n) {
+      if (phase !== 'a' && phase !== 'b') return;
+      if (chosen.has(n)) chosen.delete(n); else chosen.add(n);
+      if (chosen.size === KEYS[phase].length) {
+        const total = sum(), fits = total === 1400, who = WHO[phase];
+        $('c-out').innerHTML = mark(fits, fmtInt(total) + '.') + ' ' + who + (fits ? ' was right' : ' was wrong') +
+          (phase === 'b' ? '. You checked both without any searching.' : fits ? ': those tiles are an answer.' : ': those tiles are not an answer.');
+        phase = phase + '-done';
+      }
+      draw();
+    }
+    function start(p, byReader) {
+      phase = p; chosen.clear(); $('c-out').textContent = 'The tiles with a dashed edge are the ones to tap.'; draw();
+      /* On a small screen the instruction at the top of this figure can be above the screen when these buttons are pressed. */
+      if (byReader && $('c-task').getBoundingClientRect().top < 0) $('fig-check').scrollIntoView({ block: 'start', behavior: calm ? 'auto' : 'smooth' });
+    }
+    $('c-next').addEventListener('click', () => start('b', true));
+    $('c-again').addEventListener('click', () => start('a', true));
+    start('a', false);
+  })();
+
+  /* ---------- 2. Growth ---------- */
+  ask('g-q1', 'Add a fourth tile, D. How many possible combinations are there now?', [
+    { label: '9', why: 'Adding a tile doesn\'t add one combination. It doubles the count, because every old combination can stay as it is or have D added. That makes 16.' },
+    { label: '12', why: 'It isn\'t four more. Every one of the eight old combinations can stay as it is or have D added, which makes 16.' },
+    { label: '16', right: true, why: 'Each of the eight old combinations can stay as it is or have D added: 8 × 2 = 16. Every extra tile doubles the count.' },
+  ]);
+  ask('g-q2', 'A fast computer tries a billion combinations a second. How many tiles would the puzzle need before trying every combination takes longer than the universe has existed?', [
+    { label: 'About 90', right: true, why: 'Doubling gets out of hand fast. The table below shows how.' },
+    { label: 'About 1,000', why: 'Far fewer: about 90. Doubling gets out of hand faster than almost anyone expects. The table below shows how.' },
+    { label: 'About a million', why: 'Far fewer: about 90. Doubling gets out of hand faster than almost anyone expects. The table below shows how.' },
+  ]);
+  $('g-q2').addEventListener('click', (e) => { if (e.target.closest('button')) $('fig-gtable').hidden = false; });
+
+  /* The growth chart: an ordinary (not logarithmic) scale that stretches to fit, so the checking line visibly sinks to the floor. */
+  (function () {
+    const svg = $('ch'), NS = 'http://www.w3.org/2000/svg';
+    let L, R, T, B, narrow;                       // plot area. Wide: labels sit to the right. Narrow: they sit inside, top left.
+    function size() {
+      narrow = svg.getBoundingClientRect().width < 460;
+      svg.classList.toggle('narrow', narrow);
+      if (narrow) { const w = Math.max(240, Math.round(svg.getBoundingClientRect().width)); svg.setAttribute('viewBox', '0 0 ' + w + ' 300'); L = 8; R = w - 8; T = 16; B = 258; }
+      else { svg.setAttribute('viewBox', '0 0 640 300'); L = 16; R = 410; T = 34; B = 262; }
+    }
+    let n = 6;
+    const mk = (tag, attrs, text) => { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); if (text !== undefined) e.textContent = text; svg.appendChild(e); return e; };
+    function draw() {
+      while (svg.firstChild) svg.removeChild(svg.firstChild);
+      const top = Math.pow(2, n);
+      const x = (k) => L + (R - L) * (k / n), y = (v) => B - (B - T) * (v / top);
+      mk('path', { class: 'axis', d: 'M' + L + ' ' + T + ' V' + B + ' H' + R });
+      let dSolve = '', dCheck = '';
+      for (let k = 0; k <= n; k++) { dSolve += (k ? ' L' : 'M') + x(k).toFixed(1) + ' ' + y(Math.pow(2, k)).toFixed(1); dCheck += (k ? ' L' : 'M') + x(k).toFixed(1) + ' ' + y(k).toFixed(1); }
+      mk('path', { class: 'check', d: dCheck });
+      mk('path', { class: 'solve', d: dSolve });
+      mk('text', { x: L, y: B + 26 }, '0 tiles');
+      mk('text', { x: R, y: B + 26, 'text-anchor': 'end' }, n + ' tiles');
+      if (narrow) {
+        mk('path', { class: 'solve', d: 'M' + (L + 8) + ' ' + (T + 12) + ' h18' });
+        mk('text', { x: L + 32, y: T + 17, 'font-weight': 700 }, 'Trying every combination:');
+        mk('text', { x: L + 32, y: T + 35, 'font-weight': 700 }, fmtInt(top) + ' to try');
+        mk('path', { class: 'check', d: 'M' + (L + 8) + ' ' + (T + 60) + ' h18' });
+        mk('text', { x: L + 32, y: T + 65 }, 'Checking one answer:');
+        mk('text', { x: L + 32, y: T + 83 }, n + ' numbers to add');
+      } else {
+        mk('text', { x: R + 12, y: T + 5, 'font-weight': 700 }, 'Trying every combination:');
+        mk('text', { x: R + 12, y: T + 26, 'font-weight': 700 }, fmtInt(top) + ' to try');
+        const yc = Math.min(B - 30, y(n) + 5);
+        mk('text', { x: R + 12, y: yc }, 'Checking one answer:');
+        mk('text', { x: R + 12, y: yc + 21 }, n + ' numbers to add');
+      }
+      const counts = n + ' tiles: ' + fmtInt(top) + ' combinations to try, ' + n + ' numbers to add when checking.';
+      svg.setAttribute('aria-label', 'A chart of the work needed as tiles are added. With ' + counts);
+      $('ch-read').innerHTML = '<span class="sr-only">' + counts + ' </span>' + (n >= 12 ? 'The checking line is now flat on the floor. The scale stretched to fit the other line.' : 'Each tile you add doubles the first number and adds one to the second.');
+      $('ch-less').disabled = n <= 3; $('ch-more').disabled = $('ch-more5').disabled = n >= 30;
+    }
+    $('ch-less').addEventListener('click', () => { n = Math.max(3, n - 1); draw(); });
+    $('ch-more').addEventListener('click', () => { n = Math.min(30, n + 1); draw(); });
+    $('ch-more5').addEventListener('click', () => { n = Math.min(30, n + 5); draw(); });
+    window.addEventListener('resize', () => { size(); draw(); });
+    size();
+    draw();
+  })();
+
+  /* ---------- 3 and 4. Biggest first, on two sets of tiles ---------- */
+  tilePuzzle('double', [512, 256, 128, 64, 32, 16, 8, 4, 2, 1], 200, 'double', null, 'ten');
+  ask('d-q', 'With 90 of the 1-2-4-8 tiles instead of 10, what is the most tiles “biggest first” would ever make you look at?', [
+    { label: '90', right: true, why: 'You go along the row once, so each tile gets one look, however many tiles there are. Compare that with trying every combination, which at 90 tiles would outlast the universe.' },
+    { label: 'About a billion', why: 'It is still one look per tile: 90. The method never tries different combinations, so nothing doubles.' },
+    { label: 'More than a computer could manage', why: 'That is trying every combination. “Biggest first” goes along the row once: 90 looks.' },
+  ]);
+  tilePuzzle('free', [96, 93, 84, 83, 73, 66, 58, 56, 17, 13], 200, 'free', [73, 58, 56, 13], 'ten');
+
+  /* ---------- 5. Sort four puzzles ---------- */
+  (function () {
+    const KINDS = ['Quick-check and quick-solve', 'Quick-check, and nobody knows whether it is quick-solve', 'Not known to be quick-check'];
+    const ITEMS = [
+      { text: 'Put 1,000 names in alphabetical order.', kind: 0, why: 'To check, read down the list and see that each name comes after the one before. To solve, there are well-known quick methods, which is why your phone sorts your contacts in an instant.' },
+      { text: 'Finish a giant Sudoku, 100 squares by 100, that starts with some of its squares filled in.', kind: 1, why: 'Checking a finished grid is quick: look along each row, column and box. For finishing grids this big, nobody has found a shortcut.' },
+      { text: 'A courier has a long list of parcels to deliver. Find the shortest possible route.', kind: 2, why: 'If someone hands you a route and says no shorter one exists, you can measure their route, but that doesn\'t show there is nothing shorter. Nobody knows a quick way to be sure of that. Ask instead for any route under 300 miles, and the puzzle becomes quick-check: measure the route you are handed.' },
+      { text: 'A school has a list of lessons that must all take place this week. Make a timetable where no teacher or class is in two places at once, and every teacher only teaches at times they are free.', kind: 1, why: 'Checking a finished timetable is quick: look for missing lessons, for clashes, and for teachers placed at times they are not free. For making one, nobody has found a shortcut that always works.' },
+    ];
+    ITEMS.forEach((it) => {
+      const holder = el('div', { class: 'sort-item' });
+      /* The reason is given once for each puzzle, under whichever choice is tapped first. */
+      let told = false;
+      const reason = () => { if (told) return ''; told = true; return it.why; };
+      question(holder, it.text, KINDS.map((k, idx) => ({ label: k, right: idx === it.kind, why: () => (idx === it.kind ? '' : 'It is “' + KINDS[it.kind].toLowerCase() + '”. ') + reason() })));
+      $('sort-list').appendChild(holder);
+    });
+  })();
+
+  ask('q5', 'The 1-2-4-8 tiles are quick-solve, so they are in P. Are they in NP as well?', [
+    { label: 'No. NP means “not P”', why: 'This is the most common mix-up. The N stands for “nondeterministic”. NP means quick-check, and an answer to the 1-2-4-8 tiles is quick to check: add up the tiles. So they are in NP as well as in P.' },
+    { label: 'Yes. Their answers are quick to check, and that is all NP asks', right: true, why: 'NP means quick-check. Every quick-solve puzzle is also quick-check, so everything in P is in NP too.' },
+    { label: 'Nobody knows', why: 'This one is known. NP means quick-check, and an answer to the 1-2-4-8 tiles is quick to check: add up the tiles. What nobody knows is whether tiles with any numbers are quick-solve.' },
+  ]);
+
+  /* ---------- 6. The question ---------- */
+  ask('q6', 'Which of these would mean P = NP?', [
+    { label: 'Computers become a million times faster', why: 'Speed doesn\'t change which puzzles have a shortcut. A million times faster buys only about 20 more tiles when you are trying every combination. P = NP would take a shortcut for every quick-check puzzle.' },
+    { label: 'Someone finds a shortcut for every quick-check puzzle', right: true, why: 'Then every quick-check puzzle would be quick-solve, and the two names would describe the same puzzles.' },
+    { label: 'Someone proves that tiles with any numbers have no shortcut', why: 'That would settle it the other way: a quick-check puzzle that is not quick-solve means P ≠ NP.' },
+  ]);
+})();
+</script>
+</body>
+</html>
