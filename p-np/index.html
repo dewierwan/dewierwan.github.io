@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="darkreader-lock">
 <title>P vs NP — Dewi Erwan</title>
 <meta name="description" content="What the P vs NP question asks and why it matters, built up from one small puzzle you can play with.">
 <link rel="icon" href="/favicon.ico" sizes="32x32">
@@ -56,11 +57,13 @@
   /* The two possibilities, side by side */
   .two { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
   .two figure { margin: 0; }
-  .two svg { width: 100%; max-width: 300px; height: auto; display: block; margin: 0 auto; }
-  .two text { font-family: var(--font-body); font-size: 15px; fill: var(--text); }
-  .two circle { stroke: var(--text); stroke-width: 2.5; }
-  .two .check { fill: var(--bg); }
-  .two .solve { fill: var(--wash-2); }
+  .two .ring { position: relative; width: min(100%, 15rem); aspect-ratio: 1; margin: 0 auto; display: grid; place-items: center; text-align: center; border: 2.5px solid var(--text); border-radius: 50%; font-size: 0.9375rem; line-height: 1.35; }
+  .two .ring.check { background: var(--bg); }
+  .two .ring.solve { background: var(--wash-2); }
+  .two .ring > span { padding: 0 0.75rem; white-space: nowrap; }
+  .two .ring > .top { position: absolute; top: 12%; left: 0; right: 0; padding: 0; }
+  .two .ring.inner { position: absolute; width: 56%; left: 22%; bottom: 5%; margin: 0; }
+  .two .ring.inner > span { padding: 0 0.4rem; }
   .two figcaption { margin-top: 0.4rem; }
   /* Combinations drawn as trays of small tiles. They are flat, with no raised edge, because nothing here can be tapped. */
   .combo-label { margin: 0 0 0.3rem; }
@@ -266,22 +269,16 @@
     <p class="fig-title">Which picture is right? Nobody knows.</p>
     <div class="two">
       <figure>
-        <svg viewBox="0 0 300 230" role="img" aria-label="One circle. Quick-check and quick-solve are the same puzzles.">
-          <circle class="solve" cx="150" cy="115" r="100"/>
-          <text x="150" y="98" text-anchor="middle">Quick-check (NP) and</text>
-          <text x="150" y="120" text-anchor="middle">quick-solve (P) are</text>
-          <text x="150" y="142" text-anchor="middle">the same puzzles</text>
-        </svg>
+        <div class="ring solve" role="img" aria-label="One circle. Quick-check and quick-solve are the same puzzles.">
+          <span>Quick-check (NP) and<br>quick-solve (P) are<br>the same puzzles</span>
+        </div>
         <figcaption><strong>P = NP.</strong> Every quick-check puzzle has a shortcut.</figcaption>
       </figure>
       <figure>
-        <svg viewBox="0 0 300 230" role="img" aria-label="A small circle named quick-solve sits inside a larger circle named quick-check.">
-          <circle class="check" cx="150" cy="115" r="100"/>
-          <circle class="solve" cx="150" cy="150" r="56"/>
-          <text x="150" y="56" text-anchor="middle">Quick-check (NP)</text>
-          <text x="150" y="146" text-anchor="middle">Quick-solve</text>
-          <text x="150" y="167" text-anchor="middle">(P)</text>
-        </svg>
+        <div class="ring check" role="img" aria-label="A small circle named quick-solve sits inside a larger circle named quick-check.">
+          <span class="top">Quick-check (NP)</span>
+          <div class="ring solve inner"><span>Quick-solve (P)</span></div>
+        </div>
         <figcaption><strong>P ≠ NP.</strong> Some quick-check puzzles have no shortcut.</figcaption>
       </figure>
     </div>
