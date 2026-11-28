@@ -15,7 +15,7 @@
 <style>
   footer { margin-top: 3rem; }
   footer a { display: inline-block; padding: 0.7rem 0; }
-  #letters, #names-pointer, #fig-check { scroll-margin-top: 1.25rem; }
+  #letters, #fig-check { scroll-margin-top: 1.25rem; }
 
   /* ONE RULE FOR THE WHOLE PAGE: anything with a raised bottom edge can be tapped. Nothing else can. */
   .btn, .chip { box-shadow: 0 4px 0 var(--text); transition: transform 0.05s ease, box-shadow 0.05s ease; margin-bottom: 4px; }
@@ -231,14 +231,15 @@
   </div>
 
   <p>Notice what went wrong. With these tiles, taking one that fits can be a mistake, and nothing tells you so until later. So you put it back and try something else, again and again. That putting back is what trial and error is, and it is why the work doubles with every extra tile.</p>
-  <p>A <strong>shortcut</strong> is a method like “biggest first” on the 1-2-4-8 tiles: it solves the puzzle without all the putting back, so each extra tile adds only a little work. The 1-2-4-8 tiles have a shortcut. For tiles with any numbers, nobody has found one. Nobody has proved that none exists, either.</p>
+  <p>A <strong>shortcut</strong> is a method like “biggest first” on the 1-2-4-8 tiles: it solves the puzzle without all the putting back, so each extra tile adds only a little work. The 1-2-4-8 tiles have a shortcut. For tiles with any numbers, nobody has found one. Nobody has proven that none exists, either.</p>
 
   <!-- ============ 5 ============ -->
   <h2>5. Two names: quick-check and quick-solve</h2>
-  <p>A job is quick if its work grows the way checking did in step 2: steadily with each extra tile, and never multiplying.</p>
+  <p>From here on, <strong>quick</strong> means that each extra tile adds only a little work. Checking is quick: one more tile means one more number to add up. Trying every combination is not: one more tile means twice as many combinations.</p>
   <p>A puzzle is <strong>quick-check</strong> if, when someone hands you an answer, checking it is quick. The name says nothing about how hard the answer was to find. The official name for these puzzles is <strong>NP</strong>.</p>
   <p>A puzzle is <strong>quick-solve</strong> if <em>finding</em> an answer is quick too, because it has a shortcut. The official name for these is <strong>P</strong>. Anything quick-solve is quick-check too, so P sits inside NP.</p>
-  <p>Not every puzzle is even quick-check. Take chess, played on a board of any size. Someone tells you “this is the best possible move”. There is nothing to add up. As far as anyone knows, the only way to be sure is to play out every reply.</p>
+  <p>Some puzzles are not quick-check: even checking an answer is slow. As far as anyone knows, chess is one.</p>
+  <p>The puzzle is to find the best move. Someone hands you an answer: “this move is the best one”. With the tiles, you could check an answer by adding it up. A chess move gives you nothing like that to check. The obvious way to be sure is to work through every reply your opponent could make, then every reply to each of those, and so on. Nobody has found a quick way.</p>
   <p>That gives three kinds of puzzle:</p>
 
   <div class="fig" id="fig-kinds">
@@ -247,7 +248,7 @@
       <tbody>
         <tr><td>The 1-2-4-8 tiles</td><td>yes</td><td>yes</td></tr>
         <tr><td>Tiles with any numbers</td><td>yes</td><td>nobody knows</td></tr>
-        <tr><td>The best move in chess, on a board of any size</td><td>no quick way known</td><td>no</td></tr>
+        <tr><td>The best move in chess</td><td>no quick way known</td><td>no</td></tr>
       </tbody>
     </table>
   </div>
@@ -258,7 +259,7 @@
     <div id="sort-list"></div>
   </div>
 
-  <p id="names-pointer">P and NP are short for longer names. If you want to know what the letters stand for, <a href="#letters">that is explained at the end of the page</a>.</p>
+  <p>P and NP are short for longer names. If you want to know what the letters stand for, <a href="#letters">that is explained at the end of the page</a>.</p>
 
   <!-- ============ 6 ============ -->
   <h2>6. P vs NP: is every quick-check puzzle also quick-solve?</h2>
@@ -291,7 +292,7 @@
   <!-- ============ 7 ============ -->
   <h2>7. Back to the password</h2>
   <p>The password from the top of the page is a quick-check puzzle. As far as anyone knows, finding it is slow, in the same way that solving tiles with any numbers is slow.</p>
-  <p>Online banking, private messages and software updates are all protected by puzzles of this kind. That protection rests on a belief that has never been proved: that these puzzles have no shortcut.</p>
+  <p>Online banking, private messages and software updates are all protected by puzzles of this kind. That protection rests on a belief that has never been proven: that these puzzles have no shortcut.</p>
   <p>If P = NP, the belief is wrong. Every quick-check puzzle has a shortcut, and finding a password is one of them. The same goes for many scheduling and planning problems that have no known shortcut today.</p>
   <p>If P ≠ NP, some quick-check puzzles have no shortcut at all. That would not prove that the puzzles behind passwords are among them, but it is the least that today's protection needs to be true.</p>
   <p>One puzzle can also fall on its own. Today's protection rests on a handful of particular puzzles. If someone found a shortcut for one of those, that protection would break, and P vs NP would still be open.</p>
@@ -306,7 +307,6 @@
   </div>
 
   <h2 id="letters">What the letters P and NP stand for</h2>
-  <p>If you came here from step 5, you can <a href="#names-pointer">go back to where you were</a>.</p>
 
   <p><strong>P stands for “polynomial time”.</strong> That is the precise name for what this page calls quick.</p>
   <p>“Time” means the number of steps a method takes. “Polynomial” is about how that number grows as the puzzle gets bigger. Work is polynomial if it is never more than the size of the puzzle multiplied by itself a fixed number of times. With 20 tiles, that could be 20 steps, or 20 × 20 = 400 steps, or 20 × 20 × 20 = 8,000 steps.</p>
@@ -331,13 +331,14 @@
   <p>So a puzzle that the lucky computer can solve in polynomial time is a puzzle whose answers can be checked in polynomial time, and the other way round.</p>
   <p>Nobody can build a lucky computer. It was a way of defining the group, and it lives on only in the name.</p>
 
-  <p><strong>Puzzles that are not even quick-check have no single name.</strong> People say they are “outside NP”. Researchers do have names for several groups of harder puzzles, but none of those names simply means “not quick-check”.</p>
+  <p><strong>Puzzles that are not quick-check have no single name.</strong> People say they are “outside NP”. Researchers do have names for several groups of harder puzzles, but none of those names simply means “not quick-check”.</p>
 
   <div class="fig bare" id="fig-q5"><div id="q5"></div></div>
 
   <h2>What this page left out</h2>
   <ul>
-    <li><strong>A shortcut can still be slow.</strong> “Quick” on this page means that an extra tile never multiplies the work. A method can pass that test and still be far too slow to use. So a proof that P = NP would not automatically break anything. That would depend on how fast the shortcut turned out to be.</li>
+    <li><strong>A shortcut can still be slow.</strong> “Quick” on this page is about how the work grows as tiles are added, not about how long it takes. A method can be quick in that sense and still be far too slow to use. So a proof that P = NP would not automatically break anything. That would depend on how fast the shortcut turned out to be.</li>
+    <li><strong>Chess on a bigger board.</strong> “Quick” is about how the work grows as a puzzle gets bigger, and ordinary chess never gets bigger. The claims about chess on this page are about chess on a board of any size.</li>
     <li><strong>Small numbers are easier.</strong> For tiles with any numbers, there is a known quick method when the target is small: it keeps a list of every total you can reach. The hard cases have long numbers on the tiles.</li>
     <li><strong>The hardest of these puzzles are tied together.</strong> Thousands of quick-check puzzles, tiles with any numbers among them, share a special property: every quick-check puzzle can be quickly turned into any one of them. So if one of them has a shortcut, every quick-check puzzle has one. They are called NP-complete.</li>
     <li><strong>How passwords are protected in practice.</strong> The password example is simplified. A website checks your guesses for you, and can lock you out after a few. The puzzle on this page is the one faced by someone who has stolen the site's scrambled copy of the password and can test guesses on their own machine.</li>
